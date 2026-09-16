@@ -8,3 +8,6 @@ require mathlib from git
 
 @[default_target]
 lean_lib JSP000391
+
+@[default_target]
+lean_lib JSP000391Main

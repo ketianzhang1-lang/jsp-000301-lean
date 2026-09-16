@@ -11,6 +11,7 @@ Indices are shifted by one: `sequence g t e 0` is the paper's u_1. Digits are
 indexed from zero, starting with the leading significant digit of normalized t.
 -/
 
+noncomputable section
 namespace JSP000391
 
 /-- The first multiplier in Stoll's recurrence. -/
@@ -33,13 +34,13 @@ def geometric (g : ℕ) : ℕ → ℤ
   | n + 1 => (g : ℤ) * geometric g n + 1
 
 /-- The ordinary finite digit prefix of a normalized real number. -/
-def prefix (g : ℕ) (t : ℝ) (n : ℕ) : ℤ := ⌊t * (g : ℝ) ^ n⌋
+def digitPrefix (g : ℕ) (t : ℝ) (n : ℕ) : ℤ := ⌊t * (g : ℝ) ^ n⌋
 
 /-- Standard floor-difference digits, with the leading digit at index zero.
 This definition fixes the terminating expansion convention at radix rationals. -/
 def digit (g : ℕ) (t : ℝ) : ℕ → ℤ
   | 0 => ⌊t⌋
-  | n + 1 => prefix g t (n + 1) - (g : ℤ) * prefix g t n
+  | n + 1 => digitPrefix g t (n + 1) - (g : ℤ) * digitPrefix g t n
 
 lemma geometric_relation (g n : ℕ) :
     ((g : ℝ) - 1) * (geometric g n : ℝ) = (g : ℝ) ^ n - 1 := by
@@ -57,12 +58,12 @@ lemma geometric_relation (g n : ℕ) :
 lemma multipliers (g : ℕ) (t : ℝ) (hg : 2 ≤ g) (_ht : 1 ≤ t) :
     b g t = (g : ℝ) / a g t := by
   have hg0 : (g : ℝ) ≠ 0 := by exact_mod_cast (by omega : g ≠ 0)
-  simp [a, b, div_div, hg0]
+  simp [a, b, hg0]
 
 lemma sequence_even (g : ℕ) (t e : ℝ) (n : ℕ) :
     sequence g t e (2 * n + 1) =
       ⌊a g t * ((sequence g t e (2 * n) : ℝ) + e)⌋ := by
-  simp [sequence, Nat.mul_mod]
+  simp [sequence]
 
 lemma sequence_odd (g : ℕ) (t e : ℝ) (n : ℕ) :
     sequence g t e (2 * n + 2) =
@@ -77,7 +78,7 @@ lemma initial_floor (g : ℕ) (t e : ℝ) (hg : 2 ≤ g) (ht : 1 ≤ t)
     ⌊a g t * (1 + e)⌋ = (0 : ℤ) := by
   have hgr : (2 : ℝ) ≤ g := by exact_mod_cast hg
   have hgpos : (0 : ℝ) < g := by linarith
-  have hD : 0 < ((g : ℝ) - 1) * (t + g) := by positivity
+  have hD : 0 < ((g : ℝ) - 1) * (t + g) := mul_pos (by linarith) (by linarith)
   have hel := (div_le_iff₀ hgpos).mp he0
   have heu := (lt_div_iff₀ hgpos).mp he1
   apply Int.floor_eq_iff.mpr
@@ -101,7 +102,6 @@ lemma expanding_floor (g : ℕ) (t : ℝ) (hg : 2 ≤ g) (n : ℕ) :
         (t + g) * (((g : ℝ) - 1) * (geometric g n : ℝ) + 1) := by
           dsimp [b]
           field_simp [hne]
-          ring
     _ = (t + g) * (g : ℝ) ^ n := by rw [geometric_relation]; ring
 
 /-- The contracting step; all floor errors are controlled explicitly. -/
@@ -111,7 +111,7 @@ lemma contracting_floor (g : ℕ) (t e : ℝ) (hg : 2 ≤ g) (ht : 1 ≤ t)
     ⌊a g t * ((⌊(t + g) * (g : ℝ) ^ n⌋ : ℤ) + e)⌋ = geometric g (n + 1) := by
   have hgr : (2 : ℝ) ≤ g := by exact_mod_cast hg
   have hgpos : (0 : ℝ) < g := by linarith
-  have hD : 0 < ((g : ℝ) - 1) * (t + g) := by positivity
+  have hD : 0 < ((g : ℝ) - 1) * (t + g) := mul_pos (by linarith) (by linarith)
   have hel := (div_le_iff₀ hgpos).mp he0
   have heu := (lt_div_iff₀ hgpos).mp he1
   have hf0 := Int.floor_le ((t + g) * (g : ℝ) ^ n)
@@ -156,7 +156,7 @@ theorem sequence_closed_forms (g : ℕ) (t e : ℝ) (hg : 2 ≤ g) (ht : 1 ≤ t
       exact expanding_floor g t hg (n + 1)
 
 lemma expanded_prefix (g : ℕ) (t : ℝ) (n : ℕ) :
-    ⌊(t + g) * (g : ℝ) ^ n⌋ = prefix g t n + (g : ℤ) ^ (n + 1) := by
+    ⌊(t + g) * (g : ℝ) ^ n⌋ = digitPrefix g t n + (g : ℤ) ^ (n + 1) := by
   rw [add_mul]
   have hp : (g : ℝ) * (g : ℝ) ^ n = ((g : ℤ) ^ (n + 1) : ℤ) := by
     push_cast
@@ -174,7 +174,7 @@ theorem recurrence_extracts_digits (g : ℕ) (t e : ℝ) (hg : 2 ≤ g)
   cases n with
   | zero =>
     rw [(sequence_closed_forms g t e hg ht0 he0 he1 0).2, expanded_prefix]
-    simp [sequence, digit, prefix]
+    simp [sequence, digit, digitPrefix]
   | succ n =>
     rw [(sequence_closed_forms g t e hg ht0 he0 he1 (n + 1)).2,
       show 2 * (n + 1) = 2 * n + 2 by omega,
@@ -214,8 +214,12 @@ theorem digit_bounds (g : ℕ) (t : ℝ) (hg : 2 ≤ g) (ht0 : 1 ≤ t) (ht1 : t
         g * (⌊t * (g : ℝ) ^ n⌋ : ℝ) < g := by
       rw [hpow]
       linarith
-    have h0i : (-1 : ℤ) < digit g t (n + 1) := by exact_mod_cast h0
-    have h1i : digit g t (n + 1) < (g : ℤ) := by exact_mod_cast h1
+    have h0i : (-1 : ℤ) < digit g t (n + 1) := by
+      dsimp [digit, digitPrefix]
+      exact_mod_cast h0
+    have h1i : digit g t (n + 1) < (g : ℤ) := by
+      dsimp [digit, digitPrefix]
+      exact_mod_cast h1
     omega
 
 end JSP000391
