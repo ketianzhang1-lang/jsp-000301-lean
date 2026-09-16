@@ -18,8 +18,10 @@ jobs:
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
-      - name: Read public original-proof links
-        run: python3 scripts/source_links.py
+      - name: Read public original-proof sources without executing them
+        run: |
+          python3 scripts/source_links.py
+          python3 scripts/read_public_paper.py
       - name: Install fixed Lean and use locked dependencies
         run: |
           set -euo pipefail
@@ -28,27 +30,12 @@ jobs:
           "$HOME/.elan/bin/elan" toolchain install "$(cat lean-toolchain)"
       - name: Fetch dependency cache
         run: lake exe cache get
-      - name: Compile finite building blocks (not the final upper-density theorem)
+      - name: Compile and audit finite construction (not infinite density theorem)
+        run: bash scripts/verify.sh
+      - name: Independently check the finite theorem and complete dependencies
         run: |
           set -euo pipefail
-          lake build --wfail 2>&1 | tee evidence/build.log
-          lake env leanchecker JSP000617 2>&1 | tee evidence/leanchecker.log
-          lake env lean Audit.lean 2>&1 | tee evidence/axioms.log
-          python3 - <<'PY'
-          import re, json, subprocess
-          from pathlib import Path
-          log = Path('evidence/axioms.log').read_text()
-          names = ['sum_sq_collision','pairSumFiber_card_le_two','parabolaSumset_large']
-          allowed = {'propext','Classical.choice','Quot.sound'}
-          for name in names:
-              m = re.search(r"'JSP000617\."+name+r"' depends on axioms: \[([^\]]*)\]",log)
-              assert m, name
-              assert {x.strip() for x in m[1].split(',') if x.strip()} <= allowed, m[0]
-          for pkg in json.loads(Path('lake-manifest.json').read_text())['packages']:
-              actual = subprocess.check_output(['git','-C','.lake/packages/'+pkg['name'],'rev-parse','HEAD'],text=True).strip()
-              assert actual == pkg['rev'], pkg['name']
-          print('All declared target axiom closures and dependency pins checked.')
-          PY
+          bash scripts/verify_nanoda.sh 2>&1 | tee evidence/nanoda-build.log
       - name: Preserve development snapshot
         if: always()
         run: |

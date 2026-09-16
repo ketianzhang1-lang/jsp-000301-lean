@@ -77,7 +77,7 @@ theorem parabolaSumset_large (htwo : (2 : F) ≠ 0) :
     apply Finset.mem_biUnion.mpr
     refine ⟨pairSumMap xy, ?_, ?_⟩
     · exact Finset.mem_image.mpr ⟨xy, hxy, rfl⟩
-    · simp [pairSumFiber, pairSumMap]
+    · exact Finset.mem_filter.mpr ⟨Finset.mem_univ xy, ⟨rfl, rfl⟩⟩
   calc
     Fintype.card F ^ 2 = (Finset.univ : Finset (F × F)).card := by simp [pow_two]
     _ ≤ ((parabolaSumset (F := F)).biUnion (fun z => pairSumFiber z.1 z.2)).card :=
