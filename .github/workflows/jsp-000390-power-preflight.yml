@@ -1,0 +1,88 @@
+name: JSP-000390 power-family submission preflight
+on:
+  push:
+    branches: [awards-preflight-jsp000390-power]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout exact proposed supplement
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: ketianzhang1-lang/awards
+          ref: 42b1fa897c580c863a3b62cc79f6d0d179379105
+          path: awards
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout verified proof for byte comparison
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: ketianzhang1-lang/jsp-000301-lean
+          ref: 7f76545c7ae6a34dcd5b63455012cec87b08223b
+          path: proof
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Install official validation dependencies
+        run: python -m pip install -r awards/requirements.txt
+      - name: Compare exact proof bytes, verify hashes and preserve original records
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          rel=docs/submissions/jsp-000390-minus-one-kz
+          p=awards/$rel
+          for f in JSP000390.lean JSP000390Power.lean Audit.lean PowerAudit.lean lakefile.lean lean-toolchain lake-manifest.json LICENSE; do
+            cmp "$p/$f" "proof/projects/jsp-000390-minus-one/$f"
+          done
+          (cd "$p" && sha256sum -c SHA256SUMS) | tee evidence/source-checks.log
+          for f in JSP000390.lean Audit.lean STATEMENT.md VERIFICATION.md LICENSE lake-manifest.json lean-toolchain; do
+            git -C awards show "f93a2618074a24d35edb0867754ad9a1b2990cde:$rel/$f" | cmp - "$p/$f"
+          done
+          git -C awards show "f93a2618074a24d35edb0867754ad9a1b2990cde:$rel/README.md" | cmp - "$p/INITIAL_MINUS_ONE_README.md"
+          python - <<'PY'
+          import subprocess
+          files = subprocess.check_output(['git','-C','awards','diff','--name-only',
+              'f93a2618074a24d35edb0867754ad9a1b2990cde','HEAD'],text=True).splitlines()
+          assert files and all(f.startswith('docs/submissions/jsp-000390-minus-one-kz/') for f in files), files
+          print('All supplement changes are confined to the existing proof-intake directory.')
+          PY
+          git -C awards diff --check f4e7173d89dfe91022a185427d63452c8ffbf6ae HEAD
+          git -C awards diff --stat f4e7173d89dfe91022a185427d63452c8ffbf6ae HEAD > evidence/diff-stat.txt
+          git -C awards diff f93a2618074a24d35edb0867754ad9a1b2990cde HEAD > evidence/supplement.patch
+          git -C awards archive HEAD "$rel" | gzip -n > evidence/submission.tar.gz
+          sha256sum evidence/submission.tar.gz > evidence/SHA256SUMS
+          git -C awards rev-parse HEAD > evidence/SUBMISSION_COMMIT
+      - name: Validate official schemas and local links
+        run: |
+          set -euo pipefail
+          cd awards
+          python scripts/manage.py validate 2>&1 | tee ../evidence/validate.log
+          python scripts/manage.py links 2>&1 | tee ../evidence/links.log
+      - name: Regenerate indexes and verify unchanged official data
+        run: |
+          set -euo pipefail
+          cd awards
+          python scripts/manage.py build 2>&1 | tee ../evidence/build-data.log
+          python scripts/manage.py check 2>&1 | tee ../evidence/check-data.log
+          git diff --exit-code -- data
+      - name: Check immutable history and run all official tests
+        run: |
+          set -euo pipefail
+          cd awards
+          python scripts/manage.py history --base f4e7173d89dfe91022a185427d63452c8ffbf6ae 2>&1 | tee ../evidence/history.log
+          python -m unittest discover -s tests -v 2>&1 | tee ../evidence/tests.log
+      - name: Upload supplement preflight evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp-000390-power-family-preflight-evidence
+          path: evidence
+          if-no-files-found: error
