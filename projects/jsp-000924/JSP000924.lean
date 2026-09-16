@@ -41,23 +41,26 @@ lemma finite_cover : ∀ r : Fin 64, r.val % 4 ≠ 2 →
     (seed ^ 4 * 2 ^ r.val + 1) % selectedDivisor r.val = 0 := by
   decide
 
-lemma pow_remainder (p n : ℕ) (hp : 2 ^ 64 % p = 1) :
+lemma pow_remainder (p n : ℕ) (hp : 2 ^ 64 % p = 1) (hp1 : 1 < p) :
     2 ^ n % p = 2 ^ (n % 64) % p := by
+  have h : Nat.ModEq p (2 ^ 64) 1 := by
+    change 2 ^ 64 % p = 1 % p
+    rw [Nat.mod_eq_of_lt hp1]
+    exact hp
+  change Nat.ModEq p (2 ^ n) (2 ^ (n % 64))
+  conv_lhs => rw [← Nat.div_add_mod n 64, pow_add, pow_mul]
   calc
-    2 ^ n % p = (2 ^ (n % 64) * (2 ^ 64) ^ (n / 64)) % p := by
-      conv_lhs => rw [← Nat.mod_add_div n 64]
-      rw [pow_add, pow_mul]
-    _ = 2 ^ (n % 64) % p := by
-      simp [Nat.mul_mod, Nat.pow_mod, hp]
+    (2 ^ 64) ^ (n / 64) * 2 ^ (n % 64) ≡
+        1 ^ (n / 64) * 2 ^ (n % 64) [MOD p] := (h.pow _).mul_right _
+    _ = 2 ^ (n % 64) := by rw [one_pow, one_mul]
 
 lemma root_mod (j p : ℕ) (hp : modulus % p = 0) :
     root j % p = seed % p := by
   simp [root, Nat.add_mod, Nat.mul_mod, hp]
 
 lemma member_mod (j p : ℕ) (hp : modulus % p = 0) :
-    member j % p = seed ^ 4 % p := by
-  simp only [member, Nat.pow_mod]
-  rw [root_mod j p hp]
+    member j % p = seed ^ 4 % p :=
+  (show Nat.ModEq p (root j) seed from root_mod j p hp).pow 4
 
 lemma root_large (j : ℕ) : 6700417 < root j := by
   dsimp [root, seed, modulus]
@@ -112,8 +115,10 @@ theorem family_proper_divisor (j n : ℕ) :
       nlinarith
     have hidentity : member j * 2 ^ n + 1 = 4 * (root j * 2 ^ (n / 4)) ^ 4 + 1 := by
       dsimp [member]
-      rw [heq, pow_add, mul_pow]
-      rw [show 4 * (n / 4) = (n / 4) * 4 by omega, pow_mul]
+      conv_lhs => rw [heq, pow_add]
+      have he : (2 : ℕ) ^ (4 * (n / 4)) = (2 ^ (n / 4)) ^ 4 := by
+        rw [mul_comm, pow_mul]
+      rw [he, mul_pow]
       norm_num
       ring
     rw [hidentity]
@@ -123,13 +128,12 @@ theorem family_proper_divisor (j n : ℕ) :
       simpa [r, Nat.mod_mod_of_dvd n (by decide : 4 ∣ 64)] using hn
     obtain ⟨hlo, hhi, hperiod, hM, hzero⟩ := finite_cover r hr
     let p := selectedDivisor r.val
-    have hm := member_mod j p hM
-    have hp := pow_remainder p n hperiod
+    have hm : Nat.ModEq p (member j) (seed ^ 4) := member_mod j p hM
+    have hp : Nat.ModEq p (2 ^ n) (2 ^ r.val) := pow_remainder p n hperiod hlo
     have hz : (member j * 2 ^ n + 1) % p = 0 := by
       calc
-        (member j * 2 ^ n + 1) % p = (seed ^ 4 * 2 ^ r.val + 1) % p := by
-          simp only [Nat.add_mod, Nat.mul_mod]
-          rw [hm, hp]
+        (member j * 2 ^ n + 1) % p = (seed ^ 4 * 2 ^ r.val + 1) % p :=
+          (hm.mul hp).add_right 1
         _ = 0 := hzero
     have hpow : 0 < 2 ^ n := by positivity
     have hlarge := root_large j
@@ -173,10 +177,9 @@ theorem standard_list_not_cover (j : ℕ) :
   intro h
   obtain ⟨p, hp, hd⟩ := h 2
   obtain ⟨hM, hnonzero⟩ := standard_arithmetic p hp
-  have hm := member_mod j p hM
-  have hz := Nat.mod_eq_zero_of_dvd hd
-  simp only [Nat.add_mod, Nat.mul_mod] at hz hnonzero
-  rw [hm] at hz
-  exact hnonzero hz
+  have hm : Nat.ModEq p (member j) (seed ^ 4) := member_mod j p hM
+  have hc : (member j * 2 ^ 2 + 1) % p = (seed ^ 4 * 2 ^ 2 + 1) % p :=
+    (hm.mul_right (2 ^ 2)).add_right 1
+  exact hnonzero (hc.symm.trans (Nat.mod_eq_zero_of_dvd hd))
 
 end JSP000924

@@ -25,43 +25,23 @@ jobs:
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
           export PATH="$HOME/.elan/bin:$PATH"
           elan toolchain install "$(cat lean-toolchain)"
-          if [ ! -f lake-manifest.json ]; then
-            python3 - <<'PY'
-          import json
-          from pathlib import Path
-          d=json.loads(Path('../../lake-manifest.json').read_text())
-          d['name']='JSP000924'
-          Path('lake-manifest.json').write_text(json.dumps(d,indent=2)+'\n')
-          PY
-          fi
+          test -s lake-manifest.json
           lake exe cache get
-      - name: Build actual quantified proof and replay kernel
+          git diff --exit-code -- lake-manifest.json
+      - name: Build, replay, six axiom audits and negative control
+        run: bash scripts/verify.sh
+      - name: Independent strict-allowlist NaNoda verification
         run: |
           set -euo pipefail
-          mkdir -p evidence
-          lake build --wfail 2>&1 | tee evidence/build.log
-          lake env leanchecker JSP000924 2>&1 | tee evidence/leanchecker.log
-          lake env lean Audit.lean 2>&1 | tee evidence/axioms.log
-          python3 - <<'PY'
-          import re,json,subprocess
-          from pathlib import Path
-          names=re.findall(r'^#print axioms (\S+)',Path('Audit.lean').read_text(),re.M)
-          assert len(names)==6
-          log=Path('evidence/axioms.log').read_text()
-          for name in names:
-              m=re.search("'"+re.escape(name)+r"' depends on axioms: \[([^\]]*)\]",log)
-              assert m is not None,name
-              assert {x.strip() for x in m[1].split(',') if x.strip()} <= {'propext','Classical.choice','Quot.sound'},name
-          for pkg in json.loads(Path('lake-manifest.json').read_text())['packages']:
-              assert subprocess.check_output(['git','-C','.lake/packages/'+pkg['name'],'rev-parse','HEAD'],text=True).strip()==pkg['rev']
-          print('All six axiom audits and actual locked revisions passed.')
-          PY
+          bash scripts/verify_nanoda.sh 2>&1 | tee evidence/nanoda-build.log
       - name: Archive tested source and logs
         if: always()
         run: |
+          set -euo pipefail
           mkdir -p evidence
           git rev-parse HEAD > evidence/SOURCE_COMMIT
           cp lake-manifest.json evidence/
+          git diff --exit-code -- lake-manifest.json
           tar --exclude=.lake --exclude=evidence -czf evidence/source.tar.gz .
           sha256sum evidence/source.tar.gz > evidence/ARCHIVE_SHA256
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
