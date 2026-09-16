@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           repository: ketianzhang1-lang/awards
-          ref: 42b1fa897c580c863a3b62cc79f6d0d179379105
+          ref: 464aa065f22461b499e05c50bf2b30e44dbea186
           path: awards
           fetch-depth: 0
           persist-credentials: false
