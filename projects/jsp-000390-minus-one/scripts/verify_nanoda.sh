@@ -44,6 +44,8 @@ config = {
     "print_success_message": True,
 }
 Path("evidence/nanoda-config.json").write_text(json.dumps(config, indent=2) + "\n")
+# NaNoda opens this output in append mode without creating a missing file.
+Path("evidence/nanoda-statements.txt").write_text("")
 PY
 "$work/checker/target/release/nanoda_bin" evidence/nanoda-config.json 2>&1 | tee evidence/nanoda.log
 gzip -n -f evidence/export.ndjson
