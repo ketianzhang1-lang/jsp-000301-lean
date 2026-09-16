@@ -1,0 +1,50 @@
+name: JSP-000925 Balint source review
+on:
+  push:
+    branches: [jsp-000925-critical-spacing]
+    paths: [.github/workflows/jsp-000925-balint-review.yml]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Retrieve primary public source and isolate relevant pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install pymupdf requests beautifulsoup4
+          mkdir -p review
+          python - <<'PY'
+          import requests, fitz, hashlib, json, re
+          from bs4 import BeautifulSoup
+          from urllib.parse import urljoin
+          from pathlib import Path
+          base='https://real-j.mtak.hu/9390/'
+          r=requests.get(base,timeout=90); r.raise_for_status()
+          soup=BeautifulSoup(r.text,'html.parser')
+          urls=[urljoin(base,a.get('href','')) for a in soup.find_all('a') if '.pdf' in a.get('href','') and 'Thumbnail' not in a.get('href','')]
+          assert urls, 'No public PDF link in source page'
+          url=urls[0]; print('Source URL:',url)
+          r=requests.get(url,timeout=180); r.raise_for_status()
+          doc=fitz.open(stream=r.content,filetype='pdf')
+          hits=[]
+          for i,p in enumerate(doc):
+              txt=p.get_text().lower()
+              if i < 70 and 'sejt' in txt and ('bálint' in txt or 'balint' in txt): hits.append(i)
+          print('Possible paper starts:',hits,'pages',len(doc))
+          starts=[i for i in hits if 25 <= i <= 55]
+          selected=sorted(set(j for i in starts for j in range(i,min(i+8,len(doc))))) if starts else list(range(30,52))
+          out=fitz.open()
+          for j in selected: out.insert_pdf(doc,from_page=j,to_page=j)
+          out.save('review/balint-review.pdf',garbage=4,deflate=True)
+          Path('review/balint-text.txt').write_text('\n\n'.join('PDF PAGE '+str(j+1)+'\n'+doc[j].get_text() for j in selected))
+          Path('review/balint-provenance.json').write_text(json.dumps({'source_url':url,'volume_sha256':hashlib.sha256(r.content).hexdigest(),'pdf_pages_one_based':[j+1 for j in selected],'purpose':'Temporary research inspection, not proof or prize evidence.'},indent=2))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp-000925-balint-review
+          path: review
+          retention-days: 1
+          if-no-files-found: error
