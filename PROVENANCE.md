@@ -1,16 +1,11 @@
-# Provenance and attribution
+# Provenance and contribution disclosure
 
-This repository formalizes the already-known counterexample recorded by the Justin Sun
-Prize problem bank for JSP-000301. It does not claim discovery of the mathematical
-counterexample.
+This project formalizes the pre-existing counterexample recorded in the Justin Sun Prize problem bank for JSP-000301. It does not claim discovery of the mathematics, establish the original discovery date, or claim first public formalization.
 
-The formalization was prepared for submission as a Lean proof with AI assistance from
-OpenAI ChatGPT. The public repository owner should be treated as the submitting
-formalization contributor unless and until the prize maintainers determine a different
-attribution under their published rules.
+OpenAI ChatGPT assisted in drafting the Lean source, documentation, dependency configuration and CI repairs under the submitting user's direction. The public repository owner operates this project and its submission process. Repository ownership and operation alone do not establish entitlement to a formalization award; the Prize must determine the appropriate contributor attribution.
 
-No third-party Lean source was copied into `JSP000301.lean`. The proof uses public Mathlib
-definitions, tactics, and theorems under Mathlib's license.
+The source uses Mathlib definitions, lemmas and proof-producing tactics. This project was prepared from the catalog's counterexample rather than by adopting another submitter's published Lean project. Mathlib and external checkers retain their respective licenses and attribution.
 
-Before any prize submission, the repository owner should review this file and the full
-Git history and confirm that this provenance statement accurately reflects the work.
+Earlier public submissions for this problem are acknowledged, including TheJustinSunPrize/awards issues #25, #62, #64, #82, #94, #109, #146 and #156. No review of all their proofs or definitive priority adjudication is claimed.
+
+Contributor-controlled CI results are not represented as an independent human review or an official Prize approval. Recipient confirmation, professional-conflict disclosures where relevant, and any private identity/compliance checks remain pending. No private identity documents, contact information or payment information are included in the submission draft.

@@ -1,80 +1,55 @@
 # JSP-000301 — Lean 4 formalization
 
-This repository formalizes the explicit counterexample recorded for Justin Sun Prize
-problem **JSP-000301**:
+This project formalizes the **already-known** counterexample to the catalog question:
+if two consecutive positive integers are powerful, must at least one be a square?
+The witness is `12167 = 23^3` and `12168 = 2^3 * 3^2 * 13^2`, neither a square.
+No new mathematical discovery or first-formalization priority is claimed.
 
-> If two consecutive positive integers are powerful, must at least one be a perfect square?
+## Verified snapshot
 
-The counterexample is the pair
+- Proof and dependency-lock commit: `e1a17b0d6728b9d4929d1d4abd3721a27377369a`.
+- [Passing run #13](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35131699133), reproduced with the committed dependency manifest.
+- [Passing run #12](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35130895580), before committing the generated manifest.
+- Lean `v4.34.0`; Mathlib `v4.34.0` at `5ed2965256430c3649e86755f9576b54eca72435`.
+- `lake build --wfail`, bundled `leanchecker`, NaNoda and project axiom-audit passed.
+- NaNoda reported no typechecker errors and one pretty-printer error; details and limits are in [VERIFICATION.md](VERIFICATION.md).
 
-- `12167 = 23^3`, and
-- `12168 = 2^3 * 3^2 * 13^2`.
+This is contributor-generated verification evidence, **not official prize verification, an award, or payment approval**. Documentation added after the verified snapshot does not change which proof commit was checked.
 
-Both are powerful numbers, while neither is a perfect square because both lie strictly
-between `110^2` and `111^2`.
+## Reproduce the verified proof
 
-## Formal statement
+With Git and the Lean/elan toolchain manager installed:
 
-`JSP000301.lean` defines
-
-```lean
-def Powerful (n : ℕ) : Prop :=
-  ∀ p : ℕ, Nat.Prime p → p ∣ n → p ^ 2 ∣ n
-
-def PerfectSquare (n : ℕ) : Prop :=
-  ∃ m : ℕ, m ^ 2 = n
-```
-
-and proves:
-
-- `JSP000301.jsp_000301_counterexample` — the explicit witness `n = 12167`;
-- `JSP000301.jsp_000301_disproved` — the direct negation of the universal assertion.
-
-See `STATEMENT_FIDELITY.md` for the statement-correspondence review.
-
-## Toolchain
-
-- Lean: `v4.34.0`
-- Mathlib: `v4.34.0`
-
-Both versions are pinned for reproducibility.
-
-## Verification
-
-The GitHub Actions workflow is configured to run:
-
-1. `lake build --wfail`;
-2. `leanchecker` on `JSP000301`;
-3. the independent `nanoda` checker with `sorryAx` disallowed; and
-4. `axiom-audit` using its default foundational-axiom allowlist.
-
-A submission should not be made until all CI checks have completed successfully on a
-public, pinned commit.
-
-## Verify locally
-
-With Lean/elan available:
-
-```bash
-lake update
+```sh
+git clone https://github.com/ketianzhang1-lang/jsp-000301-lean.git
+cd jsp-000301-lean
+git checkout --detach e1a17b0d6728b9d4929d1d4abd3721a27377369a
 lake exe cache get
 lake build --wfail
+lake env leanchecker JSP000301
 ```
 
-## Attribution
+Keep the committed `lake-manifest.json`; do not run `lake update` when reproducing this exact snapshot. The pinned `.github/workflows/ci.yml` specifies NaNoda and axiom-audit reproduction, including tool revisions.
 
-This repository does **not** claim discovery of the mathematical counterexample. It
-formalizes the counterexample already recorded by the Justin Sun Prize problem bank.
-See `PROVENANCE.md` for formalization provenance and AI-assistance disclosure.
+## Formal statements
 
-## Submission
+`JSP000301.lean` defines `Powerful n` using Mathlib's `Nat.Prime` and the condition that every prime divisor's square divides `n`. `PerfectSquare n` means `∃ m : ℕ, m ^ 2 = n`.
 
-After a green CI run, pin the full 40-character commit SHA and use
-`SUBMISSION_ISSUE_DRAFT.md` to open the Prize repository's **Recommend a recipient**
-issue form. Do not replace independent reviewer/signatory fields in the Prize's own
-candidate records with self-attestation.
+The declarations `JSP000301.jsp_000301_counterexample` and `JSP000301.jsp_000301_disproved` respectively exhibit a positive witness and negate the universal claim. See [STATEMENT_FIDELITY.md](STATEMENT_FIDELITY.md) for the submitter's comparison, not an independent review.
 
-## Source problem
+## Submission status and attribution
 
-Justin Sun Prize problem-bank entry JSP-000301:
-https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0301-0400.md
+The recipient-recommendation issue attempted through the connected integration on September 16, 2026 was rejected with HTTP 403. **No official issue or PR has been filed by that attempt.** The filled [submission draft](SUBMISSION_ISSUE_DRAFT.md) is not a submission receipt.
+
+A formal PR to the designated official repository and official verification are still required unless the Prize confirms its externally peer-verified registration exemption. Our own CI run does not establish that exemption. A fork and maintainer review are pending.
+
+Earlier submissions for the same scoped problem exist. This project claims only the formalization and verification work actually evidenced here, not precedence over those submissions. Any credit, eligibility, tier or payout remains for the Prize to determine.
+
+See [PROVENANCE.md](PROVENANCE.md) for AI assistance and contribution limits.
+
+## Official sources
+
+- [Problem record](https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0301-0400.md#JSP-000301)
+- [Contribution instructions](https://github.com/TheJustinSunPrize/awards/blob/main/CONTRIBUTING.md)
+- [Selection Rules](https://www.hejustinsun.com/prize/rules)
+- [FAQ](https://www.hejustinsun.com/prize/faq)
