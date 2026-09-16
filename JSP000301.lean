@@ -1,4 +1,7 @@
-import Mathlib
+import Mathlib.Data.Nat.Prime.Basic
+import Mathlib.Data.Nat.Sqrt
+import Mathlib.Tactic.NormNum
+import Mathlib.Tactic.NormNum.Prime
 
 namespace JSP000301
 
