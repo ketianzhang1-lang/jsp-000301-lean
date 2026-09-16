@@ -1,0 +1,43 @@
+name: Lean verification
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build and verify Lean proof
+        uses: leanprover/lean-action@v1
+        env:
+          LEAN_NUM_THREADS: "1"
+        with:
+          build: true
+          build-args: "--wfail"
+          use-mathlib-cache: true
+          leanchecker: true
+          leanchecker-args: "JSP000301"
+          nanoda: true
+          nanoda-allow-sorry: false
+          axiom-audit: true
+          axiom-audit-root: "JSP000301"
+
+      - name: Verify dependency manifest exists
+        run: test -f lake-manifest.json
+
+      - name: Upload resolved dependency manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: lake-manifest
+          path: lake-manifest.json
+          if-no-files-found: error
