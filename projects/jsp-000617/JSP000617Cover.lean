@@ -40,13 +40,16 @@ lemma sum_misses (S U : Finset G) :
       · simp
   calc
     ∑ t : G, (U.filter (fun u => u - t ∉ S)).card =
-        ∑ t : G, ∑ u ∈ U, if u - t ∉ S then 1 else 0 := by simp
+        ∑ t : G, ∑ u ∈ U, if u - t ∉ S then 1 else 0 := by
+          simp only [Finset.card_eq_sum_ones, Finset.sum_filter]
     _ = ∑ u ∈ U, ∑ t : G, if u - t ∉ S then 1 else 0 := by rw [Finset.sum_comm]
     _ = ∑ _u ∈ U, ((Finset.univ : Finset G) \ S).card := by
       apply Finset.sum_congr rfl
       intro u _hu
-      simpa only [Finset.sum_boole] using hcard u
-    _ = U.card * (Fintype.card G - S.card) := by simp
+      simpa only [Finset.sum_boole, Nat.cast_id] using hcard u
+    _ = U.card * (Fintype.card G - S.card) := by
+      rw [Finset.card_sdiff_of_subset (Finset.subset_univ S)]
+      simp
 
 /-- Some translation misses no more than the average number of points. -/
 lemma exists_small_miss (S U : Finset G) :
@@ -54,7 +57,7 @@ lemma exists_small_miss (S U : Finset G) :
       U.card * (Fintype.card G - S.card) := by
   classical
   by_contra h
-  push_neg at h
+  push Not at h
   have hlt := Finset.sum_lt_sum_of_nonempty (Finset.univ_nonempty (α := G))
     (fun t _ht => h t)
   have hsum := sum_misses S U
@@ -136,7 +139,7 @@ lemma translated_sums_subset (T : Finset (F × F)) :
   refine ⟨(a, b + t), Finset.mem_product.mpr ⟨ha, hb⟩, ?_⟩
   change a + (b + t) = z
   calc
-    a + (b + t) = pairSumMap xy + t := by rfl
+    a + (b + t) = pairSumMap xy + t := (add_assoc a b t).symm
     _ = (z - t) + t := by rw [heq]
     _ = z := sub_add_cancel z t
 

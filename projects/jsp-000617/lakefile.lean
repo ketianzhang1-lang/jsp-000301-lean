@@ -7,3 +7,5 @@ require mathlib from git
 lean_lib JSP000617 where
 @[default_target]
 lean_lib JSP000617Cover where
+@[default_target]
+lean_lib JSP000617Sparse where
