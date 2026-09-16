@@ -18,48 +18,22 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
-      - name: Install pinned compiler and reuse locked dependency revisions
+      - name: Install pinned compiler and fetch locked dependencies
         run: |
           set -euo pipefail
           curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
           export PATH="$HOME/.elan/bin:$PATH"
           elan toolchain install "$(cat lean-toolchain)"
-          if [ ! -f lake-manifest.json ]; then
-            python3 - <<'PY'
-          import json
-          from pathlib import Path
-          data = json.loads(Path('../../lake-manifest.json').read_text())
-          data['name'] = 'JSP000391'
-          Path('lake-manifest.json').write_text(json.dumps(data, indent=2) + '\n')
-          PY
-          fi
+          test -s lake-manifest.json
           lake exe cache get
-      - name: Build actual recursive proof
+          git diff --exit-code -- lake-manifest.json
+      - name: Build both modules, replay kernels and audit all eight targets
+        run: bash scripts/verify.sh
+      - name: Independent NaNoda replay of complete target closures
         run: |
           set -euo pipefail
-          mkdir -p evidence
-          lake build --wfail 2>&1 | tee evidence/build.log
-      - name: Kernel replay and actual target axiom audit
-        run: |
-          set -euo pipefail
-          lake env leanchecker JSP000391 2>&1 | tee evidence/leanchecker.log
-          lake env lean Audit.lean 2>&1 | tee evidence/axioms.log
-          python3 - <<'PY'
-          from pathlib import Path
-          import re, json, subprocess
-          log = Path('evidence/axioms.log').read_text()
-          for name in ['sequence_closed_forms','recurrence_extracts_digits','digit_bounds']:
-              m = re.search("'JSP000391."+name+r"' depends on axioms: \[([^\]]*)\]", log)
-              assert m is not None, 'Missing audit: '+name
-              assert set(x.strip() for x in m[1].split(',') if x.strip()) <= {'propext','Classical.choice','Quot.sound'}, name
-          for pkg in json.loads(Path('lake-manifest.json').read_text())['packages']:
-              assert subprocess.check_output(['git','-C','.lake/packages/'+pkg['name'],'rev-parse','HEAD'],text=True).strip() == pkg['rev']
-          print('All target axiom reports and actual dependency pins passed.')
-          PY
-          printf 'import JSP000391\nexample : (1 : Nat) = 0 := by decide\n' > Negative.lean
-          if lake env lean Negative.lean > evidence/negative-control.log 2>&1; then exit 1; fi
-          rm Negative.lean
+          bash scripts/verify_nanoda.sh 2>&1 | tee evidence/nanoda-build.log
       - name: Archive exact tested source
         if: always()
         run: |
@@ -67,6 +41,7 @@ jobs:
           mkdir -p evidence
           git rev-parse HEAD > evidence/SOURCE_COMMIT
           cp lake-manifest.json evidence/lake-manifest.json
+          git diff --exit-code -- lake-manifest.json
           tar --exclude=.lake --exclude=evidence -czf evidence/source.tar.gz .
           sha256sum evidence/source.tar.gz > evidence/ARCHIVE_SHA256
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

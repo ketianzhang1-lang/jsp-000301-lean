@@ -162,8 +162,13 @@ lemma expanded_prefix (g : ℕ) (t : ℝ) (n : ℕ) :
     push_cast
     rw [pow_succ]
     ring
-  rw [hp, Int.floor_add_int]
-  rfl
+  rw [hp]
+  apply Int.floor_eq_iff.mpr
+  dsimp [digitPrefix]
+  push_cast
+  have hlo := Int.floor_le (t * (g : ℝ) ^ n)
+  have hhi := Int.lt_floor_add_one (t * (g : ℝ) ^ n)
+  constructor <;> linarith
 
 /-- Stoll's Theorem 1.3 in normalized form, for all bases and all its shifts. -/
 theorem recurrence_extracts_digits (g : ℕ) (t e : ℝ) (hg : 2 ≤ g)
