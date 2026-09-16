@@ -1,0 +1,36 @@
+name: JSP617 interpreter signatures
+on:
+  push:
+    branches: [jsp617-ir-signatures]
+permissions:
+  contents: read
+jobs:
+  signatures:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Obtain exact public signatures and record module setup
+        working-directory: projects/jsp-000617
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          export PATH="$HOME/.elan/bin:$PATH"
+          elan toolchain install "$(cat lean-toolchain)"
+          lake exe cache get
+          lake build --wfail
+          mkdir -p ../../ir-signatures
+          find .lake/packages -type f -name '*.ir.sig' -print0 | tar --null -T - -czf ../../ir-signatures/signatures.tar.gz
+          cp .lake/build/ir/*.setup.json ../../ir-signatures/
+          find .lake/packages -maxdepth 2 -type f \( -name 'lakefile.*' -o -name 'lake-manifest.json' -o -name 'lean-toolchain' \) -print0 | tar --null -T - -czf ../../ir-signatures/package-configs.tar.gz
+          sha256sum ../../ir-signatures/*.tar.gz > ../../ir-signatures/SHA256SUMS
+          du -h ../../ir-signatures/*
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-ir-signatures
+          path: ir-signatures
+          compression-level: 0
+          retention-days: 1
