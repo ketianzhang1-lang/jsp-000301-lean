@@ -13,6 +13,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,16 +25,67 @@ jobs:
           curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
           "$HOME/.elan/bin/elan" toolchain install "$(cat lean-toolchain)"
-          "$HOME/.elan/bin/lake" update
+          if [ ! -f lake-manifest.json ]; then
+            "$HOME/.elan/bin/lake" update
+          fi
+          test -s lake-manifest.json
+          cat lake-manifest.json
+
+      - name: Checkout pinned Lean action
+        uses: actions/checkout@v4
+        with:
+          repository: leanprover/lean-action
+          ref: 50fcf42d2e460296f1a34b402e990d1b24f8b596
+          path: .ci/lean-action
+          persist-credentials: false
+
+      - name: Pin compatible NaNoda and exporter revisions
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          script = Path(".ci/lean-action/scripts/run_nanoda.sh")
+          text = script.read_text()
+          # Upstream lean-action issue #169 / PR #177: debug uses a stale
+          # export parser. Change tool revisions, not checking semantics.
+          pins = [
+              ("git clone --depth 1 https://github.com/leanprover/lean4export.git _lean4export",
+               "https://github.com/leanprover/lean4export.git", "_lean4export",
+               "6cea97789dc088ea47fcea15692db85685aedac5"),
+              ("git clone --depth 1 --branch debug https://github.com/ammkrn/nanoda_lib.git _nanoda_lib",
+               "https://github.com/ammkrn/nanoda_lib.git", "_nanoda_lib",
+               "4c544ed4099c8227f07d5de77ad1e69fb0740a27"),
+          ]
+          for old, url, directory, sha in pins:
+              if text.count(old) != 1:
+                  raise SystemExit(f"Unexpected upstream script; refusing to patch {directory}")
+              new = "\n".join([
+                  f"git init {directory}",
+                  f"git -C {directory} remote add origin {url}",
+                  f"git -C {directory} fetch --depth 1 origin {sha}",
+                  f"git -C {directory} checkout --detach FETCH_HEAD",
+                  f'test "$(git -C {directory} rev-parse HEAD)" = "{sha}"',
+              ])
+              text = text.replace(old, new)
+              print(f"Pinned {directory}: {sha}")
+          text = text.replace(
+              "# Using debug branch which has fixes for recent Lean kernel changes",
+              "# Pinned current NaNoda parser; the former debug branch is stale.")
+          script.write_text(text)
+          PY
+          git -C .ci/lean-action diff -- scripts/run_nanoda.sh
 
       - name: Build and verify Lean proof
-        uses: leanprover/lean-action@v1
+        uses: ./.ci/lean-action
         env:
           LEAN_NUM_THREADS: "1"
         with:
           build: true
           build-args: "--wfail"
           use-mathlib-cache: true
+          use-github-cache: false
           leanchecker: true
           leanchecker-args: "JSP000301"
           nanoda: true
@@ -42,9 +94,10 @@ jobs:
           axiom-audit-root: "JSP000301"
 
       - name: Verify dependency manifest exists
-        run: test -f lake-manifest.json
+        run: test -s lake-manifest.json
 
       - name: Upload resolved dependency manifest
+        if: ${{ always() && hashFiles('lake-manifest.json') != '' }}
         uses: actions/upload-artifact@v4
         with:
           name: lake-manifest
