@@ -1,0 +1,76 @@
+name: JSP-000390 submission preflight
+on:
+  push:
+    branches: [awards-preflight-jsp000390]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout exact proposed submission
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: ketianzhang1-lang/awards
+          ref: f93a2618074a24d35edb0867754ad9a1b2990cde
+          path: awards
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout verified proof for byte comparison
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: ketianzhang1-lang/jsp-000301-lean
+          ref: 22e9b888c2378df7c2039ceceddccbfc5b883387
+          path: proof
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Install official validation dependencies
+        run: python -m pip install -r awards/requirements.txt
+      - name: Compare proof bytes and validate submitted checksums
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          p=awards/docs/submissions/jsp-000390-minus-one-kz
+          for f in JSP000390.lean Audit.lean lakefile.lean lean-toolchain lake-manifest.json LICENSE; do
+            cmp "$p/$f" "proof/projects/jsp-000390-minus-one/$f"
+          done
+          (cd "$p" && sha256sum -c SHA256SUMS) | tee evidence/source-checks.log
+          git -C awards diff --check f4e7173d89dfe91022a185427d63452c8ffbf6ae HEAD
+          git -C awards diff --stat f4e7173d89dfe91022a185427d63452c8ffbf6ae HEAD > evidence/diff-stat.txt
+          git -C awards diff f4e7173d89dfe91022a185427d63452c8ffbf6ae HEAD > evidence/submission.patch
+          git -C awards archive HEAD docs/submissions/jsp-000390-minus-one-kz | gzip -n > evidence/submission.tar.gz
+          sha256sum evidence/submission.tar.gz > evidence/SHA256SUMS
+          git -C awards rev-parse HEAD > evidence/SUBMISSION_COMMIT
+      - name: Validate schemas and local links
+        run: |
+          set -euo pipefail
+          cd awards
+          python scripts/manage.py validate 2>&1 | tee ../evidence/validate.log
+          python scripts/manage.py links 2>&1 | tee ../evidence/links.log
+      - name: Regenerate indexes and verify data consistency
+        run: |
+          set -euo pipefail
+          cd awards
+          python scripts/manage.py build 2>&1 | tee ../evidence/build-data.log
+          python scripts/manage.py check 2>&1 | tee ../evidence/check-data.log
+          git diff --exit-code -- data
+      - name: Check immutable history and run official tests
+        run: |
+          set -euo pipefail
+          cd awards
+          python scripts/manage.py history --base f4e7173d89dfe91022a185427d63452c8ffbf6ae 2>&1 | tee ../evidence/history.log
+          python -m unittest discover -s tests -v 2>&1 | tee ../evidence/tests.log
+      - name: Upload preflight evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp-000390-preflight-evidence
+          path: evidence
+          if-no-files-found: error
