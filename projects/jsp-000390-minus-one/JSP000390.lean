@@ -60,8 +60,14 @@ theorem three_pow_is_solution (r : ℕ) :
     apply dvd_trans ?_ (three_pow_succ_dvd r)
     exact ⟨3, pow_succ (3 : ℤ) r⟩
   rw [Int.modEq_iff_dvd]
-  have hneg := dvd_neg.mpr hdiv
-  simpa [Nat.cast_pow, sub_eq_add_neg, add_comm] using hneg
+  have hcast : ((3 ^ r : ℕ) : ℤ) = (3 : ℤ) ^ r := by simp
+  rw [hcast]
+  obtain ⟨q, hq⟩ := hdiv
+  refine ⟨-q, ?_⟩
+  calc
+    -1 - (2 : ℤ) ^ (3 ^ r : ℕ) = -((2 : ℤ) ^ (3 ^ r : ℕ) + 1) := by ring
+    _ = -((3 : ℤ) ^ r * q) := by rw [hq]
+    _ = (3 : ℤ) ^ r * (-q) := by ring
 
 lemma lt_three_pow (r : ℕ) : r < 3 ^ r := by
   induction r with
