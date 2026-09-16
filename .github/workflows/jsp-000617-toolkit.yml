@@ -1,0 +1,57 @@
+name: JSP-000617 offline development toolkit
+on:
+  push:
+    branches: [jsp-000617-upper-density]
+    paths: [.github/workflows/jsp-000617-toolkit.yml]
+permissions:
+  contents: read
+jobs:
+  toolkit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: bash
+        working-directory: projects/jsp-000617
+    steps:
+      - name: Checkout development branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install exact toolchain and locked cache
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.elan/bin:$PATH"
+          elan toolchain install "$(cat lean-toolchain)"
+          lake exe cache get
+          lake build --wfail
+      - name: Package public runtime and compiled dependencies
+        run: |
+          set -euo pipefail
+          prefix=$(lean --print-prefix)
+          mkdir -p toolkit/runtime/bin toolkit/runtime/lib/lean toolkit/deps toolkit/source
+          cp "$prefix/bin/lean" "$prefix/bin/leanchecker" toolkit/runtime/bin/
+          find "$prefix/lib" -maxdepth 1 -type f -name '*.so*' -exec cp -t toolkit/runtime/lib {} +
+          (cd "$prefix" && find lib/lean -type f \( -name '*.olean*' -o -name '*.ir' -o -name '*.so*' \) -print0 | tar --null -T - -cf -) | tar -xf - -C toolkit/runtime
+          for d in .lake/packages/*; do
+            name=$(basename "$d")
+            test -d "$d/.lake/build/lib/lean" || continue
+            mkdir -p "toolkit/deps/$name"
+            (cd "$d/.lake/build/lib/lean" && find . -type f \( -name '*.olean*' -o -name '*.ir' -o -name '*.so*' \) -print0 | tar --null -T - -cf -) | tar -xf - -C "toolkit/deps/$name"
+          done
+          (cd .lake/packages/mathlib && find Mathlib -type f -name '*.lean' -print0 | tar --null -T - -cf -) | tar -xf - -C toolkit/source
+          cp lean-toolchain lake-manifest.json toolkit/
+          git rev-parse HEAD > toolkit/DEVELOPMENT_COMMIT
+          du -sh toolkit/*
+          tar -cf - toolkit | zstd -T2 -3 -o jsp617-toolkit.tar.zst
+          sha256sum jsp617-toolkit.tar.zst
+      - name: Upload temporary public development toolkit
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-offline-development-toolkit
+          path: projects/jsp-000617/jsp617-toolkit.tar.zst
+          compression-level: 0
+          retention-days: 1
+          if-no-files-found: error
