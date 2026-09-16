@@ -1,0 +1,90 @@
+name: Awards submission preflight
+
+on:
+  push:
+    branches: ["awards-preflight-jsp000301"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout exact proposed submission
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: ketianzhang1-lang/awards
+          ref: 1181f66d4e6f1bbac0c109443f1cb417f043896f
+          path: awards
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Checkout verified proof for byte comparison
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: ketianzhang1-lang/jsp-000301-lean
+          ref: e1a17b0d6728b9d4929d1d4abd3721a27377369a
+          path: verified
+          persist-credentials: false
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.12"
+
+      - name: Install official validation dependencies
+        run: python -m pip install -r awards/requirements.txt
+
+      - name: Check exact source and archive proposed changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p report
+          test "$(git -C awards rev-parse HEAD)" = "1181f66d4e6f1bbac0c109443f1cb417f043896f"
+          test "$(git -C verified rev-parse HEAD)" = "e1a17b0d6728b9d4929d1d4abd3721a27377369a"
+          for file in JSP000301.lean lakefile.lean lean-toolchain lake-manifest.json LICENSE; do
+            cmp "verified/$file" "awards/docs/submissions/jsp-000301-kz/$file"
+            echo "$file: identical to verified proof snapshot" | tee -a report/source-comparison.txt
+          done
+          (cd awards/docs/submissions/jsp-000301-kz && sha256sum -c SHA256SUMS) | tee report/checksums.txt
+          git -C awards diff --check f4e7173d89dfe91022a185427d63452c8ffbf6ae HEAD
+          git -C awards diff --stat f4e7173d89dfe91022a185427d63452c8ffbf6ae HEAD | tee report/diff-stat.txt
+          git -C awards diff --binary f4e7173d89dfe91022a185427d63452c8ffbf6ae HEAD > report/submission.patch
+          git -C awards archive --format=zip --output "$GITHUB_WORKSPACE/report/submission-source.zip" HEAD
+          sha256sum report/submission-source.zip | tee report/archive-sha256.txt
+          wc -c < report/submission-source.zip | tee report/archive-bytes.txt
+
+      - name: Validate schemas and references
+        working-directory: awards
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/manage.py validate 2>&1 | tee ../report/validate.log
+          python scripts/manage.py links 2>&1 | tee ../report/links.log
+
+      - name: Regenerate indexes and verify unchanged data
+        working-directory: awards
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/manage.py build 2>&1 | tee ../report/build-data.log
+          python scripts/manage.py check 2>&1 | tee ../report/data-consistency.log
+          git diff --exit-code -- data | tee ../report/generated-data-diff.txt
+
+      - name: Check history and run official test suite
+        working-directory: awards
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/manage.py history --base f4e7173d89dfe91022a185427d63452c8ffbf6ae 2>&1 | tee ../report/history.log
+          python -m unittest discover -s tests -v 2>&1 | tee ../report/tests.log
+
+      - name: Upload preflight evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: awards-preflight-evidence
+          path: report/
+          if-no-files-found: error
