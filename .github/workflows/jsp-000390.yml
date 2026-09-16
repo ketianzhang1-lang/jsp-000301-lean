@@ -11,6 +11,7 @@ jobs:
     timeout-minutes: 25
     defaults:
       run:
+        shell: bash
         working-directory: projects/jsp-000390-minus-one
     steps:
       - name: Checkout
