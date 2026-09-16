@@ -1,0 +1,76 @@
+name: JSP617 split offline tools
+on:
+  push:
+    branches: [jsp617-local-checking-tools]
+    paths: [.github/workflows/jsp617-split-tools.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  split:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Read the existing exact public tool artifacts and split them
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p parts tmp
+          for spec in toolchain:10468244568 dependencies:10468104886; do
+            label=${spec%:*}; id=${spec#*:}
+            curl --fail --silent --show-error --location -H "Authorization: Bearer $GH_TOKEN" -H 'Accept: application/vnd.github+json' "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/$id/zip" -o tmp/current.zip
+            python -c 'import zipfile; zipfile.ZipFile("tmp/current.zip").extractall("tmp")'
+            split -b 450M -d "tmp/$label.tar.gz" "parts/$label-"
+            sha256sum "tmp/$label.tar.gz"
+            rm "tmp/$label.tar.gz" tmp/current.zip
+          done
+          sha256sum parts/* > parts/SHA256SUMS
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-toolchain-00
+          path: parts/toolchain-00
+          compression-level: 0
+          retention-days: 1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-toolchain-01
+          path: parts/toolchain-01
+          compression-level: 0
+          retention-days: 1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-dependencies-00
+          path: parts/dependencies-00
+          compression-level: 0
+          retention-days: 1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-dependencies-01
+          path: parts/dependencies-01
+          compression-level: 0
+          retention-days: 1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-dependencies-02
+          path: parts/dependencies-02
+          compression-level: 0
+          retention-days: 1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-dependencies-03
+          path: parts/dependencies-03
+          compression-level: 0
+          retention-days: 1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-dependencies-04
+          path: parts/dependencies-04
+          compression-level: 0
+          retention-days: 1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-parts-checksums
+          path: parts/SHA256SUMS
+          retention-days: 1
