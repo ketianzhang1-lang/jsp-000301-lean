@@ -26,11 +26,11 @@ lemma power_tail_periodic {M : Type*} [Monoid M] (x : M)
   have hu : u ≤ N := by omega
   have hstep : x ^ (N + (v - u)) = x ^ N := by
     calc
-      x ^ (N + (v - u)) = x ^ (v + (N - u)) := by congr 1 <;> omega
+      x ^ (N + (v - u)) = x ^ (v + (N - u)) := by congr 1; omega
       _ = x ^ v * x ^ (N - u) := by rw [pow_add]
       _ = x ^ u * x ^ (N - u) := by rw [← heq]
       _ = x ^ (u + (N - u)) := by rw [pow_add]
-      _ = x ^ N := by congr 1 <;> omega
+      _ = x ^ N := by congr 1; omega
   intro t
   induction t with
   | zero => simp
@@ -42,7 +42,7 @@ This does not assume that a is invertible modulo i. -/
 lemma exists_zmod_power_period (a : ℤ) (i : ℕ) (hi : 0 < i) :
     ∃ d : ℕ, 0 < d ∧ ∀ t : ℕ,
       (a : ZMod i) ^ (i + d * t) = (a : ZMod i) ^ i := by
-  letI : NeZero i := ⟨by omega⟩
+  let : NeZero i := ⟨by omega⟩
   obtain ⟨u, v, huv, heq⟩ := Fintype.exists_ne_map_eq_of_card_lt
     (fun j : Fin (i + 1) => (a : ZMod i) ^ j.val) (by simp [ZMod.card])
   have hne : u.val ≠ v.val := fun h => huv (Fin.ext h)
@@ -72,7 +72,7 @@ theorem power_residue_unbounded (a : ℤ) (i : ℕ) (hi : 0 < i) (B : ℕ) :
   have hci : a ^ (i * p) ≡ a ^ i [ZMOD (i : ℤ)] := by
     rw [← ZMod.intCast_eq_intCast_iff]
     simpa only [Int.cast_pow] using hzi
-  haveI : Fact p.Prime := ⟨hp⟩
+  have : Fact p.Prime := ⟨hp⟩
   have hzp : (a : ZMod p) ^ (i * p) = (a : ZMod p) ^ i := by
     rw [Nat.mul_comm i p, pow_mul, ZMod.pow_card]
   have hcp : a ^ (i * p) ≡ a ^ i [ZMOD (p : ℤ)] := by
