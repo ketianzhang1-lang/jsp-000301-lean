@@ -1,0 +1,67 @@
+name: JSP-000617 development checks
+on:
+  push:
+    branches: [jsp-000617-upper-density]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  finite-core:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    defaults:
+      run:
+        shell: bash
+        working-directory: projects/jsp-000617
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Read public original-proof links
+        run: python3 scripts/source_links.py
+      - name: Install fixed Lean and use locked dependencies
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          "$HOME/.elan/bin/elan" toolchain install "$(cat lean-toolchain)"
+      - name: Fetch dependency cache
+        run: lake exe cache get
+      - name: Compile finite building blocks (not the final upper-density theorem)
+        run: |
+          set -euo pipefail
+          lake build --wfail 2>&1 | tee evidence/build.log
+          lake env leanchecker JSP000617 2>&1 | tee evidence/leanchecker.log
+          lake env lean Audit.lean 2>&1 | tee evidence/axioms.log
+          python3 - <<'PY'
+          import re, json, subprocess
+          from pathlib import Path
+          log = Path('evidence/axioms.log').read_text()
+          names = ['sum_sq_collision','pairSumFiber_card_le_two','parabolaSumset_large']
+          allowed = {'propext','Classical.choice','Quot.sound'}
+          for name in names:
+              m = re.search(r"'JSP000617\."+name+r"' depends on axioms: \[([^\]]*)\]",log)
+              assert m, name
+              assert {x.strip() for x in m[1].split(',') if x.strip()} <= allowed, m[0]
+          for pkg in json.loads(Path('lake-manifest.json').read_text())['packages']:
+              actual = subprocess.check_output(['git','-C','.lake/packages/'+pkg['name'],'rev-parse','HEAD'],text=True).strip()
+              assert actual == pkg['rev'], pkg['name']
+          print('All declared target axiom closures and dependency pins checked.')
+          PY
+      - name: Preserve development snapshot
+        if: always()
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          git rev-parse HEAD > evidence/SOURCE_COMMIT
+          git diff --exit-code -- lake-manifest.json
+          tar --exclude=.lake --exclude=evidence -czf evidence/source.tar.gz .
+          sha256sum evidence/source.tar.gz > evidence/SHA256SUMS
+      - name: Upload development evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp-000617-development-evidence
+          path: projects/jsp-000617/evidence
+          if-no-files-found: error
