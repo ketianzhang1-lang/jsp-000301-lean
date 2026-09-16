@@ -17,6 +17,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install Lean toolchain
+        uses: leanprover/lean-action@v1
+        with:
+          auto-config: false
+          build: false
+          test: false
+          lint: false
+          use-github-cache: false
+          use-mathlib-cache: false
+
+      - name: Resolve dependencies and generate manifest
+        run: lake update
+
       - name: Build and verify Lean proof
         uses: leanprover/lean-action@v1
         env:
