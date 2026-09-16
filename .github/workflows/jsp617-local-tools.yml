@@ -1,0 +1,54 @@
+name: JSP617 pinned offline development tools
+on:
+  push:
+    branches: [jsp617-local-checking-tools]
+permissions:
+  contents: read
+jobs:
+  tools:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install exact development toolchain and locked dependencies
+        working-directory: projects/jsp-000617
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          export PATH="$HOME/.elan/bin:$PATH"
+          elan toolchain install "$(cat lean-toolchain)"
+          lake exe cache get
+          lake build --wfail
+      - name: Package public compiler and compiled dependencies for offline checking
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p offline
+          TC="$HOME/.elan/toolchains/leanprover--lean4---v4.34.0"
+          tar --exclude='*.a' --exclude='./src' --exclude='./include' --exclude='./share' -C "$TC" -cf - bin lib | gzip -1 > offline/toolchain.tar.gz
+          cd projects/jsp-000617
+          find .lake/packages -type f \( -name '*.olean' -o -name '*.ilean' -o -name '*.private' -o -name '*.server' -o -name '*.ir' -o -name '*.so' -o -name '*.lean' \) -print0 > /tmp/lean-files
+          tar --null -T /tmp/lean-files -cf - | gzip -1 > ../../offline/dependencies.tar.gz
+          cd ../..
+          sha256sum offline/*.tar.gz | tee offline/SHA256SUMS
+          du -h offline/*.tar.gz
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-offline-toolchain
+          path: offline/toolchain.tar.gz
+          compression-level: 0
+          retention-days: 7
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-offline-dependencies
+          path: offline/dependencies.tar.gz
+          compression-level: 0
+          retention-days: 7
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-offline-checksums
+          path: offline/SHA256SUMS
+          retention-days: 7
