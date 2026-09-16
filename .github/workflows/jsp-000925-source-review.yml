@@ -1,0 +1,49 @@
+name: JSP-000925 source review
+on:
+  push:
+    branches: [jsp-000925-critical-spacing]
+    paths: [.github/workflows/jsp-000925-source-review.yml]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Read public scholarly source without changing prior submissions
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install pymupdf
+          curl -fL --retry 2 --max-time 180 https://real-j.mtak.hu/7424/1/MTA_ActaMathHung_27.pdf -o volume.pdf
+          mkdir -p source-review
+          python - <<'PY'
+          import fitz, json, hashlib
+          from pathlib import Path
+          doc = fitz.open('volume.pdf')
+          hits = []
+          for i,p in enumerate(doc):
+              text = p.get_text()
+              if 'MONOTONICITY' in text.upper() and 'SPACED' in text.upper() and ('LORCH' in text.upper()):
+                  hits.append(i)
+          print('Possible source starts:', hits, 'total PDF pages', len(doc))
+          # Printed pp. 293-300, located by title rather than assumed PDF offsets.
+          candidates = [i for i in hits if 270 < i < 330]
+          if not candidates:
+              candidates = list(range(292,310))
+          selected = sorted(set(j for i in candidates for j in range(i, min(i+8,len(doc)))))
+          out = fitz.open()
+          for j in selected:
+              out.insert_pdf(doc,from_page=j,to_page=j)
+          out.save('source-review/review-excerpt.pdf',garbage=4,deflate=True)
+          text = '\n\n'.join('PDF PAGE '+str(j+1)+'\n'+doc[j].get_text() for j in selected)
+          Path('source-review/extracted-text.txt').write_text(text)
+          Path('source-review/provenance.json').write_text(json.dumps({'url':'https://real-j.mtak.hu/7424/1/MTA_ActaMathHung_27.pdf','sha256':hashlib.sha256(Path('volume.pdf').read_bytes()).hexdigest(),'selected_pdf_pages_one_based':[j+1 for j in selected],'purpose':'Temporary source inspection; not a Lean proof or prize submission.'},indent=2))
+          PY
+      - name: Temporary source-review excerpt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp-000925-temporary-source-review
+          path: source-review
+          retention-days: 1
+          if-no-files-found: error
