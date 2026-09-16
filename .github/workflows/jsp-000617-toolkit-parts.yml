@@ -1,0 +1,64 @@
+name: JSP-000617 toolkit transfer
+on:
+  push:
+    branches: [jsp-000617-upper-density]
+    paths: [.github/workflows/jsp-000617-toolkit-parts.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  split:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Download previously built public-only runtime
+        uses: actions/download-artifact@v4
+        with:
+          name: jsp617-offline-development-toolkit
+          run-id: 35154313391
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Verify exact archive and split for transport
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo '2049e0e9067dc558619ae7c8852b47ce4cb1602bf8a8a746da145f006742507e  jsp617-toolkit.tar.zst' | sha256sum -c -
+          mkdir parts
+          split -b 440000000 jsp617-toolkit.tar.zst parts/toolkit-
+          ls -lh parts
+          sha256sum parts/*
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-toolkit-aa
+          path: parts/toolkit-aa
+          compression-level: 0
+          retention-days: 1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-toolkit-ab
+          path: parts/toolkit-ab
+          compression-level: 0
+          retention-days: 1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-toolkit-ac
+          path: parts/toolkit-ac
+          compression-level: 0
+          retention-days: 1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-toolkit-ad
+          path: parts/toolkit-ad
+          compression-level: 0
+          retention-days: 1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-toolkit-ae
+          path: parts/toolkit-ae
+          compression-level: 0
+          retention-days: 1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp617-toolkit-af
+          path: parts/toolkit-af
+          compression-level: 0
+          retention-days: 1
