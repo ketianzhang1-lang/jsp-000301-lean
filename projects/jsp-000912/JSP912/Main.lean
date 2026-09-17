@@ -15,7 +15,7 @@ lemma mem_sortedDivisors {n d : ℕ} (hn : 0 < n) :
   simp [sortedDivisors, Nat.mem_divisors, hn.ne']
 
 lemma sortedDivisors_strict (n : ℕ) : (sortedDivisors n).Pairwise (· < ·) :=
-  Finset.sort_sorted_lt (Nat.divisors n)
+  (Nat.divisors n).sortedLT_sort.pairwise
 
 lemma sortedDivisors_get_le (n i j : ℕ)
     (hi : i < (sortedDivisors n).length) (hj : j < (sortedDivisors n).length)
@@ -54,7 +54,7 @@ lemma sortedDivisors_zip_consecutive {n a b : ℕ} (hn : 0 < n)
     omega
   have hae := congrArg Prod.fst heq
   have hbe := congrArg Prod.snd heq
-  simp only [List.getElem_zip, Prod.fst, Prod.snd, List.getElem_tail] at hae hbe
+  simp only [List.getElem_zip, List.getElem_tail] at hae hbe
   have hh := sortedDivisors_neighbors n i hn hil
   rw [hae, hbe] at hh
   exact hh

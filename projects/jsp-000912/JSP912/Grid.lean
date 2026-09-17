@@ -41,7 +41,6 @@ lemma radix_step {m : ℕ} (hm : 2 ≤ m) (r : ℕ) :
   have heq : (m : ℝ) * (1 / (m : ℝ) ^ (r + 1)) = 1 / (m : ℝ) ^ r := by
     rw [pow_succ]
     field_simp
-    ring
   have hn : (0 : ℝ) ≤ 1 / (m : ℝ) ^ (r + 1) := by positivity
   have h := one_add_mul_le_pow (show (-2 : ℝ) ≤ 1 / (m : ℝ) ^ (r + 1) by linarith) m
   simpa only [heq] using h
@@ -109,14 +108,12 @@ theorem grid_approx (m r : ℕ) (hm : 2 ≤ m) (y : ℝ)
         rw [← pow_add, hexp]
       rw [hh]
       field_simp
-      ring
     have hscale : (p : ℝ) * (a : ℝ) ^ (2 * m) * z =
         (baseProd m (r + 1) : ℝ) * y := by
       change (p : ℝ) * (a : ℝ) ^ (2 * m) * ((baseProd m r : ℝ) * y / p) =
         ((baseProd m r * a ^ (2 * m) : ℕ) : ℝ) * y
       push_cast
       field_simp
-      ring
     have hH : (0 : ℝ) < (p : ℝ) * (a : ℝ) ^ (2 * m) := by positivity
     refine ⟨q, hq0, hqdiv, ?_, ?_⟩
     · rw [hqeq, ← hscale]
@@ -161,14 +158,12 @@ theorem grid_scaled (m r E n : ℕ) (hm : 2 ≤ m)
   · have hs : (2 : ℝ) ^ q * ((baseProd m r : ℝ) * y) = x := by
       dsimp [y]
       field_simp
-      ring
     push_cast
     rw [← hs]
     exact mul_le_mul_of_nonneg_left hplo hqp.le
   · have hs : (2 : ℝ) ^ q * ((baseProd m r : ℝ) * y) = x := by
       dsimp [y]
       field_simp
-      ring
     have hh := mul_lt_mul_of_pos_left hphi hqp
     rw [hs] at hh
     push_cast

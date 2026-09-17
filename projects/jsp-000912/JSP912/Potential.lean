@@ -95,7 +95,6 @@ lemma reflected_ratio {n a b : ℕ} (hn : 0 < n) (hab : Consecutive n a b) :
   have hnR : (n : ℝ) ≠ 0 := by exact_mod_cast hn.ne'
   rw [Nat.cast_div hab.2.2.1 haR, Nat.cast_div hab.2.2.2.1 hbR]
   field_simp
-  ring
 
 lemma reflected_below_anchor (r K a b : ℕ)
     (hab : Consecutive (candidate r K) a b)

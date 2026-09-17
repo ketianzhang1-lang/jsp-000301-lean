@@ -7,7 +7,8 @@ This implementation was developed independently before the later comparison
 with plby/lean-proofs. A pre-existing full formalization was then found there.
 NO first-formalization priority or award eligibility is asserted.
 
-Lean 4.19.0; Mathlib commit c44e0c8ee63ca166450922a373c7409c5d26b00b.
+Ported to Lean 4.34.0; Mathlib commit 5ed2965256430c3649e86755f9576b54eca72435.
+See PORT.md for the original Lean 4.19 source and exact compatibility changes.
 No project-specific .olean input is needed to check this standalone file.
 -/
 
@@ -54,7 +55,6 @@ lemma radix_step {m : ℕ} (hm : 2 ≤ m) (r : ℕ) :
   have heq : (m : ℝ) * (1 / (m : ℝ) ^ (r + 1)) = 1 / (m : ℝ) ^ r := by
     rw [pow_succ]
     field_simp
-    ring
   have hn : (0 : ℝ) ≤ 1 / (m : ℝ) ^ (r + 1) := by positivity
   have h := one_add_mul_le_pow (show (-2 : ℝ) ≤ 1 / (m : ℝ) ^ (r + 1) by linarith) m
   simpa only [heq] using h
@@ -122,14 +122,12 @@ theorem grid_approx (m r : ℕ) (hm : 2 ≤ m) (y : ℝ)
         rw [← pow_add, hexp]
       rw [hh]
       field_simp
-      ring
     have hscale : (p : ℝ) * (a : ℝ) ^ (2 * m) * z =
         (baseProd m (r + 1) : ℝ) * y := by
       change (p : ℝ) * (a : ℝ) ^ (2 * m) * ((baseProd m r : ℝ) * y / p) =
         ((baseProd m r * a ^ (2 * m) : ℕ) : ℝ) * y
       push_cast
       field_simp
-      ring
     have hH : (0 : ℝ) < (p : ℝ) * (a : ℝ) ^ (2 * m) := by positivity
     refine ⟨q, hq0, hqdiv, ?_, ?_⟩
     · rw [hqeq, ← hscale]
@@ -174,14 +172,12 @@ theorem grid_scaled (m r E n : ℕ) (hm : 2 ≤ m)
   · have hs : (2 : ℝ) ^ q * ((baseProd m r : ℝ) * y) = x := by
       dsimp [y]
       field_simp
-      ring
     push_cast
     rw [← hs]
     exact mul_le_mul_of_nonneg_left hplo hqp.le
   · have hs : (2 : ℝ) ^ q * ((baseProd m r : ℝ) * y) = x := by
       dsimp [y]
       field_simp
-      ring
     have hh := mul_lt_mul_of_pos_left hphi hqp
     rw [hs] at hh
     push_cast
@@ -603,7 +599,6 @@ lemma reflected_ratio {n a b : ℕ} (hn : 0 < n) (hab : Consecutive n a b) :
   have hnR : (n : ℝ) ≠ 0 := by exact_mod_cast hn.ne'
   rw [Nat.cast_div hab.2.2.1 haR, Nat.cast_div hab.2.2.2.1 hbR]
   field_simp
-  ring
 
 lemma reflected_below_anchor (r K a b : ℕ)
     (hab : Consecutive (candidate r K) a b)
@@ -686,7 +681,7 @@ lemma mem_sortedDivisors {n d : ℕ} (hn : 0 < n) :
   simp [sortedDivisors, Nat.mem_divisors, hn.ne']
 
 lemma sortedDivisors_strict (n : ℕ) : (sortedDivisors n).Pairwise (· < ·) :=
-  Finset.sort_sorted_lt (Nat.divisors n)
+  (Nat.divisors n).sortedLT_sort.pairwise
 
 lemma sortedDivisors_get_le (n i j : ℕ)
     (hi : i < (sortedDivisors n).length) (hj : j < (sortedDivisors n).length)
@@ -725,7 +720,7 @@ lemma sortedDivisors_zip_consecutive {n a b : ℕ} (hn : 0 < n)
     omega
   have hae := congrArg Prod.fst heq
   have hbe := congrArg Prod.snd heq
-  simp only [List.getElem_zip, Prod.fst, Prod.snd, List.getElem_tail] at hae hbe
+  simp only [List.getElem_zip, List.getElem_tail] at hae hbe
   have hh := sortedDivisors_neighbors n i hn hil
   rw [hae, hbe] at hh
   exact hh

@@ -1,130 +1,64 @@
-# JSP-000912 / Erdős 1099 — complete Lean proof, not a first-formalization claim
+# JSP-000912 / Erdős 1099: complete divisor-gap formalization
 
-**Date:** 2026-09-17  
-**Prepared with AI assistance for:** Ketian Zhang  
-**Scope:** the full main existence statement, for every real exponent greater than one.  
-**Verification:** the complete standalone source compiled successfully locally with warnings treated as errors; exact-type checks and a transitive axiom audit also passed.  
-**Priority:** a pre-existing public full formalization was found after this implementation was completed. This package does **not** satisfy a requirement that the problem have no previous full formalization. No first-solution award claim has been submitted.
+This project gives a complete Lean proof of the main existence statement for every real exponent greater than one. The formalization contributor is `ketianzhang1-lang`, with OpenAI assistance. The original source header records authorship.
 
-## 1. Exact theorem
+## Result and contribution
 
-For the complete ascending list of positive divisors of `n`,
+For the complete ascending list of positive divisors of a positive integer n, define
 
-\[
-1=d_1<\cdots<d_{\tau(n)}=n,\qquad
-h_\alpha(n)=\sum_{i=1}^{\tau(n)-1}(d_{i+1}/d_i-1)^\alpha,
-\]
+`h_alpha(n) = sum_i (d_(i+1) / d_i - 1)^alpha`.
 
-the theorem `JSP912.erdos_1099` proves
+The main declaration, **JSP912.jsp_000912_full** in [FullProof.lean](FullProof.lean), proves:
 
 ```lean
-∀ α : ℝ, 1 < α → ∃ C : ℝ, ∀ M : ℕ,
-  ∃ n : ℕ, M ≤ n ∧ JSP912.hAlpha α n ≤ C
+∀ α : ℝ, 1 < α → ∃ C : ℝ, 0 < C ∧
+  ∀ M : ℕ, ∃ n : ℕ, 0 < n ∧ M ≤ n ∧ JSP912.hAlpha α n ≤ C
 ```
 
-The stronger export `JSP912.jsp_000912_full` additionally proves `0 < C` and `0 < n`. Thus zero, an empty divisor list, or one fixed witness cannot trivialize the result.
+The conventional quantifier form is exported as `JSP912.erdos_1099`. The same proof is supplied in five modules ending in [JSP912/Main.lean](JSP912/Main.lean).
 
-This is the **complete main question**, not a theorem restricted to integer exponents, exponents at least two, finitely many integers, a selected subset of divisors, or an assumed unproved construction lemma. The separate factorial and least-common-multiple variants are not claimed.
+Our contribution is an explicit multiscale construction and its Lean implementation: finite mixed-radix divisor grids, dyadic bounds, weighted gap decay, complementary-divisor reflection, and telescoping over every adjacent pair in the complete divisor list. For any integer r ≥ 1 with r(α−1) ≥ 4, the construction gives positive integers N_K satisfying
 
-## 2. Explicit construction and bound
+`K ≤ N_K` and `h_alpha(N_K) ≤ 64 (16r(r+1)+2)^2`.
 
-For an integer `r ≥ 1` satisfying `r(α−1) ≥ 4`, write `c=r(r+1)` and set
+The parameter K is unrestricted, including zero. Choosing K = M supplies a positive witness beyond every requested cutoff. See [PROOF.md](PROOF.md) for the construction and mathematical argument.
 
-\[
-Q_i=\prod_{j=1}^{r}\left[2^{ij}(2^{ij}+1)\right]^{2^{i+1}},\quad
-P_K=\prod_{i=1}^{K}Q_i,\quad
-E_K=16c(K+1)2^K,\quad N_K=2^{E_K}P_K.
-\]
+This proves the full main existence question. The separate factorial and least-common-multiple variants are outside the submitted theorem.
 
-The proof checks, for every natural `K` including zero,
+## Pinned environment and reproduction
 
-\[
-K\le N_K,\qquad h_\alpha(N_K)\le64\bigl(16r(r+1)+2\bigr)^2.
-\]
+- Lean: `leanprover/lean4:v4.34.0`.
+- Mathlib: `5ed2965256430c3649e86755f9576b54eca72435`.
+- All dependency revisions: [lake-manifest.json](lake-manifest.json).
+- Public proof branch: `jsp-000912-complete-proof`.
+- Organizer review: [PR #691](https://github.com/TheJustinSunPrize/awards/pull/691).
 
-The proof proceeds through finite mixed-radix grids, dyadic scale bounds, a weighted gap estimate, reciprocal-divisor reflection, and telescoping across the **complete** sorted divisor list. See `PROOF.md` for the mathematical argument.
-
-## 3. What was actually checked
-
-The module version contains 792 lines of Lean source across five files. `FullProof.lean` concatenates the same definitions and proofs into a standalone file that imports only Mathlib, not the project modules.
-
-The standalone file was compiled in a separate directory with
-
-```text
-Lean 4.19.0
-Lean commit 6caaee842e94
-Mathlib commit c44e0c8ee63ca166450922a373c7409c5d26b00b
-warningAsError=true
-```
-
-`Audit.lean` checks the exact quantifier form, the exact sorted-list/zip definition, the positive-witness form, and prints the transitive axioms of the final theorem and six major intermediate results. Each reports only
-
-```text
-[propext, Classical.choice, Quot.sound]
-```
-
-There are no unfinished proofs or project-declared mathematical axioms in the proof source. No `native_decide` is used. The result is not merely a green repository-format check or a successfully installed compiler.
-
-**Limits of these checks:** this is contributor-side verification using the standard Lean kernel and pinned precompiled Mathlib dependencies. It is not an independent kernel implementation, an independent mathematical referee report, an organizer verification, a claim of approval under the prize's current minimum-safe-version policy, or a payment decision. The included Lake project configuration is for normal reproduction; the recorded successful check used the standalone compiler procedure in `verify-local.sh`.
-
-## 4. Files
-
-- `FullProof.lean`: self-contained project proof, importing only Mathlib.
-- `Audit.lean`: theorem-type, definition, and axiom checks.
-- `JSP912/*.lean`: the same proof split into five readable modules.
-- `PROOF.md`: mathematical proof and scope discussion.
-- `README.zh-CN.md`: Chinese result/status explanation.
-- `verify-local.sh`: reproduce the checked standalone procedure with a compatible local compiler and Mathlib installation.
-- `lakefile.toml`, `lean-toolchain`: pinned configuration for a conventional Lake checkout.
-- `evidence/standalone-verification.log`: actual successful check output.
-- `evidence/metadata.json`: versions, commands, scope, and verification limitations.
-- `SHA256SUMS`: file hashes, excluding itself.
-
-No compiler binaries, dependency archives, compiled project objects, private account details, or credentials are included.
-
-## 5. Reproduction
-
-With a configured Lean/Mathlib checkout at the pinned revisions:
+Check out the full 40-character proof commit cited in the catalog or PR. From `projects/jsp-000912`, with Elan and the pinned toolchain installed:
 
 ```bash
-bash verify-local.sh /absolute/path/to/lean /absolute/path/to/mathlib4
+lake exe cache get
+bash scripts/verify.sh
+bash scripts/verify_nanoda.sh
 ```
 
-For a new conventional Lake project, after installing Elan:
+Keep the committed manifest; do not run `lake update` when reproducing this snapshot.
 
-```bash
-lake update
-lake exe cache get Mathlib/Analysis/SpecialFunctions/Pow/Real.lean Mathlib/Data/Nat/Log.lean Mathlib/NumberTheory/Divisors.lean Mathlib/Data/Finset/Sort.lean Mathlib/Tactic.lean
-lake build FullProof
-lake env lean -DwarningAsError=true Audit.lean
-```
+The first script builds the standalone proof and all five modules with warnings as errors, replays all six modules with the bundled Lean checker, checks exact theorem and divisor-list types in both layouts, audits seven transitive axiom closures in each layout, checks actual dependency revisions, and requires rejection of an invalid arithmetic statement. It also checks that the standalone and modular proof bodies agree.
 
-The second route requires internet access to fetch dependencies and may generate a manifest. The Mathlib revision is pinned in `lakefile.toml`; the exact dependency revisions used for the successful local check are in `evidence/mathlib-dependency-manifest.json`.
+The second script exports the seven audited targets and their dependency closures to pinned NaNoda, allowing only `propext`, `Classical.choice` and `Quot.sound`.
 
-## 6. Attribution, prior work, and search limitations
+The [verification workflow](../../.github/workflows/jsp-000912.yml) runs these checks and publishes the checked source, commit identifier, manifest and logs. Actual execution results must be read from the linked GitHub Actions run; the presence of a script is not itself evidence that it succeeded.
 
-The affirmative mathematical existence result is due to Michael D. Vose, **“Integers with consecutive divisors in small ratio”**, *Journal of Number Theory* 19(2), 1984, 233–238, DOI `10.1016/0022-314X(84)90107-0`.
+## Source recovery and compatibility port
 
-The present multiscale construction and Lean implementation were developed during this session, before inspecting the following independently published full formalization. It is a different implementation; it is **not** claimed as the first proof of the mathematical theorem or the first Lean formalization.
+The recovered Lean 4.19 source and original contributor-side logs are preserved at [commit 9074d0cebd4e132a6c1fa71c0817693246935398](https://github.com/ketianzhang1-lang/jsp-000301-lean/tree/9074d0cebd4e132a6c1fa71c0817693246935398/projects/jsp-000912). Every recovered archive file matched its recorded SHA-256 checksum.
 
-A later global code search for `erdos_1099` found:
+The current source is a mechanical Lean/Mathlib 4.34 compatibility port. See [PORT.md](PORT.md) and [LEAN4_34_PORT.patch](LEAN4_34_PORT.patch). No mathematical definition, theorem statement, construction or hypothesis was changed. Historical Lean 4.19 receipts remain under [evidence/original-4.19](evidence/original-4.19) and must not be presented as receipts for the current version.
 
-- Repository: `plby/lean-proofs`.
-- Pinned revision: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`.
-- File: `src/latest/ErdosProblems/Erdos1099.lean`.
-- The source exports a full theorem for all real `α>1`, including frequent boundedness along `atTop`, and uses the sequence `2^(1+...+k) * product_{i=1}^k (2^i+1)`.
-- The file credits the mathematical result to Vose and formal work to Codex / GPT-5.6 Sol. Its stated toolchain is Lean/Mathlib 4.33.0.
+## Attribution and prior work
 
-The other implementation was inspected as source but was **not** recompiled in the local 4.19.0 environment. Its public full-scope source is enough to prevent an honest assertion here that no prior full implementation exists.
+The affirmative mathematical result is due to Michael D. Vose, “Integers with consecutive divisors in small ratio,” Journal of Number Theory 19(2), 1984, 233–238, [DOI](https://doi.org/10.1016/0022-314X(84)90107-0).
 
-Before this discovery, a search of all PR states in `TheJustinSunPrize/awards` for `JSP-000912`, `Erdos 1099`, `Erdős 1099`, and `erdos_1099` returned no matches. This illustrates why a negative official-PR search and a catalog flag `Lean proof: No` are insufficient to establish originality or priority.
+The recovered project records that this construction and implementation were developed before inspecting the earlier complete formalization in [plby/lean-proofs at 8822f7ddef30fadbd92e1c6ab4ed897af356af5e](https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1099.lean). That implementation uses a different cofinal sequence and credits its own formal authors. This project imports Mathlib and its own modules; it does not import or copy that proof.
 
-Primary records:
-
-- https://www.erdosproblems.com/1099
-- https://www.erdosproblems.com/latex/1099
-- https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0901-1000.md#JSP-000912
-- https://doi.org/10.1016/0022-314X(84)90107-0
-- https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1099.lean
-
-The package is a complete proof deliverable, **not a claim that the user's originality condition has been met**.
+Requested credit concerns this formalization and verification work. No mathematical-discovery or first-formalization priority is claimed. Contributor-run checks do not constitute organizer acceptance, independent human review or an award decision.
