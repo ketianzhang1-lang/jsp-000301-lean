@@ -65,10 +65,11 @@ lemma mass_anticorrelation {A B : Finset (Finset α)}
   have h := hA.card_inter_le_finset hB
   have hq : (2 : ℚ) ^ Fintype.card α * (A ∩ B).card ≤
       (A.card : ℚ) * B.card := by exact_mod_cast h
+  have hp : (0 : ℚ) < (2 : ℚ) ^ Fintype.card α := by positivity
   unfold mass
-  apply (le_div_iff₀ (by positivity : (0 : ℚ) < (2 : ℚ) ^ Fintype.card α)).mp
-  field_simp
-  nlinarith
+  rw [div_mul_div_comm]
+  apply (div_le_div_iff₀ hp (mul_pos hp hp)).2
+  nlinarith [mul_le_mul_of_nonneg_right hq hp.le]
 
 /-- Heckel's concentration reduction on a uniform finite Boolean cube.
 `χ` is increasing, `ζ` is invariant under complementation and bounded by `χ`.
@@ -154,5 +155,81 @@ theorem concentration_reduction (χ ζ : Finset α → ℕ) (g : ℕ)
   change (9 : ℚ) / 10 < mass I
   rw [← heqU] at hsplitmass
   linarith
+
+/-! Simple labelled graphs: an edge is an unordered pair represented uniquely
+by its increasingly ordered endpoints. A subset of `Edge n` is precisely a
+simple graph on `Fin n`. The uniform cube is therefore G(n,1/2). -/
+
+def Edge (n : ℕ) := {p : Fin n × Fin n // p.1 < p.2}
+deriving Fintype, DecidableEq
+
+def Proper {n : ℕ} (s : Finset (Edge n)) (k : ℕ) : Prop :=
+  ∃ c : Fin n → Fin k, ∀ e ∈ s, c e.val.1 ≠ c e.val.2
+
+def CoProper {n : ℕ} (s : Finset (Edge n)) (k : ℕ) : Prop :=
+  ∃ c : Fin n → Fin k, ∃ t : Fin k → Bool,
+    ∀ e : Edge n, c e.val.1 = c e.val.2 → (e ∈ s ↔ t (c e.val.1) = true)
+
+lemma proper_n {n : ℕ} (s : Finset (Edge n)) : Proper s n := by
+  refine ⟨id, ?_⟩
+  intro e _
+  exact ne_of_lt e.property
+
+lemma proper_to_coProper {n k : ℕ} {s : Finset (Edge n)}
+    (h : Proper s k) : CoProper s k := by
+  obtain ⟨c, hc⟩ := h
+  refine ⟨c, fun _ => false, ?_⟩
+  intro e he
+  simp only [Bool.false_eq_true, iff_false]
+  intro hes
+  exact hc e hes he
+
+lemma coProper_compl {n k : ℕ} {s : Finset (Edge n)}
+    (h : CoProper s k) : CoProper sᶜ k := by
+  obtain ⟨c, t, ht⟩ := h
+  refine ⟨c, fun i => !(t i), ?_⟩
+  intro e he
+  simp only [mem_compl, ht e he, Bool.not_eq_true]
+  cases t (c e.val.1) <;> simp
+
+noncomputable def chi {n : ℕ} (s : Finset (Edge n)) : ℕ :=
+  Nat.find (⟨n, proper_n s⟩ : ∃ k, Proper s k)
+
+noncomputable def zeta {n : ℕ} (s : Finset (Edge n)) : ℕ :=
+  Nat.find (⟨n, proper_to_coProper (proper_n s)⟩ : ∃ k, CoProper s k)
+
+lemma chi_spec {n : ℕ} (s : Finset (Edge n)) : Proper s (chi s) :=
+  Nat.find_spec _
+
+lemma zeta_spec {n : ℕ} (s : Finset (Edge n)) : CoProper s (zeta s) :=
+  Nat.find_spec _
+
+lemma chi_mono (n : ℕ) : Monotone (@chi n) := by
+  intro s t hst
+  apply Nat.find_min'
+  obtain ⟨c, hc⟩ := chi_spec t
+  exact ⟨c, fun e he => hc e (hst he)⟩
+
+lemma zeta_le_chi {n : ℕ} (s : Finset (Edge n)) : zeta s ≤ chi s := by
+  apply Nat.find_min'
+  exact proper_to_coProper (chi_spec s)
+
+lemma zeta_compl {n : ℕ} (s : Finset (Edge n)) : zeta sᶜ = zeta s := by
+  apply Nat.le_antisymm
+  · apply Nat.find_min'
+    exact coProper_compl (zeta_spec s)
+  · apply Nat.find_min'
+    simpa using coProper_compl (zeta_spec sᶜ)
+
+/-- Proposition 3 of Heckel's paper, for every finite graph order, including
+zero. Probability is exact uniform counting on all simple labelled graphs.
+The only premise is the stated 0.999 gap-probability hypothesis. -/
+theorem heckel_proposition3 (n g : ℕ)
+    (h : (999 : ℚ) / 1000 ≤
+      mass (event fun s : Finset (Edge n) => chi s - zeta s ≤ g)) :
+    ∃ k : ℕ, (9 : ℚ) / 10 <
+      mass (event fun s : Finset (Edge n) => k ≤ chi s ∧ chi s ≤ k + g) := by
+  apply concentration_reduction chi zeta g (chi_mono n) zeta_compl zeta_le_chi
+  simpa only [Nat.sub_le_iff_le_add, Nat.add_comm] using h
 
 end JSP000506
