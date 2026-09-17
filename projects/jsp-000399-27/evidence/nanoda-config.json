@@ -1,0 +1,22 @@
+{
+  "export_file_path": "evidence/export.ndjson",
+  "use_stdin": false,
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "unpermitted_axiom_hard_error": true,
+  "nat_extension": true,
+  "string_extension": true,
+  "pp_declars": [
+    "JSP000399Triple.witness",
+    "JSP000399Triple.reflected",
+    "JSP000399Triple.complexSumMultiset",
+    "JSP000399Triple.complex_counterexample",
+    "JSP000399Triple.not_unique_27_triples"
+  ],
+  "pp_output_path": "evidence/nanoda-statements.txt",
+  "pp_to_stdout": false,
+  "print_success_message": true
+}

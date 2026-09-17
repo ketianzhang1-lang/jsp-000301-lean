@@ -1,0 +1,6 @@
+'JSP000399Triple.witness_card' depends on axioms: [propext, Quot.sound]
+'JSP000399Triple.reflected_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000399Triple.witness_ne_reflected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000399Triple.equal_triple_sums' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000399Triple.complex_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000399Triple.not_unique_27_triples' depends on axioms: [propext, Classical.choice, Quot.sound]

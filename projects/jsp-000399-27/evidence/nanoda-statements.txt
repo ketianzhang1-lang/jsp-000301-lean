@@ -1,0 +1,61 @@
+def JSP000399Triple.witness :
+  Finset Int :=
+  Insert.insert (Neg.neg (OfNat.ofNat 20))
+    (Insert.insert (Neg.neg (OfNat.ofNat 19))
+      (Insert.insert (Neg.neg (OfNat.ofNat 15))
+        (Insert.insert (Neg.neg (OfNat.ofNat 13))
+          (Insert.insert (Neg.neg (OfNat.ofNat 11))
+            (Insert.insert (Neg.neg (OfNat.ofNat 10))
+              (Insert.insert (Neg.neg (OfNat.ofNat 8))
+                (Insert.insert (Neg.neg (OfNat.ofNat 7))
+                  (Insert.insert (Neg.neg (OfNat.ofNat 6))
+                    (Insert.insert (Neg.neg (OfNat.ofNat 5))
+                      (Insert.insert (Neg.neg (OfNat.ofNat 3))
+                        (Insert.insert (Neg.neg (OfNat.ofNat 2))
+                          (Insert.insert (Neg.neg (OfNat.ofNat 1))
+                            (Insert.insert (OfNat.ofNat 0)
+                              (Insert.insert (OfNat.ofNat 1)
+                                (Insert.insert (OfNat.ofNat 2)
+                                  (Insert.insert (OfNat.ofNat 4)
+                                    (Insert.insert (OfNat.ofNat 5)
+                                      (Insert.insert (OfNat.ofNat 6)
+                                        (Insert.insert (OfNat.ofNat 7)
+                                          (Insert.insert (OfNat.ofNat 8)
+                                            (Insert.insert (OfNat.ofNat 9)
+                                              (Insert.insert (OfNat.ofNat 11)
+                                                (Insert.insert (OfNat.ofNat 13)
+                                                  (Insert.insert (OfNat.ofNat 15)
+                                                    (Insert.insert (OfNat.ofNat 18)
+                                                      (Singleton.singleton (OfNat.ofNat 21)))))))))))))))))))))))))))
+
+def JSP000399Triple.reflected :
+  Finset Int :=
+  Finset.image
+    (fun (x._@.Init.Omega.Constraint.1717405508._hygCtx._hyg.7 : Int) =>
+    Neg.neg x._@.Init.Omega.Constraint.1717405508._hygCtx._hyg.7) JSP000399Triple.witness
+
+def JSP000399Triple.complexSumMultiset (A : Finset Complex) (k : Nat) : Multiset Complex :=
+  Multiset.map (fun (s : Finset Complex) => Finset.sum s id) (Finset.val (Finset.powersetCard k A))
+
+theorem JSP000399Triple.complex_counterexample :
+  Exists
+    (fun (A : Finset Complex) =>
+    Exists
+      (fun (B : Finset Complex) =>
+      And (Eq (Finset.card A) (OfNat.ofNat 27))
+        (And (Eq (Finset.card B) (OfNat.ofNat 27))
+          (And
+            (Eq (JSP000399Triple.complexSumMultiset A (OfNat.ofNat 3))
+              (JSP000399Triple.complexSumMultiset B (OfNat.ofNat 3))) (Ne A B))))) :=
+  _
+
+theorem JSP000399Triple.not_unique_27_triples :
+  Not (JSP000399Triple.UniqueRecovery (OfNat.ofNat 3) (OfNat.ofNat 27)) :=
+  _
+
+axiom propext {a b : Prop} : Iff a b → Eq a b
+
+axiom Quot.sound.{u} {α : Sort u} {r : α → α → Prop} {a b : α} : r a b → Eq (Quot.mk r a) (Quot.mk r b)
+
+axiom Classical.choice.{u} {α : Sort u} : Nonempty α → α
+

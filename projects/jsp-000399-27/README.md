@@ -47,7 +47,7 @@ exists A B : Finset Complex,
 `JSP000399Triple.not_unique_27_triples` gives the corresponding negation of
 universal unique recovery. The integer-to-complex adapter proves preservation
 of cardinality, inequality, all subsets, sums, and multiset multiplicities.
-The finite certificate uses ordinary `decide`, not native evaluation. Compilation
+The finite certificate uses `decide +kernel`. Compilation
 and all independent checking statuses must be read in VERIFICATION.md; this
 README is not itself a verification receipt.
 
@@ -62,7 +62,7 @@ during this project and is not claimed to be their exact published example.
 - [Fomin's survey and attribution](https://arxiv.org/abs/1709.06046)
 - [Boman--Linusson primary paper](https://tidsskrift.dk/math/article/view/12583)
 - [Official problem catalog](https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0301-0400.md#JSP-000399)
-- [Formal Conjectures statement](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/494.lean)
+- [Formal Conjectures statement](https://github.com/google-deepmind/formal-conjectures/blob/40e7c98697de6f66b8cbdbf641749ab39ed9c152/FormalConjectures/ErdosProblems/494.lean)
 - [Earlier PR23: other counterexample families](https://github.com/TheJustinSunPrize/awards/pull/23)
 - [Earlier PR127: positive uniqueness criteria](https://github.com/TheJustinSunPrize/awards/pull/127)
 - [Earlier issue330: recovery from n-1 sums](https://github.com/TheJustinSunPrize/awards/issues/330)
