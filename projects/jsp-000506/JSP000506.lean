@@ -238,7 +238,7 @@ lemma zeta_compl {n : ℕ} (s : Finset (Edge n)) : zeta sᶜ = zeta s := by
     exact coProper_compl (zeta_spec s)
   · unfold zeta
     apply Nat.find_min'
-    simpa using coProper_compl (zeta_spec sᶜ)
+    simpa only [compl_compl] using coProper_compl (zeta_spec sᶜ)
 
 /-- Proposition 3 of Heckel's paper, for every finite graph order, including
 zero. Probability is exact uniform counting on all simple labelled graphs.
