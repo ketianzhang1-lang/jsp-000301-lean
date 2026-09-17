@@ -1,7 +1,5 @@
-name: Full-scope research verification
+name: Full-scope source audit (not a proof)
 on:
-  push:
-    branches: ["research/full-scope-20260917"]
   workflow_dispatch:
 permissions:
   contents: read
@@ -11,61 +9,23 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - name: Collect public primary-source snapshots
+      - name: Collect public source snapshots only
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           mkdir -p research-output
+          printf '%s\n' 'SOURCE AUDIT ONLY. A successful run does not verify a mathematical theorem or establish novelty, full scope, eligibility, or an award.' > research-output/STATUS.txt
           curl -fsSL 'https://raw.githubusercontent.com/teorth/erdosproblems/main/data/problems.yaml' -o research-output/erdos-status.yaml
           curl -fsSL 'https://raw.githubusercontent.com/TheJustinSunPrize/awards/main/problems/README.md' -o research-output/jsp-index.md
           curl -fsSL 'https://codeload.github.com/google-deepmind/formal-conjectures/tar.gz/refs/heads/main' -o research-output/formal-conjectures.tar.gz
           curl -fsSL 'https://raw.githubusercontent.com/teorth/erdosproblems/main/README.md' -o research-output/erdos-index.md
           curl -fsSL 'https://codeload.github.com/plby/lean-proofs/tar.gz/refs/heads/main' -o research-output/existing-lean-proofs.tar.gz
           gh api --paginate 'repos/TheJustinSunPrize/awards/issues?state=all&per_page=100' --jq '.[]' | jq -s . > research-output/existing-submissions.json
-          python3 - <<'PY'
-          from pathlib import Path
-          import tarfile, re
-          with tarfile.open('research-output/existing-lean-proofs.tar.gz') as t:
-              files=t.getnames()
-          nums={int(m.group(1)) for s in files if (m:=re.search(r'/Erdos(\d+)\.lean$',s))}
-          for line in Path('research-output/erdos-index.md').read_text().splitlines():
-              if ('| disproved |' in line or '| proved |' in line) and (m:=re.match(r'\| \[(\d+)\]',line)) and int(m.group(1)) not in nums:
-                  print(line)
-          PY
+          sha256sum research-output/* > research-output/SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
         with:
-          name: full-scope-source-snapshots
+          name: full-scope-source-audit-not-a-proof
           path: research-output/
           if-no-files-found: error
-  verify:
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install Lean and resolve pinned dependencies
-        shell: bash
-        run: |
-          set -euxo pipefail
-          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
-          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
-          "$HOME/.elan/bin/elan" toolchain install "$(cat lean-toolchain)"
-          "$HOME/.elan/bin/lake" exe cache get
-      - name: Compile full statement when present
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p research-output
-          if [ -f FullScope.lean ]; then
-            lake env lean FullScope.lean 2>&1 | tee research-output/lean-verification.txt
-          else
-            printf '%s\n' 'No proof has been supplied yet; this run is source preparation only.' | tee research-output/lean-verification.txt
-          fi
-      - name: Preserve verification log
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: full-scope-verification-output
-          path: research-output/
-          if-no-files-found: warn
