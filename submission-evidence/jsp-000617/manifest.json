@@ -1,0 +1,42 @@
+{
+  "schema": "jsp617-public-evidence-v1",
+  "proof_repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+  "proof_commit": "fa8d6aa86daec50064d92872d1b366ff9869b573",
+  "theorem": "JSP000617.upper_density_variant",
+  "scope": "Upper asymptotic density variant of Erdos 749; not the original lower-density problem.",
+  "run_id": 35176762703,
+  "job_id": 105060067528,
+  "run_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35176762703",
+  "result": "success",
+  "job_transcript": {
+    "file": "verification-job.log",
+    "sha256": "fa807ec109586c290d6e946206ccb2f5dec5aeea5c7e424717f3885ff7dd4de2",
+    "bytes": 39486
+  },
+  "actions_artifact": {
+    "id": 10479590188,
+    "name": "jsp-000617-upper-density-evidence",
+    "sha256": "836d21e957b8a65c341c5b1261192df7ea4bcc90f379d8c4c20de4b96e8bd5b9",
+    "bytes": 8141137,
+    "metadata_source": "GitHub Actions artifact API; full ZIP checksum not independently recomputed for this submission",
+    "expires_at": "2026-12-16T03:04:02Z"
+  },
+  "verification": {
+    "lean_version": "4.34.0",
+    "mathlib_commit": "5ed2965256430c3649e86755f9576b54eca72435",
+    "axiom_reports": 22,
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "nanoda_declarations": 11534,
+    "nanoda_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+    "lean4export_commit": "6cea97789dc088ea47fcea15692db85685aedac5"
+  },
+  "limitations": [
+    "No original lower-density theorem proved.",
+    "No independent human statement-equivalence review or organizer acceptance claimed.",
+    "The full Actions ZIP expires; the source and complete job transcript are retained in Git."
+  ]
+}
