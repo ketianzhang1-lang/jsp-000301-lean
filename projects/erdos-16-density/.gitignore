@@ -1,0 +1,9 @@
+/.lake/
+/Erdos16.lean
+/evidence/
+*.olean
+*.ilean
+*.olean.private
+*.olean.server
+*.log
+/Negative.lean
