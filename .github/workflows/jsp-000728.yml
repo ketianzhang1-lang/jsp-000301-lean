@@ -1,0 +1,49 @@
+name: JSP-000728 Cameron-Erdos lower bound
+on:
+  push:
+    branches: [jsp-000728-lower-bound-kz]
+    paths: [projects/jsp-000728/**, .github/workflows/jsp-000728.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: bash
+        working-directory: projects/jsp-000728
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install pinned compiler and dependencies
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.elan/bin:$PATH"
+          elan toolchain install "$(cat lean-toolchain)"
+          lake exe cache get
+          git diff --exit-code -- lake-manifest.json
+      - name: Compile and audit
+        run: bash scripts/verify.sh
+      - name: Independent NaNoda check
+        run: bash scripts/verify_nanoda.sh 2>&1 | tee evidence/nanoda-build.log
+      - name: Archive tested source
+        if: always()
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          git rev-parse HEAD > evidence/SOURCE_COMMIT
+          cp lake-manifest.json evidence/lake-manifest.json
+          git diff --exit-code -- lake-manifest.json
+          tar --exclude=.lake --exclude=evidence -czf evidence/source.tar.gz .
+          sha256sum evidence/source.tar.gz > evidence/ARCHIVE_SHA256
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: jsp-000728-evidence
+          path: projects/jsp-000728/evidence
+          if-no-files-found: warn
