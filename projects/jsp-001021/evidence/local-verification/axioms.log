@@ -1,0 +1,11 @@
+'Erdos1216.directed_ramsey_five_fourteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1216.f_fourteen_eq_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1216.not_erdos_1216' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP001021.restrict14_arc' depends on axioms: [propext, Quot.sound]
+'JSP001021.all_orders' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP001021.fifteen_vertices' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP001021.five_le_f_fifteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP001021.jsp_001021' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP001021.LocalChecks.local_exclusions' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP001021.LocalChecks.retained_count' does not depend on any axioms
+'JSP001021.LocalChecks.final_transitive_five' depends on axioms: [propext]

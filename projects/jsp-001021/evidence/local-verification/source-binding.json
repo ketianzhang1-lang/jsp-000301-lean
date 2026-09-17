@@ -1,0 +1,23 @@
+{
+  "selected_proof_commit": "7642a7f5eb190da6319b6ae7f11c829d7737e2dd",
+  "branch": "jsp-001021-tournament-verification",
+  "verification_status": "PASS",
+  "checked_at": "2026-09-17T22:02:20.769979+00:00",
+  "local_repository_head": "86a5a9af1e07874c2346e7da1a82cf0c35ca28bb",
+  "published_project_input_matches": [
+    "lean-toolchain",
+    "lakefile.lean",
+    "lake-manifest.json",
+    "UPSTREAM.json",
+    "MODULES.json",
+    "Audit.lean",
+    "FiniteChecks.lean",
+    "JSP001021.lean",
+    "scripts/bootstrap.py",
+    "scripts/verify.sh",
+    "scripts/check_built.py"
+  ],
+  "upstream_inputs": "Original and ported file hashes are separately pinned by UPSTREAM.json; all checked source hashes match the selected published inputs.",
+  "compilation": "All four module compilations exited 0 with warningAsError=true; successful logs are empty.",
+  "local_worktree_note": "Source was checked during preparation of the selected commit; the old repository HEAD in the raw local record is preserved rather than relabeled."
+}

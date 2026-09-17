@@ -32,6 +32,9 @@ In [FiniteChecks.lean](FiniteChecks.lean), `local_exclusions` checks 196 pairs: 
 
 - Repository: https://github.com/ketianzhang1-lang/jsp-000301-lean
 - Branch: `jsp-001021-tournament-verification`
+- Selected proof commit: `7642a7f5eb190da6319b6ae7f11c829d7737e2dd`
+- Completed local checks: all four module replays, eleven axiom audits, exact-type checks, nine dependency pins and the negative control; see [the verification record](VERIFICATION.md).
+- Public reproduction: [run 35279395960](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35279395960).
 - Project: `projects/jsp-001021`
 - Lean 4.34.0; Mathlib `5ed2965256430c3649e86755f9576b54eca72435`.
 - Transitive dependency revisions: `lake-manifest.json`.
