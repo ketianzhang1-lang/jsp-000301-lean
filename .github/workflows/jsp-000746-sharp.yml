@@ -36,7 +36,8 @@ jobs:
           git -C _sharp/mathlib fetch --depth 1 origin db584cd6d46c92f209a44c0f1c829460d327499d
           git -C _sharp/mathlib checkout --detach FETCH_HEAD
           test "$(git -C _sharp/mathlib rev-parse HEAD)" = db584cd6d46c92f209a44c0f1c829460d327499d
-      - uses: actions/cache@v4
+      - uses: actions/cache/restore@v4
+        id: dependencies
         with:
           path: _sharp/mathlib/.lake
           key: jsp746-mathlib-db584cd6d46c92f209a44c0f1c829460d327499d-v1
@@ -56,18 +57,23 @@ jobs:
           cp lake-manifest.json ../evidence/lake-manifest.json
           lake exe cache get 2>&1 | tee ../evidence/cache.log
           lake env lean --version | tee ../evidence/version.txt
+      - uses: actions/cache/save@v4
+        if: steps.dependencies.outputs.cache-hit != 'true'
+        with:
+          path: _sharp/mathlib/.lake
+          key: jsp746-mathlib-db584cd6d46c92f209a44c0f1c829460d327499d-v1
       - name: Compile unchanged upper bound
         shell: bash
         run: |
           set -euo pipefail
           cd _sharp/mathlib
-          lake env lean --wfail -j1 -M6144 -o .lake/build/lib/lean/Erdos895.olean ./Erdos895.lean 2>&1 | tee ../evidence/upper-build.log
+          lake env lean -DwarningAsError=true -j1 -M6144 -o .lake/build/lib/lean/Erdos895.olean ./Erdos895.lean 2>&1 | tee ../evidence/upper-build.log
       - name: Compile new sharpness proof
         shell: bash
         run: |
           set -euo pipefail
           cd _sharp/mathlib
-          lake env lean --wfail -j1 -M6144 -o .lake/build/lib/lean/JSP000746Sharp.olean ./JSP000746Sharp.lean 2>&1 | tee ../evidence/sharp-build.log
+          lake env lean -DwarningAsError=true -j1 -M6144 -o .lake/build/lib/lean/JSP000746Sharp.olean ./JSP000746Sharp.lean 2>&1 | tee ../evidence/sharp-build.log
           python3 - <<'PY'
           import re
           from pathlib import Path
@@ -88,7 +94,7 @@ jobs:
           lake env leanchecker --verbose Erdos895 2>&1 | tee ../evidence/upper-kernel.log
           lake env leanchecker --verbose JSP000746Sharp 2>&1 | tee ../evidence/sharp-kernel.log
           printf 'import JSP000746Sharp\nexample : (2 : Nat) + 2 = 5 := by decide\n' > Negative.lean
-          if lake env lean --wfail ./Negative.lean > ../evidence/negative.log 2>&1; then
+          if lake env lean -DwarningAsError=true ./Negative.lean > ../evidence/negative.log 2>&1; then
             echo 'ERROR: false arithmetic accepted'; exit 1
           fi
           grep -q 'false' ../evidence/negative.log
