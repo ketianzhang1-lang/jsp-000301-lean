@@ -1,11 +1,13 @@
 # Provenance and contribution disclosure
 
-This project formalizes the pre-existing counterexample recorded in the Justin Sun Prize problem bank for JSP-000301. It does not claim discovery of the mathematics, establish the original discovery date, or claim first public formalization.
+## Formalization contribution
 
-OpenAI ChatGPT assisted in drafting the Lean source, documentation, dependency configuration and CI repairs under the submitting user's direction. The public repository owner operates this project and its submission process. Repository ownership and operation alone do not establish entitlement to a formalization award; the Prize must determine the appropriate contributor attribution.
+We record GitHub account `ketianzhang1-lang` as the contributor responsible for this project's Lean counterexample implementation, supporting proof obligations, final negation theorem, dependency configuration and reproducible verification package. OpenAI ChatGPT assisted with the source, documentation and CI repairs under our direction. This statement identifies the concrete contribution and does not infer authorship from repository ownership alone.
 
-The source uses Mathlib definitions, lemmas and proof-producing tactics. This project was prepared from the catalog's counterexample rather than by adopting another submitter's published Lean project. Mathlib and external checkers retain their respective licenses and attribution.
+We prepared the implementation from the catalog's mathematical counterexample using Mathlib, without importing another submitter's published Lean project. Mathlib and the external verification tools retain their original attribution and licenses.
 
-Earlier public submissions for this problem are acknowledged, including TheJustinSunPrize/awards issues #25, #62, #64, #82, #94, #109, #146 and #156. No review of all their proofs or definitive priority adjudication is claimed.
+## Mathematical source
 
-Contributor-controlled CI results are not represented as an independent human review or an official Prize approval. Recipient confirmation, professional-conflict disclosures where relevant, and any private identity/compliance checks remain pending. No private identity documents, contact information or payment information are included in the submission draft.
+The counterexample is pre-existing mathematics credited by the [JSP-000301 catalog](https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0301-0400.md#JSP-000301) to Solomon W. Golomb, *Powerful numbers*, American Mathematical Monthly 77(8) (1970), 848–852, https://doi.org/10.2307/2317020.
+
+The submitted result resolves the catalog's yes/no question about consecutive powerful integers. It makes no assertion about the separate counting problem or first formalization. Our verification runs are contributor-operated and do not establish independent human certification or official prize acceptance.
