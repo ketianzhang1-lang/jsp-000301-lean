@@ -11,6 +11,14 @@ namespace JSP000399Triple
 def intSumMultiset (A : Finset ℤ) (k : ℕ) : Multiset ℤ :=
   (A.powersetCard k).val.map fun s => s.sum id
 
+/-- Sorting is used only to make a kernel-checked finite certificate efficient. -/
+theorem intSumMultiset_eq_of_sort_eq {A B : Finset ℤ} {k : ℕ}
+    (h : (intSumMultiset A k).sort (· ≤ ·) =
+      (intSumMultiset B k).sort (· ≤ ·)) :
+    intSumMultiset A k = intSumMultiset B k := by
+  have hm := congrArg (fun l : List ℤ => (l : Multiset ℤ)) h
+  simpa using hm
+
 noncomputable def complexSumMultiset (A : Finset ℂ) (k : ℕ) : Multiset ℂ :=
   (A.powersetCard k).val.map fun s => s.sum id
 

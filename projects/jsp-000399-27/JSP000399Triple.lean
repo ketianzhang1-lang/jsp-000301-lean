@@ -28,7 +28,9 @@ theorem reflected_card : reflected.card = 27 := by decide
 theorem witness_ne_reflected : witness ≠ reflected := by decide
 
 theorem equal_triple_sums :
-    intSumMultiset witness 3 = intSumMultiset reflected 3 := by decide
+    intSumMultiset witness 3 = intSumMultiset reflected 3 := by
+  apply intSumMultiset_eq_of_sort_eq
+  decide
 
 theorem complex_counterexample :
     ∃ A B : Finset ℂ, A.card = 27 ∧ B.card = 27 ∧
