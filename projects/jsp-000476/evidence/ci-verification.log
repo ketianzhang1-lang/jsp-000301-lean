@@ -1,0 +1,34 @@
+2026-09-17T02:06:46.9444093Z ##[group]Run bash scripts/verify.sh
+2026-09-17T02:06:46.9444663Z [36;1mbash scripts/verify.sh[0m
+2026-09-17T02:06:46.9488746Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-17T02:06:46.9489132Z ##[endgroup]
+2026-09-17T02:06:52.1526294Z ✔ [3213/3214] Built JSP000476 (3.1s)
+2026-09-17T02:06:52.1607722Z Build completed successfully (3214 jobs).
+2026-09-17T02:07:08.3503029Z def JSP000476.SquareSumFree : Finset ℕ → Prop :=
+2026-09-17T02:07:08.3505196Z fun A => ∀ S ⊆ A, S.Nonempty → ¬IsSquare (∑ a ∈ S, a)
+2026-09-17T02:07:08.3505784Z def JSP000476.multiples : ℕ → ℕ → Finset ℕ :=
+2026-09-17T02:07:08.3506306Z fun q k => Finset.image (fun x => q * x) (Finset.Icc 1 k)
+2026-09-17T02:07:08.3506875Z 'JSP000476.triangular' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3509935Z 'JSP000476.triangular_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3511029Z 'JSP000476.triangular_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3511941Z 'JSP000476.le_triangular' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3512523Z 'JSP000476.triangular_mul_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3513087Z 'JSP000476.triangular_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3513632Z 'JSP000476.exists_subset_sum_Icc' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3514183Z 'JSP000476.multiples' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3515125Z 'JSP000476.SquareSumFree' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3515673Z 'JSP000476.card_multiples' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3516195Z 'JSP000476.sum_multiples' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3516780Z 'JSP000476.squareSumFree_multiples_of_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3517427Z 'JSP000476.exists_square_subset_multiples' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3518070Z 'JSP000476.squareSumFree_multiples_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3518684Z 'JSP000476.prime_multiples_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3519275Z 'JSP000476.isSquare_square_mul_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3519897Z 'JSP000476.squareSumFree_square_image_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3520512Z 'JSP000476.square_part_multiples_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3521095Z 'JSP000476.exists_classification' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.3521685Z 'JSP000476.exists_card_squareSumFree' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T02:07:08.5251071Z All 20 project declarations passed the transitive axiom allowlist.
+2026-09-17T02:07:08.5592629Z {"cases": 1664, "k_range": [0, 12], "multiplier_range": [1, 128], "result": "passed"}
+2026-09-17T02:07:08.6043037Z Every dependency revision matches the committed manifest.
+2026-09-17T02:07:11.7048131Z Negative control rejected as expected.

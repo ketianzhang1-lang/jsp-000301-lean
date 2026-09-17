@@ -1,0 +1,123 @@
+{
+  "project": "JSP-000476",
+  "scope": "Exact threshold for the classical multiples construction; not the full extremal problem or a prize claim",
+  "tested_source_commit": "f633b03a38750049758fb67c2f0800bda3c42107",
+  "proof_path": "projects/jsp-000476/JSP000476.lean",
+  "proof_sha256": "543e9c46142bd9fa8092f1fbdc34c4648cebe0b9e595c1ea045db9b72ae4f67e",
+  "lean_version": "4.34.0",
+  "mathlib_revision": "5ed2965256430c3649e86755f9576b54eca72435",
+  "workflow_run": {
+    "id": 35173027153,
+    "url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35173027153",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-09-17T02:04:57Z",
+    "updated_at": "2026-09-17T02:07:14Z"
+  },
+  "job": {
+    "conclusion": "success",
+    "id": 105048572235,
+    "logs_url": null,
+    "name": "verify",
+    "run_id": 35173027153,
+    "status": "completed",
+    "steps": [
+      {
+        "conclusion": "success",
+        "name": "Set up job",
+        "number": 1,
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+        "number": 2,
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "name": "Install pinned compiler and dependencies",
+        "number": 3,
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "name": "Compile and audit",
+        "number": 4,
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "name": "Archive tested source",
+        "number": 5,
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "number": 6,
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+        "number": 12,
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "name": "Complete job",
+        "number": 13,
+        "status": "completed"
+      }
+    ]
+  },
+  "checks": {
+    "warnings_as_errors": true,
+    "bundled_leanchecker": "passed",
+    "project_declarations_audited": 20,
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "dependency_revisions": "all match committed manifest",
+    "negative_control": "rejected false arithmetic",
+    "finite_crosscheck": {
+      "cases": 1664,
+      "multipliers": [
+        1,
+        128
+      ],
+      "lengths": [
+        0,
+        12
+      ],
+      "result": "passed"
+    }
+  },
+  "artifact": {
+    "archive_download_url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10477641570/zip",
+    "created_at": "2026-09-17T02:07:12Z",
+    "digest": "sha256:1f5fe698978e9482d659ae5d673d743917c107c3e9903bf46fa8319e5af8e13c",
+    "expired": false,
+    "expires_at": "2026-12-16T02:04:57Z",
+    "id": 10477641570,
+    "name": "jsp-000476-evidence",
+    "size_in_bytes": 12981,
+    "updated_at": "2026-09-17T02:07:12Z",
+    "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10477641570",
+    "workflow_run": {
+      "head_branch": "jsp-000476-exact-threshold",
+      "head_repository_id": 1373404416,
+      "head_sha": "f633b03a38750049758fb67c2f0800bda3c42107",
+      "id": 35173027153,
+      "repository_id": 1373404416
+    }
+  },
+  "excerpt": {
+    "path": "evidence/ci-verification.log",
+    "sha256": "1dfec36b6fbd2267dd580439b9aad8d9a310061788e74a7b388c8379f3f8dbf4",
+    "description": "Exact contiguous job-log section from the Compile and audit step, including its command heading and all output, ending before the next step."
+  }
+}
