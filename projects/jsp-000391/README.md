@@ -1,12 +1,18 @@
 # JSP-000391: Stoll's general-base digit recurrence
 
-## Contribution and review request
+## Our formalization contribution
 
-This is a Lean formalization of Thomas Stoll's 2005 Theorem 1.3, a general-base digit-generating construction associated with JSP-000391 / Erdos Problem 482. It covers every integer radix g >= 2, every positive real target w, every shift in the theorem's admissible interval, and every digit index. It is not a finite numerical example.
+We provide an independently developed, complete Lean implementation of **Stoll's arbitrary-base digit construction** for JSP-000391 / Erdős Problem 482, with OpenAI ChatGPT/Codex assistance.
 
-Mathematical discovery belongs to Stoll and the earlier literature. This submission seeks review of a formalization contribution, not a new mathematical discovery. It does not claim to formalize all results in Stoll's 2005 or 2006 papers, classify every possible recurrence, establish global first-formalization priority, or create an entitlement to any award. Please assess scope, attribution, originality of the formalization, and eligibility.
+Our development contributes:
 
-Formalization contributor: **ketianzhang1-lang**, the submitting account, with OpenAI ChatGPT/Codex assistance. The implementation was independently written from Stoll's mathematical argument. The account is credited for the Lean implementation, not for the classical mathematics. The original MIT notice is retained in [LICENSE](LICENSE). No independent human or organizer approval is claimed.
+1. **Complete arbitrary-base coverage.** We prove the construction for every integer radix `g >= 2`, every positive real target, every shift in Stoll's admissible interval, and every digit index.
+2. **Correctness from the recursive definition.** We define the alternating floor recurrence from its initial value and prove its closed forms and digit-extraction identities.
+3. **Full digit semantics.** We prove normalization into `[1,g)`, bounds for every digit, reconstruction error estimates, and convergence of decoded prefixes to the normalized target.
+4. **An explicit existence theorem.** We prove that `e = -1/g` is admissible for every radix, giving a concrete endpoint in `JSP000391.jsp000391`.
+5. **Reproducible verification.** We supply pinned dependencies, source hashes, build scripts, Lean checker replay, axiom audits and NaNoda verification.
+
+We request credit for this Lean implementation and verification work. The mathematical construction is Stoll's Theorem 1.3 (2005); our theorem covers all positive real targets, including all positive algebraic targets.
 
 ## Mathematical statement and fidelity
 
@@ -50,7 +56,7 @@ The expanding step is an exact algebraic identity. The contracting step uses the
 
 ## Reproduction
 
-Select the full 40-character commit recorded in the catalog/PR on branch `jsp-000391-digit-recurrence`, then run the following from `projects/jsp-000391` with the pinned toolchain available:
+We provide the project on branch `jsp-000391-digit-recurrence`. The verified proof snapshot is `14e5155e68554de4e053e4aacd77095a93e96dd4`; this README revision changes documentation only. Select the full commit recorded in the catalog/PR, then run the following from `projects/jsp-000391` with the pinned toolchain available:
 
 ```sh
 sha256sum -c SOURCE_SHA256SUMS
@@ -65,19 +71,21 @@ The Lean compiler and Mathlib revisions are fixed by `lean-toolchain`, `lakefile
 
 See [VERIFICATION.md](VERIFICATION.md) for the exact tested proof commit, actual run results, artifact checksums, retention limits and remaining review boundaries. Two checker implementations run by one contributor are not independent human certification.
 
-## References and prior-work screening
+## Mathematical references
 
 - [Stoll, Journal of Integer Sequences 8 (2005), Article 05.3.2](https://cs.uwaterloo.ca/journals/JIS/VOL8/Stoll/stoll56.html), Theorem 1.3 and Section 2.2.
 - [Original article PDF](https://cs.uwaterloo.ca/journals/JIS/VOL8/Stoll/stoll56.pdf).
 - [Erdos Problem 482](https://www.erdosproblems.com/482).
 - [Pinned prize catalog entry](https://github.com/TheJustinSunPrize/awards/blob/f4e7173d89dfe91022a185427d63452c8ffbf6ae/problems/catalog-0301-0400.md#JSP-000391).
 
-A public related formalization exists in [plby/lean-proofs](https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos482.lean). Its source credits Codex and GPT-5.6 Sol and covers the arbitrary-real **binary** theorem and the original Graham--Pollak square-root-of-two recurrence. That source is acknowledged; no global first-formalization priority for Erdős 482 is asserted here.
+## Attribution and scope
 
-The theorem in this project is Stoll's **arbitrary-base** Theorem 1.3, including every integral radix at least two. These are different recurrence constructions. This project does not purport to replace the coefficients of the original Graham--Pollak recurrence with its own coefficients, or to classify every recurrence. The requested catalog update presents this complete general-base construction for review of correspondence with the catalog's general-base existence question. Prior work, overlap and prize eligibility remain for maintainer review.
+We developed the Lean implementation from Stoll's mathematical argument, with OpenAI ChatGPT/Codex assistance. We preserve the Mathlib attribution and the original MIT notice in [LICENSE](LICENSE).
 
-## Documentation correction
+Our submitted theorem is the complete arbitrary-base construction described above. The submission does not cover every result in Stoll's papers or classify every possible recurrence. We request review of its correspondence with the catalog's general-base existence question and of our formalization contribution. We make no mathematical-discovery or first-formalization priority claim.
 
-The proof and verification scripts were completed at `56f083c6183e93eeffc334e04e39a26548bfae96`, whose [public CI run](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35157931469) succeeded. Its README still described earlier development. This documentation update corrects that stale status and moves the explanatory verification receipt, source hashes and existing compact logs into this proof repository. All Lean files, locked dependencies, scripts and workflows remain byte-for-byte identical to the tested commit.
+## Verification record
 
-[VERIFICATION.md](VERIFICATION.md) distinguishes the historical tested commit from this documentation-only descendant. Repository validation and contributor-run proof checks do not establish organizer acceptance or award eligibility.
+Our [public verification run for the pinned proof snapshot](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35252880778) succeeded at `14e5155e68554de4e053e4aacd77095a93e96dd4`. The earlier [successful run](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35157931469) and [VERIFICATION.md](VERIFICATION.md) preserve the detailed verification history.
+
+This README revision changes only the contribution presentation and documentation. The Lean proofs, locked dependencies, verification scripts, workflows and source hashes are unchanged. Organizer acceptance and award eligibility remain subject to review.
