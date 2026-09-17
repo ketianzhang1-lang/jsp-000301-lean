@@ -7,6 +7,7 @@ This does not prove the asymptotic estimate in their Theorem 1.1.
 Independently written with OpenAI ChatGPT assistance.
 -/
 import Mathlib.Data.Nat.Prime.Basic
+import Mathlib.Data.Nat.GCD.BigOperators
 import Mathlib.NumberTheory.Bertrand
 import Mathlib.Algebra.BigOperators.Group.Finset.Basic
 import Mathlib.Tactic.Push
