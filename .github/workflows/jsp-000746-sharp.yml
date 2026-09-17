@@ -19,6 +19,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Memory headroom for certificate reconstruction
+        run: |
+          set -euo pipefail
+          sudo fallocate -l 8G /swapfile-jsp746
+          sudo chmod 600 /swapfile-jsp746
+          sudo mkswap /swapfile-jsp746
+          sudo swapon /swapfile-jsp746
+          free -h
+          df -h
       - name: Install fixed Lean
         shell: bash
         run: |
@@ -67,13 +76,13 @@ jobs:
         run: |
           set -euo pipefail
           cd _sharp/mathlib
-          lake env lean -DwarningAsError=true -j1 -M6144 -o .lake/build/lib/lean/Erdos895.olean ./Erdos895.lean 2>&1 | tee ../evidence/upper-build.log
+          lake env lean -DwarningAsError=true -j1 -M12288 -o .lake/build/lib/lean/Erdos895.olean ./Erdos895.lean 2>&1 | tee ../evidence/upper-build.log
       - name: Compile new sharpness proof
         shell: bash
         run: |
           set -euo pipefail
           cd _sharp/mathlib
-          lake env lean -DwarningAsError=true -j1 -M6144 -o .lake/build/lib/lean/JSP000746Sharp.olean ./JSP000746Sharp.lean 2>&1 | tee ../evidence/sharp-build.log
+          lake env lean -DwarningAsError=true -j1 -M12288 -o .lake/build/lib/lean/JSP000746Sharp.olean ./JSP000746Sharp.lean 2>&1 | tee ../evidence/sharp-build.log
           python3 - <<'PY'
           import re
           from pathlib import Path
