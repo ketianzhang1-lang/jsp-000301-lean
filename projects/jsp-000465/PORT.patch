@@ -1,0 +1,26 @@
+--- a/ErdosProblems/Erdos180/Foundations.lean
++++ b/ErdosProblems/Erdos180/Foundations.lean
+@@ -410,7 +410,7 @@
+       2 * sharpPruningPotential (Nat.card original.edgeSet) base + 1 =
+           sharpPruningScore (Nat.card original.edgeSet) base := by
+         unfold sharpPruningScore
+-        rw [if_pos hbasePositive]
++        rw [ite_eq_left hbasePositive]
+       _ ≤ sharpPruningScore (Nat.card original.edgeSet) H :=
+         hbaseScore
+       _ = 2 * (Nat.card original.edgeSet * Fintype.card V) :=
+--- a/ErdosProblems/Erdos180/Counting.lean
++++ b/ErdosProblems/Erdos180/Counting.lean
+@@ -1460,10 +1460,10 @@
+           SimpleGraph.mem_edgeSet] using hedge
+       rcases hcover hadj with hu | hv
+       · exact Finset.mem_biUnion.mpr
+-          ⟨u, hu, (G.mem_incidenceFinset u _).mpr
++          ⟨u, hu, G.mem_incidenceFinset.mpr
+             (G.mk'_mem_incidenceSet_left_iff.mpr hadj)⟩
+       · exact Finset.mem_biUnion.mpr
+-          ⟨v, hv, (G.mem_incidenceFinset v _).mpr
++          ⟨v, hv, G.mem_incidenceFinset.mpr
+             (G.mk'_mem_incidenceSet_right_iff.mpr hadj)⟩
+   calc
+     G.edgeFinset.card ≤
