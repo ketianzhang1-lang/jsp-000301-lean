@@ -1,0 +1,10 @@
+JSP-000947 bounded classification formalization
+Copyright 2026 Ketian Zhang. Prepared with OpenAI ChatGPT / Codex.
+Licensed under Apache License 2.0; see LICENSE-APACHE-2.0.
+
+Predicate and theorem statement adapted from Formal Conjectures:
+Copyright 2026 The Formal Conjectures Authors, Apache License 2.0.
+Source: FormalConjectures/ErdosProblems/1142.lean at
+40e7c98697de6f66b8cbdbf641749ab39ed9c152.
+Mathematical finite-range result: Mientka and Weitzenkamp (1969).
+See PROVENANCE.md for prior results and scope.
