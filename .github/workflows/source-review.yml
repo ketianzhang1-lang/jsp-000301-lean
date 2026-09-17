@@ -1,0 +1,42 @@
+name: Full-scope source review
+on:
+  push:
+    branches: [research/new-full-scope-20260917]
+    paths: [.github/workflows/source-review.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Collect public statement sources
+        run: |
+          mkdir source-review
+          python3 - <<'PY'
+          import urllib.request, pathlib, re, tarfile, io
+          out=pathlib.Path('source-review')
+          def get(url):
+              return urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent':'full-scope-source-review'}),timeout=60).read()
+          for name in ['ErdosProblems/PROGRESS.md','data/sources.yaml']:
+              raw=get('https://raw.githubusercontent.com/plby/lean-proofs/main/'+name)
+              (out/pathlib.Path(name).name).write_bytes(raw)
+              if 'PROGRESS' in name:
+                  print('GAPS IN REFERENCE LIBRARY:')
+                  for l in raw.decode().splitlines():
+                      if '🟨' in l: print(l)
+          raw=get('https://api.github.com/repos/google-deepmind/formal-conjectures/tarball/main')
+          with tarfile.open(fileobj=io.BytesIO(raw),mode='r:gz') as tf:
+              for m in tf.getmembers():
+                  if m.isfile() and '/FormalConjectures/ErdosProblems/' in m.name and m.name.endswith('.lean'):
+                      dest=out/'statements'/pathlib.Path(m.name).name
+                      dest.parent.mkdir(exist_ok=True)
+                      dest.write_bytes(tf.extractfile(m).read())
+          print('Original formal statement files:',len(list((out/'statements').glob('*.lean'))))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source-review
+          path: source-review/
+          if-no-files-found: error
