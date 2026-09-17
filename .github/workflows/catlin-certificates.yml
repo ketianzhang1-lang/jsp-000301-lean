@@ -1,0 +1,43 @@
+name: Catlin finite certificates (research only)
+
+on:
+  push:
+    branches: ["research-catlin-certificates-kz"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pinned Lean
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          "$HOME/.elan/bin/elan" toolchain install leanprover/lean4:v4.34.0
+      - name: Exact Python checks
+        run: python3 projects/catlin-research/verify.py
+      - name: Check finite Lean declarations and print axiom closures
+        shell: bash
+        working-directory: projects/catlin-research
+        run: |
+          set -euo pipefail
+          { git rev-parse HEAD; lean --version; lean -o Certificate.olean Certificate.lean; } 2>&1 | tee lean-verification.log
+      - name: Package reproducibility evidence
+        if: always()
+        shell: bash
+        working-directory: projects/catlin-research
+        run: |
+          sha256sum Certificate.lean PROOF.md verify.py lean-toolchain > SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: catlin-research-evidence
+          path: projects/catlin-research/
+          if-no-files-found: error
