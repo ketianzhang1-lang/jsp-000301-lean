@@ -125,7 +125,7 @@ theorem polynomial_quadratic_obstruction (a b c : ℤ) (ha : a ≠ 0)
         (Polynomial.C a * Polynomial.X ^ 2 + Polynomial.C b * Polynomial.X +
           Polynomial.C c)) ∧ z = p.1 + p.2 := by
   by_contra h
-  push_neg at h
+  push Not at h
   apply no_divisible_quadratic_complement a b c ha hab A
   intro z
   obtain ⟨p, hp, huniq⟩ := h z

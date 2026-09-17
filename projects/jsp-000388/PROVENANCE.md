@@ -6,6 +6,9 @@ Original problem: https://www.erdosproblems.com/477
 
 The formal-statement reference inspected during development is the Google
 DeepMind Formal Conjectures entry `FormalConjectures/ErdosProblems/477.lean`.
+Pinned statement reference:
+https://github.com/google-deepmind/formal-conjectures/blob/cd0084c96ac8764cac2c4dcb1b6f1815112f1155/FormalConjectures/ErdosProblems/477.lean
+
 Its statements distinguish the positive general problem, the negative square
 case, and the negative quadratic case with nonzero `a`, nonzero `b`, and `a|b`.
 This project includes both `b=0` and `b!=0` in one theorem.
