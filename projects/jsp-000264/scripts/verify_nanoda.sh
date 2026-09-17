@@ -21,7 +21,7 @@ cp lean-toolchain "$work/exporter/lean-toolchain"
 (cd "$work/checker" && cargo build --release --locked)
 lake env "$work/exporter/.lake/build/bin/lean4export" JSP000264 -- \
   JSP000264.odd_denominator JSP000264.counterexample_not_P₁ \
-  JSP000264.counterexample_density JSP000264.positive_density_counterexample > evidence/export.ndjson
+  JSP000264.counterexample_density JSP000264.source_statement_positive_density > evidence/export.ndjson
 python3 - <<'PY'
 import json
 from pathlib import Path
@@ -30,7 +30,7 @@ config={
   'permitted_axioms':['propext','Classical.choice','Quot.sound'],
   'unpermitted_axiom_hard_error':True,'nat_extension':True,'string_extension':True,
   'pp_declars':['JSP000264.P₁','JSP000264.HasNaturalDensity',
-    'JSP000264.counterexampleSet','JSP000264.positive_density_counterexample'],
+    'JSP000264.counterexampleSet','JSP000264.source_statement_positive_density'],
   'pp_output_path':'evidence/nanoda-statements.txt','pp_to_stdout':False,'print_success_message':True}
 Path('evidence/nanoda-config.json').write_text(json.dumps(config,indent=2)+'\n')
 Path('evidence/nanoda-statements.txt').write_text('')

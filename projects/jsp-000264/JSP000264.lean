@@ -1,6 +1,12 @@
+/-
+Copyright 2026 Ketian Zhang.
+The P₁ definition: Copyright 2026 The Formal Conjectures Authors.
+SPDX-License-Identifier: Apache-2.0
+-/
 import Mathlib.Algebra.Ring.Parity
 import Mathlib.Analysis.SpecificLimits.Basic
 import Mathlib.Data.Set.Card
+import Mathlib.Order.Interval.Set.Nat
 import Mathlib.Tactic
 
 /-!
@@ -44,7 +50,7 @@ theorem odd_denominator (S : Finset ℕ) (hS : ∀ n ∈ S, Odd n) :
     push_cast
     have ha0 : (a : ℝ) ≠ 0 := by exact_mod_cast hao.pos.ne'
     have hq0 : (q : ℝ) ≠ 0 := by exact_mod_cast hq.ne'
-    field_simp <;> ring
+    field_simp
 
 /-- All odds together with 2 fail P₁, even though the chosen signs are nonconstant. -/
 theorem counterexample_not_P₁ : ¬ P₁ counterexampleSet := by
@@ -77,7 +83,7 @@ theorem counterexample_not_P₁ : ¬ P₁ counterexampleSet := by
       rw [← Finset.sum_neg_distrib]
       apply Finset.sum_congr rfl
       intro n hn
-      simp [f, (Finset.mem_erase.mp hn).1]
+      simp [f, (Finset.mem_erase.mp hn).1, neg_div]
     have heq := Finset.add_sum_erase S (fun n => f n / n) h2S
     rw [hz, hneg, hsum] at heq
     have hrat : (1 : ℝ) / 2 = (p : ℝ) / q := by
@@ -117,10 +123,17 @@ theorem counterexample_count (N : ℕ) (hN : 3 ≤ N) :
   classical
   have heq : counterexampleSet ∩ Set.Iio N =
       (↑(insert 2 ((Finset.range N).filter Odd)) : Set ℕ) := by
-    ext n
+    apply Set.ext
+    intro n
     simp only [Set.mem_inter_iff, Set.mem_Iio, Finset.mem_coe, Finset.mem_insert,
-      Finset.mem_filter, Finset.mem_range, counterexampleSet, Set.mem_setOf_eq]
-    omega
+      Finset.mem_filter, Finset.mem_range]
+    change (Odd n ∨ n = 2) ∧ n < N ↔ n = 2 ∨ n < N ∧ Odd n
+    constructor
+    · rintro ⟨h, hn⟩
+      exact h.elim (fun ho => Or.inr ⟨hn, ho⟩) Or.inl
+    · rintro (rfl | ⟨hn, ho⟩)
+      · exact ⟨Or.inr rfl, by omega⟩
+      · exact ⟨Or.inl ho, hn⟩
   rw [heq, Set.ncard_coe_finset, Finset.card_insert_of_notMem]
   · rw [odd_count]
   · simp
@@ -153,5 +166,13 @@ theorem positive_density_counterexample :
     ∃ A : Set ℕ, (∃ d : ℝ, 0 < d ∧ HasNaturalDensity A d) ∧ ¬ P₁ A := by
   exact ⟨counterexampleSet, ⟨1 / 2, by norm_num, counterexample_density⟩,
     counterexample_not_P₁⟩
+
+/-- The same endpoint with the reference's unsimplified density expression. -/
+theorem source_statement_positive_density :
+    ∃ A : Set ℕ, (∃ d : ℝ, 0 < d ∧
+      Tendsto (fun N : ℕ =>
+        (((A ∩ Set.univ) ∩ Set.Iio N).ncard : ℝ) /
+          (Set.univ ∩ Set.Iio N).ncard) atTop (𝓝 d)) ∧ ¬ P₁ A := by
+  simpa [HasNaturalDensity] using positive_density_counterexample
 
 end JSP000264

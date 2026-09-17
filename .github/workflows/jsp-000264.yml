@@ -28,7 +28,7 @@ jobs:
           test -s lake-manifest.json
           lake exe cache get
           git diff --exit-code -- lake-manifest.json
-      - name: Build, replay, six axiom audits and negative control
+      - name: Build, replay, four axiom audits and negative control
         run: bash scripts/verify.sh
       - name: Independent strict-allowlist NaNoda verification
         run: |
