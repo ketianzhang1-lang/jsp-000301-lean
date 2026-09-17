@@ -1,0 +1,48 @@
+name: JSP912 public environment transport
+on:
+  push:
+    branches: [jsp-000912-fullscope-research-20260917]
+    paths: [.github/workflows/jsp912-environment-parts.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  split:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: jsp912-public-dependencies
+          path: /tmp/input
+          run-id: 35205560168
+          github-token: ${{ github.token }}
+      - name: Split public dependency archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/parts
+          split -b 400000000 -d /tmp/input/jsp912-public-dependencies.tar.gz /tmp/parts/public-dependencies.part-
+          sha256sum /tmp/parts/*
+          ls -lh /tmp/parts
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jsp912-public-dependencies-part-00
+          path: /tmp/parts/public-dependencies.part-00
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jsp912-public-dependencies-part-01
+          path: /tmp/parts/public-dependencies.part-01
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jsp912-public-dependencies-part-02
+          path: /tmp/parts/public-dependencies.part-02
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: error
