@@ -1,0 +1,41 @@
+name: JSP-000925 interpreter metadata
+on:
+  push:
+    branches: [jsp-000925-critical-spacing]
+    paths: [.github/workflows/jsp-000925-tool-signatures.yml]
+permissions:
+  contents: read
+jobs:
+  metadata:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Fetch pinned public interpreter metadata only
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          export PATH="$HOME/.elan/bin:$PATH"
+          elan toolchain install "$(cat lean-toolchain)"
+          lake exe cache get
+          mkdir -p metadata/runtime metadata/deps
+          prefix=$(lean --print-prefix)
+          (cd "$prefix" && find lib/lean -type f -name '*.ir.sig' -print0 | tar --null -T - -cf -) | tar -xf - -C metadata/runtime
+          for d in .lake/packages/*; do
+            name=$(basename "$d")
+            test -d "$d/.lake/build/lib/lean" || continue
+            mkdir -p "metadata/deps/$name"
+            (cd "$d/.lake/build/lib/lean" && find . -type f -name '*.ir.sig' -print0 | tar --null -T - -cf -) | tar -xf - -C "metadata/deps/$name"
+          done
+          cp lean-toolchain lake-manifest.json metadata/
+          find metadata -type f | wc -l
+          du -sh metadata
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp925-public-interpreter-metadata
+          path: metadata
+          retention-days: 1
+          if-no-files-found: error
