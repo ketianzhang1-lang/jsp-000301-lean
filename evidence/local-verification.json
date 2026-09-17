@@ -1,0 +1,33 @@
+{
+  "checked_at_utc": "2026-09-17T00:50:42.495066+00:00",
+  "lean": "4.34.0",
+  "mathlib": "5ed2965256430c3649e86755f9576b54eca72435",
+  "commands": [
+    {
+      "command": "lake build --wfail",
+      "exit_code": 0,
+      "log": "build.log"
+    },
+    {
+      "command": "lake env leanchecker -v JSP000393",
+      "exit_code": 0,
+      "log": "leanchecker.log"
+    }
+  ],
+  "main_declarations": [
+    "JSP000393.family_counts",
+    "JSP000393.arbitrarily_sparse_squares"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "source_sha256": {
+    "JSP000393.lean": "32fc88e06d8897c326a6caa2b113bd3648ab8386062d4a136a219649ff165694",
+    "lakefile.lean": "92b8e55d1182d28591206f6afcb3d9d0854ceaa4a4560befc8b3b9a87c923ee3",
+    "lean-toolchain": "8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632",
+    "lake-manifest.json": "cb85dff7759f5e74300a86db0518198bd29a3ec5c888a57613ef80f6305bd876"
+  },
+  "limits": "Submitter-generated local verification, not independent human review. Bundled leanchecker replays the custom module using imported Mathlib. A local readlink compatibility shim maps only /proc/<own PID>/exe to /proc/self/exe; no Lean kernel, proof, or checker code was changed. Clean GitHub CI is separate."
+}

@@ -1,0 +1,4 @@
+ℹ [3092/3093] Built JSP000393 (7.3s)
+info: JSP000393.lean:160:0: 'JSP000393.family_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000393.lean:161:0: 'JSP000393.arbitrarily_sparse_squares' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3093 jobs).

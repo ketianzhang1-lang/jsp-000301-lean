@@ -1,11 +1,11 @@
-# Provenance and contribution disclosure
+# Provenance and contribution limits
 
-This project formalizes the pre-existing counterexample recorded in the Justin Sun Prize problem bank for JSP-000301. It does not claim discovery of the mathematics, establish the original discovery date, or claim first public formalization.
+The mathematical seed and sparse-square phenomenon are known. Credit for the explicit seed belongs to Don Coppersmith and James H. Davenport; the earlier sparse-product idea is classical, with Rényi and Erdős among the cited contributors. The primary 1991 paper was inspected, including the explicit formula on p. 86.
 
-OpenAI ChatGPT assisted in drafting the Lean source, documentation, dependency configuration and CI repairs under the submitting user's direction. The public repository owner operates this project and its submission process. Repository ownership and operation alone do not establish entitlement to a formalization award; the Prize must determine the appropriate contributor attribution.
+This Lean implementation was prepared in September 2026 for GitHub user `ketianzhang1-lang`, with OpenAI Codex generating the code, conducting source searches, repairing compilation errors, checking statements and assembling evidence. It is not represented as unaided manual authorship by the account holder. The user requested assistance seeking prize credit. Any recipient recommendation should use the placeholder `RECIPIENT-JSP-000393-KZ-A` until confirmation under the Prize rules.
 
-The source uses Mathlib definitions, lemmas and proof-producing tactics. This project was prepared from the catalog's counterexample rather than by adopting another submitter's published Lean project. Mathlib and external checkers retain their respective licenses and attribution.
+The main proof file was written for this project. It uses the pinned Mathlib library and does not copy or import the existing plby/lean-proofs implementation. Python multiplication was used to calculate the displayed coefficients during development; it is not a trusted premise because Lean independently proves the polynomial identities. No external result was introduced as an axiom.
 
-Earlier public submissions for this problem are acknowledged, including TheJustinSunPrize/awards issues #25, #62, #64, #82, #94, #109, #146 and #156. No review of all their proofs or definitive priority adjudication is claimed.
+The earlier official registration in issue #44 and its original mathematical/formalization credits are preserved. No first solution, first Lean proof, sole authorship of the mathematics, award level, payment amount or entitlement is claimed.
 
-Contributor-controlled CI results are not represented as an independent human review or an official Prize approval. Recipient confirmation, professional-conflict disclosures where relevant, and any private identity/compliance checks remain pending. No private identity documents, contact information or payment information are included in the submission draft.
+Local execution required a compatibility shim for this environment's process filesystem: only the calling process's own `/proc/<PID>/exe` lookup was mapped to the supported `/proc/self/exe` alias. It did not change proof checking or expose another process. The shim is not a project dependency and is not included in the public proof or GitHub workflow. Local checking is submitter-generated evidence; clean GitHub CI and any independent review are separate.

@@ -2,7 +2,7 @@ name: Lean verification
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "jsp-000393-sparse-squares"]
   pull_request:
     branches: ["main"]
   workflow_dispatch:
@@ -87,11 +87,11 @@ jobs:
           use-mathlib-cache: true
           use-github-cache: false
           leanchecker: true
-          leanchecker-args: "JSP000301"
+          leanchecker-args: "JSP000393"
           nanoda: true
           nanoda-allow-sorry: false
           axiom-audit: true
-          axiom-audit-root: "JSP000301"
+          axiom-audit-root: "JSP000393"
 
       - name: Verify dependency manifest exists
         run: test -s lake-manifest.json
