@@ -9,4 +9,4 @@ require mathlib from git
 
 @[default_target]
 lean_lib Catlin where
-  roots := #[`Catlin]
+  roots := #[`Certificate, `GraphCore, `Profile, `Subdivision, `Colouring, `Catlin]
