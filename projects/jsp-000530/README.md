@@ -19,6 +19,12 @@ point. The construction works for every m; it is not a finite computation.
 
 Our contribution, recorded under GitHub account `ketianzhang1-lang`, is an independently written Lean implementation using even and odd coordinates, its Euclidean-circle and distance-count proofs, the quantified asymptotic negation and the pinned verification package. We developed this implementation with OpenAI ChatGPT assistance. [PROVENANCE.md](PROVENANCE.md) records the mathematical source and contribution boundary.
 
+## Further research and a scope correction
+
+We have proved fifteen auxiliary Lean lemmas, including the exact distance-group slack identity, its uniform lower-bound reformulation, the perpendicular-bisector obstruction to preserving the existing pair equalities, and a proof that quadratic bending creates four concyclic points. [The research source and verification record](https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/0cedcd9996abd02eb8b64393d4b879cbf8c6eceb/projects/jsp-000530/research/PROGRESS.md) are on branch `jsp-000530-general-position-research`. These lemmas do not complete the original problem.
+
+Our earlier focus on the no-three-collinear condition did not describe the entire gap. [Erdős's 1987 paper, printed page 168](https://www.renyi.hu/~p_erdos/1987-27.pdf#page=2) also asks for a fixed positive improvement above the one-third lower bound. Our two-axis upper-bound example does not resolve that lower-bound question, with or without no three collinear points. The general-position upper-construction question also remains unresolved by this package.
+
 ## Complete-solution requirement
 
 The current prize instructions require a complete solution of the original problem. Our code completely disproves the formulation with only the no-four-concyclic hypothesis, but it does not prove or disprove the historical formulation that additionally forbids three collinear points. The cited paper explicitly classifies its result as a partial solution of the multi-part problem (Section 3.1, Remark 3.1).
