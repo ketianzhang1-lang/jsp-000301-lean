@@ -232,13 +232,11 @@ lemma zeta_le_chi {n : ℕ} (s : Finset (Edge n)) : zeta s ≤ chi s := by
   exact proper_to_coProper (chi_spec s)
 
 lemma zeta_compl {n : ℕ} (s : Finset (Edge n)) : zeta sᶜ = zeta s := by
-  apply Nat.le_antisymm
-  · unfold zeta
+  have hle (t : Finset (Edge n)) : zeta tᶜ ≤ zeta t := by
+    unfold zeta
     apply Nat.find_min'
-    exact coProper_compl (zeta_spec s)
-  · unfold zeta
-    apply Nat.find_min'
-    simpa only [compl_compl] using coProper_compl (zeta_spec sᶜ)
+    exact coProper_compl (zeta_spec t)
+  exact Nat.le_antisymm (hle s) (by simpa only [compl_compl] using hle sᶜ)
 
 /-- Proposition 3 of Heckel's paper, for every finite graph order, including
 zero. Probability is exact uniform counting on all simple labelled graphs.
