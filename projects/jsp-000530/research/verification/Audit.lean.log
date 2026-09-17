@@ -1,0 +1,18 @@
+'JSP000530.point_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000530.configuration_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000530.configuration_circle_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000530.configuration_distance_bound_strict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000530.counterexample_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000530.not_asymptotically_all_distances' depends on axioms: [propext, Classical.choice, Quot.sound]
+def JSP000530.NoFourConcyclic : Finset ℂ → Prop :=
+fun S => ∀ (z : ℂ) (r : ℝ), {p ∈ S | dist p z = r}.card ≤ 3
+def JSP000530.distanceValues : Finset ℂ → ℂ → Finset ℝ :=
+fun S p => Finset.image (dist p) (S.erase p)
+JSP000530.counterexample_family (m : ℕ) :
+  ∃ S, S.card = 4 * m ∧ JSP000530.NoFourConcyclic S ∧ ∀ p ∈ S, (JSP000530.distanceValues S p).card < 3 * m
+JSP000530.not_asymptotically_all_distances :
+  ¬∀ (ε : ℝ),
+      0 < ε →
+        ∃ N,
+          ∀ (S : Finset ℂ),
+            N ≤ S.card → JSP000530.NoFourConcyclic S → ∃ p ∈ S, (1 - ε) * ↑S.card ≤ ↑(JSP000530.distanceValues S p).card

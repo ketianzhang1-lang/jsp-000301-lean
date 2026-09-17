@@ -19,6 +19,12 @@ point. The construction works for every m; it is not a finite computation.
 
 Our contribution, recorded under GitHub account `ketianzhang1-lang`, is an independently written Lean implementation using even and odd coordinates, its Euclidean-circle and distance-count proofs, the quantified asymptotic negation and the pinned verification package. We developed this implementation with OpenAI ChatGPT assistance. [PROVENANCE.md](PROVENANCE.md) records the mathematical source and contribution boundary.
 
+## Research progress and the remaining lower bound
+
+We have added fifteen proved Lean lemmas in [JSP000530Research.lean](JSP000530Research.lean). They provide an exact distance-group accounting identity, reformulate the uniform one-third improvement as a linear slack bound, and prove obstructions to preserving the old reflected-pair mechanism or quadratically bending the two axes. [The research record](research/PROGRESS.md) includes the exact targets, verification and finite diagnostics. These additions do not complete the problem.
+
+The remaining gap is broader than the additional collinearity condition. [Erdős's 1987 paper, printed page 168](https://www.renyi.hu/~p_erdos/1987-27.pdf#page=2) also asks for a fixed positive improvement above the one-third lower bound. The existing upper-bound counterexample does not settle that question, with or without no three collinear points. Our earlier focus on collinearity alone was incomplete.
+
 ## Complete-solution requirement
 
 The current prize instructions require a complete solution of the original problem. Our code completely disproves the formulation with only the no-four-concyclic hypothesis, but it does not prove or disprove the historical formulation that additionally forbids three collinear points. The cited paper explicitly classifies its result as a partial solution of the multi-part problem (Section 3.1, Remark 3.1).

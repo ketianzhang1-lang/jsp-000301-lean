@@ -7,3 +7,7 @@ The two-axis mathematical construction is due to Aletheia, reported by Feng et a
 The paper expressly treats this as a partial answer to the collection of formulations, because the additional no-three-collinear case is not resolved by the construction. Our source contains no theorem supplying that missing hypothesis or solving that formulation. The original-source attribution and this scope boundary must remain explicit in any review request.
 
 Lean and Mathlib retain their licenses and attribution. The parent repository's MIT license applies to our new formalization code. We make no mathematical-discovery or global first-formalization claim.
+
+## Further research implementation
+
+We contribute the fifteen fully proved lemmas in `JSP000530Research.lean`, the exact-type and axiom audit, reproducible candidate diagnostics and `research/PROGRESS.md` under account `ketianzhang1-lang`, with OpenAI ChatGPT assistance. The elementary one-third bound and perpendicular-bisector facts are classical; we claim no new mathematical solution or first-formalization priority. The uniform positive-slack and general-position targets remain unproved.

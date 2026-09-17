@@ -1,0 +1,42 @@
+name: JSP-000530 research lemma verification
+on:
+  push:
+    branches: [jsp-000530-general-position-research]
+    paths: ['projects/jsp-000530/**', '.github/workflows/jsp-000530-research.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      LEAN_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install pinned Lean toolchain
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          "$HOME/.elan/bin/elan" toolchain install leanprover/lean4:v4.34.0
+      - name: Fetch the pinned dependency cache
+        working-directory: projects/jsp-000530
+        run: lake exe cache get Mathlib.Analysis.Complex.Basic Mathlib.Algebra.BigOperators.Group.Finset.Basic Mathlib.Tactic.FieldSimp Mathlib.Tactic.Linarith Mathlib.Tactic.NormNum Mathlib.Tactic.Ring Mathlib.Tactic.Push
+      - name: Compile, replay and audit the proved lemmas
+        working-directory: projects/jsp-000530
+        run: python3 scripts/verify_research.py
+      - name: Reproduce exact finite candidate diagnostics
+        working-directory: projects/jsp-000530
+        run: |
+          python3 research/perturbation_check.py
+          git diff --exit-code -- research/perturbation-results.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: jsp-000530-research-verification
+          path: projects/jsp-000530/evidence/research-generated
+          if-no-files-found: error
+          retention-days: 90

@@ -1,0 +1,96 @@
+{
+  "arithmetic": "exact integers",
+  "status": "finite diagnostics only",
+  "results": [
+    {
+      "m": 2,
+      "t_denominator": 10000,
+      "original": {
+        "n": 8,
+        "collinear_triples": 8,
+        "concyclic_quadruples": 0,
+        "min_pinned_distances": 4,
+        "max_pinned_distances": 5
+      },
+      "bent": {
+        "n": 8,
+        "collinear_triples": 0,
+        "concyclic_quadruples": 2,
+        "min_pinned_distances": 7,
+        "max_pinned_distances": 7
+      }
+    },
+    {
+      "m": 3,
+      "t_denominator": 10000,
+      "original": {
+        "n": 12,
+        "collinear_triples": 40,
+        "concyclic_quadruples": 0,
+        "min_pinned_distances": 6,
+        "max_pinned_distances": 8
+      },
+      "bent": {
+        "n": 12,
+        "collinear_triples": 0,
+        "concyclic_quadruples": 6,
+        "min_pinned_distances": 11,
+        "max_pinned_distances": 11
+      }
+    },
+    {
+      "m": 4,
+      "t_denominator": 10000,
+      "original": {
+        "n": 16,
+        "collinear_triples": 112,
+        "concyclic_quadruples": 0,
+        "min_pinned_distances": 8,
+        "max_pinned_distances": 11
+      },
+      "bent": {
+        "n": 16,
+        "collinear_triples": 0,
+        "concyclic_quadruples": 16,
+        "min_pinned_distances": 15,
+        "max_pinned_distances": 15
+      }
+    },
+    {
+      "m": 6,
+      "t_denominator": 10000,
+      "original": {
+        "n": 24,
+        "collinear_triples": 440,
+        "concyclic_quadruples": 0,
+        "min_pinned_distances": 12,
+        "max_pinned_distances": 17
+      },
+      "bent": {
+        "n": 24,
+        "collinear_triples": 0,
+        "concyclic_quadruples": 64,
+        "min_pinned_distances": 23,
+        "max_pinned_distances": 23
+      }
+    },
+    {
+      "m": 8,
+      "t_denominator": 10000,
+      "original": {
+        "n": 32,
+        "collinear_triples": 1120,
+        "concyclic_quadruples": 0,
+        "min_pinned_distances": 16,
+        "max_pinned_distances": 23
+      },
+      "bent": {
+        "n": 32,
+        "collinear_triples": 0,
+        "concyclic_quadruples": 166,
+        "min_pinned_distances": 31,
+        "max_pinned_distances": 31
+      }
+    }
+  ]
+}
