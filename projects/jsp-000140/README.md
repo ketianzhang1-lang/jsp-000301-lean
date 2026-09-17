@@ -87,3 +87,5 @@ requires a build with warnings treated as errors, two Lean kernel replays, ten
 axiom audits, locked dependency checks, rejection of an invalid arithmetic
 proof, and a separate NaNoda check of four endpoints and their dependency closure.
 See VERIFICATION.md for checks actually completed and their limits.
+
+The [dedicated cloud run](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35178843250) passed every stage, including the separate NaNoda check of 6,554 declarations.
