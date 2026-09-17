@@ -1,0 +1,15 @@
+Selected verbatim lines from contributor-run GitHub job 105059438857.
+This is an excerpt, not the complete workflow log.
+2026-09-17T03:02:20.5250172Z Build completed successfully (971 jobs).
+2026-09-17T03:02:27.3289460Z 'JSP000401.no_four' depends on axioms: [propext]
+2026-09-17T03:02:27.3301130Z 'JSP000401.fifteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:02:27.3301849Z 'JSP000401.good_permutation' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:02:27.3302406Z 'JSP000401.uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:02:27.3302949Z 'JSP000401.tetrahedron_free' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:02:27.3303498Z 'JSP000401.edge_frequency' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:02:27.3304040Z 'JSP000401.total_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:02:27.3304613Z 'JSP000401.exists_dense_coloring' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:02:27.3305197Z 'JSP000401.turan_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:02:27.4696700Z Nine target axiom audits and all nine dependency revision checks passed.
+2026-09-17T03:02:36.6113859Z Build completed successfully (6 jobs).
+2026-09-17T03:03:00.7369946Z Checked 6497 declarations with no errors
