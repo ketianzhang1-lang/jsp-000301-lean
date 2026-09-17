@@ -1,0 +1,15 @@
+2026-09-17T01:03:13.5832948Z warning: manifest out of date: git url of dependency 'mathlib' changed; use `lake update mathlib` to update it
+2026-09-17T01:04:23.2065627Z warning: manifest out of date: git url of dependency 'mathlib' changed; use `lake update mathlib` to update it
+2026-09-17T01:04:28.6922744Z Build completed successfully (1895 jobs).
+2026-09-17T01:04:29.0719750Z warning: manifest out of date: git url of dependency 'mathlib' changed; use `lake update mathlib` to update it
+2026-09-17T01:04:34.0565659Z warning: manifest out of date: git url of dependency 'mathlib' changed; use `lake update mathlib` to update it
+2026-09-17T01:04:35.7942046Z 'JSP000530.point_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T01:04:35.7942814Z 'JSP000530.configuration_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T01:04:35.7943449Z 'JSP000530.configuration_circle_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T01:04:35.7944144Z 'JSP000530.configuration_distance_bound_strict' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T01:04:35.7944812Z 'JSP000530.counterexample_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T01:04:35.7946682Z 'JSP000530.not_asymptotically_all_distances' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T01:04:35.9413056Z Six target axiom audits and all nine dependency revision checks passed.
+2026-09-17T01:04:45.3896007Z Build completed successfully (6 jobs).
+2026-09-17T01:05:05.9977985Z warning: manifest out of date: git url of dependency 'mathlib' changed; use `lake update mathlib` to update it
+2026-09-17T01:05:13.5917339Z Checked 13905 declarations with no errors

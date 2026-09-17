@@ -1,0 +1,27 @@
+{
+  "validate": {
+    "exit_code": 0,
+    "output": "validate: OK\n"
+  },
+  "links": {
+    "exit_code": 0,
+    "output": "links: OK\n"
+  },
+  "build": {
+    "exit_code": 0,
+    "output": "build: OK\n"
+  },
+  "check": {
+    "exit_code": 0,
+    "output": "check: OK\n"
+  },
+  "history": {
+    "exit_code": 0,
+    "output": "history: OK\n"
+  },
+  "proof_files_match": "All nine files in the pinned proof project match byte for byte.",
+  "unit_tests": "22 tests passed; see repository-tests.log. Tests were not changed.",
+  "tracked_files_unchanged": true,
+  "base_commit": "f4e7173d89dfe91022a185427d63452c8ffbf6ae",
+  "proof_commit": "fb8577233935d1ff4533418ff8ea33a4d7dab101"
+}
