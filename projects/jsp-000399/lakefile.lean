@@ -11,4 +11,4 @@ require mathlib from git
 
 @[default_target]
 lean_lib JSP000399 where
-  roots := #[`JSP000399]
+  roots := #[`JSP000399, `Compatibility]

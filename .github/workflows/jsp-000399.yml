@@ -28,8 +28,12 @@ jobs:
           test -s lake-manifest.json
           lake exe cache get
           git diff --exit-code -- lake-manifest.json
-      - name: Build and audit counterexample
+      - name: Build, replay, seven axiom audits and negative control
         run: bash scripts/verify.sh
+      - name: Independent strict-allowlist NaNoda verification
+        run: |
+          set -euo pipefail
+          bash scripts/verify_nanoda.sh 2>&1 | tee evidence/nanoda-build.log
       - name: Archive tested source and logs
         if: always()
         run: |
