@@ -1,0 +1,48 @@
+name: JSP912 isolated research environment
+on:
+  push:
+    branches: [jsp-000912-fullscope-research-20260917]
+    paths: [.github/workflows/jsp912-research-environment.yml]
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Install public Lean toolchain
+        shell: bash
+        run: |
+          set -euxo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain leanprover/lean4:v4.19.0
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Obtain public pinned Mathlib dependencies
+        shell: bash
+        run: |
+          set -euxo pipefail
+          git clone --depth 1 --branch v4.19.0 https://github.com/leanprover-community/mathlib4.git /tmp/jsp912-mathlib
+          cd /tmp/jsp912-mathlib
+          git rev-parse HEAD
+          lake exe cache get Mathlib/Analysis/SpecialFunctions/Pow/Real.lean Mathlib/Data/Nat/Log.lean Mathlib/NumberTheory/Divisors.lean Mathlib/Data/Finset/Sort.lean Mathlib/Tactic.lean
+      - name: Package only public compiler and library inputs
+        shell: bash
+        run: |
+          set -euxo pipefail
+          mkdir -p /tmp/jsp912-bundle/toolchain /tmp/jsp912-bundle/mathlib
+          TC="$HOME/.elan/toolchains/leanprover--lean4---v4.19.0"
+          rsync -a --exclude='*.a' --exclude='*.o' --exclude='*.c' --exclude='*.ilean' --exclude='src/' --exclude='include/' "$TC/" /tmp/jsp912-bundle/toolchain/
+          cd /tmp/jsp912-mathlib
+          git rev-parse HEAD > /tmp/jsp912-bundle/MATHLIB_COMMIT
+          cp lean-toolchain lake-manifest.json /tmp/jsp912-bundle/
+          rsync -a --exclude='.git/' --exclude='*.a' --exclude='*.o' --exclude='*.c' --exclude='*.ilean' --exclude='*.trace' --exclude='.lake/build/ir/' ./ /tmp/jsp912-bundle/mathlib/
+          du -sh /tmp/jsp912-bundle/*
+          tar -C /tmp/jsp912-bundle -czf /tmp/jsp912-public-dependencies.tar.gz .
+          sha256sum /tmp/jsp912-public-dependencies.tar.gz
+          ls -lh /tmp/jsp912-public-dependencies.tar.gz
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jsp912-public-dependencies
+          path: /tmp/jsp912-public-dependencies.tar.gz
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: error
