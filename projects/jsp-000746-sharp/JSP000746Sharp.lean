@@ -32,8 +32,8 @@ instance : DecidableRel adj := fun a b =>
 
 def witness : SimpleGraph (Fin 17) where
   Adj := adj
-  symm := by intro a b h; exact h.elim Or.inr Or.inl
-  loopless := by decide
+  symm := ⟨by intro a b h; exact h.elim Or.inr Or.inl⟩
+  loopless := ⟨by decide⟩
 
 instance : DecidableRel witness.Adj := inferInstanceAs (DecidableRel adj)
 
