@@ -3,13 +3,13 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 mkdir -p evidence
 lake build --wfail 2>&1 | tee evidence/build.log
-lake env leanchecker JSP000463 2>&1 | tee evidence/kernel.log
+lake env leanchecker AllOrders 2>&1 | tee evidence/kernel.log
 lake env lean -DwarningAsError=true Audit.lean 2>&1 | tee evidence/axioms.log
 python3 - <<'PY'
 from pathlib import Path
 import re, json, subprocess
 names = re.findall(r'^#print axioms (\S+)', Path('Audit.lean').read_text(), re.M)
-assert len(names) == 11
+assert len(names) == 18
 log = Path('evidence/axioms.log').read_text()
 for name in names:
     m = re.search("'" + re.escape(name) + r"' depends on axioms: \[([^\]]*)\]", log)
@@ -22,14 +22,14 @@ for pkg in json.loads(Path('lake-manifest.json').read_text())['packages']:
     head = subprocess.check_output(['git', '-C', '.lake/packages/' + pkg['name'],
                                     'rev-parse', 'HEAD'], text=True).strip()
     assert head == pkg['rev'], (pkg['name'], head)
-print('All 11 target axiom audits and nine dependency revision checks passed.')
+print('All 18 target axiom audits and nine dependency revision checks passed.')
 PY
-printf 'import JSP000463\nexample : (1 : Nat) = 0 := by decide\n' > Negative.lean
+printf 'import AllOrders\nexample : (1 : Nat) = 0 := by decide\n' > Negative.lean
 trap 'rm -f Negative.lean' EXIT
 if lake env lean Negative.lean > evidence/negative-control.log 2>&1; then
   echo 'ERROR: invalid arithmetic accepted' >&2
   exit 1
 fi
 python3 scripts/crosscheck.py | tee evidence/crosscheck.json
-sha256sum JSP000463.lean Audit.lean lakefile.lean lake-manifest.json lean-toolchain \
+sha256sum JSP000463.lean AllOrders.lean Audit.lean lakefile.lean lake-manifest.json lean-toolchain \
   scripts/verify.sh scripts/verify_nanoda.sh scripts/crosscheck.py > evidence/SHA256SUMS

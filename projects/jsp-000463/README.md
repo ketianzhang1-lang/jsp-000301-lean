@@ -15,6 +15,12 @@ It does not prove a matching upper bound, a limit, or an all-order asymptotic.
 The universal finite-field theorem takes a field as input; this package does
 not separately construct a field for every prime-power cardinality.
 
+The `AllOrders.lean` supplement proves that for **every n ≥ 8**, an n-vertex
+graph avoiding both cycles exists with `n³ < 512 e²`. Consequently
+`n³ < 512 exC3C4(n)²`. This is a uniform lower bound
+`exC3C4(n) > n^(3/2)/(16 sqrt(2))`, with a constant eight times smaller
+than the conjectured sharp constant. It does not prove the conjectured limit.
+
 ## Proof and original-statement correspondence
 
 The vertices are a disjoint union of two copies of K×K. The first contains
@@ -31,6 +37,11 @@ defined by y=ax+b, and only joins different sides.
 5. A graph isomorphism transports the construction to `Fin (2q²)`.
 6. `exC3C4` is the finite supremum of actual edge counts among all graphs on
    `Fin n` avoiding both cycles; the constructed graph belongs to that family.
+7. Padding by isolated vertices preserves the edge count and forbidden cycles.
+   A general lemma covers any forbidden graph without isolated vertices.
+8. For n ≥ 8, set k = floor(sqrt(floor(n/8))). Bertrand's postulate supplies
+   a prime k < p ≤ 2k, so 2p² ≤ n < 8p². Pad the field graph to n vertices;
+   its p³ edges satisfy n³ < 512(p³)². This also proves monotonicity of exC3C4.
 
 The forbidden configurations are Mathlib's `cycleGraph 3` and `cycleGraph 4`
 with `SimpleGraph.Free`. They exclude ordinary subgraph copies, not just
@@ -40,6 +51,9 @@ conditions in their conclusions. The definition of `exC3C4` imposes both.
 ## Attribution and prior work
 
 The mathematics is classical finite geometry and is not claimed as a discovery.
+The all-order supplement uses Mathlib's proved Bertrand theorem
+`Nat.exists_prime_lt_and_le_two_mul`; credit for that library formalization
+belongs to Patrick Stevens, Bolton Bailey and the Mathlib contributors.
 For historical context and the original extremal problem, see Zoltán Füredi and
 Miklós Simonovits, *The history of degenerate (bipartite) extremal graph problems*,
 [arXiv:1306.5167v2](https://arxiv.org/html/1306.5167v2), §§3.1 and 4.8.
@@ -72,13 +86,13 @@ Mathlib: `5ed2965256430c3649e86755f9576b54eca72435` (tag v4.34.0).
 All nine dependency revisions are locked by `lake-manifest.json`.
 
 ```bash
-lake exe cache get Mathlib.Combinatorics.SimpleGraph.DegreeSum Mathlib.Combinatorics.SimpleGraph.CycleGraph Mathlib.Combinatorics.SimpleGraph.Extremal.Basic Mathlib.Data.ZMod.Basic Mathlib.Data.Nat.Prime.Infinite Mathlib.Tactic
+lake exe cache get Mathlib.Combinatorics.SimpleGraph.DegreeSum Mathlib.Combinatorics.SimpleGraph.CycleGraph Mathlib.Combinatorics.SimpleGraph.Extremal.Basic Mathlib.Data.ZMod.Basic Mathlib.Data.Nat.Prime.Infinite Mathlib.NumberTheory.Bertrand Mathlib.Data.Nat.Sqrt Mathlib.Tactic
 bash scripts/verify.sh
 bash scripts/verify_nanoda.sh
 ```
 
 The scripts compile with warnings treated as errors, replay the module through
-Lean's bundled checker, audit eleven declarations, check dependency pins, reject
+Lean's bundled checker, audit eighteen declarations, check dependency pins, reject
 a false arithmetic statement, and independently inspect small prime instances.
 A composite-modulus negative control confirms that the field hypothesis matters.
 NaNoda independently checks the exported target dependency closures and rejects

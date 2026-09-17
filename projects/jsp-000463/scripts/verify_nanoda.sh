@@ -22,9 +22,10 @@ cp lean-toolchain "$work/exporter/lean-toolchain"
 (cd "$work/exporter" && lake build)
 (cd "$work/checker" && cargo build --release --locked)
 # Export each named target and its entire dependency closure.
-lake env "$work/exporter/.lake/build/bin/lean4export" JSP000463 -- \
+lake env "$work/exporter/.lake/build/bin/lean4export" AllOrders -- \
   JSP000463.finite_field_construction JSP000463.finite_field_lower_bound \
   JSP000463.prime_lower_bound JSP000463.unbounded_graphs \
+  JSP000463.exC3C4_monotone JSP000463.all_order_graphs JSP000463.all_order_lower_bound \
   > evidence/export.ndjson
 python3 - <<'PY'
 import json
@@ -38,7 +39,8 @@ config = {
     "string_extension": True,
     "pp_declars": ["JSP000463.incidence", "JSP000463.exC3C4",
                    "JSP000463.finite_field_construction", "JSP000463.prime_lower_bound",
-                   "JSP000463.unbounded_graphs"],
+                   "JSP000463.unbounded_graphs", "JSP000463.all_order_graphs",
+                   "JSP000463.all_order_lower_bound"],
     "pp_output_path": "evidence/nanoda-statements.txt",
     "pp_to_stdout": False,
     "print_success_message": True,
