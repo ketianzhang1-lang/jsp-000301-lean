@@ -1,7 +1,7 @@
-name: Complete Catlin graph counterexample
+name: Sharp Catlin graph counterexample
 on:
   push:
-    branches: [catlin-complete-kz]
+    branches: [catlin-sharp-kz]
     paths: [projects/catlin-research/**, .github/workflows/catlin-complete.yml]
   workflow_dispatch:
 permissions:
@@ -44,6 +44,6 @@ jobs:
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
-          name: catlin-complete-evidence
+          name: catlin-sharp-evidence
           path: projects/catlin-research/evidence
           if-no-files-found: warn

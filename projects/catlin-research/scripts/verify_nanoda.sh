@@ -19,8 +19,8 @@ pin https://github.com/ammkrn/nanoda_lib.git 4c544ed4099c8227f07d5de77ad1e69fb07
 cp lean-toolchain "$work/exporter/lean-toolchain"
 (cd "$work/exporter" && lake build)
 (cd "$work/checker" && cargo build --release --locked)
-lake env "$work/exporter/.lake/build/bin/lean4export" Catlin -- \
-  CatlinComplete.profile_certificate CatlinComplete.budget_ge_eight CatlinComplete.length_ge_three CatlinComplete.demand_le_inside CatlinComplete.subdivision_budget_bound CatlinComplete.not_seven_colorable CatlinComplete.chromaticNumber_eq_eight CatlinComplete.no_K8_subdivision CatlinComplete.catlin_counterexample > evidence/export.ndjson
+lake env "$work/exporter/.lake/build/bin/lean4export" Sharp -- \
+  CatlinComplete.profile_certificate CatlinComplete.budget_ge_eight CatlinComplete.length_ge_three CatlinComplete.demand_le_inside CatlinComplete.subdivision_budget_bound CatlinComplete.not_seven_colorable CatlinComplete.chromaticNumber_eq_eight CatlinComplete.no_K8_subdivision CatlinComplete.catlin_counterexample CatlinComplete.contains_K7_subdivision CatlinComplete.containsCliqueSubdivision_antitone CatlinComplete.sharp_catlin_counterexample > evidence/export.ndjson
 python3 - <<'PY'
 import json
 from pathlib import Path
@@ -28,7 +28,7 @@ config={
   'export_file_path':'evidence/export.ndjson','use_stdin':False,
   'permitted_axioms':['propext','Classical.choice','Quot.sound'],
   'unpermitted_axiom_hard_error':True,'nat_extension':True,'string_extension':True,
-  'pp_declars':["CatlinComplete.profile_certificate", "CatlinComplete.budget_ge_eight", "CatlinComplete.length_ge_three", "CatlinComplete.demand_le_inside", "CatlinComplete.subdivision_budget_bound", "CatlinComplete.not_seven_colorable", "CatlinComplete.chromaticNumber_eq_eight", "CatlinComplete.no_K8_subdivision", "CatlinComplete.catlin_counterexample"],
+  'pp_declars':["CatlinComplete.profile_certificate", "CatlinComplete.budget_ge_eight", "CatlinComplete.length_ge_three", "CatlinComplete.demand_le_inside", "CatlinComplete.subdivision_budget_bound", "CatlinComplete.not_seven_colorable", "CatlinComplete.chromaticNumber_eq_eight", "CatlinComplete.no_K8_subdivision", "CatlinComplete.catlin_counterexample", "CatlinComplete.contains_K7_subdivision", "CatlinComplete.containsCliqueSubdivision_antitone", "CatlinComplete.sharp_catlin_counterexample"],
   'pp_output_path':'evidence/nanoda-statements.txt','pp_to_stdout':False,'print_success_message':True}
 Path('evidence/nanoda-config.json').write_text(json.dumps(config,indent=2)+'\n')
 Path('evidence/nanoda-statements.txt').write_text('')

@@ -1,4 +1,4 @@
-import Catlin
+import Sharp
 
 #print axioms CatlinComplete.profile_certificate
 #print axioms CatlinComplete.budget_ge_eight
@@ -9,3 +9,7 @@ import Catlin
 #print axioms CatlinComplete.chromaticNumber_eq_eight
 #print axioms CatlinComplete.no_K8_subdivision
 #print axioms CatlinComplete.catlin_counterexample
+
+#print axioms CatlinComplete.contains_K7_subdivision
+#print axioms CatlinComplete.containsCliqueSubdivision_antitone
+#print axioms CatlinComplete.sharp_catlin_counterexample

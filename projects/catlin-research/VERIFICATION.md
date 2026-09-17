@@ -1,41 +1,38 @@
-# Verification
+# Verification of the sharp Catlin classification
 
-## Local checks completed
+## Local evidence
 
-All six proof modules compiled with Lean 4.34.0, with warnings promoted to
-errors. All nine target axiom audits passed, listing only `propext`,
-`Classical.choice`, and `Quot.sound`. The final endpoint is
-`CatlinComplete.catlin_counterexample`. The local transcripts are preserved
-in `evidence/local-build.log` and `evidence/local-axioms.log`.
+The new `Sharp.lean` module compiles under Lean 4.34.0 with warnings treated as
+errors. Its three audited endpoints use only `propext`, `Classical.choice`, and
+`Quot.sound`. The preceding six proof modules have existing local build evidence.
+The expanded Audit.lean checks twelve endpoints, including the exact
+classification. Local work uses the previously available Mathlib cache and the
+existing executable-path compatibility shim; it is not a fresh dependency build.
 
-No unfinished proof placeholders, custom axioms or `native_decide` are used.
-The finite profile check uses ordinary kernel reduction. Source-level checks
-and compiler acceptance are separate from semantic review of the statements.
+## Clean reproduction
 
-The local environment used existing cached dependencies and a process-path
-compatibility shim needed to launch the compiler in this environment. The
-shim redirects executable-path lookup to `/proc/self/exe`; it does not modify
-the proof checker. The local Mathlib cache does not retain a usable Git HEAD,
-so exact dependency revisions are not inferred from that cache. The cloud
-workflow checks actual dependency Git revisions against the committed manifest.
-
-## Reproduction and cloud verification
-
-With the pinned toolchain installed, run from this directory:
+Run with the committed toolchain and manifest:
 
     lake exe cache get
     bash scripts/verify.sh
     bash scripts/verify_nanoda.sh
 
-The manifest pins Mathlib to `5ed2965256430c3649e86755f9576b54eca72435`.
-The workflow uses pinned action revisions. The first script builds, replays
-all six modules with bundled `leanchecker`, audits nine roots, checks every
-dependency revision, and requires rejection of a false-arithmetic control.
-The second exports the nine roots and checks their transitive closures using
-pinned lean4export and NaNoda revisions, with a strict axiom allowlist.
+The Lake library explicitly registers Certificate, GraphCore, Profile,
+Subdivision, Colouring, Catlin, and Sharp. This repairs the earlier cloud run's
+missing local-module dependency configuration. No proof premise or checking gate
+was weakened.
 
-A cloud result is not yet asserted in this revision. A later receipt will
-record the actual tested commit, run, checker result and artifact metadata.
-Artifacts have finite retention. Contributor-run checks are not independent
-human review or organizer certification, even when the checker implementation
-is independent of Lean.
+The first verification script builds the entire library with --wfail, replays
+all seven proof modules with bundled leanchecker, checks twelve axiom roots,
+checks the actual dependency commits against the manifest, and requires rejection
+of a false-arithmetic control. The second exports all twelve roots and checks
+their transitive closures using pinned lean4export and NaNoda revisions with
+strict axiom allowlists. Its checked statements and hashes are archived.
+
+The manifest pins Mathlib to 5ed2965256430c3649e86755f9576b54eca72435.
+The automated workflow runs on the catlin-sharp-kz branch. A cloud success is
+not asserted in this revision: a separate receipt must record the actual tested
+commit, run, check results and artifacts after completion.
+
+Contributor-run checks, including a second kernel implementation, do not provide
+independent human semantic review, organizer approval, or an award decision.

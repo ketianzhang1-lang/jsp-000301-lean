@@ -1,31 +1,23 @@
-# Complete formal proof of the known Catlin counterexample
+# Catlin graph: exact chromatic and subdivision numbers
 
-The endpoint `CatlinComplete.catlin_counterexample` proves that the explicit
-15-vertex graph C5[K3] has chromatic number exactly 8 and has no subdivision
-of K8. The paths, their simplicity, disjoint interiors, and avoidance of
-branch vertices are expressed using actual Mathlib graph walks.
+For the explicit 15-vertex graph C5[K3], `CatlinComplete.sharp_catlin_counterexample`
+proves that the Mathlib chromatic number is 8 and that a K_r subdivision exists
+if and only if r <= 7, for every natural r.
 
-This completes the two graph-theoretic bridges absent from the earlier
-finite-certificate checkpoint at commit
-`96ca7edd443f661da2b5763bc1a5834533968c21`.
+The subdivision model uses actual simple graph paths for all branch pairs,
+requires their interiors to be pairwise disjoint, and excludes every branch
+vertex from every interior. No graph-theoretic conclusion is assumed.
 
-**Scope:** this is a complete formal proof of the known finite Catlin
-counterexample to Hajos's conjecture. It is only a related, scoped component
-for JSP-000585 / Erdos 717. It does not prove the original uniform asymptotic
-bound over all finite graphs. Mathematical credit remains with Catlin;
-no new mathematics or worldwide first-formalization priority is claimed.
-The extension was written with OpenAI ChatGPT assistance.
+- [SHARP_PROOF.md](SHARP_PROOF.md): new K7 witness and the exact classification.
+- [PROOF.md](PROOF.md): the existing colouring and K8 obstruction arguments.
+- [PROVENANCE.md](PROVENANCE.md): original code lineage and attribution.
+- [VERIFICATION.md](VERIFICATION.md): executed checks and reproduction instructions.
 
-## Proof modules
+The mathematical counterexample is classical and credited to Catlin. This
+formalization and its supplement were prepared with OpenAI ChatGPT assistance.
+The new supplement adds the attainable lower boundary and restriction theorem;
+no novelty or first-formalization priority is claimed.
 
-- `Certificate.lean`: inherited exact finite graph and arithmetic certificates.
-- `GraphCore.lean`: the graph, genuine walk interiors, and path-length bounds.
-- `Profile.lean`: five-cluster partition, a finite certificate, and its connection to arbitrary branch sets.
-- `Subdivision.lean`: faithful subdivision definition and the disjoint-interior counting bound.
-- `Colouring.lean`: proper 8-colouring, impossibility of 7 colours, and exact chromatic number.
-- `Catlin.lean`: the final contradiction and combined endpoint.
-- `Audit.lean`: nine target axiom audits.
-
-See `PROOF.md` for the mathematical argument and statement boundary,
-`VERIFICATION.md` for actual checks and their limits, and `scripts/` for
-reproduction. Historical finite-enumeration support remains in `verify.py`.
+This is a scoped finite contribution related to JSP-000585 / Erdos 717, not a
+solution of its asymptotic bound for arbitrary finite graphs. Eligibility and
+any reward require organizer assessment.
