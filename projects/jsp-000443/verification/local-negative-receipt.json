@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/workspace/scratch/af3a03be611e/toolchains/lean-4.34.0-linux/bin/lake",
+    "script",
+    "run",
+    "compile",
+    "/workspace/scratch/298c16ef7751/dev443/Negative.lean",
+    "Negative",
+    "/workspace/scratch/298c16ef7751/proof443/projects/jsp-000443/.lake/build/lib/lean/Negative.olean"
+  ],
+  "exit": 1,
+  "seconds": 9.408294319997367
+}

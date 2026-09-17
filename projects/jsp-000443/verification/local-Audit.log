@@ -1,0 +1,23 @@
+'JSP000443.hasC4_iff_copy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000443.hasStar_iff_copy' depends on axioms: [propext, Quot.sound]
+'JSP000443.hasStar_iff_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000443.rooted_degree_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000443.ramsey_bound_sqrt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000443.ramsey_bound_even_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000443.polarity20_noC4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000443.polarity20_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000443.c4StarRamsey_sixteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+def JSP000443.HasC4.{u_1} : {V : Type u_1} → SimpleGraph V → Prop :=
+fun {V} G => ∃ a b c d, a ≠ c ∧ b ≠ d ∧ G.Adj a b ∧ G.Adj b c ∧ G.Adj c d ∧ G.Adj d a
+def JSP000443.HasStar.{u_1} : {V : Type u_1} → SimpleGraph V → ℕ → Prop :=
+fun {V} G n => ∃ v leaves, ∀ (i : Fin n), G.Adj v (leaves i)
+theorem JSP000443.c4StarRamsey_sixteen : JSP000443.c4StarRamsey 16 = 21 :=
+have hl :=
+  JSP000443.c4StarRamsey_lower fun h =>
+    Or.elim (h JSP000443.polarity20) JSP000443.polarity20_noC4 JSP000443.polarity20_noStar_compl;
+have hu :=
+  JSP000443.c4StarRamsey_le_of_bound
+    (JSP000443.ramsey_bound_even_square 4
+      (Decidable.byContradiction fun a => JSP000443.c4StarRamsey_sixteen._proof_1_1 a)
+      (of_decide_eq_true (id (Eq.refl true))));
+Decidable.byContradiction fun a => JSP000443.c4StarRamsey_sixteen._proof_1_2 hl hu a

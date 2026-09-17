@@ -1,0 +1,28 @@
+[
+  {
+    "command": [
+      "/workspace/scratch/af3a03be611e/toolchains/lean-4.34.0-linux/bin/lake",
+      "script",
+      "run",
+      "compile",
+      "/workspace/scratch/298c16ef7751/proof443/projects/jsp-000443/JSP000443.lean",
+      "JSP000443",
+      "/workspace/scratch/298c16ef7751/proof443/projects/jsp-000443/.lake/build/lib/lean/JSP000443.olean"
+    ],
+    "exit": 0,
+    "seconds": 22.225171799000236
+  },
+  {
+    "command": [
+      "/workspace/scratch/af3a03be611e/toolchains/lean-4.34.0-linux/bin/lake",
+      "script",
+      "run",
+      "compile",
+      "/workspace/scratch/298c16ef7751/proof443/projects/jsp-000443/Audit.lean",
+      "Audit",
+      "/workspace/scratch/298c16ef7751/proof443/projects/jsp-000443/.lake/build/lib/lean/Audit.olean"
+    ],
+    "exit": 0,
+    "seconds": 11.88550587699865
+  }
+]

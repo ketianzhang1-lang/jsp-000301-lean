@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/workspace/scratch/af3a03be611e/toolchains/lean-4.34.0-linux/bin/leanchecker",
+    "--verbose",
+    "JSP000443"
+  ],
+  "exit": 0,
+  "seconds": 10.213597320998815
+}

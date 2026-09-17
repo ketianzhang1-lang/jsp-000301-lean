@@ -1,0 +1,3 @@
+/workspace/scratch/298c16ef7751/dev443/Negative.lean:2:30: error: Tactic `decide` proved that the proposition
+  1 = 0
+is false
