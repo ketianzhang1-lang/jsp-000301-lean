@@ -33,6 +33,8 @@ The bootstrap downloads the unchanged upstream source at an immutable revision a
 
 See [STATEMENT.md](STATEMENT.md) for scope and proof, and [PROVENANCE.md](PROVENANCE.md) for sources and credits. Contributor-run verification is supporting evidence; it is not organizer approval or a payment entitlement. The independent checker scripts validate the actual exported dependency closures, with a hard error for axioms outside `propext`, `Classical.choice`, and `Quot.sound`.
 
+See [VERIFICATION.md](VERIFICATION.md) for completed checks and [RECOMMENDATION_DRAFT.md](RECOMMENDATION_DRAFT.md) for the prepared intake text.
+
 ## Prize status
 
 No matching entry was located in the prize's 1,022-record catalog at `f4e7173d89dfe91022a185427d63452c8ffbf6ae`. No JSP identifier is assigned here. A problem recommendation and an assessment of this incremental contribution would be needed before any prize claim could be considered. The public rules do not establish that this supplement is prize-eligible.

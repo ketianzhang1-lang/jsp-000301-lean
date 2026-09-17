@@ -1,0 +1,8 @@
+'Erdos16.not_erdos_16' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos16Density.progression_count_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos16Density.no_progression_of_density_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos16Density.no_progression_insert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos16Density.upstream_set_eq_insert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos16Density.no_decomposition_positive_exponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos16Density.no_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos16Reference.erdos_16' depends on axioms: [propext, Classical.choice, Quot.sound]

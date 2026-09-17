@@ -1,0 +1,7 @@
+✔ [8365/8418] Built Mathlib.Probability.Kernel.Invariance (1.4s)
+✔ [8923/8927] Built Mathlib (3.3s)
+ℹ [8924/8927] Built Erdos16 (5.3s)
+info: Erdos16.lean:369:0: 'Erdos16.not_erdos_16' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8925/8927] Built Erdos16Density (5.1s)
+✔ [8926/8927] Built Alignment (3.9s)
+Build completed successfully (8927 jobs).

@@ -1,0 +1,79 @@
+def Erdos16Density.NaturalDensityZero (S : Set Nat) : Prop :=
+  Filter.Tendsto
+    (fun (n : Nat) =>
+    HDiv.hDiv
+      (Nat.cast
+        (Nat.count
+          (fun (x._@.Erdos16Density.2727214394._hygCtx._hyg.44 : Nat) =>
+          Membership.mem S x._@.Erdos16Density.2727214394._hygCtx._hyg.44) n)) (Nat.cast n)) Filter.atTop
+    (nhds (OfNat.ofNat 0))
+
+def Erdos16Density.Exceptional :
+  Set Nat :=
+  Set.ofPred
+    (fun (n : Nat) =>
+    And (Odd n)
+      (Not
+        (Exists
+          (fun (k : Nat) =>
+          Exists (fun (p : Nat) => And (Nat.Prime p) (Eq n (HAdd.hAdd (HPow.hPow (OfNat.ofNat 2) k) p)))))))
+
+def Erdos16Reference.DensityZero (S : Set Nat) : Prop :=
+  Filter.Tendsto
+    (fun (n : Nat) =>
+    HDiv.hDiv
+      (Nat.cast
+        (Nat.count
+          (fun (x._@.Erdos16Density.2727214394._hygCtx._hyg.44 : Nat) =>
+          Membership.mem S x._@.Erdos16Density.2727214394._hygCtx._hyg.44) n)) (Nat.cast n)) Filter.atTop
+    (nhds (OfNat.ofNat 0))
+
+def Erdos16Reference.ExceptionalSet :
+  Set Nat :=
+  Set.ofPred
+    (fun (n : Nat) =>
+    And (Odd n)
+      (Not
+        (Exists
+          (fun (k : Nat) =>
+          Exists (fun (p : Nat) => And (Nat.Prime p) (Eq n (HAdd.hAdd (HPow.hPow (OfNat.ofNat 2) k) p)))))))
+
+theorem Erdos16Density.no_decomposition_positive_exponent :
+  Not
+    (Exists
+      (fun (m : Nat) =>
+      Exists
+        (fun (a : Nat) =>
+        And (LT.lt (OfNat.ofNat 0) m)
+          (Exists
+            (fun (W : Set Nat) =>
+            And (Erdos16Density.NaturalDensityZero W)
+              (Eq Erdos16.U
+                (Union.union
+                  (Set.ofPred (fun (x : Nat) => Exists (fun (k : Nat) => Eq x (HAdd.hAdd (HMul.hMul m k) a))))
+                  W))))))) :=
+  _
+
+theorem Erdos16Reference.erdos_16 :
+  Not
+    (Exists
+      (fun (A : Set Nat) =>
+      Exists
+        (fun (B : Set Nat) =>
+        And (Eq Erdos16Reference.ExceptionalSet (Union.union A B))
+          (And
+            (Exists
+              (fun (a : Nat) =>
+              Exists
+                (fun (d : Nat) =>
+                And (GT.gt d (OfNat.ofNat 0))
+                  (Eq A (Set.ofPred (fun (x : Nat) => Exists (fun (m : Nat) => Eq x (HAdd.hAdd a (HMul.hMul m d)))))))))
+            (Erdos16Reference.DensityZero B))))) :=
+  _
+
+axiom Quot.sound.{u} {α : Sort u} {r : α → α → Prop} {a b : α} : r a b → Eq (Quot.mk r a) (Quot.mk r b)
+
+axiom propext {a b : Prop} : Iff a b → Eq a b
+
+axiom Classical.choice.{u} {α : Sort u} : Nonempty α → α
+
