@@ -53,6 +53,15 @@ No density theorem is postulated as an axiom or left as a hypothesis.
 containment. A coloring is represented by `G` and its actual graph complement.
 [STATEMENT.md](STATEMENT.md) explains the alignment and coverage.
 
+## Finite-color supplement
+
+[Multicolor.lean](Multicolor.lean) now extends the Ramsey integration to every
+finite family of trees: `R(T_1,...,T_r) ≤ 2 + sum_i (|T_i|-2)`.
+It proves both a graph-cover statement and a direct injective monochromatic
+embedding for an actual edge coloring. See [MULTICOLOR.md](MULTICOLOR.md) for
+the exact scope, proof, and attribution. The mathematical implication is known;
+this addition contributes its formal integration and verification.
+
 ## Reproduce
 
 Use Lean `leanprover/lean4:v4.34.0` and the committed `lake-manifest.json`.
@@ -65,9 +74,9 @@ bash scripts/verify_nanoda.sh
 ```
 
 The first script builds with warnings treated as errors, replays the module
-with the bundled Lean checker, checks five axiom closures and every actual
+with the bundled Lean checker, checks nine axiom closures and every actual
 dependency revision, and requires a false arithmetic statement to be rejected.
-The second exports all five targets with their dependencies and checks them
+The second exports all nine targets with their dependencies and checks them
 with the pinned NaNoda implementation, using a hard-error axiom allowlist of
 `propext`, `Classical.choice`, and `Quot.sound`.
 

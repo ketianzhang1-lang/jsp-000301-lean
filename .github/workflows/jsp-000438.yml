@@ -1,7 +1,7 @@
 name: JSP-000438 Full tree Ramsey bound
 on:
   push:
-    branches: [jsp-000438-tree-ramsey]
+    branches: [jsp-000438-tree-ramsey, jsp-000438-multicolor]
     paths: [projects/jsp-000438/**, .github/workflows/jsp-000438.yml]
   workflow_dispatch:
 permissions:
@@ -28,7 +28,7 @@ jobs:
           test -s lake-manifest.json
           lake exe cache get
           git diff --exit-code -- lake-manifest.json
-      - name: Build, replay, five axiom audits and negative control
+      - name: Build, replay, nine axiom audits and negative control
         run: bash scripts/verify.sh
       - name: Independent strict-allowlist NaNoda verification
         run: |
