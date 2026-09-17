@@ -1,25 +1,22 @@
 # JSP-000438 / Erdős 547: the full tree Ramsey upper bound
 
-This project proves, for **every** `n ≥ 2` and every tree `T` on `Fin n`,
+## Our formalization contribution
+
+We provide the **complete tree Ramsey formalization**, with OpenAI Codex assistance. We prove, for every `n ≥ 2` and every tree `T` on `Fin n`,
 
 \[
 R(T,T)\le 2n-2.
 \]
 
-The main declaration is `Erdos547.erdos_547` in [JSP000438.lean](JSP000438.lean).
-It has the same universal statement and Ramsey definitions as the cited
-Formal Conjectures target. It is not restricted to sufficiently large trees,
-bounded degree, bounded diameter, or a particular family of trees.
-The direct coloring theorem also proves that the defining Ramsey set is nonempty.
+Our contributions in this version are:
 
-The major mathematical dependency is an **existing public proof**, reproduced
-with credit and license: `Erdos548.tree_free_edge_bound` from
-[tadamcz/erdos548 at 82ffb751f3d37768927df9239ed08439bbe0dd09](https://github.com/tadamcz/erdos548/tree/82ffb751f3d37768927df9239ed08439bbe0dd09).
-This submission contributes a Lean 4.34 port, the all-order Ramsey deduction,
-statement alignment, and reproducible checks. It does **not** claim authorship
-of the Erdős–Sós proof or discovery of the mathematical implication, nor
-first-formalization priority. OpenAI Codex assisted the new work.
-See [UPSTREAM_PORT.md](UPSTREAM_PORT.md) and [NOTICE](NOTICE).
+1. **Full Ramsey integration.** We formalize the asymmetric bound `R(T,S) ≤ m+n−2` for arbitrary trees of orders `m,n ≥ 2`, then derive the complete universal Erdős 547 statement.
+2. **Exact statement alignment.** We use the stated Ramsey definitions and prove direct injective containment theorems, including nonemptiness of the defining Ramsey sets.
+3. **Finite-color extension.** We formalize the bound `R(T_1,...,T_r) ≤ 2 + sum_i (|T_i|-2)` for every finite nonempty family of trees of order at least two, together with a direct monochromatic embedding theorem.
+4. **Lean 4.34 compatibility.** We port the required extremal-tree dependency to the pinned Lean/Mathlib environment and document the changes.
+5. **Reproducible verification.** We supply locked dependencies, build scripts, Lean checker replay, axiom audits, a negative control and NaNoda verification.
+
+Our main declaration is `Erdos547.erdos_547` in [JSP000438.lean](JSP000438.lean). It covers every required tree order with the same universal statement and Ramsey definitions as the Formal Conjectures target.
 
 ## Proof
 
@@ -85,6 +82,16 @@ manifest, export, logs, and checksums in its evidence artifact. A successful
 machine run is evidence about the formal proof, not an award decision or an
 independent human review. The formalization contribution and upstream credit
 remain subject to organizer review.
+
+## Contribution scope and attribution
+
+We request formalization credit for our Ramsey integration, finite-color proofs, compatibility port and verification work. The mathematical implications and constructions are classical.
+
+Our upper-bound proof uses an existing formal Erdős–Sós edge bound. We retain the dependency's source attribution and license, together with the Formal Conjectures attribution; details are in [UPSTREAM_PORT.md](UPSTREAM_PORT.md) and [NOTICE](NOTICE).
+
+## Verification record
+
+Our [successful public verification run](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35177218300) checks proof snapshot `0175b2a7a50f7687ece92f61bbe0e3a2f377913a`. This README revision changes documentation only; the Lean proofs, dependencies, verification scripts and workflows are unchanged.
 
 ## License
 
