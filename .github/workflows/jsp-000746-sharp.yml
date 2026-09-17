@@ -1,0 +1,112 @@
+name: JSP-000746 sharp threshold
+on:
+  push:
+    branches: [jsp-000746-sharp-kz]
+    paths: ['projects/jsp-000746-sharp/**', '.github/workflows/jsp-000746-sharp.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: jsp-000746-sharp-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      LEAN_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install fixed Lean
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          "$HOME/.elan/bin/elan" toolchain install leanprover/lean4:v4.33.0
+      - name: Fixed Mathlib checkout
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _sharp/evidence
+          git init _sharp/mathlib
+          git -C _sharp/mathlib remote add origin https://github.com/leanprover-community/mathlib4.git
+          git -C _sharp/mathlib fetch --depth 1 origin db584cd6d46c92f209a44c0f1c829460d327499d
+          git -C _sharp/mathlib checkout --detach FETCH_HEAD
+          test "$(git -C _sharp/mathlib rev-parse HEAD)" = db584cd6d46c92f209a44c0f1c829460d327499d
+      - uses: actions/cache@v4
+        with:
+          path: _sharp/mathlib/.lake
+          key: jsp746-mathlib-db584cd6d46c92f209a44c0f1c829460d327499d-v1
+      - name: Fetch pinned upper-bound source and certificate
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd _sharp/mathlib
+          mkdir -p Erdos895
+          base=https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems
+          curl --fail --retry 3 -L "$base/Erdos895.lean" -o Erdos895.lean
+          echo 'f1527baff5eba895e1208d27c705487fa52a7ed647ca94935d5e9c1137e77163  Erdos895.lean' | sha256sum -c -
+          curl --fail --retry 3 -L "$base/Erdos895/Certificate.cnf" -o Erdos895/Certificate.cnf
+          curl --fail --retry 3 -L "$base/Erdos895/Certificate.lrat" -o Erdos895/Certificate.lrat
+          cp ../../projects/jsp-000746-sharp/JSP000746Sharp.lean .
+          sha256sum Erdos895.lean Erdos895/Certificate.* JSP000746Sharp.lean > ../evidence/input-sha256.txt
+          cp lake-manifest.json ../evidence/lake-manifest.json
+          lake exe cache get 2>&1 | tee ../evidence/cache.log
+          lake env lean --version | tee ../evidence/version.txt
+      - name: Compile unchanged upper bound
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd _sharp/mathlib
+          lake env lean --wfail -j1 -M6144 -o .lake/build/lib/lean/Erdos895.olean ./Erdos895.lean 2>&1 | tee ../evidence/upper-build.log
+      - name: Compile new sharpness proof
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd _sharp/mathlib
+          lake env lean --wfail -j1 -M6144 -o .lake/build/lib/lean/JSP000746Sharp.olean ./JSP000746Sharp.lean 2>&1 | tee ../evidence/sharp-build.log
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+          text=Path('../evidence/sharp-build.log').read_text()
+          reports=re.findall(r"depends on axioms: \[([^\]]*)\]",text)
+          no_axioms=text.count('does not depend on any axioms')
+          assert len(reports)+no_axioms == 7, (reports,no_axioms,text)
+          for r in reports:
+              names={x.strip() for x in r.split(',') if x.strip()}
+              assert names <= {'propext','Classical.choice','Quot.sound'}, names
+          print('All seven audited declarations use only permitted standard axioms.')
+          PY
+      - name: Kernel replay and negative control
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd _sharp/mathlib
+          lake env leanchecker --verbose Erdos895 2>&1 | tee ../evidence/upper-kernel.log
+          lake env leanchecker --verbose JSP000746Sharp 2>&1 | tee ../evidence/sharp-kernel.log
+          printf 'import JSP000746Sharp\nexample : (2 : Nat) + 2 = 5 := by decide\n' > Negative.lean
+          if lake env lean --wfail ./Negative.lean > ../evidence/negative.log 2>&1; then
+            echo 'ERROR: false arithmetic accepted'; exit 1
+          fi
+          grep -q 'false' ../evidence/negative.log
+          echo 'Negative arithmetic rejected as expected.'
+      - name: Preserve source and reports
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p _sharp/evidence
+          cp projects/jsp-000746-sharp/JSP000746Sharp.lean _sharp/evidence/
+          cp _sharp/mathlib/Erdos895.lean _sharp/evidence/ 2>/dev/null || true
+          cp _sharp/mathlib/Erdos895/Certificate.* _sharp/evidence/ 2>/dev/null || true
+          printf '%s\n' '${{ github.sha }}' > _sharp/evidence/proof-commit.txt
+          find _sharp/evidence -type f -not -name files.sha256 -print0 | sort -z | xargs -0 sha256sum > _sharp/evidence/files.sha256
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jsp-000746-sharp-evidence
+          path: _sharp/evidence
+          if-no-files-found: error
+          retention-days: 90
