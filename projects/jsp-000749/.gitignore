@@ -1,0 +1,6 @@
+.lake/
+evidence/ci/
+Negative.lean
+*.olean
+*.ilean
+*.ir

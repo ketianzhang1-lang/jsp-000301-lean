@@ -1,0 +1,60 @@
+name: JSP-000749 classical upper bound
+on:
+  push:
+    branches: [jsp-000749-property-b-upper]
+    paths:
+      - 'projects/jsp-000749/**'
+      - '.github/workflows/jsp-000749.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+        working-directory: projects/jsp-000749
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install exact compiler and locked dependency cache
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.elan/bin:$PATH"
+          elan toolchain install "$(cat lean-toolchain)"
+          sha256sum -c SOURCE_SHA256SUMS
+          lake exe cache get
+          git diff --exit-code -- lake-manifest.json
+      - name: Compile, replay, audit twelve target closures and run controls
+        run: bash scripts/verify.sh
+      - name: Independently implemented NaNoda checker
+        run: |
+          set -euo pipefail
+          bash scripts/verify_nanoda.sh 2>&1 | tee evidence/ci/nanoda-build.log
+      - name: Archive exact source and actual run status
+        if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/ci
+          git rev-parse HEAD > evidence/ci/PUBLIC_SOURCE_COMMIT
+          printf '%s\n' "$JOB_STATUS" > evidence/ci/PUBLIC_CI_JOB_STATUS
+          git diff --exit-code -- lake-manifest.json
+          tar --exclude=.lake --exclude=evidence -czf evidence/ci/ci-source.tar.gz .
+          sha256sum evidence/ci/ci-source.tar.gz > evidence/ci/CI_SOURCE_SHA256SUM
+          printf '%s\n' 'Contributor-run public CI, not organizer approval or independent human certification.' > evidence/ci/CI_SCOPE.txt
+      - name: Save verification artifact even on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp-000749-verification
+          path: projects/jsp-000749/evidence
+          if-no-files-found: error
+          retention-days: 90
