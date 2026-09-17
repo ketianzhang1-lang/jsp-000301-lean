@@ -12,6 +12,8 @@ names=re.findall(r'^#print axioms (\S+)',Path('Audit.lean').read_text(),re.M)
 assert len(names)==12
 log=Path('evidence/axioms.log').read_text()
 for name in names:
+    if "'"+name+"' does not depend on any axioms" in log:
+        continue
     m=re.search("'"+re.escape(name)+r"' depends on axioms: \[([^\]]*)\]",log)
     assert m is not None,name
     assert {x.strip() for x in m[1].split(',') if x.strip()} <= {'propext','Classical.choice','Quot.sound'},name
