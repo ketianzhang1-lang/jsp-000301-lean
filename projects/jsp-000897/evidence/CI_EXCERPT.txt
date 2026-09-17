@@ -1,0 +1,18 @@
+2026-09-17T03:34:55.4791509Z info: Erdos1079.lean:436:0: 'Erdos1079.erdos_problem_1079' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:34:55.4792799Z info: Erdos1079.lean:437:0: 'Erdos1079.erdos_1079' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:34:57.7865917Z Build completed successfully (3123 jobs).
+2026-09-17T03:35:12.2542667Z 'Erdos1079.turan_split_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:35:12.2567209Z 'Erdos1079.maximumDegree_edge_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:35:12.2577522Z 'Erdos1079.erdos_problem_1079' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:35:12.2578542Z 'Erdos1079.erdos_1079' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:35:12.2579564Z 'JSP000897.surplus_at_every_maximum' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:35:12.2580661Z 'JSP000897.resolution_with_surplus' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:35:12.2581385Z 'JSP000897.surplus_dominates' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:35:12.2581986Z 'JSP000897.strict_resolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T03:35:12.4239240Z Eight target axiom audits and all nine dependency revision checks passed.
+2026-09-17T03:35:15.4012095Z https://github.com/leanprover/lean4export.git 6cea97789dc088ea47fcea15692db85685aedac5
+2026-09-17T03:35:15.6761890Z https://github.com/ammkrn/nanoda_lib.git 4c544ed4099c8227f07d5de77ad1e69fb0740a27
+2026-09-17T03:35:22.5300028Z Build completed successfully (6 jobs).
+2026-09-17T03:35:50.6004176Z Checked 11259 declarations with no errors
+2026-09-17T03:35:52.9415552Z Artifact jsp-000897-evidence.zip successfully finalized. Artifact ID 10479034803
+2026-09-17T03:35:52.9417335Z Artifact jsp-000897-evidence has been successfully uploaded! Final size is 7995766 bytes. Artifact ID is 10479034803
