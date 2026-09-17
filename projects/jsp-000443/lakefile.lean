@@ -9,4 +9,4 @@ require mathlib from git
 
 @[default_target]
 lean_lib JSP000443 where
-  roots := #[`JSP000443]
+  roots := #[`JSP000443, `PolarityFamily]

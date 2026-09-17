@@ -4,7 +4,7 @@
 or its unbounded-deficit question, and does not establish award eligibility.**
 
 It independently formalizes elementary, known graph-theoretic bounds and a
-known finite special value. Mathematical novelty and first-formalization
+known infinite family of exact values. Mathematical novelty and first-formalization
 priority are not claimed.
 
 ## Checked mathematical targets
@@ -15,7 +15,8 @@ edge coloring contains a red four-cycle or a blue star with **n leaves**
 
 - For every natural n, `R(C4,K1,n) <= n + floor(sqrt(n)) + 2`.
 - For every positive even k, `R(C4,K1,k^2) <= k^2 + k + 1`.
-- `R(C4,K1,16) = 21`.
+- For every integer r > 0, with q = 2^r, `R(C4,K1,q^2) = q^2 + q + 1`.
+- In particular: `R(C4,K1,16) = 21`, `R(C4,K1,64) = 73`, and `R(C4,K1,256) = 273`.
 
 The formal `c4StarRamsey` is the least N satisfying that property, using
 `Nat.find` with its existence supplied by the proved universal upper bound.
@@ -40,6 +41,10 @@ comes from orthogonality of projective points over GF(4), deleting one
 absolute point. The Lean kernel checks its literal adjacency rows,
 symmetry, absence of loops, all codegrees, and degree bound. The Python
 generator is reproducibility support, not a trusted proof oracle.
+
+The module `PolarityFamily.lean` proves a uniform algebraic construction
+over an arbitrary finite field, replacing reliance on isolated adjacency
+tables for the infinite family. See [FAMILY_PROOF.md](FAMILY_PROOF.md).
 
 ## Attribution and scope
 
@@ -78,9 +83,9 @@ bash scripts/verify_nanoda.sh
 ```
 
 The first script builds with warnings as errors, replays the main module
-with Lean's bundled checker, audits nine declarations, checks dependency
+with Lean's bundled checker, audits sixteen declarations, checks dependency
 revisions, rejects a false-arithmetic negative control, and reproduces
-the finite adjacency rows. The second exports five endpoint dependency
+the finite adjacency rows. The second exports six endpoint dependency
 closures and checks them with pinned NaNoda under a strict allowlist of
 `propext`, `Classical.choice`, and `Quot.sound`.
 

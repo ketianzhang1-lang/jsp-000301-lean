@@ -1,4 +1,14 @@
-# Verification record — 2026-09-17
+# Historical verification record for the initial n=16 package — 2026-09-17
+
+This file preserves the initial local verification report. Its statements about
+pending publication and cloud checks describe that earlier stage, not current
+status. The initial proof was subsequently published at commit
+`0a78950267f4b292414624f8cd8e15c074c14850` and passed
+[public run 35172429626](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35172429626).
+The infinite finite-field family is a later extension. Its separate record is
+[FAMILY_VERIFICATION.md](FAMILY_VERIFICATION.md); the original nine-target report
+below does not verify that extension.
+
 
 The exact source in this package passed the following local checks.
 

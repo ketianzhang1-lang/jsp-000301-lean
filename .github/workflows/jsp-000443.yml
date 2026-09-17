@@ -1,7 +1,7 @@
 name: JSP-000443 C4-star Ramsey bounds
 on:
   push:
-    branches: [jsp-000443-ramsey-evidence]
+    branches: [jsp-000443-ramsey-evidence, jsp-000443-finite-field]
     paths: [projects/jsp-000443/**, .github/workflows/jsp-000443.yml]
   workflow_dispatch:
 permissions:
@@ -9,7 +9,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 25
     defaults:
       run:
         shell: bash
