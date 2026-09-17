@@ -1,0 +1,12 @@
+Certificate
+'CatlinCertificates.eight_colours' does not depend on any axioms
+'CatlinCertificates.proper_eight_colouring' does not depend on any axioms
+'CatlinCertificates.no_independent_triple' does not depend on any axioms
+'CatlinCertificates.finite_budget_certificate' does not depend on any axioms
+'CatlinCertificates.budget_bound' does not depend on any axioms
+'CatlinCertificates.no_feasible_resource_tuple' does not depend on any axioms
+GraphCore
+Profile
+Subdivision
+Colouring
+Catlin

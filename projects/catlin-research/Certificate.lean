@@ -5,8 +5,8 @@ Finite certificates for the known Catlin graph C5[K3].
 
 Scope: these declarations verify the finite arithmetic obstruction, a proper
 8-colouring, and the absence of an independent triple. The graph-theoretic
-bridge from a subdivision to the resource inequalities is explained in
-PROOF.md, but is NOT formalized here. This file is NOT a complete Lean proof
+bridge for a simpler sufficient obstruction is now formalized in
+GraphCore.lean, Profile.lean and Subdivision.lean. This file is NOT a complete Lean proof
 of Erdos 717 / JSP-000585, whose conclusion is asymptotic.
 
 The underlying counterexample is credited to Catlin. No mathematical novelty,

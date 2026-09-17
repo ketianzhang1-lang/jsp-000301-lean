@@ -1,134 +1,101 @@
-# Catlin's graph: exact finite certificates and a complete human-readable argument
+# Proof and statement fidelity
 
-## Scope and status
+## The explicit graph
 
-This package concerns the known counterexample C5[K3] to the original Hajos
-conjecture. It is **not a solution or complete Lean formalization of
-JSP-000585 / Erdos Problem 717**. That problem asks for a uniform asymptotic
-upper bound relating chromatic number and clique-subdivision number over all
-finite graphs. A single Catlin graph does not prove that theorem.
+The vertices are Fin 15, partitioned into five clusters of size three by
+`cluster(v) = floor(v/3)`. Distinct vertices are adjacent precisely when
+their clusters are equal or consecutive modulo five. This is C5[K3].
 
-The counterexample is attributed to Catlin in the literature. This package
-makes no discovery, priority, prize eligibility, official verification, award,
-or payment claim. It is research material, not a prize submission.
+## Chromatic number
 
-`Certificate.lean` contains finite arithmetic and graph-fact certificates.
-It does **not** contain the graph-theoretic path-counting bridge below, a
-formal chromatic-number theorem, or the asymptotic theorem of Fox, Lee and
-Sudakov. Lean compilation, if successful, verifies only its actual theorem
-statements. See the separate CI transcript for the compilation result.
+Every independent set has at most two vertices. The inherited finite theorem
+`no_independent_triple` checks every triple. For any hypothetical proper
+7-colouring, `colour_fiber_card_le_two` applies that theorem to each colour
+class. Summing the seven fibre cardinalities gives 15 <= 14, a contradiction.
 
-## Graph
+The eight colour classes
 
-Let the vertex set be {0,...,14}. Partition it into five clusters
-V_i={3i,3i+1,3i+2}, indexed modulo 5. Join distinct vertices when their clusters
-are equal or consecutive on the five-cycle.
+{0,6}, {1,7}, {2,9}, {3,10}, {4,11}, {5,12}, {8,13}, {14}
 
-There are 15 within-cluster edges and 45 between-cluster edges, hence 60 edges.
+are verified to be proper. `chromaticNumber_eq_eight` therefore states exact
+equality with 8 using Mathlib's `SimpleGraph.chromaticNumber`, not a separate
+numerical surrogate.
 
-## Chromatic number: exactly 8
+## Faithful subdivision model
 
-An independent set contains at most one vertex per cluster, since each cluster
-is a clique. Its occupied clusters form an independent set in C5. Three
-clusters cannot be mutually nonconsecutive on a five-cycle: separating three
-chosen clusters would require at least three unchosen clusters, whereas only
-two remain. Thus every independent set has size at most two.
+For a branch set B, `edgeSet B` contains every pair (u,v) in B x B with u < v.
+Thus every unordered pair of distinct branch vertices occurs exactly once.
+`Subdivision B` supplies a Mathlib `graph.Walk u v` for each of these pairs,
+requires each walk to be a simple path, requires its internal vertices to
+avoid B, and requires interiors of distinct paths to be disjoint.
+`ContainsCliqueSubdivision r` asserts existence of such a B of cardinality r.
 
-Every proper colour class therefore has at most two vertices. Covering the 15
-vertices requires at least ceiling(15/2)=8 colours.
+This is a direct path definition of a complete-graph subdivision. In
+particular, neither the finite arithmetic obstruction nor the absence of a
+subdivision is assumed in the model.
 
-An explicit proper 8-colouring has the following colour classes:
+## Lower bound on required internal vertices
 
-{0,6}, {1,7}, {2,9}, {3,10}, {4,11}, {5,12}, {8,13}, {14}.
+For u < v in B, assign demand zero to an adjacent pair. For a nonadjacent
+pair, assign demand one if some vertex outside B is adjacent to both u and v,
+and demand two otherwise. Assign zero to other ordered pairs.
 
-Every pair listed lies in nonconsecutive clusters, so these are independent
-sets. Therefore the chromatic number is exactly 8.
+`GraphCore.lean` proves, by decomposing genuine walks, that a path between
+nonadjacent distinct endpoints has length at least two. If there is no
+available common neighbour, its length is at least three. A simple path of
+length L has exactly L-1 internal vertices. Hence each demand is no larger
+than the corresponding interior cardinality.
 
-The Lean file separately checks the displayed colouring and every triple of
-vertices. The elementary passage from the independent-set bound to the
-chromatic lower bound is written here, not formalized in that file.
+Let c_i be the number of branch vertices in cluster i. Each c_i is at most
+three, and their sum is the cardinality of B. For nonadjacent clusters i,j,
+every common neighbour is in the middle cluster m = 3(i+j) mod 5. If c_m=3,
+that whole middle cluster is occupied by branch vertices, so each such pair
+has demand at least two. Otherwise using a lower bound of one is sufficient.
 
-## No subdivision of K8
+Define the cluster weight w(i,j) to be zero except for i<j in nonadjacent
+clusters, where it is two if c_m=3 and one otherwise. The finite theorem
+`profile_certificate` checks all 4^5 cluster-count functions and proves
 
-Suppose a K8 subdivision existed. Its eight branch vertices are distinct, and
-the paths representing its 28 edges have pairwise disjoint internal vertices;
-no branch vertex is an internal vertex. Let b_i be the number of branch
-vertices in cluster V_i. Then 0<=b_i<=3 and sum_i b_i=8. Only 15-8=7 vertices
-are available as internal vertices.
+    sum_i c_i = 8  ==>  sum_i sum_j c_i*c_j*w(i,j) >= 8.
 
-Clusters i and i+2 are nonadjacent. There are b_i*b_(i+2) pairs of branch
-vertices of these types. Each representing path needs at least one internal
-vertex. A path with exactly one internal vertex requires that vertex to be a
-common neighbour of its two endpoints. In this graph such a common neighbour
-must belong to cluster i+1. Only 3-b_(i+1) nonbranch vertices in that cluster
-are available. The internal-disjointness requirement means at most that many
-of the b_i*b_(i+2) paths can have only one internal vertex.
+This uses `decide +kernel`, not native evaluation or an external solver.
+`regroup_twice`, `full_cluster`, and `weight_le_demand` connect that finite
+certificate to an arbitrary branch set and prove `budget_ge_eight`.
+The proof does not assume branch vertices occupy initial segments of clusters.
 
-Consequently, paths of this type require at least
+## Upper bound from disjointness and the contradiction
 
-    b_i*b_(i+2) + max(0, b_i*b_(i+2) - (3-b_(i+1)))
+The union of the path interiors is disjoint from B. Pairwise disjointness
+makes its cardinality equal to the sum of the interior cardinalities.
+Since the union together with B is a subset of Fin 15,
 
-internal vertices in total. The five unordered types {i,i+2} are distinct and
-exhaust the nonadjacent cluster pairs. Summing their internal-vertex counts is
-legitimate because all these paths have disjoint internal vertices. Paths
-between adjacent branch vertices can only consume additional resources and
-may be ignored in a lower bound.
+    budget(B) + |B| <= 15.
 
-Define
+For |B|=8, the lower bound gives budget(B)>=8, whereas this upper bound gives
+budget(B)<=7. The contradiction is `no_K8_subdivision`. Combining it with
+the chromatic-number theorem gives `catlin_counterexample`.
 
-    S = b0*b2 + b1*b3 + b2*b4 + b3*b0 + b4*b1,
-    L = S + sum_i max(0, b_i*b_(i+2) - (3-b_(i+1))).
+The earlier `Certificate.lean` also contains a stronger finite resource
+formula with lower bound 12. The present completed path bridge uses the
+simpler demand bound above; it does not claim to have formalized the older
+12-bound's capacity-allocation argument.
 
-Thus a subdivision implies L<=7. Exhaustive exact arithmetic over all
-b_i in {0,1,2,3} with sum_i b_i=8 gives L>=12. There are exactly 155 such
-profiles. All are retained in all_155_branch_profiles.csv; the minimum 12 is
-attained, for example, at (0,0,2,3,3). Hence 12<=L<=7, a contradiction.
+## Attribution and prize boundary
 
-### Small case-split version of the obstruction
+Catlin disproved Hajos's conjecture in 1979. The mathematical background and
+distinction from the asymptotic Erdos-Fajtlowicz problem are described in:
 
-One can also use a shorter finite check: either S>=8, which immediately uses
-at least eight internal vertices, or, up to rotation and reflection, the
-profile is one of the following:
+- Fox, Lee and Sudakov, *Chromatic number, clique subdivisions, and the conjectures of Hajos and Erdos-Fajtlowicz*, https://arxiv.org/abs/1107.1920.
+- JSP-000585 catalog, https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0501-0600.md#jsp-000585.
 
-| Profile | S | Additional required internal vertices | Total |
-| --- | ---: | ---: | ---: |
-| (0,0,2,3,3) | 6 | 6 | 12 |
-| (0,1,3,3,1) | 7 | 6 | 13 |
+JSP-000585 concerns a uniform bound of order sqrt(n)/log(n) for the ratio
+of chromatic number to largest clique-subdivision order. This single finite
+counterexample does not establish that statement. A public formalization
+source for that different asymptotic theorem is already present at
+https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos717.lean.
+It was not imported into this proof or independently rebuilt here.
 
-The full arithmetic certificate avoids relying on this symmetry reduction.
-The short classification is not an additional Lean theorem in the package.
-
-## Exact reproducibility
-
-Python 3, standard library only:
-
-    python verify.py
-
-This regenerates the complete branch-profile CSV and a JSON report and checks
-all 455 unordered triples and the explicit colouring. These checks are not
-Lean proof checking.
-
-Lean 4.34.0, bundled Std only (no Mathlib or external solvers required):
-
-    lean Certificate.lean
-
-The Lean certificate uses ordinary `decide`, not native evaluation, and prints
-the axiom closures of all six theorem declarations. It introduces no custom
-axioms or unfinished proof placeholders. A successful compiler run does not
-formalize the prose-only bridges described above.
-
-## References and original-problem boundary
-
-1. Official JSP-000585 catalog:
-   https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0501-0600.md#jsp-000585
-2. Original quantified Erdos 717 statement:
-   https://www.erdosproblems.com/717
-3. J. Fox, C. Lee, B. Sudakov, Chromatic number, clique subdivisions, and the
-   conjectures of Hajos and Erdos-Fajtlowicz, arXiv:1107.1920, published in
-   Combinatorica 33 (2013), 181-197:
-   https://arxiv.org/abs/1107.1920
-
-The theorem in reference 3 controls chi(G)/sigma(G) by a constant times
-sqrt(n)/log(n) (for the relevant n>=2 range). The result above instead gives
-one 15-vertex example with chi(G)=8 and sigma(G)<=7. The two statements must
-not be conflated.
+The current contribution is the formal graph-path and colouring completion
+of the submitting account's earlier finite checkpoint. No mathematical
+novelty, global first-formalization priority, organizer approval, award,
+or payment entitlement is asserted.
