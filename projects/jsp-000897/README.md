@@ -1,6 +1,8 @@
 # JSP-000897: complete classical threshold theorem and an integral-surplus supplement
 
-This package reproduces and ports the existing complete Lean resolution of the dense-neighbourhood problem, then exposes its integral surplus at every maximum-degree vertex. Original mathematical and formalization credits are retained in [PROVENANCE.md](PROVENANCE.md).
+We provide the complete dense-neighbourhood threshold theorem together with an explicit integral-surplus refinement at every maximum-degree vertex. Our contribution, recorded under GitHub account `ketianzhang1-lang`, comprises the Lean 4.34 port, the surplus-preservation and surplus-difference theorems, the complete existence endpoint and the strict-threshold corollary, with a pinned verification package. We developed these additions with OpenAI ChatGPT/Codex assistance.
+
+The classical threshold proof is an attributed dependency. [PROVENANCE.md](PROVENANCE.md) and the retained source headers identify the upstream mathematical and formalization contributions.
 
 Let ex(n,K_r) be the ordinary extremal number, e(G) the number of edges, d(v) the degree, and e(N(v)) the number of edges with both endpoints in the open neighbourhood of v. For every r >= 4, n >= 2 and simple graph G on n vertices with e(G) >= ex(n,K_r), the main theorem produces a maximum-degree vertex v with
 
@@ -24,7 +26,19 @@ Related problem: https://www.erdosproblems.com/1079 . The public problem page re
 
 The full existing endpoints are `Erdos1079.erdos_problem_1079` and `Erdos1079.erdos_1079`. The new main endpoint is `JSP000897.resolution_with_surplus`. The n >= 2 boundary is explicit because a one-vertex graph cannot have degree at least n/2. The original large-n question is covered by this range.
 
+## Pinned proof and verification
+
+- Repository: https://github.com/ketianzhang1-lang/jsp-000301-lean
+- Branch: `jsp-000897-dense-neighborhood-kz`
+- Verified proof commit: `914c6fa28200985d6409b5b34588b9f5c4a87d00`
+- Project: `projects/jsp-000897`
+- [Successful verification run 35178602861](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35178602861): build, both module replays, eight axiom audits, dependency checks and negative control passed; NaNoda checked 11,259 declarations without errors.
+
+The complete main endpoint is `JSP000897.resolution_with_surplus` in [JSP000897.lean](JSP000897.lean). The underlying threshold endpoints are in [Erdos1079.lean](Erdos1079.lean).
+
 ## Reproduce
+
+Check out the exact proof commit above and enter `projects/jsp-000897`.
 
 Lean v4.34.0; Mathlib v4.34.0 at `5ed2965256430c3649e86755f9576b54eca72435`. All transitive package revisions are pinned in lake-manifest.json.
 
@@ -36,8 +50,6 @@ bash scripts/verify_nanoda.sh
 
 See [VERIFICATION.md](VERIFICATION.md) for actual results and their limits.
 
-## Requested assessment
+## Requested review
 
-This is a self-submission of the port, incremental formalization and reproducibility evidence only. A complete earlier formalization already exists. It is not a claim to the original solver credit, first-formalizer priority, independent human verification, an approved award or payment entitlement. Please assess whether these incremental contributions qualify for recognition.
-
-Proposed placeholder: RECIPIENT-JSP-000897-KZ-A. Confirmation pending. No public written-confirmation attestation is supplied. Catalog eligibility is currently No; this package does not change that flag or create a candidate/award record.
+We submit our port, surplus formalization and verification contribution through [awards PR #439](https://github.com/TheJustinSunPrize/awards/pull/439). The complete main theorem is included; our requested contribution credit concerns the specific additions described above. The checked proof files, locked dependencies and scripts are unchanged by this documentation follow-up. Contributor-run verification supports review; acceptance, attribution and eligibility remain organizer decisions.

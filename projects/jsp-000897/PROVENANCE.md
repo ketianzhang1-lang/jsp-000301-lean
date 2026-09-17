@@ -26,4 +26,4 @@ Bela Bollobas and Andrew Thomason, *Dense neighbourhoods and Turan's theorem*, J
 
 J. A. Bondy, *Large dense neighbourhoods and Turan's theorem*, Journal of Combinatorial Theory, Series B 34 (1983), 109-111. The strict threshold version is credited to Bondy by the upstream proof. Mathlib provides Turan's extremal theorem and the finite-graph infrastructure.
 
-The submitting account is responsible only for the port, supplement and reproduction package, prepared with OpenAI ChatGPT assistance. The submission does not act on behalf of the mathematical authors or upstream formalizers. Original credits must not be reassigned to the submitting account.
+We record GitHub account `ketianzhang1-lang` as the formalization contributor for the Lean 4.34 port, the four named surplus supplement theorems in `JSP000897.lean`, and the reproduction package, prepared with OpenAI ChatGPT assistance. The submission does not act on behalf of the mathematical authors or upstream formalizers. Original credits must not be reassigned to the submitting account.
