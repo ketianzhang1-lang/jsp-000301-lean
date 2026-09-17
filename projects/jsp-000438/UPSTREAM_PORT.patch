@@ -1,0 +1,109 @@
+--- upstream-original/Erdos548_192usd_21h.lean
++++ Upstream548.lean
+@@ -1 +1,8 @@
+-import Mathlib
++/- Modified for Lean/Mathlib 4.34.0. See UPSTREAM_PORT.md for exact changes.
++Original: tadamcz/erdos548@82ffb751f3d37768927df9239ed08439bbe0dd09.
++License: Apache-2.0; original attribution and NOTICE are retained. -/
++import Mathlib.Combinatorics.SimpleGraph.Acyclic
++import Mathlib.Combinatorics.SimpleGraph.Copy
++import Mathlib.Combinatorics.SimpleGraph.Finite
++import Mathlib.Data.List.Permutation
++import Mathlib.Tactic
+@@ -466 +473 @@
+-  simpa only [Nat.sub_add_cancel hn] using (Nat.factorial_succ (l₀.length-1)).symm
++  simpa only [Nat.sub_add_cancel hn, Nat.cast_id] using (Nat.factorial_succ (l₀.length-1)).symm
+@@ -600 +607 @@
+-  symm := by rintro (a | a) (b | b) h <;> first | exact h.symm | exact h
++  symm := ⟨by rintro (a | a) (b | b) h <;> first | exact h.symm | exact h⟩
+@@ -796 +803 @@
+-    · simpa only [F,dif_pos hx,dif_pos hy] using
++    · simpa only [F,dite_eq_left hx,dite_eq_left hy] using
+@@ -803 +810 @@
+-      simpa only [F,dif_pos hr,dif_neg hy,hfr,hgr] using he
++      simpa only [F,dite_eq_left hr,dite_eq_right hy,hfr,hgr] using he
+@@ -809,2 +816,2 @@
+-      simpa only [F,dif_neg hx,dif_pos hr,hfr,hgr] using he
+-    · simpa only [F,dif_neg hx,dif_neg hy] using
++      simpa only [F,dite_eq_right hx,dite_eq_left hr,hfr,hgr] using he
++    · simpa only [F,dite_eq_right hx,dite_eq_right hy] using
+@@ -815 +822 @@
+-    · have he' : f ⟨x,hx⟩=f ⟨y,hy⟩ := by simpa only [F,dif_pos hx,dif_pos hy] using he
++    · have he' : f ⟨x,hx⟩=f ⟨y,hy⟩ := by simpa only [F,dite_eq_left hx,dite_eq_left hy] using he
+@@ -817,3 +824,3 @@
+-    · exact (hcross ⟨x,hx⟩ ⟨y,Or.inl hy⟩ hy (by simpa only [F,dif_pos hx,dif_neg hy] using he)).elim
+-    · exact (hcross ⟨y,hy⟩ ⟨x,Or.inl hx⟩ hx (by simpa only [F,dif_neg hx,dif_pos hy] using he.symm)).elim
+-    · have he' : g ⟨x,Or.inl hx⟩=g ⟨y,Or.inl hy⟩ := by simpa only [F,dif_neg hx,dif_neg hy] using he
++    · exact (hcross ⟨x,hx⟩ ⟨y,Or.inl hy⟩ hy (by simpa only [F,dite_eq_left hx,dite_eq_right hy] using he)).elim
++    · exact (hcross ⟨y,hy⟩ ⟨x,Or.inl hx⟩ hx (by simpa only [F,dite_eq_right hx,dite_eq_left hy] using he.symm)).elim
++    · have he' : g ⟨x,Or.inl hx⟩=g ⟨y,Or.inl hy⟩ := by simpa only [F,dite_eq_right hx,dite_eq_right hy] using he
+@@ -823 +830 @@
+-    simpa only [F,dif_pos hr] using hfr
++    simpa only [F,dite_eq_left hr] using hfr
+@@ -827 +834 @@
+-      rw [show F x=f ⟨x,hx⟩ by simp only [F,dif_pos hx]]
++      rw [show F x=f ⟨x,hx⟩ by simp only [F,dite_eq_left hx]]
+@@ -830 +837 @@
+-      rw [show F x=g ⟨x,Or.inl hx⟩ by simp only [F,dif_neg hx]]
++      rw [show F x=g ⟨x,Or.inl hx⟩ by simp only [F,dite_eq_right hx]]
+@@ -855 +862 @@
+-    (isBridge_iff.mp ((isAcyclic_iff_forall_adj_isBridge.mp hT.IsAcyclic) hrs)).2
++    isBridge_iff.mp ((isAcyclic_iff_forall_adj_isBridge.mp hT.isAcyclic) hrs)
+@@ -880 +887 @@
+-    obtain ⟨p⟩ := hT.isConnected.preconnected x r
++    obtain ⟨p⟩ := hT.connected.preconnected x r
+@@ -904,2 +911,2 @@
+-  refine ⟨A,hrA,hsA,⟨hAconn,hT.IsAcyclic.induce A⟩,
+-    ⟨hAcconn,hT.IsAcyclic.induce Aᶜ⟩,?_⟩
++  refine ⟨A,hrA,hsA,⟨hAconn,hT.isAcyclic.induce A⟩,
++    ⟨hAcconn,hT.isAcyclic.induce Aᶜ⟩,?_⟩
+@@ -934 +941 @@
+-    exact ⟨connected_induce_union hAc.isConnected.preconnected
++    exact ⟨connected_induce_union hAc.connected.preconnected
+@@ -936 +943 @@
+-      hT.IsAcyclic.induce _⟩
++      hT.isAcyclic.induce _⟩
+@@ -971 +978 @@
+-  haveI : Subsingleton ({r}ᶜ : Set U) := Fintype.card_le_one_iff_subsingleton.mp hc
++  have : Subsingleton ({r}ᶜ : Set U) := Fintype.card_le_one_iff_subsingleton.mp hc
+@@ -980,2 +987,2 @@
+-    · exact (hbw.ne (by simpa only [F,if_pos hx,if_neg hy] using he)).elim
+-    · exact (hbw.ne.symm (by simpa only [F,if_neg hx,if_pos hy] using he)).elim
++    · exact (hbw.ne (by simpa only [F,ite_eq_left hx,ite_eq_right hy] using he)).elim
++    · exact (hbw.ne.symm (by simpa only [F,ite_eq_right hx,ite_eq_left hy] using he)).elim
+@@ -987,2 +994,2 @@
+-    · simpa only [F,if_pos hx,if_neg hy] using hbw
+-    · simpa only [F,if_neg hx,if_pos hy] using hbw.symm
++    · simpa only [F,ite_eq_left hx,ite_eq_right hy] using hbw
++    · simpa only [F,ite_eq_right hx,ite_eq_left hy] using hbw.symm
+@@ -992 +999 @@
+-    simp only [F,if_pos rfl]
++    simp only [F,ite_eq_left rfl]
+@@ -996,2 +1003,2 @@
+-    · simp only [F,if_pos hx,Finset.mem_insert_self]
+-    · simpa only [F,if_neg hx] using Finset.mem_insert_of_mem hw
++    · simp only [F,ite_eq_left hx,Finset.mem_insert_self]
++    · simpa only [F,ite_eq_right hx] using Finset.mem_insert_of_mem hw
+@@ -1028 +1035 @@
+-      simp only [f,Sum.elim_inl,g,dif_neg hx,Subtype.coe_eta]
++      simp only [f,Sum.elim_inl,g,dite_eq_right hx]
+@@ -1031 +1038 @@
+-      simp only [f,Sum.elim_inr,g,dif_pos rfl]
++      simp only [f,Sum.elim_inr,g,dite_eq_left rfl]
+@@ -1079,2 +1086,2 @@
+-    haveI : Nontrivial U := Fintype.one_lt_card_iff_nontrivial.mp (by omega)
+-    obtain ⟨s,hrs⟩ := hT.isConnected.preconnected.exists_adj_of_nontrivial r
++    have : Nontrivial U := Fintype.one_lt_card_iff_nontrivial.mp (by omega)
++    obtain ⟨s,hrs⟩ := hT.connected.preconnected.exists_adj_of_nontrivial r
+@@ -1086 +1093 @@
+-        ⟨hT.isConnected.induce_compl_singleton_of_degree_eq_one hdeg,hT.IsAcyclic.induce A⟩
++        ⟨hT.connected.induce_compl_singleton_of_degree_eq_one hdeg,hT.isAcyclic.induce A⟩
+@@ -1101 +1108 @@
+-    · push_neg at hleaf
++    · push Not at hleaf
+@@ -1196 +1203 @@
+-  obtain ⟨r⟩ := hT.isConnected.nonempty
++  obtain ⟨r⟩ := hT.connected.nonempty
+@@ -1223 +1230 @@
+-    haveI : Subsingleton (Fin (0+1)) := by change Subsingleton (Fin 1); infer_instance
++    have : Subsingleton (Fin (0+1)) := by change Subsingleton (Fin 1); infer_instance
