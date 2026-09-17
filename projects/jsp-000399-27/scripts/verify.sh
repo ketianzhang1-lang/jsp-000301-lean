@@ -6,6 +6,7 @@ lake build --wfail 2>&1 | tee evidence/build.log
 lake env leanchecker Adapter 2>&1 | tee evidence/kernel-adapter.log
 lake env leanchecker JSP000399Triple 2>&1 | tee evidence/kernel-main.log
 lake env lean Audit.lean 2>&1 | tee evidence/axioms.log
+lake env lean Challenge.lean 2>&1 | tee evidence/statement-comparison.log
 python3 - <<'PY'
 from pathlib import Path
 import re, json, subprocess

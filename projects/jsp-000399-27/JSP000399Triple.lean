@@ -21,16 +21,16 @@ def witness : Finset ℤ :=
 
 def reflected : Finset ℤ := witness.image (fun x => -x)
 
-theorem witness_card : witness.card = 27 := by decide
+theorem witness_card : witness.card = 27 := by decide +kernel
 
-theorem reflected_card : reflected.card = 27 := by decide
+theorem reflected_card : reflected.card = 27 := by decide +kernel
 
-theorem witness_ne_reflected : witness ≠ reflected := by decide
+theorem witness_ne_reflected : witness ≠ reflected := by decide +kernel
 
 theorem equal_triple_sums :
     intSumMultiset witness 3 = intSumMultiset reflected 3 := by
   apply intSumMultiset_eq_of_sort_eq
-  decide
+  decide +kernel
 
 theorem complex_counterexample :
     ∃ A B : Finset ℂ, A.card = 27 ∧ B.card = 27 ∧

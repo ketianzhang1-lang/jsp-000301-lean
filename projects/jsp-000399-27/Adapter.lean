@@ -1,4 +1,7 @@
-import Mathlib
+import Mathlib.Data.Finset.Powerset
+import Mathlib.Data.Multiset.Sort
+import Mathlib.Algebra.BigOperators.Ring.Finset
+import Mathlib.Basic.Complex.Basic
 
 /-!
 Transport of exact integer subset-sum certificates to finite subsets of the
@@ -43,7 +46,7 @@ theorem complexSumMultiset_complexify (A : Finset ℤ) (k : ℕ) :
   simp only [Finset.map_val, Multiset.map_map]
   congr 1
   funext s
-  simp [Finset.sum_map, intToComplex, Function.comp_def, Int.cast_sum]
+  simp [Finset.sum_map, intToComplex, Int.cast_sum]
 
 theorem lift_integer_counterexample {A B : Finset ℤ} {k n : ℕ}
     (hA : A.card = n) (hB : B.card = n) (hne : A ≠ B)
