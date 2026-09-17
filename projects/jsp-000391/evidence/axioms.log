@@ -1,0 +1,8 @@
+'JSP000391.sequence_closed_forms' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000391.recurrence_extracts_digits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000391.digit_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000391.normalized_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000391.reconstruction_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000391.reconstruction_converges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000391.stoll_general_base' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000391.jsp000391' depends on axioms: [propext, Classical.choice, Quot.sound]
