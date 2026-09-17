@@ -1,0 +1,5 @@
+Local verification receipt, 2026-09-17.
+Lean 4.34.0 compilation with warningAsError=true: exit 0; no output.
+leanchecker JSP000154: exit 0; no output.
+Audit.lean with warningAsError=true: exit 0; nine standard-three-axiom reports.
+Existing cache and process-path compatibility shim were used; see VERIFICATION.md.
