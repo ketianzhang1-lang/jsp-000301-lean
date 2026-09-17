@@ -1,0 +1,13 @@
+'JSP000780General.solution_for_every_parameter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000780General.infinitely_many_solutions' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000780General.infinitely_many_totals' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000780General.original_all_r_infinite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000780General.original_every_parameter' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP000780General.original_all_r_infinite (r : ℕ) : r ≥ 6 → (JSP000780General.OriginalSolutions r).Infinite
+def JSP000780General.OriginalSolutions : ℕ → Set (Finset ℕ) :=
+fun r =>
+  {s |
+    s.card = r - 2 ∧
+      s.gcd id = 1 ∧ JSP000780General.FactorFull r (∑ n ∈ s, n) ∧ ∀ n ∈ s, 0 < n ∧ JSP000780General.FactorFull r n}
+def JSP000780General.FactorFull : ℕ → ℕ → Prop :=
+fun r n => ∀ p ∈ n.primeFactors, p ^ r ∣ n

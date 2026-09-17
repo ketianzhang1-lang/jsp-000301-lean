@@ -1,0 +1,8 @@
+.lake/
+*.olean*
+*.ilean
+*.c
+*.bc
+lean-local.sh
+checker-local.sh
+DefinitionCheck.lean

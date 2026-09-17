@@ -1,0 +1,7 @@
+Lean 4.34.0
+Seven modules compiled with warningAsError=true: exit 0.
+leanchecker Adapter: exit 0.
+leanchecker Audit: exit 0.
+Five theorem axiom audits: PASS.
+No proof holes, native_decide, or new axioms in source: PASS.
+Local git dependency revision check: UNAVAILABLE; cache has incomplete metadata.

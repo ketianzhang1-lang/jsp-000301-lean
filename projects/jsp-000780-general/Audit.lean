@@ -1,0 +1,9 @@
+import Adapter
+#print axioms JSP000780General.solution_for_every_parameter
+#print axioms JSP000780General.infinitely_many_solutions
+#print axioms JSP000780General.infinitely_many_totals
+#print axioms JSP000780General.original_all_r_infinite
+#print axioms JSP000780General.original_every_parameter
+#check JSP000780General.original_all_r_infinite
+#print JSP000780General.OriginalSolutions
+#print JSP000780General.FactorFull
