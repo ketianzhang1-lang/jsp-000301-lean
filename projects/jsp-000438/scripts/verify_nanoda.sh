@@ -19,8 +19,8 @@ pin https://github.com/ammkrn/nanoda_lib.git 4c544ed4099c8227f07d5de77ad1e69fb07
 cp lean-toolchain "$work/exporter/lean-toolchain"
 (cd "$work/exporter" && lake build)
 (cd "$work/checker" && cargo build --release --locked)
-lake env "$work/exporter/.lake/build/bin/lean4export" JSP000438 -- \
-  Erdos548.tree_free_edge_bound JSP000438.trees_monochromatic JSP000438.tree_monochromatic JSP000438.graphRamsey_trees Erdos547.erdos_547 > evidence/export.ndjson
+lake env "$work/exporter/.lake/build/bin/lean4export" StarSharpness -- \
+  Erdos548.tree_free_edge_bound JSP000438.trees_monochromatic JSP000438.tree_monochromatic JSP000438.graphRamsey_trees Erdos547.erdos_547 JSP000438.sharpGraph_degree_le JSP000438.sharpGraph_compl_degree_le JSP000438.sharpGraph_avoids_star JSP000438.star_ramsey_even_order JSP000438.tree_ramsey_bound_is_sharp > evidence/export.ndjson
 python3 - <<'PY'
 import json
 from pathlib import Path
@@ -28,7 +28,7 @@ config={
   'export_file_path':'evidence/export.ndjson','use_stdin':False,
   'permitted_axioms':['propext','Classical.choice','Quot.sound'],
   'unpermitted_axiom_hard_error':True,'nat_extension':True,'string_extension':True,
-  'pp_declars':["Erdos548.tree_free_edge_bound", "JSP000438.trees_monochromatic", "JSP000438.tree_monochromatic", "JSP000438.graphRamsey_trees", "Erdos547.erdos_547"],
+  'pp_declars':["Erdos548.tree_free_edge_bound", "JSP000438.trees_monochromatic", "JSP000438.tree_monochromatic", "JSP000438.graphRamsey_trees", "Erdos547.erdos_547", "JSP000438.sharpGraph_degree_le", "JSP000438.sharpGraph_compl_degree_le", "JSP000438.sharpGraph_avoids_star", "JSP000438.star_ramsey_even_order", "JSP000438.tree_ramsey_bound_is_sharp"],
   'pp_output_path':'evidence/nanoda-statements.txt','pp_to_stdout':False,'print_success_message':True}
 Path('evidence/nanoda-config.json').write_text(json.dumps(config,indent=2)+'\n')
 Path('evidence/nanoda-statements.txt').write_text('')

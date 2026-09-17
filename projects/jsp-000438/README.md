@@ -21,6 +21,16 @@ of the Erdős–Sós proof or discovery of the mathematical implication, nor
 first-formalization priority. OpenAI Codex assisted the new work.
 See [UPSTREAM_PORT.md](UPSTREAM_PORT.md) and [NOTICE](NOTICE).
 
+## Sharpness supplement
+
+The new `StarSharpness.lean` proves that the star on `2*k+2` vertices has
+Ramsey number exactly `4*k+2` for every natural `k`, including zero.
+Thus every even order attains the universal bound `2*n-2`. The construction
+on `ZMod (4*k+1)` gives an explicit coloring without either monochromatic
+star. The terminal theorem `JSP000438.tree_ramsey_bound_is_sharp` combines
+the original upper bound and all these matching examples.
+See [SHARPNESS.md](SHARPNESS.md) for the proof and attribution limits.
+
 ## Proof
 
 Put `N = 2n-2`. If neither a graph `G` on `N` vertices nor its complement
@@ -65,9 +75,9 @@ bash scripts/verify_nanoda.sh
 ```
 
 The first script builds with warnings treated as errors, replays the module
-with the bundled Lean checker, checks five axiom closures and every actual
+with the bundled Lean checker, checks ten axiom closures and every actual
 dependency revision, and requires a false arithmetic statement to be rejected.
-The second exports all five targets with their dependencies and checks them
+The second exports all ten targets with their dependencies and checks them
 with the pinned NaNoda implementation, using a hard-error axiom allowlist of
 `propext`, `Classical.choice`, and `Quot.sound`.
 
