@@ -45,7 +45,9 @@ written with OpenAI ChatGPT assistance for the submitting account.
 
 The catalog and available issue/PR records were checked on September 17, 2026;
 no JSP-000506 filing was found in that scoped check. This is not a guarantee
-that no relevant proof exists elsewhere. Any recipient identity remains
+that no relevant proof exists elsewhere. A later global search located the
+existing SamPetkov/Erdos formalization of a stronger asymptotic result; see
+`PRIOR_ART.md`. No first-Lean claim is made. Any recipient identity remains
 `RECIPIENT-JSP-000506-KZ-A`, confirmation pending.
 
 ## Reproduction

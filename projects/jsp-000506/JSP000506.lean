@@ -75,11 +75,11 @@ lemma mass_anticorrelation {A B : Finset (Finset α)}
   apply (div_le_div_iff₀ hp (mul_pos hp hp)).2
   nlinarith [mul_le_mul_of_nonneg_right hq hp.le]
 
+set_option maxHeartbeats 800000 in
 /-- Heckel's concentration reduction on a uniform finite Boolean cube.
 `χ` is increasing, `ζ` is invariant under complementation and bounded by `χ`.
 If the gap is at most `g` with probability at least 0.999, some interval
 of length `g` contains `χ` with probability strictly greater than 0.9. -/
-set_option maxHeartbeats 800000 in
 theorem concentration_reduction (χ ζ : Finset α → ℕ) (g : ℕ)
     (hmono : Monotone χ) (hsym : ∀ s, ζ sᶜ = ζ s)
     (hle : ∀ s, ζ s ≤ χ s)
@@ -174,6 +174,8 @@ simple graph on `Fin n`. The uniform cube is therefore G(n,1/2). -/
 def Edge (n : ℕ) := {p : Fin n × Fin n // p.1 < p.2}
 deriving Fintype, DecidableEq
 
+attribute [local instance] Classical.propDecidable
+
 def Proper {n : ℕ} (s : Finset (Edge n)) (k : ℕ) : Prop :=
   ∃ c : Fin n → Fin k, ∀ e ∈ s, c e.val.1 ≠ c e.val.2
 
@@ -209,27 +211,33 @@ noncomputable def chi {n : ℕ} (s : Finset (Edge n)) : ℕ :=
 noncomputable def zeta {n : ℕ} (s : Finset (Edge n)) : ℕ :=
   Nat.find (⟨n, proper_to_coProper (proper_n s)⟩ : ∃ k, CoProper s k)
 
-lemma chi_spec {n : ℕ} (s : Finset (Edge n)) : Proper s (chi s) :=
-  Nat.find_spec _
+lemma chi_spec {n : ℕ} (s : Finset (Edge n)) : Proper s (chi s) := by
+  unfold chi
+  exact Nat.find_spec _
 
-lemma zeta_spec {n : ℕ} (s : Finset (Edge n)) : CoProper s (zeta s) :=
-  Nat.find_spec _
+lemma zeta_spec {n : ℕ} (s : Finset (Edge n)) : CoProper s (zeta s) := by
+  unfold zeta
+  exact Nat.find_spec _
 
 lemma chi_mono (n : ℕ) : Monotone (@chi n) := by
   intro s t hst
+  unfold chi
   apply Nat.find_min'
   obtain ⟨c, hc⟩ := chi_spec t
   exact ⟨c, fun e he => hc e (hst he)⟩
 
 lemma zeta_le_chi {n : ℕ} (s : Finset (Edge n)) : zeta s ≤ chi s := by
+  unfold zeta
   apply Nat.find_min'
   exact proper_to_coProper (chi_spec s)
 
 lemma zeta_compl {n : ℕ} (s : Finset (Edge n)) : zeta sᶜ = zeta s := by
   apply Nat.le_antisymm
-  · apply Nat.find_min'
+  · unfold zeta
+    apply Nat.find_min'
     exact coProper_compl (zeta_spec s)
-  · apply Nat.find_min'
+  · unfold zeta
+    apply Nat.find_min'
     simpa using coProper_compl (zeta_spec sᶜ)
 
 /-- Proposition 3 of Heckel's paper, for every finite graph order, including
