@@ -1,0 +1,16 @@
+JSP-000057 rank-two sunflower threshold formalization
+Copyright 2026 Ketian Zhang. Prepared with OpenAI ChatGPT / Codex assistance.
+Licensed under the Apache License, Version 2.0.
+
+Definitions adapted from google-deepmind/formal-conjectures:
+  FormalConjectures/ErdosProblems/20.lean
+    Copyright 2025 The Formal Conjectures Authors.
+  FormalConjecturesForMathlib/Combinatorics/SetFamily/Sunflower.lean
+    Copyright 2026 The Formal Conjectures Authors.
+  Source commit: 40e7c98697de6f66b8cbdbf641749ab39ed9c152
+  License: Apache-2.0.
+The definitions have explicit ground-type binder placement and a local
+bound-variable rename; new proofs and bridge lemmas are added.
+
+This is a formalization of a classical special case; no new mathematical
+result or first-formalization claim is made.

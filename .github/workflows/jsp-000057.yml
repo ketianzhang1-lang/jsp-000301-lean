@@ -1,0 +1,53 @@
+name: JSP-000057 Sharp rank-two sunflower threshold
+on:
+  push:
+    branches: [jsp-000057-rank-two]
+    paths: [projects/jsp-000057/**, .github/workflows/jsp-000057.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    defaults:
+      run:
+        shell: bash
+        working-directory: projects/jsp-000057
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install exact toolchain and locked dependencies
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.elan/bin:$PATH"
+          elan toolchain install "$(cat lean-toolchain)"
+          test -s lake-manifest.json
+          lake exe cache get
+          git diff --exit-code -- lake-manifest.json
+      - name: Build, replay, eight axiom audits and negative control
+        run: bash scripts/verify.sh
+      - name: Independent strict-allowlist NaNoda verification
+        run: |
+          set -euo pipefail
+          bash scripts/verify_nanoda.sh 2>&1 | tee evidence/nanoda-build.log
+      - name: Archive tested source and logs
+        if: always()
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          git rev-parse HEAD > evidence/SOURCE_COMMIT
+          cp lake-manifest.json evidence/
+          git diff --exit-code -- lake-manifest.json
+          tar --exclude=.lake --exclude=evidence -czf evidence/source.tar.gz .
+          sha256sum evidence/source.tar.gz > evidence/ARCHIVE_SHA256
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: jsp-000057-evidence
+          path: projects/jsp-000057/evidence
+          retention-days: 90
+          if-no-files-found: error
