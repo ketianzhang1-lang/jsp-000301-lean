@@ -1,54 +1,59 @@
-# JSP-000212: finite Bose--Chowla lower-bound construction
+# JSP-000212: prime-power Bose--Chowla construction
 
-For every prime `p` and every integer `h >= 2`, this package proves the existence
-of a set `A` of exactly `p` positive integers, all at most `p^h - 1`, such that
-two sums of `h` elements of `A` are equal only when their multisets of summands
-are equal. Repeated summands are allowed. This is the classical `B_h` property.
+For every prime p, positive integer r and integer h >= 2, put q=p^r.
+This project proves that there exists a set A of exactly q positive integers
+at most q^h-1 such that two sums of h elements of A that are congruent
+modulo q^h-1 have equal multisets of summands. Repetitions are allowed.
 
-The theorem `BoseChowla.jsp000212` takes `h=3` and proves the catalog's
-distinct-three-element-subset condition. It is a **known lower-bound component**
-of the open extremal problem, not a complete solution or an improved bound.
-Only prime cardinalities are claimed here, not all prime powers. No asymptotic
-limit for every interval length, matching upper bound, original mathematical
-discovery, global first-formalization priority, or prize entitlement is claimed.
+The theorem `BoseChowlaPrimePower.exists_prime_power_modular` gives the
+classical finite modular construction in full. The endpoint
+`BoseChowlaPrimePower.jsp000212_prime_power` specializes to h=3 and the
+catalog's distinct-three-element-subset condition. This remains a
+**known lower-bound component** of the open extremal JSP-000212 problem.
+
+## Supplement to the initial contribution
+
+The initial version covered only prime cardinalities and equality in the
+integers. This supplement removes both restrictions. The final theorem
+constructs the required field extension and proves its dimension; it does
+not take either fact as an unproved hypothesis.
+
+BoseChowla.lean and Audit.lean are unchanged from initial proof commit
+`5a44bae1b7d4a8a70d1f8594e26688f251f0b9e0`. PrimePower.lean and
+PrimePowerAudit.lean contain the new proof and audit. This extends the
+same contribution in [PR #423](https://github.com/TheJustinSunPrize/awards/pull/423),
+not a separate award request.
 
 ## Proof
 
-Work in the degree-`h` finite extension of the field with `p` elements. Choose
-an element `theta` whose minimal polynomial has degree `h`, and choose a
-generator `g` of the multiplicative group. For every base-field element `a`,
-`theta-a` is nonzero. Write it as `g^e(a)` with `0 <= e(a) < p^h-1`.
-The exponents are distinct.
+Embed the field of p^r elements in the field of p^(r*h) elements.
+Mathlib's finite-field embedding theorem and the tower dimension formula
+give extension degree h. Choose a primitive element theta for this
+extension and a generator g of its multiplicative group. Every theta-a
+for a in the base field is nonzero and has an exponent modulo q^h-1.
 
-If two sums of `h` exponents agree, the corresponding products of `theta-a`
-agree. Subtract the two monic products of linear polynomials. Their leading
-terms cancel, giving a polynomial of degree below `h` that vanishes at
-`theta`. The minimal-polynomial property forces it to be zero. Equality of
-the multisets of roots then gives equality of the summands, including
-multiplicities. Shift every exponent up by one to obtain positive integers.
-Equal-cardinality sums preserve their equality under that shift.
+Congruent exponent sums give equal products of theta-a. Subtract the two
+monic degree-h products of linear polynomials. Their leading terms cancel,
+leaving degree below h. Vanishing at theta and its minimal-polynomial
+degree force the difference to be zero, hence the multisets of roots agree.
+Shifting exponents by one gives positive representatives and preserves
+congruence for equal-cardinality sums.
 
-The proof is universal; it does not enumerate a few primes or assume an
-external finite-field computation. It imports Mathlib, not any unproved
-conjecture theorem. The set definition uses actual multisets and actual sums.
+## Attribution and scope
 
-## Source correspondence and attribution
-
-- [Official JSP-000212 statement](https://github.com/TheJustinSunPrize/awards/blob/f4e7173d89dfe91022a185427d63452c8ffbf6ae/problems/catalog-0201-0300.md#JSP-000212).
+- [Official statement](https://github.com/TheJustinSunPrize/awards/blob/f4e7173d89dfe91022a185427d63452c8ffbf6ae/problems/catalog-0201-0300.md#JSP-000212).
 - R. C. Bose and S. Chowla, [Theorems in the additive theory of numbers](https://doi.org/10.1007/BF02566968), Commentarii Mathematici Helvetici 37 (1962/63), 141--147.
-- Theorem 1 in the [authors' 1960 report](https://www.cs.umd.edu/~gasarch/COURSES/858/S13/BoseChowla.pdf) gives the classical construction, including its stronger modular and prime-power forms.
-- [Formal Conjectures, Erdős 241](https://github.com/google-deepmind/formal-conjectures/blob/40e7c98697de6f66b8cbdbf641749ab39ed9c152/FormalConjectures/ErdosProblems/241.lean) discusses the related repeated-summand extremal function. Its asymptotic conjecture is not the theorem proved here, and that file is not imported or copied.
+- Theorem 1 of the [authors' 1960 report](https://www.cs.umd.edu/~gasarch/COURSES/858/S13/BoseChowla.pdf) gives the classical prime-power modular construction.
+- [Initial proof and provenance](https://github.com/ketianzhang1-lang/jsp-000301-lean/tree/5a44bae1b7d4a8a70d1f8594e26688f251f0b9e0/projects/jsp-000212).
 
-Mathematical credit belongs to Bose and Chowla. This Lean implementation was
-written independently with OpenAI ChatGPT assistance under the direction of
-the submitting account `ketianzhang1-lang`. Mathlib supplies finite fields,
-primitive elements, cyclic multiplicative groups, and polynomial theory. The
-new files are Apache-2.0; see `LICENSE`.
+Mathematical credit belongs to Bose and Chowla. This independently written
+Lean implementation was prepared with OpenAI ChatGPT assistance under the
+direction of ketianzhang1-lang. Mathlib supplies the finite fields,
+polynomials, cyclic groups and linear algebra. The project is Apache-2.0.
 
-Bounded pre-submission searches on 2026-09-17 checked the official issues and
-PRs for `JSP-000212`, `Bose`, `Chowla`, `241`, and `Sidon`, the submitting
-account's proof branches, and the inspected plby proof-tree snapshot. No
-matching submission was located. This does not establish worldwide priority.
+No all-integer-cardinality construction, sharp upper bound, full asymptotic
+answer, new mathematical discovery, worldwide priority or award entitlement
+is claimed. Bounded submission searches do not establish global priority.
 
 ## Reproduction
 
@@ -61,14 +66,14 @@ bash scripts/verify.sh
 bash scripts/verify_nanoda.sh
 ```
 
-`Audit.lean` checks the final catalog-facing type, nonvacuous instances, and
-five axiom closures. `verify.sh` builds with warnings as errors, replays the
-compiled modules through the bundled Lean checker, audits all dependency
-revisions, and requires rejection of false arithmetic. `verify_nanoda.sh`
-uses pinned exporter/checker revisions and a strict allowlist of `propext`,
-`Classical.choice`, and `Quot.sound`.
+Four modules are built with warnings as errors and replayed by the bundled
+Lean checker. Both audits check exact endpoint types and ten axiom closures.
+Non-prime instances include q=4, 8 and 9, with both h=2 and h=3 covered.
+Dependency revisions are checked and false arithmetic must be rejected.
+The pinned NaNoda checker replays the initial and expanded endpoint
+closures with only propext, Classical.choice and Quot.sound permitted.
 
-These commands specify the procedure. Successful-run receipts and source pins
-are recorded separately in `VERIFICATION.md` after execution. Upstream compiled
-caches are used; no full Mathlib source rebuild or independent human review
-is claimed. Contribution eligibility and any award require organizer review.
+These commands describe the procedure; actual successful-run receipts
+are recorded in the submission. Mathlib compiled caches are used; no
+complete Mathlib source rebuild or independent human review is asserted.
+Eligibility, recipient confirmation and any award require organizer review.

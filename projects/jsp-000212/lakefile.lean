@@ -1,9 +1,9 @@
 import Lake
 open Lake DSL
 package JSP000212 where
-  version := v!"0.1.0"
+  version := v!"0.2.0"
 require mathlib from git
   "https://github.com/leanprover-community/mathlib4" @ "5ed2965256430c3649e86755f9576b54eca72435"
 @[default_target]
 lean_lib JSP000212 where
-  roots := #[`BoseChowla, `Audit]
+  roots := #[`BoseChowla, `Audit, `PrimePower, `PrimePowerAudit]

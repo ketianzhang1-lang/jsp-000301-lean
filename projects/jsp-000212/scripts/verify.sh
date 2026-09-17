@@ -3,16 +3,18 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 mkdir -p evidence
 lake build --wfail 2>&1 | tee evidence/build.log
-for module in BoseChowla Audit; do
+for module in BoseChowla Audit PrimePower PrimePowerAudit; do
   lake env leanchecker "$module" 2>&1 | tee "evidence/kernel-$module.log"
 done
 lake env lean Audit.lean 2>&1 | tee evidence/axioms.log
+lake env lean PrimePowerAudit.lean 2>&1 | tee -a evidence/axioms.log
 python3 - <<'PY'
 from pathlib import Path
 import re, json, subprocess
-names = re.findall(r'^#print axioms (\S+)', Path('Audit.lean').read_text(), re.M)
-if len(names) != 5:
-    raise SystemExit('Expected exactly five audited targets')
+names = re.findall(r'^#print axioms (\S+)',
+                   Path('Audit.lean').read_text() + Path('PrimePowerAudit.lean').read_text(), re.M)
+if len(names) != 10 or len(set(names)) != 10:
+    raise SystemExit('Expected exactly ten distinct audited targets')
 log = Path('evidence/axioms.log').read_text()
 for name in names:
     m = re.search("'" + re.escape(name) + r"' depends on axioms: \[([^\]]*)\]", log)
@@ -26,9 +28,9 @@ for pkg in json.loads(Path('lake-manifest.json').read_text())['packages']:
                                    'rev-parse', 'HEAD'], text=True).strip()
     if head != pkg['rev']:
         raise SystemExit('Dependency revision mismatch: ' + pkg['name'])
-print('Five target axiom audits and all locked dependency revisions passed.')
+print('Ten target axiom audits and all locked dependency revisions passed.')
 PY
-printf 'import BoseChowla\nexample : (1 : Nat) = 0 := by decide\n' > Negative.lean
+printf 'import PrimePower\nexample : (1 : Nat) = 0 := by decide\n' > Negative.lean
 trap 'rm -f Negative.lean' EXIT
 if lake env lean Negative.lean > evidence/negative-control.log 2>&1; then
   echo 'ERROR: invalid arithmetic was accepted' >&2
