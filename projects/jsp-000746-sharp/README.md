@@ -31,6 +31,8 @@ The supporting theorem `JSP000746.integer_graph` additionally gives 0 < a < b an
 
 - Repository: https://github.com/ketianzhang1-lang/jsp-000301-lean
 - Branch: `jsp-000746-sharp-kz`
+- Selected proof commit: `4dfb40abe0cd1e538bbfccb1cc50f4829fb7383a`
+- Successful public verification: [run 35278219789](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35278219789)
 - Project: `projects/jsp-000746-sharp`
 - Lean: 4.34.0
 - Mathlib: `5ed2965256430c3649e86755f9576b54eca72435`; all transitive revisions are in `lake-manifest.json`.
