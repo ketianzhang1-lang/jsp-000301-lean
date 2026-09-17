@@ -1,0 +1,61 @@
+name: JSP-000725 interval construction
+on:
+  push:
+    branches: [jsp-000725-interval]
+    paths: [projects/jsp-000725/**, .github/workflows/jsp-000725.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: bash
+        working-directory: projects/jsp-000725
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install pinned Lean and locked dependencies
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.elan/bin:$PATH"
+          elan toolchain install "$(cat lean-toolchain)"
+          lake exe cache get
+          git diff --exit-code -- lake-manifest.json
+      - name: Compile proof with warnings treated as errors
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          lake build --wfail 2>&1 | tee evidence/build.log
+      - name: Replay kernel and audit
+        run: |
+          set -euo pipefail
+          lake env leanchecker --fresh JSP000725 2>&1 | tee evidence/kernel.log
+          lake env lean -DwarningAsError=true Audit.lean 2>&1 | tee evidence/axioms.log
+      - name: Audit allowed axioms and reject a false statement
+        run: |
+          set -euo pipefail
+          python3 audit.py evidence/axioms.log
+          printf 'import JSP000725\nexample : (1 : Nat) = 0 := by decide\n' > NegativeControl.lean
+          if lake env lean NegativeControl.lean > evidence/negative-control.log 2>&1; then
+            echo 'False theorem unexpectedly compiled'; exit 1
+          fi
+          grep -q 'error' evidence/negative-control.log
+      - name: Record tested commit and sources
+        if: always()
+        run: |
+          mkdir -p evidence
+          git rev-parse HEAD > evidence/SOURCE_COMMIT
+          sha256sum JSP000725.lean > evidence/SOURCE_SHA256
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: jsp-000725-evidence
+          path: projects/jsp-000725/evidence
+          retention-days: 90
+          if-no-files-found: error
