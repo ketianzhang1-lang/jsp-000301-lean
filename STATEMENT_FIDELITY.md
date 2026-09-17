@@ -1,26 +1,43 @@
-# Statement fidelity: JSP-000393 constructive component
+# Statement fidelity: complete minimum-support question
 
-## Exact Lean statements
+`Erdos485.termCount P` is `P.support.card` for `P : Polynomial ℚ`.
+`Erdos485.squareTermCounts n` contains exactly the support sizes of squares of
+rational polynomials having `n` terms. `Erdos485.f n` is its natural infimum;
+`f_attained` proves this is an attained minimum for every `n`.
+
+The imported complete theorem proves
 
 ```lean
-theorem family_counts (k : ℕ) :
-    (family k).support.card = 13 ^ k ∧
-    ((family k)^2).support.card = 12 ^ k
-
-theorem arbitrarily_sparse_squares (M : ℕ) :
-    ∃ p : ℤ[X], M * (p ^ 2).support.card < p.support.card
+Filter.Tendsto Erdos485.f Filter.atTop Filter.atTop
 ```
 
-The definitions use Mathlib's ordinary univariate integer polynomials, `Polynomial.support`, multiplication and square. `Polynomial.expand ℤ 25` is the substitution x ↦ x^25. Every natural parameter is quantified without a finite cutoff. Coefficients, finite support, degree bounds, uniqueness of separated exponents and noncancellation are proved inside Lean.
+All auxiliary Schinzel reduction hypotheses are discharged in the pinned
+upstream chain. The final theorem takes no additional unproved assumptions.
+This is the main question identified as Erdős 485 / JSP-000393, and includes
+the corresponding integer-polynomial lower-bound assertion. Our scope is the
+rational/integer formulation; no extension to arbitrary coefficient fields,
+optimal quantitative bound, or all-support-size optimal upper bound is claimed.
 
-## Relation to the catalog
+Our original family remains an actual recursively defined integer polynomial:
+`F₀ = 1`, `F_(k+1) = S * expand ℤ 25 F_k`. The square of the seed has degree
+24, so the proof of separated exponents applies both before and after squaring.
+The source module is unchanged from `a337720331a34599114a9d4669d6518d5e608f6f`.
 
-The catalog asks about bounds relating the number of terms of a polynomial to those of its square. Erdős 485's main lower-bound question is whether the attained minimum square support tends to infinity as original support tends to infinity. This development does not prove that statement. It supplies a constructive upper-bound phenomenon along original support sizes 13^k and an unbounded ratio theorem. Both counts tend to infinity, so the construction is fully consistent with Schinzel's theorem.
+`integer_support` proves equality of supports after the injective coefficient
+map from integers to rationals. `rational_family_counts` then gives exact
+counts `13^k` and `12^k` in the same domain as the original minimum. Applying
+`f_minimal` yields the genuine minimum bound, rather than a newly defined
+surrogate quantity.
 
-The seed is exactly the polynomial P_12 on p. 86 of Coppersmith–Davenport (1991), independently re-expanded and checked here. The amplification uses base 25 to avoid exponent collisions even after squaring. It does not assert that F_k is a complete polynomial (for k > 1 it has gaps), that all support sizes are attained, that the 13/12 seed is minimal, or that any asymptotic exponent is optimal. The formal coefficient ring is ℤ. No separate machine-checked extension to arbitrary coefficient fields is claimed.
+`arbitrarily_large_small_ratio` quantifies both the ratio factor `M` and the
+cutoff `N`. Its witness has size `n = 13^(12*(M+N+1))`; the proof uses the
+already established integer inequality `(k+12)*12^k ≤ 12*13^k`.
 
-## Existing formalization
+`integer_uniform_threshold` proves that every integer polynomial with at least
+`2 + 32^(2^B)` terms has a square with more than `B` terms. It follows from
+the full imported Schinzel bound, not a hypothesis replacing that bound.
 
-Official issue #44 registers the plby implementation of Schinzel's theorem at commit `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`, entry `src/latest/ErdosProblems/Erdos485.lean`. Its entry theorem is `Erdos485.erdos_485 : Tendsto f atTop atTop`. This work neither replaces nor imports that project. No first-formalization priority for JSP-000393 is claimed. The entry and registration were checked for scope; the entire upstream project was not exhaustively searched for every possible overlapping auxiliary construction.
-
-This comparison is by the submitter, not an independent referee attestation. Reviewers must decide whether the additional scope is relevant and eligible for any credit.
+The combined theorem `JSP000393Complete.jsp_000393` includes the original
+limit theorem and our constructive consequences. The lower-bound contribution
+retains its upstream attribution; the combination is not represented as an
+independent new proof of Schinzel's result. Organizer review remains necessary.

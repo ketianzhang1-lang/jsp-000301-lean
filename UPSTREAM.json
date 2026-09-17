@@ -1,0 +1,207 @@
+[
+  {
+    "path": "ErdosProblems/Erdos485.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485.lean",
+    "sha256": "b92791393456c2074304809d4a9a2ec3d714e8fb283848d32ee3b58c96f4e6dc",
+    "renames": {},
+    "port_sha256": "b92791393456c2074304809d4a9a2ec3d714e8fb283848d32ee3b58c96f4e6dc",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/Arithmetic.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/Arithmetic.lean",
+    "sha256": "e014aa0eff9511d6bc3b3dc95762d07d6ea33d7f04c6e3bdc3134e977a8a0c23",
+    "renames": {},
+    "port_sha256": "e014aa0eff9511d6bc3b3dc95762d07d6ea33d7f04c6e3bdc3134e977a8a0c23",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/Basic.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/Basic.lean",
+    "sha256": "d6598953a850d434c9bc2decbb46b6b033a0b72475c6d8aa722c912c7ee81c28",
+    "renames": {},
+    "port_sha256": "d6598953a850d434c9bc2decbb46b6b033a0b72475c6d8aa722c912c7ee81c28",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/Bivariate.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/Bivariate.lean",
+    "sha256": "4df868f00fe1d84382b2e9b7c33fc5e8610098cb52b8459b1864d405b23fe48e",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right"
+    },
+    "port_sha256": "f620bfd120c9b16cd4f18744a9ac07c8906f1d76ef778b5a808efe32d64a9604",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/Deformation.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/Deformation.lean",
+    "sha256": "dd7a17b09377097830b2d30eea76019ad8139517fd69a233c3a24a8ff95bb0b3",
+    "renames": {
+      "if_false": "ite_false"
+    },
+    "port_sha256": "ea42c2011099a780b47447a463d8c8f9d253fee92bf37599de0d21805e9c7821",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/Dirichlet.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/Dirichlet.lean",
+    "sha256": "37af4f9ed1260810dda0017ba40ac82de703697aab730248b8bff46d867aa1ca",
+    "renames": {},
+    "port_sha256": "37af4f9ed1260810dda0017ba40ac82de703697aab730248b8bff46d867aa1ca",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/EvenMultiplicity.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/EvenMultiplicity.lean",
+    "sha256": "2612c37e115197543243307a99783ff0b1580067f92a65fdbbf097fa0d6a72a3",
+    "renames": {},
+    "port_sha256": "2612c37e115197543243307a99783ff0b1580067f92a65fdbbf097fa0d6a72a3",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/Hajos.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/Hajos.lean",
+    "sha256": "5acdd2a7942d55ec8242c5614498256dd71b62415541590c4b9df96d6df21a68",
+    "renames": {},
+    "port_sha256": "5acdd2a7942d55ec8242c5614498256dd71b62415541590c4b9df96d6df21a68",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/Laurent.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/Laurent.lean",
+    "sha256": "49764d30c68f6a324e9abb09bce6edce6db3aa5f11b1213063113f6e6fab57e1",
+    "renames": {},
+    "port_sha256": "49764d30c68f6a324e9abb09bce6edce6db3aa5f11b1213063113f6e6fab57e1",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/Normalization.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/Normalization.lean",
+    "sha256": "514615fefcb12e5cf7b3b6f24e9f0af5aec8b29f54f2db16997cd40b57ee470e",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right"
+    },
+    "port_sha256": "70305ae93f74662950dcd23a9ca84072c49d9245ec3f0cea95d46dfe53c0bca8",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/RecursiveSpecialization.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/RecursiveSpecialization.lean",
+    "sha256": "2df8d4d653bee2570e9bd884bae7f0ce69329ba5e1f5dab51495508064a173dd",
+    "renames": {},
+    "port_sha256": "2df8d4d653bee2570e9bd884bae7f0ce69329ba5e1f5dab51495508064a173dd",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/ResultantDegree.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/ResultantDegree.lean",
+    "sha256": "93f7a80e770b7e0c915c2084fab63ebd78adf6f81d6752abc85670ac34b670e7",
+    "renames": {},
+    "port_sha256": "93f7a80e770b7e0c915c2084fab63ebd78adf6f81d6752abc85670ac34b670e7",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/ResultantGap.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/ResultantGap.lean",
+    "sha256": "de46800bf8257a14192703b9e6d53a3045c1fbbe079a5e3f36150aa7b6fd6dab",
+    "renames": {
+      "if_pos": "ite_eq_left"
+    },
+    "port_sha256": "e9d3ed4db7df4faef42d3240a0b22f64e26739011c94d1aa61d1ec8a44214f32",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/ResultantSpecialize.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/ResultantSpecialize.lean",
+    "sha256": "193e65e4651609e2847216ec2a156ccd172cdea6d0d516015d56d69ac62953c8",
+    "renames": {},
+    "port_sha256": "193e65e4651609e2847216ec2a156ccd172cdea6d0d516015d56d69ac62953c8",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/Schinzel.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/Schinzel.lean",
+    "sha256": "233c59c5df7ee6bedb5b46b1511f5c314d97889e63bcd7c54b644dc4c6e409b3",
+    "renames": {},
+    "port_sha256": "233c59c5df7ee6bedb5b46b1511f5c314d97889e63bcd7c54b644dc4c6e409b3",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/Specialization.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/Specialization.lean",
+    "sha256": "0f10b619b633b9a42b613e2c825fb31a223b321d33515b71ccc3dbf8e38eab99",
+    "renames": {},
+    "port_sha256": "0f10b619b633b9a42b613e2c825fb31a223b321d33515b71ccc3dbf8e38eab99",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/SquareDescent.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/SquareDescent.lean",
+    "sha256": "8e73dcb175f45bac5bd3acb3022a0ecb2e94d282408c7965df39520328e6105d",
+    "renames": {},
+    "port_sha256": "8e73dcb175f45bac5bd3acb3022a0ecb2e94d282408c7965df39520328e6105d",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/SquarefreeFactor.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/SquarefreeFactor.lean",
+    "sha256": "374bc001bc40511099c60e64c0e115da4e10dc291dc39b0140c6426a09cd4f66",
+    "renames": {},
+    "port_sha256": "374bc001bc40511099c60e64c0e115da4e10dc291dc39b0140c6426a09cd4f66",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/SquarefreeGap.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/SquarefreeGap.lean",
+    "sha256": "ad817821cf9d82c17ee68d12d73825d48997495c0ff82873efa67971e7161cbc",
+    "renames": {},
+    "port_sha256": "ad817821cf9d82c17ee68d12d73825d48997495c0ff82873efa67971e7161cbc",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/Trinomial.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/Trinomial.lean",
+    "sha256": "d8cc674790cedb96c8d9e5d4752bb54145f121d8056cda1384b3ef454529fcbf",
+    "renames": {},
+    "port_sha256": "d8cc674790cedb96c8d9e5d4752bb54145f121d8056cda1384b3ef454529fcbf",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/Weighted.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/Weighted.lean",
+    "sha256": "8f0d75090bbd968d4b3fee360b662ac24986012ef8ba6de2eda116e0b2dca134",
+    "renames": {},
+    "port_sha256": "8f0d75090bbd968d4b3fee360b662ac24986012ef8ba6de2eda116e0b2dca134",
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos485/WeightedCoprime.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/WeightedCoprime.lean",
+    "sha256": "d8bcb943734131b15d7f4354af4df9b6ea37b6af2380d8c7eb6f1ddd092c885a",
+    "renames": {
+      "if_pos": "ite_eq_left"
+    },
+    "port_sha256": "4ad89381c339d0f36e1df79c7b774d0b60c244dbba623608f71ae98792cec6fd",
+    "edits": [
+      [
+        "MvPolynomial.monomial_mul]",
+        "MvPolynomial.monomial_mul_monomial]"
+      ],
+      [
+        "MvPolynomial.coeff (mvExponent a b)\n        (Polynomial.Bivariate.equivMvPolynomial K F)",
+        "(Polynomial.Bivariate.equivMvPolynomial K F).coeff (mvExponent a b)"
+      ],
+      [
+        "MvPolynomial.coeff d Qd",
+        "Qd.coeff d"
+      ],
+      [
+        "MvPolynomial.coeff d Q",
+        "Q.coeff d"
+      ]
+    ]
+  }
+]

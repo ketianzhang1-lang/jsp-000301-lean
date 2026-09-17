@@ -1,105 +1,53 @@
-name: Lean verification
-
+name: JSP-000393 complete proof verification
 on:
   push:
-    branches: ["main", "jsp-000393-sparse-squares"]
-  pull_request:
-    branches: ["main"]
+    branches: [jsp-000393-sparse-squares]
   workflow_dispatch:
-
 permissions:
   contents: read
-
+concurrency:
+  group: jsp-000393-complete-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
+    env:
+      LEAN_NUM_THREADS: '1'
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Bootstrap Lean and resolve dependencies
-        shell: bash
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Replay memory allowance
         run: |
-          set -euxo pipefail
+          sudo fallocate -l 8G /swapfile-jsp393
+          sudo chmod 600 /swapfile-jsp393
+          sudo mkswap /swapfile-jsp393
+          sudo swapon /swapfile-jsp393
+      - name: Install pinned Lean
+        run: |
+          set -euo pipefail
           curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
           "$HOME/.elan/bin/elan" toolchain install "$(cat lean-toolchain)"
-          if [ ! -f lake-manifest.json ]; then
-            "$HOME/.elan/bin/lake" update
-          fi
-          test -s lake-manifest.json
-          cat lake-manifest.json
-
-      - name: Checkout pinned Lean action
-        uses: actions/checkout@v4
-        with:
-          repository: leanprover/lean-action
-          ref: 50fcf42d2e460296f1a34b402e990d1b24f8b596
-          path: .ci/lean-action
-          persist-credentials: false
-
-      - name: Pin compatible NaNoda and exporter revisions
-        shell: bash
+      - name: Fetch and hash-check full upstream proof
+        run: python3 scripts/bootstrap.py
+      - name: Fetch pinned Mathlib cache
         run: |
-          set -euo pipefail
-          python3 - <<'PY'
-          from pathlib import Path
-
-          script = Path(".ci/lean-action/scripts/run_nanoda.sh")
-          text = script.read_text()
-          # Upstream lean-action issue #169 / PR #177: debug uses a stale
-          # export parser. Change tool revisions, not checking semantics.
-          pins = [
-              ("git clone --depth 1 https://github.com/leanprover/lean4export.git _lean4export",
-               "https://github.com/leanprover/lean4export.git", "_lean4export",
-               "6cea97789dc088ea47fcea15692db85685aedac5"),
-              ("git clone --depth 1 --branch debug https://github.com/ammkrn/nanoda_lib.git _nanoda_lib",
-               "https://github.com/ammkrn/nanoda_lib.git", "_nanoda_lib",
-               "4c544ed4099c8227f07d5de77ad1e69fb0740a27"),
-          ]
-          for old, url, directory, sha in pins:
-              if text.count(old) != 1:
-                  raise SystemExit(f"Unexpected upstream script; refusing to patch {directory}")
-              new = "\n".join([
-                  f"git init {directory}",
-                  f"git -C {directory} remote add origin {url}",
-                  f"git -C {directory} fetch --depth 1 origin {sha}",
-                  f"git -C {directory} checkout --detach FETCH_HEAD",
-                  f'test "$(git -C {directory} rev-parse HEAD)" = "{sha}"',
-              ])
-              text = text.replace(old, new)
-              print(f"Pinned {directory}: {sha}")
-          text = text.replace(
-              "# Using debug branch which has fixes for recent Lean kernel changes",
-              "# Pinned current NaNoda parser; the former debug branch is stale.")
-          script.write_text(text)
-          PY
-          git -C .ci/lean-action diff -- scripts/run_nanoda.sh
-
-      - name: Build and verify Lean proof
-        uses: ./.ci/lean-action
-        env:
-          LEAN_NUM_THREADS: "1"
+          lake exe cache get Mathlib
+          lake build Mathlib
+      - name: Compile, replay and audit complete proof
+        run: python3 scripts/verify_complete.py
+      - name: Record source revision
+        if: always()
+        run: |
+          mkdir -p evidence-complete
+          git rev-parse HEAD > evidence-complete/SOURCE_COMMIT
+          cp lean-toolchain lake-manifest.json UPSTREAM.json SOURCE_SHA256SUMS evidence-complete/
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
         with:
-          build: true
-          build-args: "--wfail"
-          use-mathlib-cache: true
-          use-github-cache: false
-          leanchecker: true
-          leanchecker-args: "JSP000393"
-          nanoda: true
-          nanoda-allow-sorry: false
-          axiom-audit: true
-          axiom-audit-root: "JSP000393"
-
-      - name: Verify dependency manifest exists
-        run: test -s lake-manifest.json
-
-      - name: Upload resolved dependency manifest
-        if: ${{ always() && hashFiles('lake-manifest.json') != '' }}
-        uses: actions/upload-artifact@v4
-        with:
-          name: lake-manifest
-          path: lake-manifest.json
+          name: jsp-000393-complete-verification
+          path: evidence-complete
           if-no-files-found: error
+          retention-days: 90

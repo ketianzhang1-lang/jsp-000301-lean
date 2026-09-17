@@ -10,3 +10,10 @@ require mathlib from git
 @[default_target]
 lean_lib JSP000393 where
   roots := #[`JSP000393]
+
+lean_lib ErdosProblems where
+  roots := #[`ErdosProblems.Erdos485]
+
+@[default_target]
+lean_lib JSP000393Complete where
+  roots := #[`JSP000393Complete, `AuditComplete]
