@@ -1,0 +1,6 @@
+.lake/
+evidence/
+Negative.lean
+LocalAudit.lean
+Check.lean
+Signatures.lean
