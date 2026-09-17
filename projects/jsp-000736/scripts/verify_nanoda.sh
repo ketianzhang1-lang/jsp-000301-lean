@@ -22,8 +22,9 @@ cp lean-toolchain "$work/exporter/lean-toolchain"
 (cd "$work/exporter" && lake build)
 (cd "$work/checker" && cargo build --release --locked)
 # Export each named target and its entire dependency closure.
-lake env "$work/exporter/.lake/build/bin/lean4export" JSP000736 -- \
-  JSP000736.erdos_885_k_eq_4 \
+lake env "$work/exporter/.lake/build/bin/lean4export" JSP000736Scaling -- \
+  JSP000736.erdos_885_k_eq_4 JSP000736.scaled_k_eq_4 \
+  JSP000736.k_eq_4_above_every_bound JSP000736.infinitely_many_k_eq_4_witnesses \
   > evidence/export.ndjson
 python3 - <<'PY'
 import json
@@ -36,7 +37,10 @@ config = {
     "nat_extension": True,
     "string_extension": True,
     "pp_declars": ["JSP000736.factorDifferenceSet", "JSP000736.numbers",
-                   "JSP000736.differences", "JSP000736.erdos_885_k_eq_4"],
+                   "JSP000736.differences", "JSP000736.erdos_885_k_eq_4",
+                   "JSP000736.scaledNumbers", "JSP000736.scaledDifferences",
+                   "JSP000736.scaled_k_eq_4", "JSP000736.k_eq_4_above_every_bound",
+                   "JSP000736.infinitely_many_k_eq_4_witnesses"],
     "pp_output_path": "evidence/nanoda-statements.txt",
     "pp_to_stdout": False,
     "print_success_message": True,

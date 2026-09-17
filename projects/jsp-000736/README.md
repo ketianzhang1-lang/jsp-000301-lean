@@ -58,7 +58,7 @@ bash scripts/verify_nanoda.sh
 ```
 
 The first script compiles with warnings treated as errors, rechecks the module
-with leanchecker, audits all three theorems against the standard axiom allowlist
+with leanchecker, audits all ten theorems against the standard axiom allowlist
 (propext, Classical.choice, Quot.sound), verifies the source statement and
 manifest revisions, and checks rejection of false arithmetic. No `sorry`,
 custom axiom or `native_decide` is used in the submitted proof.
@@ -70,3 +70,27 @@ CI uses network access and the standard Mathlib cache; a full offline rebuild
 of all dependencies is not claimed. Refer to the linked run and its artifacts
 for actual validation status. Passing software checks is separate from prize
 acceptance.
+
+## Dilation supplement (September 17, 2026)
+
+`JSP000736Scaling.lean` adds a fully quantified elementary extension of the
+existing certificate. For every positive natural t, multiply the four integers
+by t² and the four differences by t. Factoring t²n as (ta)(tb) proves the
+transport of every complementary-factor difference. Positive multiplication
+preserves distinctness. The supplemented theorems prove:
+
+1. Every positive scale satisfies the original k = 4 cardinality statement.
+2. For every natural bound M, there are four distinct integers and four common
+   differences, all greater than M.
+3. There are infinitely many distinct four-integer witness sets. Injectivity
+   is proved by taking the sum of each scaled set.
+
+The new module is checked by `ScalingAudit.lean` and a separately restated
+mathematical specification in `ScalingChallenge.lean`. The main module and
+its sixteen factor-pair certificates are unchanged.
+
+These are elementary consequences of the cited Bremner construction, not new
+mathematics or another award claim. Arbitrarily large **values** do not establish
+arbitrarily many common differences: the number guaranteed here remains four.
+The general problem and k = 5 are still outside this submission's scope. This
+supplement belongs to the existing [official PR 347](https://github.com/TheJustinSunPrize/awards/pull/347).

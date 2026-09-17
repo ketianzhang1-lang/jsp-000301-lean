@@ -4,13 +4,16 @@ cd "$(dirname "$0")/.."
 mkdir -p evidence
 lake build --wfail 2>&1 | tee evidence/build.log
 lake env leanchecker JSP000736 2>&1 | tee evidence/kernel-main.log
+lake env leanchecker JSP000736Scaling 2>&1 | tee evidence/kernel-scaling.log
 lake env lean Audit.lean 2>&1 | tee evidence/axioms.log
+lake env lean ScalingAudit.lean 2>&1 | tee -a evidence/axioms.log
 lake env lean Challenge.lean 2>&1 | tee evidence/statement-comparison.log
+lake env lean ScalingChallenge.lean 2>&1 | tee -a evidence/statement-comparison.log
 python3 - <<'PY'
 from pathlib import Path
 import re, json, subprocess
-names = re.findall(r'^#print axioms (\S+)', Path('Audit.lean').read_text(), re.M)
-assert len(names) == 3
+names = re.findall(r'^#print axioms (\S+)', Path('Audit.lean').read_text() + Path('ScalingAudit.lean').read_text(), re.M)
+assert len(names) == 10
 log = Path('evidence/axioms.log').read_text()
 for name in names:
     m = re.search("'" + re.escape(name) + r"' depends on axioms: \[([^\]]*)\]", log)
@@ -23,10 +26,10 @@ for pkg in json.loads(Path('lake-manifest.json').read_text())['packages']:
     head = subprocess.check_output(['git','-C','.lake/packages/'+pkg['name'],
                                    'rev-parse','HEAD'], text=True).strip()
     assert head == pkg['rev'], (pkg['name'], head)
-for source in ('JSP000736.lean', 'Challenge.lean'):
+for source in ('JSP000736.lean', 'JSP000736Scaling.lean', 'Challenge.lean', 'ScalingChallenge.lean'):
     assert not re.search(r'\b(sorry|admit|axiom|native_decide)\b', Path(source).read_text()), source
 print('Proof source scan passed.')
-print('Three target axiom audits and all nine dependency revision checks passed.')
+print('Ten target axiom audits and all nine dependency revision checks passed.')
 PY
 printf 'import JSP000736\nexample : (1 : Nat) = 0 := by decide\n' > Negative.lean
 trap 'rm -f Negative.lean' EXIT
