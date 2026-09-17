@@ -1,6 +1,7 @@
 # JSP-000506: Heckel's concentration reduction
 
-**Development status: not yet verified or submitted for prize review.**
+**Verification status: Lean build, fresh kernel replay, and axiom audit passed.**
+Prize eligibility and independent mathematical review remain pending.
 
 This project formalizes Proposition 3 of Annika Heckel's *On a question of
 Erdős and Gimbel on the cochromatic number*, Electronic Journal of Combinatorics
@@ -11,6 +12,10 @@ For every graph order `n` and natural number `g`, if a uniform random simple
 labelled graph has `chi - zeta <= g` with probability at least 999/1000, there
 is an integer `k` for which `k <= chi <= k+g` has probability greater than 9/10.
 Here `chi` is the chromatic number and `zeta` is the cochromatic number.
+
+The paper uses integer sequences and a strict `> 0.999` premise. This is the
+pointwise natural-bound version, also allowing equality at `0.999`; a negative
+gap bound cannot meet the probability premise because `zeta <= chi`.
 
 The main target is `JSP000506.heckel_proposition3`. It has exactly the
 gap-probability premise in the mathematical proposition. Auxiliary monotonicity,
@@ -47,7 +52,8 @@ The catalog and available issue/PR records were checked on September 17, 2026;
 no JSP-000506 filing was found in that scoped check. This is not a guarantee
 that no relevant proof exists elsewhere. A later global search located the
 existing SamPetkov/Erdos formalization of a stronger asymptotic result; see
-`PRIOR_ART.md`. No first-Lean claim is made. Any recipient identity remains
+`PRIOR_ART.md`. No first-Lean claim is made. The catalog currently marks this entry `Eligible to claim: No`; this package
+does not override that marker. Any recipient identity remains
 `RECIPIENT-JSP-000506-KZ-A`, confirmation pending.
 
 ## Reproduction
@@ -62,6 +68,6 @@ lake env leanchecker --fresh JSP000506
 lake env lean Audit.lean
 ```
 
-No successful build is claimed until the actual run is recorded. Repository
-record checks, proof compilation, and organizer acceptance are separate steps.
+See `VERIFICATION.md` for the actual successful run and exact tested commit.
+Repository record checks, proof compilation, and organizer acceptance are separate steps.
 New code is licensed under Apache-2.0; no article text or PDF is redistributed.

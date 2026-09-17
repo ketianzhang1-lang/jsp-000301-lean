@@ -1,0 +1,13 @@
+2026-09-17T01:01:12.2455297Z lake build --wfail 2>&1 | tee evidence/build.log
+2026-09-17T01:01:17.1327888Z ✔ [3094/3095] Built JSP000506 (3.0s)
+2026-09-17T01:01:17.1372976Z Build completed successfully (3095 jobs).
+2026-09-17T01:01:17.1748571Z lake env leanchecker --fresh JSP000506 2>&1 | tee evidence/kernel.log
+2026-09-17T01:01:17.1749049Z lake env lean Audit.lean 2>&1 | tee evidence/axioms.log
+2026-09-17T01:09:02.0862541Z 'JSP000506.concentration_reduction' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T01:09:02.0863856Z 'JSP000506.heckel_proposition3' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T01:09:02.0864754Z 'JSP000506.chi_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T01:09:02.0865537Z 'JSP000506.zeta_compl' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T01:09:02.0866400Z 'JSP000506.zeta_le_chi' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T01:09:03.0172389Z SHA256 digest of uploaded artifact zip is f25b5e97519934577667e7f553d1a9df3fd8be322635808df371a2b3ab053390
+2026-09-17T01:09:03.2531205Z Artifact jsp-000506-evidence.zip successfully finalized. Artifact ID 10475394250
+2026-09-17T01:09:03.2532472Z Artifact jsp-000506-evidence has been successfully uploaded! Final size is 921 bytes. Artifact ID is 10475394250
