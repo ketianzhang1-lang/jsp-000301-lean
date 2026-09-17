@@ -7,6 +7,7 @@ import Mathlib.NumberTheory.Bertrand
 import Mathlib.Algebra.BigOperators.Intervals
 import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.Ring
+import Mathlib.Data.Nat.Squarefree
 
 namespace JSP000476
 open Finset
@@ -183,5 +184,128 @@ theorem example_twelve :
     omega
   · have := triangle_double 12
     omega
+
+/-- A squarefree multiplier has the same perfect-power obstruction as a prime. -/
+theorem squarefree_mul_not_power {a t : ℕ} (ha : Squarefree a)
+    (ht : 0 < t) (hlt : t < a) (x k : ℕ) (hk : 2 ≤ k) : a * t ≠ x ^ k := by
+  intro he
+  have hax : a ∣ x := (ha.dvd_pow_iff_dvd (by omega : k ≠ 0)).mp
+    (he ▸ Nat.dvd_mul_right a t)
+  have hsq : a ^ 2 ∣ x ^ k :=
+    dvd_trans (pow_dvd_pow_of_dvd hax 2) (pow_dvd_pow x hk)
+  rw [← he, pow_two] at hsq
+  have hat : a ∣ t := Nat.dvd_of_mul_dvd_mul_left (Nat.pos_of_ne_zero ha.ne_zero) hsq
+  exact (not_le_of_gt hlt) (Nat.le_of_dvd ht hat)
+
+/-- Every feasible positive coefficient sum is realized by a nonempty subset. -/
+theorem multiple_sum_realization {d m t : ℕ} (hd : 0 < d)
+    (ht : 0 < t) (htm : t ≤ triangle m) :
+    ∃ S ⊆ multiples d m, S.Nonempty ∧ ∑ a ∈ S, a = d * t := by
+  obtain ⟨T, hT, he⟩ := all_sums_attained m t htm
+  have hinj : Function.Injective (fun i : ℕ => d * (i + 1)) := by
+    intro i j hij
+    have := Nat.mul_left_cancel hd hij
+    omega
+  refine ⟨T.image (fun i => d * (i + 1)), image_subset_image hT, ?_, ?_⟩
+  · apply image_nonempty.mpr
+    by_contra hn
+    have : T = ∅ := not_nonempty_iff_eq_empty.mp hn
+    simp [this] at he
+    omega
+  · rw [sum_image (fun i _ j _ hij => hinj hij), ← mul_sum, he]
+
+theorem squarefree_multiples_power_free {a m : ℕ} (ha : Squarefree a)
+    (hm : triangle m < a) : PowerSumFree (multiples a m) := by
+  intro S hS hn x k hk
+  obtain ⟨T, hT, rfl⟩ := subset_image_iff.mp hS
+  have hinj : Function.Injective (fun i : ℕ => a * (i + 1)) := by
+    intro i j he
+    have := Nat.mul_left_cancel (Nat.pos_of_ne_zero ha.ne_zero) he
+    omega
+  rw [sum_image (fun i _ j _ he => hinj he), ← mul_sum]
+  have hTn : T.Nonempty := image_nonempty.mp hn
+  have ht : 0 < ∑ i ∈ T, (i + 1) := sum_pos (by intros; omega) hTn
+  exact squarefree_mul_not_power ha ht ((subset_sum_le_triangle hT).trans_lt hm) x k hk
+
+/-- For a squarefree step, square avoidance and all-perfect-power avoidance agree. -/
+theorem squarefree_exact_criterion {a : ℕ} (ha : Squarefree a) (m : ℕ) :
+    (SquareSumFree (multiples a m) ↔ m * (m + 1) < 2 * a) ∧
+    (PowerSumFree (multiples a m) ↔ m * (m + 1) < 2 * a) := by
+  have htriangle := triangle_double m
+  have hs : SquareSumFree (multiples a m) ↔ triangle m < a := by
+    constructor
+    · intro h
+      by_contra hn
+      obtain ⟨S, hS, hne, he⟩ := multiple_sum_realization
+        (Nat.pos_of_ne_zero ha.ne_zero) (Nat.pos_of_ne_zero ha.ne_zero)
+        (by omega : a ≤ triangle m)
+      exact h S hS hne a (by simpa [pow_two] using he)
+    · intro hm
+      exact power_free_square_free (squarefree_multiples_power_free ha hm)
+  refine ⟨?_, ?_⟩
+  · rw [hs]; omega
+  · constructor
+    · intro h
+      have := hs.mp (power_free_square_free h)
+      omega
+    · intro h
+      exact squarefree_multiples_power_free ha (by omega)
+
+/-- A positive square factor may be cancelled from an equality to a square. -/
+theorem cancel_square_factor {b t x : ℕ} (hb : 0 < b) (he : b ^ 2 * t = x ^ 2) :
+    ∃ y : ℕ, t = y ^ 2 := by
+  have hd : b ^ 2 ∣ x ^ 2 := he ▸ Nat.dvd_mul_right (b ^ 2) t
+  obtain ⟨y, rfl⟩ := (Nat.pow_dvd_pow_iff (by decide : 2 ≠ 0)).mp hd
+  refine ⟨y, ?_⟩
+  rw [mul_pow] at he
+  exact Nat.mul_left_cancel (pow_pos hb 2) he
+
+/-- Complete criterion for any positive step given its square-times-squarefree decomposition. -/
+theorem general_step_criterion {d a b : ℕ} (ha : Squarefree a) (hb : 0 < b)
+    (hd : d = b ^ 2 * a) (m : ℕ) :
+    SquareSumFree (multiples d m) ↔ m * (m + 1) < 2 * a := by
+  have hap : 0 < a := Nat.pos_of_ne_zero ha.ne_zero
+  have hdp : 0 < d := by rw [hd]; positivity
+  have htriangle := triangle_double m
+  constructor
+  · intro h
+    by_contra hn
+    obtain ⟨S, hS, hne, he⟩ := multiple_sum_realization hdp hap
+      (by omega : a ≤ triangle m)
+    apply h S hS hne (b * a)
+    rw [he, hd]
+    ring
+  · intro h S hS hn x he
+    obtain ⟨T, hT, rfl⟩ := subset_image_iff.mp hS
+    have hinj : Function.Injective (fun i : ℕ => d * (i + 1)) := by
+      intro i j hij
+      have := Nat.mul_left_cancel hdp hij
+      omega
+    rw [sum_image (fun i _ j _ hij => hinj hij), ← mul_sum, hd, mul_assoc] at he
+    obtain ⟨y, hy⟩ := cancel_square_factor hb he
+    have hTn : T.Nonempty := image_nonempty.mp hn
+    have ht : 0 < ∑ i ∈ T, (i + 1) := sum_pos (by intros; omega) hTn
+    have hlt : (∑ i ∈ T, (i + 1)) < a := by
+      have := subset_sum_le_triangle hT
+      omega
+    exact squarefree_mul_not_power ha ht hlt y 2 (by omega) hy
+
+/-- Every positive integer step admits the complete classification. -/
+theorem all_positive_steps_classified (d : ℕ) (hd : 0 < d) :
+    ∃ a b : ℕ, 0 < a ∧ 0 < b ∧ Squarefree a ∧ d = b ^ 2 * a ∧
+      ∀ m : ℕ, SquareSumFree (multiples d m) ↔ m * (m + 1) < 2 * a := by
+  obtain ⟨a, b, ha, hb, he, hsf⟩ := Nat.sq_mul_squarefree_of_pos hd
+  exact ⟨a, b, ha, hb, hsf, he.symm, general_step_criterion hsf hb he.symm⟩
+
+/-- The general-step result concerns squares: higher powers need not follow. -/
+theorem nonsquare_step_does_not_imply_power_avoidance :
+    SquareSumFree (multiples 8 1) ∧ ¬ PowerSumFree (multiples 8 1) := by
+  constructor
+  · apply (general_step_criterion (a := 2) (b := 2)
+      (Nat.prime_two.squarefree) (by omega) (by norm_num) 1).mpr
+    norm_num
+  · intro h
+    apply h {8} (by simp [multiples]) (by simp) 2 3 (by omega)
+    norm_num
 
 end JSP000476

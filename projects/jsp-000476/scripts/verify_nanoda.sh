@@ -24,6 +24,8 @@ cp lean-toolchain "$work/exporter/lean-toolchain"
 # Export each named target and its entire dependency closure.
 lake env "$work/exporter/.lake/build/bin/lean4export" JSP000476 -- \
   JSP000476.exact_criterion JSP000476.multiples_power_free_iff JSP000476.cubic_lower_bound JSP000476.example_twelve \
+  JSP000476.squarefree_exact_criterion JSP000476.general_step_criterion \
+  JSP000476.all_positive_steps_classified JSP000476.nonsquare_step_does_not_imply_power_avoidance \
   > evidence/export.ndjson
 python3 - <<'PY'
 import json
@@ -36,7 +38,8 @@ config = {
     "nat_extension": True,
     "string_extension": True,
     "pp_declars": ["JSP000476.SquareSumFree", "JSP000476.PowerSumFree",
-                   "JSP000476.exact_criterion", "JSP000476.cubic_lower_bound"],
+                   "JSP000476.exact_criterion", "JSP000476.cubic_lower_bound",
+                   "JSP000476.general_step_criterion", "JSP000476.all_positive_steps_classified"],
     "pp_output_path": "evidence/nanoda-statements.txt",
     "pp_to_stdout": False,
     "print_success_message": True,

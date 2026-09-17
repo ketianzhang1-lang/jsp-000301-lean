@@ -1,4 +1,4 @@
-# JSP-000476: prime-multiple construction and exact criterion
+# JSP-000476: all positive steps, exact square-subset-sum criterion
 
 This package independently formalizes a classical lower-bound construction for
 [JSP-000476](https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0401-0500.md#JSP-000476),
@@ -6,6 +6,28 @@ This package independently formalizes a classical lower-bound construction for
 It proves an exact criterion for the construction and the stronger property of
 avoiding every perfect-power subset sum. It does **not** prove the Nguyen–Vu
 upper bound or the complete asymptotic solution of the original problem.
+
+## Revision 2: classification for every positive integer step
+
+Let d > 0 and write d = b^2*a, where a is squarefree and b > 0.
+For every m, the set {d,2d,...,md} has no nonempty square subset sum
+**if and only if m(m+1) < 2a** (`general_step_criterion`).
+`all_positive_steps_classified` obtains such a decomposition for every
+positive d and supplies the classification uniformly for all m.
+
+For a squarefree step a (including composite a), the condition also
+characterizes avoidance of every perfect-power subset sum
+(`squarefree_exact_criterion`). Nguyen–Vu Remark 1.3 already notes that
+squarefree steps can replace primes in the classical construction.
+No mathematical priority is claimed for this extension or classification.
+
+For a general step d, the classification is specifically about **squares**.
+The formal counterexample `nonsquare_step_does_not_imply_power_avoidance`
+shows that {8} has no square subset sum but does have a cube subset sum.
+
+The earlier prime-step theorems and uniform lower bound are retained.
+This extends the construction family, not the upper bound for arbitrary
+integer sets in the original problem.
 
 ## Mathematical statements
 
@@ -41,7 +63,7 @@ mp <= m^2(m+1). The empty case m=0 is handled explicitly.
 
 ## Scope, attribution and overlap
 
-The construction is credited to Erdős in Example 1.2 of Nguyen and Vu's *Squares in sumsets*, 
+The construction is credited to Erdős in Example 1.2 of Nguyen and Vu's *Squares in sumsets*. That paper
 provides the context and the substantially deeper upper bound:
 https://arxiv.org/abs/0811.1311 (published in 2010).
 The mathematical discovery of the original result is not claimed here.
@@ -69,13 +91,13 @@ Pinned Mathlib: 5ed2965256430c3649e86755f9576b54eca72435 (v4.34.0).
 Other dependencies are pinned in lake-manifest.json.
 
 ```sh
-lake exe cache get Mathlib.NumberTheory.Bertrand Mathlib.Algebra.BigOperators.Intervals Mathlib.Tactic.Linarith Mathlib.Tactic.Ring
+lake exe cache get Mathlib.Data.Nat.Squarefree Mathlib.NumberTheory.Bertrand Mathlib.Algebra.BigOperators.Intervals Mathlib.Tactic.Linarith Mathlib.Tactic.Ring
 bash scripts/verify.sh
 bash scripts/verify_nanoda.sh
 ```
 
 The first script builds with warnings as errors, replays the compiled module
-through leanchecker, audits twelve target declarations, checks dependency
+through leanchecker, audits twenty target declarations, checks dependency
 revisions, and rejects an intentionally false arithmetic theorem. The second
 exports the target dependency closures and checks them with pinned NaNoda,
 permitting only propext, Classical.choice and Quot.sound.

@@ -9,7 +9,7 @@ python3 - <<'PY'
 from pathlib import Path
 import re, json, subprocess
 names = re.findall(r'^#print axioms (\S+)', Path('Audit.lean').read_text(), re.M)
-assert len(names) == 12
+assert len(names) == 20
 log = Path('evidence/axioms.log').read_text()
 for name in names:
     m = re.search("'" + re.escape(name) + r"' depends on axioms: \[([^\]]*)\]", log)
@@ -22,7 +22,7 @@ for pkg in json.loads(Path('lake-manifest.json').read_text())['packages']:
     head = subprocess.check_output(['git','-C','.lake/packages/'+pkg['name'],
                                    'rev-parse','HEAD'], text=True).strip()
     assert head == pkg['rev'], (pkg['name'], head)
-print('Twelve target axiom audits and all nine dependency revision checks passed.')
+print('Twenty target axiom audits and all nine dependency revision checks passed.')
 PY
 printf 'import JSP000476\nexample : (1 : Nat) = 0 := by decide\n' > Negative.lean
 trap 'rm -f Negative.lean' EXIT

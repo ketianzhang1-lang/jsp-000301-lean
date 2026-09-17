@@ -1,9 +1,10 @@
-# Verification status
+# Verification status — revision 2
 
-The proof was elaborated locally with Lean 4.34.0 at trust level zero,
-using the cached Mathlib 4.34.0 environment. All twelve target axiom audits
-passed with only the standard axioms propext, Classical.choice and Quot.sound.
+The arbitrary-positive-step classification and all earlier results have
+passed local Lean 4.34.0 elaboration at trust level zero. The new full CI
+build, twenty-target axiom audit, leanchecker replay and NaNoda run are
+pending. Their observed results will be recorded in the submission package.
 
-A fresh CI build, leanchecker replay and strict NaNoda run are pending.
-This file will be updated with their observed results and immutable receipts.
-These are contributor-run checks, not organizer approval or an award decision.
+Revision 1's successful verification remains available at
+https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35171337199
+This link checks the earlier prime-step version, not this revision.
