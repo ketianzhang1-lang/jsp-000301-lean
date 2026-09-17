@@ -1,0 +1,18 @@
+Standalone check: no project-specific compiled proof imports.
+Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)
+FullProof.lean exit: 0
+theorem JSP912.erdos_1099 : ∀ (α : ℝ), 1 < α → ∃ C, ∀ (M : ℕ), ∃ n, M ≤ n ∧ JSP912.hAlpha α n ≤ C :=
+fun α hα =>
+  Exists.casesOn (JSP912.jsp_000912_full α hα) fun C h =>
+    And.casesOn h fun left hC =>
+      Exists.intro C fun M =>
+        Exists.casesOn (hC M) fun n h =>
+          And.casesOn h fun left right => And.casesOn right fun hn hbound => Exists.intro n ⟨hn, hbound⟩
+'JSP912.grid_approx' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP912.partialProd_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP912.lower_gap_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP912.all_gap_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP912.hAlpha_candidate_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP912.jsp_000912_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP912.erdos_1099' depends on axioms: [propext, Classical.choice, Quot.sound]
+Audit.lean exit: 0

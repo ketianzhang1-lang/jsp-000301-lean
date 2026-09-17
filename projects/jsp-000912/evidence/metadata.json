@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-17",
+  "checked_at_utc": "2026-09-17T10:02:48.894148+00:00",
+  "problem": "JSP-000912 / Erdos 1099",
+  "scope": "Full main theorem, all real alpha > 1, cofinal positive witnesses, complete divisor list",
+  "lean_version": "4.19.0",
+  "lean_commit": "6caaee842e94",
+  "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "source_modules_lines": 792,
+  "checked_file": "FullProof.lean",
+  "warning_as_error": true,
+  "commands": [
+    "lean -DwarningAsError=true -o FullProof.olean FullProof.lean",
+    "lean -DwarningAsError=true Audit.lean"
+  ],
+  "project_compiled_imports": "none in standalone proof; only pinned Mathlib imports",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "audit_theorems": [
+    "JSP912.grid_approx",
+    "JSP912.partialProd_bound",
+    "JSP912.lower_gap_weight",
+    "JSP912.all_gap_cost",
+    "JSP912.hAlpha_candidate_bound",
+    "JSP912.jsp_000912_full",
+    "JSP912.erdos_1099"
+  ],
+  "first_formalization_claim": false,
+  "prior_public_formalization": {
+    "repository": "plby/lean-proofs",
+    "revision": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+    "path": "src/latest/ErdosProblems/Erdos1099.lean",
+    "independently_recompiled_here": false
+  },
+  "prize_submission_made": false,
+  "organizer_approved": false,
+  "independent_kernel_check": false,
+  "notes": [
+    "Complete contributor-side proof verification, not a novelty certificate.",
+    "Pinned Lean 4.19.0 has not been certified here under the prize minimum-safe-version policy."
+  ]
+}
