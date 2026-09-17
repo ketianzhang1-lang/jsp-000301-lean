@@ -1,4 +1,5 @@
 import Mathlib.Data.Finset.Powerset
+import Mathlib.Data.Multiset.Sort
 import Mathlib.Data.Complex.Basic
 import Mathlib.Algebra.BigOperators.Ring.Finset
 import Mathlib.Tactic
@@ -24,7 +25,10 @@ theorem card_B : B.card = 27 := by decide +kernel
 theorem A_ne_B : A ≠ B := by decide +kernel
 
 theorem equal_triple_sums_nat : natSums A 3 = natSums B 3 := by
-  decide +kernel
+  have h : (natSums A 3).sort (· ≤ ·) = (natSums B 3).sort (· ≤ ·) := by
+    decide +kernel
+  have hm := congrArg (fun l : List ℕ => (l : Multiset ℕ)) h
+  simpa only [Multiset.sort_eq] using hm
 
 noncomputable def complexEmbedding : ℕ ↪ ℂ :=
   ⟨fun n => (n : ℂ), Nat.cast_injective⟩
