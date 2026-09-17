@@ -1,0 +1,17 @@
+'JSP000250.prime_obstruction_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000250.prime_not_representable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000250.firstException_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000250.smaller_denominators_representable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000250.log_lcm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000250.prime_exception_upper_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000250.firstException_upper_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000250.firstException_isBigO' depends on axioms: [propext, Classical.choice, Quot.sound]
+def JSP000250.Representable : ℕ → ℕ → Prop :=
+fun N t => 0 < t ∧ ∃ S, t ∈ S ∧ (∀ n ∈ S, t ≤ n ∧ n ≤ N) ∧ ∑ n ∈ S, 1 / ↑n = 1
+def JSP000250.firstException : ℕ → ℕ :=
+fun N => Nat.find ⋯
+JSP000250.prime_not_representable (N p m : ℕ) (hp : Nat.Prime p) (hN : N ≤ p * m) (hbound : m * m.lcmUpto < p) :
+  ¬JSP000250.Representable N p
+JSP000250.prime_exception_upper_bound (N : ℕ) (hN : 0 < N) (hlog : 128 ≤ Real.log ↑N) :
+  ∃ p, Nat.Prime p ∧ p ≤ N ∧ ¬JSP000250.Representable N p ∧ ↑p ≤ 128 * ↑N / Real.log ↑N
+JSP000250.firstException_isBigO : (fun N => ↑(JSP000250.firstException N)) =O[Filter.atTop] fun N => ↑N / Real.log ↑N

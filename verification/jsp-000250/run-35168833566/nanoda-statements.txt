@@ -1,0 +1,66 @@
+def JSP000250.Representable (n a._@._internal._hyg.0 : Nat) : Prop :=
+  And (LT.lt (OfNat.ofNat 0) a._@._internal._hyg.0)
+    (Exists
+      (fun (S : Finset Nat) =>
+      And (Membership.mem S a._@._internal._hyg.0)
+        (And (forall (n : Nat), Membership.mem S n → And (LE.le a._@._internal._hyg.0 n) (LE.le n n))
+          (Eq (Finset.sum S (fun (n : Nat) => HDiv.hDiv (OfNat.ofNat 1) (Nat.cast n))) (OfNat.ofNat 1)))))
+
+def JSP000250.firstException (n : Nat) : Nat := Nat.find _
+
+theorem JSP000250.prime_obstruction_split (p m : Nat) (hp : Nat.Prime p) (U V : Finset Nat)
+  (hU : LE.le U (Finset.Icc (OfNat.ofNat 1) m)) (h1 : Membership.mem U (OfNat.ofNat 1))
+  (hVpos : (forall (n : Nat), Membership.mem V n → LT.lt (OfNat.ofNat 0) n))
+  (hVprime : (forall (n : Nat), Membership.mem V n → Not (Dvd.dvd p n)))
+  (hbound : LT.lt (HMul.hMul m (Nat.lcmUpto m)) p) :
+  Ne
+    (HAdd.hAdd (HDiv.hDiv (Finset.sum U (fun (n : Nat) => HDiv.hDiv (OfNat.ofNat 1) (Nat.cast n))) (Nat.cast p))
+      (Finset.sum V (fun (n : Nat) => HDiv.hDiv (OfNat.ofNat 1) (Nat.cast n)))) (OfNat.ofNat 1) :=
+  _
+
+theorem JSP000250.prime_not_representable (N p m : Nat) (hp : Nat.Prime p) (hN : LE.le N (HMul.hMul p m))
+  (hbound : LT.lt (HMul.hMul m (Nat.lcmUpto m)) p) :
+  Not (JSP000250.Representable N p) :=
+  _
+
+theorem JSP000250.firstException_spec (N : Nat) :
+  And (LT.lt (OfNat.ofNat 0) (JSP000250.firstException N))
+    (Not (JSP000250.Representable N (JSP000250.firstException N))) :=
+  _
+
+theorem JSP000250.smaller_denominators_representable (N t : Nat) (ht : LT.lt (OfNat.ofNat 0) t)
+  (hlt : LT.lt t (JSP000250.firstException N)) :
+  JSP000250.Representable N t :=
+  _
+
+theorem JSP000250.log_lcm_bound (m : Nat) (hm : LT.lt (OfNat.ofNat 0) m) :
+  LE.le (Real.log (Nat.cast (HMul.hMul m (Nat.lcmUpto m)))) (HMul.hMul (OfNat.ofNat 8) (Nat.cast m)) :=
+  _
+
+theorem JSP000250.prime_exception_upper_bound (N : Nat) (hN : LT.lt (OfNat.ofNat 0) N)
+  (hlog : LE.le (OfNat.ofNat 128) (Real.log (Nat.cast N))) :
+  Exists
+    (fun (p : Nat) =>
+    And (Nat.Prime p)
+      (And (LE.le p N)
+        (And (Not (JSP000250.Representable N p))
+          (LE.le (Nat.cast p) (HDiv.hDiv (HMul.hMul (OfNat.ofNat 128) (Nat.cast N)) (Real.log (Nat.cast N))))))) :=
+  _
+
+theorem JSP000250.firstException_upper_bound (N : Nat) (hN : LT.lt (OfNat.ofNat 0) N)
+  (hlog : LE.le (OfNat.ofNat 128) (Real.log (Nat.cast N))) :
+  LE.le (Nat.cast (JSP000250.firstException N))
+    (HDiv.hDiv (HMul.hMul (OfNat.ofNat 128) (Nat.cast N)) (Real.log (Nat.cast N))) :=
+  _
+
+theorem JSP000250.firstException_isBigO :
+  Asymptotics.IsBigO Filter.atTop (fun (N : Nat) => Nat.cast (JSP000250.firstException N))
+    (fun (N : Nat) => HDiv.hDiv (Nat.cast N) (Real.log (Nat.cast N))) :=
+  _
+
+axiom propext {a b : Prop} : Iff a b → Eq a b
+
+axiom Quot.sound.{u} {α : Sort u} {r : α → α → Prop} {a b : α} : r a b → Eq (Quot.mk r a) (Quot.mk r b)
+
+axiom Classical.choice.{u} {α : Sort u} : Nonempty α → α
+
