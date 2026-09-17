@@ -1,0 +1,48 @@
+{
+  "status": "PASS: finite checks only; not Lean verification",
+  "novelty": "NOT NEW: public full Lean proof exists in plby/lean-proofs/Erdos1216",
+  "classification_7": [
+    {
+      "permutation": [0, 1, 2],
+      "TT4": [1, 5, 2, 6]
+    },
+    {
+      "permutation": [0, 2, 1],
+      "isomorphism_to_P7": [0, 1, 2, 4, 6, 3, 5]
+    },
+    {
+      "permutation": [1, 0, 2],
+      "isomorphism_to_P7": [0, 1, 2, 4, 5, 6, 3]
+    },
+    {
+      "permutation": [1, 2, 0],
+      "TT4": [1, 6, 2, 4]
+    },
+    {
+      "permutation": [2, 0, 1],
+      "TT4": [1, 4, 2, 5]
+    },
+    {
+      "permutation": [2, 1, 0],
+      "isomorphism_to_P7": [0, 1, 2, 4, 3, 5, 6]
+    }
+  ],
+  "cyclic_triples": [11, 13, 22, 26, 35, 44, 49, 52, 69, 70, 81, 88, 98, 104],
+  "ordered_cyclic_pairs_checked": 196,
+  "pair_lemma_survivors": 42,
+  "normalized_table": [
+    {"C_a":"O0","C_b":"O0","intersection_size":3,"outcome":"intersection excludes"},
+    {"C_a":"O0","C_b":"O1","intersection_size":1,"outcome":"TT5 excludes","witness":["a","B3","B5","b","B0"]},
+    {"C_a":"O0","C_b":"O3","intersection_size":1,"outcome":"TT5 excludes","witness":["B4","a","B5","b","B6"]},
+    {"C_a":"O0","C_b":"I0","intersection_size":0,"outcome":"intersection excludes"},
+    {"C_a":"O0","C_b":"I1","intersection_size":1,"outcome":"retained"},
+    {"C_a":"O0","C_b":"I3","intersection_size":2,"outcome":"intersection excludes"},
+    {"C_a":"I0","C_b":"O0","intersection_size":0,"outcome":"intersection excludes"},
+    {"C_a":"I0","C_b":"O1","intersection_size":2,"outcome":"intersection excludes"},
+    {"C_a":"I0","C_b":"O3","intersection_size":1,"outcome":"TT5 excludes","witness":["B5","a","B0","b","B2"]},
+    {"C_a":"I0","C_b":"I0","intersection_size":3,"outcome":"intersection excludes"},
+    {"C_a":"I0","C_b":"I1","intersection_size":1,"outcome":"TT5 excludes","witness":["B6","a","B0","b","B1"]},
+    {"C_a":"I0","C_b":"I3","intersection_size":1,"outcome":"retained"}
+  ],
+  "final_TT5": ["A0", "B1", "A5", "B2", "A3"]
+}

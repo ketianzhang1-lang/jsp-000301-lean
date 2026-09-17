@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1216.lean",
+    "path": "ErdosProblems/Erdos1216.lean",
+    "sha256": "4400f7fae480adabe34bb7d1afda7ba48ff45bdae9c727b926c480307d6232bf",
+    "port_sha256": "352f0cc4def0150e62858792f60ca80b70088f97b53d020722b8e56f4a079491"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1216/Certificates.lean",
+    "path": "ErdosProblems/Erdos1216/Certificates.lean",
+    "sha256": "7076c47372d89966563c81d1b41b5325f08d056fd037d2055185d90597ed7e00",
+    "port_sha256": "7076c47372d89966563c81d1b41b5325f08d056fd037d2055185d90597ed7e00"
+  }
+]
