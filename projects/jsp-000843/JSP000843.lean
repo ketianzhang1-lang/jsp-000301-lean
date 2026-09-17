@@ -45,7 +45,7 @@ theorem mycielski_triangleFree {G : SimpleGraph V} (h : TriangleFree G) :
   rintro (_ | ⟨a, ba⟩) (_ | ⟨b, bb⟩) (_ | ⟨c, bc⟩) <;>
     simp only [mycielski, LiftAdj]
   all_goals intro h1 h2 h3
-  all_goals simp_all
+  all_goals try simp_all
   all_goals exact h h1.1 h2.1 h3.1
 
 theorem mycielski_colorable {G : SimpleGraph V} {n : ℕ} (h : G.Colorable n) :
@@ -60,7 +60,7 @@ theorem mycielski_colorable {G : SimpleGraph V} {n : ℕ} (h : G.Colorable n) :
         rintro (_ | ⟨v,b⟩) (_ | ⟨w,c⟩) hadj <;>
           simp only [mycielski, LiftAdj] at hadj
         all_goals try simp
-        all_goals exact fun he => C.valid hadj.1 (Option.some.inj he))
+        all_goals exact fun he => C.valid hadj.1 he)
   simpa using D.colorable
 
 /-- Delete the apex color after recoloring affected originals by their shadows. -/
