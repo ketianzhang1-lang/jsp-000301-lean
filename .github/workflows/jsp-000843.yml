@@ -26,7 +26,7 @@ jobs:
           export PATH="$HOME/.elan/bin:$PATH"
           elan toolchain install "$(cat lean-toolchain)"
           test -s lake-manifest.json
-          lake exe cache get Mathlib/Combinatorics/SimpleGraph/Coloring/Vertex.lean Mathlib/Tactic.lean
+          lake exe cache get
           git diff --exit-code -- lake-manifest.json
       - name: Build, replay, eight axiom audits and negative control
         run: bash scripts/verify.sh
