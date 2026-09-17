@@ -92,4 +92,6 @@ negative control. `verify_nanoda.sh` exports four final targets and their full
 dependency closures for the separately implemented NaNoda checker, with only
 propext, Classical.choice and Quot.sound permitted. These are applicant-run
 checks, not designated organizer verification. See `VERIFICATION.md` for the
-status of checks actually completed.
+status of checks actually completed. The dedicated
+[cloud run](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35176439458)
+passed all stages, including NaNoda verification of 9,711 declarations.
