@@ -1,0 +1,45 @@
+name: Full-scope research verification
+on:
+  push:
+    branches: ["research/full-scope-20260917"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read primary mathematical source
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p research-output
+          curl -fsSL 'https://raw.githubusercontent.com/Woett/Mathematical-shorts/main/Sequences%20with%20bounded%20lcm%20for%20consecutive%20elements.pdf' -o research-output/lcm-source.pdf
+          pdftotext -layout research-output/lcm-source.pdf research-output/lcm-source.txt
+          cat research-output/lcm-source.txt
+      - name: Install Lean and resolve pinned dependencies
+        shell: bash
+        run: |
+          set -euxo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          "$HOME/.elan/bin/elan" toolchain install "$(cat lean-toolchain)"
+          "$HOME/.elan/bin/lake" exe cache get
+      - name: Compile full statement when present
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -f FullScope.lean ]; then
+            lake env lean FullScope.lean 2>&1 | tee research-output/lean-verification.txt
+          else
+            printf '%s\n' 'No proof has been supplied yet; this run is source preparation only.'
+          fi
+      - name: Preserve primary source and verification logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-scope-research-output
+          path: research-output/
+          if-no-files-found: error
