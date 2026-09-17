@@ -1,0 +1,8 @@
+.lake/
+*.olean
+*.olean.*
+*.ilean
+*.ir
+evidence/
+NegativeControl.lean
+Check.lean
