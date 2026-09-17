@@ -12,7 +12,7 @@ uniform epsilon/N formulation of the proposed asymptotic claim.
 
 The plane is Mathlib's complex plane with its standard Euclidean distance.
 The circle predicate uses the actual metric sphere equation `dist p z = r`,
-with arbitrary real centers and radii. The distance count excludes the base
+with arbitrary centers in the complex plane and real radii. The distance count excludes the base
 point. The construction works for every m; it is not a finite computation.
 
 ## Our formalization contribution
