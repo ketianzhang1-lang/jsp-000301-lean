@@ -18,13 +18,16 @@ noncomputable def event (p : Finset α → Prop) : Finset (Finset α) :=
 noncomputable def mass (A : Finset (Finset α)) : ℚ :=
   (A.card : ℚ) / (2 : ℚ) ^ Fintype.card α
 
+omit [DecidableEq α] in
 lemma mass_nonneg (A : Finset (Finset α)) : 0 ≤ mass A := by
   unfold mass
   positivity
 
+omit [DecidableEq α] in
 lemma mass_univ : mass (univ : Finset (Finset α)) = 1 := by
   simp [mass, Fintype.card_finset]
 
+omit [DecidableEq α] in
 lemma mass_mono {A B : Finset (Finset α)} (h : A ⊆ B) : mass A ≤ mass B := by
   unfold mass
   exact div_le_div_of_nonneg_right (by exact_mod_cast card_le_card h) (by positivity)
@@ -45,6 +48,7 @@ lemma mass_union_le (A B : Finset (Finset α)) :
 lemma mass_cover {A B C : Finset (Finset α)} (h : A ⊆ B ∪ C) :
     mass A ≤ mass B + mass C := (mass_mono h).trans (mass_union_le B C)
 
+omit [DecidableEq α] in
 @[simp] lemma mem_event (p : Finset α → Prop) (s : Finset α) :
     s ∈ event p ↔ p s := by classical simp [event]
 
@@ -75,6 +79,7 @@ lemma mass_anticorrelation {A B : Finset (Finset α)}
 `χ` is increasing, `ζ` is invariant under complementation and bounded by `χ`.
 If the gap is at most `g` with probability at least 0.999, some interval
 of length `g` contains `χ` with probability strictly greater than 0.9. -/
+set_option maxHeartbeats 800000 in
 theorem concentration_reduction (χ ζ : Finset α → ℕ) (g : ℕ)
     (hmono : Monotone χ) (hsym : ∀ s, ζ sᶜ = ζ s)
     (hle : ∀ s, ζ s ≤ χ s)
@@ -111,7 +116,9 @@ theorem concentration_reduction (χ ζ : Finset α → ℕ) (g : ℕ)
       rw [he]
       exact le_of_not_gt hnot
   have hE : (999 : ℚ) / 1000 ≤ mass E := by
-    simpa only [E, mass_event_compl] using hgood
+    dsimp [E]
+    rw [mass_event_compl (fun s => χ s ≤ ζ s + g)]
+    exact hgood
   have hEc : mass Eᶜ ≤ (1 : ℚ) / 1000 := by
     rw [mass_compl]
     linarith
@@ -130,21 +137,25 @@ theorem concentration_reduction (χ ζ : Finset α → ℕ) (g : ℕ)
     · exact mem_union_right _ (mem_compl.mpr he)
   have hdLower : IsLowerSet (D : Set (Finset α)) := by
     intro s t hst ht
-    have ht' : χ t ≤ k := by simpa [D] using ht
-    change s ∈ event _
-    exact mem_event.mpr ((hmono hst).trans ht')
+    have ht' : χ s ≤ k := by simpa [D] using ht
+    change t ∈ event _
+    simp only [mem_event]
+    exact (hmono hst).trans ht'
   have huUpper : IsUpperSet (U : Set (Finset α)) := by
     intro s t hst hs
     have hs' : χ sᶜ ≤ k + g := by simpa [U] using hs
     change t ∈ event _
-    apply mem_event.mpr
+    simp only [mem_event]
     exact (hmono (compl_subset_compl.mpr hst)).trans hs'
   have hcorr := mass_anticorrelation hdLower huUpper
   have hcov := mass_cover hcover
-  have hu1 : mass U ≤ 1 := by simpa using mass_mono (subset_univ U)
   have hU : (98 : ℚ) / 100 < mass U := by
-    nlinarith [mul_nonneg (le_of_lt (sub_pos.mpr hD)) (sub_nonneg.mpr hu1)]
-  have heqU : mass U = mass (event fun s => χ s ≤ k + g) := mass_event_compl _
+    have hnum : mass D ≤ mass D * mass U + (1 : ℚ) / 1000 := by linarith only [hcorr, hcov, hEc]
+    by_contra! hnot
+    have hmul := mul_le_mul_of_nonneg_left hnot (mass_nonneg D)
+    nlinarith only [hD, hnum, hmul]
+  have heqU : mass U = mass (event fun s => χ s ≤ k + g) :=
+    mass_event_compl (fun s => χ s ≤ k + g)
   have hsplit : event (fun s => χ s ≤ k + g) ⊆ I ∪ L := by
     intro s hs
     simp only [mem_event] at hs
