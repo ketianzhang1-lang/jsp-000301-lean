@@ -1,0 +1,43 @@
+name: Full scope candidate source pack
+on:
+  push:
+    branches: ["research/full-scope-20260917-0900"]
+    paths: [".github/workflows/full-scope-papers.yml"]
+permissions:
+  contents: read
+jobs:
+  sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Fetch original statements
+        run: |
+          python3 -m pip install --quiet requests beautifulsoup4 pyyaml
+          mkdir -p papers
+          python3 - <<'PY'
+          import requests, pathlib, json, yaml
+          from bs4 import BeautifulSoup
+          P=pathlib.Path('papers')
+          session=requests.Session()
+          session.headers['User-Agent']='Mozilla/5.0 (compatible; Mathematical-source-research)'
+          for n in [216,504,575,625]:
+              for suffix in [str(n),'forum/thread/'+str(n)]:
+                  u='https://www.erdosproblems.com/'+suffix
+                  r=session.get(u,timeout=60)
+                  text=BeautifulSoup(r.text,'html.parser').get_text(' ',strip=True)
+                  name=suffix.replace('/','_')
+                  (P/(name+'.html')).write_text(r.text)
+                  (P/(name+'.txt')).write_text(text)
+                  print('SOURCE',u,'HTTP',r.status_code)
+                  print(text[:50000])
+          r=session.get('https://cdn.openai.com/pdf/ten-proofs-oai.pdf',timeout=120)
+          r.raise_for_status(); (P/'ten-proofs-oai.pdf').write_bytes(r.content)
+          PY
+      - name: Extract paper for exact quotation-free research
+        run: |
+          pdftotext -layout papers/ten-proofs-oai.pdf papers/ten-proofs-oai.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: full-scope-candidate-papers
+          path: papers
+          if-no-files-found: error
