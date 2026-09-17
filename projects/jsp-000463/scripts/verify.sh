@@ -4,7 +4,7 @@ cd "$(dirname "$0")/.."
 mkdir -p evidence
 lake build --wfail 2>&1 | tee evidence/build.log
 lake env leanchecker JSP000463 2>&1 | tee evidence/kernel.log
-lake env lean --wfail Audit.lean 2>&1 | tee evidence/axioms.log
+lake env lean -DwarningAsError=true Audit.lean 2>&1 | tee evidence/axioms.log
 python3 - <<'PY'
 from pathlib import Path
 import re, json, subprocess
