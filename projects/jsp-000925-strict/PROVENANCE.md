@@ -24,9 +24,4 @@ strict phase convexity and strict gap inequalities, plus an explicit existence a
 uniqueness theorem. The mathematical strategy and normalization follow the cited
 literature and prior formalization; this is not an independently discovered theorem.
 
-New supplement prepared with OpenAI ChatGPT assistance under the submitting
-account's direction. Proposed formalization recipient: RECIPIENT-JSP-000925-KZ-A,
-confirmation pending. This is a self-submission, not independent human verification.
-Priority, contribution allocation, eligibility and the permitted intake location
-remain for the organizers. No recipient profile, catalog claim flag, candidate
-record, award decision or payment status is created by this evidence package.
+We record GitHub account `ketianzhang1-lang` as the contributor for the new strict phase-convexity proof, strict gap comparisons, central-case argument, Rolle-based selector existence, interval uniqueness and verification package, prepared with OpenAI ChatGPT assistance. The retained upstream source supplies the analytic infrastructure listed above. We request formalization credit for our additions, with contribution allocation and eligibility subject to organizer review.

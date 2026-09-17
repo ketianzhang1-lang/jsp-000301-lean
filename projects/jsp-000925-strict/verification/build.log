@@ -1,0 +1,8 @@
+✔ [8365/8419] Built Mathlib.Probability.Kernel.Invariance (1.5s)
+✔ [8923/8926] Built Mathlib (3.8s)
+ℹ [8924/8926] Built Erdos1114 (17s)
+info: Erdos1114.lean:1618:0: 'Erdos1114.erdos_1114' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8925/8926] Built JSP000925Strict (8.1s)
+info: JSP000925Strict.lean:233:0: 'JSP000925Strict.strict_gap_theorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000925Strict.lean:234:0: 'JSP000925Strict.exists_unique_strict_gaps' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8926 jobs).

@@ -1,0 +1,21 @@
+{
+  "export_file_path": "evidence/export.ndjson",
+  "use_stdin": false,
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "unpermitted_axiom_hard_error": true,
+  "nat_extension": true,
+  "string_extension": true,
+  "pp_declars": [
+    "JSP000925Strict.RightGapStrict",
+    "Erdos1114.GapSymmetric",
+    "JSP000925Strict.strict_gap_theorem",
+    "JSP000925Strict.exists_unique_strict_gaps"
+  ],
+  "pp_output_path": "evidence/nanoda-statements.txt",
+  "pp_to_stdout": false,
+  "print_success_message": true
+}

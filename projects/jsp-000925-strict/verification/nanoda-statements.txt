@@ -1,0 +1,55 @@
+def JSP000925Strict.RightGapStrict (N : Nat) (b : Nat → Real) : Prop :=
+  forall (i : Nat),
+  LT.lt (HAdd.hAdd i (OfNat.ofNat 2)) N → LE.le N (HMul.hMul (OfNat.ofNat 2) (HAdd.hAdd i (OfNat.ofNat 1))) → LT.lt
+    (HSub.hSub (b (HAdd.hAdd i (OfNat.ofNat 1))) (b i))
+    (HSub.hSub (b (HAdd.hAdd i (OfNat.ofNat 2))) (b (HAdd.hAdd i (OfNat.ofNat 1))))
+
+def Erdos1114.GapSymmetric (N : Nat) (b : Nat → Real) : Prop :=
+  forall (i : Nat),
+  LT.lt (HAdd.hAdd i (OfNat.ofNat 1)) N → Eq (HSub.hSub (b (HAdd.hAdd i (OfNat.ofNat 1))) (b i))
+    (HSub.hSub (b (HSub.hSub (HSub.hSub N (OfNat.ofNat 1)) i)) (b (HSub.hSub (HSub.hSub N (OfNat.ofNat 2)) i)))
+
+theorem JSP000925Strict.strict_gap_theorem :
+  forall {N : Nat} (hN : LT.lt (OfNat.ofNat 0) N) {a d : Real} (hd : LT.lt (OfNat.ofNat 0) d) {f : Polynomial Real}
+    {b : Nat → Real},
+  Ne f (OfNat.ofNat 0) → Eq (Polynomial.natDegree f) (HAdd.hAdd N (OfNat.ofNat 1)) → (forall (j : Nat),
+    LE.le j N → Eq (Polynomial.eval (HAdd.hAdd a (HMul.hMul d (Nat.cast j))) f) (OfNat.ofNat 0)) →
+  (forall (k : Nat),
+    LT.lt k N → Membership.mem
+      (Set.Ioo (HAdd.hAdd a (HMul.hMul d (Nat.cast k)))
+        (HAdd.hAdd a (HMul.hMul d (HAdd.hAdd (Nat.cast k) (OfNat.ofNat 1))))) (b k)) →
+  (forall (k : Nat),
+    LT.lt k N → Eq (Polynomial.eval (b k) (DFunLike.coe Polynomial.derivative f)) (OfNat.ofNat 0)) →
+  And (JSP000925Strict.RightGapStrict N b) (Erdos1114.GapSymmetric N b) :=
+  _
+
+theorem JSP000925Strict.exists_unique_strict_gaps :
+  forall {N : Nat} (hN : LT.lt (OfNat.ofNat 0) N) {a d : Real},
+  LT.lt (OfNat.ofNat 0) d → (forall {f : Polynomial Real},
+  Ne f (OfNat.ofNat 0) → Eq (Polynomial.natDegree f) (HAdd.hAdd N (OfNat.ofNat 1)) → (forall (j : Nat),
+    LE.le j N → Eq (Polynomial.eval (HAdd.hAdd a (HMul.hMul d (Nat.cast j))) f) (OfNat.ofNat 0)) →
+  Exists
+    (fun (b : Nat → Real) =>
+    And
+      (forall (k : Nat),
+      LT.lt k N → Membership.mem
+        (Set.Ioo (HAdd.hAdd a (HMul.hMul d (Nat.cast k)))
+          (HAdd.hAdd a (HMul.hMul d (HAdd.hAdd (Nat.cast k) (OfNat.ofNat 1))))) (b k))
+      (And
+        (forall (k : Nat),
+        LT.lt k N → Eq (Polynomial.eval (b k) (DFunLike.coe Polynomial.derivative f)) (OfNat.ofNat 0))
+        (And
+          (forall (k : Nat) (a._@._internal._hyg.0 : LT.lt k N) (x : Real),
+          Membership.mem
+              (Set.Ioo (HAdd.hAdd a (HMul.hMul d (Nat.cast k)))
+                (HAdd.hAdd a (HMul.hMul d (HAdd.hAdd (Nat.cast k) (OfNat.ofNat 1))))) x →
+          Eq (Polynomial.eval x (DFunLike.coe Polynomial.derivative f)) (OfNat.ofNat 0) → Eq x (b k))
+          (And (JSP000925Strict.RightGapStrict N b) (Erdos1114.GapSymmetric N b)))))) :=
+  _
+
+axiom propext {a b : Prop} : Iff a b → Eq a b
+
+axiom Quot.sound.{u} {α : Sort u} {r : α → α → Prop} {a b : α} : r a b → Eq (Quot.mk r a) (Quot.mk r b)
+
+axiom Classical.choice.{u} {α : Sort u} : Nonempty α → α
+

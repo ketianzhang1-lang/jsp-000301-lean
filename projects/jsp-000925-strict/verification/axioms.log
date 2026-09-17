@@ -1,0 +1,23 @@
+'JSP000925Strict.strict_algebra' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000925Strict.phase_second_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000925Strict.phase_strict_convex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000925Strict.canonical_strict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000925Strict.strict_gap_theorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000925Strict.interval_critical_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000925Strict.interval_critical_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000925Strict.exists_unique_strict_gaps' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP000925Strict.strict_gap_theorem {N : ℕ} (hN : 0 < N) {a d : ℝ} (hd : 0 < d) {f : Polynomial ℝ} {b : ℕ → ℝ}
+  (hf : f ≠ 0) (hdegree : f.natDegree = N + 1) (hroots : ∀ j ≤ N, Polynomial.eval (a + d * ↑j) f = 0)
+  (hb : ∀ k < N, b k ∈ Set.Ioo (a + d * ↑k) (a + d * (↑k + 1)))
+  (hderiv : ∀ k < N, Polynomial.eval (b k) (Polynomial.derivative f) = 0) :
+  JSP000925Strict.RightGapStrict N b ∧ Erdos1114.GapSymmetric N b
+JSP000925Strict.exists_unique_strict_gaps {N : ℕ} (hN : 0 < N) {a d : ℝ} (hd : 0 < d) {f : Polynomial ℝ} (hf : f ≠ 0)
+  (hdegree : f.natDegree = N + 1) (hroots : ∀ j ≤ N, Polynomial.eval (a + d * ↑j) f = 0) :
+  ∃ b,
+    (∀ k < N, b k ∈ Set.Ioo (a + d * ↑k) (a + d * (↑k + 1))) ∧
+      (∀ k < N, Polynomial.eval (b k) (Polynomial.derivative f) = 0) ∧
+        (∀ k < N,
+            ∀ x ∈ Set.Ioo (a + d * ↑k) (a + d * (↑k + 1)), Polynomial.eval x (Polynomial.derivative f) = 0 → x = b k) ∧
+          JSP000925Strict.RightGapStrict N b ∧ Erdos1114.GapSymmetric N b
+def JSP000925Strict.RightGapStrict : ℕ → (ℕ → ℝ) → Prop :=
+fun N b => ∀ (i : ℕ), i + 2 < N → N ≤ 2 * (i + 1) → b (i + 1) - b i < b (i + 2) - b (i + 1)
