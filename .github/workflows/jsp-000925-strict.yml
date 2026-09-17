@@ -1,0 +1,49 @@
+name: JSP-000925 strict critical-point gaps
+on:
+  push:
+    branches: [jsp-000925-strict-gaps]
+    paths: [projects/jsp-000925-strict/**, .github/workflows/jsp-000925-strict.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+        working-directory: projects/jsp-000925-strict
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install pinned toolchain and cached dependencies
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.elan/bin:$PATH"
+          elan toolchain install "$(cat lean-toolchain)"
+          python3 scripts/bootstrap.py
+          lake exe cache get
+          git diff --exit-code -- lake-manifest.json
+      - name: Build, kernel replay, axiom audit and negative control
+        run: bash scripts/verify.sh
+      - name: Independent NaNoda checker
+        run: |
+          set -euo pipefail
+          bash scripts/verify_nanoda.sh 2>&1 | tee evidence/nanoda-build.log
+      - name: Bind evidence to source
+        if: always()
+        run: |
+          mkdir -p evidence
+          git rev-parse HEAD > evidence/SOURCE_COMMIT
+          sha256sum JSP000925Strict.lean Erdos1114.lean Audit.lean lake-manifest.json > evidence/SOURCE_SHA256SUMS
+          cp lake-manifest.json evidence/
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: jsp-000925-strict-evidence
+          path: projects/jsp-000925-strict/evidence
+          if-no-files-found: error

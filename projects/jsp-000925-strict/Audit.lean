@@ -1,0 +1,12 @@
+import JSP000925Strict
+#print axioms JSP000925Strict.strict_algebra
+#print axioms JSP000925Strict.phase_second_positive
+#print axioms JSP000925Strict.phase_strict_convex
+#print axioms JSP000925Strict.canonical_strict
+#print axioms JSP000925Strict.strict_gap_theorem
+#print axioms JSP000925Strict.interval_critical_exists
+#print axioms JSP000925Strict.interval_critical_unique
+#print axioms JSP000925Strict.exists_unique_strict_gaps
+#check JSP000925Strict.strict_gap_theorem
+#check JSP000925Strict.exists_unique_strict_gaps
+#print JSP000925Strict.RightGapStrict

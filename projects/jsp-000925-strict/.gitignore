@@ -1,0 +1,8 @@
+.lake/
+Erdos1114.lean
+*.olean
+*.ilean
+*.ir
+*.c
+evidence/
+Negative.lean
