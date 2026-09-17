@@ -1,4 +1,4 @@
-import JSP000636
+import Lower
 
 #print axioms JSP000636.antichain_iff_isAntichain
 #print axioms JSP000636.twins_of_multiplicity
@@ -14,3 +14,27 @@ import JSP000636
 #print axioms JSP000636.sharp_at_four
 #print axioms JSP000636.three_is_exception
 #print axioms JSP000636.one_is_exception
+#print axioms JSP000636.pair_eq_of_mem
+#print axioms JSP000636.pair_of_mem
+#print axioms JSP000636.mem_crossPairs
+#print axioms JSP000636.hits_crossPairs
+#print axioms JSP000636.cross_intersecting_pairs_intersect
+#print axioms JSP000636.intersecting_pairs_star
+#print axioms JSP000636.star_image
+#print axioms JSP000636.card_leaves
+#print axioms JSP000636.common_star
+#print axioms JSP000636.level_card_ge
+#print axioms JSP000636.complements_involutive
+#print axioms JSP000636.multiplicity_complements
+#print axioms JSP000636.card_singles
+#print axioms JSP000636.sizes_bound_of_singles
+#print axioms JSP000636.full_profile
+#print axioms JSP000636.small_contains_center
+#print axioms JSP000636.subset_avoiding_leaves
+#print axioms JSP000636.erase_not_subset
+#print axioms JSP000636.coatom_blockers_card
+#print axioms JSP000636.middle_contains_bound
+#print axioms JSP000636.card_complements
+#print axioms JSP000636.critical_size_bound
+#print axioms JSP000636.extremal_critical_le
+#print axioms JSP000636.threshold_lower_bound

@@ -22,9 +22,11 @@ cp lean-toolchain "$work/exporter/lean-toolchain"
 (cd "$work/exporter" && lake build)
 (cd "$work/checker" && cargo build --release --locked)
 # Export each named target and its entire dependency closure.
-lake env "$work/exporter/.lake/build/bin/lean4export" JSP000636 -- \
+lake env "$work/exporter/.lake/build/bin/lean4export" Lower -- \
   JSP000636.size_count_le JSP000636.exact_multiplicity_card_le \
   JSP000636.sharp_at_four JSP000636.three_is_exception JSP000636.one_is_exception \
+  JSP000636.critical_size_bound JSP000636.extremal_critical_le \
+  JSP000636.threshold_lower_bound \
   > evidence/export.ndjson
 python3 - <<'PY'
 import json
@@ -38,7 +40,10 @@ config = {
     "string_extension": True,
     "pp_declars": ["JSP000636.Antichain", "JSP000636.Multiplicity",
                    "JSP000636.sizes", "JSP000636.ExactMultiplicity",
-                   "JSP000636.size_count_le", "JSP000636.exact_multiplicity_card_le"],
+                   "JSP000636.size_count_le", "JSP000636.exact_multiplicity_card_le",
+                   "JSP000636.extremal", "JSP000636.IsThreshold",
+                   "JSP000636.critical_size_bound", "JSP000636.extremal_critical_le",
+                   "JSP000636.threshold_lower_bound"],
     "pp_output_path": "evidence/nanoda-statements.txt",
     "pp_to_stdout": False,
     "print_success_message": True,

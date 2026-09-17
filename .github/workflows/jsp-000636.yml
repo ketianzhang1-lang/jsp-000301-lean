@@ -1,4 +1,4 @@
-name: JSP-000636 universal antichain upper bound
+name: JSP-000636 antichain and threshold bounds
 on:
   push:
     branches: [jsp-000636-antichain-upper]
