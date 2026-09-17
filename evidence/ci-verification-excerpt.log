@@ -1,0 +1,210 @@
+2026-09-17T00:56:32.6825606Z ##[group]Lake Build Output
+2026-09-17T00:56:38.7548055Z ℹ [3092/3093] Built JSP000393 (3.6s)
+2026-09-17T00:56:38.7549248Z info: JSP000393.lean:160:0: 'JSP000393.family_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T00:56:38.7550295Z info: JSP000393.lean:161:0: 'JSP000393.arbitrarily_sparse_squares' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T00:56:38.7571315Z Build completed successfully (3093 jobs).
+2026-09-17T00:56:38.7920079Z ##[endgroup]
+2026-09-17T00:56:38.7920222Z 
+2026-09-17T00:56:38.7932516Z ##[end-action id=__self.build;outcome=success;conclusion=success;duration_ms=6123]
+2026-09-17T00:56:38.7935118Z ##[start-action display=Run actions/cache/save@v5;id=__self.__actions_cache_2]
+2026-09-17T00:56:38.7939187Z ##[end-action id=__self.__actions_cache_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-09-17T00:56:38.7944118Z ##[start-action display=test ketianzhang1-lang/jsp-000301-lean;id=__self.test]
+2026-09-17T00:56:38.7948778Z ##[end-action id=__self.test;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-09-17T00:56:38.7951570Z ##[start-action display=lint ketianzhang1-lang/jsp-000301-lean;id=__self.lint]
+2026-09-17T00:56:38.7955992Z ##[end-action id=__self.lint;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-09-17T00:56:38.7957686Z ##[start-action display=check reservoir eligibility;id=__self.__run_4]
+2026-09-17T00:56:38.7960873Z ##[end-action id=__self.__run_4;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-09-17T00:56:38.7963753Z ##[start-action display=check environment with leanchecker;id=__self.__run_5]
+2026-09-17T00:56:38.8001339Z ##[group]Run : Check Environment with leanchecker
+2026-09-17T00:56:38.8001957Z [36;1m: Check Environment with leanchecker[0m
+2026-09-17T00:56:38.8002317Z [36;1m${GITHUB_ACTION_PATH}/scripts/run_leanchecker.sh[0m
+2026-09-17T00:56:38.8053643Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-17T00:56:38.8053996Z env:
+2026-09-17T00:56:38.8054186Z   LEAN_NUM_THREADS: 1
+2026-09-17T00:56:38.8054406Z   LEANCHECKER_INPUT: true
+2026-09-17T00:56:38.8054644Z   LEAN4CHECKER_INPUT: false
+2026-09-17T00:56:38.8054888Z   LEANCHECKER_ARGS: JSP000393
+2026-09-17T00:56:38.8055131Z ##[endgroup]
+2026-09-17T00:56:38.8128279Z ##[group]leanchecker Output
+2026-09-17T00:56:38.8128748Z Checking environment with leanchecker
+2026-09-17T00:56:38.8156469Z Using bundled leanchecker from the active Lean toolchain
+2026-09-17T00:56:47.0060451Z ##[endgroup]
+2026-09-17T00:56:47.0060609Z 
+2026-09-17T00:56:47.0071472Z ##[end-action id=__self.__run_5;outcome=success;conclusion=success;duration_ms=8210]
+2026-09-17T00:56:47.0076386Z ##[start-action display=check environment with nanoda;id=__self.nanoda]
+2026-09-17T00:56:47.0093435Z ##[group]Run : Check Environment with nanoda
+2026-09-17T00:56:47.0093773Z [36;1m: Check Environment with nanoda[0m
+2026-09-17T00:56:47.0094077Z [36;1m${GITHUB_ACTION_PATH}/scripts/run_nanoda.sh[0m
+2026-09-17T00:56:47.0130819Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-17T00:56:47.0131164Z env:
+2026-09-17T00:56:47.0131358Z   LEAN_NUM_THREADS: 1
+2026-09-17T00:56:47.0131854Z   NANODA_ALLOW_SORRY: false
+2026-09-17T00:56:47.0132112Z ##[endgroup]
+2026-09-17T00:56:47.0207328Z ##[group]nanoda Output
+2026-09-17T00:56:47.0207831Z Checking environment with nanoda external type checker
+2026-09-17T00:56:47.0208415Z Checking for Rust installation...
+2026-09-17T00:56:47.0955569Z Rust already installed: cargo 1.98.1 (797e8a9bc 2026-08-05)
+2026-09-17T00:56:47.0956362Z Cloning and building lean4export...
+2026-09-17T00:56:47.0984121Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-17T00:56:47.0984795Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-17T00:56:47.0985409Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-17T00:56:47.0986254Z hint: call:
+2026-09-17T00:56:47.0986520Z hint:
+2026-09-17T00:56:47.0986837Z hint: 	git config --global init.defaultBranch <name>
+2026-09-17T00:56:47.0987207Z hint:
+2026-09-17T00:56:47.0987555Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-17T00:56:47.0988145Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-17T00:56:47.0988607Z hint:
+2026-09-17T00:56:47.0988831Z hint: 	git branch -m <name>
+2026-09-17T00:56:47.0989096Z hint:
+2026-09-17T00:56:47.0989480Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-17T00:56:47.0990234Z Initialized empty Git repository in /home/runner/work/jsp-000301-lean/jsp-000301-lean/_lean4export/.git/
+2026-09-17T00:56:47.6005530Z From https://github.com/leanprover/lean4export
+2026-09-17T00:56:47.6006286Z  * branch            6cea97789dc088ea47fcea15692db85685aedac5 -> FETCH_HEAD
+2026-09-17T00:56:47.6060073Z HEAD is now at 6cea977 chore: bump toolchain to v4.35.0-rc2 (#51)
+2026-09-17T00:56:49.7510555Z ✔ [2/6] Built Export (2.0s)
+2026-09-17T00:56:52.2525261Z ✔ [3/6] Built Export:c.o (2.5s)
+2026-09-17T00:56:53.0533003Z ✔ [4/6] Built Main (823ms)
+2026-09-17T00:56:53.2524945Z ✔ [5/6] Built Main:c.o (213ms)
+2026-09-17T00:56:54.2536728Z ✔ [6/6] Built lean4export:exe (966ms)
+2026-09-17T00:56:54.2551177Z Build completed successfully (6 jobs).
+2026-09-17T00:56:54.2588400Z Cloning and building nanoda_lib...
+2026-09-17T00:56:54.2618935Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-17T00:56:54.2619790Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-17T00:56:54.2620324Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-17T00:56:54.2620705Z hint: call:
+2026-09-17T00:56:54.2620982Z hint:
+2026-09-17T00:56:54.2621385Z hint: 	git config --global init.defaultBranch <name>
+2026-09-17T00:56:54.2622091Z hint:
+2026-09-17T00:56:54.2622381Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-17T00:56:54.2623047Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-17T00:56:54.2623743Z hint:
+2026-09-17T00:56:54.2624072Z hint: 	git branch -m <name>
+2026-09-17T00:56:54.2624489Z hint:
+2026-09-17T00:56:54.2625065Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-17T00:56:54.2625795Z Initialized empty Git repository in /home/runner/work/jsp-000301-lean/jsp-000301-lean/_nanoda_lib/.git/
+2026-09-17T00:56:54.8530504Z From https://github.com/ammkrn/nanoda_lib
+2026-09-17T00:56:54.8531185Z  * branch            4c544ed4099c8227f07d5de77ad1e69fb0740a27 -> FETCH_HEAD
+2026-09-17T00:56:54.8607528Z HEAD is now at 4c544ed Merge pull request #31 from ammkrn/flt_perf
+2026-09-17T00:56:55.0208183Z     Updating crates.io index
+2026-09-17T00:56:55.2373503Z  Downloading crates ...
+2026-09-17T00:56:55.3000998Z   Downloaded autocfg v1.1.0
+2026-09-17T00:56:55.3055432Z   Downloaded cfg-if v1.0.0
+2026-09-17T00:56:55.3082665Z   Downloaded equivalent v1.0.1
+2026-09-17T00:56:55.3103437Z   Downloaded itoa v1.0.15
+2026-09-17T00:56:55.3194824Z   Downloaded getrandom v0.2.11
+2026-09-17T00:56:55.3338548Z   Downloaded indexmap v2.13.0
+2026-09-17T00:56:55.3383776Z   Downloaded rand_chacha v0.3.1
+2026-09-17T00:56:55.3395519Z   Downloaded rustc-hash v1.1.0
+2026-09-17T00:56:55.3405129Z   Downloaded semver v1.0.27
+2026-09-17T00:56:55.3428400Z   Downloaded ppv-lite86 v0.2.17
+2026-09-17T00:56:55.3441759Z   Downloaded quote v1.0.35
+2026-09-17T00:56:55.3468538Z   Downloaded rand_core v0.6.4
+2026-09-17T00:56:55.3485000Z   Downloaded num-integer v0.1.46
+2026-09-17T00:56:55.3501156Z   Downloaded serde_core v1.0.228
+2026-09-17T00:56:55.3528849Z   Downloaded unicode-ident v1.0.12
+2026-09-17T00:56:55.3556994Z   Downloaded hashbrown v0.16.1
+2026-09-17T00:56:55.3608671Z   Downloaded num-traits v0.2.17
+2026-09-17T00:56:55.3635818Z   Downloaded ryu v1.0.20
+2026-09-17T00:56:55.3668233Z   Downloaded proc-macro2 v1.0.103
+2026-09-17T00:56:55.3698956Z   Downloaded serde_derive v1.0.228
+2026-09-17T00:56:55.3730492Z   Downloaded memchr v2.7.6
+2026-09-17T00:56:55.3786151Z   Downloaded serde v1.0.228
+2026-09-17T00:56:55.3821153Z   Downloaded rand v0.8.5
+2026-09-17T00:56:55.3855928Z   Downloaded num-bigint v0.4.4
+2026-09-17T00:56:55.3903702Z   Downloaded serde_json v1.0.145
+2026-09-17T00:56:55.3979039Z   Downloaded syn v2.0.111
+2026-09-17T00:56:55.4085621Z   Downloaded libc v0.2.180
+2026-09-17T00:56:55.4697681Z    Compiling proc-macro2 v1.0.103
+2026-09-17T00:56:55.4698847Z    Compiling autocfg v1.1.0
+2026-09-17T00:56:55.4699526Z    Compiling unicode-ident v1.0.12
+2026-09-17T00:56:55.4700627Z    Compiling serde_core v1.0.228
+2026-09-17T00:56:55.7222698Z    Compiling serde v1.0.228
+2026-09-17T00:56:55.8454870Z    Compiling num-traits v0.2.17
+2026-09-17T00:56:55.9522714Z    Compiling num-bigint v0.4.4
+2026-09-17T00:56:56.0740452Z    Compiling serde_json v1.0.145
+2026-09-17T00:56:56.2932813Z    Compiling ryu v1.0.20
+2026-09-17T00:56:56.5662973Z    Compiling quote v1.0.35
+2026-09-17T00:56:56.6132925Z    Compiling hashbrown v0.16.1
+2026-09-17T00:56:56.7832963Z    Compiling syn v2.0.111
+2026-09-17T00:56:57.0735161Z    Compiling num-integer v0.1.46
+2026-09-17T00:56:57.2822442Z    Compiling equivalent v1.0.1
+2026-09-17T00:56:57.3163759Z    Compiling itoa v1.0.15
+2026-09-17T00:56:57.3956912Z    Compiling memchr v2.7.6
+2026-09-17T00:56:57.4812735Z    Compiling indexmap v2.13.0
+2026-09-17T00:56:58.3134020Z    Compiling semver v1.0.27
+2026-09-17T00:56:58.3652767Z    Compiling rustc-hash v1.1.0
+2026-09-17T00:56:58.7307099Z    Compiling serde_derive v1.0.228
+2026-09-17T00:57:01.3288152Z    Compiling nanoda_lib v0.4.17 (/home/runner/work/jsp-000301-lean/jsp-000301-lean/_nanoda_lib)
+2026-09-17T00:57:13.8033674Z     Finished `release` profile [optimized] target(s) in 18.93s
+2026-09-17T00:57:13.8152799Z Detecting module name...
+2026-09-17T00:57:13.8201935Z Detected module name: JSP000393
+2026-09-17T00:57:13.8202445Z Exporting JSP000393...
+2026-09-17T00:59:20.0754774Z Export file size: 2327044471 bytes
+2026-09-17T00:59:20.3596046Z Export file lines: 41001621 lines
+2026-09-17T00:59:20.3596508Z Creating nanoda configuration...
+2026-09-17T00:59:20.3611063Z Config file contents:
+2026-09-17T00:59:20.3619961Z {
+2026-09-17T00:59:20.3620359Z     "export_file_path": "_nanoda_export.txt",
+2026-09-17T00:59:20.3620906Z     "use_stdin": false,
+2026-09-17T00:59:20.3621316Z     "permitted_axioms": ["propext", "Classical.choice", "Quot.sound", "Lean.trustCompiler"],
+2026-09-17T00:59:20.3622057Z     "unpermitted_axiom_hard_error": false,
+2026-09-17T00:59:20.3622574Z     "nat_extension": true,
+2026-09-17T00:59:20.3622808Z     "string_extension": true,
+2026-09-17T00:59:20.3623053Z     "print_success_message": true
+2026-09-17T00:59:20.3623286Z }
+2026-09-17T00:59:20.3623544Z 
+2026-09-17T00:59:20.3623933Z Running nanoda type checker...
+2026-09-17T01:04:05.2499335Z Checked 392622 declarations with no typechecker errors, 1 pretty printer errors: [
+2026-09-17T01:04:05.2500174Z     "Unable to print axioms",
+2026-09-17T01:04:05.2500567Z ]
+2026-09-17T01:04:05.2504664Z nanoda check completed successfully
+2026-09-17T01:04:05.2505457Z ##[endgroup]
+2026-09-17T01:04:05.2505674Z Cleaning up temporary files...
+2026-09-17T01:04:05.6603282Z 
+2026-09-17T01:04:05.6642245Z ##[end-action id=__self.nanoda;outcome=success;conclusion=success;duration_ms=438656]
+2026-09-17T01:04:05.6647885Z ##[start-action display=audit axioms with axiom-audit;id=__self.axiom-audit]
+2026-09-17T01:04:05.6668006Z ##[group]Run : Audit axioms with axiom-audit
+2026-09-17T01:04:05.6668338Z [36;1m: Audit axioms with axiom-audit[0m
+2026-09-17T01:04:05.6668659Z [36;1m${GITHUB_ACTION_PATH}/scripts/run_axiom_audit.sh[0m
+2026-09-17T01:04:05.6742368Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-17T01:04:05.6742714Z env:
+2026-09-17T01:04:05.6742914Z   LEAN_NUM_THREADS: 1
+2026-09-17T01:04:05.6743205Z   AXIOM_AUDIT_ALLOW: propext,Classical.choice,Quot.sound
+2026-09-17T01:04:05.6743540Z   AXIOM_AUDIT_ROOT: JSP000393
+2026-09-17T01:04:05.6743769Z ##[endgroup]
+2026-09-17T01:04:05.6826285Z ##[group]axiom-audit Output
+2026-09-17T01:04:05.6826852Z Auditing axioms with leanprover-community/axiom-audit
+2026-09-17T01:04:05.6847087Z Building the project...
+2026-09-17T01:04:08.5463140Z ℹ [3092/3093] Replayed JSP000393
+2026-09-17T01:04:08.5464360Z info: JSP000393.lean:160:0: 'JSP000393.family_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T01:04:08.5466085Z info: JSP000393.lean:161:0: 'JSP000393.arbitrarily_sparse_squares' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-17T01:04:08.5503303Z Build completed successfully (3093 jobs).
+2026-09-17T01:04:08.5854655Z Fetching axiom-audit @ v0.1.2 (46024e005996495c65ef609368e11ab39c4222e3)...
+2026-09-17T01:04:08.5870127Z Cloning into '/home/runner/work/_temp/axiom-audit.nM8xHN/axiom-audit'...
+2026-09-17T01:04:09.1316508Z Note: switching to '46024e005996495c65ef609368e11ab39c4222e3'.
+2026-09-17T01:04:09.1317276Z 
+2026-09-17T01:04:09.1318055Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-17T01:04:09.1319738Z changes and commit them, and you can discard any commits you make in this
+2026-09-17T01:04:09.1320803Z state without impacting any branches by switching back to a branch.
+2026-09-17T01:04:09.1321877Z 
+2026-09-17T01:04:09.1322556Z If you want to create a new branch to retain commits you create, you may
+2026-09-17T01:04:09.1323669Z do so (now or later) by using -c with the switch command. Example:
+2026-09-17T01:04:09.1324516Z 
+2026-09-17T01:04:09.1324893Z   git switch -c <new-branch-name>
+2026-09-17T01:04:09.1325233Z 
+2026-09-17T01:04:09.1325397Z Or undo this operation with:
+2026-09-17T01:04:09.1325674Z 
+2026-09-17T01:04:09.1325805Z   git switch -
+2026-09-17T01:04:09.1326010Z 
+2026-09-17T01:04:09.1326290Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-17T01:04:09.1326714Z 
+2026-09-17T01:04:12.2837277Z ✔ [2/6] Built AxiomAudit (3.0s)
+2026-09-17T01:04:12.8842879Z ✔ [3/6] Built AxiomAudit:c.o (655ms)
+2026-09-17T01:04:13.8853702Z ✔ [4/6] Built Main (948ms)
+2026-09-17T01:04:14.1856246Z ✔ [5/6] Built Main:c.o (356ms)
+2026-09-17T01:04:15.9876661Z ✔ [6/6] Built «axiom-audit»:exe (1.7s)
+2026-09-17T01:04:15.9880775Z Build completed successfully (6 jobs).
+2026-09-17T01:04:18.5685663Z axiom-audit: audited 41 declaration(s) under 'JSP000393'; all within the allowlist [propext, Classical.choice, Quot.sound].
+2026-09-17T01:04:18.6048236Z axiom-audit completed successfully
+2026-09-17T01:04:18.6049031Z ##[endgroup]

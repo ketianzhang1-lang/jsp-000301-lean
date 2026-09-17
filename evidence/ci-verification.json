@@ -1,0 +1,43 @@
+{
+  "proof_commit": "a337720331a34599114a9d4669d6518d5e608f6f",
+  "run_id": 35168428244,
+  "job_id": 105034651595,
+  "run_conclusion": "success",
+  "build": "passed --wfail",
+  "bundled_leanchecker": "passed",
+  "project_axiom_audit": {
+    "declarations": 41,
+    "allowlist": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "result": "passed"
+  },
+  "nanoda": {
+    "declarations": 392622,
+    "typechecker_errors": 0,
+    "pretty_printer_errors": 1,
+    "pretty_printer_message": "Unable to print axioms",
+    "unpermitted_axiom_hard_error": false,
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound",
+      "Lean.trustCompiler"
+    ],
+    "strict_allowlist_run": false
+  },
+  "excerpt": {
+    "file": "ci-verification-excerpt.log",
+    "bytes": 14754,
+    "sha256": "858e383d3f86444935afe8f1d074b426b395ba62b9583bda61e0117029dae854",
+    "description": "Unmodified contiguous excerpt of GitHub job text from Lake Build Output through completion of axiom-audit; surrounding setup and cleanup omitted."
+  },
+  "limits": [
+    "Contributor-run verification, not organizer approval or independent human review",
+    "Mathlib cache reused",
+    "NaNoda configuration was not a strict axiom-allowlist check; separate project audit passed strict three-axiom allowlist",
+    "Workflow artifact archives dependency manifest only, not proof export or logs"
+  ]
+}
