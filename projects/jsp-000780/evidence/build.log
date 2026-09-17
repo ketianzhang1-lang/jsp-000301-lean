@@ -1,0 +1,23 @@
+✔ [3092/3094] Built JSP000780 (5.0s)
+ℹ [3093/3094] Built Audit (3.8s)
+info: Audit.lean:3:0: def JSP000780.OriginalSolutions : ℕ → Set (Finset ℕ) :=
+fun r =>
+  {S | S.card = r - 2 ∧ S.gcd id = 1 ∧ JSP000780.FactorFull r (∑ n ∈ S, n) ∧ ∀ n ∈ S, 0 < n ∧ JSP000780.FactorFull r n}
+info: Audit.lean:4:0: def JSP000780.Solution : Finset ℕ → Prop :=
+fun S => S.card = 4 ∧ S.gcd id = 1 ∧ JSP000780.SixFull (∑ n ∈ S, n) ∧ ∀ n ∈ S, 0 < n ∧ JSP000780.SixFull n
+info: Audit.lean:5:0: def JSP000780.base : ℕ → ℕ :=
+fun t => 30 * (t + 11) + 1
+info: Audit.lean:6:0: def JSP000780.terms : ℕ → Finset ℕ :=
+fun t =>
+  have x := JSP000780.base t ^ 6;
+  have y := 30 ^ 6;
+  {(x - y) ^ 6, 12 * x ^ 5 * y, 40 * x ^ 3 * y ^ 3, 12 * x * y ^ 5}
+info: Audit.lean:7:0: def JSP000780.total : ℕ → ℕ :=
+fun t => (JSP000780.base t ^ 6 + 30 ^ 6) ^ 6
+info: Audit.lean:8:0: 'JSP000780.solution_for_every_parameter' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:9:0: 'JSP000780.terms_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:10:0: 'JSP000780.infinitely_many_solutions' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:11:0: 'JSP000780.infinitely_many_totals' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:12:0: 'JSP000780.original_six_infinite' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:13:0: 'JSP000780.not_finite_for_every_r' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3094 jobs).
