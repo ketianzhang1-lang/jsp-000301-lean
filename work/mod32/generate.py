@@ -91,9 +91,13 @@ for i,cover in covers.items():
 '''+usecover(cover)+'  unfold card at hc\n  omega\n')
 for name,M in zip(['first','second'],maxima):
     s.append(f'def {name} (i : Fin 32) : Nat :=\n  if '+' ∨ '.join(f'i.val = {i}' for i in M)+' then 1 else 0\n')
-s.append('''theorem first_admissible : Admissible first := by decide
+s.append('''theorem first_admissible : Admissible first := by
+  unfold Admissible
+  decide
 
-theorem second_admissible : Admissible second := by decide
+theorem second_admissible : Admissible second := by
+  unfold Admissible
+  decide
 
 theorem first_card : card first = 11 := by decide
 
@@ -113,12 +117,14 @@ s.append('  have bp := h.2 10 26 (by decide)\n  unfold card at hc\n')
 for i in sorted(common):
     s.append(f'  have e{i} : w {i} = 1 := by omega\n')
 s.append('  have es : w 10 + w 26 = 1 := by omega\n  have ht : w 10 = 1 ∨ w 10 = 0 := by omega\n  cases ht with\n')
-for which in ['first','second']:
+for which,M in zip(['first','second'],maxima):
     tag='inl' if which=='first' else 'inr'
     s.append(f'  | {tag} h10 =>\n    apply Or.{tag}\n    funext i\n')
     s.append('    have hi : '+' ∨ '.join(f'i = {i}' for i in range(32))+' := by omega\n')
     s.append('    rcases hi with '+' | '.join('hi' for _ in range(32))+'\n')
-    s.append(f'    all_goals subst i; simp [{which}]; omega\n')
+    for i in range(32):
+        value = int(i in M)
+        s.append(f'    · subst i\n      change w {i} = {value}\n      omega\n')
 s.append('''
 /-- Boolean membership of any subset of Z/32Z. -/
 def indicator (A : Fin 32 → Bool) (i : Fin 32) : Nat := if A i then 1 else 0
