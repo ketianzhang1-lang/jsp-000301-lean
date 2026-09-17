@@ -1,5 +1,5 @@
 /-
-Copyright 2026 Ketian Zhang.
+Copyright 2026 JSP-000264 contributors.
 The P₁ definition: Copyright 2026 The Formal Conjectures Authors.
 SPDX-License-Identifier: Apache-2.0
 -/
