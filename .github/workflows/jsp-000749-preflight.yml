@@ -1,0 +1,100 @@
+name: JSP-000749 submission preflight
+on:
+  push:
+    branches: [awards-preflight-jsp000749]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout exact submission
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: ketianzhang1-lang/awards
+          ref: 1cdba40814154753aaefcc7a509a320a8f9f79bc
+          path: awards
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout publicly verified source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: ketianzhang1-lang/jsp-000301-lean
+          ref: fddb23254d8b8530ce2bac9b9e50304557349512
+          path: proof
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Install official validation requirements
+        run: python -m pip install -r awards/requirements.txt
+      - name: Compare exact proof bytes, hashes, links and isolated diff
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          python - <<'PY' | tee evidence/identity-checks.log
+          from pathlib import Path
+          import hashlib, subprocess, re
+          root=Path('awards/docs/submissions/jsp-000749-kz')
+          verified=Path('proof/projects/jsp-000749')
+          lines=(root/'SOURCE_SHA256SUMS').read_text().splitlines()
+          assert len(lines)==15
+          assert (root/'SOURCE_SHA256SUMS').read_bytes()==(verified/'SOURCE_SHA256SUMS').read_bytes()
+          for line in lines:
+              expected,f=line.split(maxsplit=1)
+              actual=(root/f).read_bytes()
+              assert hashlib.sha256(actual).hexdigest()==expected,f
+              assert actual==(verified/f).read_bytes(),f
+          elines=(root/'EVIDENCE_SHA256SUMS').read_text().splitlines()
+          assert len(elines)==7
+          for line in elines:
+              expected,f=line.split(maxsplit=1)
+              assert hashlib.sha256((root/f).read_bytes()).hexdigest()==expected,f
+          changes=subprocess.check_output(['git','-C','awards','diff','--name-status','f4e7173d89dfe91022a185427d63452c8ffbf6ae','HEAD'],text=True).splitlines()
+          assert len(changes)==27,(len(changes),changes)
+          assert all(x.startswith('A\tdocs/submissions/jsp-000749-kz/') for x in changes),changes
+          for p in root.glob('*.md'):
+              for target in re.findall(r'\]\(([^)]+)\)',p.read_text()):
+                  if '://' not in target and not target.startswith('#'):
+                      assert (p.parent/target.split('#',1)[0]).exists(),(p,target)
+          print('PASS: 15 exact-source comparisons, 15 source hashes, 7 public-log/configuration hashes, 27 isolated additions and local links.')
+          print('Structural/evidence checks only; not official mathematical verification.')
+          PY
+          git -C awards diff --check f4e7173d89dfe91022a185427d63452c8ffbf6ae HEAD
+          git -C awards diff --stat f4e7173d89dfe91022a185427d63452c8ffbf6ae HEAD > evidence/diff-stat.txt
+          git -C awards diff f4e7173d89dfe91022a185427d63452c8ffbf6ae HEAD > evidence/submission.patch
+          git -C awards archive HEAD docs/submissions/jsp-000749-kz | gzip -n > evidence/submission.tar.gz
+          sha256sum evidence/submission.tar.gz > evidence/SHA256SUMS
+          git -C awards rev-parse HEAD > evidence/SUBMISSION_COMMIT
+      - name: Official schemas and local links
+        run: |
+          set -euo pipefail
+          cd awards
+          python scripts/manage.py validate 2>&1 | tee ../evidence/validate.log
+          python scripts/manage.py links 2>&1 | tee ../evidence/links.log
+      - name: Official generation and consistency
+        run: |
+          set -euo pipefail
+          cd awards
+          python scripts/manage.py build 2>&1 | tee ../evidence/build.log
+          python scripts/manage.py check 2>&1 | tee ../evidence/check.log
+          git diff --exit-code -- data
+      - name: Official history protection and all unit tests
+        run: |
+          set -euo pipefail
+          cd awards
+          python scripts/manage.py history --base f4e7173d89dfe91022a185427d63452c8ffbf6ae 2>&1 | tee ../evidence/history.log
+          python -m unittest discover -s tests -v 2>&1 | tee ../evidence/tests.log
+      - name: Preserve exact-package preflight results
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp-000749-preflight-evidence
+          path: evidence
+          if-no-files-found: error
+          retention-days: 90
