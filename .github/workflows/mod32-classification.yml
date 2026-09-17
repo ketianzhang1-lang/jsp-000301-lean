@@ -1,0 +1,68 @@
+name: Mod32 classification research
+
+on:
+  push:
+    branches: ["work/mod32-classification"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate explicit proof source
+        run: python3 work/mod32/generate.py
+      - name: Install pinned Lean toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          "$HOME/.elan/bin/elan" toolchain install leanprover/lean4:v4.34.0
+      - name: Build, audit, and replay
+        working-directory: work/mod32
+        shell: bash
+        run: |
+          set -euo pipefail
+          lean --version | tee toolchain.log
+          lake build --wfail 2>&1 | tee build.log
+          lake env lean Mod32.lean 2>&1 | tee axioms.log
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+          text = Path('axioms.log').read_text()
+          names = ['upper_bound', 'extremizers', 'first_admissible', 'second_admissible', 'square_free_card_bound', 'square_free_maxima']
+          for name in names:
+              if f'Mod32.{name}' not in text:
+                  raise SystemExit(f'Missing audit: {name}')
+          groups = re.findall(r'depends on axioms:\s*\[([^\]]*)\]', text, re.S)
+          independent = len(re.findall(r'does not depend on any axioms', text))
+          if len(groups) + independent != len(names):
+              raise SystemExit('Unexpected number or format of axiom reports')
+          allowed = {'propext', 'Classical.choice', 'Quot.sound'}
+          for group in groups:
+              found = {x.strip() for x in group.split(',') if x.strip()}
+              if not found <= allowed:
+                  raise SystemExit(f'Nonstandard axioms: {found-allowed}')
+          print('All six axiom closures contain only allowed standard axioms.')
+          PY
+          lake env leanchecker Mod32 2>&1 | tee kernel-replay.log
+          sha256sum Mod32.lean generate.py lean-toolchain lakefile.toml | tee SHA256SUMS
+      - name: Upload source and verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mod32-classification-evidence
+          path: |
+            work/mod32/Mod32.lean
+            work/mod32/generate.py
+            work/mod32/lean-toolchain
+            work/mod32/lakefile.toml
+            work/mod32/lake-manifest.json
+            work/mod32/*.log
+            work/mod32/SHA256SUMS
+          if-no-files-found: error
