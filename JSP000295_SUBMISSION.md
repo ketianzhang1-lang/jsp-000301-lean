@@ -2,13 +2,17 @@
 
 The Lean formalization and verification of the known square-root lower bound are complete. This contribution covers a known component of the original problem; it does not solve the full problem.
 
-**As of 2026-09-17, this integration returned HTTP 403 (Resource not accessible by integration) when attempting to create both the official pull request and the recipient-recommendation issue. Neither attempt completed a submission.**
+## Submission Status
 
-[Open the prefilled recipient recommendation form](https://github.com/TheJustinSunPrize/awards/issues/new?template=recommend-recipient.yml&title=%5BRecipient%5D%20JSP-000295%3A%20Lean%20formalization%20of%20the%20known%20lower%20bound&entry=JSP-000295%20%2F%20Erdos%20Problem%20357&recipient=RECIPIENT-JSP-000295-KZ-A&contributions=Self-submission%3A%20Lean%20proof%20of%20the%20known%20lower-bound%20component%2C%20f%28n%29%20%3E%3D%202%2ANat.sqrt%28n%29-1%20for%20all%20natural%20n%2C%20hence%20%282%2Bo%281%29%29%2Asqrt%28n%29.%20This%20does%20not%20solve%20the%20full%20problem%20or%20prove%20f%28n%29%3Do%28n%29.%0A%0AComplete%20scope%2C%20attribution%2C%20evidence%20and%20recommendation%3A%0Ahttps%3A%2F%2Fgithub.com%2Fketianzhang1-lang%2Fjsp-000301-lean%2Fblob%2Fjsp-000295-weisenberg%2FJSP000295_SUBMISSION.md%0A%0APinned%20review%20package%3A%0Ahttps%3A%2F%2Fgithub.com%2Fketianzhang1-lang%2Fawards%2Ftree%2F9526fbcdd4a6a7b06c4c85d7e7ef73d45b799056%2Fdocs%2Fsubmissions%2Fjsp-000295-kz%0A%0ASuccessful%20Lean%2Fkernel%2Faxiom%2FNaNoda%20checks%20%2813%2C975%20declarations%29%3A%0Ahttps%3A%2F%2Fgithub.com%2Fketianzhang1-lang%2Fjsp-000301-lean%2Factions%2Fruns%2F35171855423%0A%0APlease%20assess%20contribution%20eligibility.&confirmation=Pending.%20No%20public%20attestation%20of%20written%20confirmation%20is%20supplied.&conflicts=Known%20mathematical%20result%20credited%20to%20Desmond%20Weisenberg.%20Definitions%20and%20theorem%20type%20adapted%20from%20Formal%20Conjectures%20Authors%20%282025%29%2C%20Apache%202.0.%20Independently%20written%20formalization%20with%20OpenAI%20ChatGPT%20assistance.%20Self-submission%3B%20no%20new-mathematics%2C%20global-first%20or%20award-entitlement%20claim.%20Both%20automated%20PR%20and%20issue%20creation%20returned%20HTTP%20403%3B%20neither%20was%20created.%20Review%20overlap%20and%20exact%20scope%20before%20allocating%20any%20award.)
+**Submitted:** [Official recipient recommendation #383](https://github.com/TheJustinSunPrize/awards/issues/383), created on 2026-09-17 at 02:18:25 UTC.
 
-Sign in with your GitHub account, review the title and all five required fields, then select **Create / Submit new issue**. The prefilled form includes a contribution summary, evidence links, confirmation status and attribution. The full recommendation appears below. If signing in clears the prefilled content, copy the five corresponding sections below into the form. If you have already submitted this contribution manually, use the existing issue to avoid a duplicate submission.
+The issue is open. At this check, it contains all five required fields, the contribution scope, attribution and public evidence links, and has no comments. No organizer review decision or award announcement appears in the issue. Continue any follow-up in #383 rather than creating a duplicate recommendation.
 
-The organizer's [contribution guidelines](https://github.com/TheJustinSunPrize/awards/blob/main/CONTRIBUTING.md) provide an issue-based route for recommending recipients. The prefilled link uses the official form's field IDs; see the [GitHub form documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema). Submission requests review; the organizer determines prize eligibility.
+The earlier automated attempts to create an upstream pull request and recommendation issue returned HTTP 403 (Resource not accessible by integration). The subsequent creation of #383 completed the recommendation submission. The prepared pull request remains available below if the organizer requests code integration.
+
+The [proof CI run](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35171855423) is complete and successful for proof commit `59c5b5540c469b13e7b4848c7c3fbd17e688f519`.
+
+The organizer's [contribution guidelines](https://github.com/TheJustinSunPrize/awards/blob/main/CONTRIBUTING.md) provide an issue-based route for recommending recipients. Submission requests review; the organizer determines prize eligibility.
 
 ## Full Recommendation
 
@@ -67,7 +71,7 @@ The pinned Formal Conjectures statement attributes the known lower bound to **De
 
 This is a self-submission for review of formalization work. No new mathematics, worldwide first-formalization priority, curator/verifier role, organizer approval, award allocation or payment entitlement is claimed. Please assess exact scope, attribution, overlap and eligibility under the applicable rules.
 
-On 2026-09-17, the official repository search for JSP-000295 returned no existing issue or PR. The connected integration returned HTTP 403 for both upstream PR creation and recipient-recommendation issue creation; those calls created neither. This recommendation concerns the same already-public contribution. If a PR is required for intake or code integration, the prepared fork branch is `ketianzhang1-lang/awards:submit-jsp-000295-weisenberg`; please link any eventual PR to this recommendation.
+This contribution has been submitted in [official recommendation #383](https://github.com/TheJustinSunPrize/awards/issues/383). Earlier automated creation attempts returned HTTP 403 and did not themselves create an issue or PR. If a PR is required for intake or code integration, the prepared fork branch is `ketianzhang1-lang/awards:submit-jsp-000295-weisenberg`; please link any eventual PR to #383.
 
 ## Prepared Pull Request if Requested
 
