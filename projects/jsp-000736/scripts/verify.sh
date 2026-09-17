@@ -23,6 +23,9 @@ for pkg in json.loads(Path('lake-manifest.json').read_text())['packages']:
     head = subprocess.check_output(['git','-C','.lake/packages/'+pkg['name'],
                                    'rev-parse','HEAD'], text=True).strip()
     assert head == pkg['rev'], (pkg['name'], head)
+for source in ('JSP000736.lean', 'Challenge.lean'):
+    assert not re.search(r'\b(sorry|admit|axiom|native_decide)\b', Path(source).read_text()), source
+print('Proof source scan passed.')
 print('Three target axiom audits and all nine dependency revision checks passed.')
 PY
 printf 'import JSP000736\nexample : (1 : Nat) = 0 := by decide\n' > Negative.lean
@@ -31,9 +34,4 @@ if lake env lean Negative.lean > evidence/negative-control.log 2>&1; then
   echo 'ERROR: invalid arithmetic was accepted' >&2
   exit 1
 fi
-if rg -n '\b(sorry|admit|axiom|native_decide)\b' JSP000736.lean Challenge.lean; then
-  echo 'ERROR: prohibited proof placeholder or evaluation mechanism' >&2
-  exit 1
-fi
 printf 'All checks passed.\n'
-

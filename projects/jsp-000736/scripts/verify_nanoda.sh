@@ -47,4 +47,3 @@ PY
 "$work/checker/target/release/nanoda_bin" evidence/nanoda-config.json 2>&1 | tee evidence/nanoda.log
 gzip -n -f evidence/export.ndjson
 sha256sum evidence/export.ndjson.gz evidence/nanoda-config.json > evidence/CHECKER_SHA256SUMS
-
