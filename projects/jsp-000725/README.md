@@ -59,7 +59,7 @@ locked in lake-manifest.json. In this directory:
 ```sh
 lake exe cache get
 lake build --wfail
-lake env leanchecker --fresh JSP000725
+lake env leanchecker --verbose JSP000725
 lake env lean -DwarningAsError=true Audit.lean > axioms.log
 python3 audit.py axioms.log
 ```
@@ -69,8 +69,9 @@ The GitHub workflow additionally requires rejection of the false statement
 The axiom audit covers all ten proved declarations. No `sorry`, custom axiom,
 native-evaluation proof, or unsafe theorem-producing code is used.
 
-Cached dependencies and network access are used. `leanchecker` is a fresh replay
-with Lean's own kernel, not an independently implemented proof checker.
+Cached dependencies and network access are used. `leanchecker` replays the target module against the imported, pinned Mathlib
+environment using Lean's own kernel. It does not replay the whole dependency
+library from an empty environment and is not an independently implemented checker.
 These are contributor-run checks. Independent statement review, formalization
 eligibility, contribution assessment and any award decision remain outstanding.
 

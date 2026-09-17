@@ -35,7 +35,7 @@ jobs:
       - name: Replay kernel and audit
         run: |
           set -euo pipefail
-          lake env leanchecker --fresh JSP000725 2>&1 | tee evidence/kernel.log
+          lake env leanchecker --verbose JSP000725 2>&1 | tee evidence/kernel.log
           lake env lean -DwarningAsError=true Audit.lean 2>&1 | tee evidence/axioms.log
       - name: Audit allowed axioms and reject a false statement
         run: |
