@@ -1,4 +1,4 @@
-import JSP000617Sparse
+import JSP000617Upper
 #print axioms JSP000617.sum_sq_collision
 #print axioms JSP000617.pairSumFiber_card_le_two
 #print axioms JSP000617.parabolaSumset_large
@@ -12,3 +12,12 @@ import JSP000617Sparse
 #print axioms JSP000617.translated_row_card_le_two
 #print axioms JSP000617.curveUnion_row_card_le
 #print axioms JSP000617.finite_plane_construction_sparse
+#print axioms JSP000617.natural_base_block
+#print axioms JSP000617.natural_packet
+#print axioms JSP000617.cross_reps_le
+#print axioms JSP000617.separated_extension
+#print axioms JSP000617.dense_extension
+#print axioms JSP000617.infinite_representations
+#print axioms JSP000617.infinite_dense_prefixes
+#print axioms JSP000617.fixed_upper_density
+#print axioms JSP000617.upper_density_variant

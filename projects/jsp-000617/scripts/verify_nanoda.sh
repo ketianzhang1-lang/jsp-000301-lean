@@ -19,22 +19,26 @@ pin https://github.com/ammkrn/nanoda_lib.git 4c544ed4099c8227f07d5de77ad1e69fb07
 cp lean-toolchain "$work/exporter/lean-toolchain"
 (cd "$work/exporter" && lake build)
 (cd "$work/checker" && cargo build --release --locked)
-lake env "$work/exporter/.lake/build/bin/lean4export" JSP000617Sparse -- \
+lake env "$work/exporter/.lake/build/bin/lean4export" JSP000617Upper -- \
   JSP000617.sum_sq_collision JSP000617.pairSumFiber_card_le_two \
   JSP000617.parabolaSumset_large JSP000617.translated_representations_le_two \
   JSP000617.curveUnion_representations_le JSP000617.sum_misses \
   JSP000617.exists_halving_translate JSP000617.exists_small_uncovered \
   JSP000617.finite_plane_construction JSP000617.squareFiber_card_le_two \
   JSP000617.translated_row_card_le_two JSP000617.curveUnion_row_card_le \
-  JSP000617.finite_plane_construction_sparse > evidence/export.ndjson
+  JSP000617.finite_plane_construction_sparse \
+  JSP000617.natural_base_block JSP000617.natural_packet JSP000617.separated_extension \
+  JSP000617.infinite_representations JSP000617.infinite_dense_prefixes \
+  JSP000617.upper_density_variant > evidence/export.ndjson
 python3 - <<'PY'
 import json
 from pathlib import Path
 config={'export_file_path':'evidence/export.ndjson','use_stdin':False,
         'permitted_axioms':['propext','Classical.choice','Quot.sound'],
         'unpermitted_axiom_hard_error':True,'nat_extension':True,'string_extension':True,
-        'pp_declars':['JSP000617.finite_plane_construction_sparse','JSP000617.exists_small_uncovered',
-                     'JSP000617.planeSumset','JSP000617.sumRepresentations','JSP000617.rowPoints'],
+        'pp_declars':['JSP000617.upper_density_variant','JSP000617.infinite_representations',
+                     'JSP000617.upperDensity','JSP000617.sumset','JSP000617.orderedRep',
+                     'JSP000617.prefixSet','JSP000617.uniformBound'],
         'pp_output_path':'evidence/nanoda-statements.txt','pp_to_stdout':False,'print_success_message':True}
 Path('evidence/nanoda-config.json').write_text(json.dumps(config,indent=2)+'\n')
 Path('evidence/nanoda-statements.txt').write_text('')

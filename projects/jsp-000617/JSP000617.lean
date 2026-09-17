@@ -1,4 +1,6 @@
-import Mathlib
+import Mathlib.Tactic
+import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+import Mathlib.Data.ZMod.Basic
 
 /-!
 # JSP-000617 / Erdos 749: finite-field building blocks
