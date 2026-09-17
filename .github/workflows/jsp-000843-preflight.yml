@@ -1,0 +1,96 @@
+name: JSP-000843 submission preflight
+on:
+  push:
+    branches: [awards-preflight-jsp000843]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout exact proposed submission
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: ketianzhang1-lang/awards
+          ref: 3fc983d4d9a0f78bdbedb1f8676771448275862b
+          path: awards
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout successfully verified proof source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: ketianzhang1-lang/jsp-000301-lean
+          ref: d606af2009f85d5060008a1df249045c18ac34f3
+          path: proof
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Install official validation dependencies
+        run: python -m pip install -r awards/requirements.txt
+      - name: Verify source identity, hashes, local links and isolated change scope
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          rel=docs/submissions/jsp-000843-kz
+          p=awards/$rel
+          for f in .gitignore Audit.lean JSP000843.lean LICENSE PROVENANCE.md lake-manifest.json lakefile.lean lean-toolchain scripts/verify.sh scripts/verify_nanoda.sh; do
+            cmp "$p/$f" "proof/projects/jsp-000843/$f"
+          done
+          (cd "$p" && sha256sum -c SOURCE_SHA256SUMS) | tee evidence/source-checks.log
+          python - <<'PY' | tee evidence/scope-links.log
+          import subprocess,re
+          from pathlib import Path
+          from urllib.parse import unquote
+          changes=subprocess.check_output(['git','-C','awards','diff','--name-status',
+            'f4e7173d89dfe91022a185427d63452c8ffbf6ae','HEAD'],text=True).splitlines()
+          assert len(changes)==16,changes
+          assert all(x.startswith('A\tdocs/submissions/jsp-000843-kz/') for x in changes),changes
+          root=Path('awards/docs/submissions/jsp-000843-kz')
+          count=0
+          for md in root.rglob('*.md'):
+              for target in re.findall(r'\]\(([^)]+)\)',md.read_text()):
+                  if '://' in target or target.startswith('#'):
+                      continue
+                  local=unquote(target.split('#')[0])
+                  assert (md.parent/local).exists(),(md,local)
+                  count+=1
+          print('Exactly 16 new files, all in the new proof-intake directory.')
+          print(f'All {count} package-local Markdown links resolve.')
+          PY
+          git -C awards diff --stat f4e7173d89dfe91022a185427d63452c8ffbf6ae HEAD > evidence/diff-stat.txt
+          git -C awards diff f4e7173d89dfe91022a185427d63452c8ffbf6ae HEAD > evidence/submission.patch
+          git -C awards archive HEAD "$rel" | gzip -n > evidence/submission.tar.gz
+          sha256sum evidence/submission.tar.gz > evidence/SHA256SUMS
+          git -C awards rev-parse HEAD > evidence/SUBMISSION_COMMIT
+      - name: Validate official schemas and local links
+        run: |
+          set -euo pipefail
+          cd awards
+          python scripts/manage.py validate 2>&1 | tee ../evidence/validate.log
+          python scripts/manage.py links 2>&1 | tee ../evidence/links.log
+      - name: Regenerate indexes and verify unchanged official data
+        run: |
+          set -euo pipefail
+          cd awards
+          python scripts/manage.py build 2>&1 | tee ../evidence/build-data.log
+          python scripts/manage.py check 2>&1 | tee ../evidence/check-data.log
+          git diff --exit-code -- data
+      - name: Check immutable history and run all official tests
+        run: |
+          set -euo pipefail
+          cd awards
+          python scripts/manage.py history --base f4e7173d89dfe91022a185427d63452c8ffbf6ae 2>&1 | tee ../evidence/history.log
+          python -m unittest discover -s tests -v 2>&1 | tee ../evidence/tests.log
+      - name: Upload exact preflight evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp-000843-preflight-evidence
+          path: evidence
+          if-no-files-found: error
