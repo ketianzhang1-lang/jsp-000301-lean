@@ -13,6 +13,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Collect public primary-source snapshots
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           mkdir -p research-output
@@ -20,10 +22,16 @@ jobs:
           curl -fsSL 'https://raw.githubusercontent.com/TheJustinSunPrize/awards/main/problems/README.md' -o research-output/jsp-index.md
           curl -fsSL 'https://codeload.github.com/google-deepmind/formal-conjectures/tar.gz/refs/heads/main' -o research-output/formal-conjectures.tar.gz
           curl -fsSL 'https://raw.githubusercontent.com/teorth/erdosproblems/main/README.md' -o research-output/erdos-index.md
+          curl -fsSL 'https://codeload.github.com/plby/lean-proofs/tar.gz/refs/heads/main' -o research-output/existing-lean-proofs.tar.gz
+          gh api --paginate 'repos/TheJustinSunPrize/awards/issues?state=all&per_page=100' --jq '.[]' | jq -s . > research-output/existing-submissions.json
           python3 - <<'PY'
           from pathlib import Path
+          import tarfile, re
+          with tarfile.open('research-output/existing-lean-proofs.tar.gz') as t:
+              files=t.getnames()
+          nums={int(m.group(1)) for s in files if (m:=re.search(r'/Erdos(\d+)\.lean$',s))}
           for line in Path('research-output/erdos-index.md').read_text().splitlines():
-              if '| disproved |' in line:
+              if ('| disproved |' in line or '| proved |' in line) and (m:=re.match(r'\| \[(\d+)\]',line)) and int(m.group(1)) not in nums:
                   print(line)
           PY
       - uses: actions/upload-artifact@v4
