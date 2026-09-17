@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos895.lean",
+    "path": "Erdos895.lean",
+    "sha256": "f1527baff5eba895e1208d27c705487fa52a7ed647ca94935d5e9c1137e77163",
+    "port_sha256": "456dd689b74002fc2f527a805cc75f3ffd3a01abf8ab2b19d489451419f73198"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos895/Certificate.cnf",
+    "path": "Erdos895/Certificate.cnf",
+    "sha256": "260b7c50fac4fcc4525f7253eb37a8750bf744cff5bb41e92a314cdea1ccab45",
+    "port_sha256": "260b7c50fac4fcc4525f7253eb37a8750bf744cff5bb41e92a314cdea1ccab45"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos895/Certificate.lrat",
+    "path": "Erdos895/Certificate.lrat",
+    "sha256": "2f8729bd57e5ee6d24292e2b51fc72afad884bedf5234b808615568fe9bac582",
+    "port_sha256": "2f8729bd57e5ee6d24292e2b51fc72afad884bedf5234b808615568fe9bac582"
+  }
+]

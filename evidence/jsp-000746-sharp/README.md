@@ -1,6 +1,8 @@
-# JSP-000746 / Erdos 895: verified sharpness supplement
+# JSP-000746 / Erdos 895: historical finite-proof receipt
 
-## Precisely what this adds
+This is the historical receipt for the Lean 4.33 finite supplement. The current Lean 4.34 project adds and verifies the original integer-graph endpoint; see [the current project README](../../projects/jsp-000746-sharp/README.md). The old run below does not certify the new endpoint.
+
+## Precisely what the historical version adds
 
 Let P(n) mean that every triangle-free simple graph on the labeled vertices {1,...,n} contains three distinct pairwise nonadjacent vertices a,b,a+b, with a<b. The new Lean theorem proves **P(n) if and only if n >= 18**, for every natural n, including zero.
 
