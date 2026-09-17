@@ -6,4 +6,4 @@ require mathlib from git
   "https://github.com/leanprover-community/mathlib4" @ "v4.34.0"
 @[default_target]
 lean_lib JSP000636 where
-  roots := #[`JSP000636, `Lower]
+  roots := #[`JSP000636, `Lower, `Upper, `Construction, `Threshold, `Thinning]

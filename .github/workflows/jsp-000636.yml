@@ -1,7 +1,7 @@
 name: JSP-000636 antichain and threshold bounds
 on:
   push:
-    branches: [jsp-000636-antichain-upper]
+    branches: [jsp-000636-antichain-upper, jsp-000636-pair-label-upper-kz]
     paths: [projects/jsp-000636/**, .github/workflows/jsp-000636.yml]
   workflow_dispatch:
 permissions:

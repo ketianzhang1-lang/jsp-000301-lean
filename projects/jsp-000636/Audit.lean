@@ -1,4 +1,4 @@
-import Lower
+import Thinning
 
 #print axioms JSP000636.antichain_iff_isAntichain
 #print axioms JSP000636.twins_of_multiplicity
@@ -38,3 +38,26 @@ import Lower
 #print axioms JSP000636.critical_size_bound
 #print axioms JSP000636.extremal_critical_le
 #print axioms JSP000636.threshold_lower_bound
+#print axioms JSP000636.choose_ge_self
+#print axioms JSP000636.pair_capacity
+#print axioms JSP000636.select_subsets
+#print axioms JSP000636.HalfFamily.mem_family
+#print axioms JSP000636.HalfFamily.antichain
+#print axioms JSP000636.HalfFamily.card_le
+#print axioms JSP000636.HalfFamily.common_mem
+#print axioms JSP000636.HalfFamily.multiplicity
+#print axioms JSP000636.HalfFamily.full_antichain
+#print axioms JSP000636.HalfFamily.full_multiplicity
+#print axioms JSP000636.HalfFamily.all_sizes
+#print axioms JSP000636.HalfFamily.full_size_count
+#print axioms JSP000636.pairLabel_half_exists
+#print axioms JSP000636.sqrt_pair_capacity
+#print axioms JSP000636.attaining_family
+#print axioms JSP000636.extremal_eventually_eq
+#print axioms JSP000636.threshold_upper_bound
+#print axioms JSP000636.threshold_exists
+#print axioms JSP000636.leastThreshold_spec
+#print axioms JSP000636.leastThreshold_le
+#print axioms JSP000636.leastThreshold_bounds
+#print axioms JSP000636.thin_to_exact
+#print axioms JSP000636.exact_attaining_family
