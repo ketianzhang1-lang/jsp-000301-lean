@@ -21,11 +21,11 @@ def LiftAdj (G : SimpleGraph V) : Option (V × Bool) → Option (V × Bool) → 
 
 def mycielski (G : SimpleGraph V) : SimpleGraph (Option (V × Bool)) where
   Adj := LiftAdj G
-  symm := by
+  symm := ⟨by
     rintro (_ | ⟨v, b⟩) (_ | ⟨w, c⟩) <;>
-      simp_all [LiftAdj, G.adj_comm, or_comm]
-  loopless := by
-    rintro (_ | ⟨v, b⟩) <;> simp [LiftAdj]
+      simp_all [LiftAdj, G.adj_comm, or_comm]⟩
+  loopless := ⟨by
+    rintro (_ | ⟨v, b⟩) <;> simp [LiftAdj]⟩
 
 def TriangleFree (G : SimpleGraph V) : Prop :=
   ∀ ⦃a b c⦄, G.Adj a b → G.Adj b c → G.Adj c a → False
@@ -44,10 +44,9 @@ theorem mycielski_triangleFree {G : SimpleGraph V} (h : TriangleFree G) :
     TriangleFree (mycielski G) := by
   rintro (_ | ⟨a, ba⟩) (_ | ⟨b, bb⟩) (_ | ⟨c, bc⟩) <;>
     simp only [mycielski, LiftAdj]
-  all_goals
-    first
-    | tauto
-    | (intro h1 h2 h3; exact h h1.1 h2.1 h3.1)
+  all_goals intro h1 h2 h3
+  all_goals simp_all
+  all_goals exact h h1.1 h2.1 h3.1
 
 theorem mycielski_colorable {G : SimpleGraph V} {n : ℕ} (h : G.Colorable n) :
     (mycielski G).Colorable (n + 1) := by
@@ -60,10 +59,8 @@ theorem mycielski_colorable {G : SimpleGraph V} {n : ℕ} (h : G.Colorable n) :
       (by
         rintro (_ | ⟨v,b⟩) (_ | ⟨w,c⟩) hadj <;>
           simp only [mycielski, LiftAdj] at hadj
-        · exact hadj.elim
-        · exact Option.noConfusion
-        · exact fun he => Option.noConfusion he
-        · exact fun he => C.valid hadj.1 (Option.some.inj he))
+        all_goals try simp
+        all_goals exact fun he => C.valid hadj.1 (Option.some.inj he))
   simpa using D.colorable
 
 /-- Delete the apex color after recoloring affected originals by their shadows. -/
@@ -96,7 +93,7 @@ theorem colorable_of_mycielski {G : SimpleGraph V} {n : ℕ}
       (fun hadj he => valid hadj (congrArg Subtype.val he))
   simpa using D.colorable
 
-def Vert : ℕ → Type
+@[reducible] def Vert : ℕ → Type
   | 0 => Fin 2
   | n + 1 => Option (Vert n × Bool)
 
@@ -118,8 +115,7 @@ theorem family_triangleFree (n : ℕ) : TriangleFree (family n) := by
     have hab' : a ≠ b := hab
     have hbc' : b ≠ c := hbc
     have hca' : c ≠ a := hca
-    change Fin 2 at a b c
-    omega
+    fin_cases a <;> fin_cases b <;> fin_cases c <;> simp_all
   | succ n ih => exact mycielski_triangleFree ih
 
 theorem family_cliqueFree (n : ℕ) : (family n).CliqueFree 3 :=
@@ -127,15 +123,17 @@ theorem family_cliqueFree (n : ℕ) : (family n).CliqueFree 3 :=
 
 theorem family_colorable (n : ℕ) : (family n).Colorable (n + 2) := by
   induction n with
-  | zero => simpa [family, Vert] using
-      (SimpleGraph.colorable_of_fintype (⊤ : SimpleGraph (Fin 2)))
+  | zero =>
+    change (⊤ : SimpleGraph (Fin 2)).Colorable 2
+    exact ⟨(⊤ : SimpleGraph (Fin 2)).selfColoring⟩
   | succ n ih => exact mycielski_colorable ih
 
 theorem family_not_colorable (n : ℕ) : ¬ (family n).Colorable (n + 1) := by
   induction n with
   | zero =>
+    change ¬ (⊤ : SimpleGraph (Fin 2)).Colorable 1
     rintro ⟨C⟩
-    exact C.valid (show (family 0).Adj (0 : Fin 2) 1 by decide)
+    exact C.valid (show (⊤ : SimpleGraph (Fin 2)).Adj (0 : Fin 2) (1 : Fin 2) by decide)
       (Subsingleton.elim _ _)
   | succ n ih => exact fun h => ih (colorable_of_mycielski h)
 
@@ -149,7 +147,7 @@ theorem family_chromaticNumber (n : ℕ) :
 theorem family_card_add_one (n : ℕ) :
     Fintype.card (Vert n) + 1 = 3 * 2 ^ n := by
   induction n with
-  | zero => simp [Vert]
+  | zero => norm_num [Vert, vertFintype]
   | succ n ih =>
     change Fintype.card (Option (Vert n × Bool)) + 1 = _
     simp only [Fintype.card_option, Fintype.card_prod, Fintype.card_bool]
