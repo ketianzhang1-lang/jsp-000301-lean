@@ -25,7 +25,7 @@ jobs:
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
           export PATH="$HOME/.elan/bin:$PATH"
           elan toolchain install "$(cat lean-toolchain)"
-          lake exe cache get
+          lake exe cache get Mathlib.Data.Finset.Powerset Mathlib.Data.Multiset.Count Mathlib.Data.Int.Interval Mathlib.Algebra.BigOperators.Ring.Finset Mathlib.Basic.Complex.Basic
           git diff --exit-code -- lake-manifest.json
       - name: Compile and audit
         run: bash scripts/verify.sh

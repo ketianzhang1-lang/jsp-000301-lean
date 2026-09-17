@@ -1,5 +1,6 @@
 import Mathlib.Data.Finset.Powerset
-import Mathlib.Data.Multiset.Sort
+import Mathlib.Data.Multiset.Count
+import Mathlib.Data.Int.Interval
 import Mathlib.Algebra.BigOperators.Ring.Finset
 import Mathlib.Basic.Complex.Basic
 
@@ -14,13 +15,28 @@ namespace JSP000399Triple
 def intSumMultiset (A : Finset ℤ) (k : ℕ) : Multiset ℤ :=
   (A.powersetCard k).val.map fun s => s.sum id
 
-/-- Sorting is used only to make a kernel-checked finite certificate efficient. -/
-theorem intSumMultiset_eq_of_sort_eq {A B : Finset ℤ} {k : ℕ}
-    (h : (intSumMultiset A k).sort (· ≤ ·) =
-      (intSumMultiset B k).sort (· ≤ ·)) :
+/-- Remove the proof-carrying finite-subset layer before finite computation. -/
+theorem intSumMultiset_eq_map_sum (A : Finset ℤ) (k : ℕ) :
+    intSumMultiset A k = (A.val.powersetCard k).map Multiset.sum := by
+  unfold intSumMultiset
+  rw [← Finset.map_val_val_powersetCard A k]
+  simp only [Multiset.map_map, Function.comp_def, Finset.sum_val]
+
+/-- Finite support and exact multiplicities certify multiset equality. -/
+theorem intSumMultiset_eq_of_counts {A B : Finset ℤ} {k : ℕ}
+    (S : Finset ℤ)
+    (hA : ∀ z ∈ intSumMultiset A k, z ∈ S)
+    (hB : ∀ z ∈ intSumMultiset B k, z ∈ S)
+    (hc : ∀ z ∈ S,
+      (intSumMultiset A k).count z = (intSumMultiset B k).count z) :
     intSumMultiset A k = intSumMultiset B k := by
-  have hm := congrArg (fun l : List ℤ => (l : Multiset ℤ)) h
-  simpa using hm
+  apply Multiset.ext.mpr
+  intro z
+  by_cases hz : z ∈ S
+  · exact hc z hz
+  · have hza : z ∉ intSumMultiset A k := fun h => hz (hA z h)
+    have hzb : z ∉ intSumMultiset B k := fun h => hz (hB z h)
+    rw [Multiset.count_eq_zero.mpr hza, Multiset.count_eq_zero.mpr hzb]
 
 noncomputable def complexSumMultiset (A : Finset ℂ) (k : ℕ) : Multiset ℂ :=
   (A.powersetCard k).val.map fun s => s.sum id

@@ -29,8 +29,13 @@ theorem witness_ne_reflected : witness ≠ reflected := by decide +kernel
 
 theorem equal_triple_sums :
     intSumMultiset witness 3 = intSumMultiset reflected 3 := by
-  apply intSumMultiset_eq_of_sort_eq
-  decide +kernel
+  apply intSumMultiset_eq_of_counts (Finset.Icc (-54) 54)
+  · simp only [Finset.mem_Icc, intSumMultiset_eq_map_sum]
+    decide +kernel
+  · simp only [Finset.mem_Icc, intSumMultiset_eq_map_sum]
+    decide +kernel
+  · simp only [intSumMultiset_eq_map_sum]
+    decide +kernel
 
 theorem complex_counterexample :
     ∃ A B : Finset ℂ, A.card = 27 ∧ B.card = 27 ∧
