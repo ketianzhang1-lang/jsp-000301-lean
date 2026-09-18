@@ -26,7 +26,8 @@ The complete analytic proof is reused from
 The Erdős 682 entry credits Codex and GPT-5.6 Sol as formal authors.
 Its transitive closure contains 51 source modules, including sieve theory,
 the prime number theorem, natural-density utilities and their dependencies.
-We preserve their original source headers. The Formal Conjectures authors,
+We preserve their original source headers and add explicit modification notices
+to the compatibility-ported files. The Formal Conjectures authors,
 the PrimeNumberTheoremAnd contributors, UnitFractions contributors, Mathlib
 authors and other named upstream authors retain their respective credits.
 The complete density proof is an imported dependency, not our original proof.

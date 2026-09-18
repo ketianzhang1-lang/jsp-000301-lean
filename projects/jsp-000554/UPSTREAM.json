@@ -13,24 +13,31 @@
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/BrunMainTerm.lean",
     "git_blob_sha": "e46829d0e76030deca2c87f17d21e770c262b307",
     "sha256": "0e8c5be7c37c36f5be357795198cae4117f662acb0b7f411f536471996771232",
-    "port_sha256": "a33740ae64e4273cd6bea5919e00d7c483bb1d8d8cf900adb6c52530ae9a45da",
+    "port_sha256": "3c22c0094521d084e88a45287e27ed259921a8188f7964aa55e2dd02262fde28",
     "renames": {
-      "if_pos": "ite_pos",
-      "if_neg": "ite_neg"
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right"
     },
-    "edits": []
+    "edits": [
+      [
+        "Finset.prod_le_prod_of_subset_of_one_le ",
+        "Finset.prod_le_prod_of_subset_of_one_le\u2080 "
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos387/BrunSieve.lean",
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/BrunSieve.lean",
     "git_blob_sha": "db82bd8b03edcc29a8844885671c8e2efaed9a01",
     "sha256": "e99eef68936ac9def7858e0dbed7754e8a895ce267307d8fd93c19e537ec4322",
-    "port_sha256": "9a7035d842675e389f01fb09535158a5c394c41654538a18ab2b78e0cd9d391e",
+    "port_sha256": "3227fac05ca1d7d6d184456e5a8040e71b6ffdd5c96e92d01c4b72b70ae85e5c",
     "renames": {
-      "if_pos": "ite_pos",
-      "if_neg": "ite_neg"
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right"
     },
-    "edits": []
+    "edits": [],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos387/CoverAlgebra.lean",
@@ -46,42 +53,59 @@
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/CoverBPZConditional.lean",
     "git_blob_sha": "5336fd227df458ed3cf8eb019aed8b18757d174e",
     "sha256": "e4123e8046b3602a608eb0a51ce646ce444b6e88b4bf16c059a536b15879bc1e",
-    "port_sha256": "fdafd80c3b532fa56bdc0bdbb22e8124879652f4f7f3ad6e0041506c30b9ffda",
+    "port_sha256": "964d6f2c9eb56cfc5d5115c8dda5402fb9aaaeaddb5b44df3e7f622050dc74ce",
     "renames": {
-      "if_pos": "ite_pos",
-      "if_neg": "ite_neg",
-      "dif_pos": "dite_pos"
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left"
     },
-    "edits": []
+    "edits": [],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos387/CoverBPZPrelude.lean",
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/CoverBPZPrelude.lean",
     "git_blob_sha": "10c7f4b74fd4ffb2235fdb8908fb20e3256349d0",
     "sha256": "1d74755e8741cf5f44356e1591ef9d317b8b5d1ec2a7350085c0b93ed0d220fb",
-    "port_sha256": "15d4375ec863665c9775e46ea0a06cdfdaad8c4ebaf11fb04eab5c16ac1288a4",
+    "port_sha256": "b03e879dd42c060ee4b82a19b6d5346b1c010f6071ca5ac67995beb745a35337",
     "renames": {
-      "if_pos": "ite_pos",
-      "if_neg": "ite_neg",
-      "dif_pos": "dite_pos",
-      "dif_neg": "dite_neg",
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right",
       "if_true": "ite_true"
     },
-    "edits": []
+    "edits": [
+      [
+        "Finset.prod_le_prod ",
+        "Finset.prod_le_prod\u2080 "
+      ],
+      [
+        "Finset.prod_le_prod_of_subset_of_one_le'",
+        "Finset.prod_le_prod_of_subset_of_one_le"
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos387/CoverLemma.lean",
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/CoverLemma.lean",
     "git_blob_sha": "b128e28005a9868e19f7c2c2d4067a29e04562d6",
     "sha256": "103b33c44f74df08bf55f75260d8a0165e3dda294bee879cf448fdbb2312a0a5",
-    "port_sha256": "cb9559428a7aa8eb667b915f3b00c75d2d8662e0cf4518b1b26705a4579390f6",
+    "port_sha256": "cef32142d12486efb8251f3f6917e2cb08924721a73ae6199c543c47c7aada75",
     "renames": {
-      "if_pos": "ite_pos",
-      "if_neg": "ite_neg",
-      "dif_pos": "dite_pos",
-      "dif_neg": "dite_neg"
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
     },
-    "edits": []
+    "edits": [
+      [
+        "Finset.prod_le_prod ",
+        "Finset.prod_le_prod\u2080 "
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos387/LocalDensity.lean",
@@ -106,12 +130,26 @@
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/QualitativeSieve.lean",
     "git_blob_sha": "26698930adad8b207628670d4d09734aff54e11b",
     "sha256": "ee8ff3ac3804a716181d91cde432ecbeb77fab3dc56af96d1e599e384db4484f",
-    "port_sha256": "c9bf7496e79e1f0b37c4d64b43fd58c21fd739465f664e06e2350ee049c25fd6",
+    "port_sha256": "e7b19777f9a8729068327080522e57636fa889dcfaee5e62d32b5f860c0862d6",
     "renames": {
-      "if_pos": "ite_pos",
-      "if_neg": "ite_neg"
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right"
     },
-    "edits": []
+    "edits": [
+      [
+        "Finset.prod_le_prod\n",
+        "Finset.prod_le_prod\u2080\n"
+      ],
+      [
+        "Finset.one_le_prod\n",
+        "Finset.one_le_prod\u2080\n"
+      ],
+      [
+        "Finset.prod_le_prod'",
+        "Finset.prod_le_prod"
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos387/Section6Bridge.lean",
@@ -145,28 +183,48 @@
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos469.lean",
     "git_blob_sha": "7caebec7c56c9dfe82ac00a4077fc28ca641c91e",
     "sha256": "99399073564ec142b319b923552f01eca5af94b8dbb86bcf2cbac9d4d7cbe6f9",
-    "port_sha256": "630ca25c12595449aed2d61d45f61f2c2ee3f73691cb23cfc88ee0247ee52670",
+    "port_sha256": "e051eb390f1e2e1d1d68e3cc03f6a9f1d91aef181b800f78a2ac9c9bdaea8a31",
     "renames": {
-      "if_pos": "ite_pos",
-      "if_neg": "ite_neg",
-      "dif_pos": "dite_pos",
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
       "if_true": "ite_true",
       "if_false": "ite_false"
     },
-    "edits": []
+    "edits": [
+      [
+        "Finset.prod_le_prod\n",
+        "Finset.prod_le_prod\u2080\n"
+      ],
+      [
+        "Finset.prod_le_one\n",
+        "Finset.prod_le_one\u2080\n"
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos682.lean",
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos682.lean",
     "git_blob_sha": "76b5e5b0424c38dc145e687ae0ab38a5e5522663",
     "sha256": "c2ccb50878691f3df8e64174d0ecff384f22b6674b22a9392c1a7246ce470016",
-    "port_sha256": "78dca70d6161e8421e9039daf9445b75ae896ddaaaaae5b03ec192771390ac3b",
+    "port_sha256": "8289d763e1baa4d9f0d636e637ec731ccee29a92e7ab4b11e94155e18585c646",
     "renames": {
-      "if_pos": "ite_pos",
-      "if_neg": "ite_neg",
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
       "if_true": "ite_true"
     },
-    "edits": []
+    "edits": [
+      [
+        "Finset.prod_le_prod\n",
+        "Finset.prod_le_prod\u2080\n"
+      ],
+      [
+        "Finset.prod_le_prod ",
+        "Finset.prod_le_prod\u2080 "
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos851/Basic.lean",
@@ -236,29 +294,42 @@
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/BetaStoppingGeometry.lean",
     "git_blob_sha": "17f1ca2c99c1b87f85fadbb643deede90f1332f7",
     "sha256": "b635a21d8afe36908eea4406bd860a13f56130d0f53babe65055316311c07b29",
-    "port_sha256": "b635a21d8afe36908eea4406bd860a13f56130d0f53babe65055316311c07b29",
+    "port_sha256": "772a04c6b31a27846d9a7eb2f4850e8ff9e269d2cc4676b1f22120a6ec1a10c9",
     "renames": {},
-    "edits": []
+    "edits": [
+      [
+        "List.prod_le_prod'",
+        "List.prod_le_prod"
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos851/ConcreteBetaCardinality.lean",
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/ConcreteBetaCardinality.lean",
     "git_blob_sha": "3f82d5f950bb2a999cae6941fcae749d47b5390a",
     "sha256": "6acf0abc2fc927f4c9985f70993bb1d1e51e595463e981c272fee10bbfc2d1ee",
-    "port_sha256": "6055d62e250c8743c51f4c500561d7bee1b17eecea69bb94039ab2f91a640bc9",
+    "port_sha256": "99cbfc49f89c5a5b11575e6a84b2dfc7b2e16209ffdbae2d1049bf10356aab77",
     "renames": {
-      "if_pos": "ite_pos"
+      "if_pos": "ite_eq_left"
     },
-    "edits": []
+    "edits": [],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos851/ConcreteBetaCutoff.lean",
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/ConcreteBetaCutoff.lean",
     "git_blob_sha": "38d8560cb1deffa9a612e943ba80b7fc5473bd66",
     "sha256": "9f093dc8d288c812256ff3eb5722504fb24872febad1134b28f32be4495d07bb",
-    "port_sha256": "9f093dc8d288c812256ff3eb5722504fb24872febad1134b28f32be4495d07bb",
+    "port_sha256": "fd473d3185d5a5f8f1b574222818949989a7fce876133f2247bb4fc86f33cd49",
     "renames": {},
-    "edits": []
+    "edits": [
+      [
+        "Finset.prod_le_prod_of_subset_of_one_le ",
+        "Finset.prod_le_prod_of_subset_of_one_le\u2080 "
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos851/Elementary.lean",
@@ -301,34 +372,37 @@
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/FiniteCombinatorialSieve.lean",
     "git_blob_sha": "d51f714fdf809fd9a393befa7165a0b7a94481c7",
     "sha256": "b9eee640e07c47a9c39209395d69c4da7d8834e697c24e53b522ef9379c2efd3",
-    "port_sha256": "bc1b672426bad0baa35cd4ad0288ccad0428e55d8d326a11b012d91dcc243bad",
+    "port_sha256": "f64652901e3456f7f323f44f9826b2c2e9cde61be1db48980825e6acab175837",
     "renames": {
-      "if_pos": "ite_pos"
+      "if_pos": "ite_eq_left"
     },
-    "edits": []
+    "edits": [],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos851/FiniteRecursiveBridge.lean",
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/FiniteRecursiveBridge.lean",
     "git_blob_sha": "f39b946677fc6dd6320b63b6acfda99791c2ddcf",
     "sha256": "ff512f4a0d4d5a14567aa0007eec4c4b77742787fadfcb3a449555b02bd198bc",
-    "port_sha256": "cfcd5acf65766e7ec54becb12e0c5a1d825636b6cfc5343bd794fa319d3e50a5",
+    "port_sha256": "9adb8e97f6160a83373f2328d536f2fcdbe31da0ca1338414b3c245cb94a67f1",
     "renames": {
-      "if_neg": "ite_neg"
+      "if_neg": "ite_eq_right"
     },
-    "edits": []
+    "edits": [],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos851/FiniteSieveApplication.lean",
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/FiniteSieveApplication.lean",
     "git_blob_sha": "bdbbab7208aa617b4f37fbf519a21d4a76465634",
     "sha256": "33de94c90bb4463661f92a648216ccdba1534e9cdb96fb9202de7c0defcd9694",
-    "port_sha256": "ce9920de9d11957b6e829cd5bd30310f237603b6e8c194d031437d1d7f03f338",
+    "port_sha256": "a03675739022e36fbad0240fc1e68e6403f96a6d480026af2d7fa163408c6d6d",
     "renames": {
-      "if_pos": "ite_pos",
-      "if_neg": "ite_neg"
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right"
     },
-    "edits": []
+    "edits": [],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos851/GeometricBetaTail.lean",
@@ -344,18 +418,34 @@
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/LocalEulerProducts.lean",
     "git_blob_sha": "8ccc1cc6c9de6c88e34a0769e0601d53a3d887b6",
     "sha256": "f758036e358abd3c2768ce97d02e9d1fd65013319bdccecb3d13be9328411180",
-    "port_sha256": "f758036e358abd3c2768ce97d02e9d1fd65013319bdccecb3d13be9328411180",
+    "port_sha256": "7bbbb08d7102d8ca6bcbb8bd22082307d1118a3020a0324b6fdd6c25bccfd7d9",
     "renames": {},
-    "edits": []
+    "edits": [
+      [
+        "Finset.prod_le_prod_of_subset_of_one_le\n",
+        "Finset.prod_le_prod_of_subset_of_one_le\u2080\n"
+      ],
+      [
+        "Finset.prod_le_prod\n",
+        "Finset.prod_le_prod\u2080\n"
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos851/RosserBoundaryEstimate.lean",
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/RosserBoundaryEstimate.lean",
     "git_blob_sha": "281420676b5ed6bd2f9b7924583673866d223521",
     "sha256": "282555fa63fb02a290c317a6dd76cb247bdbbaa1692e90764a080dcb63dd1d78",
-    "port_sha256": "282555fa63fb02a290c317a6dd76cb247bdbbaa1692e90764a080dcb63dd1d78",
+    "port_sha256": "3198e023c74d9a7c029e1b422a9b451dfaf4dd12ca9ce2d352f2f02beec1b062",
     "renames": {},
-    "edits": []
+    "edits": [
+      [
+        "List.prod_le_prod'",
+        "List.prod_le_prod"
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos851/RosserCore.lean",
@@ -389,11 +479,37 @@
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Consequences.lean",
     "git_blob_sha": "167d52c19bdba66c37fa766415c3bd73105376b0",
     "sha256": "c53d6857226b3e597174b7f78a9f937219b9b32e57f98f9188649f1ed2babb80",
-    "port_sha256": "c870102a6d8d9b42df5edc2beb46bd97ff447b7b25143a568e29f82bd011a2d7",
+    "port_sha256": "6eba758c08e85738080cf9bc54881c4d4b61a1cdb3ffda1523a679916ab36e05",
     "renames": {
-      "if_pos": "ite_pos"
+      "if_pos": "ite_eq_left"
     },
-    "edits": []
+    "edits": [
+      [
+        "convert isLittleO_log_rpow_atTop (by norm_num : (0 : \u211d) < 1 / 2) using 2\n      \u00b7 rfl\n      \u00b7 rfl\n      \u00b7 rw [\u2190 sqrt_eq_rpow, div_sqrt, sqrt_eq_rpow]",
+        "convert isLittleO_log_rpow_atTop (by norm_num : (0 : \u211d) < 1 / 2) using 2 <;> try rfl\n      rw [\u2190 sqrt_eq_rpow, div_sqrt, sqrt_eq_rpow]"
+      ],
+      [
+        "convert isLittleO_sqrt_mul_log.const_mul_left 2 using 1\n    \u00b7 rfl\n    \u00b7 rfl\n    \u00b7 ext x\n      ring\n    \u00b7 ext x\n      rfl",
+        "convert isLittleO_sqrt_mul_log.const_mul_left 2 using 1 <;> try rfl\n    ext x\n    ring"
+      ],
+      [
+        "    field\n  \u00b7 ext n\n    simp only [Pi.mul_apply]\n\ntheorem pn_asymptotic",
+        "    field\n\ntheorem pn_asymptotic"
+      ],
+      [
+        "mul_le_one\u2080 (mod_cast by exact abs_moebius_le_one) (abs_nonneg _) (abs_le.mpr \u27e8by linarith [Int.fract_nonneg (x / n)], by linarith [Int.fract_lt_one (x / n)]\u27e9)",
+        "(mul_le_of_le_one_left (abs_nonneg _) (mod_cast by exact abs_moebius_le_one)).trans (abs_le.mpr \u27e8by linarith [Int.fract_nonneg (x / n)], by linarith [Int.fract_lt_one (x / n)]\u27e9)"
+      ],
+      [
+        "      norm_num +zetaDelta\n\nlemma sum_lambda_eq_sum_mu_div_sq",
+        "      norm_num +zetaDelta [Nat.primeFactorsList_count_eq]\n\nlemma sum_lambda_eq_sum_mu_div_sq"
+      ],
+      [
+        "convert isLittleO_log_rpow_atTop (by norm_num : (0 : \u211d) < 1 / 2) using 2 <;> try rfl",
+        "convert isLittleO_log_rpow_atTop (by norm_num : (0 : \u211d) < 1 / 2) using 2"
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "PrimeNumberTheoremAnd/Defs.lean",
@@ -454,31 +570,91 @@
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Sobolev.lean",
     "git_blob_sha": "34ab91738153db4b7ab0b8aa54a110af7c8403b3",
     "sha256": "17cedc5898d6a696dca9e557bfaafbe1209e4a5252a62baddebc777c2a3a9bb2",
-    "port_sha256": "17cedc5898d6a696dca9e557bfaafbe1209e4a5252a62baddebc777c2a3a9bb2",
+    "port_sha256": "ef277c039d4cd98ff4e085231e1c5ba9366a71c1017b0d871bcfffc4c217440a",
     "renames": {},
-    "edits": []
+    "edits": [
+      [
+        "        convert (l5.add l7).deriv using 1\n        \u00b7 congr 1\n        \u00b7 ring",
+        "        convert (l5.add l7).deriv using 1\n        ring"
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "PrimeNumberTheoremAnd/Wiener.lean",
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Wiener.lean",
     "git_blob_sha": "f611176a6e3b6da52d71b6bb5c6ebbf7f971cbdd",
     "sha256": "5a45e04a848cd76797928286eb1bbfaef2dfb6e541bf3a848dbc5bb9ae4b9f94",
-    "port_sha256": "e4dd77d56e7f497f6d237ffcf3675bf34b07e2fd220cddb4f077b86ba8a8ef55",
-    "renames": {
-      "if_false": "ite_false"
-    },
-    "edits": []
+    "port_sha256": "2f039e3c526ab63f033c9cda47ad716dead17ea9714591678f903debe3c4dee2",
+    "renames": {},
+    "edits": [
+      [
+        "Finset.sum_nonneg' ha",
+        "Finset.sum_nonneg (fun i _ => ha i)"
+      ],
+      [
+        "Finset.sum_nonneg' hf",
+        "Finset.sum_nonneg (fun i _ => hf i)"
+      ],
+      [
+        "    peel k2 with \u03b5 h\u03b5 \u03b4 h\u03b4 x h",
+        "    intro \u03b5 h\u03b5\n    obtain \u27e8\u03b4, h\u03b4, hnear\u27e9 := k2 \u03b5 h\u03b5\n    refine \u27e8\u03b4, h\u03b4, ?_\u27e9\n    intro x hdist\n    have h := hnear hdist"
+      ],
+      [
+        "  have haux :\n    (fun \u03c3' \u21a6",
+        "  have haux :\n    (fun (\u03c3' : \u211d) \u21a6"
+      ],
+      [
+        "    intro x hdist\n    have h := hnear hdist\n    intro (hx : 0 \u2264 x)\n    have := le_iff_lt_or_eq.mp hx\n    cases this with\n    | inl hx => exact h hx\n    | inr hx => simp [g\u2080, hx.symm, h\u03b5]",
+        "    intro x (hx : 0 \u2264 x) hdist\n    rcases le_iff_lt_or_eq.mp hx with hx | hx\n    \u00b7 exact hnear hx hdist\n    \u00b7 simp [g\u2080, hx.symm, h\u03b5]"
+      ],
+      [
+        "if_false",
+        "ite_false"
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "UnitFractions/ForMathlib/BasicEstimates.lean",
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/UnitFractions/ForMathlib/BasicEstimates.lean",
     "git_blob_sha": "03b60e969bdc62bbd754b354abb38f830f924d2b",
     "sha256": "1475f84517f02f43f91563e7852b147d677d661d57e7cac6b4b3120570613775",
-    "port_sha256": "2349dd8dad82fd186fc8af8f7c9c2a23ddb6172dec05aa3df4277b3a0117b70e",
+    "port_sha256": "303bc6d61a26d4921a05a9b2b32ff1f88c806708c7ae387fb3f04cd585232368",
     "renames": {
-      "if_pos": "ite_pos"
+      "if_pos": "ite_eq_left"
     },
-    "edits": []
+    "edits": [
+      [
+        "Finset.one_le_prod ?_",
+        "Finset.one_le_prod\u2080 ?_"
+      ],
+      [
+        "Finset.prod_le_prod'",
+        "Finset.prod_le_prod"
+      ],
+      [
+        "Finset.prod_le_prod_of_subset_of_one_le h hs hf",
+        "Finset.prod_le_prod_of_subset_of_one_le\u2080 h hs hf"
+      ],
+      [
+        "Finset.prod_le_prod_of_subset_of_le_one hsubset ?_ ?_",
+        "Finset.prod_le_prod_of_subset_of_le_one\u2080 hsubset ?_ ?_"
+      ],
+      [
+        "Finset.prod_le_prod ?_ ?_",
+        "Finset.prod_le_prod\u2080 ?_ ?_"
+      ],
+      [
+        "Finset.sum_nonneg' fun _ => ArithmeticFunction.vonMangoldt_nonneg",
+        "Finset.sum_nonneg fun _ _ => ArithmeticFunction.vonMangoldt_nonneg"
+      ],
+      [
+        "Finset.prod_le_prod (fun i hi => (inv_pos.2",
+        "Finset.prod_le_prod\u2080 (fun i hi => (inv_pos.2"
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "UnitFractions/ForMathlib/IntegralRPow.lean",
@@ -494,9 +670,15 @@
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/UnitFractions/ForMathlib/Misc.lean",
     "git_blob_sha": "58ade79fed4012c36430947467218fa17f8e3b6c",
     "sha256": "99e31b4fcb5ff24d26b0c9261ca280f4d96aea91e9f1cde7b8ae59a43361f3dd",
-    "port_sha256": "99e31b4fcb5ff24d26b0c9261ca280f4d96aea91e9f1cde7b8ae59a43361f3dd",
+    "port_sha256": "5d207fae7b3747e591cae52e1d407f00c3adad38b3be5b8a941b78040c22d6df",
     "renames": {},
-    "edits": []
+    "edits": [
+      [
+        "Finset.one_le_prod (s := s) (f := f) h1",
+        "Finset.one_le_prod\u2080 (s := s) (f := f) h1"
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "Util/Density.lean",
