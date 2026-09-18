@@ -85,7 +85,7 @@ theorem exceptional_iff_residue (n : ℕ) (hh : 2 ≤ Erdos682.gapLength n) :
       Erdos682.nthPrime n % primorial (Erdos682.gapLength n) ∈
         omegaSet (Erdos682.gapLength n) := by
   rw [← badGap_iff_exceptional, badGap_iff_residue_all hh, lower_add_gap]
-  simp only [Erdos682.nthPrime_prime, true_and, and_true]
+  simp only [Erdos682.nthPrime_prime, true_and]
 
 /-- Our exact finite residue classes sit inside a zero-density exceptional set. -/
 def residueExceptionIndices : Set ℕ :=
