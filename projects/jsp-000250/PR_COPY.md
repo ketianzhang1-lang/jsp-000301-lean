@@ -73,7 +73,7 @@ Lean is pinned to 4.34.0; Mathlib and all nine dependency revisions are locked. 
 
 The [complete hosted verification run](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35362198703) passed on 2026-09-18 for the exact proof commit above: all **78 modules** compiled with warnings treated as errors; all **21 axiom audits**, the proof-module kernel replays and the false-arithmetic negative control passed. Independent NaNoda checked **75,850 declarations with no errors**, with a hard-error allowlist containing only `propext`, `Classical.choice` and `Quot.sound`. The checked theorem closures do not rely on `sorryAx` or replacement axioms. The tested source, logs, printed targets and exported proof closure are archived in the run artifact.
 
-The awards repository validation, link/history checks, data consistency checks and all 22 unit tests also passed. These checks validate the submission format. We request maintainer review of the complete statement and our disclosed contribution; machine verification does not establish award eligibility or organizer approval.
+Local awards-repository validation, link/history checks, data consistency checks and all 22 unit tests also passed. The upstream PR workflows currently report `action_required` and need maintainer attention before they run. These repository checks validate the submission format. We request maintainer review of the complete statement and our disclosed contribution; machine verification does not establish award eligibility or organizer approval.
 
 ## Submission checklist
 
