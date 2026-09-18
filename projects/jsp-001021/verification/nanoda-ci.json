@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "problem_id": "JSP-001021",
+  "proof_commit": "7642a7f5eb190da6319b6ae7f11c829d7737e2dd",
+  "verification_commit": "3ebcc72d98b50f59ff456feb5963f85815b2d09c",
+  "run_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35302257717",
+  "run_id": 35302257717,
+  "job_id": 105467158057,
+  "declarations_checked": 6715,
+  "targets": [
+    "Erdos1216.directed_ramsey_five_fourteen",
+    "Erdos1216.f_fourteen_eq_five",
+    "Erdos1216.not_erdos_1216",
+    "JSP001021.restrict14_arc",
+    "JSP001021.all_orders",
+    "JSP001021.fifteen_vertices",
+    "JSP001021.five_le_f_fifteen",
+    "JSP001021.jsp_001021",
+    "JSP001021.LocalChecks.local_exclusions",
+    "JSP001021.LocalChecks.retained_count",
+    "JSP001021.LocalChecks.final_transitive_five"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "unpermitted_axiom_hard_error": true,
+  "exporter_commit": "6cea97789dc088ea47fcea15692db85685aedac5",
+  "checker_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+  "source_comparison": {
+    "url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/compare/7642a7f5eb190da6319b6ae7f11c829d7737e2dd...3ebcc72d98b50f59ff456feb5963f85815b2d09c",
+    "status": "ahead",
+    "files": [
+      {
+        "path": ".github/workflows/jsp-001021.yml",
+        "status": "modified"
+      },
+      {
+        "path": "projects/jsp-001021/SOURCE_SHA256SUMS",
+        "status": "modified"
+      },
+      {
+        "path": "projects/jsp-001021/scripts/verify_nanoda.sh",
+        "status": "added"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "id": 10530741396,
+      "name": "jsp-001021-verification",
+      "size_in_bytes": 9764747,
+      "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10530741396",
+      "archive_download_url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10530741396/zip",
+      "expired": false,
+      "created_at": "2026-09-18T03:30:25Z",
+      "expires_at": "2026-12-17T03:11:22Z",
+      "updated_at": "2026-09-18T03:30:25Z",
+      "digest": "sha256:3a1554afd81f7307841e3b79d70f1e39761451fa3a67d8fc2fc6448fcaeeaaa9",
+      "workflow_run": {
+        "id": 35302257717,
+        "repository_id": 1373404416,
+        "head_repository_id": 1373404416,
+        "head_branch": "jsp-001021-tournament-verification",
+        "head_sha": "3ebcc72d98b50f59ff456feb5963f85815b2d09c"
+      }
+    }
+  ],
+  "evidence_lines": [
+    "2026-09-18T03:20:31.5705676Z Source compiled: ErdosProblems.Erdos1216.Certificates",
+    "2026-09-18T03:21:44.9509721Z Source compiled: ErdosProblems.Erdos1216",
+    "2026-09-18T03:21:52.8306549Z Source compiled: FiniteChecks",
+    "2026-09-18T03:21:56.2218417Z Source compiled: JSP001021",
+    "2026-09-18T03:24:39.8907114Z Kernel replay passed: ErdosProblems.Erdos1216.Certificates",
+    "2026-09-18T03:27:24.5178548Z Kernel replay passed: ErdosProblems.Erdos1216",
+    "2026-09-18T03:27:32.8024804Z Kernel replay passed: FiniteChecks",
+    "2026-09-18T03:27:39.5695353Z Kernel replay passed: JSP001021",
+    "2026-09-18T03:30:21.8105059Z Checked 6715 declarations with no errors",
+    "2026-09-18T03:30:21.8943580Z Strict NaNoda verification passed for 11 target closures."
+  ],
+  "scope": "Contributor-run compilation, kernel replay and independent NaNoda checking of all audited target closures. No Lean proof sources, upstream pins or dependency manifests changed from the selected proof version. This does not constitute organizer approval."
+}
