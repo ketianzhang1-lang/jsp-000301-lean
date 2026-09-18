@@ -1,3 +1,9 @@
 .lake/
 evidence/
+evidence-complete/
+__pycache__/
 Negative.lean
+NegativeComplete.lean
+ErdosProblems/
+UnitFractions/
+PrimeNumberTheoremAnd/

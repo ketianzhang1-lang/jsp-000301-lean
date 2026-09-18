@@ -4,6 +4,7 @@ cd "$(dirname "$0")/.."
 mkdir -p evidence
 export LEAN_NUM_THREADS=1
 work=$(mktemp -d)
+trap 'rm -rf "$work"' EXIT
 pin() {
   local url=$1 sha=$2 dir=$3
   git init -q "$dir"
@@ -18,15 +19,8 @@ pin https://github.com/ammkrn/nanoda_lib.git 4c544ed4099c8227f07d5de77ad1e69fb07
 cp lean-toolchain "$work/exporter/lean-toolchain"
 (cd "$work/exporter" && lake build)
 (cd "$work/checker" && cargo build --release --locked)
-lake env "$work/exporter/.lake/build/bin/lean4export" JSP000250 -- \
-  JSP000250.prime_obstruction_split \
-  JSP000250.prime_not_representable \
-  JSP000250.firstException_spec \
-  JSP000250.smaller_denominators_representable \
-  JSP000250.log_lcm_bound \
-  JSP000250.prime_exception_upper_bound \
-  JSP000250.firstException_upper_bound \
-  JSP000250.firstException_isBigO > evidence/export.ndjson
+lake env "$work/exporter/.lake/build/bin/lean4export" JSP000250Complete -- \
+  JSP000250.clear_denominators JSP000250.prime_obstruction_split JSP000250.prime_not_representable JSP000250.exists_exception JSP000250.firstException_spec JSP000250.firstException_le JSP000250.log_lcm_bound JSP000250.prime_exception_upper_bound JSP000250.smaller_denominators_representable JSP000250.firstException_upper_bound JSP000250.firstException_isBigO JSP000250.representable_iff_upstream JSP000250.representable_iff_increasing_sequence JSP000250.firstException_eq_firstForbidden JSP000250.lowerProfile_eq_upstream JSP000250.eventually_all_small_denominators_representable JSP000250.eventually_all_small_denominators_sequences JSP000250.eventually_strict_lower_bound JSP000250.eventually_explicit_upper_bound JSP000250.jsp_000250 JSP000250.liu_sawhney_resolution > evidence/export.ndjson
 python3 - <<'PY'
 import json
 from pathlib import Path
@@ -34,11 +28,17 @@ config={
   'export_file_path':'evidence/export.ndjson','use_stdin':False,
   'permitted_axioms':['propext','Classical.choice','Quot.sound'],
   'unpermitted_axiom_hard_error':True,'nat_extension':True,'string_extension':True,
-  'pp_declars': ['JSP000250.Representable', 'JSP000250.firstException', 'JSP000250.prime_obstruction_split', 'JSP000250.prime_not_representable', 'JSP000250.firstException_spec', 'JSP000250.smaller_denominators_representable', 'JSP000250.log_lcm_bound', 'JSP000250.prime_exception_upper_bound', 'JSP000250.firstException_upper_bound', 'JSP000250.firstException_isBigO'],
+  'pp_declars':['JSP000250.clear_denominators', 'JSP000250.prime_obstruction_split', 'JSP000250.prime_not_representable', 'JSP000250.exists_exception', 'JSP000250.firstException_spec', 'JSP000250.firstException_le', 'JSP000250.log_lcm_bound', 'JSP000250.prime_exception_upper_bound', 'JSP000250.smaller_denominators_representable', 'JSP000250.firstException_upper_bound', 'JSP000250.firstException_isBigO', 'JSP000250.representable_iff_upstream', 'JSP000250.representable_iff_increasing_sequence', 'JSP000250.firstException_eq_firstForbidden', 'JSP000250.lowerProfile_eq_upstream', 'JSP000250.eventually_all_small_denominators_representable', 'JSP000250.eventually_all_small_denominators_sequences', 'JSP000250.eventually_strict_lower_bound', 'JSP000250.eventually_explicit_upper_bound', 'JSP000250.jsp_000250', 'JSP000250.liu_sawhney_resolution'],
   'pp_output_path':'evidence/nanoda-statements.txt','pp_to_stdout':False,'print_success_message':True}
 Path('evidence/nanoda-config.json').write_text(json.dumps(config,indent=2)+'\n')
 Path('evidence/nanoda-statements.txt').write_text('')
 PY
 "$work/checker/target/release/nanoda_bin" evidence/nanoda-config.json 2>&1 | tee evidence/nanoda.log
+python3 - <<'PY'
+import re
+from pathlib import Path
+assert re.search(r'Checked [0-9]+ declarations with no errors', Path('evidence/nanoda.log').read_text())
+assert Path('evidence/nanoda-statements.txt').stat().st_size > 0
+PY
 gzip -n -f evidence/export.ndjson
 sha256sum evidence/export.ndjson.gz evidence/nanoda-config.json > evidence/CHECKER_SHA256SUMS

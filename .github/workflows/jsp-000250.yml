@@ -1,4 +1,4 @@
-name: JSP-000250 prime denominator upper bound
+name: JSP-000250 complete unit-fraction estimate
 on:
   push:
     branches: [jsp-000250-prime-obstruction]
@@ -9,7 +9,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 90
     defaults:
       run:
         shell: bash
@@ -18,6 +18,13 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
+      - name: Provide swap for kernel replay
+        working-directory: /tmp
+        run: |
+          sudo fallocate -l 8G /swap-jsp250
+          sudo chmod 600 /swap-jsp250
+          sudo mkswap /swap-jsp250
+          sudo swapon /swap-jsp250
       - name: Install exact toolchain and locked dependencies
         run: |
           set -euo pipefail
@@ -26,13 +33,16 @@ jobs:
           export PATH="$HOME/.elan/bin:$PATH"
           elan toolchain install "$(cat lean-toolchain)"
           test -s lake-manifest.json
-          lake exe cache get
+          python3 scripts/bootstrap.py
+          lake exe cache get Mathlib
+          lake build Mathlib
           git diff --exit-code -- lake-manifest.json
-      - name: Build, replay, eight axiom audits and negative control
+      - name: Compile full proof chain, replay, 21 axiom audits and negative control
         run: bash scripts/verify.sh
       - name: Independent strict-allowlist NaNoda verification
         run: |
           set -euo pipefail
+          mkdir -p evidence
           bash scripts/verify_nanoda.sh 2>&1 | tee evidence/nanoda-build.log
       - name: Archive tested source and logs
         if: always()
@@ -48,5 +58,7 @@ jobs:
         if: always()
         with:
           name: jsp-000250-evidence
-          path: projects/jsp-000250/evidence
+          path: |
+            projects/jsp-000250/evidence
+            projects/jsp-000250/evidence-complete
           if-no-files-found: error

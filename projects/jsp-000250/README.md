@@ -1,79 +1,81 @@
-# JSP-000250: prime denominator obstruction and upper bound
+# JSP-000250: our prime upper bound and the complete unit-fraction estimate
 
-This project formalizes the **upper-bound half** of Liu and Sawhney,
-*On further questions regarding unit fractions* (2024), Theorem 1.6, Section 4.
-It is a contribution for review, not a complete formalization of that theorem:
-the near-matching lower bound is not included. No new mathematical discovery,
-global first-formalization priority, award, or entitlement to payment is claimed.
+We retain our original prime-denominator obstruction and explicit upper bound,
+and connect them to a fully attributed lower-bound development. The endpoint
+is `JSP000250.jsp_000250` in [JSP000250Complete.lean](JSP000250Complete.lean).
 
-## Statement and coverage
+Let t(N) be the least positive integer that cannot be the smallest denominator
+of a sum of distinct positive unit fractions equal to one, with all denominators
+at most N. For every sufficiently large natural N, the endpoint states
 
-`Representable N t` means that `t` is positive and that a finite set of distinct
-positive integer denominators, all between `t` and `N`, contains `t` and has
-reciprocal sum exactly one. The use of rational arithmetic expresses the exact
-equality; finite rational sums have the same equality after embedding in the reals.
+    (1/1000000) * N / (log N * (log log N)^3 * (log log log N)^20)
+        < t(N) <= 128 * N / log N.
 
-`firstException N` is the least positive `t` for which that representation is
-impossible. Existence follows since `N+1` is outside the permitted denominator
-range. Its specification and the representability of every smaller positive
-integer are proved, not assumed. The definition also handles `N=0`.
+This is the full quantitative resolution in Liu and Sawhney's
+[Theorem 1.6](https://arxiv.org/html/2404.07113v1), with explicit constants
+and exponent. It is not an exact asymptotic equivalent or an all-small-N formula.
+We also provide strictly increasing denominator sequences for every positive
+least denominator in the lower range.
 
-The main results are:
+## Our contribution
 
-- `prime_not_representable`: for every prime `p` and naturals `N,m`, if
-  `N <= p*m` and `m*lcm(1,...,m) < p`, then `p` cannot be the least denominator.
-- `prime_exception_upper_bound`: for every positive natural `N` with
-  `log N >= 128`, there is a prime `p <= N` which is not representable and
-  satisfies `p <= 128*N/log N`.
-- `firstException_upper_bound`: the same explicit bound for the least exception.
-- `firstException_isBigO`: the unconditional asymptotic theorem
-  `t(N) = O(N/log N)` along all natural `N` tending to infinity.
+We retain all eleven public lemmas/theorems of the original upper proof unchanged.
+Our ten added theorems identify the finite-set and increasing-sequence models,
+prove equality of the least-exception functions for all N including zero,
+transport lower-range witnesses including denominators one and two, derive a
+strict lower bound and combine it with our original upper argument.
 
-The constant and threshold are deliberately loose. This proves the upper-bound
-order from the paper; it does not claim its displayed constant 10 or the lower
-bound, an exact computation of `t(N)` for all `N`, or completion of the catalog
-problem. No extra mathematical hypothesis is assumed in the asymptotic theorem.
+We also provide the full 75-module lower-proof closure, recorded compatibility
+port, statement correspondence and reproducible checking. The work was prepared
+under GitHub account `ketianzhang1-lang`, with OpenAI ChatGPT/Codex assistance.
 
-## Proof outline
+The lower formalization is reused from
+[plby/lean-proofs](https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos294.lean),
+whose entry credits Codex and GPT-5.6 Sol. Mathematical and dependency authors
+retain credit; [PROVENANCE.md](PROVENANCE.md) separates our contribution from
+imported work. We make no first-formalization or award-entitlement claim.
 
-Separate denominators divisible by `p` from the others. Divide the former by
-`p`, and let `L=lcm(1,...,m)`. Clearing denominators forces `p` to divide the
-positive integer `A=sum L/k`, while distinctness and `k<=m` give `A<=m*L<p`.
-This is impossible. Mathlib's Chebyshev estimate bounds `log(m*L)` by `8m`.
-Bertrand's postulate supplies a suitable prime near `64N/log N`, giving the
-explicit bound and then the asymptotic statement.
+## Verification status
 
-## Sources and attribution
+The complete integration is undergoing compilation and audit. The earlier
+upper-only verification is not evidence for this new endpoint. Exact completed
+results and proof identification will be recorded in [VERIFICATION.md](VERIFICATION.md).
 
-- [Official JSP-000250 catalog](https://github.com/TheJustinSunPrize/awards/blob/f4e7173d89dfe91022a185427d63452c8ffbf6ae/problems/catalog-0201-0300.md#JSP-000250).
-- [Liu and Sawhney, arXiv:2404.07113v1](https://arxiv.org/html/2404.07113v1#S4),
-  Theorem 1.6 and its upper-bound proof. The paper credits the upper bound to
-  Erdős and Graham, *Old and new problems and results in combinatorial number
-  theory* (1980), page 35, and discusses earlier related work.
-- Mathlib supplies the established Chebyshev and Bertrand theorems and other
-  infrastructure; their authors retain credit. See the pinned dependency manifest.
+## Reproduce
 
-This Lean implementation was prepared with OpenAI ChatGPT assistance under the
-submitting account's direction. Mathematical discovery remains with the cited
-authors. Proposed formalization recipient: `RECIPIENT-JSP-000250-KZ-A`, pending
-confirmation. The submitting account has an interest in the eligibility review.
-
-## Reproduction
-
-Use the exact Lean 4.34.0 toolchain and dependencies in `lake-manifest.json`:
+Repository: `ketianzhang1-lang/jsp-000301-lean`; branch:
+`jsp-000250-prime-obstruction`. Check out the full proof SHA in the final
+verification record. Lean is pinned to 4.34.0 and Mathlib to
+`5ed2965256430c3649e86755f9576b54eca72435`, with all nine dependencies locked.
+Git, Python 3, elan and Rust/Cargo are required:
 
 ```sh
-lake exe cache get
+cd projects/jsp-000250
+elan toolchain install "$(cat lean-toolchain)"
+python3 scripts/bootstrap.py
+lake exe cache get Mathlib
+lake build Mathlib
 bash scripts/verify.sh
 bash scripts/verify_nanoda.sh
 ```
 
-The scripts build with warnings as errors, replay the module in the bundled
-checker, audit eight declarations against the three standard axioms, reject a
-false-arithmetic negative control, and export the target dependency closure for
-the independently implemented NaNoda checker with a strict axiom allowlist.
+The bootstrap checks original and ported source hashes. The verifier compiles
+78 modules with warnings as errors, audits 21 theorem closures, replays every
+proof-module prefix, checks dependencies and rejects a false-arithmetic control.
+NaNoda checks all selected closures allowing only `propext`, `Classical.choice`
+and `Quot.sound`. These contributor checks are not independent human review.
 
-Actual run details belong in the submission verification receipt. A script's
-presence alone is not evidence that it ran. Cached Mathlib and network access are
-used; no offline rebuild of the entire library or independent human certification
-is claimed. Contributor-run checks do not establish organizer approval.
+The optional local `verify.sh --resume` requires successful logs and fingerprints
+of source plus all transitive local imports. The public workflow runs without resume.
+
+## Proof guide
+
+- [Original upper proof](JSP000250.lean).
+- [Exact model bridge and complete endpoint](JSP000250Complete.lean).
+- [All 21 axiom audits](AuditComplete.lean).
+- [Original-statement correspondence](STATEMENT_FIDELITY.md).
+- [Pinned source closure and compatibility edits](UPSTREAM.json).
+- [Contribution and attribution](PROVENANCE.md).
+
+The target is existing awards PR #354. Acceptance, priority and contribution
+eligibility remain for maintainer review.
