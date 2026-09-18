@@ -1,73 +1,29 @@
-# JSP-000506: Heckel's concentration reduction
+# JSP-000506: complete-statement integration in preparation
 
-**Verification status: Lean build, fresh kernel replay, and axiom audit passed.**
-Prize eligibility and independent mathematical review remain pending.
+This branch retains our original finite concentration proof and develops the
+bridges to the complete original Erdős 625 asymptotic statement. Verification
+of the integrated package is in progress; this preparation commit does not
+claim a successful complete build.
 
-This project formalizes Proposition 3 of Annika Heckel's *On a question of
-Erdős and Gimbel on the cochromatic number*, Electronic Journal of Combinatorics
-31(4) (2024), P4.72, DOI https://doi.org/10.37236/13346.
-Author preprint: https://arxiv.org/abs/2408.13839.
+The unchanged upstream source is by **Samuil Petkov**, *Erdős Problem 625:
+Manuscript and Lean Formalization*, https://github.com/SamPetkov/Erdos,
+licensed under **CC BY 4.0**. We pin source commit
+`b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea` and preserve the original source bytes,
+license, license-scope document and citation. `UPSTREAM.json` records the URL
+and both Git and SHA-256 hashes. No changes are made to the upstream proof.
+The single upstream file contains its complete 480-module source closure.
 
-For every graph order `n` and natural number `g`, if a uniform random simple
-labelled graph has `chi - zeta <= g` with probability at least 999/1000, there
-is an integer `k` for which `k <= chi <= k+g` has probability greater than 9/10.
-Here `chi` is the chromatic number and `zeta` is the cochromatic number.
+Our `JSP000506.lean` is unchanged from the preceding branch. Our new
+`JSP000506Bridge.lean` and `JSP000506Complete.lean` connect graph encodings,
+colouring invariants, exact counting probabilities and fixed-threshold limits.
+Our local files use Apache 2.0; that license does not relicense Petkov's work.
+The original finite result's mathematics is due to Annika Heckel.
 
-The paper uses integer sequences and a strict `> 0.999` premise. This is the
-pointwise natural-bound version, also allowing equality at `0.999`; a negative
-gap bound cannot meet the probability premise because `zeta <= chi`.
+Lean and Mathlib are fixed to 4.31.0 to preserve the complete proof unchanged.
+`python3 scripts/bootstrap.py` reconstructs all exact upstream files.
+The preparation workflow builds the pinned dependencies and checks the
+unchanged upstream and original finite proof. The original historical
+partial-scope documentation remains in files prefixed `INITIAL_PARTIAL_`.
 
-The main target is `JSP000506.heckel_proposition3`. It has exactly the
-gap-probability premise in the mathematical proposition. Auxiliary monotonicity,
-complement symmetry, and `zeta <= chi` are proved, not assumed in that target.
-The more general `concentration_reduction` applies to any increasing natural
-statistic on a finite Boolean cube and a complement-invariant smaller statistic.
-
-## Exact representation
-
-`Edge n` consists of pairs `(i,j)` in `Fin n` with `i<j`. Every unordered pair
-is represented once. A `Finset (Edge n)` is a simple labelled graph. Uniform
-counting over its power set is exactly the `G(n,1/2)` distribution: all
-`2^(card (Edge n))` possible graphs receive the same weight. Probabilities
-are exact rational numbers, with no simulation or floating-point arithmetic.
-
-`Proper` is a vertex coloring with no equal-colored adjacent pair. `CoProper`
-assigns a vertex color and a Boolean to each color class, indicating a clique
-or an independent set. The chromatic and cochromatic numbers are the minimum
-numbers of colors, whose existence is proved using the identity coloring.
-The zero-vertex case is included.
-
-## Scope and credit
-
-This is a formalization of known mathematics, attributed to Heckel. It is a
-component of JSP-000506 / Erdős 625; it does **not** prove the full random-graph
-asymptotic result, a diverging lower bound for `chi-zeta`, or the later result
-credited to Petkov and GPT-5.6. It does not claim a new mathematical discovery,
-global first-formalization priority, or award eligibility. Mathlib's existing
-Harris-Kleitman theorem supplies the correlation inequality and remains credited
-to its authors, including Yaël Dillies. This implementation was independently
-written with OpenAI ChatGPT assistance for the submitting account.
-
-The catalog and available issue/PR records were checked on September 17, 2026;
-no JSP-000506 filing was found in that scoped check. This is not a guarantee
-that no relevant proof exists elsewhere. A later global search located the
-existing SamPetkov/Erdos formalization of a stronger asymptotic result; see
-`PRIOR_ART.md`. No first-Lean claim is made. The catalog currently marks this entry `Eligible to claim: No`; this package
-does not override that marker. Any recipient identity remains
-`RECIPIENT-JSP-000506-KZ-A`, confirmation pending.
-
-## Reproduction
-
-Lean 4.34.0 and the complete Mathlib dependency graph are pinned by
-`lean-toolchain` and `lake-manifest.json`.
-
-```sh
-lake exe cache get
-lake build --wfail
-lake env leanchecker --fresh JSP000506
-lake env lean Audit.lean
-```
-
-See `VERIFICATION.md` for the actual successful run and exact tested commit.
-Repository record checks, proof compilation, and organizer acceptance are separate steps.
-New code is licensed under Apache-2.0; no article text or PDF is redistributed.
+We claim our finite formalization, model bridges and integration work, not
+ownership or first-formalization priority for the imported complete proof.

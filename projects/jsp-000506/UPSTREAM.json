@@ -1,0 +1,74 @@
+[
+  {
+    "path": "Erdos625SelfContained.lean",
+    "url": "https://raw.githubusercontent.com/SamPetkov/Erdos/b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea/625/formalization/Erdos625SelfContained.lean",
+    "source_repository": "https://github.com/SamPetkov/Erdos",
+    "source_commit": "b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea",
+    "source_path": "625/formalization/Erdos625SelfContained.lean",
+    "git_blob_sha": "3df42367a79afc10af5b024b19fe1a6026b3c945",
+    "sha256": "53060b9563330f20a5f2133ffdf8f56e5a41eae6d0f772487193d9c54133e837",
+    "port_sha256": "53060b9563330f20a5f2133ffdf8f56e5a41eae6d0f772487193d9c54133e837",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "UPSTREAM_LAKE_MANIFEST.json",
+    "url": "https://raw.githubusercontent.com/SamPetkov/Erdos/b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea/625/formalization/lake-manifest.json",
+    "source_repository": "https://github.com/SamPetkov/Erdos",
+    "source_commit": "b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea",
+    "source_path": "625/formalization/lake-manifest.json",
+    "git_blob_sha": "348858fca7e964c5e3b62a1fd3224fdc5969a238",
+    "sha256": "2d44c1423a5b32897c583a81237ccce01d4a8ab48d6a1d4ac85f7fc47c17e3d9",
+    "port_sha256": "2d44c1423a5b32897c583a81237ccce01d4a8ab48d6a1d4ac85f7fc47c17e3d9",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "UPSTREAM_README.md",
+    "url": "https://raw.githubusercontent.com/SamPetkov/Erdos/b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea/625/formalization/README.md",
+    "source_repository": "https://github.com/SamPetkov/Erdos",
+    "source_commit": "b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea",
+    "source_path": "625/formalization/README.md",
+    "git_blob_sha": "c5b225c8a406b7be9174f52a771c4e821facdea4",
+    "sha256": "c18fdceee7d8c73860a8d55b0df412da565d04e9c78c4ac1997e6649a0fb74ab",
+    "port_sha256": "c18fdceee7d8c73860a8d55b0df412da565d04e9c78c4ac1997e6649a0fb74ab",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "UPSTREAM_LICENSE",
+    "url": "https://raw.githubusercontent.com/SamPetkov/Erdos/b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea/LICENSE",
+    "source_repository": "https://github.com/SamPetkov/Erdos",
+    "source_commit": "b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea",
+    "source_path": "LICENSE",
+    "git_blob_sha": "10fabd90118f7ce38bb2e4753e105e744442a429",
+    "sha256": "f5b745ef98087f531e719ee8ca6a96809444573ecc7173c6fa68eaad39b3cc3f",
+    "port_sha256": "f5b745ef98087f531e719ee8ca6a96809444573ecc7173c6fa68eaad39b3cc3f",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "UPSTREAM_LICENSE_SCOPE.md",
+    "url": "https://raw.githubusercontent.com/SamPetkov/Erdos/b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea/LICENSE_SCOPE.md",
+    "source_repository": "https://github.com/SamPetkov/Erdos",
+    "source_commit": "b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea",
+    "source_path": "LICENSE_SCOPE.md",
+    "git_blob_sha": "2daf7b0fee9fcb746c5a4a283c7e8d019cd27f8b",
+    "sha256": "39d0b550e66a7b0a153146b2682ef6a077aeba6a31a1cd180cef16db23d6a03c",
+    "port_sha256": "39d0b550e66a7b0a153146b2682ef6a077aeba6a31a1cd180cef16db23d6a03c",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "UPSTREAM_CITATION.cff",
+    "url": "https://raw.githubusercontent.com/SamPetkov/Erdos/b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea/CITATION.cff",
+    "source_repository": "https://github.com/SamPetkov/Erdos",
+    "source_commit": "b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea",
+    "source_path": "CITATION.cff",
+    "git_blob_sha": "b49ec9f1b56461b3add49ad272ea9602305eba3b",
+    "sha256": "0fd16fde58d8072242d396d7db6b0c68a722e6788f9240907600f4c79c378681",
+    "port_sha256": "0fd16fde58d8072242d396d7db6b0c68a722e6788f9240907600f4c79c378681",
+    "renames": {},
+    "edits": []
+  }
+]

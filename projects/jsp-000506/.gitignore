@@ -1,0 +1,9 @@
+.lake/
+Erdos625SelfContained.lean
+evidence/
+evidence-complete/
+*.olean
+*.ilean
+NegativeComplete.lean
+__pycache__/
+*.pyc

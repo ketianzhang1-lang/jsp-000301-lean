@@ -1,0 +1,64 @@
+name: JSP-000506 complete proof preparation
+on:
+  push:
+    branches: [jsp-000506-complete-kz]
+    paths: [projects/jsp-000506/**, .github/workflows/jsp-000506-complete.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    defaults:
+      run:
+        shell: bash
+        working-directory: projects/jsp-000506
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install pinned toolchain and dependencies
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.elan/bin:$PATH"
+          elan toolchain install "$(cat lean-toolchain)"
+          python3 scripts/bootstrap.py
+          lake exe cache get Mathlib
+          lake build Mathlib
+          git diff --exit-code -- lake-manifest.json
+      - name: Archive pinned build cache for development replay
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,subprocess
+          paths=[]
+          for p in json.loads(Path('lake-manifest.json').read_text())['packages']:
+              d=Path('.lake/packages')/p['name']
+              assert subprocess.check_output(['git','-C',str(d),'rev-parse','HEAD'],text=True).strip()==p['rev']
+              paths.append(str(d/'.lake/build'))
+          subprocess.run(['tar','-I','zstd -T2 -3','-cf','evidence/mathlib-431-cache.tar.zst',*paths],check=True)
+          PY
+          sha256sum evidence/mathlib-431-cache.tar.zst > evidence/CACHE_SHA256
+          cp lake-manifest.json evidence/
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp-000506-pinned-build-cache
+          path: projects/jsp-000506/evidence
+          compression-level: 0
+          retention-days: 3
+      - name: Compile unchanged upstream proof and original finite proof
+        run: |
+          set -euo pipefail
+          mkdir -p .lake/build/lib/lean
+          lake env lean -DwarningAsError=true -j1 -M12000 -o .lake/build/lib/lean/Erdos625SelfContained.olean Erdos625SelfContained.lean > evidence/upstream-build.log 2>&1
+          lake env lean -DwarningAsError=true -j1 -o .lake/build/lib/lean/JSP000506.olean JSP000506.lean > evidence/original-build.log 2>&1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: jsp-000506-preparation-logs
+          path: projects/jsp-000506/evidence/*build.log
