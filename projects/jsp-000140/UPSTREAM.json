@@ -91,7 +91,7 @@
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/ConflictFreeMatching.lean",
     "git_blob_sha": "da4ced5ed0c8cd246c6845abd5d9047762d3c7b3",
     "sha256": "1dc024703d24684999f1d59ac2fdd01bf30cf6eb612a2b516fdb5781d3aa5597",
-    "port_sha256": "f2061c359d716891b01337392e11b233cbbe63e010ae5fc90dfe6e000bb5baee",
+    "port_sha256": "ba8ea5ea2eaa0fe11e8c1301cc419fcde4a849438d4f6e8416434c66f744fe80",
     "renames": {
       "if_pos": "ite_eq_left",
       "if_neg": "ite_eq_right",
@@ -106,6 +106,10 @@
       [
         "if_false",
         "ite_false"
+      ],
+      [
+        "    convert h using 1 ; norm_num",
+        "    convert h using 1 <;> norm_num"
       ]
     ]
   },
