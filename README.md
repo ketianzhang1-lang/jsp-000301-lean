@@ -92,7 +92,29 @@ arithmetic control. It writes actual execution logs and source hashes to
 see [VERIFICATION.md](VERIFICATION.md) for the executed checks.
 
 These are contributor-run checks with cached dependencies. Lean's bundled
-checker uses Lean's own kernel; this revision does not claim an independently
-implemented checker replay of the complete integrated development. Maintainer
-review of statement correspondence, contribution eligibility and any award
-remains pending.
+checker uses Lean's own kernel. The additional independently implemented NaNoda
+check is recorded below. Maintainer review of statement correspondence,
+contribution eligibility and any award remains pending.
+
+
+## Independent NaNoda verification — 2026-09-18
+
+We independently checked all 13 audited target dependency closures with NaNoda in [run 35302255801](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35302255801), at commit `0e86d155839b409faa075233a1b62e32f2b7b1e3`. The checker reported **34,637 declarations with no errors**, and statement printing also succeeded. The same run passed the full source compilation, Lean kernel replay, original axiom audits and false-arithmetic negative control.
+
+The export includes `JSP000393Complete.jsp_000393`, the complete upstream `Erdos485.erdos_485` theorem, our construction, and all other targets in `AuditComplete.lean`. Every target is exported with its full dependency closure. Only `propext`, `Classical.choice` and `Quot.sound` are permitted, with `unpermitted_axiom_hard_error: true`; no `sorryAx`, compiler-trust axiom or custom unproved axiom is allowed.
+
+[The source comparison](https://github.com/ketianzhang1-lang/jsp-000301-lean/compare/17e406594d644b40c9a742e843cd6d89f319c872...0e86d155839b409faa075233a1b62e32f2b7b1e3) confirms that the Lean proof files, upstream source pins and dependency manifest are unchanged from the selected proof commit `17e406594d644b40c9a742e843cd6d89f319c872`. We added checker integration and evidence collection; no mathematical proof repair was needed.
+
+To reproduce the complete check, check out `0e86d155839b409faa075233a1b62e32f2b7b1e3` and run at the repository root:
+
+```bash
+python3 scripts/bootstrap.py
+lake exe cache get Mathlib
+lake build Mathlib
+python3 scripts/verify_complete.py
+bash scripts/verify_nanoda.sh
+```
+
+The checker script pins lean4export to `6cea97789dc088ea47fcea15692db85685aedac5` and NaNoda to `4c544ed4099c8227f07d5de77ad1e69fb0740a27`, builds them from source and requires error-free checking and nonempty statement output. Git, Python 3, Lean/Lake and Rust/Cargo with network access are required. The public CI performs the whole sequence.
+
+[The machine-readable CI receipt](verification/nanoda-ci.json) records the exact run, source comparison, checked targets and artifact digest. The workflow artifact includes the compressed exported proof, checker configuration, printed statements and logs under `nanoda/` and is retained for 90 days. NaNoda is a separately implemented checker; this contributor-run verification is not independent human review or organizer approval.
