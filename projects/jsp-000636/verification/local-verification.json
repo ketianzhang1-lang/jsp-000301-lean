@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "preparation_head": "d5fc3ee7fc5a452e8104b5099c854a5a15a668bf",
+  "toolchain": "leanprover/lean4:v4.34.0",
+  "modules": [
+    "JSP000636",
+    "Lower",
+    "Upper",
+    "Construction",
+    "Threshold",
+    "Thinning",
+    "Asymptotics"
+  ],
+  "axiom_reports": 71,
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "dependency_count": 9,
+  "original_six_modules_unchanged": true,
+  "source_sha256": {
+    "JSP000636.lean": "ea51a6baca6bed306a1b71c4fc2023429c6fdf47f00284cc727638afa5284640",
+    "Lower.lean": "52febbca28f56fb543da906376d93545e5c307f144344df2b63ce1b5aa9458f4",
+    "Upper.lean": "e8e79f1bf618ef9aa6fc5fcf3d01d66fbebd6569585d6c9a3cf41b9ee821ae61",
+    "Construction.lean": "b0e6fd9ebb89aa9c2e0a6e04b38ef670702bf314202144c5ef99288b53304586",
+    "Threshold.lean": "0b62a240f23f6b128050ae8ffc3ca5a8e3b6326ab86b3d6daa84764d057d7437",
+    "Thinning.lean": "03e71f68214b7efcad0a48261fd8e48666875866a417b23ddf3ca1bb863c79db",
+    "Asymptotics.lean": "89c6b975c631322b245d652664a69e826c1c85053f6adb33d0c5075b30cf7c16"
+  },
+  "independent_checker": "Local attempt unavailable: cargo is not installed. No local NaNoda success is claimed. Hosted workflow repeats this additional check."
+}

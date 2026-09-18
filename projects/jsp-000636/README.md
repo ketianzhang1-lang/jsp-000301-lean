@@ -1,81 +1,90 @@
-# JSP-000636: antichain multiplicity and explicit threshold bounds
+# JSP-000636: our threshold estimates and exact-multiplicity bridge
 
-This package formalizes known results and a pair-label variant of the
-construction in Yixin He and Quanyu Tang, *An Erdős–Trotter problem on
-antichains with multiplicity r on each occurring level*,
-[arXiv:2602.09803v1](https://arxiv.org/html/2602.09803v1).
-Mathematical credit remains with these authors and the classical
-Erdős–Trotter observation. OpenAI ChatGPT assistance is disclosed.
-This is not a claim of a new mathematical discovery.
+We formalize the Erdős–Trotter antichain threshold estimates for all multiplicities
+`r ≥ 2`, and prove the sharp leading asymptotic **`n₀(r) / r → 2`**. Our new
+`Asymptotics.lean` module adds ten theorems to the existing 61-theorem development.
+We developed this implementation under GitHub account `ketianzhang1-lang` with
+OpenAI ChatGPT/Codex assistance.
 
-## Certified statements
+## Our contributions
 
-The ground set is `Fin n`, and families are finsets of finsets, so repeated
-copies cannot supply multiplicity. `Antichain` is equivalent to Mathlib's
-ordinary inclusion `IsAntichain`. `sizes F` counts distinct cardinalities.
-`Multiplicity r F` requires at least r members of every occurring size;
-`ExactMultiplicity r F` requires exactly r.
+- We implement a finite maximum using the original **exactly r sets at each
+  occurring size** convention, and prove that it equals the at-least-r maximum.
+- We prove that our threshold is the **least cutoff for this actual maximum**.
+  It is not an arbitrary upper cutoff or an existence-only substitute.
+- We prove a uniform relative-error estimate: for `m ≥ 1` and
+  `r ≥ (8*m+8)^2`,
+  `2*r ≤ n₀(r)` and `m*n₀(r) ≤ (2*m+1)*r`.
+- We deduce the ordinary real limit `n₀(r)/r → 2`.
+- We supply the exact-r extremal statement: for every `r ≥ 2`, an explicit
+  threshold guarantees an antichain of exactly `r*(n-3)` sets, and every
+  admissible antichain has at most this many sets.
 
-| Theorem | Statement |
+The inherited pair-label construction proves
+`2*r+2 ≤ n₀(r) ≤ 2*r+4*floor(sqrt(r))+7` for every `r ≥ 4`.
+Threshold existence and the exact-r construction cover every `r ≥ 2`.
+The six inherited proof modules are unchanged in this revision.
+
+## Scope and submission status
+
+The primary source, [He and Tang, Problem 1.1](https://arxiv.org/html/2602.09803v1#S1),
+asks for estimates of the eventual threshold. The current theorems provide
+unconditional all-parameter estimates and their leading asymptotic. The paper
+also proves a sharper logarithmic error term and exact values at r=2 and r=3;
+these are not formalized by this package.
+
+A stronger exact-threshold submission already exists in
+[awards PR #677](https://github.com/TheJustinSunPrize/awards/pull/677).
+It states a piecewise formula covering every r≥2, including the exact small-r
+values. We have inspected its public statements and source inventory but have
+not independently rebuilt or certified its full proof chain. Our development
+does not claim that stronger formula, first-formalization priority, or a new
+mathematical discovery.
+
+**This revision remains an estimate supplement to [our existing PR #382](https://github.com/TheJustinSunPrize/awards/pull/382).
+It is not a claim that the prize organizers have accepted the original problem
+as completely formalized by us.** The question of whether the all-parameter
+estimate endpoint meets their full-original-problem requirement remains for
+review. We do not mark the official catalog complete or request an eligibility
+change based on this supplement.
+
+## Exact endpoints
+
+All theorem names below are in namespace `JSP000636`.
+
+| File / theorem | Meaning |
 | --- | --- |
-| `size_count_le` | For n >= 4 and r >= 2, every admissible F has at most n-3 occurring sizes. |
-| `critical_size_bound`, `extremal_critical_le` | For r >= 4, g(2r+2,r) <= 2r-2. |
-| `attaining_family` | For r >= 2 and n >= 2r+4 floor(sqrt r)+8, an admissible F with n-3 occurring sizes exists. |
-| `thin_to_exact` | For positive r, an at-least-r family has an exactly-r subfamily with the same occurring sizes. |
-| `exact_attaining_family` | In the same large-n range, an exactly-r antichain with n-3 sizes and r(n-3) members exists. |
-| `extremal_eventually_eq` | For r >= 2 and n >= 2r+4 floor(sqrt r)+8, g(n,r)=n-3. |
-| `threshold_exists`, `leastThreshold_spec` | For every r >= 2, the least eventual-equality threshold exists and has its defining property. |
-| `leastThreshold_bounds` | For r >= 4, 2r+2 <= n0(r) <= 2r+4 floor(sqrt r)+7. |
+| `Asymptotics.lean`, `exactExtremal_eq` | Equality of the exact-r and at-least-r maxima for every n and every positive r. |
+| `threshold_exact_spec` | Least-threshold semantics for the original exact-r maximum. |
+| `threshold_relative_bound` | Explicit natural-number relative-error estimate with cutoff `(8*m+8)^2`. |
+| `threshold_ratio_tendsto` | Real limit `n₀(r)/r → 2`. |
+| `exact_threshold_estimate` | Existence of an exact-r attaining family and the matching universal upper bound above an explicit threshold. |
+| `jsp_000636_estimate` | Combined estimate endpoint, leastness, two-sided bounds and the limit. |
 
-Here g is a finite maximum over **all** admissible families, including the
-empty family. `IsThreshold r N` means g(n,r)=n-3 for every n>N.
-`leastThreshold` uses `Nat.find` only after proving threshold existence.
-`thin_to_exact` also connects the paper's at-least-r convention with the
-original exactly-r convention for positive r.
+The ground set is `Fin n`, and families are finsets of finsets; duplicate sets
+cannot supply multiplicity. `Antichain` is proved equivalent to Mathlib's
+inclusion `IsAntichain`. `exactExtremal` and `extremal` are finite maxima over
+all admissible families. `threshold r` agrees with the proved least threshold
+for r≥2; its value below that domain is an explicitly immaterial convention.
 
-This supplement adds **23 theorems**, for **61 total**. It fills the
-existence and thinning gaps in the previous packet. It remains a partial
-formalization for [JSP-000636](https://github.com/TheJustinSunPrize/awards/blob/f4e7173d89dfe91022a185427d63452c8ffbf6ae/problems/catalog-0601-0700.md#JSP-000636):
-the paper's sharper asymptotic logarithmic upper estimate, the exact
-small-r thresholds, and a general determination of n0(r) are not proved
-here. No global first-formalization priority, award eligibility or payment
-entitlement is claimed. The official catalog currently says
-`Eligible to claim: No`.
+## Mathematical sources and code provenance
 
-## Construction and attribution
+Mathematical credit remains with Yixin He and Quanyu Tang,
+*An Erdős–Trotter problem on antichains with multiplicity r on each occurring
+level*, [arXiv:2602.09803v1](https://arxiv.org/abs/2602.09803), and with the
+classical Erdős–Trotter observation. The lower-bound argument and general label
+method follow that source. Our inherited construction specializes the labels
+to two-element sets, giving the coarser square-root error term.
 
-`JSP000636.lean` gives the universal bound (He–Tang Lemma 2.5) and
-boundary examples. `Lower.lean` gives the critical obstruction and the
-lower bound of Theorem 1.4, using the common-star argument and a symmetric
-middle-level count.
-
-The new construction specializes the section 4 label method to labels
-of size two. Put k=floor(n/2) and partition the ground set into
-{a}, P, {u}, V and R, of sizes 1, r, 1, k-r and n-k-2 respectively.
-
-- At size 2 use {a,p} for the r different p in P.
-- At size 3 use {a,u,x} for r different x in R.
-- For each size t from 4 to k, choose a distinct two-element label in V
-  and r different (t-3)-element subsets of R, and adjoin a and the label.
-
-Singleton tags in P, the tag {u}, and equal-sized distinct labels in V
-prevent inclusion between different levels. Payload selection supplies
-r distinct sets within each level. All sets contain a. Adding all their
-complements preserves the antichain and covers every size from 2 to n-2.
-The numerical hypothesis ensures enough labels and payloads. This gives
-a transparent O(sqrt r) error term; it does **not** formalize the paper's
-O(log r) construction or claim a new optimal estimate.
-
-`Upper.lean` contains finite subset selection and the half-family/complement
-argument. `Construction.lean` contains separated tags and the general
-pair-label half-family. `Threshold.lean` proves the numerical capacity,
-eventual equality and least-threshold bounds. `Thinning.lean` proves the
-exact-multiplicity bridge and exact attaining families.
+The new ten-theorem module derives consequences from our existing implementation
+and Mathlib. See [PROVENANCE.md](PROVENANCE.md) for exact source lineage,
+retained notices and the competing public submission.
 
 ## Reproduction
 
-Lean and Mathlib are pinned to v4.34.0; `lake-manifest.json` records exact
-commits. From this directory:
+Lean is pinned to 4.34.0, Mathlib to
+`5ed2965256430c3649e86755f9576b54eca72435`, and nine package revisions are locked
+in `lake-manifest.json`. From `projects/jsp-000636`:
 
 ```sh
 lake exe cache get
@@ -83,19 +92,13 @@ bash scripts/verify.sh
 bash scripts/verify_nanoda.sh
 ```
 
-The first script compiles all six modules with warnings as errors,
-replays them with Lean's bundled kernel checker, audits all 61 theorems,
-checks dependency revisions, and requires false arithmetic to be rejected.
-The second exports the complete dependency closures of the principal
-results for the separate NaNoda checker, with a strict allowlist of
-`propext`, `Classical.choice`, and `Quot.sound`.
+The first verifier compiles seven modules with warnings as errors, replays each
+with Lean's bundled checker, audits all 71 theorem closures, checks all dependency
+revisions and rejects a false-arithmetic control. The second exports the listed
+endpoints and their complete dependency closures for the separately implemented
+NaNoda checker with a strict three-axiom allowlist.
 
-These are reproduction instructions; actual results are recorded in
-`VERIFICATION.md` and the referenced CI run. No `sorry`, new axiom, or
-native decision procedure is used. The mathematical construction is
-existential, using classical finite selection; no executable search for
-optimal examples is claimed.
-
-This extends official [PR #382](https://github.com/TheJustinSunPrize/awards/pull/382)
-and should be reviewed in that existing thread. Source license:
-Apache-2.0 (`LICENSE.LEAN`); documentation: CC BY 4.0.
+Executed results and their limitations are recorded in
+[VERIFICATION.md](VERIFICATION.md). The workflow repeats these checks on pushes
+to the existing proof branch. Source code is Apache-2.0 (`LICENSE.LEAN`);
+mathematical sources retain their authorship.

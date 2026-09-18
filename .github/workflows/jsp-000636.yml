@@ -1,4 +1,4 @@
-name: JSP-000636 antichain and threshold bounds
+name: JSP-000636 threshold estimates and asymptotics
 on:
   push:
     branches: [jsp-000636-antichain-upper, jsp-000636-pair-label-upper-kz]
@@ -9,7 +9,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 25
+    timeout-minutes: 40
     defaults:
       run:
         shell: bash

@@ -1,4 +1,4 @@
-import Thinning
+import Asymptotics
 
 #print axioms JSP000636.antichain_iff_isAntichain
 #print axioms JSP000636.twins_of_multiplicity
@@ -61,3 +61,13 @@ import Thinning
 #print axioms JSP000636.leastThreshold_bounds
 #print axioms JSP000636.thin_to_exact
 #print axioms JSP000636.exact_attaining_family
+#print axioms JSP000636.exactExtremal_eq
+#print axioms JSP000636.exactExtremal_eventually_eq
+#print axioms JSP000636.threshold_eq
+#print axioms JSP000636.threshold_exact_spec
+#print axioms JSP000636.threshold_bounds
+#print axioms JSP000636.threshold_relative_bound
+#print axioms JSP000636.threshold_ratio_bound
+#print axioms JSP000636.threshold_ratio_tendsto
+#print axioms JSP000636.exact_threshold_estimate
+#print axioms JSP000636.jsp_000636_estimate

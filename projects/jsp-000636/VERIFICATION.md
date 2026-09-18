@@ -1,33 +1,31 @@
-# Verification receipt — JSP-000636 pair-label supplement
+# Verification receipt — asymptotic threshold supplement
 
-## Scope and baseline
+The tested worktree extends `d5fc3ee7fc5a452e8104b5099c854a5a15a668bf`.
+The source hashes in `verification/local-verification.json` identify the actual
+new files tested before publication; `preparation_head` is the parent commit,
+not a claim that the parent already contained this supplement.
 
-This extends proof commit `3e3bb53650eda1f183b5af89ea3f6747349c06a4`.
-The inherited `JSP000636.lean`, `Lower.lean`, and dependency manifest are
-byte-identical to that commit. New mathematical code is in `Upper.lean`,
-`Construction.lean`, `Threshold.lean`, and `Thinning.lean`.
+## Completed local checks
 
-## Checks actually completed locally
+- Seven modules compile with warnings treated as errors under Lean 4.34.0.
+- All seven modules pass Lean's bundled kernel replay.
+- All 71 theorem dependency closures use only `propext`, `Classical.choice`
+  and `Quot.sound` (or a subset).
+- All nine actual dependency Git revisions match the committed manifest.
+- The false-arithmetic control `(1 : Nat) = 0` is rejected because it is false.
+- The six inherited proof modules are byte-identical to the parent revision.
 
-- Lean 4.34.0 compiled all six modules with `warningAsError=true`.
-- All 61 theorem dependency audits allow only `propext`, `Classical.choice`,
-  and `Quot.sound`; no `sorryAx` or custom axiom appears.
-- Lean's bundled `leanchecker` replayed all four new modules successfully.
-- The pinned dependency manifest matches the verified baseline. Local cache
-  Git revisions could not all be checked because its Mathlib checkout lacks HEAD;
-  fresh CI must verify dependency revisions before a reproducibility claim.
-- The false arithmetic negative control `1 = 0` was rejected.
-- Both reproduction shell scripts passed syntax checking.
+Full local logs, the axiom reports, negative control and source hashes are in
+`verification/`. The older pair-label receipt is preserved separately there.
+Compilation used pinned Mathlib cached objects; this is not a source rebuild
+of all of Mathlib, an independent human review or organizer certification.
 
-Local execution used a compiler path compatibility shim and an existing
-pinned Mathlib cache. Lean's bundled checker is a replay with the same
-kernel implementation, not an independent implementation. The CI workflow
-uses a fresh Ubuntu runner and additionally requests the separately
-implemented NaNoda checker with the same strict three-axiom allowlist.
+The local additional NaNoda attempt stopped because `cargo` is unavailable in
+this environment, before running the checker. **No successful local NaNoda run
+is claimed for the new module.** The public workflow requests that separate
+check; its actual status is available under Actions for the selected commit.
+Historical NaNoda results for the parent do not verify the new supplement.
 
-At creation of this receipt, fresh CI/NaNoda results for the supplement
-were pending. Do not treat configuration of a check as a successful run.
-
-These checks validate the formal statements. They do not establish full
-resolution of JSP-000636, global priority, human mathematical review,
-organizer acceptance, eligibility or payment.
+These checks establish the stated formal estimates and interfaces. They do
+not establish the stronger piecewise exact-threshold formula from PR #677,
+full-scope prize eligibility, global priority, organizer approval or an award.
