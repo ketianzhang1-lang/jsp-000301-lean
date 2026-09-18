@@ -45,6 +45,7 @@ for entry in json.loads((ROOT / 'UPSTREAM.json').read_text()):
         if old not in text:
             raise SystemExit('Expected compatibility input missing: ' + entry['path'])
         text = text.replace(old, new)
+    text = entry.get('port_notice', '') + text
     data = text.encode('utf-8')
     if hashlib.sha256(data).hexdigest() != entry['port_sha256']:
         raise SystemExit('Compatibility-port checksum mismatch: ' + entry['path'])

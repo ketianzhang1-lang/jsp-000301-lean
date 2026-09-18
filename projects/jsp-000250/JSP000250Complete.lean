@@ -48,10 +48,10 @@ theorem eventually_all_small_denominators_representable :
   rw [representable_iff_upstream]
   by_cases hthree : 3 ≤ t
   · apply hrep t hthree
-    convert hbound using 1 <;>
-      norm_num [Erdos294.SharpLower.lowerConstant,
-        Erdos294.SharpOuterScales.outerExponent, lowerProfile,
-        Erdos294.lowerProfile]
+    have hc : Erdos294.SharpLower.lowerConstant = (1 / 1000000 : ℝ) := by
+      norm_num [Erdos294.SharpLower.lowerConstant]
+    simpa only [hc, Erdos294.SharpOuterScales.outerExponent,
+      lowerProfile, Erdos294.lowerProfile] using hbound
   · have hcases : t = 1 ∨ t = 2 := by omega
     rcases hcases with rfl | rfl
     · exact Erdos294.SharpLower.represents_one (by omega)

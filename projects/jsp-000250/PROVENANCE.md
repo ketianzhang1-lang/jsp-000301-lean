@@ -31,7 +31,8 @@ credits Codex and GPT-5.6 Sol; relevant source files retain their copyright
 notice for Boris Alexeev and author notices for OpenAI Codex. The imported
 75-module closure includes Erdős 294, 297 and 285 developments, the
 `UnitFractions` library and `PrimeNumberTheoremAnd` analytic dependencies.
-Original source headers and all available notices are preserved. The
+Original source headers and all available notices are preserved. Each
+compatibility-ported file carries an explicit modification notice. The
 `UnitFractions` port traces its Lean 3 declaration surface to the public
 [b-mehta/unit-fractions](https://github.com/b-mehta/unit-fractions) development.
 Authors of these dependencies, Mathlib, lean4export and NaNoda retain their

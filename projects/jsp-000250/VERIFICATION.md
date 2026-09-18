@@ -1,8 +1,14 @@
 # JSP-000250 verification
 
-Status: the complete integration is undergoing compilation and audit.
-The earlier upper-only verification does not validate the new complete endpoint.
+Status: local compilation of all 78 modules and all 21 axiom-closure audits
+have passed for the complete integrated proof. The published source also adds
+explicit modification notices to compatibility-ported source files.
 
-The full checks are implemented in `scripts/verify.sh` and
-`scripts/verify_nanoda.sh`. Actual results and immutable proof identification
-will be recorded after these checks finish.
+A clean hosted run must verify this published revision through compilation,
+kernel replay, the negative control and independent strict-allowlist NaNoda
+checking. Those hosted results are pending; the earlier upper-only receipt
+does not validate the complete endpoint.
+
+Reproduction is implemented in `scripts/verify.sh` and
+`scripts/verify_nanoda.sh`. Completed results and immutable proof identification
+will be recorded after the hosted checks finish.

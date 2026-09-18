@@ -37,9 +37,12 @@ imported work. We make no first-formalization or award-entitlement claim.
 
 ## Verification status
 
-The complete integration is undergoing compilation and audit. The earlier
-upper-only verification is not evidence for this new endpoint. Exact completed
-results and proof identification will be recorded in [VERIFICATION.md](VERIFICATION.md).
+The complete integration has passed local compilation of all 78 modules and
+all 21 axiom-closure audits. Clean hosted compilation, kernel replay and
+independent NaNoda verification of this published revision are pending.
+Final results and immutable proof identification will be recorded in
+[VERIFICATION.md](VERIFICATION.md). The earlier upper-only receipt is not
+used as evidence for the complete endpoint.
 
 ## Reproduce
 
