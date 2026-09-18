@@ -1,0 +1,326 @@
+﻿2026-09-18T13:30:58.8078546Z Current runner version: '2.337.0'
+2026-09-18T13:30:58.8106089Z ##[group]Runner Image Provisioner
+2026-09-18T13:30:58.8107071Z Hosted Compute Agent
+2026-09-18T13:30:58.8107711Z Version: 20260828.587
+2026-09-18T13:30:58.8108350Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-18T13:30:58.8109147Z Build Date: 2026-08-28T16:44:25Z
+2026-09-18T13:30:58.8109883Z Worker ID: {bc8c9d75-a8e7-4c56-89cc-00b4a2d422f4}
+2026-09-18T13:30:58.8110624Z Azure Region: westus
+2026-09-18T13:30:58.8111231Z ##[endgroup]
+2026-09-18T13:30:58.8113332Z ##[group]Operating System
+2026-09-18T13:30:58.8114058Z Ubuntu
+2026-09-18T13:30:58.8114587Z 24.04.5
+2026-09-18T13:30:58.8115169Z LTS
+2026-09-18T13:30:58.8115800Z ##[endgroup]
+2026-09-18T13:30:58.8116342Z ##[group]Runner Image
+2026-09-18T13:30:58.8117021Z Image: ubuntu-24.04
+2026-09-18T13:30:58.8117577Z Version: 20260907.300.1
+2026-09-18T13:30:58.8118908Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260907.300/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-18T13:30:58.8120420Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260907.300
+2026-09-18T13:30:58.8121768Z ##[endgroup]
+2026-09-18T13:30:58.8122925Z ##[group]GITHUB_TOKEN Permissions
+2026-09-18T13:30:58.8125577Z Contents: read
+2026-09-18T13:30:58.8126194Z Metadata: read
+2026-09-18T13:30:58.8126728Z ##[endgroup]
+2026-09-18T13:30:58.8128919Z Secret source: Actions
+2026-09-18T13:30:58.8129875Z Cache mode: write
+2026-09-18T13:30:58.8130707Z Prepare workflow directory
+2026-09-18T13:30:58.8475026Z Prepare all required actions
+2026-09-18T13:30:58.8524941Z Getting action download info
+2026-09-18T13:30:59.2214859Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-09-18T13:30:59.3451853Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-09-18T13:30:59.5709657Z Complete job name: validate
+2026-09-18T13:30:59.6621046Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-18T13:30:59.6632783Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-09-18T13:30:59.6634315Z with:
+2026-09-18T13:30:59.6634802Z   repository: ketianzhang1-lang/awards
+2026-09-18T13:30:59.6635422Z   ref: 2ca46f6a0224f031e5c6914d6f213ab6ffaf6082
+2026-09-18T13:30:59.6636015Z   fetch-depth: 0
+2026-09-18T13:30:59.6636472Z   persist-credentials: false
+2026-09-18T13:30:59.6640387Z   token: ***
+2026-09-18T13:30:59.6640819Z   ssh-strict: true
+2026-09-18T13:30:59.6641260Z   ssh-user: git
+2026-09-18T13:30:59.6642009Z   clean: true
+2026-09-18T13:30:59.6642468Z   sparse-checkout-cone-mode: true
+2026-09-18T13:30:59.6642996Z   fetch-tags: false
+2026-09-18T13:30:59.6643500Z   show-progress: true
+2026-09-18T13:30:59.6643947Z   lfs: false
+2026-09-18T13:30:59.6644354Z   submodules: false
+2026-09-18T13:30:59.6644793Z   set-safe-directory: true
+2026-09-18T13:30:59.6645298Z   allow-unsafe-pr-checkout: false
+2026-09-18T13:30:59.6646128Z ##[endgroup]
+2026-09-18T13:30:59.7733614Z Syncing repository: ketianzhang1-lang/awards
+2026-09-18T13:30:59.7735568Z ##[group]Getting Git version info
+2026-09-18T13:30:59.7736431Z Working directory is '/home/runner/work/jsp-000301-lean/jsp-000301-lean'
+2026-09-18T13:30:59.7737514Z [command]/usr/bin/git version
+2026-09-18T13:30:59.7823073Z git version 2.55.0
+2026-09-18T13:30:59.7863343Z ##[endgroup]
+2026-09-18T13:30:59.7883428Z Temporarily overriding HOME='/home/runner/work/_temp/8325d7df-328d-4dfc-8887-3bd68ed691fc' before making global git config changes
+2026-09-18T13:30:59.7885927Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-18T13:30:59.7895651Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/jsp-000301-lean/jsp-000301-lean
+2026-09-18T13:30:59.7950716Z Deleting the contents of '/home/runner/work/jsp-000301-lean/jsp-000301-lean'
+2026-09-18T13:30:59.7956417Z ##[group]Initializing the repository
+2026-09-18T13:30:59.7960040Z [command]/usr/bin/git init /home/runner/work/jsp-000301-lean/jsp-000301-lean
+2026-09-18T13:30:59.8072454Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-18T13:30:59.8074487Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-18T13:30:59.8076441Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-18T13:30:59.8077934Z hint: call:
+2026-09-18T13:30:59.8079011Z hint:
+2026-09-18T13:30:59.8080368Z hint: 	git config --global init.defaultBranch <name>
+2026-09-18T13:30:59.8082157Z hint:
+2026-09-18T13:30:59.8083612Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-18T13:30:59.8085689Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-18T13:30:59.8087091Z hint:
+2026-09-18T13:30:59.8087793Z hint: 	git branch -m <name>
+2026-09-18T13:30:59.8088601Z hint:
+2026-09-18T13:30:59.8089704Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-18T13:30:59.8092038Z Initialized empty Git repository in /home/runner/work/jsp-000301-lean/jsp-000301-lean/.git/
+2026-09-18T13:30:59.8094169Z [command]/usr/bin/git remote add origin https://github.com/ketianzhang1-lang/awards
+2026-09-18T13:30:59.8148881Z ##[endgroup]
+2026-09-18T13:30:59.8150194Z ##[group]Disabling automatic garbage collection
+2026-09-18T13:30:59.8154020Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-18T13:30:59.8190256Z ##[endgroup]
+2026-09-18T13:30:59.8192103Z ##[group]Setting up auth
+2026-09-18T13:30:59.8198759Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-18T13:30:59.8237214Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-18T13:30:59.8619028Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-18T13:30:59.8665682Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-18T13:30:59.8926365Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-18T13:30:59.8969757Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-18T13:30:59.9230387Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-18T13:30:59.9284120Z ##[endgroup]
+2026-09-18T13:30:59.9285448Z ##[group]Fetching the repository
+2026-09-18T13:30:59.9302136Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-09-18T13:31:01.0032927Z From https://github.com/ketianzhang1-lang/awards
+2026-09-18T13:31:01.0044568Z  * [new branch]      jsp-000017-lonely-runner-evidence -> origin/jsp-000017-lonely-runner-evidence
+2026-09-18T13:31:01.0048153Z  * [new branch]      jsp-000140-lower-bound-kz -> origin/jsp-000140-lower-bound-kz
+2026-09-18T13:31:01.0050830Z  * [new branch]      jsp-000154-maximal-sidon-kz -> origin/jsp-000154-maximal-sidon-kz
+2026-09-18T13:31:01.0053612Z  * [new branch]      jsp-000250-upper-bound-evidence -> origin/jsp-000250-upper-bound-evidence
+2026-09-18T13:31:01.0055781Z  * [new branch]      jsp-000254-cambie-evidence -> origin/jsp-000254-cambie-evidence
+2026-09-18T13:31:01.0058147Z  * [new branch]      jsp-000301-formalization-evidence -> origin/jsp-000301-formalization-evidence
+2026-09-18T13:31:01.0060534Z  * [new branch]      jsp-000303-logarithmic-evidence -> origin/jsp-000303-logarithmic-evidence
+2026-09-18T13:31:01.0063325Z  * [new branch]      jsp-000389-factorial-obstructions-kz -> origin/jsp-000389-factorial-obstructions-kz
+2026-09-18T13:31:01.0064995Z  * [new branch]      jsp-000390-minus-one-evidence -> origin/jsp-000390-minus-one-evidence
+2026-09-18T13:31:01.0066472Z  * [new branch]      jsp-000390-power-supplement -> origin/jsp-000390-power-supplement
+2026-09-18T13:31:01.0067885Z  * [new branch]      jsp-000391-digit-evidence -> origin/jsp-000391-digit-evidence
+2026-09-18T13:31:01.0069181Z  * [new branch]      jsp-000392-schur-evidence -> origin/jsp-000392-schur-evidence
+2026-09-18T13:31:01.0070581Z  * [new branch]      jsp-000393-sparse-squares-evidence -> origin/jsp-000393-sparse-squares-evidence
+2026-09-18T13:31:01.0072309Z  * [new branch]      jsp-000399-27-evidence  -> origin/jsp-000399-27-evidence
+2026-09-18T13:31:01.0074074Z  * [new branch]      jsp-000438-tree-ramsey-kz -> origin/jsp-000438-tree-ramsey-kz
+2026-09-18T13:31:01.0076004Z  * [new branch]      jsp-000443-ramsey-kz    -> origin/jsp-000443-ramsey-kz
+2026-09-18T13:31:01.0077275Z  * [new branch]      jsp-000463-incidence-evidence -> origin/jsp-000463-incidence-evidence
+2026-09-18T13:31:01.0078520Z  * [new branch]      jsp-000465-verified-kz  -> origin/jsp-000465-verified-kz
+2026-09-18T13:31:01.0079693Z  * [new branch]      jsp-000476-prime-evidence -> origin/jsp-000476-prime-evidence
+2026-09-18T13:31:01.0080951Z  * [new branch]      jsp-000506-heckel-evidence -> origin/jsp-000506-heckel-evidence
+2026-09-18T13:31:01.0082414Z  * [new branch]      jsp-000530-two-axis-kz  -> origin/jsp-000530-two-axis-kz
+2026-09-18T13:31:01.0083682Z  * [new branch]      jsp-000554-residue-reduction-kz -> origin/jsp-000554-residue-reduction-kz
+2026-09-18T13:31:01.0085022Z  * [new branch]      jsp-000585-catlin-sharp-kz -> origin/jsp-000585-catlin-sharp-kz
+2026-09-18T13:31:01.0086314Z  * [new branch]      jsp-000636-antichain-upper-kz -> origin/jsp-000636-antichain-upper-kz
+2026-09-18T13:31:01.0087876Z  * [new branch]      jsp-000725-interval-evidence -> origin/jsp-000725-interval-evidence
+2026-09-18T13:31:01.0089199Z  * [new branch]      jsp-000728-lower-bound-evidence -> origin/jsp-000728-lower-bound-evidence
+2026-09-18T13:31:01.0090682Z  * [new branch]      jsp-000736-k4-evidence  -> origin/jsp-000736-k4-evidence
+2026-09-18T13:31:01.0093439Z  * [new branch]      jsp-000749-upper-bound-evidence -> origin/jsp-000749-upper-bound-evidence
+2026-09-18T13:31:01.0096444Z  * [new branch]      jsp-000780-sixfull-evidence -> origin/jsp-000780-sixfull-evidence
+2026-09-18T13:31:01.0099360Z  * [new branch]      jsp-000843-mycielski-evidence -> origin/jsp-000843-mycielski-evidence
+2026-09-18T13:31:01.0102029Z  * [new branch]      jsp-000907-four-chord-note -> origin/jsp-000907-four-chord-note
+2026-09-18T13:31:01.0104479Z  * [new branch]      jsp-000912-kz-full-formalization -> origin/jsp-000912-kz-full-formalization
+2026-09-18T13:31:01.0107052Z  * [new branch]      jsp-000924-fourth-power-evidence -> origin/jsp-000924-fourth-power-evidence
+2026-09-18T13:31:01.0109441Z  * [new branch]      jsp-000925-strict-evidence -> origin/jsp-000925-strict-evidence
+2026-09-18T13:31:01.0112185Z  * [new branch]      jsp-001016-log-density-correction -> origin/jsp-001016-log-density-correction
+2026-09-18T13:31:01.0115173Z  * [new branch]      jsp-001021-independent-reproduction -> origin/jsp-001021-independent-reproduction
+2026-09-18T13:31:01.0117184Z  * [new branch]      main                    -> origin/main
+2026-09-18T13:31:01.0118881Z  * [new branch]      submit-jsp-000057-rank-two-kz -> origin/submit-jsp-000057-rank-two-kz
+2026-09-18T13:31:01.0121070Z  * [new branch]      submit-jsp-000212-bose-chowla-kz -> origin/submit-jsp-000212-bose-chowla-kz
+2026-09-18T13:31:01.0123924Z  * [new branch]      submit-jsp-000295-weisenberg -> origin/submit-jsp-000295-weisenberg
+2026-09-18T13:31:01.0125981Z  * [new branch]      submit-jsp-000388-quadratic -> origin/submit-jsp-000388-quadratic
+2026-09-18T13:31:01.0127697Z  * [new branch]      submit-jsp-000399-27-kz -> origin/submit-jsp-000399-27-kz
+2026-09-18T13:31:01.0129104Z  * [new branch]      submit-jsp-000401-turan-kz -> origin/submit-jsp-000401-turan-kz
+2026-09-18T13:31:01.0130273Z  * [new branch]      submit-jsp-000438-full-kz -> origin/submit-jsp-000438-full-kz
+2026-09-18T13:31:01.0131355Z  * [new branch]      submit-jsp-000438-kz    -> origin/submit-jsp-000438-kz
+2026-09-18T13:31:01.0133050Z  * [new branch]      submit-jsp-000617-upper-density-20260917 -> origin/submit-jsp-000617-upper-density-20260917
+2026-09-18T13:31:01.0134620Z  * [new branch]      submit-jsp-000746-sharp-kz -> origin/submit-jsp-000746-sharp-kz
+2026-09-18T13:31:01.0136739Z  * [new branch]      submit-jsp-000883-monier -> origin/submit-jsp-000883-monier
+2026-09-18T13:31:01.0138163Z  * [new branch]      submit-jsp-000897-dense-neighborhood-kz -> origin/submit-jsp-000897-dense-neighborhood-kz
+2026-09-18T13:31:01.0140524Z [command]/usr/bin/git rev-parse --verify --quiet 2ca46f6a0224f031e5c6914d6f213ab6ffaf6082^{object}
+2026-09-18T13:31:01.0142018Z 2ca46f6a0224f031e5c6914d6f213ab6ffaf6082
+2026-09-18T13:31:01.0143668Z ##[endgroup]
+2026-09-18T13:31:01.0144430Z ##[group]Determining the checkout info
+2026-09-18T13:31:01.0145357Z ##[endgroup]
+2026-09-18T13:31:01.0145851Z [command]/usr/bin/git sparse-checkout disable
+2026-09-18T13:31:01.0188343Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-18T13:31:01.0226255Z ##[group]Checking out the ref
+2026-09-18T13:31:01.0230374Z [command]/usr/bin/git checkout --progress --force 2ca46f6a0224f031e5c6914d6f213ab6ffaf6082
+2026-09-18T13:31:01.0361927Z Note: switching to '2ca46f6a0224f031e5c6914d6f213ab6ffaf6082'.
+2026-09-18T13:31:01.0364061Z 
+2026-09-18T13:31:01.0365428Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-18T13:31:01.0367156Z changes and commit them, and you can discard any commits you make in this
+2026-09-18T13:31:01.0368545Z state without impacting any branches by switching back to a branch.
+2026-09-18T13:31:01.0369654Z 
+2026-09-18T13:31:01.0370225Z If you want to create a new branch to retain commits you create, you may
+2026-09-18T13:31:01.0371896Z do so (now or later) by using -c with the switch command. Example:
+2026-09-18T13:31:01.0373373Z 
+2026-09-18T13:31:01.0374047Z   git switch -c <new-branch-name>
+2026-09-18T13:31:01.0374993Z 
+2026-09-18T13:31:01.0375520Z Or undo this operation with:
+2026-09-18T13:31:01.0376349Z 
+2026-09-18T13:31:01.0376789Z   git switch -
+2026-09-18T13:31:01.0377426Z 
+2026-09-18T13:31:01.0378490Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-18T13:31:01.0380132Z 
+2026-09-18T13:31:01.0381981Z HEAD is now at 2ca46f6 Replace partial JSP-000140 submission with verified complete proof references
+2026-09-18T13:31:01.0387207Z ##[endgroup]
+2026-09-18T13:31:01.0427670Z [command]/usr/bin/git log -1 --format=%H
+2026-09-18T13:31:01.0457646Z 2ca46f6a0224f031e5c6914d6f213ab6ffaf6082
+2026-09-18T13:31:01.0468445Z ##[group]Removing auth
+2026-09-18T13:31:01.0472512Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-18T13:31:01.0507903Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-18T13:31:01.0738422Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-18T13:31:01.0769318Z http.https://github.com/.extraheader
+2026-09-18T13:31:01.0778964Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-18T13:31:01.0819486Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-18T13:31:01.1045870Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-18T13:31:01.1084958Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-18T13:31:01.1313227Z ##[endgroup]
+2026-09-18T13:31:01.1672526Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-18T13:31:01.1678641Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+2026-09-18T13:31:01.1680222Z with:
+2026-09-18T13:31:01.1681000Z   python-version: 3.12
+2026-09-18T13:31:01.1682119Z   check-latest: false
+2026-09-18T13:31:01.1692379Z   token: ***
+2026-09-18T13:31:01.1693229Z   update-environment: true
+2026-09-18T13:31:01.1694227Z   allow-prereleases: false
+2026-09-18T13:31:01.1695202Z   freethreaded: false
+2026-09-18T13:31:01.1696068Z ##[endgroup]
+2026-09-18T13:31:01.3135522Z ##[group]Installed versions
+2026-09-18T13:31:01.3246152Z (node:2342) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-18T13:31:01.3249375Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-18T13:31:01.3252237Z Successfully set up CPython (3.12.14)
+2026-09-18T13:31:01.3255210Z ##[endgroup]
+2026-09-18T13:31:01.3411984Z ##[group]Run set -euo pipefail
+2026-09-18T13:31:01.3413216Z [36;1mset -euo pipefail[0m
+2026-09-18T13:31:01.3414741Z [36;1mtest "$(git rev-parse HEAD)" = "2ca46f6a0224f031e5c6914d6f213ab6ffaf6082"[0m
+2026-09-18T13:31:01.3417433Z [36;1mtest "$(git diff --name-only ff33abd13163e789790eb1014e55f57c05f94432 HEAD)" = "problems/catalog-0101-0200.md"[0m
+2026-09-18T13:31:01.3419779Z [36;1mpython -m pip install -r requirements.txt[0m
+2026-09-18T13:31:01.3474995Z shell: /usr/bin/bash -e {0}
+2026-09-18T13:31:01.3476038Z env:
+2026-09-18T13:31:01.3477101Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-18T13:31:01.3478941Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-18T13:31:01.3480704Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-18T13:31:01.3482652Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-18T13:31:01.3484265Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-18T13:31:01.3485922Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-18T13:31:01.3487308Z ##[endgroup]
+2026-09-18T13:31:02.2210577Z Collecting PyYAML==6.0.3 (from -r requirements.txt (line 1))
+2026-09-18T13:31:02.2684218Z   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-09-18T13:31:02.2878029Z Collecting jsonschema==4.26.0 (from -r requirements.txt (line 2))
+2026-09-18T13:31:02.2908493Z   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+2026-09-18T13:31:02.3062007Z Collecting markdown-it-py==3.0.0 (from -r requirements.txt (line 3))
+2026-09-18T13:31:02.3092541Z   Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+2026-09-18T13:31:02.3253974Z Collecting attrs>=22.2.0 (from jsonschema==4.26.0->-r requirements.txt (line 2))
+2026-09-18T13:31:02.3284307Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+2026-09-18T13:31:02.3417582Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema==4.26.0->-r requirements.txt (line 2))
+2026-09-18T13:31:02.3452188Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-09-18T13:31:02.3660642Z Collecting referencing>=0.28.4 (from jsonschema==4.26.0->-r requirements.txt (line 2))
+2026-09-18T13:31:02.3697382Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-09-18T13:31:02.6318290Z Collecting rpds-py>=0.25.0 (from jsonschema==4.26.0->-r requirements.txt (line 2))
+2026-09-18T13:31:02.6354346Z   Downloading rpds_py-2026.6.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+2026-09-18T13:31:02.6459991Z Collecting mdurl~=0.1 (from markdown-it-py==3.0.0->-r requirements.txt (line 3))
+2026-09-18T13:31:02.6488810Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-09-18T13:31:02.6688023Z Collecting typing-extensions>=4.4.0 (from referencing>=0.28.4->jsonschema==4.26.0->-r requirements.txt (line 2))
+2026-09-18T13:31:02.6717976Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-09-18T13:31:02.6794413Z Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+2026-09-18T13:31:02.6916834Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 116.5 MB/s  0:00:00
+2026-09-18T13:31:02.6952568Z Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-09-18T13:31:02.7000749Z Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+2026-09-18T13:31:02.7052376Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-09-18T13:31:02.7101590Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-09-18T13:31:02.7153033Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-09-18T13:31:02.7203437Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-09-18T13:31:02.7258309Z Downloading rpds_py-2026.6.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (366 kB)
+2026-09-18T13:31:02.7320738Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-09-18T13:31:02.7993415Z Installing collected packages: typing-extensions, rpds-py, PyYAML, mdurl, attrs, referencing, markdown-it-py, jsonschema-specifications, jsonschema
+2026-09-18T13:31:03.1353523Z 
+2026-09-18T13:31:03.1371205Z Successfully installed PyYAML-6.0.3 attrs-26.1.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 markdown-it-py-3.0.0 mdurl-0.1.2 referencing-0.37.0 rpds-py-2026.6.3 typing-extensions-4.16.0
+2026-09-18T13:31:03.2102653Z ##[group]Run set -euo pipefail
+2026-09-18T13:31:03.2103034Z [36;1mset -euo pipefail[0m
+2026-09-18T13:31:03.2103333Z [36;1mpython scripts/manage.py validate[0m
+2026-09-18T13:31:03.2103692Z [36;1mpython scripts/manage.py links[0m
+2026-09-18T13:31:03.2104015Z [36;1mpython scripts/manage.py build[0m
+2026-09-18T13:31:03.2104329Z [36;1mpython scripts/manage.py check[0m
+2026-09-18T13:31:03.2104815Z [36;1mpython scripts/manage.py history --base ff33abd13163e789790eb1014e55f57c05f94432[0m
+2026-09-18T13:31:03.2105360Z [36;1mpython -m unittest discover -s tests -v[0m
+2026-09-18T13:31:03.2105720Z [36;1mgit diff --exit-code[0m
+2026-09-18T13:31:03.2144973Z shell: /usr/bin/bash -e {0}
+2026-09-18T13:31:03.2145233Z env:
+2026-09-18T13:31:03.2145515Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-18T13:31:03.2145989Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-18T13:31:03.2146493Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-18T13:31:03.2146910Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-18T13:31:03.2147314Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-18T13:31:03.2147735Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-18T13:31:03.2148075Z ##[endgroup]
+2026-09-18T13:31:03.4787138Z validate: OK
+2026-09-18T13:31:04.9792110Z links: OK
+2026-09-18T13:31:05.2303707Z build: OK
+2026-09-18T13:31:05.4797114Z check: OK
+2026-09-18T13:31:05.7317610Z history: OK
+2026-09-18T13:31:06.2047056Z test_alias_and_custom_tag_rejected (test_records.RecordTests.test_alias_and_custom_tag_rejected) ... ok
+2026-09-18T13:31:06.3361281Z test_award_cannot_be_deleted (test_records.RecordTests.test_award_cannot_be_deleted) ... ok
+2026-09-18T13:31:06.4334005Z test_candidate_cannot_publish_award_decision (test_records.RecordTests.test_candidate_cannot_publish_award_decision) ... ok
+2026-09-18T13:31:06.6427251Z test_confirmed_states_need_verification (test_records.RecordTests.test_confirmed_states_need_verification) ... ok
+2026-09-18T13:31:06.9232976Z test_draft_roundtrip_and_drift (test_records.RecordTests.test_draft_roundtrip_and_drift) ... ok
+2026-09-18T13:31:07.0249293Z test_duplicate_entry_ids_rejected (test_records.RecordTests.test_duplicate_entry_ids_rejected) ... ok
+2026-09-18T13:31:07.1163967Z test_duplicate_yaml_keys_rejected (test_records.RecordTests.test_duplicate_yaml_keys_rejected) ... ok
+2026-09-18T13:31:07.2951123Z test_empty_indexes (test_records.RecordTests.test_empty_indexes) ... ok
+2026-09-18T13:31:07.3926889Z test_formal_candidate_needs_statement (test_records.RecordTests.test_formal_candidate_needs_statement) ... ok
+2026-09-18T13:31:07.8479744Z test_internal_record_fields_rejected (test_records.RecordTests.test_internal_record_fields_rejected) ... ok
+2026-09-18T13:31:07.8703007Z test_local_links_and_anchors (test_records.RecordTests.test_local_links_and_anchors) ... ok
+2026-09-18T13:31:08.5033548Z test_nonempty_english_sections (test_records.RecordTests.test_nonempty_english_sections) ... ok
+2026-09-18T13:31:08.7283087Z test_pending_candidate_accepts_incomplete_evidence (test_records.RecordTests.test_pending_candidate_accepts_incomplete_evidence) ... ok
+2026-09-18T13:31:09.0630431Z test_public_award_and_batch_membership (test_records.RecordTests.test_public_award_and_batch_membership) ... ok
+2026-09-18T13:31:09.2126381Z test_published_decision_immutable (test_records.RecordTests.test_published_decision_immutable) ... ok
+2026-09-18T13:31:09.4519770Z test_published_statement_immutable_and_superseded (test_records.RecordTests.test_published_statement_immutable_and_superseded) ... ok
+2026-09-18T13:31:09.7260748Z test_revocation_keeps_original_evidence (test_records.RecordTests.test_revocation_keeps_original_evidence) ... ok
+2026-09-18T13:31:09.8220731Z test_symlinks_and_misplaced_records_rejected (test_records.RecordTests.test_symlinks_and_misplaced_records_rejected) ... ok
+2026-09-18T13:31:09.9172223Z test_unconfirmed_award_rejected (test_records.RecordTests.test_unconfirmed_award_rejected) ... ok
+2026-09-18T13:31:09.9233295Z test_unconfirmed_names_and_duplicate_recipients_rejected (test_records.RecordTests.test_unconfirmed_names_and_duplicate_recipients_rejected) ... ok
+2026-09-18T13:31:10.0209759Z test_unknown_payment_field_rejected (test_records.RecordTests.test_unknown_payment_field_rejected) ... ok
+2026-09-18T13:31:10.7746216Z test_verification_requires_consistent_successful_evidence (test_records.RecordTests.test_verification_requires_consistent_successful_evidence) ... ok
+2026-09-18T13:31:10.7747638Z 
+2026-09-18T13:31:10.7747902Z ----------------------------------------------------------------------
+2026-09-18T13:31:10.7748512Z Ran 22 tests in 4.753s
+2026-09-18T13:31:10.7748765Z 
+2026-09-18T13:31:10.7748876Z OK
+2026-09-18T13:31:10.8066584Z ##[group]Run echo "These are contributor-run checks of public catalog content."
+2026-09-18T13:31:10.8067225Z [36;1mecho "These are contributor-run checks of public catalog content."[0m
+2026-09-18T13:31:10.8067835Z [36;1mecho "They do not approve or bypass the upstream PR workflow approval requirement."[0m
+2026-09-18T13:31:10.8105386Z shell: /usr/bin/bash -e {0}
+2026-09-18T13:31:10.8105674Z env:
+2026-09-18T13:31:10.8105986Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-18T13:31:10.8106532Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-18T13:31:10.8107052Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-18T13:31:10.8107526Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-18T13:31:10.8107985Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-18T13:31:10.8108446Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-18T13:31:10.8108833Z ##[endgroup]
+2026-09-18T13:31:10.8167068Z These are contributor-run checks of public catalog content.
+2026-09-18T13:31:10.8167684Z They do not approve or bypass the upstream PR workflow approval requirement.
+2026-09-18T13:31:10.8266628Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-18T13:31:10.8268041Z Post job cleanup.
+2026-09-18T13:31:10.9491836Z (node:2434) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-18T13:31:10.9493158Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-18T13:31:10.9695065Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-18T13:31:10.9696331Z Post job cleanup.
+2026-09-18T13:31:11.0636204Z [command]/usr/bin/git version
+2026-09-18T13:31:11.0685534Z git version 2.55.0
+2026-09-18T13:31:11.0731303Z Temporarily overriding HOME='/home/runner/work/_temp/934682f4-0d4a-468f-b29d-4eecb9315177' before making global git config changes
+2026-09-18T13:31:11.0733405Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-18T13:31:11.0737461Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/jsp-000301-lean/jsp-000301-lean
+2026-09-18T13:31:11.0792450Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-18T13:31:11.0840454Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-18T13:31:11.1185870Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-18T13:31:11.1234691Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-18T13:31:11.1614185Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-18T13:31:11.1662631Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-18T13:31:11.2227694Z Cleaning up orphan processes
+2026-09-18T13:31:11.2542295Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

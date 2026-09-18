@@ -1,0 +1,41 @@
+{
+  "observed_at": "2026-09-18T13:32:38.374Z",
+  "problem": "JSP-000140",
+  "pr": "https://github.com/TheJustinSunPrize/awards/pull/443",
+  "proof_commit": "724a733a2b498d7b3b956e66b76d7334cc906eaf",
+  "verification_docs_commit": "728526da93d79904fec57572a84e1202b5a8a93d",
+  "copy_text_commit": "9c986b6df15ca29d88d3a2fec4820f437e203875",
+  "awards_catalog_commit": "2ca46f6a0224f031e5c6914d6f213ab6ffaf6082",
+  "awards_pr_changed_files": [
+    "problems/catalog-0101-0200.md"
+  ],
+  "complete_proof_ci": {
+    "run": 35347120839,
+    "conclusion": "success",
+    "modules": 24,
+    "axiom_targets": 46,
+    "nanoda_declarations": 56007
+  },
+  "final_catalog_ci": {
+    "run": 35350651679,
+    "job": 105617710629,
+    "source": "2ca46f6a0224f031e5c6914d6f213ab6ffaf6082",
+    "conclusion": "success",
+    "tests": 22,
+    "checks": [
+      "validate",
+      "links",
+      "build",
+      "check",
+      "history"
+    ],
+    "log_sha256": "f03ea8d35ebd5edf2ef62295cc057314e45da6723a1d8d0f7264dff4b97bb38c"
+  },
+  "upstream_workflow_status": "action_required: maintainer approval required; independent contributor-run validation does not approve the upstream workflows",
+  "pr_metadata_update": {
+    "status": "manual replacement required",
+    "reason": "GitHub API 403: Resource not accessible by integration",
+    "copy_ready_file": "https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/9c986b6df15ca29d88d3a2fec4820f437e203875/projects/jsp-000140/PR_COPY.md"
+  },
+  "contribution_note": "Our unchanged strict finite lower formalization and new exact model bridge/integration are distinguished from the reused existing complete asymptotic proof. Eligibility and prize decisions remain for maintainers."
+}
