@@ -1,0 +1,450 @@
+{
+  "schema_version": 1,
+  "prepared_at_utc": "2026-09-18T22:06:46.342319+00:00",
+  "purpose": "Evidence supplement for existing claims 1352 and 1410; no new claim or award determination.",
+  "method": "Compare Git blob identifiers exposed by GitHub for the early successful CI commit, the historical PR bundle commit, and the selected proof commit. Re-read historical theorem text and GitHub CI metadata. No new Lean rebuild or artifact ZIP download was performed for this supplement.",
+  "timestamp_limits": [
+    "Git author/committer dates are not authenticated first-publication dates.",
+    "CI server times document execution, not whether the repository was public at that instant.",
+    "PR created_at dates document the PR record; current commit membership and current PR bodies do not alone reconstruct the exact public contents at opening.",
+    "No complete archive of repository visibility or PR body/force-push history was obtained.",
+    "Third-party acknowledgement supports relative provenance; it does not establish global priority or organizer approval."
+  ],
+  "problems": {
+    "391": {
+      "claim": {
+        "number": 1352,
+        "html_url": "https://github.com/TheJustinSunPrize/awards/issues/1352",
+        "state": "open",
+        "created_at": "2026-09-18T17:02:56Z",
+        "updated_at": "2026-09-18T17:02:56Z",
+        "comments": 0
+      },
+      "pull_request": {
+        "number": 293,
+        "html_url": "https://github.com/TheJustinSunPrize/awards/pull/293",
+        "state": "open",
+        "created_at": "2026-09-16T22:43:45Z",
+        "updated_at": "2026-09-17T20:19:15Z",
+        "merged_at": null,
+        "head_sha": "c8110f7e6c1ec5c53d5d10c768dbc87c7d899748"
+      },
+      "versions": {
+        "early_successful_ci_sha": "56f083c6183e93eeffc334e04e39a26548bfae96",
+        "historical_pr_bundle_sha": "8d5b80f51a4df0b010fe7e6a079dcc5cdfab0b00",
+        "selected_proof_sha": "14e5155e68554de4e053e4aacd77095a93e96dd4"
+      },
+      "historical_pr_commit_date": {
+        "value": "2026-09-16T22:37:34Z",
+        "type": "Git committer date; not a first-publication timestamp"
+      },
+      "blob_comparisons": [
+        {
+          "file": "JSP000391.lean",
+          "role": "proof module",
+          "git_blob_sha": "f28358fd14b979241183793faf6f019711499cfd",
+          "all_three_versions_equal": true
+        },
+        {
+          "file": "JSP000391Main.lean",
+          "role": "proof module",
+          "git_blob_sha": "f14b3bc007ca72454e9835053c8c9e057702fa56",
+          "all_three_versions_equal": true
+        },
+        {
+          "file": "Audit.lean",
+          "role": "audit/configuration",
+          "git_blob_sha": "e6649cd56499a91f708243df8adb041ad6399cf5",
+          "all_three_versions_equal": true
+        },
+        {
+          "file": "lean-toolchain",
+          "role": "audit/configuration",
+          "git_blob_sha": "12359f928f18e4a89ebd1444a0310b025931b17d",
+          "all_three_versions_equal": true
+        },
+        {
+          "file": "lakefile.lean",
+          "role": "audit/configuration",
+          "git_blob_sha": "6e9f101c121fb7ed5c387ff33d35e6c89bc10a34",
+          "all_three_versions_equal": true
+        },
+        {
+          "file": "lake-manifest.json",
+          "role": "audit/configuration",
+          "git_blob_sha": "5e8019ae3c4ab1fc28cd3e7d429a8b896a2ab306",
+          "all_three_versions_equal": true
+        }
+      ],
+      "run": {
+        "id": 35157931469,
+        "html_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35157931469",
+        "head_sha": "56f083c6183e93eeffc334e04e39a26548bfae96",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-09-16T22:29:30Z",
+        "run_started_at": "2026-09-16T22:29:30Z",
+        "updated_at": "2026-09-16T22:33:06Z",
+        "run_attempt": 1
+      },
+      "jobs": [
+        {
+          "id": 105001695072,
+          "html_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35157931469/job/105001695072",
+          "head_sha": "56f083c6183e93eeffc334e04e39a26548bfae96",
+          "status": "completed",
+          "conclusion": "success",
+          "created_at": "2026-09-16T22:29:30Z",
+          "started_at": "2026-09-16T22:29:32Z",
+          "completed_at": "2026-09-16T22:33:05Z",
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-16T22:29:33Z",
+              "completed_at": "2026-09-16T22:29:34Z"
+            },
+            {
+              "number": 2,
+              "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-16T22:29:34Z",
+              "completed_at": "2026-09-16T22:29:35Z"
+            },
+            {
+              "number": 3,
+              "name": "Install pinned compiler and fetch locked dependencies",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-16T22:29:35Z",
+              "completed_at": "2026-09-16T22:31:27Z"
+            },
+            {
+              "number": 4,
+              "name": "Build both modules, replay kernels and audit all eight targets",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-16T22:31:27Z",
+              "completed_at": "2026-09-16T22:32:19Z"
+            },
+            {
+              "number": 5,
+              "name": "Independent NaNoda replay of complete target closures",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-16T22:32:19Z",
+              "completed_at": "2026-09-16T22:33:01Z"
+            },
+            {
+              "number": 6,
+              "name": "Archive exact tested source",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-16T22:33:01Z",
+              "completed_at": "2026-09-16T22:33:01Z"
+            },
+            {
+              "number": 7,
+              "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-16T22:33:01Z",
+              "completed_at": "2026-09-16T22:33:03Z"
+            },
+            {
+              "number": 14,
+              "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-16T22:33:03Z",
+              "completed_at": "2026-09-16T22:33:03Z"
+            },
+            {
+              "number": 15,
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-16T22:33:03Z",
+              "completed_at": "2026-09-16T22:33:03Z"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10471333076,
+          "name": "jsp-000391-evidence",
+          "size_in_bytes": 12170425,
+          "digest": "sha256:ed182bb56a1e1f3986c65593f428afd9df1bcd71a3005895a74a1fd2fb1912ca",
+          "created_at": "2026-09-16T22:33:03Z",
+          "expires_at": "2026-12-15T22:29:30Z",
+          "expired": false,
+          "workflow_run": {
+            "id": 35157931469,
+            "repository_id": 1373404416,
+            "head_repository_id": 1373404416,
+            "head_branch": "jsp-000391-digit-recurrence",
+            "head_sha": "56f083c6183e93eeffc334e04e39a26548bfae96"
+          }
+        }
+      ],
+      "artifact_digest_status": "GitHub-reported digest only for this review; archive bytes were not downloaded or independently rehashed.",
+      "source_queries": {
+        "pr391": {
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/pulls/293",
+          "fetched_at": "2026-09-18T21:57:29.547Z"
+        },
+        "claim391": {
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1352",
+          "fetched_at": "2026-09-18T21:57:29.058Z"
+        },
+        "first391": {
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/8d5b80f51a4df0b010fe7e6a079dcc5cdfab0b00"
+        },
+        "tree391": {
+          "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/contents/projects/jsp-000391?ref=14e5155e68554de4e053e4aacd77095a93e96dd4"
+        },
+        "earlyTree391": {
+          "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/contents/projects/jsp-000391?ref=56f083c6183e93eeffc334e04e39a26548bfae96",
+          "fetched_at": "2026-09-18T22:03:32.507Z"
+        },
+        "ci391": {
+          "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/runs/35157931469",
+          "fetched_at": "2026-09-18T22:02:53.444Z"
+        },
+        "jobs391": {
+          "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/runs/35157931469/jobs",
+          "fetched_at": "2026-09-18T22:02:53.619Z"
+        },
+        "artifacts391": {
+          "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/runs/35157931469/artifacts",
+          "fetched_at": "2026-09-18T22:02:53.481Z"
+        }
+      }
+    },
+    "438": {
+      "claim": {
+        "number": 1410,
+        "html_url": "https://github.com/TheJustinSunPrize/awards/issues/1410",
+        "state": "open",
+        "created_at": "2026-09-18T17:51:26Z",
+        "updated_at": "2026-09-18T17:51:26Z",
+        "comments": 0
+      },
+      "pull_request": {
+        "number": 408,
+        "html_url": "https://github.com/TheJustinSunPrize/awards/pull/408",
+        "state": "open",
+        "created_at": "2026-09-17T02:51:34Z",
+        "updated_at": "2026-09-17T20:58:23Z",
+        "merged_at": null,
+        "head_sha": "372f36547332daa8a4a51e9b1963fb4b4d74f3be"
+      },
+      "versions": {
+        "early_successful_ci_sha": "11a32e130fa669a4f23f0bbe7a320fd9675dbb7c",
+        "historical_pr_bundle_sha": "167ed0362b8041f5b3b52fde8bcac8be6a1755bf",
+        "selected_proof_sha": "5f94d026ec88696bb5047506c433ad401e5f02ef"
+      },
+      "historical_pr_commit_date": {
+        "value": "2026-09-17T02:49:13Z",
+        "type": "Git committer date; not a first-publication timestamp"
+      },
+      "blob_comparisons": [
+        {
+          "file": "JSP000438.lean",
+          "role": "proof module",
+          "git_blob_sha": "7cdd90a6b8f933404d95933301a96fc459d5d3e6",
+          "all_three_versions_equal": true
+        },
+        {
+          "file": "RamseyDefinitions.lean",
+          "role": "proof module",
+          "git_blob_sha": "bd6657a10724e35e27c72aecf85678e5079ad1e6",
+          "all_three_versions_equal": true
+        },
+        {
+          "file": "Upstream548.lean",
+          "role": "proof module",
+          "git_blob_sha": "2688ec02d4f8bfd1e0fe0d7f1c46f4e58a5ac314",
+          "all_three_versions_equal": true
+        },
+        {
+          "file": "lean-toolchain",
+          "role": "audit/configuration",
+          "git_blob_sha": "12359f928f18e4a89ebd1444a0310b025931b17d",
+          "all_three_versions_equal": true
+        },
+        {
+          "file": "lake-manifest.json",
+          "role": "audit/configuration",
+          "git_blob_sha": "28cf830485a5111d8ea1695808c44c605b08e546",
+          "all_three_versions_equal": true
+        }
+      ],
+      "run": {
+        "id": 35175029806,
+        "html_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35175029806",
+        "head_sha": "11a32e130fa669a4f23f0bbe7a320fd9675dbb7c",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-09-17T02:35:56Z",
+        "run_started_at": "2026-09-17T02:35:56Z",
+        "updated_at": "2026-09-17T02:38:51Z",
+        "run_attempt": 1
+      },
+      "jobs": [
+        {
+          "id": 105054732657,
+          "html_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35175029806/job/105054732657",
+          "head_sha": "11a32e130fa669a4f23f0bbe7a320fd9675dbb7c",
+          "status": "completed",
+          "conclusion": "success",
+          "created_at": "2026-09-17T02:35:57Z",
+          "started_at": "2026-09-17T02:35:58Z",
+          "completed_at": "2026-09-17T02:38:50Z",
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-17T02:35:59Z",
+              "completed_at": "2026-09-17T02:36:00Z"
+            },
+            {
+              "number": 2,
+              "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-17T02:36:00Z",
+              "completed_at": "2026-09-17T02:36:00Z"
+            },
+            {
+              "number": 3,
+              "name": "Install exact toolchain and locked dependencies",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-17T02:36:00Z",
+              "completed_at": "2026-09-17T02:37:48Z"
+            },
+            {
+              "number": 4,
+              "name": "Build, replay, five axiom audits and negative control",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-17T02:37:48Z",
+              "completed_at": "2026-09-17T02:38:13Z"
+            },
+            {
+              "number": 5,
+              "name": "Independent strict-allowlist NaNoda verification",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-17T02:38:13Z",
+              "completed_at": "2026-09-17T02:38:48Z"
+            },
+            {
+              "number": 6,
+              "name": "Archive tested source and logs",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-17T02:38:48Z",
+              "completed_at": "2026-09-17T02:38:48Z"
+            },
+            {
+              "number": 7,
+              "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-17T02:38:48Z",
+              "completed_at": "2026-09-17T02:38:49Z"
+            },
+            {
+              "number": 14,
+              "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-17T02:38:49Z",
+              "completed_at": "2026-09-17T02:38:49Z"
+            },
+            {
+              "number": 15,
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-09-17T02:38:49Z",
+              "completed_at": "2026-09-17T02:38:50Z"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10478133208,
+          "name": "jsp-000438-evidence",
+          "size_in_bytes": 8112880,
+          "digest": "sha256:fb1405c9051fba1bfb217242478d0c96e79ba155ea9b98a804533929263f17df",
+          "created_at": "2026-09-17T02:38:49Z",
+          "expires_at": "2026-12-16T02:35:57Z",
+          "expired": false,
+          "workflow_run": {
+            "id": 35175029806,
+            "repository_id": 1373404416,
+            "head_repository_id": 1373404416,
+            "head_branch": "jsp-000438-tree-ramsey",
+            "head_sha": "11a32e130fa669a4f23f0bbe7a320fd9675dbb7c"
+          }
+        }
+      ],
+      "artifact_digest_status": "GitHub-reported digest only for this review; archive bytes were not downloaded or independently rehashed.",
+      "source_queries": {
+        "pr438": {
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/pulls/408",
+          "fetched_at": "2026-09-18T21:57:29.499Z"
+        },
+        "claim438": {
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1410",
+          "fetched_at": "2026-09-18T21:57:29.110Z"
+        },
+        "first438": {
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/167ed0362b8041f5b3b52fde8bcac8be6a1755bf"
+        },
+        "tree438": {
+          "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/contents/projects/jsp-000438?ref=5f94d026ec88696bb5047506c433ad401e5f02ef"
+        },
+        "earlyTree438": {
+          "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/contents/projects/jsp-000438?ref=11a32e130fa669a4f23f0bbe7a320fd9675dbb7c",
+          "fetched_at": "2026-09-18T22:03:32.648Z"
+        },
+        "ci438": {
+          "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/runs/35175029806",
+          "fetched_at": "2026-09-18T22:02:53.418Z"
+        },
+        "jobs438": {
+          "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/runs/35175029806/jobs",
+          "fetched_at": "2026-09-18T22:02:53.768Z"
+        },
+        "artifacts438": {
+          "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/runs/35175029806/artifacts",
+          "fetched_at": "2026-09-18T22:02:53.417Z"
+        }
+      }
+    }
+  },
+  "third_party_acknowledgement": {
+    "url": "https://github.com/PengSafari/jsp-000391-lean/blob/8beb80bbe38682395de5afb7b33e7fa05ad72637/NOTICE.md",
+    "text_sha256": "13a361a07b7b2729bfab50c6c0bd4b6fe982e8c82fff3c0d92cbfd280bdff05f",
+    "inspected_user_proof_sha": "14e5155e68554de4e053e4aacd77095a93e96dd4",
+    "later_pr": {
+      "number": 1163,
+      "html_url": "https://github.com/TheJustinSunPrize/awards/pull/1163",
+      "created_at": "2026-09-18T10:42:34Z",
+      "updated_at": "2026-09-18T10:48:32Z",
+      "state": "open"
+    },
+    "summary": "PengSafari identifies PR 293 and the two modules at the selected user SHA as prior work read during problem selection; subsequent implementation was in their own modules. Their NOTICE disclaims first-formalization priority."
+  }
+}
