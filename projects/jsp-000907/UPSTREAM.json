@@ -1,0 +1,400 @@
+[
+  {
+    "path": "ErdosProblems/Erdos127/CriticalClique.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos127/CriticalClique.lean",
+    "git_blob_sha": "83e84f99549c4d1f6629885ad8cb0376191f46ca",
+    "sha256": "f5fa42d9cbd6d6cd7b3df98a0cde0ca9f959040b38c23f58318b93fc6571f4c7",
+    "port_sha256": "6fe12c8801d63760bcf3d939f9fd6b20cd1f6b007d6341d5a812ebc7e82c59cf",
+    "renames": {
+      "if_false": "ite_false",
+      "if_pos": "ite_eq_left"
+    },
+    "edits": [],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000907.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/BrooksOddCycle.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/BrooksOddCycle.lean",
+    "git_blob_sha": "5c4791991e2b2643603957d748652d365e371da1",
+    "sha256": "9ef130462fbb04d7e2c3e5990fbcd006b795ebf46724bb95394abff07a2abef5",
+    "port_sha256": "9ef130462fbb04d7e2c3e5990fbcd006b795ebf46724bb95394abff07a2abef5",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/BrooksVertexLemmas.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/BrooksVertexLemmas.lean",
+    "git_blob_sha": "d3538e939e39e2ee483a15f6fa7c8fdd1e202cff",
+    "sha256": "088d3443184ff06e736dee175590df2476d5c1aebd6b323ae003e1c60c6b4a1a",
+    "port_sha256": "45b2b303a74f9f7f117bc1fbb57f387c75c6da85edbd58ac077d9c4a85e535d0",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": [],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000907.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/Brooks.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/Brooks.lean",
+    "git_blob_sha": "fde7f33814e79016a149fc4334a33c929be12cdb",
+    "sha256": "4e9d96e76b173534a02781a7f429b5e664dde807130b12890b00e17420faddf2",
+    "port_sha256": "e12880fb9892f07e48a7a1bce9741452494d5d762022c2165c003e1aedab125b",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left"
+    },
+    "edits": [],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000907.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
+  },
+  {
+    "path": "ErdosProblems/Erdos58/Basic.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos58/Basic.lean",
+    "git_blob_sha": "bec31c187967576f286338759c54349655780f86",
+    "sha256": "257454c90f3e190e7ae2451ee20b65ed7d9523f5c5aedcc0e73b0af913f52b9e",
+    "port_sha256": "257454c90f3e190e7ae2451ee20b65ed7d9523f5c5aedcc0e73b0af913f52b9e",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos58/Bipartite.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos58/Bipartite.lean",
+    "git_blob_sha": "dc38e701ed6d2250836baf8468167f2d4bfae49b",
+    "sha256": "7b4e39931ad20bdd1dddf2779117804e4ac05fa5d7b91555fd391d51ed464fd9",
+    "port_sha256": "7b4e39931ad20bdd1dddf2779117804e4ac05fa5d7b91555fd391d51ed464fd9",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1105/Basic.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1105/Basic.lean",
+    "git_blob_sha": "d253c5592767434f3ad8119736d685ee658d810b",
+    "sha256": "475db472724bbeaf37cf71c69b7153634092e236f1471859e3f78a9f2e88c761",
+    "port_sha256": "475db472724bbeaf37cf71c69b7153634092e236f1471859e3f78a9f2e88c761",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1105/PathCycleSplice.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1105/PathCycleSplice.lean",
+    "git_blob_sha": "37d3e8bc1f5dbd2b3fb2e3089fb5972187b6126c",
+    "sha256": "3b9706242b6b395411828ef20021a1586c980254a38e9f728352af6d7b167070",
+    "port_sha256": "3b9706242b6b395411828ef20021a1586c980254a38e9f728352af6d7b167070",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/Voss.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/Voss.lean",
+    "git_blob_sha": "7b87b99f07cca958bb51071dd0648ce8a3e179d8",
+    "sha256": "47fbba136c6ab0ea18ba4820084561a43f12aea7ed739fa96d678912da2fa7a5",
+    "port_sha256": "47fbba136c6ab0ea18ba4820084561a43f12aea7ed739fa96d678912da2fa7a5",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossRouting.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossRouting.lean",
+    "git_blob_sha": "8ec24e31eb5010211ece025c460d9fab5fb874b0",
+    "sha256": "48bf86171c788a77b7a2965f7059059cb4fc77fc358c5a1c99985e471fdcee55",
+    "port_sha256": "43bdd7eaf3e50644b5a6fb80953a18bf0b7d00059f2db77169db27e99233ccb5",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right"
+    },
+    "edits": [],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000907.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
+  },
+  {
+    "path": "ErdosProblems/Erdos599/Countable.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos599/Countable.lean",
+    "git_blob_sha": "430a7e0a8556ba41c60ac0cb42170d64276bbedc",
+    "sha256": "642d856587c6143f55f7ed1ba73fe0344df4344621bb1a5bc3e32aa7155b24b9",
+    "port_sha256": "884923d87b462f047f89a5ce8d021679c648d3ce6f06c4c684abe64e387e0aa0",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": [
+      [
+        "wellFounded_lt.min_le hxfiber",
+        "WellFoundedLT.min_le hxfiber"
+      ],
+      [
+        "let : LinearOrder C := hc.linearOrder",
+        "let : LinearOrder C := hc.lt_of_le.linearOrder"
+      ],
+      [
+        "WellFounded.min_le (\u03b2 := I) wellFounded_lt",
+        "WellFoundedLT.min_le (\u03b2 := I)"
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000907.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
+  },
+  {
+    "path": "ErdosProblems/Erdos916/Core.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos916/Core.lean",
+    "git_blob_sha": "42b7f6e579bad7a99d0e2a727d09c76e9a644c10",
+    "sha256": "b7f15a192d418ed75d3aa90a196c0751cf0ba6a6bf0df84fd8c6ffed577f5ec1",
+    "port_sha256": "b7f15a192d418ed75d3aa90a196c0751cf0ba6a6bf0df84fd8c6ffed577f5ec1",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos916/Blocks.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos916/Blocks.lean",
+    "git_blob_sha": "13423d4f8fb190ca044e6bc554a9161438a99c51",
+    "sha256": "663da90d6f5fca1c80a80142d9e6c00e1cf475f7678c3d84c34dd7f9589bfe0d",
+    "port_sha256": "663da90d6f5fca1c80a80142d9e6c00e1cf475f7678c3d84c34dd7f9589bfe0d",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos916/ThreeTerminalPath.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos916/ThreeTerminalPath.lean",
+    "git_blob_sha": "4b92dd78f721955e28290e2d3d11d48742a8945a",
+    "sha256": "c367ea3e2dad204006a2457defd748e19433b11376bf35a2fbf8f4ed1461c4db",
+    "port_sha256": "c367ea3e2dad204006a2457defd748e19433b11376bf35a2fbf8f4ed1461c4db",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossLinkage.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossLinkage.lean",
+    "git_blob_sha": "deb722bbe94b7176fd556d2d62c8787802b18b6c",
+    "sha256": "0d17de8bc5113eb0357256bc285a6c4fe580511c784d3116e926e26395bc6c44",
+    "port_sha256": "0d17de8bc5113eb0357256bc285a6c4fe580511c784d3116e926e26395bc6c44",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossAttachments.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossAttachments.lean",
+    "git_blob_sha": "3901c00adefbb24930d3fee3c536296da70dc793",
+    "sha256": "20a9d86e0cb86fbce0c010b5ee4a8e06181ee89d36971806bcd84da1cf1d409d",
+    "port_sha256": "20a9d86e0cb86fbce0c010b5ee4a8e06181ee89d36971806bcd84da1cf1d409d",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossEarShift.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossEarShift.lean",
+    "git_blob_sha": "2c754e6b58bebc0a098dc23b4b02c81823e84b81",
+    "sha256": "5acab83a383dd7abd1aefdb17a83e977e82ed8db8034ebf081f6879595c06b83",
+    "port_sha256": "5acab83a383dd7abd1aefdb17a83e977e82ed8db8034ebf081f6879595c06b83",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1105/PathSegments.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1105/PathSegments.lean",
+    "git_blob_sha": "8b8c9bee96692e8a509b938a1f59514895b0f771",
+    "sha256": "6a989509cf8279aa27c912a09e802a01183f35ab37f9002a85716d396a9c7fa5",
+    "port_sha256": "6a989509cf8279aa27c912a09e802a01183f35ab37f9002a85716d396a9c7fa5",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossCycleArcs.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossCycleArcs.lean",
+    "git_blob_sha": "c129f92440df3314003d5b259d755067a2da5115",
+    "sha256": "48a90cbb4ef3317feed02ba5f786152229c373b52d0ff2c47a17cdcd771a7355",
+    "port_sha256": "48a90cbb4ef3317feed02ba5f786152229c373b52d0ff2c47a17cdcd771a7355",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossReturnParity.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossReturnParity.lean",
+    "git_blob_sha": "a40034cbf96cb9ecb3cb596ea45226eef2035400",
+    "sha256": "9133b466bfcbe7e3f957ed1208f9bc002e6484aa8a0ba70b279f69f379804346",
+    "port_sha256": "9133b466bfcbe7e3f957ed1208f9bc002e6484aa8a0ba70b279f69f379804346",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossEarRotation.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossEarRotation.lean",
+    "git_blob_sha": "1caa59750261f37326e8488b9728af34a76b6fd6",
+    "sha256": "1a3f2aa3c2cf5717ed3ed6738f41ac1b1b34c03e19a354ad74f8d949d29fff4d",
+    "port_sha256": "fe7afc6485c7f3fb90f48ceb91a41d77ae41e8c1e850b0a8763f4b3d9cf2c7d1",
+    "renames": {
+      "if_pos": "ite_eq_left"
+    },
+    "edits": [],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000907.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossCase2.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossCase2.lean",
+    "git_blob_sha": "cc0d4a9416a5941b87b7f7b5c05c042a916d6cc6",
+    "sha256": "6ba85289cb04347da290e881bb3a4fc50835d2e9294c8d6add8f8942feeb8e6b",
+    "port_sha256": "6ba85289cb04347da290e881bb3a4fc50835d2e9294c8d6add8f8942feeb8e6b",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossSmallCycles.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossSmallCycles.lean",
+    "git_blob_sha": "3e0270dec7dc1eae825e74cb890f92d4e9120827",
+    "sha256": "c47b8e5ae6b4c1309bdbe130e8329f36d81ee49b7631d806611fd4f4c318783e",
+    "port_sha256": "c47b8e5ae6b4c1309bdbe130e8329f36d81ee49b7631d806611fd4f4c318783e",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossCase2b.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossCase2b.lean",
+    "git_blob_sha": "84145b9b06ed8df277e8c0113d223e562a6cf9ae",
+    "sha256": "b0a32a8faa0314a6b073155da5d24237f8da8c1561d6bbb8d987b49ff4c688e7",
+    "port_sha256": "b0a32a8faa0314a6b073155da5d24237f8da8c1561d6bbb8d987b49ff4c688e7",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossCase3.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossCase3.lean",
+    "git_blob_sha": "bb75b4d1372988e8fa116b5c9c19d241c50eb62e",
+    "sha256": "44bcd1e3258652d5942488fe150851e1d9934f227935fe4923aeaeb0712a1d3d",
+    "port_sha256": "44bcd1e3258652d5942488fe150851e1d9934f227935fe4923aeaeb0712a1d3d",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossReturnClassification.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossReturnClassification.lean",
+    "git_blob_sha": "f777cf6eaa211c82a981008297dbe9e6acc9a199",
+    "sha256": "621647185a7b844d28e941c12305780f795ee5c395ecd1d1a692b0fb8a2316be",
+    "port_sha256": "621647185a7b844d28e941c12305780f795ee5c395ecd1d1a692b0fb8a2316be",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossInnerCycle.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossInnerCycle.lean",
+    "git_blob_sha": "76fd2f8f03cafc8a5e1fc15d0a492573afd1f4b5",
+    "sha256": "ef3241190fad962af65694e8cc7005e6d37fdfa6a134dc04198fc019451c0f72",
+    "port_sha256": "ef3241190fad962af65694e8cc7005e6d37fdfa6a134dc04198fc019451c0f72",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossPrism.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossPrism.lean",
+    "git_blob_sha": "f94c4c06acc54172a86fe3dbde836cd0e3c0f393",
+    "sha256": "3a803fdcebbd4e43e4c3b478c6c6f06a018c8d16d3d3a7f86c64d34467daf0fa",
+    "port_sha256": "2345a464e3bc55404376d2a048a284a579d48a52ebcc9f4446f534b8d856c141",
+    "renames": {
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": [],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000907.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossCase1Triangle.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossCase1Triangle.lean",
+    "git_blob_sha": "a93112d24563c04aa8f60615bd9ef3a99c188887",
+    "sha256": "a0d5b3186e3924d23c9708dc7c32bd81dd1285fde51d1725b59e2d947be23c66",
+    "port_sha256": "a0d5b3186e3924d23c9708dc7c32bd81dd1285fde51d1725b59e2d947be23c66",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossInnerParity.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossInnerParity.lean",
+    "git_blob_sha": "2610371697fa8106fea6e2f5b526b28e570787dc",
+    "sha256": "5707f23d3505e9a8531402e5d623c698324253920ad9d9294216872b8ca2b01b",
+    "port_sha256": "5707f23d3505e9a8531402e5d623c698324253920ad9d9294216872b8ca2b01b",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossCase1Order.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossCase1Order.lean",
+    "git_blob_sha": "2cfdaccf1d6c91cfc0c56c7a6bcfa7e7eda1affb",
+    "sha256": "275642dfef186de33eb2fb31994d5323dde32b4815005412c77a2a487dd1560a",
+    "port_sha256": "275642dfef186de33eb2fb31994d5323dde32b4815005412c77a2a487dd1560a",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossSpokePath.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossSpokePath.lean",
+    "git_blob_sha": "90cbb045d8af1b0fe22142bedc367f1b45a10412",
+    "sha256": "8514625966e3ce8c9331bdc179bf8e243330154f2eaa1e619f81e7585dd0c620",
+    "port_sha256": "8514625966e3ce8c9331bdc179bf8e243330154f2eaa1e619f81e7585dd0c620",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossCase1FourCycles.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossCase1FourCycles.lean",
+    "git_blob_sha": "b5d662adfbb8f1bdf8227ac8cf1c9447f1d06fb0",
+    "sha256": "ab3a27ff83aaf18d3155471257606040b2cfa5fe31040b11a6d42d143ef8cf43",
+    "port_sha256": "ab3a27ff83aaf18d3155471257606040b2cfa5fe31040b11a6d42d143ef8cf43",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossCase1LongCycle.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossCase1LongCycle.lean",
+    "git_blob_sha": "ce4ad8f9b36d0effe51fb7d42f73600111c6548b",
+    "sha256": "26c93875f46f050518ac21b449ca42d0940f1989c9782b0cb0c60334e18f476f",
+    "port_sha256": "26c93875f46f050518ac21b449ca42d0940f1989c9782b0cb0c60334e18f476f",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos1091/VossCase1.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091/VossCase1.lean",
+    "git_blob_sha": "a74a944be6e19ea0c09b3d009ff46a5c15450f01",
+    "sha256": "07af87046125594cfbb4385dd8ed6b952bffed14541e4dd0139917755513cc27",
+    "port_sha256": "07af87046125594cfbb4385dd8ed6b952bffed14541e4dd0139917755513cc27",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos58/Critical.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos58/Critical.lean",
+    "git_blob_sha": "6da515b900f79417cf53bdbc61460d58d9abb825",
+    "sha256": "7470100869e81e1821c753a94fd9034c99a8b4da169e52913710c884761bb77c",
+    "port_sha256": "7470100869e81e1821c753a94fd9034c99a8b4da169e52913710c884761bb77c",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos744.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos744.lean",
+    "git_blob_sha": "6777a5db669b94238bddae9935832ebfe1a2d557",
+    "sha256": "8d1dfd9d20c39de7e9367193bafd8fda8b5aec81847668958aa9c9c3810885a5",
+    "port_sha256": "4c78c80d74e1d9015f4e5da1732da0f6663918132e20e2bc580a0be54397db03",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": [],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000907.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
+  },
+  {
+    "path": "ErdosProblems/Erdos1091.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1091.lean",
+    "git_blob_sha": "cb7955fbcb7f2655865a0665a500bf08333bdced",
+    "sha256": "7badade7d91255fdabe399cec85114cd0029d59019ee7e9cf085b7b8ed049c39",
+    "port_sha256": "6870185ca213b0dd003480178a32e327db09aa9ab53e89612094ce47e0c1b7cc",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": [],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000907.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
+  }
+]

@@ -1,3 +1,17 @@
+# JSP-000907 complete formalization branch
+
+This branch contains the complete JSP-000907 / Erdős 1091 development in
+[projects/jsp-000907](projects/jsp-000907/README.md), together with our odd-rim
+color-forcing construction and statement bridges. The original research note
+is preserved under [research-notes/jsp-000907](research-notes/jsp-000907/README.md).
+See the project provenance record for our contribution and reused proof credits.
+
+The repository name records its first project, JSP-000301. The older root
+project and its historical documentation are retained below; the JSP-000907
+build is in the linked subdirectory.
+
+---
+
 # JSP-000301 — Lean 4 formalization
 
 This project formalizes the **already-known** counterexample to the catalog question:

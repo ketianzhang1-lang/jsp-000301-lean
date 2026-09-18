@@ -1,0 +1,37 @@
+import JSP000907Complete
+
+#print axioms JSP000907.Construction.localAdj_symm
+#print axioms JSP000907.Construction.localAdj_irrefl
+#print axioms JSP000907.Construction.card_vertex
+#print axioms JSP000907.Construction.attachment_forcing
+#print axioms JSP000907.Construction.rim_avoids_hub
+#print axioms JSP000907.Construction.base_two_colorable_of_three_colorable
+#print axioms JSP000907.Construction.chromatic_four_of_base_three
+#print axioms JSP000907.Construction.three_colorable_of_base_two_colorable
+#print axioms JSP000907.Construction.three_colorable_iff_base_two_colorable
+#print axioms JSP000907.oddRim_card
+#print axioms JSP000907.cycle_three_colorable
+#print axioms JSP000907.odd_cycle_not_two_colorable
+#print axioms JSP000907.oddRim_chromatic_four
+#print axioms JSP000907.oddRim_arbitrarily_large
+#print axioms JSP000907.nineCycle_length
+#print axioms JSP000907.nineCycle_isCycle
+#print axioms JSP000907.fourChords_card
+#print axioms JSP000907.fourChords_subset
+#print axioms JSP000907.nineCycle_four_chords
+#print axioms JSP000907.smallSubgraphs_iff_induced
+#print axioms JSP000907.smallSubgraphs_mono
+#print axioms JSP000907.explicit_counterexample
+#print axioms JSP000907.realGuarantee_le_ten
+#print axioms JSP000907.realGuarantee_range_bounded
+#print axioms JSP000907.no_unbounded_realGuarantee
+#print axioms JSP000907.no_diverging_realGuarantee
+#print axioms JSP000907.affirmative
+#print axioms JSP000907.jsp_000907
+#print axioms JSP000907.complete_package
+#print axioms Erdos1091.erdos_1091_affirmative
+#print axioms Erdos1091.erdos_1091_quantitative_negative
+#print axioms Erdos1091.apssv_four_critical_family
+#print axioms Erdos1091.erdos_1091_resolution
+#print axioms Erdos1091.erdos_1091
+#print axioms Erdos1091.erdos_1091_four_critical_counterexamples
