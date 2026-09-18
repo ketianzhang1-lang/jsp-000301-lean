@@ -1,0 +1,54 @@
+Passed: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/bootstrap.py
+Compiled/verified source: JSP000725
+Compiled/verified source: ErdosProblems.Erdos874.Foundations
+Compiled/verified source: JSP000725Bridge
+Compiled/verified source: ErdosProblems.Erdos874.Tail
+Compiled/verified source: ErdosProblems.Erdos874.Asymptotics
+Compiled/verified source: ErdosProblems.Erdos874.ExactUpper
+Compiled/verified source: ErdosProblems.Erdos874.RestrictedGrowth
+Compiled/verified source: ErdosProblems.Erdos874.FreimanDimension
+Compiled/verified source: ErdosProblems.Erdos874.FreimanNormalization
+Compiled/verified source: ErdosProblems.Erdos13.Erdos13MulStab
+Compiled/verified source: ErdosProblems.Erdos13.Erdos13Kneser
+Compiled/verified source: ErdosProblems.Erdos13.Erdos13Additive
+Compiled/verified source: ErdosProblems.Erdos874.LevSmelianski
+Compiled/verified source: ErdosProblems.Erdos874.FreimanNormalizedCore
+Compiled/verified source: ErdosProblems.Erdos874.FreimanThreeKInductive
+Compiled/verified source: ErdosProblems.Erdos874.FreimanThreeKMinusFour
+Compiled/verified source: ErdosProblems.Erdos874.ProgressionExtraction
+Compiled/verified source: ErdosProblems.Erdos874.LongProgression
+Compiled/verified source: ErdosProblems.Erdos874.PopularPairs
+Compiled/verified source: ErdosProblems.Erdos874.NearIndexFiber
+Compiled/verified source: ErdosProblems.Erdos874.RestrictedSums
+Compiled/verified source: ErdosProblems.Erdos874.FreimanEngine
+Compiled/verified source: ErdosProblems.Erdos874.LayerSelection
+Compiled/verified source: ErdosProblems.Erdos874.ModularDecomposition
+Compiled/verified source: ErdosProblems.Erdos874.ResidueSubgroup
+Compiled/verified source: ErdosProblems.Erdos874.SubgroupGenerators
+Compiled/verified source: ErdosProblems.Erdos874.ConvexTranslate
+Compiled/verified source: ErdosProblems.Erdos874.MixedSumPath
+Compiled/verified source: ErdosProblems.Erdos874.ResidueAlignment
+Compiled/verified source: ErdosProblems.Erdos874.AlignedBlockSum
+Compiled/verified source: ErdosProblems.Erdos874.RegularSpan
+Compiled/verified source: ErdosProblems.Erdos874.ModularStructure
+Compiled/verified source: ErdosProblems.Erdos874.RoughUpper
+Compiled/verified source: ErdosProblems.Erdos874.SmallFourLayer
+Compiled/verified source: ErdosProblems.Erdos874.StrausUpper
+Compiled/verified source: ErdosProblems.Erdos874.Thresholds
+Compiled/verified source: ErdosProblems.Erdos874.Structure
+Compiled/verified source: ErdosProblems.Erdos874.CentralSpan
+Compiled/verified source: ErdosProblems.Erdos874.LayerOrdering
+Compiled/verified source: ErdosProblems.Erdos874.LocalDensity
+Compiled/verified source: ErdosProblems.Erdos874.DensityEndgame
+Compiled/verified source: ErdosProblems.Erdos874.CentralExtractor
+Compiled/verified source: ErdosProblems.Erdos874.EndpointOrientation
+Compiled/verified source: ErdosProblems.Erdos874
+Compiled/verified source: JSP000725Complete
+Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/AuditComplete.olean ./AuditComplete.lean
+Compiled/verified source: AuditComplete
+Passed: lake env lean -DwarningAsError=true AuditComplete.lean
+Passed: lake env leanchecker --verbose ErdosProblems
+Passed: lake env leanchecker --verbose JSP000725
+Passed: lake env leanchecker --verbose JSP000725Bridge
+Passed: lake env leanchecker --verbose JSP000725Complete
+All full-development checks passed.

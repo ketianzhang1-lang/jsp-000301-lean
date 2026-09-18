@@ -1,0 +1,29 @@
+{
+  "proof_sha": "d0d37952bba030d7c8a68f000094e0d601d9fed7",
+  "branch": "jsp-000725-interval",
+  "run_id": 35308272360,
+  "job_id": 105484837857,
+  "run_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35308272360",
+  "conclusion": "success",
+  "completed_at": "2026-09-18T04:58:44Z",
+  "targets": 28,
+  "nanoda_declarations": 33087,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "exporter_commit": "6cea97789dc088ea47fcea15692db85685aedac5",
+  "nanoda_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+  "artifacts": [
+    {
+      "id": 10532049702,
+      "name": "jsp-000725-evidence",
+      "size_bytes": 35145853,
+      "github_reported_digest": "sha256:e3d5df59870ea0e771188831d5871e134a0fb93d882abfabac42e2acdfa01483",
+      "expires_at": "2026-12-17T04:46:57Z",
+      "api_url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10532049702"
+    }
+  ],
+  "digest_limit": "Artifact ZIP digest reported by GitHub, not independently recomputed locally."
+}

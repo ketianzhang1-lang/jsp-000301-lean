@@ -80,6 +80,8 @@ upstream and local proof module, and requires a false-arithmetic control to fail
 NaNoda requires Rust/Cargo and checks all exported target dependency closures
 with only `propext`, `Classical.choice`, and `Quot.sound` allowed.
 
-Consult [VERIFICATION.md](VERIFICATION.md) for checks actually executed. A
-workflow definition alone does not establish a passing run. This package updates
+The [public verification run](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35308272360) passed at the exact
+proof commit `d0d37952bba030d7c8a68f000094e0d601d9fed7`. NaNoda checked
+33,087 declarations with no errors. [VERIFICATION.md](VERIFICATION.md)
+records the pinned inputs, committed logs and verification limits. This package updates
 the existing [PR #361](https://github.com/TheJustinSunPrize/awards/pull/361).
