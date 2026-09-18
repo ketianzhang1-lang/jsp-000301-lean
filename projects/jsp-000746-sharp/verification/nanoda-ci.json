@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "problem_id": "JSP-000746",
+  "proof_commit": "4dfb40abe0cd1e538bbfccb1cc50f4829fb7383a",
+  "verification_commit": "d38c1169bbea335d1683589ba2bda3cf78c1b932",
+  "run_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35302256694",
+  "run_id": 35302256694,
+  "job_id": 105467154891,
+  "declarations_checked": 5363,
+  "targets": [
+    "Erdos895.erdos_895",
+    "JSP000746Sharp.witness_triangle_free",
+    "JSP000746Sharp.witness_no_independent_schur_triple",
+    "JSP000746Sharp.counterexamples_below_eighteen",
+    "JSP000746Sharp.exact_threshold",
+    "JSP000746Sharp.least_threshold",
+    "JSP000746.integer_graph",
+    "JSP000746.jsp_000746"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "unpermitted_axiom_hard_error": true,
+  "exporter_commit": "6cea97789dc088ea47fcea15692db85685aedac5",
+  "checker_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+  "source_comparison": {
+    "url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/compare/4dfb40abe0cd1e538bbfccb1cc50f4829fb7383a...d38c1169bbea335d1683589ba2bda3cf78c1b932",
+    "status": "ahead",
+    "files": [
+      {
+        "path": ".github/workflows/jsp-000746-sharp.yml",
+        "status": "modified"
+      },
+      {
+        "path": "projects/jsp-000746-sharp/README.md",
+        "status": "modified"
+      },
+      {
+        "path": "projects/jsp-000746-sharp/SOURCE_SHA256SUMS",
+        "status": "modified"
+      },
+      {
+        "path": "projects/jsp-000746-sharp/VERIFICATION.md",
+        "status": "modified"
+      },
+      {
+        "path": "projects/jsp-000746-sharp/scripts/verify_nanoda.sh",
+        "status": "added"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "id": 10529764660,
+      "name": "jsp-000746-sharp-verification",
+      "size_in_bytes": 6291553,
+      "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10529764660",
+      "archive_download_url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10529764660/zip",
+      "expired": false,
+      "created_at": "2026-09-18T03:14:40Z",
+      "expires_at": "2026-12-17T03:11:21Z",
+      "updated_at": "2026-09-18T03:14:40Z",
+      "digest": "sha256:0a8341811b9a75c05ebbf7a49507fb5e180dd3157a150d448b6b8aec106166eb",
+      "workflow_run": {
+        "id": 35302256694,
+        "repository_id": 1373404416,
+        "head_repository_id": 1373404416,
+        "head_branch": "jsp-000746-sharp-kz",
+        "head_sha": "d38c1169bbea335d1683589ba2bda3cf78c1b932"
+      }
+    }
+  ],
+  "evidence_lines": [
+    "2026-09-18T03:13:14.2666754Z Source compiled: Erdos895",
+    "2026-09-18T03:13:24.0412828Z Source compiled: JSP000746Sharp",
+    "2026-09-18T03:13:27.3059904Z Source compiled: JSP000746",
+    "2026-09-18T03:13:39.6143496Z Kernel replay passed: Erdos895",
+    "2026-09-18T03:13:48.2549455Z Kernel replay passed: JSP000746Sharp",
+    "2026-09-18T03:13:54.4035960Z Kernel replay passed: JSP000746",
+    "2026-09-18T03:14:37.6615200Z Checked 5363 declarations with no errors",
+    "2026-09-18T03:14:37.7260877Z Strict NaNoda verification passed for 8 target closures."
+  ],
+  "scope": "Contributor-run compilation, kernel replay and independent NaNoda checking of all audited target closures. No Lean proof sources, upstream pins or dependency manifests changed from the selected proof version. This does not constitute organizer approval."
+}

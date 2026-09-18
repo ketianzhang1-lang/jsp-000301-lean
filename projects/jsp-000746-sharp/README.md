@@ -52,3 +52,22 @@ The previous Python witness and LRAT checkers remain in `evidence/jsp-000746-sha
 ## Requested review
 
 We request formalization credit for the concrete additions above. Mathematical credit for the upper bound remains with Ben Barber; the reused formal proof retains its original attribution. The complete statement, source correspondence and contribution eligibility are submitted for organizer review. Contributor-run checks do not establish first-formalization priority or an award decision.
+
+
+## Independent NaNoda verification
+
+We independently checked all 8 audited target dependency closures with NaNoda in [run 35302256694](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35302256694), at commit `d38c1169bbea335d1683589ba2bda3cf78c1b932`. The checker reported **5,363 declarations with no errors**, and statement printing also succeeded. The same run passed source compilation, Lean kernel replay, the original axiom audits and the negative control.
+
+The allowlist contains only `propext`, `Classical.choice` and `Quot.sound`, with `unpermitted_axiom_hard_error: true`. The exported targets include `JSP000746.jsp_000746`, the finite sharp threshold, and the upstream upper-bound theorem. No `sorryAx`, compiler-trust axiom or custom unproved axiom is permitted.
+
+[The source comparison](https://github.com/ketianzhang1-lang/jsp-000301-lean/compare/4dfb40abe0cd1e538bbfccb1cc50f4829fb7383a...d38c1169bbea335d1683589ba2bda3cf78c1b932) confirms that the Lean proof files, upstream source pins and dependency manifest are unchanged from the selected proof commit `4dfb40abe0cd1e538bbfccb1cc50f4829fb7383a`. We added the checker integration and evidence collection; no mathematical proof repair was needed.
+
+To reproduce this additional check, check out `d38c1169bbea335d1683589ba2bda3cf78c1b932`, enter `projects/jsp-000746-sharp`, run the bootstrap, dependency setup and full `bash scripts/verify.sh` sequence above, then run:
+
+```bash
+bash scripts/verify_nanoda.sh
+```
+
+The script pins lean4export to `6cea97789dc088ea47fcea15692db85685aedac5` and NaNoda to `4c544ed4099c8227f07d5de77ad1e69fb0740a27`, builds them from source, exports the full target closures, checks them with the strict allowlist and requires error-free checking and nonempty statement output. Git, Python 3, Lean/Lake and Rust/Cargo with network access are required. The public CI performs the whole sequence.
+
+[The machine-readable CI receipt](verification/nanoda-ci.json) records the exact run, source comparison, checked targets and artifact digest. The run artifact includes the compressed exported proof, checker configuration, printed statements and logs under `nanoda/` and is retained for 90 days. NaNoda is a separately implemented checker; this contributor-run verification is not independent human review or organizer approval.
