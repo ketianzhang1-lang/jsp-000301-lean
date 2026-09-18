@@ -9,6 +9,13 @@ questions of JSP-000907 / Erdős 1091:
    guaranteed as an odd-cycle chord count merely from three-colorability of
    every subgraph on at most r vertices.
 
+**The complete public verification passed on 2026-09-18 (UTC)** for proof
+commit `555ce4f13bf7e8e8557020728f7f97ad3d1f51e0`: all 43 modules compiled, all 35 theorem-closure audits and
+five kernel-replay prefixes passed, all nine dependency pins matched, and
+the false-arithmetic control was rejected. Independent NaNoda checked
+**19,125 declarations with no errors**. See [the public run](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35389263216)
+and `VERIFICATION.md` for the exact evidence and scope.
+
 The complete original result uses the attributed upstream formalization of
 Voss's affirmative theorem and the Alexeev–Putterman–Sawhney–Sellke–Valiant
 (APSSV) bounded-chord family. We add precise subgraph and real-threshold
@@ -37,7 +44,7 @@ as a premise. The original note remains unchanged at
 ```sh
 git clone --branch jsp-000907-complete-kz https://github.com/ketianzhang1-lang/jsp-000301-lean.git
 cd jsp-000301-lean
-# Check out the exact 40-character proof commit named in the catalog/PR.
+git checkout 555ce4f13bf7e8e8557020728f7f97ad3d1f51e0
 cd projects/jsp-000907
 elan toolchain install "$(cat lean-toolchain)"
 python3 scripts/bootstrap.py
@@ -58,8 +65,7 @@ audits the 29 local and six upstream theorem closures, replays all proof
 modules through Lean's checker, verifies dependency pins and rejects a
 false arithmetic control. NaNoda separately checks the exported closures
 with a hard allowlist of `propext`, `Classical.choice` and `Quot.sound`.
-`VERIFICATION.md` records actual results; a configured check is not a claim
-that the check already passed.
+`VERIFICATION.md` records the successful clean-checkout run and its limits.
 
 See `PROVENANCE.md` and `STATEMENT_FIDELITY.md` for contribution boundaries,
 source credits and exact quantifiers. We request review of our construction,

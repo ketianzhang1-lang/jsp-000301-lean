@@ -1,0 +1,15 @@
+{
+  "conclusion": "success",
+  "head_sha": "555ce4f13bf7e8e8557020728f7f97ad3d1f51e0",
+  "run_id": 35389263216,
+  "job_id": 105743535520,
+  "run_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35389263216",
+  "completed_at": "2026-09-18T20:12:37Z",
+  "modules_compiled": 43,
+  "axiom_reports": 35,
+  "nanoda_declarations": 19125,
+  "all_complete_checks_passed": true,
+  "artifact_id": 10565341477,
+  "artifact_digest": "sha256:7d67fabd5fa6f936460319c8d3a2c28561798751eae7b8bf91308b71d6305768",
+  "artifact_name": "jsp-000907-evidence"
+}
