@@ -1,51 +1,93 @@
-# JSP-000388 / Erdos 477: the divisible-coefficient quadratic obstruction
+# JSP-000388: our quadratic obstruction and complete polynomial-tiling endpoint
 
-This project formalizes the known negative result for every integer polynomial
-`f(x) = a*x^2 + b*x + c` with `a != 0` and `a` dividing `b`, including `b = 0`
-and both signs of `a`. No set `A` of integers gives every integer exactly one
-representation as `u + v`, with `u` in `A` and `v` in the value set of `f`.
-Uniqueness is of value pairs, not polynomial inputs.
+We provide a complete Lean endpoint for the original existence question:
+there is an integer polynomial of degree at least two whose integer value set
+has an additive complement giving each integer exactly one representation.
+The witness polynomial is **X⁶**. We combine the attributed, complete
+sixth-power tiling proof with our separately implemented quadratic obstruction,
+and prove a general translation law and its shifted-polynomial consequences.
 
-**Partial scope relative to JSP-000388.** The original question asks whether
-ANY polynomial of degree at least two has such a complement. Its known answer
-is yes, using even powers of degree at least six. This project does not prove
-that positive result, make a new mathematical discovery, or settle the cubic
-case. It formalizes a complete parameter family of the known quadratic
-obstruction. Prize contribution eligibility requires organizer assessment.
+## Our contributions
 
-## Mathematical argument
+We developed our implementation and integration under GitHub account
+`ketianzhang1-lang` with OpenAI ChatGPT/Codex assistance.
 
-Write `b = a*d` and `q(x) = x^2 + d*x`. Every multiple of four is a
-difference of two `q`-values. If `d = 2*e`, use inputs `t+1-e` and `t-1-e`;
-if `d = 2*e+1`, use `2*t-e` and `2*t-e-1`. In either case the difference is
-`4*t`. Therefore every multiple of `4*a` is a difference of two `f`-values.
+- Our original module proves the obstruction for every polynomial
+  `a*x²+b*x+c` with `a ≠ 0` and `a ∣ b`, including b=0 and either sign of a.
+  Its source is unchanged from the previously verified revision.
+- We identify our exact-complement predicate with the imported tiling predicate.
+- We prove a general translation law: adding c to the value set translates the
+  complement by −c. Hence every polynomial `X⁶+C(c)` has an exact complement,
+  uniformly for every integer c.
+- We supply an endpoint matching the original polynomial-degree and
+  pair-value-uniqueness formulation, together with a combined existence and
+  quadratic-obstruction theorem.
+- We pin the full upstream proof chain, verify original and compatibility-port
+  hashes, and supply a Lean 4.34 reproduction and verification package.
 
-If two elements of a purported exact complement have the same residue modulo
-`4*a`, the corresponding difference of polynomial values yields two equal
-sums. Uniqueness forces the two complement elements to coincide. The complement
-is thus finite (indeed at most `4*abs(a)` elements, though that numerical bound
-is not a separate checked theorem here).
+## Complete original statement
 
-The inequality `q(x) >= -d^2` implies the polynomial range is bounded below
-when `a > 0` and above when `a < 0`. Adding a finite set preserves the relevant
-bound, so the sum cannot cover all integers. This is the contradiction.
+`JSP000388.jsp_000388` in [JSP000388Complete.lean](JSP000388Complete.lean) proves:
 
-## Statements and verification
-
-The main function-level theorem is `no_divisible_quadratic_complement`.
-`polynomial_quadratic_obstruction` supplies the equivalent Mathlib polynomial
-evaluation statement. `no_square_complement` covers the classical square case.
-All are in namespace `JSP000388`.
-
-The submitted source must be pinned to the commit actually verified. Before a
-passing run is recorded, this is a development project, not verified evidence.
-Reproduction uses Lean 4.34.0 and the committed Mathlib dependency manifest:
-
-```sh
-lake exe cache get
-bash scripts/verify.sh
-bash scripts/verify_nanoda.sh
+```text
+∃ f : Polynomial ℤ, 2 ≤ f.degree ∧ ∃ A : Set ℤ,
+  ∀ z : ℤ, ∃! p ∈ A ×ˢ Set.range f.eval, z = p.1 + p.2
 ```
 
-See `PROVENANCE.md` for sources and credit. No award, priority, payment,
-independent human certification, or official verification is asserted.
+Uniqueness concerns the two **summand values**, not the input of the polynomial.
+No finite restriction is imposed on the integers or the complement set. The
+original question is existential, so the single polynomial X⁶ suffices.
+We do not claim a classification of all possible degrees, an answer for X³,
+or a new proof that every even exponent at least six works.
+See [STATEMENT_FIDELITY.md](STATEMENT_FIDELITY.md) for the exact comparison.
+
+## Attribution and source dependency
+
+The affirmative proof is reused from **plby/lean-proofs**, branch `main`,
+commit `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`, entry
+`src/latest/ErdosProblems/Erdos477.lean`. Its formal author is **Codex**.
+Its source credits Liam Price (GPT 5.6 Sol Pro), *Large Powers Tile the Integers*,
+and the earlier general greedy criterion from Pengbinghui/pipeline-math.
+Original source headers and license notices are retained.
+
+The mathematical square and quadratic obstructions are credited to Milan
+Sekanina, AlphaProof and Sarosh Adenwalla as documented in our original source
+record. We request assessment of our separately implemented obstruction,
+translation theorem, interfaces and verification integration. We do not claim
+new mathematics, an independently developed sixth-power proof or first
+formalization of the original problem. Earlier competing quadratic submission
+[PR #61](https://github.com/TheJustinSunPrize/awards/pull/61) is acknowledged.
+
+[PROVENANCE.md](PROVENANCE.md) records our contributions and dependency lineage.
+[UPSTREAM.json](UPSTREAM.json) fixes every imported source, checksum and
+mechanical compatibility change. Imported proof files are downloaded from
+immutable URLs by the bootstrap script. The finite-avoidance, determinant,
+geometry and counting steps are proved in that chain, not assumed as axioms.
+
+## Reproduction
+
+Lean is pinned to **4.34.0**, Mathlib to
+`5ed2965256430c3649e86755f9576b54eca72435`, and all nine dependency revisions are
+locked in `lake-manifest.json`. From `projects/jsp-000388` at the selected commit:
+
+```sh
+python3 scripts/bootstrap.py
+lake exe cache get Mathlib
+lake build Mathlib
+python3 scripts/verify_complete.py
+```
+
+Keep the committed dependency manifest. Network access and pinned cached
+Mathlib objects are used. The verifier compiles the complete local proof chain
+with warnings as errors, audits 18 theorem closures, replays the upstream and
+our proof modules with Lean's kernel, checks every dependency revision and
+requires a false-arithmetic control to be rejected.
+
+Actual checks and their limits are recorded in [VERIFICATION.md](VERIFICATION.md).
+The optional separately implemented checker can be run with
+`bash scripts/verify_nanoda.sh`; a configured check is not a successful result.
+The workflow exposes the status of hosted reproduction for each proof commit.
+
+The awards PR contains catalog text and references only; sources and build
+materials remain in this repository. Maintainer review, contribution eligibility,
+priority and any award decision remain pending.

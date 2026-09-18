@@ -1,3 +1,9 @@
 .lake/
+__pycache__/
 evidence/
 Negative.lean
+
+ErdosProblems/
+evidence-complete/
+
+NegativeComplete.lean

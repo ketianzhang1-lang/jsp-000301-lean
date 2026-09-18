@@ -1,0 +1,18 @@
+'JSP000388.normalized_difference' depends on axioms: [propext, Quot.sound]
+'JSP000388.quadratic_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000388.left_unique' does not depend on any axioms
+'JSP000388.complement_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000388.normalized_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000388.no_quadratic_complement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000388.no_divisible_quadratic_complement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000388.no_square_complement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000388.polynomial_quadratic_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000388.exactComplement_iff_tiling' does not depend on any axioms
+'JSP000388.exactComplement_translate' depends on axioms: [propext, Quot.sound]
+'JSP000388.exists_sixth_power_complement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000388.exists_shifted_sixth_power_complement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000388.exists_shifted_polynomial_complement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000388.jsp_000388' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000388.existence_and_quadratic_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos477.erdos477' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos477.erdos477_sixth_power' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -19,10 +19,12 @@ pin https://github.com/ammkrn/nanoda_lib.git 4c544ed4099c8227f07d5de77ad1e69fb07
 cp lean-toolchain "$work/exporter/lean-toolchain"
 (cd "$work/exporter" && lake build)
 (cd "$work/checker" && cargo build --release --locked)
-lake env "$work/exporter/.lake/build/bin/lean4export" JSP000388 -- \
+lake env "$work/exporter/.lake/build/bin/lean4export" JSP000388Complete -- \
   JSP000388.normalized_difference JSP000388.complement_finite \
   JSP000388.no_quadratic_complement JSP000388.no_divisible_quadratic_complement \
-  JSP000388.no_square_complement JSP000388.polynomial_quadratic_obstruction > evidence/export.ndjson
+  JSP000388.no_square_complement JSP000388.polynomial_quadratic_obstruction \
+  JSP000388.exactComplement_translate JSP000388.exists_shifted_polynomial_complement \
+  JSP000388.jsp_000388 JSP000388.existence_and_quadratic_obstruction > evidence/export.ndjson
 python3 - <<'PY'
 import json
 from pathlib import Path
@@ -32,7 +34,8 @@ config={
   'unpermitted_axiom_hard_error':True,'nat_extension':True,'string_extension':True,
   'pp_declars':['JSP000388.ExactComplement','JSP000388.quadratic',
     'JSP000388.no_divisible_quadratic_complement','JSP000388.no_square_complement',
-    'JSP000388.polynomial_quadratic_obstruction'],
+    'JSP000388.polynomial_quadratic_obstruction','JSP000388.jsp_000388',
+    'JSP000388.exists_shifted_polynomial_complement'],
   'pp_output_path':'evidence/nanoda-statements.txt','pp_to_stdout':False,'print_success_message':True}
 Path('evidence/nanoda-config.json').write_text(json.dumps(config,indent=2)+'\n')
 Path('evidence/nanoda-statements.txt').write_text('')

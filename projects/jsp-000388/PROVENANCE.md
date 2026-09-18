@@ -1,42 +1,52 @@
-# Provenance and scope
+# Contribution, sources and retained attribution
 
-Catalog: https://github.com/TheJustinSunPrize/awards/blob/f4e7173d89dfe91022a185427d63452c8ffbf6ae/problems/catalog-0301-0400.md#JSP-000388
+We developed our implementation and integration under GitHub account
+`ketianzhang1-lang` with OpenAI ChatGPT/Codex assistance.
 
-Original problem: https://www.erdosproblems.com/477
+## Our original implementation and new work
 
-The formal-statement reference inspected during development is the Google
-DeepMind Formal Conjectures entry `FormalConjectures/ErdosProblems/477.lean`.
-Pinned statement reference:
-https://github.com/google-deepmind/formal-conjectures/blob/cd0084c96ac8764cac2c4dcb1b6f1815112f1155/FormalConjectures/ErdosProblems/477.lean
+The parent proof revision is `c32d8195dc69e19d9bcf96987543f306c71749f2`, branch
+`jsp-000388-quadratic-obstruction` of `ketianzhang1-lang/jsp-000301-lean`.
+`JSP000388.lean` is retained byte for byte. It independently implements the
+explicit-difference and boundedness proof for the normalized quadratic family.
 
-Its statements distinguish the positive general problem, the negative square
-case, and the negative quadratic case with nonzero `a`, nonzero `b`, and `a|b`.
-This project includes both `b=0` and `b!=0` in one theorem.
+We add `JSP000388Complete.lean`: the predicate correspondence, general
+translation theorem, all-integer shifted-polynomial consequences, a literal
+complete-existence endpoint and a combined existence/obstruction interface.
+We also prepare the hash-pinned dependency bootstrap, Lean 4.34 compatibility
+port, full verification scripts and statement correspondence documentation.
 
-Historical mathematics is credited to Milan Sekanina (1959) for squares and to
-AlphaProof and Sarosh Adenwalla for the quadratic obstruction, following the
-catalog and reference entry. The positive high-even-power constructions are
-credited there to GPT prompted independently by Liam Price and pipeline-math.
-These mathematical results and their priority are not claimed by this project.
+## Mathematical and formal sources
 
-Reference: Milan Sekanina, Remarks on factorizations of the infinite cyclic
-group, Czechoslovak Mathematical Journal 9 (1959), 485-495,
-http://dml.cz/dmlcz/100376 . The historical source is cited for attribution;
-this project uses the explicit difference and boundedness proof in README.md.
+For the original square obstruction, mathematical credit remains with Milan
+Sekanina (1959). For the quadratic obstruction, credit remains with AlphaProof
+and Sarosh Adenwalla, following the catalog and the pinned statement reference.
+The original formal-statement reference and publication links remain recorded
+in `verification/original-provenance.md`.
 
-The Lean source in this project was independently written with OpenAI ChatGPT /
-Codex assistance under the submitting account's direction. Mathlib supplies
-standard arithmetic, finite-set and polynomial infrastructure. No existing
-solution proof was copied. The external statement file was consulted for scope;
-its `sorry` placeholders are not proofs and are not imported by this project.
+The affirmative sixth-power development is imported from `plby/lean-proofs`,
+branch `main`, exact commit `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`.
+Its entry is `src/latest/ErdosProblems/Erdos477.lean`, with terminal theorems
+`Erdos477.erdos477` and `Erdos477.erdos477_sixth_power`.
+The source identifies **Codex** as its formal author and credits Liam Price
+(GPT 5.6 Sol Pro), *Large Powers Tile the Integers*, together with the earlier
+finite-avoidance criterion from Pengbinghui/pipeline-math.
 
-On 2026-09-17, an exact `JSP-000388` search of the official repository's issues
-and pull requests returned no matches. This limited search is not proof of
-global first-formalization priority. Original-problem web access returned HTTP
-403 in this environment; the current catalog and public formal statement were
-inspected directly instead. No unavailable page content is claimed as read.
+All imported headers are retained. The repository license notice is preserved
+in `UPSTREAM-LICENSE.txt`; imported source is covered by its Apache 2.0 notices.
+`UPSTREAM.json` records original source hashes, compatibility edits and resulting
+hashes. These edits adapt syntax/library APIs; they do not replace a mathematical
+obligation with an assumption. Mathlib and its dependencies retain their licenses.
 
-Proposed recipient placeholder: `RECIPIENT-JSP-000388-KZ-A`; confirmation pending.
-The submitter has an interest in assessment of this self-submission. All checks
-run by this project are contributor-run, not independent human or organizer
-review. Partial-family eligibility and overlap remain for the organizers.
+## Existing prize work and limits of requested credit
+
+[PR #61](https://github.com/TheJustinSunPrize/awards/pull/61), by `KunHcz`, is an
+earlier competing quadratic-family submission. The earlier public full
+sixth-power formalization is also explicitly acknowledged above.
+We request assessment only of our concrete separately implemented obstruction,
+translation consequences, interfaces and verification integration.
+
+We do not claim new mathematical discovery, independent authorship of the
+sixth-power proof or first-formalization priority for the original problem.
+Contributor-run automated checks are not independent human or organizer review.
+Acceptance, contribution eligibility and any award decision remain pending.

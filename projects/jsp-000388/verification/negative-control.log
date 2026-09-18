@@ -1,0 +1,3 @@
+NegativeComplete.lean:2:30: error: Tactic `decide` proved that the proposition
+  1 = 0
+is false
