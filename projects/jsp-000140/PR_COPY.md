@@ -1,3 +1,16 @@
+# Copy-ready metadata for PR #443
+
+Use the copy button on each code block to replace the title and body of the existing [PR #443](https://github.com/TheJustinSunPrize/awards/pull/443).
+
+## Title
+
+```text
+JSP-000140: complete colouring asymptotic with our strict finite lower bound
+```
+
+## Body
+
+````markdown
 ## Complete statement
 
 We submit the complete asymptotic answer to JSP-000140 / Erdős 136:
@@ -51,3 +64,5 @@ Lean is pinned to 4.34.0; Mathlib and all nine dependency revisions are locked. 
 The [complete hosted verification run](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35347120839) passed on 2026-09-18: all 24 proof/audit modules compiled with warnings treated as errors; all 46 axiom audits, the proof-module kernel replays and the negative control passed. Independent NaNoda checked **56,007 declarations with no errors**, using a hard-error allowlist containing only `propext`, `Classical.choice` and `Quot.sound`. The checked proof closures do not rely on `sorryAx` or replacement axioms.
 
 This PR changes only the JSP-000140 catalog entry. We request review of the complete statement and our disclosed contribution. Machine verification does not establish award eligibility, priority or organizer approval.
+
+````
