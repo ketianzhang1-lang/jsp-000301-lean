@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "date": "2026-09-18",
+  "proof_sha": "e2f4c737ad4c2c9d7f4dcbfd4214fd2f2c96c876",
+  "branch": "jsp-000250-prime-obstruction",
+  "run_id": 35362198703,
+  "job_id": 105655920803,
+  "run_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35362198703",
+  "modules_compiled": 78,
+  "axiom_reports": 21,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "kernel_prefixes": [
+    "PrimeNumberTheoremAnd",
+    "UnitFractions",
+    "ErdosProblems",
+    "JSP000250",
+    "JSP000250Complete"
+  ],
+  "negative_control": "false arithmetic rejected",
+  "nanoda_declarations_checked": 75850,
+  "nanoda_result": "Checked 75850 declarations with no errors",
+  "toolchain": "leanprover/lean4:v4.34.0",
+  "mathlib_sha": "5ed2965256430c3649e86755f9576b54eca72435",
+  "dependency_count": 9,
+  "lean4export_sha": "6cea97789dc088ea47fcea15692db85685aedac5",
+  "nanoda_sha": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+  "artifact": {
+    "id": 10555054549,
+    "name": "jsp-000250-evidence",
+    "size_in_bytes": 94011990,
+    "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10555054549",
+    "archive_download_url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10555054549/zip",
+    "expired": false,
+    "created_at": "2026-09-18T15:38:39Z",
+    "expires_at": "2026-12-17T15:24:14Z",
+    "updated_at": "2026-09-18T15:38:39Z",
+    "digest": "sha256:7382e956c4cb66ade49cfb7672ed2b7dd41e46ace15c4751fc7cdaf7c2042502",
+    "workflow_run": {
+      "id": 35362198703,
+      "repository_id": 1373404416,
+      "head_repository_id": 1373404416,
+      "head_branch": "jsp-000250-prime-obstruction",
+      "head_sha": "e2f4c737ad4c2c9d7f4dcbfd4214fd2f2c96c876"
+    }
+  },
+  "limits": "Contributor-run hosted checking, including an independent checker implementation. This is not independent human review, statement certification, or an award decision."
+}

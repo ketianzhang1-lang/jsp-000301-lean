@@ -37,18 +37,24 @@ imported work. We make no first-formalization or award-entitlement claim.
 
 ## Verification status
 
-The complete integration has passed local compilation of all 78 modules and
-all 21 axiom-closure audits. Clean hosted compilation, kernel replay and
-independent NaNoda verification of this published revision are pending.
-Final results and immutable proof identification will be recorded in
-[VERIFICATION.md](VERIFICATION.md). The earlier upper-only receipt is not
-used as evidence for the complete endpoint.
+The [clean hosted verification](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35362198703)
+passed on 2026-09-18 for proof commit
+`e2f4c737ad4c2c9d7f4dcbfd4214fd2f2c96c876`:
+78 modules compiled with warnings as errors; all 21 axiom audits, proof-module
+kernel replays and the false-arithmetic negative control passed. Independent
+NaNoda checked **75,850 declarations with no errors**, allowing only `propext`,
+`Classical.choice` and `Quot.sound` with unpermitted axioms treated as hard errors.
+
+See [VERIFICATION.md](VERIFICATION.md) and the machine-readable
+[hosted receipt](HOSTED_VERIFICATION.json). The earlier upper-only receipt is
+not used as evidence for this complete endpoint. These are contributor-run
+checks, including an independent checker implementation, not independent human review.
 
 ## Reproduce
 
 Repository: `ketianzhang1-lang/jsp-000301-lean`; branch:
-`jsp-000250-prime-obstruction`. Check out the full proof SHA in the final
-verification record. Lean is pinned to 4.34.0 and Mathlib to
+`jsp-000250-prime-obstruction`. Check out the tested proof commit
+`e2f4c737ad4c2c9d7f4dcbfd4214fd2f2c96c876`. Lean is pinned to 4.34.0 and Mathlib to
 `5ed2965256430c3649e86755f9576b54eca72435`, with all nine dependencies locked.
 Git, Python 3, elan and Rust/Cargo are required:
 
