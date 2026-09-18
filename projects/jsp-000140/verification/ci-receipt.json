@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "proof_commit": "724a733a2b498d7b3b956e66b76d7334cc906eaf",
+  "proof_branch": "jsp-000140-coloring-kz",
+  "workflow_run": 35347120839,
+  "workflow_job": 105606217111,
+  "workflow_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35347120839",
+  "toolchain": "leanprover/lean4:v4.34.0",
+  "mathlib_commit": "5ed2965256430c3649e86755f9576b54eca72435",
+  "source_modules_compiled": 24,
+  "axiom_targets": 46,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "kernel_prefixes": [
+    "ErdosProblems",
+    "JSP000140",
+    "JSP000140Bridge",
+    "JSP000140Complete"
+  ],
+  "negative_control": "1 = 0 rejected",
+  "nanoda_declarations": 56007,
+  "nanoda_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+  "exporter_commit": "6cea97789dc088ea47fcea15692db85685aedac5",
+  "artifact": {
+    "id": 10549376826,
+    "size_bytes": 76564379,
+    "github_reported_digest": "sha256:7432ef2d7099aab2264dc4d31eb25e7d2ebec54f5c58506cc9c3a2039dc391c3",
+    "digest_note": "Digest reported by the GitHub artifact API and upload log; the ZIP was not independently downloaded and rehashed."
+  },
+  "ci_log_sha256": "6fb4b7f449796fd0eba21311685229294695cf3ab7cf09312a46f9582e327bfc",
+  "original_lower_source_sha256": "e41cf87887310cfbc9a1c83e70e090ddc790e35e6c504b16599b39360180060d",
+  "scope": "Fresh hosted compilation of all 24 proof/audit modules, with pinned Mathlib cache and nine checked dependency revisions. Contributor-run verification; no organizer approval or first-formalization priority is implied."
+}

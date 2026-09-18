@@ -32,6 +32,9 @@ minimum-palette statements and full endpoint.
 
 The complete upper construction is reused from
 [plby/lean-proofs](https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136.lean).
+We transport its existing full asymptotic theorem through our exact model bridge;
+the closure also includes its classical lower argument. Our strict finite lower
+proof remains a separate, stronger finite conclusion of the combined endpoint.
 Its exact 20-module transitive source closure is pinned in
 [UPSTREAM.json](UPSTREAM.json). Source is fetched and compiled, rather than
 substituting an assumed matching theorem or copying prebuilt proof objects.

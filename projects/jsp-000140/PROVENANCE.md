@@ -13,6 +13,9 @@ between symmetric pair colourings and genuine unordered-edge labelings, identify
 the minimum palette sizes for n >= 2, retain the strict finite lower bound and
 connect the full asymptotic and eventual colourings to our original definition.
 We also prepare the pinned source closure, compatibility port and verification.
+The limit is transported from the existing complete asymptotic proof, which
+also includes its own classical lower-bound argument. Our unchanged strict
+finite lower theorem is an additional conclusion of the combined endpoint.
 
 The lower-bound mathematics is classical, attributed to Erdős–Gyárfás and
 Erdős–Elekes–Füredi. The complete asymptotic answer is due to Bennett, Cushman,
