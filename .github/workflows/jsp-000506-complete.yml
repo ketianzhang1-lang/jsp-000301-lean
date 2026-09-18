@@ -18,6 +18,13 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
+      - name: Provide swap for complete-source checking
+        working-directory: /tmp
+        run: |
+          sudo fallocate -l 8G /swap-jsp506
+          sudo chmod 600 /swap-jsp506
+          sudo mkswap /swap-jsp506
+          sudo swapon /swap-jsp506
       - name: Install pinned toolchain and dependencies
         run: |
           set -euo pipefail
@@ -40,7 +47,8 @@ jobs:
           for p in json.loads(Path('lake-manifest.json').read_text())['packages']:
               d=Path('.lake/packages')/p['name']
               assert subprocess.check_output(['git','-C',str(d),'rev-parse','HEAD'],text=True).strip()==p['rev']
-              paths.append(str(d/'.lake/build'))
+              if (d/'.lake/build').exists():
+                  paths.append(str(d/'.lake/build'))
           subprocess.run(['tar','-I','zstd -T2 -3','-cf','evidence/mathlib-431-cache.tar.zst',*paths],check=True)
           PY
           sha256sum evidence/mathlib-431-cache.tar.zst > evidence/CACHE_SHA256
