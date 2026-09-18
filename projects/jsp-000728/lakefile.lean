@@ -5,4 +5,7 @@ package JSP000728 where
 require mathlib from git "https://github.com/leanprover-community/mathlib4" @ "v4.34.0"
 @[default_target]
 lean_lib JSP000728 where
-  roots := #[`JSP000728]
+  roots := #[`JSP000728, `JSP000728Complete, `AuditComplete]
+
+lean_lib ErdosProblems where
+  roots := #[`ErdosProblems.Erdos877]

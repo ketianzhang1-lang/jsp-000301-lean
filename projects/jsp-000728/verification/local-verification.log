@@ -1,0 +1,56 @@
+Passed: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/bootstrap.py
+Compiled/verified source: JSP000728
+Compiled/verified source: ErdosProblems.Erdos877.Core
+Compiled/verified source: JSP000728Bridge
+Compiled/verified source: ErdosProblems.Erdos877.EnumerationSupersaturation
+Compiled/verified source: ErdosProblems.Erdos565.Hypergraph
+Compiled/verified source: ErdosProblems.Erdos877.SchurHypergraph
+Compiled/verified source: ErdosProblems.Erdos565.FiniteAnalysis
+Compiled/verified source: ErdosProblems.Erdos565.ContainerFuel
+Compiled/verified source: ErdosProblems.Erdos565.ContainerInvariants
+Compiled/verified source: ErdosProblems.Erdos565.ContainerWeight
+Compiled/verified source: ErdosProblems.Erdos565.ContainerSelector
+Compiled/verified source: ErdosProblems.Erdos565.Janson
+Compiled/verified source: ErdosProblems.Erdos565.JansonContainer
+Compiled/verified source: ErdosProblems.Erdos565.ContainerA
+Compiled/verified source: ErdosProblems.Erdos565.ContainerConsistency
+Compiled/verified source: ErdosProblems.Erdos565.BinomialBounds
+Compiled/verified source: ErdosProblems.Erdos565.SpecialContainer
+Compiled/verified source: ErdosProblems.Erdos565.ConditionalDecomposition
+Compiled/verified source: ErdosProblems.Erdos565.ProjectionFibers
+Compiled/verified source: ErdosProblems.Erdos565.Pullback
+Compiled/verified source: ErdosProblems.Erdos565.BoundedDegree
+Compiled/verified source: ErdosProblems.Erdos565.FiniteExpectation
+Compiled/verified source: ErdosProblems.Erdos76.FiniteLocalLemma
+Compiled/verified source: ErdosProblems.Erdos76.Core
+Compiled/verified source: ErdosProblems.Erdos76.Fractional
+Compiled/verified source: ErdosProblems.Erdos76.WeightedHypergraph
+Compiled/verified source: ErdosProblems.Erdos76.Kahn
+Compiled/verified source: ErdosProblems.Erdos76.FiniteBernoulliLocality
+Compiled/verified source: ErdosProblems.Erdos565.BernoulliSubsets
+Compiled/verified source: ErdosProblems.Erdos565.RandomRestriction
+Compiled/verified source: ErdosProblems.Erdos565.JensenContradiction
+Compiled/verified source: ErdosProblems.Erdos565.SpecialContainerBridge
+Compiled/verified source: ErdosProblems.Erdos565.SpecialLocalization
+Compiled/verified source: ErdosProblems.Erdos565.SpecialContainerTheorem
+Compiled/verified source: ErdosProblems.Erdos877.EnumerationContainer
+Compiled/verified source: ErdosProblems.Erdos877.EnumerationFingerprints
+Compiled/verified source: ErdosProblems.Erdos877.EnumerationSupersaturationAlt
+Compiled/verified source: ErdosProblems.Erdos877.EnumerationArithmetic
+Compiled/verified source: ErdosProblems.Erdos877.Enumeration
+Compiled/verified source: ErdosProblems.Erdos877.Deletion
+Compiled/verified source: ErdosProblems.Erdos877.Binomial
+Compiled/verified source: ErdosProblems.Erdos877.DoubleCount
+Compiled/verified source: ErdosProblems.Erdos877.Asymptotic
+Compiled/verified source: ErdosProblems.Erdos877.Resolution
+Compiled/verified source: ErdosProblems.Erdos877
+Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/JSP000728Complete.olean ./JSP000728Complete.lean
+Compiled/verified source: JSP000728Complete
+Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/AuditComplete.olean ./AuditComplete.lean
+Compiled/verified source: AuditComplete
+Passed: lake env lean -DwarningAsError=true AuditComplete.lean
+Passed: lake env leanchecker --verbose ErdosProblems
+Passed: lake env leanchecker --verbose JSP000728
+Passed: lake env leanchecker --verbose JSP000728Bridge
+Passed: lake env leanchecker --verbose JSP000728Complete
+All full-development checks passed.

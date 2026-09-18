@@ -1,0 +1,29 @@
+import JSP000728Complete
+
+#print axioms JSP000728.mem_maximalSets
+#print axioms JSP000728.exists_maximal_extension
+#print axioms JSP000728.pick_bounds
+#print axioms JSP000728.pick_sum_ne
+#print axioms JSP000728.seed_subset
+#print axioms JSP000728.seed_sumFree
+#print axioms JSP000728.different_choices_incompatible
+#print axioms JSP000728.lower_bound_multiple
+#print axioms JSP000728.cameron_erdos_lower_bound
+#print axioms JSP000728.sumFree_iff_upstream
+#print axioms JSP000728.maximalSumFree_iff_upstream
+#print axioms JSP000728.maximalSets_eq_upstream
+#print axioms JSP000728.maximalSets_card_eq_upstream
+#print axioms JSP000728.allSumFreeSets_eq_upstream
+#print axioms JSP000728.upperHalf_powerset_subset
+#print axioms JSP000728.allSumFreeSets_lower_bound
+#print axioms JSP000728.benchmark_le_allSumFreeSets
+#print axioms JSP000728.maximalCount_isLittleO_benchmark
+#print axioms JSP000728.maximalCount_exponential_bound
+#print axioms JSP000728.upstream_count_lower_bound
+#print axioms JSP000728.maximalCount_isLittleO_allCount
+#print axioms JSP000728.maximal_to_all_ratio_tendsto_zero
+#print axioms JSP000728.relative_exponential_saving
+#print axioms JSP000728.jsp_000728
+#print axioms Erdos877.erdos_877
+#print axioms Erdos877.erdos_877_exponential_bound
+#print axioms Erdos877.resolutionExponent_lt_half

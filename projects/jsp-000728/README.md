@@ -1,39 +1,86 @@
-# JSP-000728: Cameron–Erdős lower bound
+# JSP-000728: our all-interval construction and complete original counting question
 
-This project proves, for every natural N including zero, that the number of inclusion-maximal sum-free subsets of {1,...,N} is at least 2^(N/4), with natural-number division (floor).
+We contribute an independently written Lean proof of the Cameron–Erdős lower
+bound for every interval, an exact bridge between two finite counting models,
+and the formal relative-count conclusions of the original question. Our endpoint
+is `JSP000728.jsp_000728` in [JSP000728Complete.lean](JSP000728Complete.lean).
+We combine our construction with an attributed, fully pinned upper-bound proof;
+the imported upper-bound argument is not our original contribution.
 
-This is a **known lower-bound component** of JSP-000728. It does not prove an asymptotic upper bound, the exact residue-class constants, or solve the full catalog question. No new mathematics or first-formalization priority is claimed.
+Write `M(N)` for the number of inclusion-maximal sum-free subsets of `{1,…,N}`
+and `F(N)` for the number of all sum-free subsets. We establish:
 
-## Mathematical source and construction
+- `2^floor(N/4) ≤ M(N)` for every natural `N`, including zero.
+- `M(N) = o(2^(N/2))` and `M(N)/F(N) → 0`.
+- There is a fixed real `δ > 0` such that, for all sufficiently large `N`,
+  `M(N) ≤ F(N)/2^(δN)`.
 
-Cameron and Erdős's odd-pair construction, as reproduced in Section 1, page 2 of Balogh, Liu, Sharifzadeh and Treglown, *The number of maximal sum-free subsets of integers*, arXiv:1409.5661:
-https://arxiv.org/pdf/1409.5661
+The last statement supplies the exponential separation explicitly asked in the
+original Cameron–Erdős question, as described in Section 1, page 2 of
+[Balogh–Liu–Sharifzadeh–Treglown](https://arxiv.org/pdf/1409.5661).
+The later sharp exponent `1/4` and residue-class asymptotic constants are not
+proved here. [STATEMENT_FIDELITY.md](STATEMENT_FIDELITY.md) explains the precise
+original scope and the distinction from those stronger later results.
 
-Put m=floor(N/4). For m>0, include 4m and exactly one of each pair {2i+1, 4m-(2i+1)}, for 0<=i<m. Every seed is sum-free. Extend it maximally inside the full interval {1,...,N}. Two different choices cannot have the same sum-free extension: their opposite choices add to 4m, already included. The 2^m binary choices give the bound. For m=0, extend the empty set maximally.
+## Our contribution
 
-The implementation uses the greatest multiple of four below N. The cited exposition uses the greatest even integer below N; both produce the stated 2^floor(N/4) lower bound.
+| Component | What we prove |
+| --- | --- |
+| [JSP000728.lean](JSP000728.lean) | We formalize the odd-pair seed, its sum-freeness, maximal extension, incompatibility of different binary choices, and the all-`N` lower bound. This file is unchanged from our original proof revision. |
+| [JSP000728Bridge.lean](JSP000728Bridge.lean) | We prove equality of the local and upstream maximal families and counts, including the reversed equality in their maximality predicates. We also construct the upper-half powerset injection and prove `F(N) ≥ 2^ceil(N/2) ≥ 2^(N/2)`. |
+| [JSP000728Complete.lean](JSP000728Complete.lean) | We transport the verified upper bound into our finite model and derive both the vanishing ratio and the fixed exponential separation relative to all sum-free sets. |
+| [Reproduction scripts](scripts) | We pin the complete 43-module upper-proof closure, record compatibility changes, audit the theorem dependencies and provide kernel replay and independent-checker instructions. |
 
-## Statement fidelity
+For the lower construction, let `m = floor(N/4)`. When `m > 0`, we include `4m`
+and one element from each pair `{2i+1, 4m-(2i+1)}` for `i < m`, then extend the
+seed maximally. Distinct binary choices cannot have a common sum-free extension:
+the opposite pair would sum to the included `4m`. For `m = 0`, we extend the
+empty set. The local predicate permits equal summands and uses inclusion
+maximality, not maximum cardinality.
 
-`SumFree` prohibits x+y in A for every x,y in A, including x=y. `MaximalSumFree` means inclusion-maximal within {1,...,N}, not maximum cardinality. `maximalSets` filters the finite powerset by that predicate. The main theorem is `JSP000728.cameron_erdos_lower_bound`. The general parameter theorem `lower_bound_multiple` works in every interval N>=4m.
+## Reused mathematics and formal proof
+
+The lower construction is due to Cameron and Erdős. The original exponential
+separation was proved mathematically by Łuczak and Schoen; later sharper results
+are due to Balogh, Liu, Sharifzadeh and Treglown. We claim no new informal theorem.
+
+The full upper-bound Lean development is reused from
+[plby/lean-proofs at 8822f7ddef30fadbd92e1c6ab4ed897af356af5e](https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos877.lean).
+Its entry header credits formal work to Codex and GPT-5.6 Sol; the dependency
+headers retain the Lean-Proofs Authors and OpenAI Codex notices. We preserve
+those credits, [the upstream license notice](UPSTREAM-LICENSE.txt) and the
+[Apache 2.0 license](APACHE-2.0.txt). Every fetched file and exact compatibility
+edit is fixed in [UPSTREAM.json](UPSTREAM.json). See
+[PROVENANCE.md](PROVENANCE.md) for the contribution boundaries and prior work.
 
 ## Reproduction
 
-Lean 4.34.0 and the committed dependency manifest are required. Mathlib is pinned to 5ed2965256430c3649e86755f9576b54eca72435.
+Lean **4.34.0**, Mathlib **5ed2965256430c3649e86755f9576b54eca72435**, and the
+committed `lake-manifest.json` fix the environment. From a fresh checkout:
 
 ```sh
 cd projects/jsp-000728
-lake exe cache get
+python3 scripts/bootstrap.py
+lake exe cache get Mathlib
+lake build Mathlib
 bash scripts/verify.sh
 bash scripts/verify_nanoda.sh
 ```
 
-The verification workflow compiles with warnings treated as failures, replays the module with the bundled Lean kernel checker, audits the five target declarations against the standard foundational axioms, checks actual dependency revisions, rejects a false arithmetic control, and runs pinned NaNoda with a strict axiom allowlist. A workflow definition is not evidence of a passing run: consult the actual run and receipt before treating verification as complete.
+The bootstrap fetches immutable source files and rejects checksum differences;
+it never imports prebuilt upstream proof objects. The verifier compiles all
+47 modules, audits 27 theorem closures, checks the nine actual dependency
+revisions, replays all 43 upstream modules and our three proof modules, and
+requires a false arithmetic statement to fail. NaNoda additionally requires
+Rust/Cargo and checks the exported dependency closures with a strict axiom
+allowlist. The public workflow provides that environment.
 
-## Attribution and review
+[VERIFICATION.md](VERIFICATION.md) records checks actually executed and their
+limits. A workflow definition alone is not a passing result; select the run
+whose `head_sha` matches the proof commit in the catalog or PR.
 
-Mathematical credit: Peter Cameron and Paul Erdős. Expository source: József Balogh, Hong Liu, Maryam Sharifzadeh and Andrew Treglown. Mathlib and checker authors retain their respective credits and licenses. This implementation was written with OpenAI ChatGPT assistance under the submitting account's direction.
-
-Proposed formalization contributor: RECIPIENT-JSP-000728-KZ-A, confirmation pending. This is contributor-run checking, not independent human review or organizer certification. No award, payment entitlement, new solution, or global priority is asserted.
-
-An existing same-account branch named jsp-000728-maximal-sumfree was observed at the common base commit a42d756719684060b39799db4f10be5ec7de142b, without a JSP-000728 source file, when this package was prepared. Same-account work on an alternative construction is not a separate reward claim. Only one submission for this lower-bound contribution should be considered.
+We prepared our formalization with OpenAI ChatGPT/Codex assistance under GitHub
+account `ketianzhang1-lang`. We request review of our specific contributions,
+not credit for the imported upper proof. This is not a claim of first
+formalization, organizer approval or award entitlement. We update the existing
+[PR #373](https://github.com/TheJustinSunPrize/awards/pull/373).

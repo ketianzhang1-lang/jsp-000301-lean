@@ -19,8 +19,8 @@ pin https://github.com/ammkrn/nanoda_lib.git 4c544ed4099c8227f07d5de77ad1e69fb07
 cp lean-toolchain "$work/exporter/lean-toolchain"
 (cd "$work/exporter" && lake build)
 (cd "$work/checker" && cargo build --release --locked)
-lake env "$work/exporter/.lake/build/bin/lean4export" JSP000728 -- \
-  JSP000728.exists_maximal_extension JSP000728.seed_sumFree JSP000728.different_choices_incompatible JSP000728.lower_bound_multiple JSP000728.cameron_erdos_lower_bound > evidence/export.ndjson
+lake env "$work/exporter/.lake/build/bin/lean4export" JSP000728Complete -- \
+  JSP000728.mem_maximalSets JSP000728.exists_maximal_extension JSP000728.pick_bounds JSP000728.pick_sum_ne JSP000728.seed_subset JSP000728.seed_sumFree JSP000728.different_choices_incompatible JSP000728.lower_bound_multiple JSP000728.cameron_erdos_lower_bound JSP000728.sumFree_iff_upstream JSP000728.maximalSumFree_iff_upstream JSP000728.maximalSets_eq_upstream JSP000728.maximalSets_card_eq_upstream JSP000728.allSumFreeSets_eq_upstream JSP000728.upperHalf_powerset_subset JSP000728.allSumFreeSets_lower_bound JSP000728.benchmark_le_allSumFreeSets JSP000728.maximalCount_isLittleO_benchmark JSP000728.maximalCount_exponential_bound JSP000728.upstream_count_lower_bound JSP000728.maximalCount_isLittleO_allCount JSP000728.maximal_to_all_ratio_tendsto_zero JSP000728.relative_exponential_saving JSP000728.jsp_000728 Erdos877.erdos_877 Erdos877.erdos_877_exponential_bound Erdos877.resolutionExponent_lt_half > evidence/export.ndjson
 python3 - <<'PY'
 import json
 from pathlib import Path
@@ -28,7 +28,7 @@ config={
   'export_file_path':'evidence/export.ndjson','use_stdin':False,
   'permitted_axioms':['propext','Classical.choice','Quot.sound'],
   'unpermitted_axiom_hard_error':True,'nat_extension':True,'string_extension':True,
-  'pp_declars':["JSP000728.exists_maximal_extension","JSP000728.seed_sumFree","JSP000728.different_choices_incompatible","JSP000728.lower_bound_multiple","JSP000728.cameron_erdos_lower_bound"],
+  'pp_declars':['JSP000728.mem_maximalSets', 'JSP000728.exists_maximal_extension', 'JSP000728.pick_bounds', 'JSP000728.pick_sum_ne', 'JSP000728.seed_subset', 'JSP000728.seed_sumFree', 'JSP000728.different_choices_incompatible', 'JSP000728.lower_bound_multiple', 'JSP000728.cameron_erdos_lower_bound', 'JSP000728.sumFree_iff_upstream', 'JSP000728.maximalSumFree_iff_upstream', 'JSP000728.maximalSets_eq_upstream', 'JSP000728.maximalSets_card_eq_upstream', 'JSP000728.allSumFreeSets_eq_upstream', 'JSP000728.upperHalf_powerset_subset', 'JSP000728.allSumFreeSets_lower_bound', 'JSP000728.benchmark_le_allSumFreeSets', 'JSP000728.maximalCount_isLittleO_benchmark', 'JSP000728.maximalCount_exponential_bound', 'JSP000728.upstream_count_lower_bound', 'JSP000728.maximalCount_isLittleO_allCount', 'JSP000728.maximal_to_all_ratio_tendsto_zero', 'JSP000728.relative_exponential_saving', 'JSP000728.jsp_000728', 'Erdos877.erdos_877', 'Erdos877.erdos_877_exponential_bound', 'Erdos877.resolutionExponent_lt_half'],
   'pp_output_path':'evidence/nanoda-statements.txt','pp_to_stdout':False,'print_success_message':True}
 Path('evidence/nanoda-config.json').write_text(json.dumps(config,indent=2)+'\n')
 Path('evidence/nanoda-statements.txt').write_text('')
