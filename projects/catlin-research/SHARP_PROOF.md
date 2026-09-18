@@ -45,7 +45,10 @@ It was written with OpenAI ChatGPT assistance. The original proof modules and
 their attribution are retained. The build configuration now registers all local
 modules, fixing the earlier clean-build failure `unknown module prefix Profile`.
 
-This is a finite result related to JSP-000585 / Erdos 717. It does not prove
-the catalog's uniform asymptotic bound for arbitrary finite graphs. Any
-recognition of this scoped formalization remains for the organizers to decide.
-Verification or submission does not establish award entitlement.
+## Relation to the complete package
+
+This document describes our original finite Catlin proof. That proof alone was
+a scoped result. The present package additionally imports and verifies the full
+general upper proof, and our new bridge connects its model to this exact witness.
+See [STATEMENT_FIDELITY.md](STATEMENT_FIDELITY.md) and
+[PROVENANCE.md](PROVENANCE.md) for the complete scope and retained attribution.

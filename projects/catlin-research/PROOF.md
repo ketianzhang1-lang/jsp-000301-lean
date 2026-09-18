@@ -80,22 +80,10 @@ formula with lower bound 12. The present completed path bridge uses the
 simpler demand bound above; it does not claim to have formalized the older
 12-bound's capacity-allocation argument.
 
-## Attribution and prize boundary
+## Relation to the complete package
 
-Catlin disproved Hajos's conjecture in 1979. The mathematical background and
-distinction from the asymptotic Erdos-Fajtlowicz problem are described in:
-
-- Fox, Lee and Sudakov, *Chromatic number, clique subdivisions, and the conjectures of Hajos and Erdos-Fajtlowicz*, https://arxiv.org/abs/1107.1920.
-- JSP-000585 catalog, https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0501-0600.md#jsp-000585.
-
-JSP-000585 concerns a uniform bound of order sqrt(n)/log(n) for the ratio
-of chromatic number to largest clique-subdivision order. This single finite
-counterexample does not establish that statement. A public formalization
-source for that different asymptotic theorem is already present at
-https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos717.lean.
-It was not imported into this proof or independently rebuilt here.
-
-The current contribution is the formal graph-path and colouring completion
-of the submitting account's earlier finite checkpoint. No mathematical
-novelty, global first-formalization priority, organizer approval, award,
-or payment entitlement is asserted.
+This document describes our original finite Catlin proof. That proof alone was
+a scoped result. The present package additionally imports and verifies the full
+general upper proof, and our new bridge connects its model to this exact witness.
+See [STATEMENT_FIDELITY.md](STATEMENT_FIDELITY.md) and
+[PROVENANCE.md](PROVENANCE.md) for the complete scope and retained attribution.

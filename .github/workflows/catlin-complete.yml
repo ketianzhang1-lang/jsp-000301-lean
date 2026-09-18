@@ -1,4 +1,4 @@
-name: Sharp Catlin graph counterexample
+name: JSP-000585 complete graph-subdivision bound
 on:
   push:
     branches: [catlin-sharp-kz]
@@ -9,7 +9,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 90
     defaults:
       run:
         shell: bash
@@ -18,32 +18,47 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
-      - name: Install pinned compiler and dependencies
+      - name: Provide swap for kernel replay
+        working-directory: /tmp
+        run: |
+          sudo fallocate -l 8G /swap-jsp585
+          sudo chmod 600 /swap-jsp585
+          sudo mkswap /swap-jsp585
+          sudo swapon /swap-jsp585
+      - name: Install exact toolchain and locked dependencies
         run: |
           set -euo pipefail
           curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
           export PATH="$HOME/.elan/bin:$PATH"
           elan toolchain install "$(cat lean-toolchain)"
-          lake exe cache get
+          test -s lake-manifest.json
+          python3 scripts/bootstrap.py
+          lake exe cache get Mathlib
+          lake build Mathlib
           git diff --exit-code -- lake-manifest.json
-      - name: Compile and audit
+      - name: Compile full proof chain, replay, 61 axiom audits and negative control
         run: bash scripts/verify.sh
-      - name: Independent NaNoda check
-        run: bash scripts/verify_nanoda.sh 2>&1 | tee evidence/nanoda-build.log
-      - name: Archive tested source
+      - name: Independent strict-allowlist NaNoda verification
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          bash scripts/verify_nanoda.sh 2>&1 | tee evidence/nanoda-build.log
+      - name: Archive tested source and logs
         if: always()
         run: |
           set -euo pipefail
           mkdir -p evidence
           git rev-parse HEAD > evidence/SOURCE_COMMIT
-          cp lake-manifest.json evidence/lake-manifest.json
+          cp lake-manifest.json evidence/
           git diff --exit-code -- lake-manifest.json
           tar --exclude=.lake --exclude=evidence -czf evidence/source.tar.gz .
           sha256sum evidence/source.tar.gz > evidence/ARCHIVE_SHA256
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
-          name: catlin-sharp-evidence
-          path: projects/catlin-research/evidence
-          if-no-files-found: warn
+          name: jsp-000585-evidence
+          path: |
+            projects/catlin-research/evidence
+            projects/catlin-research/evidence-complete
+          if-no-files-found: error

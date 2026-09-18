@@ -9,4 +9,7 @@ require mathlib from git
 
 @[default_target]
 lean_lib Catlin where
-  roots := #[`Certificate, `GraphCore, `Profile, `Subdivision, `Colouring, `Catlin, `Sharp]
+  roots := #[`Certificate, `GraphCore, `Profile, `Subdivision, `Colouring, `Catlin, `Sharp, `JSP000585Complete, `AuditComplete]
+
+lean_lib ErdosProblems where
+  roots := #[`ErdosProblems.Erdos717]
