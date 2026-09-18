@@ -1,0 +1,510 @@
+[
+  {
+    "path": "ErdosProblems/Erdos387/AnalyticInputs.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/AnalyticInputs.lean",
+    "git_blob_sha": "af3dad054d1eb70831e4d00d53c65df950a50814",
+    "sha256": "00bf2d2bcc61ae5cdef3612f53e5fa87d07f491f399a7336e5a298a02b683dbf",
+    "port_sha256": "00bf2d2bcc61ae5cdef3612f53e5fa87d07f491f399a7336e5a298a02b683dbf",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos387/BrunMainTerm.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/BrunMainTerm.lean",
+    "git_blob_sha": "e46829d0e76030deca2c87f17d21e770c262b307",
+    "sha256": "0e8c5be7c37c36f5be357795198cae4117f662acb0b7f411f536471996771232",
+    "port_sha256": "a33740ae64e4273cd6bea5919e00d7c483bb1d8d8cf900adb6c52530ae9a45da",
+    "renames": {
+      "if_pos": "ite_pos",
+      "if_neg": "ite_neg"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos387/BrunSieve.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/BrunSieve.lean",
+    "git_blob_sha": "db82bd8b03edcc29a8844885671c8e2efaed9a01",
+    "sha256": "e99eef68936ac9def7858e0dbed7754e8a895ce267307d8fd93c19e537ec4322",
+    "port_sha256": "9a7035d842675e389f01fb09535158a5c394c41654538a18ab2b78e0cd9d391e",
+    "renames": {
+      "if_pos": "ite_pos",
+      "if_neg": "ite_neg"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos387/CoverAlgebra.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/CoverAlgebra.lean",
+    "git_blob_sha": "b84757cecfb6416a0d6af6b1cd54291ec73c8cdc",
+    "sha256": "d6af07c515ea2f3633c8464b7fa5d99cff5b560d0f62bb460d78124414189861",
+    "port_sha256": "d6af07c515ea2f3633c8464b7fa5d99cff5b560d0f62bb460d78124414189861",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos387/CoverBPZConditional.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/CoverBPZConditional.lean",
+    "git_blob_sha": "5336fd227df458ed3cf8eb019aed8b18757d174e",
+    "sha256": "e4123e8046b3602a608eb0a51ce646ce444b6e88b4bf16c059a536b15879bc1e",
+    "port_sha256": "fdafd80c3b532fa56bdc0bdbb22e8124879652f4f7f3ad6e0041506c30b9ffda",
+    "renames": {
+      "if_pos": "ite_pos",
+      "if_neg": "ite_neg",
+      "dif_pos": "dite_pos"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos387/CoverBPZPrelude.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/CoverBPZPrelude.lean",
+    "git_blob_sha": "10c7f4b74fd4ffb2235fdb8908fb20e3256349d0",
+    "sha256": "1d74755e8741cf5f44356e1591ef9d317b8b5d1ec2a7350085c0b93ed0d220fb",
+    "port_sha256": "15d4375ec863665c9775e46ea0a06cdfdaad8c4ebaf11fb04eab5c16ac1288a4",
+    "renames": {
+      "if_pos": "ite_pos",
+      "if_neg": "ite_neg",
+      "dif_pos": "dite_pos",
+      "dif_neg": "dite_neg",
+      "if_true": "ite_true"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos387/CoverLemma.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/CoverLemma.lean",
+    "git_blob_sha": "b128e28005a9868e19f7c2c2d4067a29e04562d6",
+    "sha256": "103b33c44f74df08bf55f75260d8a0165e3dda294bee879cf448fdbb2312a0a5",
+    "port_sha256": "cb9559428a7aa8eb667b915f3b00c75d2d8662e0cf4518b1b26705a4579390f6",
+    "renames": {
+      "if_pos": "ite_pos",
+      "if_neg": "ite_neg",
+      "dif_pos": "dite_pos",
+      "dif_neg": "dite_neg"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos387/LocalDensity.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/LocalDensity.lean",
+    "git_blob_sha": "3a5dba750f9e263bf9df14994fae644daa362c64",
+    "sha256": "61eb8819164843bb2fd3f1f45c369208c44debb66ad3b6dea2dd3b3a8ddf5d1e",
+    "port_sha256": "61eb8819164843bb2fd3f1f45c369208c44debb66ad3b6dea2dd3b3a8ddf5d1e",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos387/QualitativeCover.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/QualitativeCover.lean",
+    "git_blob_sha": "13ce1799e29693708654af9bc469798ed7aa15f5",
+    "sha256": "0ca8fcb0a58266f1957e92c93a9f8b083ebd51d564cbae9fc7f0a2f23a528b9d",
+    "port_sha256": "0ca8fcb0a58266f1957e92c93a9f8b083ebd51d564cbae9fc7f0a2f23a528b9d",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos387/QualitativeSieve.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/QualitativeSieve.lean",
+    "git_blob_sha": "26698930adad8b207628670d4d09734aff54e11b",
+    "sha256": "ee8ff3ac3804a716181d91cde432ecbeb77fab3dc56af96d1e599e384db4484f",
+    "port_sha256": "c9bf7496e79e1f0b37c4d64b43fd58c21fd739465f664e06e2350ee049c25fd6",
+    "renames": {
+      "if_pos": "ite_pos",
+      "if_neg": "ite_neg"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos387/Section6Bridge.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/Section6Bridge.lean",
+    "git_blob_sha": "fa7cc6a84728976f9614c61c00d160af2ed305c8",
+    "sha256": "ad147aca19beba869b2286d8b2a340524433437e4a05f4c2abceff2da5cc7c2f",
+    "port_sha256": "ad147aca19beba869b2286d8b2a340524433437e4a05f4c2abceff2da5cc7c2f",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos387/Section6Counting.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/Section6Counting.lean",
+    "git_blob_sha": "97bf2c05896fe276f97c9081529965de2487ada0",
+    "sha256": "96fe70070a2d1f9a18a4f4afc17fbb5345ac46996761c786fbfa294843ee9c46",
+    "port_sha256": "96fe70070a2d1f9a18a4f4afc17fbb5345ac46996761c786fbfa294843ee9c46",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos387/SieveInstantiation.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/SieveInstantiation.lean",
+    "git_blob_sha": "d98863b41a4ad766ecfec78e6b727feb91388ea3",
+    "sha256": "f2bd925e42f1ae1af40f9bce8571fbcf377f1c18f7da222474081a7ea6106bc2",
+    "port_sha256": "f2bd925e42f1ae1af40f9bce8571fbcf377f1c18f7da222474081a7ea6106bc2",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos469.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos469.lean",
+    "git_blob_sha": "7caebec7c56c9dfe82ac00a4077fc28ca641c91e",
+    "sha256": "99399073564ec142b319b923552f01eca5af94b8dbb86bcf2cbac9d4d7cbe6f9",
+    "port_sha256": "630ca25c12595449aed2d61d45f61f2c2ee3f73691cb23cfc88ee0247ee52670",
+    "renames": {
+      "if_pos": "ite_pos",
+      "if_neg": "ite_neg",
+      "dif_pos": "dite_pos",
+      "if_true": "ite_true",
+      "if_false": "ite_false"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos682.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos682.lean",
+    "git_blob_sha": "76b5e5b0424c38dc145e687ae0ab38a5e5522663",
+    "sha256": "c2ccb50878691f3df8e64174d0ecff384f22b6674b22a9392c1a7246ce470016",
+    "port_sha256": "78dca70d6161e8421e9039daf9445b75ae896ddaaaaae5b03ec192771390ac3b",
+    "renames": {
+      "if_pos": "ite_pos",
+      "if_neg": "ite_neg",
+      "if_true": "ite_true"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/Basic.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/Basic.lean",
+    "git_blob_sha": "e89261b3c15e84b17fe3af02e5de03ddb270402f",
+    "sha256": "e10e5eedadd5e10eaa969253720f75eedc7f905f8e51f62e8f03b9859674aa78",
+    "port_sha256": "e10e5eedadd5e10eaa969253720f75eedc7f905f8e51f62e8f03b9859674aa78",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/BetaChainLogBridge.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/BetaChainLogBridge.lean",
+    "git_blob_sha": "9f917691dc70e3a462da7181e87425ff91f3e495",
+    "sha256": "7ce7ab3ab8e9ec8747395d3b03ae2035013f67212139f3557b5ba22f0afe3971",
+    "port_sha256": "7ce7ab3ab8e9ec8747395d3b03ae2035013f67212139f3557b5ba22f0afe3971",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/BetaChainRatio.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/BetaChainRatio.lean",
+    "git_blob_sha": "1c58f819ca3bbd547a0a06c88c2e1be2e8af5343",
+    "sha256": "97d83c62a383fafdf11ad5d21311c79661bc77d962d6719da93d2e396986714b",
+    "port_sha256": "97d83c62a383fafdf11ad5d21311c79661bc77d962d6719da93d2e396986714b",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/BetaProductRatioDepth.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/BetaProductRatioDepth.lean",
+    "git_blob_sha": "9edc37dbd1330ee685c229a52e437d5255213913",
+    "sha256": "5a0fd4c11af32ca570a8368b5d7fe1ed67a8d4a264f3f4ef1c0f7ecdab6a1772",
+    "port_sha256": "5a0fd4c11af32ca570a8368b5d7fe1ed67a8d4a264f3f4ef1c0f7ecdab6a1772",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/BetaSieveFailureCombinatorics.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/BetaSieveFailureCombinatorics.lean",
+    "git_blob_sha": "e5bac27115f303b1b21ebe774352f7be49809cc9",
+    "sha256": "0b54fe7dfee1916340c3d86ffc745c0abedb5c77953de171324c85bbef628079",
+    "port_sha256": "0b54fe7dfee1916340c3d86ffc745c0abedb5c77953de171324c85bbef628079",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/BetaSieveFundamental.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/BetaSieveFundamental.lean",
+    "git_blob_sha": "8050a2f3b2102b5cbe216b5c34f916f7d466592a",
+    "sha256": "abf66d491f429dea7a74d380e0a891036f9f829cad239b049954ea1fb44913d9",
+    "port_sha256": "abf66d491f429dea7a74d380e0a891036f9f829cad239b049954ea1fb44913d9",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/BetaSieveTail.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/BetaSieveTail.lean",
+    "git_blob_sha": "2735eb3b3e39d2bdba91fbba80d2e36c3825d797",
+    "sha256": "abf39e871b27d81af1b04551631f40ba40463fea4fe7b2fce2bd126a19c4e225",
+    "port_sha256": "abf39e871b27d81af1b04551631f40ba40463fea4fe7b2fce2bd126a19c4e225",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/BetaStoppingGeometry.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/BetaStoppingGeometry.lean",
+    "git_blob_sha": "17f1ca2c99c1b87f85fadbb643deede90f1332f7",
+    "sha256": "b635a21d8afe36908eea4406bd860a13f56130d0f53babe65055316311c07b29",
+    "port_sha256": "b635a21d8afe36908eea4406bd860a13f56130d0f53babe65055316311c07b29",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/ConcreteBetaCardinality.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/ConcreteBetaCardinality.lean",
+    "git_blob_sha": "3f82d5f950bb2a999cae6941fcae749d47b5390a",
+    "sha256": "6acf0abc2fc927f4c9985f70993bb1d1e51e595463e981c272fee10bbfc2d1ee",
+    "port_sha256": "6055d62e250c8743c51f4c500561d7bee1b17eecea69bb94039ab2f91a640bc9",
+    "renames": {
+      "if_pos": "ite_pos"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/ConcreteBetaCutoff.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/ConcreteBetaCutoff.lean",
+    "git_blob_sha": "38d8560cb1deffa9a612e943ba80b7fc5473bd66",
+    "sha256": "9f093dc8d288c812256ff3eb5722504fb24872febad1134b28f32be4495d07bb",
+    "port_sha256": "9f093dc8d288c812256ff3eb5722504fb24872febad1134b28f32be4495d07bb",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/Elementary.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/Elementary.lean",
+    "git_blob_sha": "6b0ceddc2d0843a63fd5d11b182f61b90f01b5ab",
+    "sha256": "7ca20f35a8272075c10d26e80be84a49aecd9dba65ac9a6cf71d9fc40b914a13",
+    "port_sha256": "7ca20f35a8272075c10d26e80be84a49aecd9dba65ac9a6cf71d9fc40b914a13",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/EndpointBridge.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/EndpointBridge.lean",
+    "git_blob_sha": "f576775d47f90d1babc776e193238452a69f7a4a",
+    "sha256": "6d69d7d766ba7f8899f10446b051a798bafdea97b7b890e35d6aa8b0a5d9cab3",
+    "port_sha256": "6d69d7d766ba7f8899f10446b051a798bafdea97b7b890e35d6aa8b0a5d9cab3",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/EulerLogBounds.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/EulerLogBounds.lean",
+    "git_blob_sha": "a01f872a7e589f064f766ed725522233d2b6d943",
+    "sha256": "e0dcc3b740897e02be5a4ab07af48c1df57469cc90f6f4c226d6a1bba926b6e5",
+    "port_sha256": "e0dcc3b740897e02be5a4ab07af48c1df57469cc90f6f4c226d6a1bba926b6e5",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/FiniteBetaProductRatio.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/FiniteBetaProductRatio.lean",
+    "git_blob_sha": "b6b8d37b69ee1c8f053d3888fae2d9e98f8bb828",
+    "sha256": "bbbc4fa8408b6818aa35b571abae2f294228da4a004d029bcee53f8054f490e2",
+    "port_sha256": "bbbc4fa8408b6818aa35b571abae2f294228da4a004d029bcee53f8054f490e2",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/FiniteCombinatorialSieve.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/FiniteCombinatorialSieve.lean",
+    "git_blob_sha": "d51f714fdf809fd9a393befa7165a0b7a94481c7",
+    "sha256": "b9eee640e07c47a9c39209395d69c4da7d8834e697c24e53b522ef9379c2efd3",
+    "port_sha256": "bc1b672426bad0baa35cd4ad0288ccad0428e55d8d326a11b012d91dcc243bad",
+    "renames": {
+      "if_pos": "ite_pos"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/FiniteRecursiveBridge.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/FiniteRecursiveBridge.lean",
+    "git_blob_sha": "f39b946677fc6dd6320b63b6acfda99791c2ddcf",
+    "sha256": "ff512f4a0d4d5a14567aa0007eec4c4b77742787fadfcb3a449555b02bd198bc",
+    "port_sha256": "cfcd5acf65766e7ec54becb12e0c5a1d825636b6cfc5343bd794fa319d3e50a5",
+    "renames": {
+      "if_neg": "ite_neg"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/FiniteSieveApplication.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/FiniteSieveApplication.lean",
+    "git_blob_sha": "bdbbab7208aa617b4f37fbf519a21d4a76465634",
+    "sha256": "33de94c90bb4463661f92a648216ccdba1534e9cdb96fb9202de7c0defcd9694",
+    "port_sha256": "ce9920de9d11957b6e829cd5bd30310f237603b6e8c194d031437d1d7f03f338",
+    "renames": {
+      "if_pos": "ite_pos",
+      "if_neg": "ite_neg"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/GeometricBetaTail.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/GeometricBetaTail.lean",
+    "git_blob_sha": "5d1d2f7e549794a6df48a24362c5debdd9e7de64",
+    "sha256": "dfd028331f3f509c216b6401792ada3090d1c9fb3c6c5120d9063dd8d86f9c3e",
+    "port_sha256": "dfd028331f3f509c216b6401792ada3090d1c9fb3c6c5120d9063dd8d86f9c3e",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/LocalEulerProducts.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/LocalEulerProducts.lean",
+    "git_blob_sha": "8ccc1cc6c9de6c88e34a0769e0601d53a3d887b6",
+    "sha256": "f758036e358abd3c2768ce97d02e9d1fd65013319bdccecb3d13be9328411180",
+    "port_sha256": "f758036e358abd3c2768ce97d02e9d1fd65013319bdccecb3d13be9328411180",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/RosserBoundaryEstimate.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/RosserBoundaryEstimate.lean",
+    "git_blob_sha": "281420676b5ed6bd2f9b7924583673866d223521",
+    "sha256": "282555fa63fb02a290c317a6dd76cb247bdbbaa1692e90764a080dcb63dd1d78",
+    "port_sha256": "282555fa63fb02a290c317a6dd76cb247bdbbaa1692e90764a080dcb63dd1d78",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/RosserCore.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/RosserCore.lean",
+    "git_blob_sha": "285559c9999a11e32b9beaeb4b2163aab8c4274b",
+    "sha256": "fd283fd6cf43716b33ee11baf9b5f59ad4e779dd9ba727eaa551a5ed62667518",
+    "port_sha256": "fd283fd6cf43716b33ee11baf9b5f59ad4e779dd9ba727eaa551a5ed62667518",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/ShiftCandidates.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/ShiftCandidates.lean",
+    "git_blob_sha": "129d648300a2b957373b903f7701c2b2eac21284",
+    "sha256": "b2c483937c680cdbaeabcd451bb5f8b3af8c67b9b5b46161a7585e8b0ccf6a2a",
+    "port_sha256": "b2c483937c680cdbaeabcd451bb5f8b3af8c67b9b5b46161a7585e8b0ccf6a2a",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos851/SieveSpecialization.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/SieveSpecialization.lean",
+    "git_blob_sha": "e42c512b72240b8e367a159280e2b18885ae9c19",
+    "sha256": "1337d39a60bce57b5cae7d90ad47f2dacd5870cc548518305c103a8bc35af592",
+    "port_sha256": "1337d39a60bce57b5cae7d90ad47f2dacd5870cc548518305c103a8bc35af592",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "PrimeNumberTheoremAnd/Consequences.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Consequences.lean",
+    "git_blob_sha": "167d52c19bdba66c37fa766415c3bd73105376b0",
+    "sha256": "c53d6857226b3e597174b7f78a9f937219b9b32e57f98f9188649f1ed2babb80",
+    "port_sha256": "c870102a6d8d9b42df5edc2beb46bd97ff447b7b25143a568e29f82bd011a2d7",
+    "renames": {
+      "if_pos": "ite_pos"
+    },
+    "edits": []
+  },
+  {
+    "path": "PrimeNumberTheoremAnd/Defs.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Defs.lean",
+    "git_blob_sha": "b518e3265839a5528e0d03e8797f9830b00c19f6",
+    "sha256": "1e3aba80fc36d4a349940394a6b3e5a0a7f7596d115764b3470d255e111532c4",
+    "port_sha256": "1e3aba80fc36d4a349940394a6b3e5a0a7f7596d115764b3470d255e111532c4",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "PrimeNumberTheoremAnd/Fourier.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Fourier.lean",
+    "git_blob_sha": "c1e2224e30d6c3cf47c27c615958bc5ba8ba8697",
+    "sha256": "5812d352fbc983626ff0b5c1ac51cb35b17008901598feeba9b2382cf10baac0",
+    "port_sha256": "5812d352fbc983626ff0b5c1ac51cb35b17008901598feeba9b2382cf10baac0",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "PrimeNumberTheoremAnd/Mathlib/Algebra/Notation/Support.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Mathlib/Algebra/Notation/Support.lean",
+    "git_blob_sha": "5f0c1f15b4c7e4fe3434271e2c933faa8d93de36",
+    "sha256": "dec487419be00fa77ecfc6273a7451d0c04ea90693ab50566a47ba827c5ab84d",
+    "port_sha256": "dec487419be00fa77ecfc6273a7451d0c04ea90693ab50566a47ba827c5ab84d",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Asymptotics/Asymptotics.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Mathlib/Analysis/Asymptotics/Asymptotics.lean",
+    "git_blob_sha": "93c9e8965476fc23f7718d498d06a98bd0ac5aa3",
+    "sha256": "9ee475ea6d7b4db026c275b9e38326bf88724d2274b948b31fc53d8cf136975d",
+    "port_sha256": "9ee475ea6d7b4db026c275b9e38326bf88724d2274b948b31fc53d8cf136975d",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+    "git_blob_sha": "c8e9edbb3ff2419aa897251b0084b7708ed314c1",
+    "sha256": "21bc8312b14d87e78b42af2d1ab78bfe7ecaa3343f6c32bedd6b2483ef984af5",
+    "port_sha256": "21bc8312b14d87e78b42af2d1ab78bfe7ecaa3343f6c32bedd6b2483ef984af5",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "PrimeNumberTheoremAnd/SmoothExistence.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/SmoothExistence.lean",
+    "git_blob_sha": "c6e892450e964617f0452a4de8e5f02cb830ffc5",
+    "sha256": "5943ee37e08b463e63332c8f3ccc918d734e7bf799705bb3c1a8ff0c35935952",
+    "port_sha256": "5943ee37e08b463e63332c8f3ccc918d734e7bf799705bb3c1a8ff0c35935952",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "PrimeNumberTheoremAnd/Sobolev.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Sobolev.lean",
+    "git_blob_sha": "34ab91738153db4b7ab0b8aa54a110af7c8403b3",
+    "sha256": "17cedc5898d6a696dca9e557bfaafbe1209e4a5252a62baddebc777c2a3a9bb2",
+    "port_sha256": "17cedc5898d6a696dca9e557bfaafbe1209e4a5252a62baddebc777c2a3a9bb2",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "PrimeNumberTheoremAnd/Wiener.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Wiener.lean",
+    "git_blob_sha": "f611176a6e3b6da52d71b6bb5c6ebbf7f971cbdd",
+    "sha256": "5a45e04a848cd76797928286eb1bbfaef2dfb6e541bf3a848dbc5bb9ae4b9f94",
+    "port_sha256": "e4dd77d56e7f497f6d237ffcf3675bf34b07e2fd220cddb4f077b86ba8a8ef55",
+    "renames": {
+      "if_false": "ite_false"
+    },
+    "edits": []
+  },
+  {
+    "path": "UnitFractions/ForMathlib/BasicEstimates.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/UnitFractions/ForMathlib/BasicEstimates.lean",
+    "git_blob_sha": "03b60e969bdc62bbd754b354abb38f830f924d2b",
+    "sha256": "1475f84517f02f43f91563e7852b147d677d661d57e7cac6b4b3120570613775",
+    "port_sha256": "2349dd8dad82fd186fc8af8f7c9c2a23ddb6172dec05aa3df4277b3a0117b70e",
+    "renames": {
+      "if_pos": "ite_pos"
+    },
+    "edits": []
+  },
+  {
+    "path": "UnitFractions/ForMathlib/IntegralRPow.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/UnitFractions/ForMathlib/IntegralRPow.lean",
+    "git_blob_sha": "cf7e020caf33bb6e9778010fe0502674e8f441c8",
+    "sha256": "884ed8b4343eb10c4e5fa123069c9ac584d74123aea3173974bf3afdb6c48134",
+    "port_sha256": "884ed8b4343eb10c4e5fa123069c9ac584d74123aea3173974bf3afdb6c48134",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "UnitFractions/ForMathlib/Misc.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/UnitFractions/ForMathlib/Misc.lean",
+    "git_blob_sha": "58ade79fed4012c36430947467218fa17f8e3b6c",
+    "sha256": "99e31b4fcb5ff24d26b0c9261ca280f4d96aea91e9f1cde7b8ae59a43361f3dd",
+    "port_sha256": "99e31b4fcb5ff24d26b0c9261ca280f4d96aea91e9f1cde7b8ae59a43361f3dd",
+    "renames": {},
+    "edits": []
+  },
+  {
+    "path": "Util/Density.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/Util/Density.lean",
+    "git_blob_sha": "5f9d52018866d9957ea878eb6b60bb943215b1ec",
+    "sha256": "42bab8e8913462b6c0ef71cb7d4694d64c7c74a5ec4365827610f55947c57b0a",
+    "port_sha256": "42bab8e8913462b6c0ef71cb7d4694d64c7c74a5ec4365827610f55947c57b0a",
+    "renames": {},
+    "edits": []
+  }
+]

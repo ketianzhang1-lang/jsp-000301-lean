@@ -1,0 +1,10 @@
+upstream-original/
+upstream-metadata.json
+ErdosProblems/
+PrimeNumberTheoremAnd/
+Util/
+UnitFractions/
+scripts/__pycache__/
+evidence/
+evidence-complete/
+NegativeComplete.lean
