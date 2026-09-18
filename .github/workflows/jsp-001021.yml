@@ -39,6 +39,12 @@ jobs:
       - name: Compile, replay and audit the complete proof
         working-directory: projects/jsp-001021
         run: bash scripts/verify.sh
+      - name: Independent strict-allowlist NaNoda verification
+        working-directory: projects/jsp-001021
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/generated/nanoda
+          bash scripts/verify_nanoda.sh 2>&1 | tee evidence/generated/nanoda/build.log
       - name: Record the executed commit
         if: always()
         working-directory: projects/jsp-001021
