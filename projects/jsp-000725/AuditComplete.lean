@@ -1,0 +1,30 @@
+import JSP000725Complete
+
+#print axioms JSP000725.sum_lower
+#print axioms JSP000725.sum_upper
+#print axioms JSP000725.interval_ordered_sums
+#print axioms JSP000725.interval_admissible
+#print axioms JSP000725.interval_card
+#print axioms JSP000725.length_le_endpoint
+#print axioms JSP000725.construction_for_every_N
+#print axioms JSP000725.even_length_family
+#print axioms JSP000725.sum_block
+#print axioms JSP000725.boundary_obstruction
+#print axioms JSP000725.card_toInt
+#print axioms JSP000725.sum_toInt
+#print axioms JSP000725.admissible_iff_cardinality_determined
+#print axioms JSP000725.admissible_iff_upstream
+#print axioms JSP000725.bounded_iff
+#print axioms JSP000725.boundedAdmissible_iff
+#print axioms JSP000725.exists_nat_preimage
+#print axioms JSP000725.mem_admissibleFamily
+#print axioms JSP000725.maxCard_eq_upstream
+#print axioms JSP000725.strausLength_feasible
+#print axioms JSP000725.terminalInterval_spec
+#print axioms JSP000725.card_le_maxCard
+#print axioms JSP000725.eventual_maxCard_exact
+#print axioms JSP000725.eventual_terminalInterval_optimal
+#print axioms JSP000725.maxCard_asymptotic
+#print axioms JSP000725.jsp_000725
+#print axioms Erdos874.erdos_874_eventual_exact
+#print axioms Erdos874.erdos_874

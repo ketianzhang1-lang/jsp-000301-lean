@@ -1,4 +1,4 @@
-name: JSP-000725 interval construction
+name: JSP-000725 complete admissible-set extremal bound
 on:
   push:
     branches: [jsp-000725-interval]
@@ -9,7 +9,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 60
     defaults:
       run:
         shell: bash
@@ -18,44 +18,47 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
-      - name: Install pinned Lean and locked dependencies
+      - name: Provide swap for kernel replay
+        working-directory: /tmp
+        run: |
+          sudo fallocate -l 8G /swap-jsp725
+          sudo chmod 600 /swap-jsp725
+          sudo mkswap /swap-jsp725
+          sudo swapon /swap-jsp725
+      - name: Install exact toolchain and locked dependencies
         run: |
           set -euo pipefail
           curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
           export PATH="$HOME/.elan/bin:$PATH"
           elan toolchain install "$(cat lean-toolchain)"
-          lake exe cache get
+          test -s lake-manifest.json
+          python3 scripts/bootstrap.py
+          lake exe cache get Mathlib
+          lake build Mathlib
           git diff --exit-code -- lake-manifest.json
-      - name: Compile proof with warnings treated as errors
+      - name: Compile full proof chain, replay, 28 axiom audits and negative control
+        run: bash scripts/verify.sh
+      - name: Independent strict-allowlist NaNoda verification
         run: |
           set -euo pipefail
           mkdir -p evidence
-          lake build --wfail 2>&1 | tee evidence/build.log
-      - name: Replay kernel and audit
-        run: |
-          set -euo pipefail
-          lake env leanchecker --verbose JSP000725 2>&1 | tee evidence/kernel.log
-          lake env lean -DwarningAsError=true Audit.lean 2>&1 | tee evidence/axioms.log
-      - name: Audit allowed axioms and reject a false statement
-        run: |
-          set -euo pipefail
-          python3 audit.py evidence/axioms.log
-          printf 'import JSP000725\nexample : (1 : Nat) = 0 := by decide\n' > NegativeControl.lean
-          if lake env lean NegativeControl.lean > evidence/negative-control.log 2>&1; then
-            echo 'False theorem unexpectedly compiled'; exit 1
-          fi
-          grep -q 'error' evidence/negative-control.log
-      - name: Record tested commit and sources
+          bash scripts/verify_nanoda.sh 2>&1 | tee evidence/nanoda-build.log
+      - name: Archive tested source and logs
         if: always()
         run: |
+          set -euo pipefail
           mkdir -p evidence
           git rev-parse HEAD > evidence/SOURCE_COMMIT
-          sha256sum JSP000725.lean > evidence/SOURCE_SHA256
+          cp lake-manifest.json evidence/
+          git diff --exit-code -- lake-manifest.json
+          tar --exclude=.lake --exclude=evidence -czf evidence/source.tar.gz .
+          sha256sum evidence/source.tar.gz > evidence/ARCHIVE_SHA256
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
           name: jsp-000725-evidence
-          path: projects/jsp-000725/evidence
-          retention-days: 90
+          path: |
+            projects/jsp-000725/evidence
+            projects/jsp-000725/evidence-complete
           if-no-files-found: error
