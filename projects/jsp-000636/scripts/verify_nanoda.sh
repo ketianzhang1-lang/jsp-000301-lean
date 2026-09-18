@@ -22,7 +22,7 @@ cp lean-toolchain "$work/exporter/lean-toolchain"
 (cd "$work/exporter" && lake build)
 (cd "$work/checker" && cargo build --release --locked)
 # Export each named target and its entire dependency closure.
-lake env "$work/exporter/.lake/build/bin/lean4export" Asymptotics -- \
+lake env "$work/exporter/.lake/build/bin/lean4export" OriginalQuestion -- \
   JSP000636.size_count_le JSP000636.exact_multiplicity_card_le \
   JSP000636.sharp_at_four JSP000636.three_is_exception JSP000636.one_is_exception \
   JSP000636.critical_size_bound JSP000636.extremal_critical_le \
@@ -35,6 +35,7 @@ lake env "$work/exporter/.lake/build/bin/lean4export" Asymptotics -- \
   JSP000636.threshold_relative_bound JSP000636.threshold_ratio_bound \
   JSP000636.threshold_ratio_tendsto JSP000636.exact_threshold_estimate \
   JSP000636.jsp_000636_estimate \
+  JSP000636.original_threshold_question JSP000636.jsp_000636 \
   > evidence/export.ndjson
 python3 - <<'PY'
 import json
@@ -57,7 +58,8 @@ config = {
                    "JSP000636.leastThreshold_le", "JSP000636.leastThreshold_bounds",
                    "JSP000636.thin_to_exact", "JSP000636.exact_attaining_family",
                    "JSP000636.exactExtremal", "JSP000636.threshold",
-                   "JSP000636.jsp_000636_estimate", "JSP000636.exact_threshold_estimate"],
+                   "JSP000636.jsp_000636_estimate", "JSP000636.exact_threshold_estimate",
+                   "JSP000636.original_threshold_question", "JSP000636.jsp_000636"],
     "pp_output_path": "evidence/nanoda-statements.txt",
     "pp_to_stdout": False,
     "print_success_message": True,

@@ -1,4 +1,4 @@
-name: JSP-000636 threshold estimates and asymptotics
+name: JSP-000636 complete original threshold estimates
 on:
   push:
     branches: [jsp-000636-antichain-upper, jsp-000636-pair-label-upper-kz]

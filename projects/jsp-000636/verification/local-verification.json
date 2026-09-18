@@ -1,8 +1,25 @@
 {
   "status": "passed",
-  "preparation_head": "d5fc3ee7fc5a452e8104b5099c854a5a15a668bf",
-  "toolchain": "leanprover/lean4:v4.34.0",
+  "utc": "2026-09-18T01:46:23.223160+00:00",
+  "preparation_head": "36da76e793678ee6a062f1703674fd3789334cbd",
   "modules": [
+    "JSP000636",
+    "Lower",
+    "Upper",
+    "Construction",
+    "Threshold",
+    "Thinning",
+    "Asymptotics",
+    "OriginalQuestion"
+  ],
+  "theorem_audits": 79,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "dependency_pins_checked": 9,
+  "unchanged_prior_modules": [
     "JSP000636",
     "Lower",
     "Upper",
@@ -11,14 +28,9 @@
     "Thinning",
     "Asymptotics"
   ],
-  "axiom_reports": 71,
-  "permitted_axioms": [
-    "propext",
-    "Classical.choice",
-    "Quot.sound"
-  ],
-  "dependency_count": 9,
-  "original_six_modules_unchanged": true,
+  "local_build": "Incremental warning-as-error build, using earlier hash-matched project artifacts; new OriginalQuestion module separately compiled. All eight kernel replays and all 79 theorem-closure audits were freshly executed.",
+  "negative_control": "Rejected false arithmetic with the expected is false diagnostic.",
+  "independent_checker": "Not run locally: cargo is unavailable. Public CI separately runs NaNoda.",
   "source_sha256": {
     "JSP000636.lean": "ea51a6baca6bed306a1b71c4fc2023429c6fdf47f00284cc727638afa5284640",
     "Lower.lean": "52febbca28f56fb543da906376d93545e5c307f144344df2b63ce1b5aa9458f4",
@@ -26,7 +38,18 @@
     "Construction.lean": "b0e6fd9ebb89aa9c2e0a6e04b38ef670702bf314202144c5ef99288b53304586",
     "Threshold.lean": "0b62a240f23f6b128050ae8ffc3ca5a8e3b6326ab86b3d6daa84764d057d7437",
     "Thinning.lean": "03e71f68214b7efcad0a48261fd8e48666875866a417b23ddf3ca1bb863c79db",
-    "Asymptotics.lean": "89c6b975c631322b245d652664a69e826c1c85053f6adb33d0c5075b30cf7c16"
+    "Asymptotics.lean": "89c6b975c631322b245d652664a69e826c1c85053f6adb33d0c5075b30cf7c16",
+    "OriginalQuestion.lean": "51d5577cb21fab7d1f8a0881840b29ed4fd6493f74b096c22cda83d09c1f0a1f",
+    "Audit.lean": "a5a366e29a1f182945fb5cd6a6c1ca61470983dcc0c6d25b01cb95adddcbd103"
   },
-  "independent_checker": "Local attempt unavailable: cargo is not installed. No local NaNoda success is claimed. Hosted workflow repeats this additional check."
+  "object_sha256": {
+    "JSP000636": "98be12dd2b96e519cec0dce0dc32748f878ec57624d5f7955e8a0ed701ea4b28",
+    "Lower": "0a9f7647619c533696baab583bc090fb5900f10632cb6756380458b5178ae16d",
+    "Upper": "0232de96d51da779c761a8077f8eeba9b7183605ad95de548eaa5dd46243b8e4",
+    "Construction": "be9d101e2877a1099892441ed1b5cff5992ada2dc2566cfa9a36033b8ed86e1c",
+    "Threshold": "9f187cd961b6479d379c8d6d066130648092a05f0be76729f4d84e852a778e8d",
+    "Thinning": "69622e6ec988d6130e5b0f8fd1c288791c15c5c5391dee09dac282f6a4772c00",
+    "Asymptotics": "9aec5fbcee25d6f4aeb1309beb0f190b2af1a84954cb0c3e2a53cbace518e251",
+    "OriginalQuestion": "60893045c194c2f57fc6022532d405e0b205e1ed92b0ce2ea9321c0b2fef454b"
+  }
 }

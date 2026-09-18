@@ -1,90 +1,93 @@
-# JSP-000636: our threshold estimates and exact-multiplicity bridge
+# JSP-000636: our complete threshold-estimate formalization
 
-We formalize the Erdős–Trotter antichain threshold estimates for all multiplicities
-`r ≥ 2`, and prove the sharp leading asymptotic **`n₀(r) / r → 2`**. Our new
-`Asymptotics.lean` module adds ten theorems to the existing 61-theorem development.
-We developed this implementation under GitHub account `ketianzhang1-lang` with
-OpenAI ChatGPT/Codex assistance.
+We formalize the original Erdős–Trotter threshold-estimate question for every
+multiplicity **r ≥ 2**, on **every finite ground set**, and prove the sharp
+leading growth **n₀(r)/r → 2**. Our development contains eight proof modules and
+79 public theorems. The latest module adds eight original-statement and
+relabeling theorems to the previously verified 71-theorem implementation.
+
+We developed this implementation under GitHub account `ketianzhang1-lang`
+with OpenAI ChatGPT/Codex assistance. We formalize known mathematics; we do
+not claim mathematical discovery or first-formalization priority.
+
+## The original question and its complete endpoint
+
+[He and Tang, Problem 1.1](https://arxiv.org/html/2602.09803v1#S1) reproduces the
+Erdős–Trotter question: for r>1 and all n above a threshold, an antichain with
+exactly r sets at each occurring size can have r(n−3) members but cannot have
+r(n−2); estimate the threshold n₀(r).
+
+**`JSP000636.jsp_000636` in [OriginalQuestion.lean](OriginalQuestion.lean)**
+combines all of the following without unproved extra assumptions:
+
+- For every r≥2, an explicit cutoff N≤2r+4⌊√r⌋+7 works on every finite ground
+  set with n>N elements: an exact-r antichain with r(n−3) members exists,
+  and no such antichain with r(n−2) members exists.
+- `threshold r` is the actual **least** eventual cutoff for the exact-r finite
+  maximum, not a substituted upper cutoff.
+- For every r≥4, **2r+2 ≤ n₀(r) ≤ 2r+4⌊√r⌋+7**.
+- **n₀(r)/r → 2**, with the explicit relative-error estimate already proved in
+  `Asymptotics.lean`.
+
+The exact-r convention counts distinct subsets. Repeated copies cannot supply
+multiplicity. The new injective relabeling results preserve containment, every
+level count and total family size. Any concrete finite set can be used as the
+ground type by taking its subtype. See [STATEMENT_FIDELITY.md](STATEMENT_FIDELITY.md).
+
+The scope is the original **threshold-estimate question**, including all its
+parameters, rather than formalization of every stronger result in the source
+paper. The logarithmic error term, exact small-r values and the stronger
+piecewise exact formula from PR #677 are not claimed here. Their absence does
+not leave a parameter case unproved in the submitted estimates.
 
 ## Our contributions
 
-- We implement a finite maximum using the original **exactly r sets at each
-  occurring size** convention, and prove that it equals the at-least-r maximum.
-- We prove that our threshold is the **least cutoff for this actual maximum**.
-  It is not an arbitrary upper cutoff or an existence-only substitute.
-- We prove a uniform relative-error estimate: for `m ≥ 1` and
-  `r ≥ (8*m+8)^2`,
-  `2*r ≤ n₀(r)` and `m*n₀(r) ≤ (2*m+1)*r`.
-- We deduce the ordinary real limit `n₀(r)/r → 2`.
-- We supply the exact-r extremal statement: for every `r ≥ 2`, an explicit
-  threshold guarantees an antichain of exactly `r*(n-3)` sets, and every
-  admissible antichain has at most this many sets.
+- We separately implement the universal obstruction and the He–Tang lower-bound
+  argument, together with a pair-label specialization of their construction.
+- We formalize levelwise thinning, the exact-r and at-least-r finite maxima,
+  and equality of those maxima.
+- We prove the actual least-threshold correspondence, quantitative relative
+  bounds and the ordinary real limit n₀(r)/r→2.
+- We prove injective relabeling invariance for the entire family, antichain
+  property and every level multiplicity, and transfer the result to arbitrary
+  finite ground types.
+- We provide the literal original existence/impossibility endpoint, full
+  dependency pins, theorem audits, kernel replay and reproducible verification.
 
-The inherited pair-label construction proves
-`2*r+2 ≤ n₀(r) ≤ 2*r+4*floor(sqrt(r))+7` for every `r ≥ 4`.
-Threshold existence and the exact-r construction cover every `r ≥ 2`.
-The six inherited proof modules are unchanged in this revision.
+The seven earlier proof modules are unchanged from
+`36da76e793678ee6a062f1703674fd3789334cbd`. This revision adds
+`OriginalQuestion.lean` and its eight theorems. All proof steps are in this
+implementation or its pinned Mathlib dependencies; no competing prize proof
+is imported.
 
-## Scope and submission status
-
-The primary source, [He and Tang, Problem 1.1](https://arxiv.org/html/2602.09803v1#S1),
-asks for estimates of the eventual threshold. The current theorems provide
-unconditional all-parameter estimates and their leading asymptotic. The paper
-also proves a sharper logarithmic error term and exact values at r=2 and r=3;
-these are not formalized by this package.
-
-A stronger exact-threshold submission already exists in
-[awards PR #677](https://github.com/TheJustinSunPrize/awards/pull/677).
-It states a piecewise formula covering every r≥2, including the exact small-r
-values. We have inspected its public statements and source inventory but have
-not independently rebuilt or certified its full proof chain. Our development
-does not claim that stronger formula, first-formalization priority, or a new
-mathematical discovery.
-
-**This revision remains an estimate supplement to [our existing PR #382](https://github.com/TheJustinSunPrize/awards/pull/382).
-It is not a claim that the prize organizers have accepted the original problem
-as completely formalized by us.** The question of whether the all-parameter
-estimate endpoint meets their full-original-problem requirement remains for
-review. We do not mark the official catalog complete or request an eligibility
-change based on this supplement.
-
-## Exact endpoints
-
-All theorem names below are in namespace `JSP000636`.
-
-| File / theorem | Meaning |
-| --- | --- |
-| `Asymptotics.lean`, `exactExtremal_eq` | Equality of the exact-r and at-least-r maxima for every n and every positive r. |
-| `threshold_exact_spec` | Least-threshold semantics for the original exact-r maximum. |
-| `threshold_relative_bound` | Explicit natural-number relative-error estimate with cutoff `(8*m+8)^2`. |
-| `threshold_ratio_tendsto` | Real limit `n₀(r)/r → 2`. |
-| `exact_threshold_estimate` | Existence of an exact-r attaining family and the matching universal upper bound above an explicit threshold. |
-| `jsp_000636_estimate` | Combined estimate endpoint, leastness, two-sided bounds and the limit. |
-
-The ground set is `Fin n`, and families are finsets of finsets; duplicate sets
-cannot supply multiplicity. `Antichain` is proved equivalent to Mathlib's
-inclusion `IsAntichain`. `exactExtremal` and `extremal` are finite maxima over
-all admissible families. `threshold r` agrees with the proved least threshold
-for r≥2; its value below that domain is an explicitly immaterial convention.
-
-## Mathematical sources and code provenance
+## Sources, prior work and contribution review
 
 Mathematical credit remains with Yixin He and Quanyu Tang,
 *An Erdős–Trotter problem on antichains with multiplicity r on each occurring
-level*, [arXiv:2602.09803v1](https://arxiv.org/abs/2602.09803), and with the
-classical Erdős–Trotter observation. The lower-bound argument and general label
-method follow that source. Our inherited construction specializes the labels
-to two-element sets, giving the coarser square-root error term.
+level*, [arXiv:2602.09803v1](https://arxiv.org/abs/2602.09803), and the classical
+Erdős–Trotter observation. The lower-bound argument and general label method
+follow that source. Our pair labels give a coarser square-root error term than
+the paper's logarithmic error term, while retaining the sharp leading constant.
 
-The new ten-theorem module derives consequences from our existing implementation
-and Mathlib. See [PROVENANCE.md](PROVENANCE.md) for exact source lineage,
-retained notices and the competing public submission.
+[PR #677](https://github.com/TheJustinSunPrize/awards/pull/677), by
+`peilinliu66-dev`, already proposes a stronger exact formula. Its public
+statements and source inventory were inspected; its full proof chain was not
+independently rebuilt here. Its priority and attribution are retained in
+[PROVENANCE.md](PROVENANCE.md). We claim neither that formula nor priority over
+that submission.
+
+We update existing [PR #382](https://github.com/TheJustinSunPrize/awards/pull/382)
+with this complete original-threshold-estimate endpoint for maintainer review.
+The awards PR contains catalog text and fixed proof references only.
+Statement coverage, independent implementation, and an award decision are
+separate questions. We request assessment of our concrete formalization
+contributions; organizer acceptance and award eligibility remain pending.
 
 ## Reproduction
 
-Lean is pinned to 4.34.0, Mathlib to
-`5ed2965256430c3649e86755f9576b54eca72435`, and nine package revisions are locked
-in `lake-manifest.json`. From `projects/jsp-000636`:
+Lean is pinned to **4.34.0**, Mathlib to
+`5ed2965256430c3649e86755f9576b54eca72435`, and all nine package revisions are
+locked in `lake-manifest.json`. From `projects/jsp-000636` at the selected commit:
 
 ```sh
 lake exe cache get
@@ -92,13 +95,13 @@ bash scripts/verify.sh
 bash scripts/verify_nanoda.sh
 ```
 
-The first verifier compiles seven modules with warnings as errors, replays each
-with Lean's bundled checker, audits all 71 theorem closures, checks all dependency
-revisions and rejects a false-arithmetic control. The second exports the listed
-endpoints and their complete dependency closures for the separately implemented
-NaNoda checker with a strict three-axiom allowlist.
+The first verifier compiles eight modules with warnings as errors, replays all
+eight with Lean's kernel, audits all 79 public theorem closures, checks actual
+dependency revisions and rejects a false-arithmetic control. The second exports
+the final endpoints and their dependency closures to the separately implemented
+NaNoda checker with a strict three-axiom allowlist. Keep the committed manifest.
 
-Executed results and their limitations are recorded in
-[VERIFICATION.md](VERIFICATION.md). The workflow repeats these checks on pushes
-to the existing proof branch. Source code is Apache-2.0 (`LICENSE.LEAN`);
-mathematical sources retain their authorship.
+[VERIFICATION.md](VERIFICATION.md) distinguishes executed local checks, public
+workflow results and their limits. A configured checker is not a successful
+check. Source code is Apache-2.0 (`LICENSE.LEAN`); mathematical sources retain
+their authorship.

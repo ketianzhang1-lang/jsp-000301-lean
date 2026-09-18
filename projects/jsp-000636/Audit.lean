@@ -1,4 +1,4 @@
-import Asymptotics
+import OriginalQuestion
 
 #print axioms JSP000636.antichain_iff_isAntichain
 #print axioms JSP000636.twins_of_multiplicity
@@ -71,3 +71,11 @@ import Asymptotics
 #print axioms JSP000636.threshold_ratio_tendsto
 #print axioms JSP000636.exact_threshold_estimate
 #print axioms JSP000636.jsp_000636_estimate
+#print axioms JSP000636.mapFamily_card
+#print axioms JSP000636.mapFamily_level_card
+#print axioms JSP000636.mapFamily_antichain_iff
+#print axioms JSP000636.mapFamily_exact_iff
+#print axioms JSP000636.finite_type_card_le
+#print axioms JSP000636.finite_type_attaining_family
+#print axioms JSP000636.original_threshold_question
+#print axioms JSP000636.jsp_000636

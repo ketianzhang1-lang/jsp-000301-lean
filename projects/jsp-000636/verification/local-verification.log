@@ -1,4 +1,5 @@
-Build completed successfully (3099 jobs).
+✔ [3099/3100] Built OriginalQuestion (3.2s)
+Build completed successfully (3100 jobs).
 Kernel replay passed: JSP000636
 Kernel replay passed: Lower
 Kernel replay passed: Upper
@@ -6,6 +7,7 @@ Kernel replay passed: Construction
 Kernel replay passed: Threshold
 Kernel replay passed: Thinning
 Kernel replay passed: Asymptotics
+Kernel replay passed: OriginalQuestion
 'JSP000636.antichain_iff_isAntichain' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JSP000636.twins_of_multiplicity' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JSP000636.card_pos_of_twins' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -77,5 +79,13 @@ Kernel replay passed: Asymptotics
 'JSP000636.threshold_ratio_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JSP000636.exact_threshold_estimate' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JSP000636.jsp_000636_estimate' depends on axioms: [propext, Classical.choice, Quot.sound]
-All 71 theorem axiom audits and dependency pins passed.
+'JSP000636.mapFamily_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000636.mapFamily_level_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000636.mapFamily_antichain_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000636.mapFamily_exact_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000636.finite_type_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000636.finite_type_attaining_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000636.original_threshold_question' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000636.jsp_000636' depends on axioms: [propext, Classical.choice, Quot.sound]
+All 79 theorem axiom audits and dependency pins passed.
 False arithmetic rejected as required.
