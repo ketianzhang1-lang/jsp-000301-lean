@@ -5,6 +5,13 @@ that almost all consecutive-prime gaps contain an interior natural number whose
 least prime factor is at least the gap length. The catalog's short wording
 must not be read as a claim about every individual gap.
 
+The source paper's [Theorem 1.1 and the paragraph immediately following it](https://arxiv.org/html/2508.06463v1)
+explicitly identify the vanishing proportion among the first N prime gaps as
+the prediction of Erdős. Its Section 2 also states that even the weaker bound
+proved there suffices to resolve the original question. Our endpoint asserts
+this complete density conclusion; it does not claim every quantitative or
+conditional refinement in the paper.
+
 We use `Erdos682.nthPrime n = Nat.nth Nat.Prime n`, indexed from zero.
 `lower_add_gap` proves reconstruction of the next prime without excluding the
 first index. `badGap_iff_exceptional` proves that our original `BadGap` predicate
