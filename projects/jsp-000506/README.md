@@ -1,29 +1,62 @@
-# JSP-000506: complete-statement integration in preparation
+# JSP-000506: full random-graph gap and exact finite-model bridges
 
-This branch retains our original finite concentration proof and develops the
-bridges to the complete original Erdős 625 asymptotic statement. Verification
-of the integrated package is in progress; this preparation commit does not
-claim a successful complete build.
+We integrate the complete original Erdős 625 statement with our retained
+finite concentration proof. The main endpoint is `JSP000506.jsp_000506`:
+for every fixed natural threshold, the probability that the chromatic minus
+cochromatic number meets that threshold tends to one along all graph orders.
+The integrated source is undergoing full verification; the earlier finite
+proof's successful run does not certify this new package.
 
-The unchanged upstream source is by **Samuil Petkov**, *Erdős Problem 625:
-Manuscript and Lean Formalization*, https://github.com/SamPetkov/Erdos,
-licensed under **CC BY 4.0**. We pin source commit
-`b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea` and preserve the original source bytes,
-license, license-scope document and citation. `UPSTREAM.json` records the URL
-and both Git and SHA-256 hashes. No changes are made to the upstream proof.
-The single upstream file contains its complete 480-module source closure.
+## Proof and contribution
 
-Our `JSP000506.lean` is unchanged from the preceding branch. Our new
-`JSP000506Bridge.lean` and `JSP000506Complete.lean` connect graph encodings,
-colouring invariants, exact counting probabilities and fixed-threshold limits.
-Our local files use Apache 2.0; that license does not relicense Petkov's work.
-The original finite result's mathematics is due to Annika Heckel.
+Our `JSP000506.lean` preserves all 19 original theorems byte-for-byte. Its
+mathematics formalizes Annika Heckel's finite concentration reduction.
+Our new `JSP000506Bridge.lean` and `JSP000506Complete.lean` add 26 theorems:
 
-Lean and Mathlib are fixed to 4.31.0 to preserve the complete proof unchanged.
-`python3 scripts/bootstrap.py` reconstructs all exact upstream files.
-The preparation workflow builds the pinned dependencies and checks the
-unchanged upstream and original finite proof. The original historical
-partial-scope documentation remains in files prefixed `INITIAL_PARTIAL_`.
+- a bijection between finite edge sets and Mathlib simple graphs;
+- equivalence of colourings, cocolourings and both minimum invariants;
+- exact equality of rational counting probability and `G(n,1/2)` probability;
+- transfer of the quantitative bound, divergence of its positive scale, and
+  the original fixed-threshold conclusion along the full sequence;
+- vanishing small-gap probability and eventual failure of the earlier
+  small-gap premise at every fixed width.
 
-We claim our finite formalization, model bridges and integration work, not
-ownership or first-formalization priority for the imported complete proof.
+`complete_package` combines the full asymptotic endpoint with the retained
+finite theorem. The asymptotic endpoint assumes no small-gap hypothesis.
+See [statement correspondence](STATEMENT_FIDELITY.md) and
+[contribution provenance](PROVENANCE.md) for exact scope.
+
+The unchanged complete quantitative proof is by **Samuil Petkov**, from
+[SamPetkov/Erdos](https://github.com/SamPetkov/Erdos), pinned at
+`b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea`, under **CC BY 4.0**. Its single
+self-contained file preserves all 480 embedded source modules. We retain
+the license, license-scope notice, citation and immutable source hashes.
+Our local Apache 2.0 files do not relicense Petkov's work. We claim our finite
+formalization, model/probability bridges, consequences and verification, not
+authorship or first-formalization priority for the imported complete proof.
+
+## Reproduce
+
+Use the selected proof commit listed in [VERIFICATION.md](VERIFICATION.md),
+with the committed lockfile and Lean toolchain unchanged:
+
+```sh
+cd projects/jsp-000506
+python3 scripts/bootstrap.py
+lake exe cache get Mathlib
+lake build Mathlib
+bash scripts/verify.sh
+bash scripts/verify_nanoda.sh
+```
+
+Lean and Mathlib are fixed to 4.31.0, with nine dependency revisions checked.
+The first script compiles five source units, audits 49 theorem closures,
+replays four module prefixes through Lean's kernel, and rejects a false
+arithmetic negative control. The second exports the same 49 targets to a
+pinned independent NaNoda checker. Only `propext`, `Classical.choice` and
+`Quot.sound` are allowed. A clean hosted run provides the final receipt.
+
+Files prefixed `INITIAL_PARTIAL_` preserve the earlier partial submission.
+Their scope statements apply to that historical version. The existing
+submission is [awards PR #363](https://github.com/TheJustinSunPrize/awards/pull/363).
+Machine verification does not establish maintainer acceptance or award eligibility.

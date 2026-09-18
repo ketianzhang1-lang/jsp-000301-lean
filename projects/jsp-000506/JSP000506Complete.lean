@@ -25,11 +25,15 @@ def gapProbability (n : ℕ) (threshold : ℝ) : ℝ :=
 
 theorem gapProbability_nonneg (n : ℕ) (threshold : ℝ) :
     0 ≤ gapProbability n threshold := by
-  exact_mod_cast mass_nonneg _
+  unfold gapProbability
+  exact_mod_cast (mass_nonneg (event fun s : Finset (Edge n) =>
+    threshold ≤ ((chi s - zeta s : ℕ) : ℝ)))
 
 theorem gapProbability_le_one (n : ℕ) (threshold : ℝ) :
     gapProbability n threshold ≤ 1 := by
-  exact_mod_cast mass_le_one _
+  unfold gapProbability
+  exact_mod_cast (mass_le_one (event fun s : Finset (Edge n) =>
+    threshold ≤ ((chi s - zeta s : ℕ) : ℝ)))
 
 theorem gapProbability_antitone (n : ℕ) : Antitone (gapProbability n) := by
   intro a b hab
@@ -46,7 +50,9 @@ theorem gapProbability_eq_standard (n : ℕ) (threshold : ℝ) :
           (Erdos625.cochromaticNumber G : ℝ)}).toReal := by
   unfold gapProbability
   simp only [gap_cast_eq]
-  exact mass_event_eq_randomGraph n _
+  exact mass_event_eq_randomGraph n (fun G =>
+    threshold ≤ (Erdos625.chromaticNumberNat G : ℝ) -
+      (Erdos625.cochromaticNumber G : ℝ))
 
 /-- The full quantitative theorem transferred to our exact counting model. -/
 theorem quantitative_gap_tendsto_one :
@@ -63,9 +69,11 @@ theorem gapScale_tendsto_atTop : Tendsto Erdos625.gapScale atTop atTop := by
   have h' : Tendsto (fun n : ℕ => (n : ℝ) / Real.log (n : ℝ) ^ 3) atTop atTop := by
     apply h.congr'
     filter_upwards [eventually_ge_atTop 1] with n hn
-    rw [Function.comp_apply, Real.exp_log (by exact_mod_cast hn)]
+    rw [Function.comp_apply, Real.exp_log (by exact_mod_cast (show 0 < n by omega))]
   have hc := h'.const_mul_atTop Erdos625.gapConstant_pos
-  simpa only [Erdos625.gapScale, mul_div_assoc] using hc
+  change Tendsto (fun n : ℕ => Erdos625.gapConstant * (n : ℝ) /
+    Real.log (n : ℝ) ^ 3) atTop atTop
+  simpa only [mul_div_assoc] using hc
 
 /-- Any deterministic threshold eventually below the proven scale is met
 with probability tending to one. This includes nonmonotone thresholds. -/
@@ -86,7 +94,9 @@ theorem fixed_threshold_tendsto_one (M : ℝ) :
 theorem small_gap_probability_tendsto_zero (g : ℕ) :
     Tendsto (fun n => (mass (event fun s : Finset (Edge n) =>
       chi s - zeta s ≤ g) : ℝ)) atTop (𝓝 0) := by
-  have h := tendsto_const_nhds.sub (fixed_threshold_tendsto_one (g + 1 : ℝ))
+  have h : Tendsto (fun n => 1 - gapProbability n (g + 1 : ℝ))
+      atTop (𝓝 (1 - 1 : ℝ)) :=
+    tendsto_const_nhds.sub (fixed_threshold_tendsto_one (g + 1 : ℝ))
   have heq (n : ℕ) :
       (mass (event fun s : Finset (Edge n) => chi s - zeta s ≤ g) : ℝ) =
         1 - gapProbability n (g + 1 : ℝ) := by
@@ -95,7 +105,6 @@ theorem small_gap_probability_tendsto_zero (g : ℕ) :
           (g + 1 : ℝ) ≤ ((chi s - zeta s : ℕ) : ℝ))ᶜ := by
       ext s
       simp only [mem_event, mem_compl]
-      push_cast
       norm_cast
       omega
     rw [hevent, mass_compl]
@@ -112,9 +121,10 @@ theorem eventually_not_heckel_premise (g : ℕ) :
     (gt_mem_nhds (by norm_num : (0 : ℝ) < 999 / 1000))
   filter_upwards [h] with n hn
   intro hbad
-  have hb : (999 : ℝ) / 1000 ≤
+  have hb : (((999 : ℚ) / 1000 : ℚ) : ℝ) ≤
       (mass (event fun s : Finset (Edge n) => chi s - zeta s ≤ g) : ℝ) := by
-    exact_mod_cast hbad
+    exact Rat.cast_le.mpr hbad
+  norm_num only [Rat.cast_div, Rat.cast_ofNat] at hb
   linarith
 
 /-- Complete original statement with literal rational counting probabilities. -/

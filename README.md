@@ -1,3 +1,17 @@
+# JSP-000506 complete formalization branch
+
+This branch contains the JSP-000506 / Erdős 625 development in
+[projects/jsp-000506](projects/jsp-000506/README.md): our preserved finite
+concentration proof and new graph-model, exact-probability and threshold
+bridges to Samuil Petkov's attributed complete quantitative proof.
+The integrated verification receipt is maintained in that project.
+
+The repository name records its first project, JSP-000301. The older root
+project and its historical documentation are retained below; the JSP-000506
+build is in the linked subdirectory.
+
+---
+
 # JSP-000301 — Lean 4 formalization
 
 This project formalizes the **already-known** counterexample to the catalog question:
