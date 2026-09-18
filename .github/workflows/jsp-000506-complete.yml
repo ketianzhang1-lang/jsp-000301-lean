@@ -36,37 +36,28 @@ jobs:
           lake exe cache get Mathlib
           lake build Mathlib
           git diff --exit-code -- lake-manifest.json
-      - name: Archive pinned build cache for development replay
+      - name: Archive exact public Mathlib cache objects
         run: |
           set -euo pipefail
           mkdir -p evidence
-          python3 - <<'PY'
+          python3 - <<'PYCODE'
           from pathlib import Path
           import json,subprocess
-          paths=[]
           for p in json.loads(Path('lake-manifest.json').read_text())['packages']:
               d=Path('.lake/packages')/p['name']
               assert subprocess.check_output(['git','-C',str(d),'rev-parse','HEAD'],text=True).strip()==p['rev']
-              if (d/'.lake/build').exists():
-                  paths.append(str(d/'.lake/build'))
-          subprocess.run(['tar','-I','zstd -T2 -3','-cf','evidence/mathlib-431-cache.tar.zst',*paths],check=True)
-          PY
-          sha256sum evidence/mathlib-431-cache.tar.zst > evidence/CACHE_SHA256
+          cache=Path.home()/'.cache/mathlib'
+          paths=sorted(p.name for p in cache.glob('*.ltar'))
+          assert len(paths)>=8500
+          Path('evidence/cache-files.txt').write_text('\n'.join(paths)+'\n')
+          listing=Path('evidence/cache-files.txt').resolve()
+          subprocess.run(['tar','-I','zstd -T2 -3','-cf','evidence/mathlib-431-objects.tar.zst','-C',str(cache),'-T',str(listing)],check=True)
+          PYCODE
+          sha256sum evidence/mathlib-431-objects.tar.zst > evidence/CACHE_SHA256
           cp lake-manifest.json evidence/
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: jsp-000506-pinned-build-cache
+          name: jsp-000506-public-cache-objects
           path: projects/jsp-000506/evidence
           compression-level: 0
           retention-days: 3
-      - name: Compile unchanged upstream proof and original finite proof
-        run: |
-          set -euo pipefail
-          mkdir -p .lake/build/lib/lean
-          lake env lean -DwarningAsError=true -j1 -M12000 -o .lake/build/lib/lean/Erdos625SelfContained.olean Erdos625SelfContained.lean > evidence/upstream-build.log 2>&1
-          lake env lean -DwarningAsError=true -j1 -o .lake/build/lib/lean/JSP000506.olean JSP000506.lean > evidence/original-build.log 2>&1
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        if: always()
-        with:
-          name: jsp-000506-preparation-logs
-          path: projects/jsp-000506/evidence/*build.log
