@@ -1,0 +1,30 @@
+{
+  "head_sha": "2aca2f16eba715d7ad672dfa017481b647c00063",
+  "run_id": 35395208909,
+  "run_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35395208909",
+  "job_id": 105762358357,
+  "conclusion": "success",
+  "completed_at": "2026-09-18T21:35:58Z",
+  "modules_compiled": 5,
+  "upstream_embedded_source_modules": 480,
+  "axiom_reports": 49,
+  "nanoda_declarations": 60132,
+  "all_complete_checks_passed": true,
+  "artifact_id": 10568293067,
+  "artifact_digest": "sha256:7c54f1fa60d83f744ea7a6e470f195e5ca111e049427b696e9d0554841ecefc6",
+  "artifact_size_bytes": 77155430,
+  "artifact_expires_at": "2026-12-17T21:08:23Z",
+  "kernel_prefixes": [
+    "Erdos625SelfContained",
+    "JSP000506",
+    "JSP000506Bridge",
+    "JSP000506Complete"
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "dependency_count": 9,
+  "upstream_commit": "b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea"
+}
