@@ -62,8 +62,10 @@ The full verifier compiles 66 modules, audits 61 theorem closures, replays the
 proof modules and rejects a false-arithmetic control. The second script checks
 all 61 exported targets with pinned NaNoda and a strict axiom allowlist.
 
-Consult [VERIFICATION.md](VERIFICATION.md) for checks actually executed. A
-workflow definition alone does not establish a passing run. This package updates
+The [public verification run](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35332110641) passed at the exact
+proof commit `9661ef0f170e750b1ac2153b9017bad86044680c`. NaNoda checked
+48,436 declarations with no errors. [VERIFICATION.md](VERIFICATION.md)
+records the pinned inputs, committed logs and verification limits. This package updates
 [existing PR #432](https://github.com/TheJustinSunPrize/awards/pull/432).
 Maintainers must still assess statement fidelity, attribution, contribution
 eligibility and any award claim.

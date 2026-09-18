@@ -1,0 +1,616 @@
+﻿2026-09-18T09:56:13.7322980Z Current runner version: '2.337.0'
+2026-09-18T09:56:13.7342490Z ##[group]Runner Image Provisioner
+2026-09-18T09:56:13.7343034Z Hosted Compute Agent
+2026-09-18T09:56:13.7343521Z Version: 20260828.587
+2026-09-18T09:56:13.7343974Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-18T09:56:13.7344488Z Build Date: 2026-08-28T16:44:25Z
+2026-09-18T09:56:13.7344979Z Worker ID: {d28c2b88-fe5b-4ef5-8d6b-7d57c41c9107}
+2026-09-18T09:56:13.7345437Z Azure Region: centralus
+2026-09-18T09:56:13.7345887Z ##[endgroup]
+2026-09-18T09:56:13.7346841Z ##[group]Operating System
+2026-09-18T09:56:13.7347422Z Ubuntu
+2026-09-18T09:56:13.7347762Z 24.04.5
+2026-09-18T09:56:13.7348093Z LTS
+2026-09-18T09:56:13.7348469Z ##[endgroup]
+2026-09-18T09:56:13.7348850Z ##[group]Runner Image
+2026-09-18T09:56:13.7349221Z Image: ubuntu-24.04
+2026-09-18T09:56:13.7349664Z Version: 20260907.300.1
+2026-09-18T09:56:13.7350823Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260907.300/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-18T09:56:13.7351772Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260907.300
+2026-09-18T09:56:13.7352390Z ##[endgroup]
+2026-09-18T09:56:13.7353132Z ##[group]GITHUB_TOKEN Permissions
+2026-09-18T09:56:13.7354595Z Contents: read
+2026-09-18T09:56:13.7355010Z Metadata: read
+2026-09-18T09:56:13.7355376Z ##[endgroup]
+2026-09-18T09:56:13.7356842Z Secret source: Actions
+2026-09-18T09:56:13.7357575Z Cache mode: write
+2026-09-18T09:56:13.7358246Z Prepare workflow directory
+2026-09-18T09:56:13.7629099Z Prepare all required actions
+2026-09-18T09:56:13.7660914Z Getting action download info
+2026-09-18T09:56:13.9972927Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-09-18T09:56:14.0904463Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-09-18T09:56:14.7274114Z Complete job name: verify
+2026-09-18T09:56:14.7766820Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-18T09:56:14.7772287Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-09-18T09:56:14.7772768Z with:
+2026-09-18T09:56:14.7773026Z   persist-credentials: false
+2026-09-18T09:56:14.7773356Z   repository: ketianzhang1-lang/jsp-000301-lean
+2026-09-18T09:56:14.7775539Z   token: ***
+2026-09-18T09:56:14.7775784Z   ssh-strict: true
+2026-09-18T09:56:14.7776038Z   ssh-user: git
+2026-09-18T09:56:14.7776283Z   clean: true
+2026-09-18T09:56:14.7776544Z   sparse-checkout-cone-mode: true
+2026-09-18T09:56:14.7776851Z   fetch-depth: 1
+2026-09-18T09:56:14.7777325Z   fetch-tags: false
+2026-09-18T09:56:14.7777585Z   show-progress: true
+2026-09-18T09:56:14.7777897Z   lfs: false
+2026-09-18T09:56:14.7778167Z   submodules: false
+2026-09-18T09:56:14.7778427Z   set-safe-directory: true
+2026-09-18T09:56:14.7778720Z   allow-unsafe-pr-checkout: false
+2026-09-18T09:56:14.7779124Z ##[endgroup]
+2026-09-18T09:56:14.8451358Z Syncing repository: ketianzhang1-lang/jsp-000301-lean
+2026-09-18T09:56:14.8453205Z ##[group]Getting Git version info
+2026-09-18T09:56:14.8453873Z Working directory is '/home/runner/work/jsp-000301-lean/jsp-000301-lean'
+2026-09-18T09:56:14.8454913Z [command]/usr/bin/git version
+2026-09-18T09:56:14.8533932Z git version 2.55.0
+2026-09-18T09:56:14.8559196Z ##[endgroup]
+2026-09-18T09:56:14.8565251Z Temporarily overriding HOME='/home/runner/work/_temp/46fe61b9-533c-46b3-9574-788704437116' before making global git config changes
+2026-09-18T09:56:14.8566756Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-18T09:56:14.8568470Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/jsp-000301-lean/jsp-000301-lean
+2026-09-18T09:56:14.8730503Z Deleting the contents of '/home/runner/work/jsp-000301-lean/jsp-000301-lean'
+2026-09-18T09:56:14.8735816Z ##[group]Initializing the repository
+2026-09-18T09:56:14.8740346Z [command]/usr/bin/git init /home/runner/work/jsp-000301-lean/jsp-000301-lean
+2026-09-18T09:56:14.9017543Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-18T09:56:14.9018841Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-18T09:56:14.9020273Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-18T09:56:14.9021090Z hint: call:
+2026-09-18T09:56:14.9021515Z hint:
+2026-09-18T09:56:14.9021944Z hint: 	git config --global init.defaultBranch <name>
+2026-09-18T09:56:14.9022407Z hint:
+2026-09-18T09:56:14.9022841Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-18T09:56:14.9023737Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-18T09:56:14.9024635Z hint:
+2026-09-18T09:56:14.9025009Z hint: 	git branch -m <name>
+2026-09-18T09:56:14.9025424Z hint:
+2026-09-18T09:56:14.9025849Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-18T09:56:14.9026510Z Initialized empty Git repository in /home/runner/work/jsp-000301-lean/jsp-000301-lean/.git/
+2026-09-18T09:56:14.9028414Z [command]/usr/bin/git remote add origin https://github.com/ketianzhang1-lang/jsp-000301-lean
+2026-09-18T09:56:14.9115421Z ##[endgroup]
+2026-09-18T09:56:14.9116223Z ##[group]Disabling automatic garbage collection
+2026-09-18T09:56:14.9118740Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-18T09:56:14.9213059Z ##[endgroup]
+2026-09-18T09:56:14.9213734Z ##[group]Setting up auth
+2026-09-18T09:56:14.9214650Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-18T09:56:14.9243025Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-18T09:56:14.9522849Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-18T09:56:14.9550424Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-18T09:56:14.9721600Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-18T09:56:14.9747307Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-18T09:56:14.9915975Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-18T09:56:15.1016183Z ##[endgroup]
+2026-09-18T09:56:15.1017313Z ##[group]Fetching the repository
+2026-09-18T09:56:15.1023814Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +9661ef0f170e750b1ac2153b9017bad86044680c:refs/remotes/origin/catlin-sharp-kz
+2026-09-18T09:56:15.4713718Z From https://github.com/ketianzhang1-lang/jsp-000301-lean
+2026-09-18T09:56:15.4714993Z  * [new ref]         9661ef0f170e750b1ac2153b9017bad86044680c -> origin/catlin-sharp-kz
+2026-09-18T09:56:15.4718027Z ##[endgroup]
+2026-09-18T09:56:15.4718895Z ##[group]Determining the checkout info
+2026-09-18T09:56:15.4719912Z ##[endgroup]
+2026-09-18T09:56:15.4724002Z [command]/usr/bin/git sparse-checkout disable
+2026-09-18T09:56:15.4855319Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-18T09:56:15.4940396Z ##[group]Checking out the ref
+2026-09-18T09:56:15.4943189Z [command]/usr/bin/git checkout --progress --force -B catlin-sharp-kz refs/remotes/origin/catlin-sharp-kz
+2026-09-18T09:56:15.5145045Z Switched to a new branch 'catlin-sharp-kz'
+2026-09-18T09:56:15.5165981Z branch 'catlin-sharp-kz' set up to track 'origin/catlin-sharp-kz'.
+2026-09-18T09:56:15.5168361Z ##[endgroup]
+2026-09-18T09:56:15.5185518Z [command]/usr/bin/git log -1 --format=%H
+2026-09-18T09:56:15.5206561Z 9661ef0f170e750b1ac2153b9017bad86044680c
+2026-09-18T09:56:15.5213250Z ##[group]Removing auth
+2026-09-18T09:56:15.5215298Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-18T09:56:15.5240559Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-18T09:56:15.5402356Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-18T09:56:15.5423017Z http.https://github.com/.extraheader
+2026-09-18T09:56:15.5427502Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-18T09:56:15.5461027Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-18T09:56:15.5616081Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-18T09:56:15.5639816Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-18T09:56:15.5801483Z ##[endgroup]
+2026-09-18T09:56:15.5969404Z ##[group]Run sudo fallocate -l 8G /swap-jsp585
+2026-09-18T09:56:15.5970642Z [36;1msudo fallocate -l 8G /swap-jsp585[0m
+2026-09-18T09:56:15.5971751Z [36;1msudo chmod 600 /swap-jsp585[0m
+2026-09-18T09:56:15.5972785Z [36;1msudo mkswap /swap-jsp585[0m
+2026-09-18T09:56:15.5973789Z [36;1msudo swapon /swap-jsp585[0m
+2026-09-18T09:56:15.6009978Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-18T09:56:15.6010859Z ##[endgroup]
+2026-09-18T09:56:15.7261824Z Setting up swapspace version 1, size = 8 GiB (8589930496 bytes)
+2026-09-18T09:56:15.7263189Z no label, UUID=77e7caab-f059-42fa-b817-8578a15db5b3
+2026-09-18T09:56:15.7400131Z ##[group]Run set -euo pipefail
+2026-09-18T09:56:15.7400830Z [36;1mset -euo pipefail[0m
+2026-09-18T09:56:15.7401919Z [36;1mcurl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none[0m
+2026-09-18T09:56:15.7403145Z [36;1mecho "$HOME/.elan/bin" >> "$GITHUB_PATH"[0m
+2026-09-18T09:56:15.7403975Z [36;1mexport PATH="$HOME/.elan/bin:$PATH"[0m
+2026-09-18T09:56:15.7404826Z [36;1melan toolchain install "$(cat lean-toolchain)"[0m
+2026-09-18T09:56:15.7405664Z [36;1mtest -s lake-manifest.json[0m
+2026-09-18T09:56:15.7406384Z [36;1mpython3 scripts/bootstrap.py[0m
+2026-09-18T09:56:15.7407242Z [36;1mlake exe cache get Mathlib[0m
+2026-09-18T09:56:15.7407915Z [36;1mlake build Mathlib[0m
+2026-09-18T09:56:15.7408622Z [36;1mgit diff --exit-code -- lake-manifest.json[0m
+2026-09-18T09:56:15.7440895Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-18T09:56:15.7441735Z ##[endgroup]
+2026-09-18T09:56:15.9583597Z info: downloading installer
+2026-09-18T09:56:17.5273297Z info: downloading https://releases.lean-lang.org/lean4/v4.34.0/lean-4.34.0-linux.tar.zst
+2026-09-18T09:56:22.3323153Z info: installing /home/runner/.elan/toolchains/leanprover--lean4---v4.34.0
+2026-09-18T09:56:32.2771786Z 
+2026-09-18T09:56:32.3146015Z leanprover/lean4:v4.34.0 installed - Lean (version 4.34.0, x86_64-unknown-linux-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)
+2026-09-18T09:56:32.3146866Z 
+2026-09-18T09:56:42.0703709Z Verified upstream: ErdosProblems/Erdos599/Countable.lean
+2026-09-18T09:56:42.0704515Z Verified upstream: ErdosProblems/Erdos717.lean
+2026-09-18T09:56:42.0704880Z Verified upstream: ErdosProblems/Erdos717/ClaimTwo.lean
+2026-09-18T09:56:42.0705251Z Verified upstream: ErdosProblems/Erdos717/ContractLinkage.lean
+2026-09-18T09:56:42.0705638Z Verified upstream: ErdosProblems/Erdos717/ContractRigidity.lean
+2026-09-18T09:56:42.0706015Z Verified upstream: ErdosProblems/Erdos717/DegreePruning.lean
+2026-09-18T09:56:42.0706844Z Verified upstream: ErdosProblems/Erdos717/DenseLogArithmetic.lean
+2026-09-18T09:56:42.0707393Z Verified upstream: ErdosProblems/Erdos717/DenseMinor.lean
+2026-09-18T09:56:42.0707791Z Verified upstream: ErdosProblems/Erdos717/DenseNeighborhood.lean
+2026-09-18T09:56:42.0708236Z Verified upstream: ErdosProblems/Erdos717/DensePotential.lean
+2026-09-18T09:56:42.0708641Z Verified upstream: ErdosProblems/Erdos717/DenseReservoir.lean
+2026-09-18T09:56:42.0709010Z Verified upstream: ErdosProblems/Erdos717/DenseStep.lean
+2026-09-18T09:56:42.0709252Z Verified upstream: ErdosProblems/Erdos717/DensityTheorem.lean
+2026-09-18T09:56:42.0709525Z Verified upstream: ErdosProblems/Erdos717/DependentRandomChoice.lean
+2026-09-18T09:56:42.0709796Z Verified upstream: ErdosProblems/Erdos717/EmbeddedLinkage.lean
+2026-09-18T09:56:42.0710039Z Verified upstream: ErdosProblems/Erdos717/FullArms.lean
+2026-09-18T09:56:42.0710278Z Verified upstream: ErdosProblems/Erdos717/GlobalArithmetic.lean
+2026-09-18T09:56:42.0710527Z Verified upstream: ErdosProblems/Erdos717/GlueLinkage.lean
+2026-09-18T09:56:42.0710774Z Verified upstream: ErdosProblems/Erdos717/GreedySelection.lean
+2026-09-18T09:56:42.0711018Z Verified upstream: ErdosProblems/Erdos717/InduceLinkage.lean
+2026-09-18T09:56:42.0711255Z Verified upstream: ErdosProblems/Erdos717/LeftTorsoMass.lean
+2026-09-18T09:56:42.0711516Z Verified upstream: ErdosProblems/Erdos717/LocalIndependence.lean
+2026-09-18T09:56:42.0711779Z Verified upstream: ErdosProblems/Erdos717/MassedContraction.lean
+2026-09-18T09:56:42.0712024Z Verified upstream: ErdosProblems/Erdos717/MassedLinkage.lean
+2026-09-18T09:56:42.0712311Z Verified upstream: ErdosProblems/Erdos717/MaximumCut.lean
+2026-09-18T09:56:42.0712599Z Verified upstream: ErdosProblems/Erdos717/MinimalMassed.lean
+2026-09-18T09:56:42.0712841Z Verified upstream: ErdosProblems/Erdos717/NearlyComplete.lean
+2026-09-18T09:56:42.0713134Z Verified upstream: ErdosProblems/Erdos717/NeighborhoodPattern.lean
+2026-09-18T09:56:42.0713384Z Verified upstream: ErdosProblems/Erdos717/NestedTorso.lean
+2026-09-18T09:56:42.0713823Z Verified upstream: ErdosProblems/Erdos717/NoIsolated.lean
+2026-09-18T09:56:42.0714052Z Verified upstream: ErdosProblems/Erdos717/NoRigid.lean
+2026-09-18T09:56:42.0714283Z Verified upstream: ErdosProblems/Erdos717/NoSmallRigid.lean
+2026-09-18T09:56:42.0714528Z Verified upstream: ErdosProblems/Erdos717/OptimalReservoir.lean
+2026-09-18T09:56:42.0714786Z Verified upstream: ErdosProblems/Erdos717/ReservoirArithmetic.lean
+2026-09-18T09:56:42.0715045Z Verified upstream: ErdosProblems/Erdos717/ReservoirCleanup.lean
+2026-09-18T09:56:42.0715304Z Verified upstream: ErdosProblems/Erdos717/ReservoirSubdivision.lean
+2026-09-18T09:56:42.0715560Z Verified upstream: ErdosProblems/Erdos717/RestrictLinkage.lean
+2026-09-18T09:56:42.0715805Z Verified upstream: ErdosProblems/Erdos717/RigidSeparation.lean
+2026-09-18T09:56:42.0716051Z Verified upstream: ErdosProblems/Erdos717/RouteAssembly.lean
+2026-09-18T09:56:42.0716290Z Verified upstream: ErdosProblems/Erdos717/RouteReservoir.lean
+2026-09-18T09:56:42.0716552Z Verified upstream: ErdosProblems/Erdos717/ShortPathReservoir.lean
+2026-09-18T09:56:42.0716805Z Verified upstream: ErdosProblems/Erdos717/SparseDenseStep.lean
+2026-09-18T09:56:42.0717048Z Verified upstream: ErdosProblems/Erdos717/SparseDensity.lean
+2026-09-18T09:56:42.0717444Z Verified upstream: ErdosProblems/Erdos717/SparseHighDensity.lean
+2026-09-18T09:56:42.0717696Z Verified upstream: ErdosProblems/Erdos717/SparseHighStep.lean
+2026-09-18T09:56:42.0717944Z Verified upstream: ErdosProblems/Erdos717/SparseInduction.lean
+2026-09-18T09:56:42.0718210Z Verified upstream: ErdosProblems/Erdos717/SparseInductionArithmetic.lean
+2026-09-18T09:56:42.0718490Z Verified upstream: ErdosProblems/Erdos717/SparseLogArithmetic.lean
+2026-09-18T09:56:42.0718747Z Verified upstream: ErdosProblems/Erdos717/SparseParameters.lean
+2026-09-18T09:56:42.0718993Z Verified upstream: ErdosProblems/Erdos717/SubsetSampling.lean
+2026-09-18T09:56:42.0719246Z Verified upstream: ErdosProblems/Erdos717/TerminalCompletion.lean
+2026-09-18T09:56:42.0719602Z Verified upstream: ErdosProblems/Erdos717/ThomasWollan.lean
+2026-09-18T09:56:42.0719849Z Verified upstream: ErdosProblems/Erdos717/ThomasWollanMassed.lean
+2026-09-18T09:56:42.0720099Z Verified upstream: ErdosProblems/Erdos717/TorsoExpansion.lean
+2026-09-18T09:56:42.0720338Z Verified upstream: ErdosProblems/Erdos717/TorsoLinkage.lean
+2026-09-18T09:56:42.0720577Z Verified upstream: ErdosProblems/Erdos718/Erdos718Core.lean
+2026-09-18T09:56:42.4457048Z info: mathlib: cloning https://github.com/leanprover-community/mathlib4
+2026-09-18T09:57:04.2173371Z info: mathlib: checking out revision '5ed2965256430c3649e86755f9576b54eca72435'
+2026-09-18T09:57:04.8890412Z info: plausible: cloning https://github.com/leanprover-community/plausible
+2026-09-18T09:57:06.1793150Z info: plausible: checking out revision '118aa17ee84656b8bd727fef7c458ee8c833385c'
+2026-09-18T09:57:06.2690972Z info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+2026-09-18T09:57:07.3577678Z info: LeanSearchClient: checking out revision 'ddf04cf3949fa556442341e87d47f9f6e6074707'
+2026-09-18T09:57:07.3682815Z info: importGraph: cloning https://github.com/leanprover-community/import-graph
+2026-09-18T09:57:08.1832418Z info: importGraph: checking out revision 'e928b72544873815af278d38681b31c0293588e3'
+2026-09-18T09:57:08.1952952Z info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+2026-09-18T09:57:08.9759271Z info: proofwidgets: checking out revision '106ff4fafc74ef4ac99d81dbf3ab399118f497a5'
+2026-09-18T09:57:09.3376637Z info: aesop: cloning https://github.com/leanprover-community/aesop
+2026-09-18T09:57:10.1041349Z info: aesop: checking out revision '355695d523e41d0554926416cba2a2b3544fbbc9'
+2026-09-18T09:57:10.1186601Z info: Qq: cloning https://github.com/leanprover-community/quote4
+2026-09-18T09:57:10.5742721Z info: Qq: checking out revision '6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259'
+2026-09-18T09:57:10.5849960Z info: batteries: cloning https://github.com/leanprover-community/batteries
+2026-09-18T09:57:12.7934318Z info: batteries: checking out revision 'f2effa3d803fda822b1f97b806c47cf2adfbcbc2'
+2026-09-18T09:57:12.8096491Z info: Cli: cloning https://github.com/leanprover/lean4-cli
+2026-09-18T09:57:13.2909839Z info: Cli: checking out revision 'e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204'
+2026-09-18T09:57:13.6017294Z ✔ [1/5] Built Cache.Cli (257ms)
+2026-09-18T09:57:17.4149040Z ✔ [2/5] Built Cache.Lean (287ms)
+2026-09-18T09:57:17.4149519Z ✔ [7/42] Built Cache.Cli:c.o (117ms)
+2026-09-18T09:57:17.5131188Z ✔ [9/42] Built Cache.Lean:c.o (189ms)
+2026-09-18T09:57:17.6159084Z ✔ [10/42] Built Cache.Env (314ms)
+2026-09-18T09:57:17.8147670Z ✔ [11/42] Built Cache.Env:c.o (115ms)
+2026-09-18T09:57:18.0131610Z ✔ [12/42] Built Cache.Infra (403ms)
+2026-09-18T09:57:18.2135338Z ✔ [13/42] Built Cache.Infra:c.o (154ms)
+2026-09-18T09:57:18.4168365Z ✔ [14/42] Built Cache.IO (1.1s)
+2026-09-18T09:57:19.1168768Z ✔ [15/42] Built Cache.Hashing (642ms)
+2026-09-18T09:57:19.5170561Z ✔ [16/42] Built Cache.Hashing:c.o (399ms)
+2026-09-18T09:57:19.6174024Z ✔ [17/42] Built Cache.IO:c.o (1.2s)
+2026-09-18T09:57:20.4183232Z ✔ [18/42] Built Cache.Requests (1.3s)
+2026-09-18T09:57:20.8233754Z ✔ [19/42] Built Cache.Marker (470ms)
+2026-09-18T09:57:20.9248635Z ✔ [20/42] Built Cache.Marker:c.o (100ms)
+2026-09-18T09:57:21.5268678Z ✔ [21/42] Built Cache.Upload.Dest (656ms)
+2026-09-18T09:57:21.6261659Z ✔ [22/42] Built Cache.Upload.Dest:c.o (128ms)
+2026-09-18T09:57:21.7268648Z ✔ [23/42] Built Cache.Query (830ms)
+2026-09-18T09:57:21.9276057Z ✔ [24/42] Built Cache.Query:c.o (262ms)
+2026-09-18T09:57:22.3298073Z ✔ [25/42] Built Cache.Upload.Rclone (815ms)
+2026-09-18T09:57:22.4296331Z ✔ [26/42] Built Cache.Upload.Curl (826ms)
+2026-09-18T09:57:22.5368490Z ✔ [27/42] Built Cache.Upload.Rclone:c.o (162ms)
+2026-09-18T09:57:22.6368289Z ✔ [28/42] Built Cache.Requests:c.o (2.3s)
+2026-09-18T09:57:22.6368767Z ✔ [29/42] Built Cache.Upload.Curl:c.o (179ms)
+2026-09-18T09:57:22.8356003Z ✔ [30/42] Built Cache.Warning (847ms)
+2026-09-18T09:57:23.0378535Z ✔ [31/42] Built Cache.Upload.Azure (578ms)
+2026-09-18T09:57:23.0379298Z ✔ [32/42] Built Cache.Warning:c.o (236ms)
+2026-09-18T09:57:23.1360435Z ✔ [33/42] Built Cache.Upload.Azure:c.o (94ms)
+2026-09-18T09:57:23.3362817Z ✔ [34/42] Built Cache.Upload.S3 (672ms)
+2026-09-18T09:57:23.5365390Z ✔ [35/42] Built Cache.Upload.S3:c.o (208ms)
+2026-09-18T09:57:23.8368461Z ✔ [36/42] Built Cache.Upload.Defs (480ms)
+2026-09-18T09:57:23.9369240Z ✔ [37/42] Built Cache.Upload.Defs:c.o (97ms)
+2026-09-18T09:57:24.3374902Z ✔ [38/42] Built Cache.Upload (509ms)
+2026-09-18T09:57:24.4375209Z ✔ [39/42] Built Cache.Upload:c.o (80ms)
+2026-09-18T09:57:25.0381306Z ✔ [40/42] Built Cache.Main (727ms)
+2026-09-18T09:57:25.5386931Z ✔ [41/42] Built Cache.Main:c.o (542ms)
+2026-09-18T09:57:26.1401208Z ✔ [42/42] Built cache:exe (573ms)
+2026-09-18T09:57:28.2551384Z Current branch: HEAD
+2026-09-18T09:57:28.2551635Z Using cache from origin: (some leanprover-community/mathlib4)
+2026-09-18T09:57:28.2552059Z Attempting to download 8908 file(s) from leanprover-community/mathlib4 cache at https://cache.mathlib.org/mathlib4-master
+2026-09-18T09:57:28.4001100Z 
+2026-09-18T09:57:28.5028197Z Downloaded: 1 file(s) [attempted 1/8908 = 0%, 474 KB/s], Decompressed: 0
+2026-09-18T09:57:28.6047564Z Downloaded: 58 file(s) [attempted 58/8908 = 0%, 149 KB/s], Decompressed: 24
+2026-09-18T09:57:28.7049459Z Downloaded: 197 file(s) [attempted 197/8908 = 2%, 241 KB/s], Decompressed: 48
+2026-09-18T09:57:28.8102302Z Downloaded: 358 file(s) [attempted 358/8908 = 4%, 409 KB/s], Decompressed: 48
+2026-09-18T09:57:28.9080570Z Downloaded: 502 file(s) [attempted 502/8908 = 5%, 1233 KB/s], Decompressed: 116
+2026-09-18T09:57:29.0109753Z Downloaded: 651 file(s) [attempted 651/8908 = 7%, 1224 KB/s], Decompressed: 116
+2026-09-18T09:57:29.1124281Z Downloaded: 767 file(s) [attempted 767/8908 = 8%, 237 KB/s], Decompressed: 116
+2026-09-18T09:57:29.2134841Z Downloaded: 913 file(s) [attempted 913/8908 = 10%, 1757 KB/s], Decompressed: 116
+2026-09-18T09:57:29.3147225Z Downloaded: 1077 file(s) [attempted 1077/8908 = 12%, 1304 KB/s], Decompressed: 366
+2026-09-18T09:57:29.4151646Z Downloaded: 1230 file(s) [attempted 1230/8908 = 13%, 369 KB/s], Decompressed: 366
+2026-09-18T09:57:29.5149389Z Downloaded: 1382 file(s) [attempted 1382/8908 = 15%, 1904 KB/s], Decompressed: 366
+2026-09-18T09:57:29.6228380Z Downloaded: 1542 file(s) [attempted 1542/8908 = 17%, 1649 KB/s], Decompressed: 366
+2026-09-18T09:57:29.7235906Z Downloaded: 1698 file(s) [attempted 1698/8908 = 19%, 4120 KB/s], Decompressed: 366
+2026-09-18T09:57:29.8296090Z Downloaded: 1869 file(s) [attempted 1869/8908 = 20%, 1050 KB/s], Decompressed: 366
+2026-09-18T09:57:29.9484413Z Downloaded: 1993 file(s) [attempted 1994/8908 = 22%, 638 KB/s], Decompressed: 366
+2026-09-18T09:57:30.0479887Z Downloaded: 2084 file(s) [attempted 2085/8908 = 23%, 13099 KB/s], Decompressed: 366
+2026-09-18T09:57:30.1487484Z Downloaded: 2213 file(s) [attempted 2214/8908 = 24%, 6504 KB/s], Decompressed: 366
+2026-09-18T09:57:30.2494052Z Downloaded: 2362 file(s) [attempted 2363/8908 = 26%, 4862 KB/s], Decompressed: 366
+2026-09-18T09:57:30.3507960Z Downloaded: 2528 file(s) [attempted 2529/8908 = 28%, 2780 KB/s], Decompressed: 366
+2026-09-18T09:57:30.4533968Z Downloaded: 2689 file(s) [attempted 2690/8908 = 30%, 606 KB/s], Decompressed: 366
+2026-09-18T09:57:30.5731159Z Downloaded: 2859 file(s) [attempted 2860/8908 = 32%, 564 KB/s], Decompressed: 366
+2026-09-18T09:57:30.6818463Z Downloaded: 2994 file(s) [attempted 2995/8908 = 33%, 774 KB/s], Decompressed: 366
+2026-09-18T09:57:30.7780239Z Downloaded: 3150 file(s) [attempted 3151/8908 = 35%, 1464 KB/s], Decompressed: 366
+2026-09-18T09:57:30.9100655Z Downloaded: 3300 file(s) [attempted 3301/8908 = 37%, 157 KB/s], Decompressed: 1062
+2026-09-18T09:57:31.0231896Z Downloaded: 3387 file(s) [attempted 3388/8908 = 38%, 259 KB/s], Decompressed: 1062
+2026-09-18T09:57:31.1245159Z Downloaded: 3488 file(s) [attempted 3489/8908 = 39%, 466 KB/s], Decompressed: 1062
+2026-09-18T09:57:31.2248720Z Downloaded: 3644 file(s) [attempted 3645/8908 = 40%, 3175 KB/s], Decompressed: 1062
+2026-09-18T09:57:31.3290964Z Downloaded: 3757 file(s) [attempted 3758/8908 = 42%, 3700 KB/s], Decompressed: 1062
+2026-09-18T09:57:31.4324843Z Downloaded: 3862 file(s) [attempted 3863/8908 = 43%, 2308 KB/s], Decompressed: 1062
+2026-09-18T09:57:31.5381612Z Downloaded: 3911 file(s) [attempted 3912/8908 = 43%, 1081 KB/s], Decompressed: 1062
+2026-09-18T09:57:31.6433403Z Downloaded: 4011 file(s) [attempted 4012/8908 = 45%, 2001 KB/s], Decompressed: 1062
+2026-09-18T09:57:31.7424355Z Downloaded: 4175 file(s) [attempted 4176/8908 = 46%, 578 KB/s], Decompressed: 1062
+2026-09-18T09:57:31.8437431Z Downloaded: 4335 file(s) [attempted 4336/8908 = 48%, 371 KB/s], Decompressed: 1062
+2026-09-18T09:57:31.9452188Z Downloaded: 4428 file(s) [attempted 4429/8908 = 49%, 651 KB/s], Decompressed: 1062
+2026-09-18T09:57:32.0456257Z Downloaded: 4597 file(s) [attempted 4598/8908 = 51%, 210 KB/s], Decompressed: 1062
+2026-09-18T09:57:32.1516384Z Downloaded: 4742 file(s) [attempted 4743/8908 = 53%, 581 KB/s], Decompressed: 1062
+2026-09-18T09:57:32.2500889Z Downloaded: 4866 file(s) [attempted 4867/8908 = 54%, 149 KB/s], Decompressed: 1062
+2026-09-18T09:57:32.3503228Z Downloaded: 5009 file(s) [attempted 5010/8908 = 56%, 764 KB/s], Decompressed: 1062
+2026-09-18T09:57:32.4532674Z Downloaded: 5147 file(s) [attempted 5148/8908 = 57%, 3184 KB/s], Decompressed: 1062
+2026-09-18T09:57:32.5539247Z Downloaded: 5293 file(s) [attempted 5294/8908 = 59%, 1047 KB/s], Decompressed: 1062
+2026-09-18T09:57:32.6525003Z Downloaded: 5406 file(s) [attempted 5407/8908 = 60%, 2451 KB/s], Decompressed: 1062
+2026-09-18T09:57:32.7558407Z Downloaded: 5533 file(s) [attempted 5534/8908 = 62%, 458 KB/s], Decompressed: 1062
+2026-09-18T09:57:32.8585918Z Downloaded: 5688 file(s) [attempted 5690/8908 = 63%, 3303 KB/s], Decompressed: 1062
+2026-09-18T09:57:32.9585601Z Downloaded: 5856 file(s) [attempted 5858/8908 = 65%, 7438 KB/s], Decompressed: 1062
+2026-09-18T09:57:33.0650711Z Downloaded: 6015 file(s) [attempted 6017/8908 = 67%, 360 KB/s], Decompressed: 1062
+2026-09-18T09:57:33.1715598Z Downloaded: 6168 file(s) [attempted 6170/8908 = 69%, 1760 KB/s], Decompressed: 1062
+2026-09-18T09:57:33.2770503Z Downloaded: 6303 file(s) [attempted 6305/8908 = 70%, 6719 KB/s], Decompressed: 1062
+2026-09-18T09:57:33.3785169Z Downloaded: 6456 file(s) [attempted 6458/8908 = 72%, 6967 KB/s], Decompressed: 1062
+2026-09-18T09:57:33.4826812Z Downloaded: 6595 file(s) [attempted 6597/8908 = 74%, 1441 KB/s], Decompressed: 1062
+2026-09-18T09:57:33.5858405Z Downloaded: 6759 file(s) [attempted 6761/8908 = 75%, 1411 KB/s], Decompressed: 1062
+2026-09-18T09:57:33.6865071Z Downloaded: 6929 file(s) [attempted 6931/8908 = 77%, 3279 KB/s], Decompressed: 1062
+2026-09-18T09:57:33.7900875Z Downloaded: 7100 file(s) [attempted 7102/8908 = 79%, 874 KB/s], Decompressed: 1062
+2026-09-18T09:57:33.8922398Z Downloaded: 7268 file(s) [attempted 7270/8908 = 81%, 986 KB/s], Decompressed: 1062
+2026-09-18T09:57:34.0502896Z Downloaded: 7416 file(s) [attempted 7418/8908 = 83%, 580 KB/s], Decompressed: 1062
+2026-09-18T09:57:34.1642016Z Downloaded: 7532 file(s) [attempted 7534/8908 = 84%, 213 KB/s], Decompressed: 1062
+2026-09-18T09:57:34.2704763Z Downloaded: 7680 file(s) [attempted 7682/8908 = 86%, 1187 KB/s], Decompressed: 1062
+2026-09-18T09:57:34.3686408Z Downloaded: 7800 file(s) [attempted 7802/8908 = 87%, 364 KB/s], Decompressed: 1062
+2026-09-18T09:57:34.4719243Z Downloaded: 7954 file(s) [attempted 7956/8908 = 89%, 1660 KB/s], Decompressed: 1062
+2026-09-18T09:57:34.5700010Z Downloaded: 8098 file(s) [attempted 8100/8908 = 90%, 346 KB/s], Decompressed: 1062
+2026-09-18T09:57:34.6768246Z Downloaded: 8268 file(s) [attempted 8270/8908 = 92%, 340 KB/s], Decompressed: 1062
+2026-09-18T09:57:34.7808182Z Downloaded: 8393 file(s) [attempted 8395/8908 = 94%, 513 KB/s], Decompressed: 1062
+2026-09-18T09:57:34.8829278Z Downloaded: 8554 file(s) [attempted 8556/8908 = 96%, 2154 KB/s], Decompressed: 1062
+2026-09-18T09:57:34.9963566Z Downloaded: 8705 file(s) [attempted 8707/8908 = 97%, 794 KB/s], Decompressed: 1062
+2026-09-18T09:57:35.0387985Z Downloaded: 8854 file(s) [attempted 8856/8908 = 99%, 2207 KB/s], Decompressed: 1062
+2026-09-18T09:57:35.0388820Z Downloaded: 8906 file(s) [attempted 8908/8908 = 100%, 2207 KB/s], Decompressed: 1062
+2026-09-18T09:57:35.0412551Z Attempting to download 2 file(s) from leanprover-community/mathlib4 cache at https://cache.mathlib.org/mathlib4
+2026-09-18T09:57:35.2927380Z 
+2026-09-18T09:57:35.2977583Z Downloaded: 0 file(s) [attempted 1/2 = 50%, 0 KB/s], Decompressed: 1062
+2026-09-18T09:57:35.2978046Z Downloaded: 0 file(s) [attempted 2/2 = 100%, 0 KB/s], Decompressed: 1062
+2026-09-18T09:57:35.2978389Z Warning: some files were not found in the cache.
+2026-09-18T09:57:35.2978770Z This usually means that your local checkout of mathlib4 has diverged from upstream.
+2026-09-18T09:57:35.2979050Z 
+2026-09-18T09:57:35.2979183Z   * If you push your commits to a PR to the mathlib4 repository
+2026-09-18T09:57:35.2979594Z     (use a draft PR if it is not ready for review),
+2026-09-18T09:57:35.2979935Z     then CI will build the oleans and they will be available later.
+2026-09-18T09:57:35.2980271Z   * If you have already opened a PR, this may mean
+2026-09-18T09:57:35.2980562Z     the CI build has failed part-way through building.
+2026-09-18T09:58:06.1556848Z Decompressed 8906 file(s)
+2026-09-18T09:58:06.1557219Z Already decompressed 8906 file(s)
+2026-09-18T09:58:10.0183947Z ✔ [8921/8923] Built Mathlib.Probability.Kernel.Invariance (1.2s)
+2026-09-18T09:58:13.6194199Z ✔ [8922/8923] Built Mathlib (2.8s)
+2026-09-18T09:58:13.6505923Z Build completed successfully (8923 jobs).
+2026-09-18T09:58:13.6942135Z ##[group]Run bash scripts/verify.sh
+2026-09-18T09:58:13.6942343Z [36;1mbash scripts/verify.sh[0m
+2026-09-18T09:58:13.7239443Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-18T09:58:13.7239656Z ##[endgroup]
+2026-09-18T09:58:13.8592589Z Passed: /usr/bin/python3 scripts/bootstrap.py
+2026-09-18T09:58:16.2263489Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/Certificate.olean ./Certificate.lean
+2026-09-18T09:58:16.2264396Z Compiled/verified source: Certificate
+2026-09-18T09:58:19.0058074Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/GraphCore.olean ./GraphCore.lean
+2026-09-18T09:58:19.0107608Z Compiled/verified source: GraphCore
+2026-09-18T09:58:23.4208687Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/Profile.olean ./Profile.lean
+2026-09-18T09:58:23.4209685Z Compiled/verified source: Profile
+2026-09-18T09:58:26.0379808Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/Subdivision.olean ./Subdivision.lean
+2026-09-18T09:58:26.0380797Z Compiled/verified source: Subdivision
+2026-09-18T09:58:28.4663356Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/Colouring.olean ./Colouring.lean
+2026-09-18T09:58:28.4664415Z Compiled/verified source: Colouring
+2026-09-18T09:58:30.7949219Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/Catlin.olean ./Catlin.lean
+2026-09-18T09:58:30.7950757Z Compiled/verified source: Catlin
+2026-09-18T09:58:33.5102651Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/Sharp.olean ./Sharp.lean
+2026-09-18T09:58:33.5103671Z Compiled/verified source: Sharp
+2026-09-18T09:59:17.2675777Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos599/Countable.olean ./ErdosProblems/Erdos599/Countable.lean
+2026-09-18T09:59:17.2676735Z Compiled/verified source: ErdosProblems.Erdos599.Countable
+2026-09-18T09:59:23.8813946Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos718/Erdos718Core.olean ./ErdosProblems/Erdos718/Erdos718Core.lean
+2026-09-18T09:59:23.8814839Z Compiled/verified source: ErdosProblems.Erdos718.Erdos718Core
+2026-09-18T09:59:26.4445826Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/JSP000585Bridge.olean ./JSP000585Bridge.lean
+2026-09-18T09:59:26.4446876Z Compiled/verified source: JSP000585Bridge
+2026-09-18T09:59:28.3451719Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/MaximumCut.olean ./ErdosProblems/Erdos717/MaximumCut.lean
+2026-09-18T09:59:28.3453040Z Compiled/verified source: ErdosProblems.Erdos717.MaximumCut
+2026-09-18T09:59:30.6019836Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/DependentRandomChoice.olean ./ErdosProblems/Erdos717/DependentRandomChoice.lean
+2026-09-18T09:59:30.6020860Z Compiled/verified source: ErdosProblems.Erdos717.DependentRandomChoice
+2026-09-18T09:59:32.2028710Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/GreedySelection.olean ./ErdosProblems/Erdos717/GreedySelection.lean
+2026-09-18T09:59:32.2029844Z Compiled/verified source: ErdosProblems.Erdos717.GreedySelection
+2026-09-18T09:59:36.7259588Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/RouteAssembly.olean ./ErdosProblems/Erdos717/RouteAssembly.lean
+2026-09-18T09:59:36.7261068Z Compiled/verified source: ErdosProblems.Erdos717.RouteAssembly
+2026-09-18T09:59:38.9899544Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/RouteReservoir.olean ./ErdosProblems/Erdos717/RouteReservoir.lean
+2026-09-18T09:59:38.9900487Z Compiled/verified source: ErdosProblems.Erdos717.RouteReservoir
+2026-09-18T09:59:41.0552291Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/ReservoirCleanup.olean ./ErdosProblems/Erdos717/ReservoirCleanup.lean
+2026-09-18T09:59:41.0553166Z Compiled/verified source: ErdosProblems.Erdos717.ReservoirCleanup
+2026-09-18T09:59:43.2030922Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/ReservoirSubdivision.olean ./ErdosProblems/Erdos717/ReservoirSubdivision.lean
+2026-09-18T09:59:43.2031779Z Compiled/verified source: ErdosProblems.Erdos717.ReservoirSubdivision
+2026-09-18T09:59:45.0933753Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/ShortPathReservoir.olean ./ErdosProblems/Erdos717/ShortPathReservoir.lean
+2026-09-18T09:59:45.0934808Z Compiled/verified source: ErdosProblems.Erdos717.ShortPathReservoir
+2026-09-18T09:59:47.1582505Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/NearlyComplete.olean ./ErdosProblems/Erdos717/NearlyComplete.lean
+2026-09-18T09:59:47.1583867Z Compiled/verified source: ErdosProblems.Erdos717.NearlyComplete
+2026-09-18T09:59:49.0150995Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/DenseReservoir.olean ./ErdosProblems/Erdos717/DenseReservoir.lean
+2026-09-18T09:59:49.0152021Z Compiled/verified source: ErdosProblems.Erdos717.DenseReservoir
+2026-09-18T09:59:50.8938921Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/NeighborhoodPattern.olean ./ErdosProblems/Erdos717/NeighborhoodPattern.lean
+2026-09-18T09:59:50.8939873Z Compiled/verified source: ErdosProblems.Erdos717.NeighborhoodPattern
+2026-09-18T09:59:52.8314093Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/LocalIndependence.olean ./ErdosProblems/Erdos717/LocalIndependence.lean
+2026-09-18T09:59:52.8316668Z Compiled/verified source: ErdosProblems.Erdos717.LocalIndependence
+2026-09-18T09:59:54.6584296Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/SparseHighDensity.olean ./ErdosProblems/Erdos717/SparseHighDensity.lean
+2026-09-18T09:59:54.6585617Z Compiled/verified source: ErdosProblems.Erdos717.SparseHighDensity
+2026-09-18T09:59:56.7391326Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/ReservoirArithmetic.olean ./ErdosProblems/Erdos717/ReservoirArithmetic.lean
+2026-09-18T09:59:56.7392356Z Compiled/verified source: ErdosProblems.Erdos717.ReservoirArithmetic
+2026-09-18T10:00:00.5928464Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/SubsetSampling.olean ./ErdosProblems/Erdos717/SubsetSampling.lean
+2026-09-18T10:00:00.5929942Z Compiled/verified source: ErdosProblems.Erdos717.SubsetSampling
+2026-09-18T10:00:04.4139460Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/OptimalReservoir.olean ./ErdosProblems/Erdos717/OptimalReservoir.lean
+2026-09-18T10:00:04.4140633Z Compiled/verified source: ErdosProblems.Erdos717.OptimalReservoir
+2026-09-18T10:00:06.6064923Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/DegreePruning.olean ./ErdosProblems/Erdos717/DegreePruning.lean
+2026-09-18T10:00:06.6066548Z Compiled/verified source: ErdosProblems.Erdos717.DegreePruning
+2026-09-18T10:00:08.6736416Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/SparseDenseStep.olean ./ErdosProblems/Erdos717/SparseDenseStep.lean
+2026-09-18T10:00:08.6738174Z Compiled/verified source: ErdosProblems.Erdos717.SparseDenseStep
+2026-09-18T10:00:11.5469501Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/SparseParameters.olean ./ErdosProblems/Erdos717/SparseParameters.lean
+2026-09-18T10:00:11.5470654Z Compiled/verified source: ErdosProblems.Erdos717.SparseParameters
+2026-09-18T10:00:15.5195734Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/SparseDensity.olean ./ErdosProblems/Erdos717/SparseDensity.lean
+2026-09-18T10:00:15.5199589Z Compiled/verified source: ErdosProblems.Erdos717.SparseDensity
+2026-09-18T10:00:27.1646934Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/SparseLogArithmetic.olean ./ErdosProblems/Erdos717/SparseLogArithmetic.lean
+2026-09-18T10:00:27.1650094Z Compiled/verified source: ErdosProblems.Erdos717.SparseLogArithmetic
+2026-09-18T10:00:38.6985505Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/SparseHighStep.olean ./ErdosProblems/Erdos717/SparseHighStep.lean
+2026-09-18T10:00:38.6987292Z Compiled/verified source: ErdosProblems.Erdos717.SparseHighStep
+2026-09-18T10:00:46.0928555Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/SparseInductionArithmetic.olean ./ErdosProblems/Erdos717/SparseInductionArithmetic.lean
+2026-09-18T10:00:46.0929634Z Compiled/verified source: ErdosProblems.Erdos717.SparseInductionArithmetic
+2026-09-18T10:00:52.2945577Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/ThomasWollan.olean ./ErdosProblems/Erdos717/ThomasWollan.lean
+2026-09-18T10:00:52.2947040Z Compiled/verified source: ErdosProblems.Erdos717.ThomasWollan
+2026-09-18T10:00:56.1702772Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/DenseMinor.olean ./ErdosProblems/Erdos717/DenseMinor.lean
+2026-09-18T10:00:56.1704409Z Compiled/verified source: ErdosProblems.Erdos717.DenseMinor
+2026-09-18T10:00:58.2384380Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/ContractLinkage.olean ./ErdosProblems/Erdos717/ContractLinkage.lean
+2026-09-18T10:00:58.2385679Z Compiled/verified source: ErdosProblems.Erdos717.ContractLinkage
+2026-09-18T10:01:00.1951826Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/ThomasWollanMassed.olean ./ErdosProblems/Erdos717/ThomasWollanMassed.lean
+2026-09-18T10:01:00.1953226Z Compiled/verified source: ErdosProblems.Erdos717.ThomasWollanMassed
+2026-09-18T10:01:02.5214573Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/TerminalCompletion.olean ./ErdosProblems/Erdos717/TerminalCompletion.lean
+2026-09-18T10:01:02.5215589Z Compiled/verified source: ErdosProblems.Erdos717.TerminalCompletion
+2026-09-18T10:01:04.3319148Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/MinimalMassed.olean ./ErdosProblems/Erdos717/MinimalMassed.lean
+2026-09-18T10:01:04.3320435Z Compiled/verified source: ErdosProblems.Erdos717.MinimalMassed
+2026-09-18T10:01:07.1331319Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/MassedContraction.olean ./ErdosProblems/Erdos717/MassedContraction.lean
+2026-09-18T10:01:07.1332544Z Compiled/verified source: ErdosProblems.Erdos717.MassedContraction
+2026-09-18T10:01:09.3438830Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/DenseNeighborhood.olean ./ErdosProblems/Erdos717/DenseNeighborhood.lean
+2026-09-18T10:01:09.3440000Z Compiled/verified source: ErdosProblems.Erdos717.DenseNeighborhood
+2026-09-18T10:01:11.1252753Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/InduceLinkage.olean ./ErdosProblems/Erdos717/InduceLinkage.lean
+2026-09-18T10:01:11.1254033Z Compiled/verified source: ErdosProblems.Erdos717.InduceLinkage
+2026-09-18T10:01:13.6112658Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/NoIsolated.olean ./ErdosProblems/Erdos717/NoIsolated.lean
+2026-09-18T10:01:13.6114679Z Compiled/verified source: ErdosProblems.Erdos717.NoIsolated
+2026-09-18T10:01:16.3857971Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/RigidSeparation.olean ./ErdosProblems/Erdos717/RigidSeparation.lean
+2026-09-18T10:01:16.3859858Z Compiled/verified source: ErdosProblems.Erdos717.RigidSeparation
+2026-09-18T10:01:18.2151747Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/RestrictLinkage.olean ./ErdosProblems/Erdos717/RestrictLinkage.lean
+2026-09-18T10:01:18.2153425Z Compiled/verified source: ErdosProblems.Erdos717.RestrictLinkage
+2026-09-18T10:01:20.9486113Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/ContractRigidity.olean ./ErdosProblems/Erdos717/ContractRigidity.lean
+2026-09-18T10:01:20.9488034Z Compiled/verified source: ErdosProblems.Erdos717.ContractRigidity
+2026-09-18T10:01:23.4142042Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/GlueLinkage.olean ./ErdosProblems/Erdos717/GlueLinkage.lean
+2026-09-18T10:01:23.4143343Z Compiled/verified source: ErdosProblems.Erdos717.GlueLinkage
+2026-09-18T10:01:26.0839124Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/TorsoLinkage.olean ./ErdosProblems/Erdos717/TorsoLinkage.lean
+2026-09-18T10:01:26.0840862Z Compiled/verified source: ErdosProblems.Erdos717.TorsoLinkage
+2026-09-18T10:01:28.8913465Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/TorsoExpansion.olean ./ErdosProblems/Erdos717/TorsoExpansion.lean
+2026-09-18T10:01:28.8915171Z Compiled/verified source: ErdosProblems.Erdos717.TorsoExpansion
+2026-09-18T10:01:30.9355041Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/LeftTorsoMass.olean ./ErdosProblems/Erdos717/LeftTorsoMass.lean
+2026-09-18T10:01:30.9356387Z Compiled/verified source: ErdosProblems.Erdos717.LeftTorsoMass
+2026-09-18T10:01:33.4796264Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/NestedTorso.olean ./ErdosProblems/Erdos717/NestedTorso.lean
+2026-09-18T10:01:33.4798103Z Compiled/verified source: ErdosProblems.Erdos717.NestedTorso
+2026-09-18T10:01:35.8032332Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/NoRigid.olean ./ErdosProblems/Erdos717/NoRigid.lean
+2026-09-18T10:01:35.8033872Z Compiled/verified source: ErdosProblems.Erdos717.NoRigid
+2026-09-18T10:01:38.1085881Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/FullArms.olean ./ErdosProblems/Erdos717/FullArms.lean
+2026-09-18T10:01:38.1087608Z Compiled/verified source: ErdosProblems.Erdos717.FullArms
+2026-09-18T10:01:40.0526636Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/ClaimTwo.olean ./ErdosProblems/Erdos717/ClaimTwo.lean
+2026-09-18T10:01:40.0528353Z Compiled/verified source: ErdosProblems.Erdos717.ClaimTwo
+2026-09-18T10:01:42.1342124Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/NoSmallRigid.olean ./ErdosProblems/Erdos717/NoSmallRigid.lean
+2026-09-18T10:01:42.1343448Z Compiled/verified source: ErdosProblems.Erdos717.NoSmallRigid
+2026-09-18T10:01:43.8927746Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/EmbeddedLinkage.olean ./ErdosProblems/Erdos717/EmbeddedLinkage.lean
+2026-09-18T10:01:43.8937958Z Compiled/verified source: ErdosProblems.Erdos717.EmbeddedLinkage
+2026-09-18T10:01:45.6986623Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/MassedLinkage.olean ./ErdosProblems/Erdos717/MassedLinkage.lean
+2026-09-18T10:01:45.6988664Z Compiled/verified source: ErdosProblems.Erdos717.MassedLinkage
+2026-09-18T10:01:47.4459178Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/DensityTheorem.olean ./ErdosProblems/Erdos717/DensityTheorem.lean
+2026-09-18T10:01:47.4460273Z Compiled/verified source: ErdosProblems.Erdos717.DensityTheorem
+2026-09-18T10:01:58.9238577Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/SparseInduction.olean ./ErdosProblems/Erdos717/SparseInduction.lean
+2026-09-18T10:01:58.9240187Z Compiled/verified source: ErdosProblems.Erdos717.SparseInduction
+2026-09-18T10:02:00.7730686Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/DenseStep.olean ./ErdosProblems/Erdos717/DenseStep.lean
+2026-09-18T10:02:00.7732255Z Compiled/verified source: ErdosProblems.Erdos717.DenseStep
+2026-09-18T10:02:07.2411733Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/DenseLogArithmetic.olean ./ErdosProblems/Erdos717/DenseLogArithmetic.lean
+2026-09-18T10:02:07.2413750Z Compiled/verified source: ErdosProblems.Erdos717.DenseLogArithmetic
+2026-09-18T10:02:15.1335298Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/DensePotential.olean ./ErdosProblems/Erdos717/DensePotential.lean
+2026-09-18T10:02:15.1336647Z Compiled/verified source: ErdosProblems.Erdos717.DensePotential
+2026-09-18T10:02:29.9444376Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717/GlobalArithmetic.olean ./ErdosProblems/Erdos717/GlobalArithmetic.lean
+2026-09-18T10:02:29.9446180Z Compiled/verified source: ErdosProblems.Erdos717.GlobalArithmetic
+2026-09-18T10:02:33.4188491Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/ErdosProblems/Erdos717.olean ./ErdosProblems/Erdos717.lean
+2026-09-18T10:02:33.4190313Z Compiled/verified source: ErdosProblems.Erdos717
+2026-09-18T10:02:36.0748669Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/JSP000585Complete.olean ./JSP000585Complete.lean
+2026-09-18T10:02:36.0750115Z Compiled/verified source: JSP000585Complete
+2026-09-18T10:02:38.6468424Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/AuditComplete.olean ./AuditComplete.lean
+2026-09-18T10:02:38.6470198Z Compiled/verified source: AuditComplete
+2026-09-18T10:02:41.0600508Z Passed: lake env lean -DwarningAsError=true AuditComplete.lean
+2026-09-18T10:03:41.0372160Z Passed: lake env leanchecker --verbose ErdosProblems
+2026-09-18T10:03:47.7176095Z Passed: lake env leanchecker --verbose Certificate
+2026-09-18T10:03:54.8388135Z Passed: lake env leanchecker --verbose GraphCore
+2026-09-18T10:04:03.6461139Z Passed: lake env leanchecker --verbose Profile
+2026-09-18T10:04:11.0578397Z Passed: lake env leanchecker --verbose Subdivision
+2026-09-18T10:04:18.2905051Z Passed: lake env leanchecker --verbose Colouring
+2026-09-18T10:04:25.5766110Z Passed: lake env leanchecker --verbose Catlin
+2026-09-18T10:04:33.0013283Z Passed: lake env leanchecker --verbose Sharp
+2026-09-18T10:04:40.1523004Z Passed: lake env leanchecker --verbose JSP000585Bridge
+2026-09-18T10:04:47.4130024Z Passed: lake env leanchecker --verbose JSP000585Complete
+2026-09-18T10:04:49.7382239Z All full-development checks passed.
+2026-09-18T10:04:49.7456149Z ##[group]Run set -euo pipefail
+2026-09-18T10:04:49.7456341Z [36;1mset -euo pipefail[0m
+2026-09-18T10:04:49.7456468Z [36;1mmkdir -p evidence[0m
+2026-09-18T10:04:49.7456669Z [36;1mbash scripts/verify_nanoda.sh 2>&1 | tee evidence/nanoda-build.log[0m
+2026-09-18T10:04:49.7485397Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-18T10:04:49.7485573Z ##[endgroup]
+2026-09-18T10:04:50.1448476Z https://github.com/leanprover/lean4export.git 6cea97789dc088ea47fcea15692db85685aedac5
+2026-09-18T10:04:50.5602254Z https://github.com/ammkrn/nanoda_lib.git 4c544ed4099c8227f07d5de77ad1e69fb0740a27
+2026-09-18T10:04:51.8934587Z ✔ [2/6] Built Export (1.3s)
+2026-09-18T10:04:53.1946522Z ✔ [3/6] Built Export:c.o (1.3s)
+2026-09-18T10:04:53.7952170Z ✔ [4/6] Built Main (628ms)
+2026-09-18T10:04:53.8953109Z ✔ [5/6] Built Main:c.o (113ms)
+2026-09-18T10:04:54.5970956Z ✔ [6/6] Built lean4export:exe (702ms)
+2026-09-18T10:04:54.5973482Z Build completed successfully (6 jobs).
+2026-09-18T10:04:54.8259053Z     Updating crates.io index
+2026-09-18T10:04:55.0432004Z  Downloading crates ...
+2026-09-18T10:04:55.1006973Z   Downloaded autocfg v1.1.0
+2026-09-18T10:04:55.1124832Z   Downloaded getrandom v0.2.11
+2026-09-18T10:04:55.1205979Z   Downloaded equivalent v1.0.1
+2026-09-18T10:04:55.1212079Z   Downloaded cfg-if v1.0.0
+2026-09-18T10:04:55.1427024Z   Downloaded num-integer v0.1.46
+2026-09-18T10:04:55.1438600Z   Downloaded quote v1.0.35
+2026-09-18T10:04:55.1460563Z   Downloaded semver v1.0.27
+2026-09-18T10:04:55.1563904Z   Downloaded rand_chacha v0.3.1
+2026-09-18T10:04:55.1573205Z   Downloaded rustc-hash v1.1.0
+2026-09-18T10:04:55.1613563Z   Downloaded itoa v1.0.15
+2026-09-18T10:04:55.1708846Z   Downloaded rand_core v0.6.4
+2026-09-18T10:04:55.1718686Z   Downloaded unicode-ident v1.0.12
+2026-09-18T10:04:55.1737946Z   Downloaded ppv-lite86 v0.2.17
+2026-09-18T10:04:55.1755002Z   Downloaded num-traits v0.2.17
+2026-09-18T10:04:55.1857223Z   Downloaded ryu v1.0.20
+2026-09-18T10:04:55.1880675Z   Downloaded proc-macro2 v1.0.103
+2026-09-18T10:04:55.1902432Z   Downloaded serde_core v1.0.228
+2026-09-18T10:04:55.1921666Z   Downloaded serde_derive v1.0.228
+2026-09-18T10:04:55.1943014Z   Downloaded hashbrown v0.16.1
+2026-09-18T10:04:55.1981484Z   Downloaded serde v1.0.228
+2026-09-18T10:04:55.2011882Z   Downloaded rand v0.8.5
+2026-09-18T10:04:55.2039732Z   Downloaded memchr v2.7.6
+2026-09-18T10:04:55.2077992Z   Downloaded num-bigint v0.4.4
+2026-09-18T10:04:55.2110954Z   Downloaded indexmap v2.13.0
+2026-09-18T10:04:55.2142984Z   Downloaded serde_json v1.0.145
+2026-09-18T10:04:55.2197543Z   Downloaded syn v2.0.111
+2026-09-18T10:04:55.2272366Z   Downloaded libc v0.2.180
+2026-09-18T10:04:55.2725893Z    Compiling autocfg v1.1.0
+2026-09-18T10:04:55.2726576Z    Compiling proc-macro2 v1.0.103
+2026-09-18T10:04:55.2730185Z    Compiling unicode-ident v1.0.12
+2026-09-18T10:04:55.2730556Z    Compiling serde_core v1.0.228
+2026-09-18T10:04:55.5809437Z    Compiling serde v1.0.228
+2026-09-18T10:04:55.8627417Z    Compiling num-traits v0.2.17
+2026-09-18T10:04:55.9049702Z    Compiling num-bigint v0.4.4
+2026-09-18T10:04:55.9961159Z    Compiling serde_json v1.0.145
+2026-09-18T10:04:56.1641412Z    Compiling itoa v1.0.15
+2026-09-18T10:04:56.5818248Z    Compiling quote v1.0.35
+2026-09-18T10:04:56.6008515Z    Compiling memchr v2.7.6
+2026-09-18T10:04:56.7086669Z    Compiling syn v2.0.111
+2026-09-18T10:04:57.1453310Z    Compiling num-integer v0.1.46
+2026-09-18T10:04:57.1489554Z    Compiling equivalent v1.0.1
+2026-09-18T10:04:57.1690537Z    Compiling ryu v1.0.20
+2026-09-18T10:04:57.2509478Z    Compiling hashbrown v0.16.1
+2026-09-18T10:04:57.6028199Z    Compiling indexmap v2.13.0
+2026-09-18T10:04:57.6571237Z    Compiling rustc-hash v1.1.0
+2026-09-18T10:04:57.6920241Z    Compiling semver v1.0.27
+2026-09-18T10:04:57.9638088Z    Compiling serde_derive v1.0.228
+2026-09-18T10:04:59.6271366Z    Compiling nanoda_lib v0.4.17 (/tmp/tmp.qMBNKJuNlY/checker)
+2026-09-18T10:05:09.6310850Z     Finished `release` profile [optimized] target(s) in 14.96s
+2026-09-18T10:05:40.1662608Z Checked 48436 declarations with no errors
+2026-09-18T10:05:45.6233367Z ##[group]Run set -euo pipefail
+2026-09-18T10:05:45.6233626Z [36;1mset -euo pipefail[0m
+2026-09-18T10:05:45.6233829Z [36;1mmkdir -p evidence[0m
+2026-09-18T10:05:45.6234057Z [36;1mgit rev-parse HEAD > evidence/SOURCE_COMMIT[0m
+2026-09-18T10:05:45.6234335Z [36;1mcp lake-manifest.json evidence/[0m
+2026-09-18T10:05:45.6234601Z [36;1mgit diff --exit-code -- lake-manifest.json[0m
+2026-09-18T10:05:45.6234889Z [36;1mtar --exclude=.lake --exclude=evidence -czf evidence/source.tar.gz .[0m
+2026-09-18T10:05:45.6235135Z [36;1msha256sum evidence/source.tar.gz > evidence/ARCHIVE_SHA256[0m
+2026-09-18T10:05:45.6263850Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-18T10:05:45.6264026Z ##[endgroup]
+2026-09-18T10:05:45.6866400Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-18T10:05:45.6867732Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-09-18T10:05:45.6867949Z with:
+2026-09-18T10:05:45.6868064Z   name: jsp-000585-evidence
+2026-09-18T10:05:45.6868281Z   path: projects/catlin-research/evidence
+projects/catlin-research/evidence-complete
+
+2026-09-18T10:05:45.6868515Z   if-no-files-found: error
+2026-09-18T10:05:45.6868649Z   compression-level: 6
+2026-09-18T10:05:45.6868767Z   overwrite: false
+2026-09-18T10:05:45.6868886Z   include-hidden-files: false
+2026-09-18T10:05:45.6869019Z ##[endgroup]
+2026-09-18T10:05:45.9237838Z (node:7777) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-18T10:05:45.9238411Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-18T10:05:45.9360276Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-09-18T10:05:45.9362101Z The least common ancestor is /home/runner/work/jsp-000301-lean/jsp-000301-lean/projects/catlin-research. This will be the root directory of the artifact
+2026-09-18T10:05:45.9362734Z With the provided path, there will be 93 files uploaded
+2026-09-18T10:05:45.9366336Z Artifact name is valid!
+2026-09-18T10:05:45.9367280Z Root directory input is valid!
+2026-09-18T10:05:46.2371951Z Beginning upload of artifact content to blob storage
+2026-09-18T10:05:46.4216871Z (node:7777) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-09-18T10:05:46.8352174Z Uploaded bytes 8388608
+2026-09-18T10:05:47.0564131Z Uploaded bytes 16777216
+2026-09-18T10:05:47.1753135Z Uploaded bytes 25165824
+2026-09-18T10:05:47.2355137Z Uploaded bytes 33554432
+2026-09-18T10:05:47.3017906Z Uploaded bytes 41943040
+2026-09-18T10:05:47.4428043Z Uploaded bytes 50331648
+2026-09-18T10:05:47.5498525Z Uploaded bytes 53504511
+2026-09-18T10:05:47.5930300Z Finished uploading artifact content to blob storage!
+2026-09-18T10:05:47.5932170Z SHA256 digest of uploaded artifact zip is a1422297c8f17ab50e5db5e4336002805e736991770def6513334ac594786368
+2026-09-18T10:05:47.5933371Z Finalizing artifact upload
+2026-09-18T10:05:47.8290321Z Artifact jsp-000585-evidence.zip successfully finalized. Artifact ID 10541648339
+2026-09-18T10:05:47.8290885Z Artifact jsp-000585-evidence has been successfully uploaded! Final size is 53504511 bytes. Artifact ID is 10541648339
+2026-09-18T10:05:47.8294557Z Artifact download URL: https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35332110641/artifacts/10541648339
+2026-09-18T10:05:47.8473245Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-18T10:05:47.8473935Z Post job cleanup.
+2026-09-18T10:05:47.9019340Z [command]/usr/bin/git version
+2026-09-18T10:05:47.9049063Z git version 2.55.0
+2026-09-18T10:05:47.9070419Z Temporarily overriding HOME='/home/runner/work/_temp/5b838f04-b621-45d9-b498-d8aaac938554' before making global git config changes
+2026-09-18T10:05:47.9071083Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-18T10:05:47.9073525Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/jsp-000301-lean/jsp-000301-lean
+2026-09-18T10:05:47.9101076Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-18T10:05:47.9125287Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-18T10:05:47.9312240Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-18T10:05:47.9338338Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-18T10:05:47.9535619Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-18T10:05:47.9563428Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-18T10:05:47.9833861Z Cleaning up orphan processes
+2026-09-18T10:05:48.0088086Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+

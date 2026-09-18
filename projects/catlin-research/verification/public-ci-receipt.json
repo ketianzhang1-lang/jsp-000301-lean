@@ -1,0 +1,38 @@
+{
+  "proof_sha": "9661ef0f170e750b1ac2153b9017bad86044680c",
+  "branch": "catlin-sharp-kz",
+  "run_id": 35332110641,
+  "job_id": 105558564030,
+  "run_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35332110641",
+  "conclusion": "success",
+  "completed_at": "2026-09-18T10:05:50Z",
+  "targets": 61,
+  "nanoda_declarations": 48436,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "exporter_commit": "6cea97789dc088ea47fcea15692db85685aedac5",
+  "nanoda_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+  "artifacts": [
+    {
+      "id": 10541648339,
+      "name": "jsp-000585-evidence",
+      "size_bytes": 53504511,
+      "github_reported_digest": "sha256:a1422297c8f17ab50e5db5e4336002805e736991770def6513334ac594786368",
+      "expires_at": "2026-12-17T09:56:11Z",
+      "api_url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10541648339"
+    }
+  ],
+  "digest_limit": "Artifact ZIP digest reported by GitHub, not independently recomputed locally.",
+  "original_sha256": {
+    "Certificate": "f2fb199565a4a51e127a3b3b806fcc1e4956c9dd952aad275b0586522f990e07",
+    "GraphCore": "a099c28693b5a000f6bc6613e65962a7921b0ef6db6d9be1a617018e74f216a7",
+    "Profile": "33cc5eb8092be55271f350fe9f9950aa83e9c7151a9bdd153cc792f8c50ed1dc",
+    "Subdivision": "bbb612563a52c17333ce3f5b1e5582ca3d7d440b667aa112107f6728b9f9d52f",
+    "Colouring": "805a835573606392633a43b50674d1c20cfa255dd4c74883ecdc6355aaee56a0",
+    "Catlin": "241abd3d47518b918bc866dedc15589b74496b44dabfdd515021c116cf378689",
+    "Sharp": "737e5210163831ed2fa579cf0b02abcb11b72b051f6f987c2fe1c0a68fa5f11e"
+  }
+}

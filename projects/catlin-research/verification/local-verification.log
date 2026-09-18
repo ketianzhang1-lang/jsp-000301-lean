@@ -1,0 +1,81 @@
+Passed: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/bootstrap.py
+Compiled/verified source: Certificate
+Compiled/verified source: GraphCore
+Compiled/verified source: Profile
+Compiled/verified source: Subdivision
+Compiled/verified source: Colouring
+Compiled/verified source: Catlin
+Compiled/verified source: Sharp
+Compiled/verified source: ErdosProblems.Erdos599.Countable
+Compiled/verified source: ErdosProblems.Erdos718.Erdos718Core
+Compiled/verified source: JSP000585Bridge
+Compiled/verified source: ErdosProblems.Erdos717.MaximumCut
+Compiled/verified source: ErdosProblems.Erdos717.DependentRandomChoice
+Compiled/verified source: ErdosProblems.Erdos717.GreedySelection
+Compiled/verified source: ErdosProblems.Erdos717.RouteAssembly
+Compiled/verified source: ErdosProblems.Erdos717.RouteReservoir
+Compiled/verified source: ErdosProblems.Erdos717.ReservoirCleanup
+Compiled/verified source: ErdosProblems.Erdos717.ReservoirSubdivision
+Compiled/verified source: ErdosProblems.Erdos717.ShortPathReservoir
+Compiled/verified source: ErdosProblems.Erdos717.NearlyComplete
+Compiled/verified source: ErdosProblems.Erdos717.DenseReservoir
+Compiled/verified source: ErdosProblems.Erdos717.NeighborhoodPattern
+Compiled/verified source: ErdosProblems.Erdos717.LocalIndependence
+Compiled/verified source: ErdosProblems.Erdos717.SparseHighDensity
+Compiled/verified source: ErdosProblems.Erdos717.ReservoirArithmetic
+Compiled/verified source: ErdosProblems.Erdos717.SubsetSampling
+Compiled/verified source: ErdosProblems.Erdos717.OptimalReservoir
+Compiled/verified source: ErdosProblems.Erdos717.DegreePruning
+Compiled/verified source: ErdosProblems.Erdos717.SparseDenseStep
+Compiled/verified source: ErdosProblems.Erdos717.SparseParameters
+Compiled/verified source: ErdosProblems.Erdos717.SparseDensity
+Compiled/verified source: ErdosProblems.Erdos717.SparseLogArithmetic
+Compiled/verified source: ErdosProblems.Erdos717.SparseHighStep
+Compiled/verified source: ErdosProblems.Erdos717.SparseInductionArithmetic
+Compiled/verified source: ErdosProblems.Erdos717.ThomasWollan
+Compiled/verified source: ErdosProblems.Erdos717.DenseMinor
+Compiled/verified source: ErdosProblems.Erdos717.ContractLinkage
+Compiled/verified source: ErdosProblems.Erdos717.ThomasWollanMassed
+Compiled/verified source: ErdosProblems.Erdos717.TerminalCompletion
+Compiled/verified source: ErdosProblems.Erdos717.MinimalMassed
+Compiled/verified source: ErdosProblems.Erdos717.MassedContraction
+Compiled/verified source: ErdosProblems.Erdos717.DenseNeighborhood
+Compiled/verified source: ErdosProblems.Erdos717.InduceLinkage
+Compiled/verified source: ErdosProblems.Erdos717.NoIsolated
+Compiled/verified source: ErdosProblems.Erdos717.RigidSeparation
+Compiled/verified source: ErdosProblems.Erdos717.RestrictLinkage
+Compiled/verified source: ErdosProblems.Erdos717.ContractRigidity
+Compiled/verified source: ErdosProblems.Erdos717.GlueLinkage
+Compiled/verified source: ErdosProblems.Erdos717.TorsoLinkage
+Compiled/verified source: ErdosProblems.Erdos717.TorsoExpansion
+Compiled/verified source: ErdosProblems.Erdos717.LeftTorsoMass
+Compiled/verified source: ErdosProblems.Erdos717.NestedTorso
+Compiled/verified source: ErdosProblems.Erdos717.NoRigid
+Compiled/verified source: ErdosProblems.Erdos717.FullArms
+Compiled/verified source: ErdosProblems.Erdos717.ClaimTwo
+Compiled/verified source: ErdosProblems.Erdos717.NoSmallRigid
+Compiled/verified source: ErdosProblems.Erdos717.EmbeddedLinkage
+Compiled/verified source: ErdosProblems.Erdos717.MassedLinkage
+Compiled/verified source: ErdosProblems.Erdos717.DensityTheorem
+Compiled/verified source: ErdosProblems.Erdos717.SparseInduction
+Compiled/verified source: ErdosProblems.Erdos717.DenseStep
+Compiled/verified source: ErdosProblems.Erdos717.DenseLogArithmetic
+Compiled/verified source: ErdosProblems.Erdos717.DensePotential
+Compiled/verified source: ErdosProblems.Erdos717.GlobalArithmetic
+Compiled/verified source: ErdosProblems.Erdos717
+Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/JSP000585Complete.olean ./JSP000585Complete.lean
+Compiled/verified source: JSP000585Complete
+Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/AuditComplete.olean ./AuditComplete.lean
+Compiled/verified source: AuditComplete
+Passed: lake env lean -DwarningAsError=true AuditComplete.lean
+Passed: lake env leanchecker --verbose ErdosProblems
+Passed: lake env leanchecker --verbose Certificate
+Passed: lake env leanchecker --verbose GraphCore
+Passed: lake env leanchecker --verbose Profile
+Passed: lake env leanchecker --verbose Subdivision
+Passed: lake env leanchecker --verbose Colouring
+Passed: lake env leanchecker --verbose Catlin
+Passed: lake env leanchecker --verbose Sharp
+Passed: lake env leanchecker --verbose JSP000585Bridge
+Passed: lake env leanchecker --verbose JSP000585Complete
+All full-development checks passed.
