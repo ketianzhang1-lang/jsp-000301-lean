@@ -38,6 +38,11 @@ jobs:
           lake build Mathlib
       - name: Compile, replay and audit complete proof
         run: python3 scripts/verify_complete.py
+      - name: Independent strict-allowlist NaNoda verification
+        run: |
+          set -euo pipefail
+          mkdir -p evidence-complete/nanoda
+          bash scripts/verify_nanoda.sh 2>&1 | tee evidence-complete/nanoda/build.log
       - name: Record source revision
         if: always()
         run: |
