@@ -258,9 +258,15 @@
     "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos851/BetaProductRatioDepth.lean",
     "git_blob_sha": "9edc37dbd1330ee685c229a52e437d5255213913",
     "sha256": "5a0fd4c11af32ca570a8368b5d7fe1ed67a8d4a264f3f4ef1c0f7ecdab6a1772",
-    "port_sha256": "5a0fd4c11af32ca570a8368b5d7fe1ed67a8d4a264f3f4ef1c0f7ecdab6a1772",
+    "port_sha256": "66b7ac793af9a27beefdefda04ae64aff15f36c504dfa41e8addea2e6720b519",
     "renames": {},
-    "edits": []
+    "edits": [
+      [
+        "      exact mul_le_one\u2080 (by linarith [hx0 a])\n        (buchstabProduct_nonneg_of_le_one x l\n          (fun b hb => hx1 b (by simp [hb])))\n        (ih (fun b hb => hx1 b (by simp [hb])))",
+        "      exact (mul_le_of_le_one_left\n        (buchstabProduct_nonneg_of_le_one x l\n          (fun b hb => hx1 b (by simp [hb])))\n        (by linarith [hx0 a])).trans\n        (ih (fun b hb => hx1 b (by simp [hb])))"
+      ]
+    ],
+    "port_notice": "/- Compatibility port to Lean 4.34.0 for JSP-000554.\nModified by ketianzhang1-lang with OpenAI ChatGPT/Codex assistance.\nExact compatibility edits are recorded in UPSTREAM.json.\nOriginal source and license notices are retained below. -/\n"
   },
   {
     "path": "ErdosProblems/Erdos851/BetaSieveFailureCombinatorics.lean",
