@@ -1,0 +1,317 @@
+[
+  {
+    "path": "ErdosProblems/Erdos136/Hypergraph.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/Hypergraph.lean",
+    "git_blob_sha": "94ac62e62508169a2d253ec8b52ae1cfe1667ef7",
+    "sha256": "296802f3f7f489b41a4fab8b694713219065d8c0e956f46a6dcaafda228d5b4d",
+    "port_sha256": "296802f3f7f489b41a4fab8b694713219065d8c0e956f46a6dcaafda228d5b4d",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos136/Freedman.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/Freedman.lean",
+    "git_blob_sha": "ba619627315f99b83668936a096b476faff664b8",
+    "sha256": "b7185993b93f5488f45d638ee1793b0b928a2405fc5f87c57fcb5b6297847841",
+    "port_sha256": "b7185993b93f5488f45d638ee1793b0b928a2405fc5f87c57fcb5b6297847841",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos136/CFMTrajectories.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/CFMTrajectories.lean",
+    "git_blob_sha": "b4047cb773a5828d91079a4395a6a8590d60c8c5",
+    "sha256": "beb19525712e9a003fe08ff16653c3c9b9a4374ef437ca9471ee8da3cb827494",
+    "port_sha256": "beb19525712e9a003fe08ff16653c3c9b9a4374ef437ca9471ee8da3cb827494",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos136/McDiarmid.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/McDiarmid.lean",
+    "git_blob_sha": "326300de7d6dba0644943752fd5c2f60605c8c9a",
+    "sha256": "04f3cf0c11011eb344aa5db69158520b4840cf4ea50d195b980aa7cb82cf3d9c",
+    "port_sha256": "04f3cf0c11011eb344aa5db69158520b4840cf4ea50d195b980aa7cb82cf3d9c",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos136/CFMRegularization.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/CFMRegularization.lean",
+    "git_blob_sha": "56889c6b7c7e082a3ca3da8012d46fde4ee6faac",
+    "sha256": "62b30f9951f689c688045e2b6648b774379114f37b71f60d72bb5069718cdbd5",
+    "port_sha256": "bf7e1a5fce418436d8b844bcd187c67d21a071e9b49b2e4105551bdb18b36520",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": [
+      [
+        "Finset.prod_le_prod",
+        "Finset.prod_le_prod\u2080"
+      ],
+      [
+        "Finset.prod_le_one",
+        "Finset.prod_le_one\u2080"
+      ],
+      [
+        "if_true",
+        "ite_true"
+      ],
+      [
+        "if_false",
+        "ite_false"
+      ]
+    ]
+  },
+  {
+    "path": "ErdosProblems/Erdos136/ConflictFreeMatching.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/ConflictFreeMatching.lean",
+    "git_blob_sha": "da4ced5ed0c8cd246c6845abd5d9047762d3c7b3",
+    "sha256": "1dc024703d24684999f1d59ac2fdd01bf30cf6eb612a2b516fdb5781d3aa5597",
+    "port_sha256": "f2061c359d716891b01337392e11b233cbbe63e010ae5fc90dfe6e000bb5baee",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": [
+      [
+        "if_true",
+        "ite_true"
+      ],
+      [
+        "if_false",
+        "ite_false"
+      ]
+    ]
+  },
+  {
+    "path": "ErdosProblems/Erdos136/Definitions.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/Definitions.lean",
+    "git_blob_sha": "55149283ede8322bcedac1b7fdad62ebfe2d4516",
+    "sha256": "552ac551a78723420d6ea33bf56eab55935405071a81a4e0993aad3651ea54de",
+    "port_sha256": "552ac551a78723420d6ea33bf56eab55935405071a81a4e0993aad3651ea54de",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos136/Completion.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/Completion.lean",
+    "git_blob_sha": "c22e69072b6ca5cebe1c6a612bde6415a76c90af",
+    "sha256": "df69d0ab964805e908e78657a5008aaf1c37cd5b7a4f1778b7e241655815c6c0",
+    "port_sha256": "df69d0ab964805e908e78657a5008aaf1c37cd5b7a4f1778b7e241655815c6c0",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos136/PartialConstruction.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/PartialConstruction.lean",
+    "git_blob_sha": "839b3802e844278c57290c13e852168294f94cd8",
+    "sha256": "334526c707c1ca25ca10c21bf2b33532bb2b57cce898b39670970766c2a22f35",
+    "port_sha256": "ce9d25957f554e6dba200398f3fabcc9f44f5b98bb21fd8d55402cb1f0e02fa1",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos136/UpperParameters.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/UpperParameters.lean",
+    "git_blob_sha": "3cc778a8c3c9134fb216f02d47b2533c8f035b44",
+    "sha256": "6282a94107b950d17a9de52a4123fe5cc9ded83940b203dcc8ad71edc364061b",
+    "port_sha256": "6282a94107b950d17a9de52a4123fe5cc9ded83940b203dcc8ad71edc364061b",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos136/AuxConcentration.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/AuxConcentration.lean",
+    "git_blob_sha": "1c56678af0a720dfb2c56f399b40b2482f3944cf",
+    "sha256": "bab5e755a81c7c64f4052867fe71fad2bff81352df179769c236ddcec7cac065",
+    "port_sha256": "46683923586423eb17b5e7d5c5c86d9b1c157aa707896f8f4884f6d644fb9e5a",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos136/ConflictCounts.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/ConflictCounts.lean",
+    "git_blob_sha": "13aa8a7493dab89f51ec0e9b0b923f6c3cbd87d4",
+    "sha256": "7a07b3ece4533417c4ddb5282be610cfd9bb375346ec57857e013f1672877d4a",
+    "port_sha256": "7a07b3ece4533417c4ddb5282be610cfd9bb375346ec57857e013f1672877d4a",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos136/TrackedTests.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/TrackedTests.lean",
+    "git_blob_sha": "b6257cba4fd5c3cee0a296c240619fae33b2d088",
+    "sha256": "01a729602a7570e35a0e0c72d294d6b5459f0f2d598b9b567bfe16da2f671322",
+    "port_sha256": "51bc55f40dfeea6e558fde25abddbbbc095c21846d7bd413cbe8e6ecd9ac9386",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos136/LowerBound.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/LowerBound.lean",
+    "git_blob_sha": "e22bdf66df001b2e2fdc3d7af8408680686bf649",
+    "sha256": "674f2005ac41f57c79b2137e26a700bff35b1469bf3ae7134e4a068a18c1488a",
+    "port_sha256": "674f2005ac41f57c79b2137e26a700bff35b1469bf3ae7134e4a068a18c1488a",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos136/Asymptotics.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/Asymptotics.lean",
+    "git_blob_sha": "d729b2ce2ea6ad45c7437a31d5d747abf96062ed",
+    "sha256": "37575a8b1255bd9422e187950c0b2bd728ed1cab5c3eadf304dc99a20d1d4f44",
+    "port_sha256": "37575a8b1255bd9422e187950c0b2bd728ed1cab5c3eadf304dc99a20d1d4f44",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos136/LocalLemma.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/LocalLemma.lean",
+    "git_blob_sha": "7a249bce8865f6f37118c672f7ff2200f1b902f9",
+    "sha256": "46373b6e649177544eec4b8b1c12fdd8917bcd783fe552b1f2e7df6dab7bd548",
+    "port_sha256": "46373b6e649177544eec4b8b1c12fdd8917bcd783fe552b1f2e7df6dab7bd548",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos136/LeaveCompletion.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/LeaveCompletion.lean",
+    "git_blob_sha": "9b810aaf9953a56958930f6d7aa3926bce73d7a9",
+    "sha256": "1565bb339503c8bd83bd9756d05456645cefde0b1f3a12a3198f75fdb048ca87",
+    "port_sha256": "a605e284511201aebf483d67d257b4eefde941397b7c27b50c32b5905d103960",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": [
+      [
+        "if_true",
+        "ite_true"
+      ],
+      [
+        "if_false",
+        "ite_false"
+      ]
+    ]
+  },
+  {
+    "path": "ErdosProblems/Erdos136/UpperReduction.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/UpperReduction.lean",
+    "git_blob_sha": "d50f55a95cd4a443d827f53fd7d516ba3fcbc08f",
+    "sha256": "9029c770e559f7d7047d510bab202da4d54bf4d30335ba310b334673211002c0",
+    "port_sha256": "9029c770e559f7d7047d510bab202da4d54bf4d30335ba310b334673211002c0",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos136/UpperConstruction.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136/UpperConstruction.lean",
+    "git_blob_sha": "41d5c58685b729eb5d7de4bb76639287b4ee2189",
+    "sha256": "07a9e63958bd5fa60414c511aca6912574c79bb49ff83e78aaea3e8978a7ca4d",
+    "port_sha256": "07a9e63958bd5fa60414c511aca6912574c79bb49ff83e78aaea3e8978a7ca4d",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  },
+  {
+    "path": "ErdosProblems/Erdos136.lean",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136.lean",
+    "git_blob_sha": "f77fbecd453b85ab2ad4f318323a4ad540ab79bb",
+    "sha256": "9440045eefbaf31ea9c82ac4b615aa555fe44ca90a5552321918a4288694fe7c",
+    "port_sha256": "9440045eefbaf31ea9c82ac4b615aa555fe44ca90a5552321918a4288694fe7c",
+    "renames": {
+      "if_pos": "ite_eq_left",
+      "if_neg": "ite_eq_right",
+      "dif_pos": "dite_eq_left",
+      "dif_neg": "dite_eq_right"
+    },
+    "edits": []
+  }
+]
