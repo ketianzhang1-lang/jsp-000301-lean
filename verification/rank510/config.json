@@ -420,7 +420,7 @@
   "393-general": {
     "id": "JSP-000393",
     "project": ".",
-    "commit": "ed82d0cb2d35fca55f32b00cb75bdd5271226eb8",
+    "commit": "aa1ed1bac2eb0c1ec33723ff802ff3b9b6c02ee8",
     "branch": "jsp-000393-general-coefficients",
     "bridge_file": "bridge393General.lean",
     "bridge_path": "JSP000393General/VerificationBridge.lean",
