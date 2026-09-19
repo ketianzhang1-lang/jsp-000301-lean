@@ -49,17 +49,17 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          docker run --rm --cap-drop ALL --security-opt no-new-privileges --cpus 2 --memory 6g --pids-limit 512 --user 10001:10001 -e LEAN_NUM_THREADS=2 -v "$PWD/proof:/work" -v "$PWD/harness:/harness:ro" -v "$PWD/evidence:/out" lean-top2-audit python3 /harness/runner.py prepare '${{ matrix.key }}'
+          docker run --rm --cap-drop ALL --security-opt no-new-privileges --cpus 2 --memory 6g --pids-limit 512 --user 10001:10001 -e LEAN_NUM_THREADS=2 -e CARGO_HOME=/out/cargo-cache -v "$PWD/proof:/work" -v "$PWD/harness:/harness:ro" -v "$PWD/evidence:/out" lean-top2-audit python3 /harness/runner.py prepare '${{ matrix.key }}'
       - name: Offline clean build, official target audit, bridges and independent replay
         shell: bash
         run: |
           set -euo pipefail
-          docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges --cpus 2 --memory 6g --pids-limit 512 --user 10001:10001 -e LEAN_NUM_THREADS=2 -v "$PWD/proof:/work" -v "$PWD/harness:/harness:ro" -v "$PWD/evidence:/out" lean-top2-audit python3 /harness/runner.py verify '${{ matrix.key }}'
+          docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges --cpus 2 --memory 6g --pids-limit 512 --user 10001:10001 -e LEAN_NUM_THREADS=2 -e CARGO_HOME=/out/cargo-cache -v "$PWD/proof:/work" -v "$PWD/harness:/harness:ro" -v "$PWD/evidence:/out" lean-top2-audit python3 /harness/runner.py verify '${{ matrix.key }}'
       - name: Archive evidence only
         if: always()
         shell: bash
         run: |
-          sudo rm -rf evidence/tools
+          sudo rm -rf evidence/tools evidence/cargo-cache
           sudo chown -R "$(id -u):$(id -g)" evidence
           python3 - <<'PY'
           import pathlib,hashlib,json
