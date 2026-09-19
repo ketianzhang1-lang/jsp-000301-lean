@@ -17,3 +17,7 @@ lean_lib ErdosProblems where
 @[default_target]
 lean_lib JSP000393Complete where
   roots := #[`JSP000393Complete, `AuditComplete]
+
+@[default_target]
+lean_lib JSP000393General where
+  roots := #[`JSP000393General, `AuditGeneral]
