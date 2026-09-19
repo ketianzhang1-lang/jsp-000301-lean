@@ -84,9 +84,7 @@ our proof modules with Lean's kernel, checks every dependency revision and
 requires a false-arithmetic control to be rejected.
 
 Actual checks and their limits are recorded in [VERIFICATION.md](VERIFICATION.md).
-The optional separately implemented checker can be run with
-`bash scripts/verify_nanoda.sh`; a configured check is not a successful result.
-The workflow exposes the status of hosted reproduction for each proof commit.
+The separately implemented checker can be run with `bash scripts/verify_nanoda.sh`. [Hosted run 35295466997](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35295466997) has now been checked: it succeeded at the selected proof commit and NaNoda reported **70,658 declarations checked with no errors**, under the strict three-axiom allowlist. The verification receipt distinguishes this observed hosted result from the earlier local run.
 
 The awards PR contains catalog text and references only; sources and build
 materials remain in this repository. Maintainer review, contribution eligibility,
