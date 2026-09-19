@@ -34,6 +34,16 @@ negative-control and local-verification logs record the executed results.
 [verification/SOURCE_SHA256SUMS](verification/SOURCE_SHA256SUMS) fixes the public
 integration inputs. Imported source bytes are fixed in `UPSTREAM.json`.
 
+## Hosted verification receipt — observed 2026-09-19
+
+[Run 35295466997](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35295466997) completed successfully on 2026-09-18 at the exact selected proof commit `a9eae7a01edade3d5d9a386144dcd2848b4de917`. [Job 105447003884](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35295466997/job/105447003884) succeeded in full source compilation, kernel replay, 18 axiom audits, dependency checks, negative control, and the separate NaNoda step.
+
+The actual log records **“Checked 70658 declarations with no errors”**. The pinned NaNoda configuration permits only `propext`, `Classical.choice` and `Quot.sound`, with `unpermitted_axiom_hard_error=true`. The targeted export includes our original obstruction, translation theorem and complete endpoint. This hosted result supplements the earlier local receipt, where the Rust toolchain was unavailable.
+
+Artifact `10529045270`, `jsp-000388-evidence`, has GitHub-reported ZIP digest `sha256:4b9b1dc4c3638fd8a302d90f928983103b36c611700b48253276a394e2493c82`. The digest is reported by GitHub, not recomputed from a downloaded archive here. Artifacts have retention limits; the pinned source and scripts remain the reproduction inputs.
+
+This documentation revision changes no proof module, toolchain, dependency manifest, upstream-source manifest or verification script.
+
 ## Reproduction and limits
 
 Use Lean **4.34.0**, Mathlib
@@ -46,10 +56,7 @@ preserves the later documentation-only parent
 Network access and pinned cached Mathlib objects are used. Kernel replay uses
 Lean's own kernel and is not an independently implemented checker. NaNoda was
 not run in this local environment because the Rust build toolchain was absent.
-The hosted workflow additionally attempts that separate check; only a
-successful run for the selected proof commit counts as its verification.
-The branch's public [workflow runs](https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/workflows/jsp-000388.yml)
-expose that status independently of this local receipt.
+The hosted result for this exact proof commit is now confirmed in the receipt above; the local and hosted execution histories are distinguished.
 
 These checks are not independent human certification, organizer acceptance,
 a ruling on contribution eligibility or first-formalization priority.
