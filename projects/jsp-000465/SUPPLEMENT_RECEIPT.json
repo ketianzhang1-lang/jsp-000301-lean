@@ -1,0 +1,38 @@
+{
+  "problem": 465,
+  "run_id": 35415279784,
+  "job_id": 105822600918,
+  "source_commit": "78dbc684a1ce3d392b150d98bdc5b94a9269f3e3",
+  "branch": "jsp-000465-uniform-ratios-20260919",
+  "conclusion": "success",
+  "completed_at": "2026-09-19T02:26:04Z",
+  "new_theorems": 5,
+  "audit_targets": 12,
+  "nanoda_declarations": 42577,
+  "log_excerpt": [
+    "2026-09-19T02:24:23.4410819Z Original and supplementary compilation, replay, 12 axiom reports and negative controls passed.",
+    "2026-09-19T02:25:50.7951115Z Checked 42577 declarations with no errors",
+    "2026-09-19T02:25:51.0796526Z Strict NaNoda verification passed for 12 target closures."
+  ],
+  "artifact": {
+    "id": 10575219415,
+    "node_id": "MDg6QXJ0aWZhY3QxMDU3NTIxOTQxNQ==",
+    "name": "jsp-000465-supplement-evidence",
+    "size_in_bytes": 52749605,
+    "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10575219415",
+    "archive_download_url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10575219415/zip",
+    "expired": false,
+    "digest": "sha256:d6ef3e8c41a2547ae8284853b08e63fbff4d85821978c622b421d9b6ddb3ae7f",
+    "created_at": "2026-09-19T02:26:01Z",
+    "updated_at": "2026-09-19T02:26:01Z",
+    "expires_at": "2026-12-18T02:18:49Z",
+    "workflow_run": {
+      "id": 35415279784,
+      "repository_id": 1373404416,
+      "head_repository_id": 1373404416,
+      "head_branch": "jsp-000465-uniform-ratios-20260919",
+      "head_sha": "78dbc684a1ce3d392b150d98bdc5b94a9269f3e3"
+    }
+  },
+  "limits": "Contributor-run automated checks. Artifact metadata/digest reported by GitHub; ZIP not independently downloaded and rehashed."
+}
