@@ -1,0 +1,45 @@
+{
+  "problem": 897,
+  "run_id": 35415283467,
+  "job_id": 105822613367,
+  "source_commit": "4d15dc035f56658776c01729216f99b776a5ad35",
+  "branch": "jsp-000897-degree-stability-20260919",
+  "conclusion": "success",
+  "completed_at": "2026-09-19T02:22:00Z",
+  "new_theorems": 7,
+  "audit_targets": 15,
+  "nanoda_declarations": 11276,
+  "log_excerpt": [
+    "2026-09-19T02:21:10.8437576Z Passed: bash scripts/verify.sh",
+    "2026-09-19T02:21:13.6101111Z Passed: lake env lean -DwarningAsError=true -j1 -M10000 -o .lake/build/lib/lean/JSP000897Stability.olean JSP000897Stability.lean",
+    "2026-09-19T02:21:17.5878734Z Passed: lake env leanchecker --verbose JSP000897Stability",
+    "2026-09-19T02:21:19.6000674Z Passed: lake env lean -DwarningAsError=true AuditSupplement.lean",
+    "2026-09-19T02:21:21.6613427Z Original and supplementary compilation, replay, 15 axiom reports and negative controls passed.",
+    "2026-09-19T02:21:52.6171128Z Checked 11276 declarations with no errors",
+    "2026-09-19T02:21:52.6863347Z Strict NaNoda verification passed for 15 target closures.",
+    "2026-09-19T02:21:58.2331712Z SHA256 digest of uploaded artifact zip is b071c0df177c4946de749b9f05a270a28b987c6ba02c2c7da8dee7647da6370e",
+    "2026-09-19T02:21:58.4541582Z Artifact jsp-000897-supplement-evidence.zip successfully finalized. Artifact ID 10574944375",
+    "2026-09-19T02:21:58.4542706Z Artifact jsp-000897-supplement-evidence has been successfully uploaded! Final size is 8040217 bytes. Artifact ID is 10574944375"
+  ],
+  "artifact": {
+    "id": 10574944375,
+    "node_id": "MDg6QXJ0aWZhY3QxMDU3NDk0NDM3NQ==",
+    "name": "jsp-000897-supplement-evidence",
+    "size_in_bytes": 8040217,
+    "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10574944375",
+    "archive_download_url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10574944375/zip",
+    "expired": false,
+    "digest": "sha256:b071c0df177c4946de749b9f05a270a28b987c6ba02c2c7da8dee7647da6370e",
+    "created_at": "2026-09-19T02:21:58Z",
+    "updated_at": "2026-09-19T02:21:58Z",
+    "expires_at": "2026-12-18T02:18:55Z",
+    "workflow_run": {
+      "id": 35415283467,
+      "repository_id": 1373404416,
+      "head_repository_id": 1373404416,
+      "head_branch": "jsp-000897-degree-stability-20260919",
+      "head_sha": "4d15dc035f56658776c01729216f99b776a5ad35"
+    }
+  },
+  "limits": "Contributor-run automated checks. Artifact metadata/digest reported by GitHub; ZIP not independently downloaded and rehashed."
+}
