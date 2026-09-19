@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-000438",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "5f94d026ec88696bb5047506c433ad401e5f02ef",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000438",
+      "source": "https://github.com/google-deepmind/formal-conjectures/blob/40e7c98697de6f66b8cbdbf641749ab39ed9c152/FormalConjectures/ErdosProblems/547.lean",
+      "requirements": [
+        {
+          "id": "all-orders",
+          "description": "Every finite simple tree of every order n>=2; injective non-induced containment with actual complement; no asymptotic restriction.",
+          "targets": [
+            "t1",
+            "t2",
+            "t3",
+            "t4",
+            "b0"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "dependency",
+          "description": "The all-order extremal bound is proved, not a hypothesis or an axiom.",
+          "targets": [
+            "t0"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "ramsey",
+          "description": "The natural-infimum bound has a witness, so it does not exploit an empty defining set.",
+          "targets": [
+            "b1"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "sharpness",
+          "description": "Every even-order star attains equality, including the order-two boundary; explicit lower-coloring and upper-bound proof.",
+          "targets": [
+            "t5",
+            "t6",
+            "t7",
+            "t8",
+            "t9",
+            "b2"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "t0",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "Upstream548",
+      "source": "Upstream548.lean",
+      "declaration": "Erdos548.tree_free_edge_bound"
+    },
+    {
+      "id": "t1",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "JSP000438",
+      "source": "JSP000438.lean",
+      "declaration": "JSP000438.trees_monochromatic"
+    },
+    {
+      "id": "t2",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "JSP000438",
+      "source": "JSP000438.lean",
+      "declaration": "JSP000438.tree_monochromatic"
+    },
+    {
+      "id": "t3",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "JSP000438",
+      "source": "JSP000438.lean",
+      "declaration": "JSP000438.graphRamsey_trees"
+    },
+    {
+      "id": "t4",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "JSP000438",
+      "source": "JSP000438.lean",
+      "declaration": "Erdos547.erdos_547"
+    },
+    {
+      "id": "t5",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "StarSharpness",
+      "source": "StarSharpness.lean",
+      "declaration": "JSP000438.sharpGraph_degree_le"
+    },
+    {
+      "id": "t6",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "StarSharpness",
+      "source": "StarSharpness.lean",
+      "declaration": "JSP000438.sharpGraph_compl_degree_le"
+    },
+    {
+      "id": "t7",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "StarSharpness",
+      "source": "StarSharpness.lean",
+      "declaration": "JSP000438.sharpGraph_avoids_star"
+    },
+    {
+      "id": "t8",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "StarSharpness",
+      "source": "StarSharpness.lean",
+      "declaration": "JSP000438.star_ramsey_even_order"
+    },
+    {
+      "id": "t9",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "StarSharpness",
+      "source": "StarSharpness.lean",
+      "declaration": "JSP000438.tree_ramsey_bound_is_sharp"
+    },
+    {
+      "id": "b0",
+      "problem": "JSP-000438",
+      "role": "bridge",
+      "module": "JSP000438.VerificationBridge",
+      "source": "JSP000438/VerificationBridge.lean",
+      "declaration": "Verify438.direct"
+    },
+    {
+      "id": "b1",
+      "problem": "JSP-000438",
+      "role": "bridge",
+      "module": "JSP000438.VerificationBridge",
+      "source": "JSP000438/VerificationBridge.lean",
+      "declaration": "Verify438.intended"
+    },
+    {
+      "id": "b2",
+      "problem": "JSP-000438",
+      "role": "bridge",
+      "module": "JSP000438.VerificationBridge",
+      "source": "JSP000438/VerificationBridge.lean",
+      "declaration": "Verify438.sharp"
+    }
+  ]
+}

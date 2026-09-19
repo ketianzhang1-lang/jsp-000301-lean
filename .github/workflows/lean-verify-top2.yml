@@ -1,0 +1,76 @@
+name: Pinned lean-verify top two submissions
+on:
+  push:
+    branches: [lean-verify-top2-20260919]
+    paths: ['verification/top2/**', '.github/workflows/lean-verify-top2.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        key: ['391', '438-main', '438-color']
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          path: harness-repo
+      - name: Retrieve exact public sources and official verification skill
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          cp -a harness-repo/verification/top2 harness
+          git clone --no-checkout https://github.com/ketianzhang1-lang/jsp-000301-lean.git proof
+          proof_sha=$(python3 -c 'import json,sys; print(json.load(open("harness/config.json"))[sys.argv[1]]["commit"])' '${{ matrix.key }}')
+          proof_branch=$(python3 -c 'import json,sys; print(json.load(open("harness/config.json"))[sys.argv[1]]["branch"])' '${{ matrix.key }}')
+          git -C proof checkout --detach "$proof_sha"
+          git -C proof merge-base --is-ancestor "$proof_sha" "origin/$proof_branch"
+          git -C proof rev-parse HEAD > evidence/SOURCE_COMMIT
+          git -C proof rev-parse "origin/$proof_branch" > evidence/BRANCH_TIP
+          git clone --no-checkout https://github.com/TheJustinSunPrize/awards.git official
+          git -C official checkout --detach 38e63c424c7196f8d4ceb664c5c25f0c0529d5e2
+          cp official/skills/lean-verify/scripts/audit.py harness/audit.py
+          cp -a official/skills/lean-verify evidence/official-skill
+          cp -a harness evidence/harness
+          sudo chown -R 10001:10001 proof evidence
+      - name: Build disposable verification environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker build -t lean-top2-audit harness 2>&1 | tee image-build.log
+          docker image inspect lean-top2-audit > evidence/image-inspect.json
+          cp image-build.log evidence/
+      - name: Prepare pinned dependencies and independent checker
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --cap-drop ALL --security-opt no-new-privileges --cpus 2 --memory 6g --pids-limit 512 --user 10001:10001 -e LEAN_NUM_THREADS=2 -v "$PWD/proof:/work" -v "$PWD/harness:/harness:ro" -v "$PWD/evidence:/out" lean-top2-audit python3 /harness/runner.py prepare '${{ matrix.key }}'
+      - name: Offline clean build, official target audit, bridges and independent replay
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges --cpus 2 --memory 6g --pids-limit 512 --user 10001:10001 -e LEAN_NUM_THREADS=2 -v "$PWD/proof:/work" -v "$PWD/harness:/harness:ro" -v "$PWD/evidence:/out" lean-top2-audit python3 /harness/runner.py verify '${{ matrix.key }}'
+      - name: Archive evidence only
+        if: always()
+        shell: bash
+        run: |
+          sudo rm -rf evidence/tools
+          sudo chown -R "$(id -u):$(id -g)" evidence
+          python3 - <<'PY'
+          import pathlib,hashlib,json
+          p=pathlib.Path('evidence')
+          d={str(f.relative_to(p)):hashlib.sha256(f.read_bytes()).hexdigest() for f in p.rglob('*') if f.is_file()}
+          (p/'SHA256SUMS.json').write_text(json.dumps(d,indent=2))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: lean-verify-${{ matrix.key }}-${{ github.run_attempt }}
+          path: evidence
+          if-no-files-found: error
+          retention-days: 90
