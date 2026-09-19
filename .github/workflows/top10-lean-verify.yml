@@ -40,7 +40,7 @@ jobs:
           sudo mkswap /swap-top10
           sudo swapon /swap-top10
           docker build -t top10-lean verification/top10-20260919
-          docker image inspect top10-lean > "$RUNNER_TEMP/top10/audit/container-image.json"
+          docker image inspect top10-lean | sudo tee "$RUNNER_TEMP/top10/audit/container-image.json" > /dev/null
       - name: Prepare pinned dependencies in isolated container
         env:
           PROOF_KEY: ${{ matrix.proof }}

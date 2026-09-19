@@ -1033,24 +1033,24 @@
           "id": "target-1",
           "problem": "JSP-000728",
           "role": "theorem",
-          "module": "JSP000728Complete",
-          "source": "JSP000728Complete.lean",
+          "module": "JSP000728Bridge",
+          "source": "JSP000728Bridge.lean",
           "declaration": "JSP000728.sumFree_iff_upstream"
         },
         {
           "id": "target-2",
           "problem": "JSP-000728",
           "role": "theorem",
-          "module": "JSP000728Complete",
-          "source": "JSP000728Complete.lean",
+          "module": "JSP000728Bridge",
+          "source": "JSP000728Bridge.lean",
           "declaration": "JSP000728.maximalSets_card_eq_upstream"
         },
         {
           "id": "target-3",
           "problem": "JSP-000728",
           "role": "theorem",
-          "module": "JSP000728Complete",
-          "source": "JSP000728Complete.lean",
+          "module": "JSP000728Bridge",
+          "source": "JSP000728Bridge.lean",
           "declaration": "JSP000728.allSumFreeSets_eq_upstream"
         }
       ]
