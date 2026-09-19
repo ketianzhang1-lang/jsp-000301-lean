@@ -4,9 +4,12 @@ We connect our existing construction classification to the previously public
 complete Nguyen–Vu formalization. Our direct endpoint is
 `JSP000476.complete_problem` in `JSP000476Complete.lean`.
 
-**Verification status for this integration: in progress.** Earlier verification
-receipts apply to the construction revision only. We do not yet claim that the
-new integration has passed its complete build and kernel checks.
+**The complete integration passed our exact-version checks** at commit
+`37d21e1fdb63be5366acafb0fbb1b0b24d85387b`: 446 compilation units, 40 axiom
+audits, fresh Lean replay of 91,704 declarations in the theorem dependency
+closure, and an independent NaNoda check of 92,532
+declarations. See [VERIFICATION.md](VERIFICATION.md) for reproducible evidence
+and the separate public CI status.
 
 For every real epsilon > 0, there is a threshold N0 such that, for every N >= N0:
 
@@ -29,7 +32,7 @@ bash scripts/verify_nanoda.sh
 ```
 
 The bootstrap script restores 443 upstream modules from immutable, checksum-checked
-sources and applies their existing documented compatibility patches. The verification
+sources and applies their existing documented patches, including upstream proof repairs. The verification
 script compiles that closure and our files, audits all 40 listed theorem endpoints,
 and replays the Lean kernel. The separate script exports the selected endpoints and
 checks their transitive proof closure using NaNoda with a strict axiom allowlist.

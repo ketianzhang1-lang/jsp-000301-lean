@@ -53,3 +53,8 @@ discovered the mathematical upper bound or first completed its formalization.
 [awards PR #1471](https://github.com/TheJustinSunPrize/awards/pull/1471) also records
 the prior plby formalization; our existing PR #372 should be reconciled with it
 by the maintainers. We do not create a duplicate submission or a new award claim.
+
+For the module supplied by a patch, the manifest records the empty preimage
+hash and the final patched hash; the supplying patch itself has an immutable
+Git blob and SHA-256 record. Our project license applies to our original work;
+upstream files retain their own notices and are not blanket-relicensed here.

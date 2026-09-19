@@ -1,0 +1,2 @@
+Selected 91704 declarations for 40 theorem targets.
+Fresh Lean kernel checked 91704 declarations for 40 targets; all dependencies replayed and axioms allowed.

@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "performed_at_utc": "2026-09-19",
+  "performed_by": "ketianzhang1-lang, with OpenAI ChatGPT assistance",
+  "proof_repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+  "proof_branch": "jsp-000476-full-kz",
+  "proof_commit": "37d21e1fdb63be5366acafb0fbb1b0b24d85387b",
+  "toolchain": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "compiled_units": 446,
+  "restored_upstream_modules": 443,
+  "axiom_reports": 40,
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "fresh_kernel_target_declarations": 91704,
+  "kernel_replay_api": "Lean.Environment.replay in Lean 4.33.0",
+  "kernel_driver_sha256": "4318e8c1a9c0c2216cf3e5ad93a783c62042aee48424905d3563154768d59b34",
+  "additional_whole_import_kernel_replay": "still running when this receipt was collected",
+  "negative_control": "false equality 1 = 0 rejected",
+  "nanoda_declarations": 92532,
+  "exporter_commit": "8554815c2dc6b7abe99ec1f08849c9759ba77947",
+  "nanoda_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+  "checks": {
+    "source_reconstruction": "passed",
+    "dependency_pins": "passed",
+    "compilation": "passed",
+    "axiom_allowlist": "passed",
+    "fresh_kernel_replay": "passed",
+    "negative_control": "passed",
+    "independent_nanoda_replay": "passed"
+  },
+  "public_ci_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35411332103",
+  "scope": "Contributor-run checks of the exact proof revision and all selected theorem dependencies; the broader whole-import replay and public CI are recorded separately. Not maintainer approval or independent human review.",
+  "receipt_sha256": {
+    "complete-source-receipt.json": "36807dfe25d04a61bd8e4dd6fcd3fa116aa4f2ec9f18964864152b95c7dd9a9e",
+    "axioms.txt": "bdf0d532029b21b7235d93dda6d2a0d7853bf4fc46682368ca8506a10126168b",
+    "kernel-JSP000476.txt": "f7a99aa12ed357d610b834196f8fd754eab9a10ebfb83a42f9d477f2371c5d2a",
+    "kernel-targets.txt": "c67234f6235a7dca18ac17c03039342ee39dea0894122663665076a1a5863f69",
+    "negative-axiom-gate.txt": "4843eacfabb17e6a43520a03a3ff2d6cd882ce0aded680f31fc990cf3d0e2ea6",
+    "negative-control.txt": "ceaa43ee996ac22aec39e17f63e966e83cb213070f303bd3e09dc5bb066cb0ad",
+    "nanoda-result.txt": "126fc3c4b2f4df51a51c253bb3ad090718e31a2be1d70759aa81e7c53d7b3d59",
+    "nanoda-statements.txt": "41b0f9178e7b51a2c73b6ccc982394eb35bf18dd4fb642fae8f49aa81eb26715",
+    "nanoda-config.json": "6fd32fd621206cecc7dbaeb461e4d79b786bbabfa56088ba6a3b04dfa995dccb",
+    "CHECKER_SHA256SUMS": "d15e74d592badbf1c622e407d73c4cd51eb523fb53cb0d5ad5f04dc26bd1b61c"
+  }
+}

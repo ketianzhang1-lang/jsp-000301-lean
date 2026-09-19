@@ -1,0 +1,288 @@
+theorem JSP000476.triangle_succ (m : Nat) :
+  Eq (JSP000476.triangle (HAdd.hAdd m (OfNat.ofNat 1)))
+    (HAdd.hAdd (JSP000476.triangle m) (HAdd.hAdd m (OfNat.ofNat 1))) :=
+  _
+
+theorem JSP000476.triangle_double (m : Nat) :
+  Eq (HMul.hMul (OfNat.ofNat 2) (JSP000476.triangle m)) (HMul.hMul m (HAdd.hAdd m (OfNat.ofNat 1))) :=
+  _
+
+theorem JSP000476.le_triangle (m : Nat) : LE.le m (JSP000476.triangle m) := _
+
+theorem JSP000476.subset_sum_le_triangle :
+  forall {m : Nat} {S : Finset Nat},
+  LE.le S (Finset.range m) → LE.le (Finset.sum S (fun (i : Nat) => HAdd.hAdd i (OfNat.ofNat 1)))
+    (JSP000476.triangle m) :=
+  _
+
+theorem JSP000476.all_sums_attained (m t : Nat) (ht : LE.le t (JSP000476.triangle m)) :
+  Exists
+    (fun (S : Finset Nat) =>
+    And (LE.le S (Finset.range m)) (Eq (Finset.sum S (fun (i : Nat) => HAdd.hAdd i (OfNat.ofNat 1))) t)) :=
+  _
+
+theorem JSP000476.multiples_card :
+  forall {p : Nat}, LT.lt (OfNat.ofNat 0) p → (forall (m : Nat), Eq (Finset.card (JSP000476.multiples p m)) m) :=
+  _
+
+theorem JSP000476.prime_mul_not_power :
+  forall {p t : Nat},
+  Nat.Prime p → LT.lt (OfNat.ofNat 0) t → LT.lt t p → (forall (x k : Nat),
+  LE.le (OfNat.ofNat 2) k → Ne (HMul.hMul p t) (HPow.hPow x k)) :=
+  _
+
+theorem JSP000476.multiples_power_free :
+  forall {p m : Nat},
+  Nat.Prime p → LT.lt (JSP000476.triangle m) p → JSP000476.PowerSumFree (JSP000476.multiples p m) :=
+  _
+
+theorem JSP000476.power_free_square_free :
+  forall {A : Finset Nat}, JSP000476.PowerSumFree A → JSP000476.SquareSumFree A :=
+  _
+
+theorem JSP000476.multiples_square_witness :
+  forall {p m : Nat},
+  Nat.Prime p → LE.le p (JSP000476.triangle m) → Exists
+    (fun (S : Finset Nat) =>
+    And (LE.le S (JSP000476.multiples p m))
+      (And (Finset.Nonempty S) (Eq (Finset.sum S (fun (a : Nat) => a)) (HPow.hPow p (OfNat.ofNat 2))))) :=
+  _
+
+theorem JSP000476.multiples_square_free_iff :
+  forall {p : Nat},
+  Nat.Prime p → (forall (m : Nat),
+  Iff (JSP000476.SquareSumFree (JSP000476.multiples p m)) (LT.lt (JSP000476.triangle m) p)) :=
+  _
+
+theorem JSP000476.multiples_power_free_iff :
+  forall {p : Nat},
+  Nat.Prime p → (forall (m : Nat),
+  Iff (JSP000476.PowerSumFree (JSP000476.multiples p m)) (LT.lt (JSP000476.triangle m) p)) :=
+  _
+
+theorem JSP000476.exact_criterion :
+  forall {p : Nat},
+  Nat.Prime p → (forall (m : Nat),
+  Iff (JSP000476.SquareSumFree (JSP000476.multiples p m))
+    (LT.lt (HMul.hMul m (HAdd.hAdd m (OfNat.ofNat 1))) (HMul.hMul (OfNat.ofNat 2) p))) :=
+  _
+
+theorem JSP000476.exists_power_free_card (m : Nat) :
+  Exists
+    (fun (A : Finset Nat) =>
+    And (LE.le A (Finset.Icc (OfNat.ofNat 1) (HMul.hMul (HPow.hPow m (OfNat.ofNat 2)) (HAdd.hAdd m (OfNat.ofNat 1)))))
+      (And (Eq (Finset.card A) m) (JSP000476.PowerSumFree A))) :=
+  _
+
+theorem JSP000476.exists_power_free_in_interval (N m : Nat)
+  (hm : LE.le (HMul.hMul (HPow.hPow m (OfNat.ofNat 2)) (HAdd.hAdd m (OfNat.ofNat 1))) N) :
+  Exists
+    (fun (A : Finset Nat) =>
+    And (LE.le A (Finset.Icc (OfNat.ofNat 1) N)) (And (Eq (Finset.card A) m) (JSP000476.PowerSumFree A))) :=
+  _
+
+theorem JSP000476.cubic_lower_bound (N m : Nat)
+  (hm : LE.le (HMul.hMul (OfNat.ofNat 2) (HPow.hPow m (OfNat.ofNat 3))) N) :
+  Exists
+    (fun (A : Finset Nat) =>
+    And (LE.le A (Finset.Icc (OfNat.ofNat 1) N)) (And (Eq (Finset.card A) m) (JSP000476.PowerSumFree A))) :=
+  _
+
+theorem JSP000476.example_twelve :
+  And (Eq (Finset.card (JSP000476.multiples (OfNat.ofNat 79) (OfNat.ofNat 12))) (OfNat.ofNat 12))
+    (And (LE.le (JSP000476.multiples (OfNat.ofNat 79) (OfNat.ofNat 12)) (Finset.Icc (OfNat.ofNat 1) (OfNat.ofNat 1000)))
+      (JSP000476.PowerSumFree (JSP000476.multiples (OfNat.ofNat 79) (OfNat.ofNat 12)))) :=
+  _
+
+theorem JSP000476.squarefree_mul_not_power :
+  forall {a t : Nat},
+  Squarefree a → LT.lt (OfNat.ofNat 0) t → LT.lt t a → (forall (x k : Nat),
+  LE.le (OfNat.ofNat 2) k → Ne (HMul.hMul a t) (HPow.hPow x k)) :=
+  _
+
+theorem JSP000476.multiple_sum_realization :
+  forall {d m t : Nat},
+  LT.lt (OfNat.ofNat 0) d → LT.lt (OfNat.ofNat 0) t → LE.le t (JSP000476.triangle m) → Exists
+    (fun (S : Finset Nat) =>
+    And (LE.le S (JSP000476.multiples d m))
+      (And (Finset.Nonempty S) (Eq (Finset.sum S (fun (a : Nat) => a)) (HMul.hMul d t)))) :=
+  _
+
+theorem JSP000476.squarefree_multiples_power_free :
+  forall {a m : Nat},
+  Squarefree a → LT.lt (JSP000476.triangle m) a → JSP000476.PowerSumFree (JSP000476.multiples a m) :=
+  _
+
+theorem JSP000476.squarefree_exact_criterion :
+  forall {a : Nat},
+  Squarefree a → (forall (m : Nat),
+  And
+    (Iff (JSP000476.SquareSumFree (JSP000476.multiples a m))
+      (LT.lt (HMul.hMul m (HAdd.hAdd m (OfNat.ofNat 1))) (HMul.hMul (OfNat.ofNat 2) a)))
+    (Iff (JSP000476.PowerSumFree (JSP000476.multiples a m))
+      (LT.lt (HMul.hMul m (HAdd.hAdd m (OfNat.ofNat 1))) (HMul.hMul (OfNat.ofNat 2) a)))) :=
+  _
+
+theorem JSP000476.cancel_square_factor :
+  forall {b t x : Nat},
+  LT.lt (OfNat.ofNat 0) b → Eq (HMul.hMul (HPow.hPow b (OfNat.ofNat 2)) t) (HPow.hPow x (OfNat.ofNat 2)) → Exists
+    (fun (y : Nat) => Eq t (HPow.hPow y (OfNat.ofNat 2))) :=
+  _
+
+theorem JSP000476.general_step_criterion :
+  forall {d a b : Nat},
+  Squarefree a → LT.lt (OfNat.ofNat 0) b → Eq d (HMul.hMul (HPow.hPow b (OfNat.ofNat 2)) a) → (forall (m : Nat),
+  Iff (JSP000476.SquareSumFree (JSP000476.multiples d m))
+    (LT.lt (HMul.hMul m (HAdd.hAdd m (OfNat.ofNat 1))) (HMul.hMul (OfNat.ofNat 2) a))) :=
+  _
+
+theorem JSP000476.all_positive_steps_classified (d : Nat) (hd : LT.lt (OfNat.ofNat 0) d) :
+  Exists
+    (fun (a : Nat) =>
+    Exists
+      (fun (b : Nat) =>
+      And (LT.lt (OfNat.ofNat 0) a)
+        (And (LT.lt (OfNat.ofNat 0) b)
+          (And (Squarefree a)
+            (And (Eq d (HMul.hMul (HPow.hPow b (OfNat.ofNat 2)) a))
+              (forall (m : Nat),
+              Iff (JSP000476.SquareSumFree (JSP000476.multiples d m))
+                (LT.lt (HMul.hMul m (HAdd.hAdd m (OfNat.ofNat 1))) (HMul.hMul (OfNat.ofNat 2) a)))))))) :=
+  _
+
+theorem JSP000476.nonsquare_step_does_not_imply_power_avoidance :
+  And (JSP000476.SquareSumFree (JSP000476.multiples (OfNat.ofNat 8) (OfNat.ofNat 1)))
+    (Not (JSP000476.PowerSumFree (JSP000476.multiples (OfNat.ofNat 8) (OfNat.ofNat 1)))) :=
+  _
+
+theorem JSP000476.squareSumFree_iff_upstream (A : Finset Nat) :
+  Iff (JSP000476.SquareSumFree A) (Erdos587.SquareSubsetSumFree A) :=
+  _
+
+theorem JSP000476.extremal_eq_upstream (N : Nat) : Eq (JSP000476.extremal N) (Erdos587.MaxNotSqSum N) := _
+
+theorem JSP000476.card_le_extremal :
+  forall {N : Nat} {A : Finset Nat},
+  LE.le A (Finset.Icc (OfNat.ofNat 1) N) → JSP000476.SquareSumFree A → LE.le (Finset.card A)
+    (JSP000476.extremal N) :=
+  _
+
+theorem JSP000476.exists_extremizer (N : Nat) :
+  Exists
+    (fun (A : Finset Nat) =>
+    And (LE.le A (Finset.Icc (OfNat.ofNat 1) N))
+      (And (JSP000476.SquareSumFree A) (Eq (Finset.card A) (JSP000476.extremal N)))) :=
+  _
+
+theorem JSP000476.extremal_le_interval (N : Nat) : LE.le (JSP000476.extremal N) N := _
+
+theorem JSP000476.extremal_zero : Eq (JSP000476.extremal (OfNat.ofNat 0)) (OfNat.ofNat 0) := _
+
+theorem JSP000476.extremal_mono : Monotone JSP000476.extremal := _
+
+theorem JSP000476.extremal_lower_bound (N : Nat) (hN : LE.le (OfNat.ofNat 64) N) :
+  LE.le (HDiv.hDiv (HPow.hPow (Nat.cast N) (HDiv.hDiv (OfNat.ofNat 1) (OfNat.ofNat 3))) (OfNat.ofNat 4))
+    (Nat.cast (JSP000476.extremal N)) :=
+  _
+
+theorem JSP000476.uniform_polylog_upper_bound :
+  Exists
+    (fun (O : Nat) =>
+    And (LT.lt (OfNat.ofNat 0) O)
+      (Exists
+        (fun (K : Real) =>
+        And (LT.lt (OfNat.ofNat 0) K)
+          (Exists
+            (fun (N₀ : Nat) =>
+            forall (N : Nat) (a._@._internal._hyg.0 : GE.ge N N₀) (A : Finset Nat),
+            LE.le A (Finset.Icc (OfNat.ofNat 1) N) → JSP000476.SquareSumFree A → LE.le (Nat.cast (Finset.card A))
+              (HMul.hMul (HMul.hMul K (HPow.hPow (Nat.cast N) (HDiv.hDiv (OfNat.ofNat 1) (OfNat.ofNat 3))))
+                (HPow.hPow (Real.log (Nat.cast N)) O))))))) :=
+  _
+
+theorem JSP000476.complete_extremal (ε : Real) (hε : LT.lt (OfNat.ofNat 0) ε) :
+  Exists
+    (fun (N₀ : Nat) =>
+    forall (N : Nat),
+    GE.ge N N₀ → And
+      (LE.le (HPow.hPow (Nat.cast N) (HSub.hSub (HDiv.hDiv (OfNat.ofNat 1) (OfNat.ofNat 3)) ε))
+        (Nat.cast (JSP000476.extremal N)))
+      (LE.le (Nat.cast (JSP000476.extremal N))
+        (HPow.hPow (Nat.cast N) (HAdd.hAdd (HDiv.hDiv (OfNat.ofNat 1) (OfNat.ofNat 3)) ε)))) :=
+  _
+
+theorem JSP000476.complete_problem (ε : Real) (hε : LT.lt (OfNat.ofNat 0) ε) :
+  Exists
+    (fun (N₀ : Nat) =>
+    forall (N : Nat),
+    GE.ge N N₀ → And
+      (Exists
+        (fun (A : Finset Nat) =>
+        And (LE.le A (Finset.Icc (OfNat.ofNat 1) N))
+          (And (JSP000476.SquareSumFree A)
+            (LE.le (HPow.hPow (Nat.cast N) (HSub.hSub (HDiv.hDiv (OfNat.ofNat 1) (OfNat.ofNat 3)) ε))
+              (Nat.cast (Finset.card A))))))
+      (forall (A : Finset Nat),
+      LE.le A (Finset.Icc (OfNat.ofNat 1) N) → JSP000476.SquareSumFree A → LE.le (Nat.cast (Finset.card A))
+        (HPow.hPow (Nat.cast N) (HAdd.hAdd (HDiv.hDiv (OfNat.ofNat 1) (OfNat.ofNat 3)) ε)))) :=
+  _
+
+theorem JSP000476.eventual_square_forcing (ε : Real) (hε : LT.lt (OfNat.ofNat 0) ε) :
+  Exists
+    (fun (N₀ : Nat) =>
+    forall (N : Nat) (a._@._internal._hyg.0 : GE.ge N N₀) (A : Finset Nat),
+    LE.le A (Finset.Icc (OfNat.ofNat 1) N) → LT.lt
+        (HPow.hPow (Nat.cast N) (HAdd.hAdd (HDiv.hDiv (OfNat.ofNat 1) (OfNat.ofNat 3)) ε))
+        (Nat.cast (Finset.card A)) →
+    Exists
+      (fun (S : Finset Nat) =>
+      And (LE.le S A)
+        (And (Finset.Nonempty S)
+          (Exists (fun (x : Nat) => Eq (Finset.sum S (fun (a : Nat) => a)) (HPow.hPow x (OfNat.ofNat 2))))))) :=
+  _
+
+theorem Erdos587.unconditional_nguyen_vu :
+  Exists
+    (fun (C : Nat) =>
+    And (GT.gt C (OfNat.ofNat 0))
+      (Exists
+        (fun (K : Real) =>
+        And (GT.gt K (OfNat.ofNat 0))
+          (Filter.Eventually
+            (fun (N : Nat) =>
+            LE.le (Nat.cast (Erdos587.MaxNotSqSum N))
+              (HMul.hMul (HMul.hMul K (Real.nthRoot (OfNat.ofNat 3) (Nat.cast N)))
+                (HPow.hPow (Real.log (Nat.cast N)) C))) Filter.atTop)))) :=
+  _
+
+theorem Erdos587.upper_bound :
+  Exists
+    (fun (O : Nat) =>
+    And (LT.lt (OfNat.ofNat 0) O)
+      (Exists
+        (fun (K : Real) =>
+        And (LT.lt (OfNat.ofNat 0) K)
+          (Exists
+            (fun (N₀ : Nat) =>
+            forall (N : Nat),
+            GE.ge N N₀ → LE.le (Nat.cast (Erdos587.MaxNotSqSum N))
+              (HMul.hMul (HMul.hMul K (HPow.hPow (Nat.cast N) (HDiv.hDiv (OfNat.ofNat 1) (OfNat.ofNat 3))))
+                (HPow.hPow (Real.log (Nat.cast N)) O))))))) :=
+  _
+
+theorem Erdos587.eventually_power_bounds (ε : Real) (hε : LT.lt (OfNat.ofNat 0) ε) :
+  Filter.Eventually
+    (fun (N : Nat) =>
+    And
+      (LE.le (HPow.hPow (Nat.cast N) (HSub.hSub (HDiv.hDiv (OfNat.ofNat 1) (OfNat.ofNat 3)) ε))
+        (Nat.cast (Erdos587.MaxNotSqSum N)))
+      (LE.le (Nat.cast (Erdos587.MaxNotSqSum N))
+        (HPow.hPow (Nat.cast N) (HAdd.hAdd (HDiv.hDiv (OfNat.ofNat 1) (OfNat.ofNat 3)) ε)))) Filter.atTop :=
+  _
+
+axiom propext {a b : Prop} : Iff a b → Eq a b
+
+axiom Quot.sound.{u} {α : Sort u} {r : α → α → Prop} {a b : α} : r a b → Eq (Quot.mk r a) (Quot.mk r b)
+
+axiom Classical.choice.{u} {α : Sort u} : Nonempty α → α
+
