@@ -1,0 +1,22 @@
+{
+  "925": {
+    "id": "JSP-000925",
+    "project": "projects/jsp-000925-strict",
+    "commit": "7b545f0e021b06d434654b17881c11819f3ff1b7",
+    "branch": "jsp-000925-strict-gaps",
+    "bridge_file": "bridge925.lean",
+    "bridge_path": "JSP000925Strict/VerificationBridge.lean",
+    "bridge_module": "JSP000925Strict.VerificationBridge",
+    "evidence_dir": "evidence"
+  },
+  "250": {
+    "id": "JSP-000250",
+    "project": "projects/jsp-000250",
+    "commit": "e2f4c737ad4c2c9d7f4dcbfd4214fd2f2c96c876",
+    "branch": "jsp-000250-prime-obstruction",
+    "bridge_file": "bridge250.lean",
+    "bridge_path": "JSP000250/VerificationBridge.lean",
+    "bridge_module": "JSP000250.VerificationBridge",
+    "evidence_dir": "evidence-complete"
+  }
+}

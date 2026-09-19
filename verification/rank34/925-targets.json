@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-000925-strict",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "7b545f0e021b06d434654b17881c11819f3ff1b7",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000925",
+      "source": "https://www.erdosproblems.com/1114",
+      "requirements": [
+        {
+          "id": "polynomial",
+          "description": "Arbitrary nonzero real polynomial of degree N+1, N>0, all N+1 equally spaced roots with arbitrary translation and positive spacing; actual polynomial derivative.",
+          "targets": [
+            "t4",
+            "t7",
+            "b0"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "existence-uniqueness",
+          "description": "Construct the derivative-root selector using Rolle and prove uniqueness in every adjacent-root interval; no selector assumption in the endpoint.",
+          "targets": [
+            "t5",
+            "t6",
+            "t7",
+            "b0"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "strictness",
+          "description": "Strict outward gap comparisons for every valid index; full analytic ingredient is proved, not assumed.",
+          "targets": [
+            "t0",
+            "t1",
+            "t2",
+            "t3",
+            "t4",
+            "b0"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "symmetry-boundaries",
+          "description": "Mirror gap symmetry gives the left side; equal central mirror gaps are excluded; all finite degrees with nonempty interval family included.",
+          "targets": [
+            "t4",
+            "t7",
+            "b0"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "t0",
+      "problem": "JSP-000925",
+      "role": "theorem",
+      "module": "JSP000925Strict",
+      "source": "JSP000925Strict.lean",
+      "declaration": "JSP000925Strict.strict_algebra"
+    },
+    {
+      "id": "t1",
+      "problem": "JSP-000925",
+      "role": "theorem",
+      "module": "JSP000925Strict",
+      "source": "JSP000925Strict.lean",
+      "declaration": "JSP000925Strict.phase_second_positive"
+    },
+    {
+      "id": "t2",
+      "problem": "JSP-000925",
+      "role": "theorem",
+      "module": "JSP000925Strict",
+      "source": "JSP000925Strict.lean",
+      "declaration": "JSP000925Strict.phase_strict_convex"
+    },
+    {
+      "id": "t3",
+      "problem": "JSP-000925",
+      "role": "theorem",
+      "module": "JSP000925Strict",
+      "source": "JSP000925Strict.lean",
+      "declaration": "JSP000925Strict.canonical_strict"
+    },
+    {
+      "id": "t4",
+      "problem": "JSP-000925",
+      "role": "theorem",
+      "module": "JSP000925Strict",
+      "source": "JSP000925Strict.lean",
+      "declaration": "JSP000925Strict.strict_gap_theorem"
+    },
+    {
+      "id": "t5",
+      "problem": "JSP-000925",
+      "role": "theorem",
+      "module": "JSP000925Strict",
+      "source": "JSP000925Strict.lean",
+      "declaration": "JSP000925Strict.interval_critical_exists"
+    },
+    {
+      "id": "t6",
+      "problem": "JSP-000925",
+      "role": "theorem",
+      "module": "JSP000925Strict",
+      "source": "JSP000925Strict.lean",
+      "declaration": "JSP000925Strict.interval_critical_unique"
+    },
+    {
+      "id": "t7",
+      "problem": "JSP-000925",
+      "role": "theorem",
+      "module": "JSP000925Strict",
+      "source": "JSP000925Strict.lean",
+      "declaration": "JSP000925Strict.exists_unique_strict_gaps"
+    },
+    {
+      "id": "b0",
+      "problem": "JSP-000925",
+      "role": "bridge",
+      "module": "JSP000925Strict.VerificationBridge",
+      "source": "JSP000925Strict/VerificationBridge.lean",
+      "declaration": "Verify925.intended"
+    }
+  ]
+}
