@@ -1,0 +1,357 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "ed82d0cb2d35fca55f32b00cb75bdd5271226eb8",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000393",
+      "source": "https://www.erdosproblems.com/485",
+      "requirements": [
+        {
+          "id": "minimum",
+          "description": "The infimum is the attained minimum of the actual square-support cardinality for every rational polynomial with exactly k nonzero terms, including k=0 and k=1.",
+          "targets": [
+            "t2",
+            "t5"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "lower",
+          "description": "For all support sizes k, the minimum tends to infinity with no unproved Schinzel assumption; equivalent uniform threshold is valid for every rational polynomial.",
+          "targets": [
+            "t3",
+            "t4",
+            "t11",
+            "t12"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "family",
+          "description": "For every natural k, construct an integer polynomial with 13^k nonzero terms and 12^k nonzero terms in its square, with no exponent collisions.",
+          "targets": [
+            "t0",
+            "t1",
+            "t6"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "minimum-upper",
+          "description": "Prove the genuine rational minimum bound f(13^k) <= 12^k using a support-preserving integer-to-rational coefficient map.",
+          "targets": [
+            "t5",
+            "t6",
+            "t7"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "small-ratio",
+          "description": "For every natural ratio factor M and every cutoff N, some n>=N has M*f(n)<n.",
+          "targets": [
+            "t8",
+            "t12"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "integer-threshold",
+          "description": "The proved rational Schinzel bound implies the submitted explicit integer-polynomial estimate and uniform threshold.",
+          "targets": [
+            "t9",
+            "t10"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "complex-minimum",
+          "description": "Original complex coefficient domain, exact actual squared-support minimum, attained for every k, including correct zero/one cases.",
+          "targets": [
+            "g3",
+            "g4",
+            "b0",
+            "b1",
+            "b4"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "original-complex-coefficients",
+          "description": "All complex polynomials are included: the full Schinzel lower bound and minimum divergence follow from a proved characteristic-zero-field induction, not merely a rational approximation or an assumed reduction.",
+          "targets": [
+            "g0",
+            "g1",
+            "g2",
+            "g5",
+            "g9",
+            "g10",
+            "b2",
+            "b3"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "general-upper-ratio",
+          "description": "The retained original integer family embeds injectively in every characteristic-zero field; prove exact counts, true minimum upper bounds and arbitrary-cutoff small-ratio witnesses for complex coefficients as well.",
+          "targets": [
+            "g6",
+            "g7",
+            "g8",
+            "g9",
+            "b2"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "b0",
+      "problem": "JSP-000393",
+      "role": "bridge",
+      "module": "JSP000393General.VerificationBridge",
+      "source": "JSP000393General/VerificationBridge.lean",
+      "declaration": "Verify393General.minimum_definition"
+    },
+    {
+      "id": "b1",
+      "problem": "JSP-000393",
+      "role": "bridge",
+      "module": "JSP000393General.VerificationBridge",
+      "source": "JSP000393General/VerificationBridge.lean",
+      "declaration": "Verify393General.complex_attained"
+    },
+    {
+      "id": "b2",
+      "problem": "JSP-000393",
+      "role": "bridge",
+      "module": "JSP000393General.VerificationBridge",
+      "source": "JSP000393General/VerificationBridge.lean",
+      "declaration": "Verify393General.intended"
+    },
+    {
+      "id": "b3",
+      "problem": "JSP-000393",
+      "role": "bridge",
+      "module": "JSP000393General.VerificationBridge",
+      "source": "JSP000393General/VerificationBridge.lean",
+      "declaration": "Verify393General.complex_uniform_threshold"
+    },
+    {
+      "id": "b4",
+      "problem": "JSP-000393",
+      "role": "bridge",
+      "module": "JSP000393General.VerificationBridge",
+      "source": "JSP000393General/VerificationBridge.lean",
+      "declaration": "Verify393General.complex_zero_and_one"
+    },
+    {
+      "id": "t0",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393",
+      "source": "JSP000393.lean",
+      "declaration": "JSP000393.family_counts"
+    },
+    {
+      "id": "t1",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393",
+      "source": "JSP000393.lean",
+      "declaration": "JSP000393.arbitrarily_sparse_squares"
+    },
+    {
+      "id": "t2",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos485.f_attained",
+      "definition_source": "ErdosProblems/Erdos485/Basic.lean",
+      "definition_sha256": "d6598953a850d434c9bc2decbb46b6b033a0b72475c6d8aa722c912c7ee81c28",
+      "definition_original_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/Basic.lean"
+    },
+    {
+      "id": "t3",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos485.schinzel_support_bound",
+      "definition_source": "ErdosProblems/Erdos485/Schinzel.lean",
+      "definition_sha256": "233c59c5df7ee6bedb5b46b1511f5c314d97889e63bcd7c54b644dc4c6e409b3",
+      "definition_original_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485/Schinzel.lean"
+    },
+    {
+      "id": "t4",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos485.erdos_485",
+      "definition_source": "ErdosProblems/Erdos485.lean",
+      "definition_sha256": "b92791393456c2074304809d4a9a2ec3d714e8fb283848d32ee3b58c96f4e6dc",
+      "definition_original_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos485.lean"
+    },
+    {
+      "id": "t5",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393Complete",
+      "source": "JSP000393Complete.lean",
+      "declaration": "JSP000393Complete.integer_support"
+    },
+    {
+      "id": "t6",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393Complete",
+      "source": "JSP000393Complete.lean",
+      "declaration": "JSP000393Complete.rational_family_counts"
+    },
+    {
+      "id": "t7",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393Complete",
+      "source": "JSP000393Complete.lean",
+      "declaration": "JSP000393Complete.minimum_family_upper_bound"
+    },
+    {
+      "id": "t8",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393Complete",
+      "source": "JSP000393Complete.lean",
+      "declaration": "JSP000393Complete.arbitrarily_large_small_ratio"
+    },
+    {
+      "id": "t9",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393Complete",
+      "source": "JSP000393Complete.lean",
+      "declaration": "JSP000393Complete.integer_schinzel_bound"
+    },
+    {
+      "id": "t10",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393Complete",
+      "source": "JSP000393Complete.lean",
+      "declaration": "JSP000393Complete.integer_uniform_threshold"
+    },
+    {
+      "id": "t11",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393Complete",
+      "source": "JSP000393Complete.lean",
+      "declaration": "JSP000393Complete.minimum_diverges"
+    },
+    {
+      "id": "t12",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393Complete",
+      "source": "JSP000393Complete.lean",
+      "declaration": "JSP000393Complete.jsp_000393"
+    },
+    {
+      "id": "g0",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393General",
+      "source": "JSP000393General.lean",
+      "declaration": "JSP000393General.schinzel_support_bound"
+    },
+    {
+      "id": "g1",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393General",
+      "source": "JSP000393General.lean",
+      "declaration": "JSP000393General.schinzel_term_bound"
+    },
+    {
+      "id": "g2",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393General",
+      "source": "JSP000393General.lean",
+      "declaration": "JSP000393General.uniform_threshold"
+    },
+    {
+      "id": "g3",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393General",
+      "source": "JSP000393General.lean",
+      "declaration": "JSP000393General.minimum_attained"
+    },
+    {
+      "id": "g4",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393General",
+      "source": "JSP000393General.lean",
+      "declaration": "JSP000393General.minimum_le"
+    },
+    {
+      "id": "g5",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393General",
+      "source": "JSP000393General.lean",
+      "declaration": "JSP000393General.minimum_diverges"
+    },
+    {
+      "id": "g6",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393General",
+      "source": "JSP000393General.lean",
+      "declaration": "JSP000393General.family_counts"
+    },
+    {
+      "id": "g7",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393General",
+      "source": "JSP000393General.lean",
+      "declaration": "JSP000393General.minimum_family_upper_bound"
+    },
+    {
+      "id": "g8",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393General",
+      "source": "JSP000393General.lean",
+      "declaration": "JSP000393General.arbitrarily_large_small_ratio"
+    },
+    {
+      "id": "g9",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393General",
+      "source": "JSP000393General.lean",
+      "declaration": "JSP000393General.jsp_000393"
+    },
+    {
+      "id": "g10",
+      "problem": "JSP-000393",
+      "role": "theorem",
+      "module": "JSP000393General",
+      "source": "JSP000393General.lean",
+      "declaration": "JSP000393General.complex_original"
+    }
+  ]
+}

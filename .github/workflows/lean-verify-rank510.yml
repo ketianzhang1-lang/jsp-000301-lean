@@ -1,0 +1,102 @@
+name: Complete lean-verify ranks five through ten
+on:
+  push:
+    branches: [lean-verify-rank510-20260919]
+    paths: ['verification/rank510/**', '.github/workflows/lean-verify-rank510.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      keys: ${{ steps.matrix.outputs.keys }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - id: matrix
+        run: echo "keys=$(cat verification/rank510/run-keys.json)" >> "$GITHUB_OUTPUT"
+  audit:
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      matrix:
+        key: ${{ fromJson(needs.plan.outputs.keys) }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          path: harness-repo
+      - name: Retrieve exact public source and official skill
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          cp -a harness-repo/verification/rank510 harness
+          git clone --no-checkout https://github.com/ketianzhang1-lang/jsp-000301-lean.git proof
+          proof_sha=$(python3 -c 'import json,sys; print(json.load(open("harness/config.json"))[sys.argv[1]]["commit"])' '${{ matrix.key }}')
+          proof_branch=$(python3 -c 'import json,sys; print(json.load(open("harness/config.json"))[sys.argv[1]]["branch"])' '${{ matrix.key }}')
+          git -C proof checkout --detach "$proof_sha"
+          git -C proof merge-base --is-ancestor "$proof_sha" "origin/$proof_branch"
+          git -C proof rev-parse HEAD > evidence/SOURCE_COMMIT
+          git -C proof rev-parse "origin/$proof_branch" > evidence/BRANCH_TIP
+          git clone --no-checkout https://github.com/TheJustinSunPrize/awards.git official
+          git -C official checkout --detach 38e63c424c7196f8d4ceb664c5c25f0c0529d5e2
+          cp official/skills/lean-verify/scripts/audit.py harness/audit.py
+          cp -a official/skills/lean-verify evidence/official-skill
+          cp -a harness evidence/harness
+      - name: Prepare isolated toolchain and memory limits
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo fallocate -l 16G /lean-audit-swap
+          sudo chmod 600 /lean-audit-swap
+          sudo mkswap /lean-audit-swap
+          sudo swapon /lean-audit-swap
+          lean_version=$(python3 -c 'import json,sys; print(json.load(open("harness/config.json"))[sys.argv[1]]["lean_version"])' '${{ matrix.key }}')
+          docker build --build-arg LEAN_VERSION="$lean_version" -t lean-rank510-audit harness 2>&1 | tee image-build.log
+          docker image inspect lean-rank510-audit > evidence/image-inspect.json
+          cp image-build.log evidence/
+          sudo chown -R 10001:10001 proof evidence
+      - name: Prepare pinned dependencies and external checkers
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --cap-drop ALL --security-opt no-new-privileges --cpus 4 --memory 14g --memory-swap 24g --pids-limit 1024 --user 10001:10001 -e CARGO_HOME=/out/cargo-cache -v "$PWD/proof:/work" -v "$PWD/harness:/harness:ro" -v "$PWD/evidence:/out" lean-rank510-audit python3 /harness/runner.py prepare '${{ matrix.key }}'
+      - name: Offline original clean build and submitted verifier
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges --cpus 4 --memory 14g --memory-swap 24g --pids-limit 1024 --user 10001:10001 -e CARGO_HOME=/out/cargo-cache -v "$PWD/proof:/work" -v "$PWD/harness:/harness:ro" -v "$PWD/evidence:/out" -v "$PWD/evidence/tools:/out/tools:ro" lean-rank510-audit python3 /harness/runner.py original '${{ matrix.key }}'
+      - name: Offline official per-target statement and axiom audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges --cpus 4 --memory 14g --memory-swap 24g --pids-limit 1024 --user 10001:10001 -e CARGO_HOME=/out/cargo-cache -v "$PWD/proof:/work" -v "$PWD/harness:/harness:ro" -v "$PWD/evidence:/out" -v "$PWD/evidence/tools:/out/tools:ro" lean-rank510-audit python3 /harness/runner.py audit '${{ matrix.key }}'
+      - name: Offline kernel replay and independent NaNoda
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges --cpus 4 --memory 14g --memory-swap 24g --pids-limit 1024 --user 10001:10001 -e CARGO_HOME=/out/cargo-cache -v "$PWD/proof:/work" -v "$PWD/harness:/harness:ro" -v "$PWD/evidence:/out" -v "$PWD/evidence/tools:/out/tools:ro" lean-rank510-audit python3 /harness/runner.py replay '${{ matrix.key }}'
+      - name: Archive exact evidence
+        if: always()
+        shell: bash
+        run: |
+          sudo rm -rf evidence/tools evidence/cargo-cache
+          sudo chown -R "$(id -u):$(id -g)" evidence
+          python3 - <<'PY'
+          import pathlib,hashlib,json
+          p=pathlib.Path('evidence')
+          d={str(f.relative_to(p)):hashlib.sha256(f.read_bytes()).hexdigest() for f in p.rglob('*') if f.is_file()}
+          (p/'SHA256SUMS.json').write_text(json.dumps(d,indent=2))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: rank510-${{ matrix.key }}-${{ github.run_attempt }}
+          path: evidence
+          if-no-files-found: error
+          retention-days: 90
