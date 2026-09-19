@@ -1,0 +1,14 @@
+import JSP000465Uniform
+
+#print axioms JSP000465.familyExtremal_singleton
+#print axioms JSP000465.familyExtremal_attained
+#print axioms JSP000465.simultaneous_member_lower
+#print axioms JSP000465.uniform_separation
+#print axioms JSP000465.connected_bipartite_counterexample
+#print axioms JSP000465.not_bipartite_compactness
+#print axioms Erdos180.quantitativeCompactnessCounterexample
+#print axioms JSP000465.eventually_member_positive
+#print axioms JSP000465.uniform_ratio_small
+#print axioms JSP000465.adaptive_ratio_tendsto
+#print axioms JSP000465.no_adaptive_comparison
+#print axioms JSP000465.adaptive_compactness_counterexample
