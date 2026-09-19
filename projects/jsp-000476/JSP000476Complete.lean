@@ -26,8 +26,9 @@ noncomputable def extremal (N : ℕ) : ℕ := by
 /-- The two maxima agree, including the empty interval and empty set. -/
 theorem extremal_eq_upstream (N : ℕ) : extremal N = Erdos587.MaxNotSqSum N := by
   classical
-  simp only [extremal, Erdos587.MaxNotSqSum, squareSumFree_iff_upstream,
-    Erdos587.SquareSubsetSumFree, Finset.bot_eq_empty]
+  unfold extremal Erdos587.MaxNotSqSum
+  apply congrArg (fun s : Finset (Finset ℕ) => s.sup Finset.card)
+  exact Finset.filter_congr (fun A _ => squareSumFree_iff_upstream A)
 
 theorem card_le_extremal {N : ℕ} {A : Finset ℕ}
     (hA : A ⊆ Finset.Icc 1 N) (hfree : SquareSumFree A) : A.card ≤ extremal N := by
