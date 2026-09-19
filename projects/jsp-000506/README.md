@@ -67,3 +67,20 @@ Files prefixed `INITIAL_PARTIAL_` preserve the earlier partial submission.
 Their scope statements apply to that historical version. The existing
 submission is [awards PR #363](https://github.com/TheJustinSunPrize/awards/pull/363).
 Machine verification does not establish maintainer acceptance or award eligibility.
+
+## Navigation for preserved upstream license and citation files
+
+The bootstrap preserves the upstream documents byte-for-byte so their pinned
+checksums remain verifiable. In the copied `UPSTREAM_LICENSE_SCOPE.md`, the
+relative links named `LICENSE` and `CITATION.cff` refer to the **upstream
+repository root**, not to this project's local filenames.
+
+For the retained copies in this project, use
+[upstream CC BY 4.0 license](UPSTREAM_LICENSE),
+[upstream citation](UPSTREAM_CITATION.cff), and
+[upstream license-scope document at its original pinned location](https://github.com/SamPetkov/Erdos/blob/b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea/LICENSE_SCOPE.md).
+The project's local `LICENSE` applies to our additions as described in
+[PROVENANCE.md](PROVENANCE.md); it does not relicense the upstream proof.
+
+This navigation note changes documentation only. The selected proof commits,
+upstream bytes, manifests and verification receipts remain as identified above.
