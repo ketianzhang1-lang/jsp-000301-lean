@@ -1,0 +1,42 @@
+{
+  "inspected_date": "2026-09-19",
+  "source_commit": "e1a17b0d6728b9d4929d1d4abd3721a27377369a",
+  "verification_commit": "26282f3afe1d23d35afda21cbecbc2f918043c6a",
+  "verification_branch": "jsp-000301-strict-verification-20260919",
+  "run_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35413514755",
+  "job_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35413514755/job/105817581362",
+  "conclusion": "success",
+  "completed_at": "2026-09-19T01:46:01Z",
+  "log_excerpt": [
+    "2026-09-19T01:45:13.5342659Z Passed: lake build --wfail",
+    "2026-09-19T01:45:21.8900150Z Passed: lake env leanchecker --verbose JSP000301",
+    "2026-09-19T01:45:23.6998887Z Passed: lake env lean -DwarningAsError=true Audit301Strict.lean",
+    "2026-09-19T01:45:25.5035829Z Strict build, replay, eight axiom reports, nine dependencies and negative control passed.",
+    "2026-09-19T01:45:56.1211889Z Checked 3487 declarations with no errors",
+    "2026-09-19T01:45:56.1670569Z Strict NaNoda verification passed for 8 target closures.",
+    "2026-09-19T01:45:58.0222984Z SHA256 digest of uploaded artifact zip is 29df04162583e549491707ac6948c8ba959d78e5be5a0c78b830409053c11937",
+    "2026-09-19T01:45:58.2759344Z Artifact jsp-000301-strict-evidence.zip successfully finalized. Artifact ID 10575146525"
+  ],
+  "artifact": {
+    "id": 10575146525,
+    "node_id": "MDg6QXJ0aWZhY3QxMDU3NTE0NjUyNQ==",
+    "name": "jsp-000301-strict-evidence",
+    "size_in_bytes": 2012880,
+    "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10575146525",
+    "archive_download_url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10575146525/zip",
+    "expired": false,
+    "digest": "sha256:29df04162583e549491707ac6948c8ba959d78e5be5a0c78b830409053c11937",
+    "created_at": "2026-09-19T01:45:58Z",
+    "updated_at": "2026-09-19T01:45:58Z",
+    "expires_at": "2026-12-18T01:43:16Z",
+    "workflow_run": {
+      "id": 35413514755,
+      "repository_id": 1373404416,
+      "head_repository_id": 1373404416,
+      "head_branch": "jsp-000301-strict-verification-20260919",
+      "head_sha": "26282f3afe1d23d35afda21cbecbc2f918043c6a"
+    }
+  },
+  "scope": "Eight explicitly selected public declaration closures, 3487 declarations; propext, Classical.choice, Quot.sound only; unpermitted_axiom_hard_error true; error-free check and nonempty statement output required. This target export does not claim a second check of all 188335 declarations in the old whole-environment export.",
+  "limits": "Contributor-run automated verification, no independent human certification. Artifact digest is reported by GitHub, not recomputed from downloaded artifact bytes."
+}
