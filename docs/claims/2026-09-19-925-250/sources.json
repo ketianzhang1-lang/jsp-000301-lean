@@ -1,0 +1,83 @@
+{
+  "inspected_utc_date": "2026-09-19",
+  "sources": [
+    {
+      "id": "upper250_early",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/567770d9977669a0846c491d0822fda8dddf9011/projects/jsp-000250/JSP000250.lean",
+      "bytes": 11107,
+      "sha256": "59bf1159cd674976671ce5f31f79628803e8ad0f67e81d9f1036601213ca4283",
+      "git_blob_sha1": "bf5793caf6ceadce9328f7e798926c280fb6dc76"
+    },
+    {
+      "id": "upper250_historical",
+      "url": "https://raw.githubusercontent.com/TheJustinSunPrize/awards/b583ad8173e9a6eac6de5238077d4d76e27a09ce/docs/submissions/jsp-000250-kz/JSP000250.lean",
+      "bytes": 11107,
+      "sha256": "59bf1159cd674976671ce5f31f79628803e8ad0f67e81d9f1036601213ca4283",
+      "git_blob_sha1": "bf5793caf6ceadce9328f7e798926c280fb6dc76"
+    },
+    {
+      "id": "upper250_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/e2f4c737ad4c2c9d7f4dcbfd4214fd2f2c96c876/projects/jsp-000250/JSP000250.lean",
+      "bytes": 11107,
+      "sha256": "59bf1159cd674976671ce5f31f79628803e8ad0f67e81d9f1036601213ca4283",
+      "git_blob_sha1": "bf5793caf6ceadce9328f7e798926c280fb6dc76"
+    },
+    {
+      "id": "upper250_reused",
+      "url": "https://raw.githubusercontent.com/peilinliu66-dev/jsp-000250-lean/37b7e70db36ea5cff44ef8c50c591b5f409fd820/JSP250ExistingUpper.lean",
+      "bytes": 13005,
+      "sha256": "daa59a70ab6448692da0c85d694d409e93ed3d4a96a10096d8b9712bef9cef1a",
+      "git_blob_sha1": "f4c753799e384df9f0026447bb46adacca6c1d77"
+    },
+    {
+      "id": "upper250_bridge",
+      "url": "https://raw.githubusercontent.com/peilinliu66-dev/jsp-000250-lean/37b7e70db36ea5cff44ef8c50c591b5f409fd820/JSP250UpperBridge.lean",
+      "bytes": 1671,
+      "sha256": "1bc20538dcb6f2fbd6b8f0c52a8ba89527a1e92139be8727e8d0ba4202c1c75f",
+      "git_blob_sha1": "a171f4af5aa9049b91780dcd231ababcd74c0e1f"
+    },
+    {
+      "id": "ack250",
+      "url": "https://raw.githubusercontent.com/peilinliu66-dev/jsp-000250-lean/37b7e70db36ea5cff44ef8c50c591b5f409fd820/SOURCES.md",
+      "bytes": 1655,
+      "sha256": "d848134f46c6502b175f933a37339aa818c30e437a4596198c6c8d1ec9b2e4b6",
+      "git_blob_sha1": "7bf201f0ab822337ac860775c98d663c54d3b871"
+    },
+    {
+      "id": "complete250",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/e2f4c737ad4c2c9d7f4dcbfd4214fd2f2c96c876/projects/jsp-000250/JSP000250Complete.lean",
+      "bytes": 4946,
+      "sha256": "128db1fc2d8ca37ee2fa5c3380bc49294301aabbf9f36b88adf94fb1654c8e4f",
+      "git_blob_sha1": "c948aab8bc1792c0e5e1e4f31603fb743cbe165c"
+    },
+    {
+      "id": "strict925",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/7b545f0e021b06d434654b17881c11819f3ff1b7/projects/jsp-000925-strict/JSP000925Strict.lean",
+      "bytes": 11436,
+      "sha256": "ae35fbe83a0d5fba85e0e223907fff3bc1b0cdd6fb4b7245c02c0ba4e9fe3c31",
+      "git_blob_sha1": "691d469fec60fb5d5ded2d24a7d4e36073e84b19"
+    },
+    {
+      "id": "strict925_historical",
+      "url": "https://raw.githubusercontent.com/TheJustinSunPrize/awards/a6402918bd8c3ebd54b31325040fdfd86af1b267/docs/submissions/jsp-000925-strict-kz/JSP000925Strict.lean",
+      "bytes": 11436,
+      "sha256": "ae35fbe83a0d5fba85e0e223907fff3bc1b0cdd6fb4b7245c02c0ba4e9fe3c31",
+      "git_blob_sha1": "691d469fec60fb5d5ded2d24a7d4e36073e84b19"
+    },
+    {
+      "id": "upstream925",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1114.lean",
+      "bytes": 68673,
+      "sha256": "570e485a1548dd090451dc095ed1ed1128806631e1abff4893405f3e42ea1825",
+      "git_blob_sha1": "e200874d9f540101a1d3a59216cd733fb853ba63"
+    }
+  ],
+  "comparisons": {
+    "upper250_early_historical_selected_byte_identical": true,
+    "strict925_selected_historical_byte_identical": true,
+    "upper250_reuse_matches_after_CRLF_to_LF_and_added_header_removal": true,
+    "reused_header_normalized_bytes": 1599,
+    "other_upper_bridge_invokes_original_upper_theorem": true
+  },
+  "limits": "Byte provenance and inspected source-call evidence only; not a new Lean execution, global priority proof, identity verification or organizer decision."
+}
