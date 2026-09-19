@@ -1,0 +1,1532 @@
+[
+  {
+    "n": 391,
+    "ref": "14e5155e68554de4e053e4aacd77095a93e96dd4",
+    "branch": "jsp-000391-digit-recurrence",
+    "dir": "projects/jsp-000391",
+    "run": 35252880778,
+    "key": "391",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "audit_file": "Audit.lean",
+    "export_module": "JSP000391Main",
+    "axiom_targets": [
+      "JSP000391.sequence_closed_forms",
+      "JSP000391.recurrence_extracts_digits",
+      "JSP000391.digit_bounds",
+      "JSP000391.normalized_bounds",
+      "JSP000391.reconstruction_error",
+      "JSP000391.reconstruction_converges",
+      "JSP000391.stoll_general_base",
+      "JSP000391.jsp000391"
+    ],
+    "build": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "manifest": {
+      "schema_version": 1,
+      "project": {
+        "root": "/work/projects/jsp-000391",
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "commit": "14e5155e68554de4e053e4aacd77095a93e96dd4",
+        "toolchain": "leanprover/lean4:v4.34.0"
+      },
+      "problems": [
+        {
+          "id": "JSP-000391",
+          "source": "Stoll (2005), Theorem 1.3; JSP-000391 catalog source and pinned source audit.",
+          "requirements": [
+            {
+              "id": "requirement-0",
+              "description": "All integer bases g>=2 and all positive reals (hence positive algebraic reals) with the stated normalization.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-1",
+              "description": "The prescribed recurrence produces the actual base-g digits at every index.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-2",
+              "description": "Digits lie in the radix range and decoded truncations converge; admissible shifts are nonempty.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            }
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "id": "target-0",
+          "problem": "JSP-000391",
+          "role": "theorem",
+          "module": "JSP000391Main",
+          "source": "JSP000391Main.lean",
+          "declaration": "JSP000391.jsp000391"
+        },
+        {
+          "id": "target-1",
+          "problem": "JSP-000391",
+          "role": "theorem",
+          "module": "JSP000391Main",
+          "source": "JSP000391Main.lean",
+          "declaration": "JSP000391.stoll_general_base"
+        },
+        {
+          "id": "target-2",
+          "problem": "JSP-000391",
+          "role": "theorem",
+          "module": "JSP000391",
+          "source": "JSP000391.lean",
+          "declaration": "JSP000391.sequence_closed_forms"
+        },
+        {
+          "id": "target-3",
+          "problem": "JSP-000391",
+          "role": "theorem",
+          "module": "JSP000391Main",
+          "source": "JSP000391Main.lean",
+          "declaration": "JSP000391.reconstruction_converges"
+        }
+      ]
+    }
+  },
+  {
+    "n": 438,
+    "ref": "5f94d026ec88696bb5047506c433ad401e5f02ef",
+    "branch": "jsp-000438-sharp-stars-kz",
+    "dir": "projects/jsp-000438",
+    "run": 35177382098,
+    "key": "438",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "audit_file": "Audit.lean",
+    "export_module": "StarSharpness",
+    "axiom_targets": [
+      "Erdos548.tree_free_edge_bound",
+      "JSP000438.trees_monochromatic",
+      "JSP000438.tree_monochromatic",
+      "JSP000438.graphRamsey_trees",
+      "Erdos547.erdos_547",
+      "JSP000438.sharpGraph_degree_le",
+      "JSP000438.sharpGraph_compl_degree_le",
+      "JSP000438.sharpGraph_avoids_star",
+      "JSP000438.star_ramsey_even_order",
+      "JSP000438.tree_ramsey_bound_is_sharp"
+    ],
+    "build": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "manifest": {
+      "schema_version": 1,
+      "project": {
+        "root": "/work/projects/jsp-000438",
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "commit": "5f94d026ec88696bb5047506c433ad401e5f02ef",
+        "toolchain": "leanprover/lean4:v4.34.0"
+      },
+      "problems": [
+        {
+          "id": "JSP-000438",
+          "source": "Erdos problem 547, universal tree Ramsey bound; Erdos-Sos source theorem used for tree-free edge bound.",
+          "requirements": [
+            {
+              "id": "requirement-0",
+              "description": "Every finite tree on n>=2 vertices has the claimed two-colour Ramsey upper bound.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-1",
+              "description": "Exact containment means an injective, non-induced graph copy.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-2",
+              "description": "Even-order stars attain the bound; separately submitted multicolour extension includes finite nonempty colour sets.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            }
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "id": "target-0",
+          "problem": "JSP-000438",
+          "role": "theorem",
+          "module": "JSP000438",
+          "source": "JSP000438.lean",
+          "declaration": "Erdos547.erdos_547"
+        },
+        {
+          "id": "target-1",
+          "problem": "JSP-000438",
+          "role": "theorem",
+          "module": "JSP000438",
+          "source": "JSP000438.lean",
+          "declaration": "JSP000438.graphRamsey_trees"
+        },
+        {
+          "id": "target-2",
+          "problem": "JSP-000438",
+          "role": "theorem",
+          "module": "StarSharpness",
+          "source": "StarSharpness.lean",
+          "declaration": "JSP000438.star_ramsey_even_order"
+        },
+        {
+          "id": "target-3",
+          "problem": "JSP-000438",
+          "role": "theorem",
+          "module": "StarSharpness",
+          "source": "StarSharpness.lean",
+          "declaration": "JSP000438.tree_ramsey_bound_is_sharp"
+        }
+      ]
+    }
+  },
+  {
+    "n": 438,
+    "ref": "0175b2a7a50f7687ece92f61bbe0e3a2f377913a",
+    "branch": "jsp-000438-multicolor",
+    "dir": "projects/jsp-000438",
+    "run": 35177218300,
+    "key": "438-multicolor",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "audit_file": "Audit.lean",
+    "export_module": "Multicolor",
+    "axiom_targets": [
+      "Erdos548.tree_free_edge_bound",
+      "JSP000438.trees_monochromatic",
+      "JSP000438.tree_monochromatic",
+      "JSP000438.graphRamsey_trees",
+      "Erdos547.erdos_547",
+      "JSP000438.sum_edges_of_cover",
+      "JSP000438.multicolor_trees_monochromatic",
+      "JSP000438.multicolor_tree_embedding",
+      "JSP000438.multicolorGraphRamsey_trees"
+    ],
+    "build": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "manifest": {
+      "schema_version": 1,
+      "project": {
+        "root": "/work/projects/jsp-000438",
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "commit": "0175b2a7a50f7687ece92f61bbe0e3a2f377913a",
+        "toolchain": "leanprover/lean4:v4.34.0"
+      },
+      "problems": [
+        {
+          "id": "JSP-000438",
+          "source": "Erdos problem 547, universal tree Ramsey bound; Erdos-Sos source theorem used for tree-free edge bound.",
+          "requirements": [
+            {
+              "id": "requirement-0",
+              "description": "Every finite tree on n>=2 vertices has the claimed two-colour Ramsey upper bound.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-1",
+              "description": "Exact containment means an injective, non-induced graph copy.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-2",
+              "description": "Even-order stars attain the bound; separately submitted multicolour extension includes finite nonempty colour sets.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2"
+              ],
+              "coverage": "pending"
+            }
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "id": "target-0",
+          "problem": "JSP-000438",
+          "role": "theorem",
+          "module": "JSP000438",
+          "source": "JSP000438.lean",
+          "declaration": "Erdos547.erdos_547"
+        },
+        {
+          "id": "target-1",
+          "problem": "JSP-000438",
+          "role": "theorem",
+          "module": "Multicolor",
+          "source": "Multicolor.lean",
+          "declaration": "JSP000438.multicolor_trees_monochromatic"
+        },
+        {
+          "id": "target-2",
+          "problem": "JSP-000438",
+          "role": "theorem",
+          "module": "Multicolor",
+          "source": "Multicolor.lean",
+          "declaration": "JSP000438.multicolorGraphRamsey_trees"
+        }
+      ]
+    }
+  },
+  {
+    "n": 925,
+    "ref": "7b545f0e021b06d434654b17881c11819f3ff1b7",
+    "branch": "jsp-000925-strict-gaps",
+    "dir": "projects/jsp-000925-strict",
+    "run": 35168402594,
+    "key": "925",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "audit_file": "Audit.lean",
+    "export_module": "JSP000925Strict",
+    "axiom_targets": [
+      "JSP000925Strict.strict_algebra",
+      "JSP000925Strict.phase_second_positive",
+      "JSP000925Strict.phase_strict_convex",
+      "JSP000925Strict.canonical_strict",
+      "JSP000925Strict.strict_gap_theorem",
+      "JSP000925Strict.interval_critical_exists",
+      "JSP000925Strict.interval_critical_unique",
+      "JSP000925Strict.exists_unique_strict_gaps"
+    ],
+    "build": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "manifest": {
+      "schema_version": 1,
+      "project": {
+        "root": "/work/projects/jsp-000925-strict",
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "commit": "7b545f0e021b06d434654b17881c11819f3ff1b7",
+        "toolchain": "leanprover/lean4:v4.34.0"
+      },
+      "problems": [
+        {
+          "id": "JSP-000925",
+          "source": "Erdos problem 1114; Balint (1960) and Lorch (1963), pp. 307-314, equally spaced polynomial zeros.",
+          "requirements": [
+            {
+              "id": "requirement-0",
+              "description": "Every nonzero real polynomial of degree N+1 with N+1 equally spaced real zeros, with N>0 and positive spacing.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-1",
+              "description": "One unique derivative zero lies in each intervening interval.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-2",
+              "description": "Derivative gaps increase strictly on the appropriate right half and obey mirror symmetry, including small and central cases.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2"
+              ],
+              "coverage": "pending"
+            }
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "id": "target-0",
+          "problem": "JSP-000925",
+          "role": "theorem",
+          "module": "JSP000925Strict",
+          "source": "JSP000925Strict.lean",
+          "declaration": "JSP000925Strict.strict_gap_theorem"
+        },
+        {
+          "id": "target-1",
+          "problem": "JSP-000925",
+          "role": "theorem",
+          "module": "JSP000925Strict",
+          "source": "JSP000925Strict.lean",
+          "declaration": "JSP000925Strict.exists_unique_strict_gaps"
+        },
+        {
+          "id": "target-2",
+          "problem": "JSP-000925",
+          "role": "theorem",
+          "module": "JSP000925Strict",
+          "source": "JSP000925Strict.lean",
+          "declaration": "JSP000925Strict.canonical_strict"
+        }
+      ]
+    }
+  },
+  {
+    "n": 250,
+    "ref": "e2f4c737ad4c2c9d7f4dcbfd4214fd2f2c96c876",
+    "branch": "jsp-000250-prime-obstruction",
+    "dir": "projects/jsp-000250",
+    "key": "250",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "audit_file": "AuditComplete.lean",
+    "export_module": "JSP000250Complete",
+    "axiom_targets": [
+      "JSP000250.clear_denominators",
+      "JSP000250.prime_obstruction_split",
+      "JSP000250.prime_not_representable",
+      "JSP000250.exists_exception",
+      "JSP000250.firstException_spec",
+      "JSP000250.firstException_le",
+      "JSP000250.log_lcm_bound",
+      "JSP000250.prime_exception_upper_bound",
+      "JSP000250.smaller_denominators_representable",
+      "JSP000250.firstException_upper_bound",
+      "JSP000250.firstException_isBigO",
+      "JSP000250.representable_iff_upstream",
+      "JSP000250.representable_iff_increasing_sequence",
+      "JSP000250.firstException_eq_firstForbidden",
+      "JSP000250.lowerProfile_eq_upstream",
+      "JSP000250.eventually_all_small_denominators_representable",
+      "JSP000250.eventually_all_small_denominators_sequences",
+      "JSP000250.eventually_strict_lower_bound",
+      "JSP000250.eventually_explicit_upper_bound",
+      "JSP000250.jsp_000250",
+      "JSP000250.liu_sawhney_resolution"
+    ],
+    "build": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "manifest": {
+      "schema_version": 1,
+      "project": {
+        "root": "/work/projects/jsp-000250",
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "commit": "e2f4c737ad4c2c9d7f4dcbfd4214fd2f2c96c876",
+        "toolchain": "leanprover/lean4:v4.34.0"
+      },
+      "problems": [
+        {
+          "id": "JSP-000250",
+          "source": "Erdos problem 294; Liu-Sawhney complete reciprocal-sum estimates.",
+          "requirements": [
+            {
+              "id": "requirement-0",
+              "description": "Unit-fraction representability is by a finite increasing sequence of distinct positive denominators bounded by N.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-1",
+              "description": "The extremal quantity is the true least positive nonrepresentable denominator.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-2",
+              "description": "Both eventual upper and lower estimates, with positive constants and the claimed iterated-log profile, hold uniformly for all sufficiently large N.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            }
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "id": "target-0",
+          "problem": "JSP-000250",
+          "role": "theorem",
+          "module": "JSP000250Complete",
+          "source": "JSP000250Complete.lean",
+          "declaration": "JSP000250.jsp_000250"
+        },
+        {
+          "id": "target-1",
+          "problem": "JSP-000250",
+          "role": "theorem",
+          "module": "JSP000250Complete",
+          "source": "JSP000250Complete.lean",
+          "declaration": "JSP000250.liu_sawhney_resolution"
+        },
+        {
+          "id": "target-2",
+          "problem": "JSP-000250",
+          "role": "theorem",
+          "module": "JSP000250Complete",
+          "source": "JSP000250Complete.lean",
+          "declaration": "JSP000250.representable_iff_increasing_sequence"
+        },
+        {
+          "id": "target-3",
+          "problem": "JSP-000250",
+          "role": "theorem",
+          "module": "JSP000250Complete",
+          "source": "JSP000250Complete.lean",
+          "declaration": "JSP000250.firstException_eq_firstForbidden"
+        }
+      ]
+    }
+  },
+  {
+    "n": 636,
+    "ref": "5c23ecf6211449c9bd7f4ac9229300ed43f666b2",
+    "branch": "jsp-000636-pair-label-upper-kz",
+    "dir": "projects/jsp-000636",
+    "run": 35296708689,
+    "key": "636",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "audit_file": "Audit.lean",
+    "export_module": "OriginalQuestion",
+    "axiom_targets": [
+      "JSP000636.antichain_iff_isAntichain",
+      "JSP000636.twins_of_multiplicity",
+      "JSP000636.card_pos_of_twins",
+      "JSP000636.antichain_complements",
+      "JSP000636.twins_complements",
+      "JSP000636.card_sizes_complements",
+      "JSP000636.card_le_of_singleton",
+      "JSP000636.size_count_le_of_singleton",
+      "JSP000636.size_count_le",
+      "JSP000636.card_eq_mul_size_count",
+      "JSP000636.exact_multiplicity_card_le",
+      "JSP000636.sharp_at_four",
+      "JSP000636.three_is_exception",
+      "JSP000636.one_is_exception",
+      "JSP000636.pair_eq_of_mem",
+      "JSP000636.pair_of_mem",
+      "JSP000636.mem_crossPairs",
+      "JSP000636.hits_crossPairs",
+      "JSP000636.cross_intersecting_pairs_intersect",
+      "JSP000636.intersecting_pairs_star",
+      "JSP000636.star_image",
+      "JSP000636.card_leaves",
+      "JSP000636.common_star",
+      "JSP000636.level_card_ge",
+      "JSP000636.complements_involutive",
+      "JSP000636.multiplicity_complements",
+      "JSP000636.card_singles",
+      "JSP000636.sizes_bound_of_singles",
+      "JSP000636.full_profile",
+      "JSP000636.small_contains_center",
+      "JSP000636.subset_avoiding_leaves",
+      "JSP000636.erase_not_subset",
+      "JSP000636.coatom_blockers_card",
+      "JSP000636.middle_contains_bound",
+      "JSP000636.card_complements",
+      "JSP000636.critical_size_bound",
+      "JSP000636.extremal_critical_le",
+      "JSP000636.threshold_lower_bound",
+      "JSP000636.choose_ge_self",
+      "JSP000636.pair_capacity",
+      "JSP000636.select_subsets",
+      "JSP000636.HalfFamily.mem_family",
+      "JSP000636.HalfFamily.antichain",
+      "JSP000636.HalfFamily.card_le",
+      "JSP000636.HalfFamily.common_mem",
+      "JSP000636.HalfFamily.multiplicity",
+      "JSP000636.HalfFamily.full_antichain",
+      "JSP000636.HalfFamily.full_multiplicity",
+      "JSP000636.HalfFamily.all_sizes",
+      "JSP000636.HalfFamily.full_size_count",
+      "JSP000636.pairLabel_half_exists",
+      "JSP000636.sqrt_pair_capacity",
+      "JSP000636.attaining_family",
+      "JSP000636.extremal_eventually_eq",
+      "JSP000636.threshold_upper_bound",
+      "JSP000636.threshold_exists",
+      "JSP000636.leastThreshold_spec",
+      "JSP000636.leastThreshold_le",
+      "JSP000636.leastThreshold_bounds",
+      "JSP000636.thin_to_exact",
+      "JSP000636.exact_attaining_family",
+      "JSP000636.exactExtremal_eq",
+      "JSP000636.exactExtremal_eventually_eq",
+      "JSP000636.threshold_eq",
+      "JSP000636.threshold_exact_spec",
+      "JSP000636.threshold_bounds",
+      "JSP000636.threshold_relative_bound",
+      "JSP000636.threshold_ratio_bound",
+      "JSP000636.threshold_ratio_tendsto",
+      "JSP000636.exact_threshold_estimate",
+      "JSP000636.jsp_000636_estimate",
+      "JSP000636.mapFamily_card",
+      "JSP000636.mapFamily_level_card",
+      "JSP000636.mapFamily_antichain_iff",
+      "JSP000636.mapFamily_exact_iff",
+      "JSP000636.finite_type_card_le",
+      "JSP000636.finite_type_attaining_family",
+      "JSP000636.original_threshold_question",
+      "JSP000636.jsp_000636"
+    ],
+    "build": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "manifest": {
+      "schema_version": 1,
+      "project": {
+        "root": "/work/projects/jsp-000636",
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "commit": "5c23ecf6211449c9bd7f4ac9229300ed43f666b2",
+        "toolchain": "leanprover/lean4:v4.34.0"
+      },
+      "problems": [
+        {
+          "id": "JSP-000636",
+          "source": "https://arxiv.org/html/2602.09803v1#S1 \u2014 Problem 1.1, Remark 1.2, Definition 1.3.",
+          "requirements": [
+            {
+              "id": "requirement-0",
+              "description": "Every multiplicity r>=2 and every sufficiently large finite ground type: exact multiplicity r at each occurring level.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-1",
+              "description": "An antichain with r(n-3) members exists and one with r(n-2) members does not.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-2",
+              "description": "The threshold is the least eventual cutoff; two-sided threshold estimates and ratio limit are proved.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            }
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "id": "target-0",
+          "problem": "JSP-000636",
+          "role": "theorem",
+          "module": "OriginalQuestion",
+          "source": "OriginalQuestion.lean",
+          "declaration": "JSP000636.jsp_000636"
+        },
+        {
+          "id": "target-1",
+          "problem": "JSP-000636",
+          "role": "theorem",
+          "module": "OriginalQuestion",
+          "source": "OriginalQuestion.lean",
+          "declaration": "JSP000636.original_threshold_question"
+        },
+        {
+          "id": "target-2",
+          "problem": "JSP-000636",
+          "role": "theorem",
+          "module": "Asymptotics",
+          "source": "Asymptotics.lean",
+          "declaration": "JSP000636.threshold_exact_spec"
+        },
+        {
+          "id": "target-3",
+          "problem": "JSP-000636",
+          "role": "theorem",
+          "module": "Asymptotics",
+          "source": "Asymptotics.lean",
+          "declaration": "JSP000636.threshold_ratio_tendsto"
+        }
+      ]
+    }
+  },
+  {
+    "n": 912,
+    "ref": "bf99214b3104d89c628abb9c824a56d89a6bd6fe",
+    "branch": "jsp-000912-complete-proof",
+    "dir": "projects/jsp-000912",
+    "run": 35265836287,
+    "key": "912",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "audit_file": "Audit.lean",
+    "export_module": "FullProof",
+    "axiom_targets": [
+      "JSP912.grid_approx",
+      "JSP912.partialProd_bound",
+      "JSP912.lower_gap_weight",
+      "JSP912.all_gap_cost",
+      "JSP912.hAlpha_candidate_bound",
+      "JSP912.jsp_000912_full",
+      "JSP912.erdos_1099"
+    ],
+    "build": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "manifest": {
+      "schema_version": 1,
+      "project": {
+        "root": "/work/projects/jsp-000912",
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "commit": "bf99214b3104d89c628abb9c824a56d89a6bd6fe",
+        "toolchain": "leanprover/lean4:v4.34.0"
+      },
+      "problems": [
+        {
+          "id": "JSP-000912",
+          "source": "https://www.erdosproblems.com/1099 \u2014 main divisor-gap existence question; Vose (1984), pp. 233-238.",
+          "requirements": [
+            {
+              "id": "requirement-0",
+              "description": "All real exponents alpha>1, including those arbitrarily close to one.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-1",
+              "description": "One positive bound C is uniform over arbitrarily large positive integer witnesses.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-2",
+              "description": "The sum includes every adjacent pair of the complete sorted positive divisor list; n=0 is excluded.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2"
+              ],
+              "coverage": "pending"
+            }
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "id": "target-0",
+          "problem": "JSP-000912",
+          "role": "theorem",
+          "module": "FullProof",
+          "source": "FullProof.lean",
+          "declaration": "JSP912.jsp_000912_full"
+        },
+        {
+          "id": "target-1",
+          "problem": "JSP-000912",
+          "role": "theorem",
+          "module": "FullProof",
+          "source": "FullProof.lean",
+          "declaration": "JSP912.erdos_1099"
+        },
+        {
+          "id": "target-2",
+          "problem": "JSP-000912",
+          "role": "theorem",
+          "module": "FullProof",
+          "source": "FullProof.lean",
+          "declaration": "JSP912.hAlpha_candidate_bound"
+        }
+      ]
+    }
+  },
+  {
+    "n": 393,
+    "ref": "17e406594d644b40c9a742e843cd6d89f319c872",
+    "branch": "jsp-000393-sparse-squares",
+    "dir": "",
+    "run": 35285855808,
+    "key": "393",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "audit_file": "AuditComplete.lean",
+    "export_module": "JSP000393Complete",
+    "axiom_targets": [
+      "JSP000393.family_counts",
+      "JSP000393.arbitrarily_sparse_squares",
+      "Erdos485.f_attained",
+      "Erdos485.schinzel_support_bound",
+      "Erdos485.erdos_485",
+      "JSP000393Complete.integer_support",
+      "JSP000393Complete.rational_family_counts",
+      "JSP000393Complete.minimum_family_upper_bound",
+      "JSP000393Complete.arbitrarily_large_small_ratio",
+      "JSP000393Complete.integer_schinzel_bound",
+      "JSP000393Complete.integer_uniform_threshold",
+      "JSP000393Complete.minimum_diverges",
+      "JSP000393Complete.jsp_000393"
+    ],
+    "build": [
+      "python3",
+      "scripts/verify_complete.py"
+    ],
+    "manifest": {
+      "schema_version": 1,
+      "project": {
+        "root": "/work",
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "commit": "17e406594d644b40c9a742e843cd6d89f319c872",
+        "toolchain": "leanprover/lean4:v4.34.0"
+      },
+      "problems": [
+        {
+          "id": "JSP-000393",
+          "source": "https://github.com/google-deepmind/formal-conjectures/blob/5657b3b9ae1c174fdbab9d9d600b018238ba573c/FormalConjectures/ErdosProblems/485.lean \u2014 rational minimum question, Hayman Problem 4.4.",
+          "requirements": [
+            {
+              "id": "requirement-0",
+              "description": "The original minimum is over all rational polynomials with a specified number of nonzero terms and is attained.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-1",
+              "description": "That actual minimum square-support count tends to infinity.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-2",
+              "description": "The submitted sparse family transfers from integers to rationals and gives genuine minimum bounds at arbitrarily large support sizes.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            }
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "id": "target-0",
+          "problem": "JSP-000393",
+          "role": "theorem",
+          "module": "JSP000393Complete",
+          "source": "JSP000393Complete.lean",
+          "declaration": "JSP000393Complete.jsp_000393"
+        },
+        {
+          "id": "target-1",
+          "problem": "JSP-000393",
+          "role": "theorem",
+          "module": "JSP000393Complete",
+          "source": "JSP000393Complete.lean",
+          "declaration": "JSP000393Complete.integer_support"
+        },
+        {
+          "id": "target-2",
+          "problem": "JSP-000393",
+          "role": "theorem",
+          "module": "JSP000393Complete",
+          "source": "JSP000393Complete.lean",
+          "declaration": "JSP000393Complete.minimum_family_upper_bound"
+        },
+        {
+          "id": "target-3",
+          "problem": "JSP-000393",
+          "role": "theorem",
+          "module": "JSP000393Complete",
+          "source": "JSP000393Complete.lean",
+          "declaration": "JSP000393Complete.arbitrarily_large_small_ratio"
+        }
+      ]
+    }
+  },
+  {
+    "n": 728,
+    "ref": "22212651d30af02ad36f01a206984d31b0ec75c6",
+    "branch": "jsp-000728-lower-bound-kz",
+    "dir": "projects/jsp-000728",
+    "run": 35300095687,
+    "key": "728",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "audit_file": "AuditComplete.lean",
+    "export_module": "JSP000728Complete",
+    "axiom_targets": [
+      "JSP000728.mem_maximalSets",
+      "JSP000728.exists_maximal_extension",
+      "JSP000728.pick_bounds",
+      "JSP000728.pick_sum_ne",
+      "JSP000728.seed_subset",
+      "JSP000728.seed_sumFree",
+      "JSP000728.different_choices_incompatible",
+      "JSP000728.lower_bound_multiple",
+      "JSP000728.cameron_erdos_lower_bound",
+      "JSP000728.sumFree_iff_upstream",
+      "JSP000728.maximalSumFree_iff_upstream",
+      "JSP000728.maximalSets_eq_upstream",
+      "JSP000728.maximalSets_card_eq_upstream",
+      "JSP000728.allSumFreeSets_eq_upstream",
+      "JSP000728.upperHalf_powerset_subset",
+      "JSP000728.allSumFreeSets_lower_bound",
+      "JSP000728.benchmark_le_allSumFreeSets",
+      "JSP000728.maximalCount_isLittleO_benchmark",
+      "JSP000728.maximalCount_exponential_bound",
+      "JSP000728.upstream_count_lower_bound",
+      "JSP000728.maximalCount_isLittleO_allCount",
+      "JSP000728.maximal_to_all_ratio_tendsto_zero",
+      "JSP000728.relative_exponential_saving",
+      "JSP000728.jsp_000728",
+      "Erdos877.erdos_877",
+      "Erdos877.erdos_877_exponential_bound",
+      "Erdos877.resolutionExponent_lt_half"
+    ],
+    "build": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "manifest": {
+      "schema_version": 1,
+      "project": {
+        "root": "/work/projects/jsp-000728",
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "commit": "22212651d30af02ad36f01a206984d31b0ec75c6",
+        "toolchain": "leanprover/lean4:v4.34.0"
+      },
+      "problems": [
+        {
+          "id": "JSP-000728",
+          "source": "https://arxiv.org/pdf/1409.5661v1 \u2014 Section 1, p. 2, original relative-count question.",
+          "requirements": [
+            {
+              "id": "requirement-0",
+              "description": "Count all sum-free subsets and all inclusion-maximal sum-free subsets of the entire interval, allowing equal summands.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-1",
+              "description": "The maximal/all count ratio tends to zero, including a fixed exponential separation.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-2",
+              "description": "The claimed all-N lower construction is valid also at small orders; later sharp exponent is not claimed.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            }
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "id": "target-0",
+          "problem": "JSP-000728",
+          "role": "theorem",
+          "module": "JSP000728Complete",
+          "source": "JSP000728Complete.lean",
+          "declaration": "JSP000728.jsp_000728"
+        },
+        {
+          "id": "target-1",
+          "problem": "JSP-000728",
+          "role": "theorem",
+          "module": "JSP000728Complete",
+          "source": "JSP000728Complete.lean",
+          "declaration": "JSP000728.sumFree_iff_upstream"
+        },
+        {
+          "id": "target-2",
+          "problem": "JSP-000728",
+          "role": "theorem",
+          "module": "JSP000728Complete",
+          "source": "JSP000728Complete.lean",
+          "declaration": "JSP000728.maximalSets_card_eq_upstream"
+        },
+        {
+          "id": "target-3",
+          "problem": "JSP-000728",
+          "role": "theorem",
+          "module": "JSP000728Complete",
+          "source": "JSP000728Complete.lean",
+          "declaration": "JSP000728.allSumFreeSets_eq_upstream"
+        }
+      ]
+    }
+  },
+  {
+    "n": 585,
+    "ref": "9661ef0f170e750b1ac2153b9017bad86044680c",
+    "branch": "catlin-sharp-kz",
+    "dir": "projects/catlin-research",
+    "run": 35332110641,
+    "key": "585",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "audit_file": "AuditComplete.lean",
+    "export_module": "JSP000585Complete",
+    "axiom_targets": [
+      "CatlinCertificates.eight_colours",
+      "CatlinCertificates.proper_eight_colouring",
+      "CatlinCertificates.no_independent_triple",
+      "CatlinCertificates.finite_budget_certificate",
+      "CatlinCertificates.budget_bound",
+      "CatlinCertificates.no_feasible_resource_tuple",
+      "CatlinComplete.mem_inside",
+      "CatlinComplete.card_inside",
+      "CatlinComplete.length_ge_two",
+      "CatlinComplete.length_ge_three",
+      "CatlinComplete.demand_le_inside",
+      "CatlinComplete.profile_certificate",
+      "CatlinComplete.separated_endpoints",
+      "CatlinComplete.common_in_middle",
+      "CatlinComplete.cluster_size",
+      "CatlinComplete.count_le_three",
+      "CatlinComplete.sum_counts",
+      "CatlinComplete.full_cluster",
+      "CatlinComplete.weight_le_demand",
+      "CatlinComplete.regroup",
+      "CatlinComplete.regroup_twice",
+      "CatlinComplete.profileCost_le_budget",
+      "CatlinComplete.budget_ge_eight",
+      "CatlinComplete.sum_demand_edges",
+      "CatlinComplete.total_inside_bound",
+      "CatlinComplete.subdivision_budget_bound",
+      "CatlinComplete.colour_fiber_card_le_two",
+      "CatlinComplete.not_seven_colorable",
+      "CatlinComplete.chromaticNumber_eq_eight",
+      "CatlinComplete.no_K8_subdivision",
+      "CatlinComplete.catlin_counterexample",
+      "CatlinComplete.seven_exceptional",
+      "CatlinComplete.seven_detour",
+      "CatlinComplete.contains_K7_subdivision",
+      "CatlinComplete.containsCliqueSubdivision_antitone",
+      "CatlinComplete.containsCliqueSubdivision_iff",
+      "CatlinComplete.sharp_catlin_counterexample",
+      "JSP000585.edge_left_mem",
+      "JSP000585.edge_right_mem",
+      "JSP000585.edge_lt",
+      "JSP000585.card_branchSet",
+      "JSP000585.mem_branchSet",
+      "JSP000585.branch_branchLabel",
+      "JSP000585.labels_ne",
+      "JSP000585.indexedEdge_injective",
+      "JSP000585.convertedPath_isPath",
+      "JSP000585.inside_convertedPath",
+      "JSP000585.containsSubdivision_iff_indexed",
+      "JSP000585.subdivisionModels_iff",
+      "JSP000585.catlin_subdivision_iff",
+      "JSP000585.catlin_sigma_eq_seven",
+      "JSP000585.catlin_chi_eq_eight",
+      "JSP000585.catlin_ratio_eq",
+      "JSP000585.catlin_ratio_gt_one",
+      "JSP000585.exists_universal_ratio_bound",
+      "JSP000585.ratio_range_bddAbove",
+      "JSP000585.extremal_upper_bound",
+      "JSP000585.catlin_extremal_lower_bound",
+      "JSP000585.catlin_constant_lower_bound",
+      "JSP000585.jsp_000585",
+      "Erdos717.erdos_717"
+    ],
+    "build": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "manifest": {
+      "schema_version": 1,
+      "project": {
+        "root": "/work/projects/catlin-research",
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "commit": "9661ef0f170e750b1ac2153b9017bad86044680c",
+        "toolchain": "leanprover/lean4:v4.34.0"
+      },
+      "problems": [
+        {
+          "id": "JSP-000585",
+          "source": "https://arxiv.org/pdf/1107.1920 \u2014 Theorem 1.1, p. 2.",
+          "requirements": [
+            {
+              "id": "requirement-0",
+              "description": "One positive absolute constant precedes every finite simple graph on n>=2 vertices.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-1",
+              "description": "Clique subdivisions use genuine paths, injective branch vertices and disjoint interiors; the maximum order is attained and positive.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-2",
+              "description": "The uniform chromatic/subdivision ratio bound, extremal bound and exact finite Catlin witness consequences have their stated scopes.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            }
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "id": "target-0",
+          "problem": "JSP-000585",
+          "role": "theorem",
+          "module": "JSP000585Complete",
+          "source": "JSP000585Complete.lean",
+          "declaration": "JSP000585.jsp_000585"
+        },
+        {
+          "id": "target-1",
+          "problem": "JSP-000585",
+          "role": "theorem",
+          "module": "JSP000585Complete",
+          "source": "JSP000585Complete.lean",
+          "declaration": "JSP000585.exists_universal_ratio_bound"
+        },
+        {
+          "id": "target-2",
+          "problem": "JSP-000585",
+          "role": "theorem",
+          "module": "JSP000585Bridge",
+          "source": "JSP000585Bridge.lean",
+          "declaration": "JSP000585.containsSubdivision_iff_indexed"
+        },
+        {
+          "id": "target-3",
+          "problem": "JSP-000585",
+          "role": "theorem",
+          "module": "JSP000585Complete",
+          "source": "JSP000585Complete.lean",
+          "declaration": "JSP000585.subdivisionModels_iff"
+        }
+      ]
+    }
+  },
+  {
+    "n": 506,
+    "ref": "2aca2f16eba715d7ad672dfa017481b647c00063",
+    "branch": "jsp-000506-complete-kz",
+    "dir": "projects/jsp-000506",
+    "run": 35395208909,
+    "key": "506",
+    "toolchain": "leanprover/lean4:v4.31.0",
+    "audit_file": "AuditComplete.lean",
+    "export_module": "JSP000506Complete",
+    "axiom_targets": [
+      "JSP000506.mass_nonneg",
+      "JSP000506.mass_univ",
+      "JSP000506.mass_mono",
+      "JSP000506.mass_compl",
+      "JSP000506.mass_union_le",
+      "JSP000506.mass_cover",
+      "JSP000506.mem_event",
+      "JSP000506.mass_event_compl",
+      "JSP000506.mass_anticorrelation",
+      "JSP000506.concentration_reduction",
+      "JSP000506.proper_n",
+      "JSP000506.proper_to_coProper",
+      "JSP000506.coProper_compl",
+      "JSP000506.chi_spec",
+      "JSP000506.zeta_spec",
+      "JSP000506.chi_mono",
+      "JSP000506.zeta_le_chi",
+      "JSP000506.zeta_compl",
+      "JSP000506.heckel_proposition3",
+      "JSP000506.mem_fromGraph",
+      "JSP000506.toGraph_adj_iff",
+      "JSP000506.fromGraph_toGraph",
+      "JSP000506.toGraph_fromGraph",
+      "JSP000506.proper_iff_colorable",
+      "JSP000506.coProper_iff_all_pairs",
+      "JSP000506.coProper_iff_coColorable",
+      "JSP000506.chi_eq_chromaticNumberNat",
+      "JSP000506.zeta_eq_cochromaticNumber",
+      "JSP000506.gap_cast_eq",
+      "JSP000506.card_graph_space",
+      "JSP000506.card_event_eq_graph_event",
+      "JSP000506.mass_event_eq_randomGraph",
+      "JSP000506.mass_le_one",
+      "JSP000506.gapProbability_nonneg",
+      "JSP000506.gapProbability_le_one",
+      "JSP000506.gapProbability_antitone",
+      "JSP000506.gapProbability_eq_standard",
+      "JSP000506.quantitative_gap_tendsto_one",
+      "JSP000506.gapScale_tendsto_atTop",
+      "JSP000506.threshold_tendsto_one",
+      "JSP000506.fixed_threshold_tendsto_one",
+      "JSP000506.small_gap_probability_tendsto_zero",
+      "JSP000506.eventually_not_heckel_premise",
+      "JSP000506.jsp_000506",
+      "JSP000506.complete_package",
+      "Erdos625.erdos625",
+      "Erdos625.erdos625Statement_iff_real",
+      "Erdos625.randomGraphMeasure_eq_uniformOn_univ",
+      "Erdos625.gapConstant_pos"
+    ],
+    "build": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "manifest": {
+      "schema_version": 1,
+      "project": {
+        "root": "/work/projects/jsp-000506",
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "commit": "2aca2f16eba715d7ad672dfa017481b647c00063",
+        "toolchain": "leanprover/lean4:v4.31.0"
+      },
+      "problems": [
+        {
+          "id": "JSP-000506",
+          "source": "https://arxiv.org/html/2408.13839v1#S1 \u2014 original Erdos-Gimbel question preceding Theorem 1.",
+          "requirements": [
+            {
+              "id": "requirement-0",
+              "description": "The complete full-sequence G(n,1/2) chromatic-minus-cochromatic gap diverges in probability.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-1",
+              "description": "Finite graph and colouring minima, rational counting and binomial probability, and subtraction agree exactly.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-2",
+              "description": "The full proof does not assume the earlier finite reduction premise; conditional supplement retains its positive-mass and probability-ratio hypotheses.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            }
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "id": "target-0",
+          "problem": "JSP-000506",
+          "role": "theorem",
+          "module": "JSP000506Complete",
+          "source": "JSP000506Complete.lean",
+          "declaration": "JSP000506.jsp_000506"
+        },
+        {
+          "id": "target-1",
+          "problem": "JSP-000506",
+          "role": "theorem",
+          "module": "JSP000506Bridge",
+          "source": "JSP000506Bridge.lean",
+          "declaration": "JSP000506.mass_event_eq_randomGraph"
+        },
+        {
+          "id": "target-2",
+          "problem": "JSP-000506",
+          "role": "theorem",
+          "module": "JSP000506Bridge",
+          "source": "JSP000506Bridge.lean",
+          "declaration": "JSP000506.gap_cast_eq"
+        },
+        {
+          "id": "target-3",
+          "problem": "JSP-000506",
+          "role": "theorem",
+          "module": "JSP000506Complete",
+          "source": "JSP000506Complete.lean",
+          "declaration": "JSP000506.threshold_tendsto_one"
+        }
+      ]
+    }
+  },
+  {
+    "n": 506,
+    "ref": "90e1298ec99973eefe607f9c21bfffa750804087",
+    "branch": "jsp-000506-selection-20260919",
+    "dir": "projects/jsp-000506",
+    "run": 35417036545,
+    "key": "506-selection",
+    "toolchain": "leanprover/lean4:v4.31.0",
+    "audit_file": "AuditSelection.lean",
+    "export_module": "JSP000506Selection",
+    "axiom_targets": [
+      "JSP000506.mass_nonneg",
+      "JSP000506.mass_univ",
+      "JSP000506.mass_mono",
+      "JSP000506.mass_compl",
+      "JSP000506.mass_union_le",
+      "JSP000506.mass_cover",
+      "JSP000506.mem_event",
+      "JSP000506.mass_event_compl",
+      "JSP000506.mass_anticorrelation",
+      "JSP000506.concentration_reduction",
+      "JSP000506.proper_n",
+      "JSP000506.proper_to_coProper",
+      "JSP000506.coProper_compl",
+      "JSP000506.chi_spec",
+      "JSP000506.zeta_spec",
+      "JSP000506.chi_mono",
+      "JSP000506.zeta_le_chi",
+      "JSP000506.zeta_compl",
+      "JSP000506.heckel_proposition3",
+      "JSP000506.mem_fromGraph",
+      "JSP000506.toGraph_adj_iff",
+      "JSP000506.fromGraph_toGraph",
+      "JSP000506.toGraph_fromGraph",
+      "JSP000506.proper_iff_colorable",
+      "JSP000506.coProper_iff_all_pairs",
+      "JSP000506.coProper_iff_coColorable",
+      "JSP000506.chi_eq_chromaticNumberNat",
+      "JSP000506.zeta_eq_cochromaticNumber",
+      "JSP000506.gap_cast_eq",
+      "JSP000506.card_graph_space",
+      "JSP000506.card_event_eq_graph_event",
+      "JSP000506.mass_event_eq_randomGraph",
+      "JSP000506.mass_le_one",
+      "JSP000506.gapProbability_nonneg",
+      "JSP000506.gapProbability_le_one",
+      "JSP000506.gapProbability_antitone",
+      "JSP000506.gapProbability_eq_standard",
+      "JSP000506.quantitative_gap_tendsto_one",
+      "JSP000506.gapScale_tendsto_atTop",
+      "JSP000506.threshold_tendsto_one",
+      "JSP000506.fixed_threshold_tendsto_one",
+      "JSP000506.small_gap_probability_tendsto_zero",
+      "JSP000506.eventually_not_heckel_premise",
+      "JSP000506.jsp_000506",
+      "JSP000506.complete_package",
+      "Erdos625.erdos625",
+      "Erdos625.erdos625Statement_iff_real",
+      "Erdos625.randomGraphMeasure_eq_uniformOn_univ",
+      "Erdos625.gapConstant_pos",
+      "JSP000506.intersection_probability_lower",
+      "JSP000506.conditional_failure_bounds",
+      "JSP000506.joint_gap_probability_bounds",
+      "JSP000506.joint_quantitative_gap_tendsto_one",
+      "JSP000506.joint_threshold_tendsto_one",
+      "JSP000506.conditional_joint_failure_bounds",
+      "JSP000506.conditional_joint_gap_tendsto_one",
+      "JSP000506.positive_mass_conditioning_tendsto_one",
+      "JSP000506.mean_minimum_pair_gap_lower",
+      "JSP000506.mean_minimum_pair_gap_scale_lower",
+      "JSP000506.mean_minimum_pair_gap_tendsto_atTop"
+    ],
+    "build": [
+      "python3",
+      "scripts/verify_selection.py"
+    ],
+    "manifest": {
+      "schema_version": 1,
+      "project": {
+        "root": "/work/projects/jsp-000506",
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "commit": "90e1298ec99973eefe607f9c21bfffa750804087",
+        "toolchain": "leanprover/lean4:v4.31.0"
+      },
+      "problems": [
+        {
+          "id": "JSP-000506",
+          "source": "https://arxiv.org/html/2408.13839v1#S1 \u2014 original Erdos-Gimbel question preceding Theorem 1.",
+          "requirements": [
+            {
+              "id": "requirement-0",
+              "description": "The complete full-sequence G(n,1/2) chromatic-minus-cochromatic gap diverges in probability.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-1",
+              "description": "Finite graph and colouring minima, rational counting and binomial probability, and subtraction agree exactly.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            },
+            {
+              "id": "requirement-2",
+              "description": "The full proof does not assume the earlier finite reduction premise; conditional supplement retains its positive-mass and probability-ratio hypotheses.",
+              "targets": [
+                "target-0",
+                "target-1",
+                "target-2",
+                "target-3"
+              ],
+              "coverage": "pending"
+            }
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "id": "target-0",
+          "problem": "JSP-000506",
+          "role": "theorem",
+          "module": "JSP000506Complete",
+          "source": "JSP000506Complete.lean",
+          "declaration": "JSP000506.jsp_000506"
+        },
+        {
+          "id": "target-1",
+          "problem": "JSP-000506",
+          "role": "theorem",
+          "module": "JSP000506Selection",
+          "source": "JSP000506Selection.lean",
+          "declaration": "JSP000506.conditional_joint_gap_tendsto_one"
+        },
+        {
+          "id": "target-2",
+          "problem": "JSP-000506",
+          "role": "theorem",
+          "module": "JSP000506Selection",
+          "source": "JSP000506Selection.lean",
+          "declaration": "JSP000506.positive_mass_conditioning_tendsto_one"
+        },
+        {
+          "id": "target-3",
+          "problem": "JSP-000506",
+          "role": "theorem",
+          "module": "JSP000506Selection",
+          "source": "JSP000506Selection.lean",
+          "declaration": "JSP000506.mean_minimum_pair_gap_tendsto_atTop"
+        }
+      ]
+    }
+  }
+]

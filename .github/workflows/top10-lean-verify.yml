@@ -1,0 +1,60 @@
+name: Top ten official lean-verify checks
+on:
+  push:
+    branches: [verification-top10-20260919]
+    paths:
+      - 'verification/top10-20260919/**'
+      - '.github/workflows/top10-lean-verify.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        proof: ['391', '438', '438-multicolor', '925', '250', '636', '912', '393', '728', '585', '506', '506-selection']
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Prepare fresh selected commit and disposable directories
+        env:
+          PROOF_KEY: ${{ matrix.proof }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib,subprocess
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])/'top10'
+          p.mkdir()
+          j=next(x for x in json.loads(pathlib.Path('verification/top10-20260919/jobs.json').read_text()) if x['key']==os.environ['PROOF_KEY'])
+          subprocess.run(['git','clone','--no-checkout','https://github.com/ketianzhang1-lang/jsp-000301-lean.git',str(p/'source')],check=True)
+          subprocess.run(['git','-C',str(p/'source'),'checkout','--detach',j['ref']],check=True)
+          for d in ['audit','tooling']: (p/d).mkdir()
+          PY
+          sudo chown -R 2000:2000 "$RUNNER_TEMP/top10"
+          sudo fallocate -l 8G /swap-top10
+          sudo chmod 600 /swap-top10
+          sudo mkswap /swap-top10
+          sudo swapon /swap-top10
+          docker build -t top10-lean verification/top10-20260919
+          docker image inspect top10-lean > "$RUNNER_TEMP/top10/audit/container-image.json"
+      - name: Prepare pinned dependencies in isolated container
+        env:
+          PROOF_KEY: ${{ matrix.proof }}
+        run: |
+          docker run --rm --user 2000:2000 --read-only --cap-drop ALL --security-opt no-new-privileges --pids-limit 2048 --cpus 2 --memory 6g --memory-swap 14g --tmpfs /tmp:rw,exec,size=2g --tmpfs /home/verifier:rw,exec,uid=2000,gid=2000,size=4g -v "$RUNNER_TEMP/top10/source:/work" -v "$RUNNER_TEMP/top10/audit:/audit" -v "$RUNNER_TEMP/top10/tooling:/tooling" -v "$GITHUB_WORKSPACE/verification/top10-20260919:/harness:ro" top10-lean python3 /harness/run.py prepare "$PROOF_KEY"
+      - name: Clean rebuild and official target checks without network
+        env:
+          PROOF_KEY: ${{ matrix.proof }}
+        run: |
+          docker run --rm --network none --user 2000:2000 --read-only --cap-drop ALL --security-opt no-new-privileges --pids-limit 2048 --cpus 2 --memory 6g --memory-swap 14g --tmpfs /tmp:rw,exec,size=2g --tmpfs /home/verifier:rw,exec,uid=2000,gid=2000,size=1g -v "$RUNNER_TEMP/top10/source:/work" -v "$RUNNER_TEMP/top10/audit:/audit" -v "$RUNNER_TEMP/top10/tooling:/tooling:ro" -v "$GITHUB_WORKSPACE/verification/top10-20260919:/harness:ro" top10-lean python3 /harness/run.py check "$PROOF_KEY"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: lean-verify-${{ matrix.proof }}
+          path: ${{ runner.temp }}/top10/audit
+          retention-days: 90
+          if-no-files-found: error
