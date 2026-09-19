@@ -112,7 +112,8 @@ theorem eventual_square_forcing (ε : ℝ) (hε : 0 < ε) :
   have hnot : ¬ SquareSumFree A := by
     intro hfree
     exact (not_lt_of_ge ((hN₀ N hN).2 A hA hfree)) hlarge
-  simpa only [SquareSumFree, not_forall, not_imp, not_not, exists_and_left,
-    and_assoc] using hnot
+  unfold SquareSumFree at hnot
+  push Not at hnot
+  exact hnot
 
 end JSP000476
