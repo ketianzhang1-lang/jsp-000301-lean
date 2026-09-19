@@ -1,0 +1,314 @@
+{
+  "inspected_utc_date": "2026-09-19",
+  "sources": [
+    {
+      "id": "636_JSP000636_prior",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/36da76e793678ee6a062f1703674fd3789334cbd/projects/jsp-000636/JSP000636.lean",
+      "bytes": 9467,
+      "sha256": "ea51a6baca6bed306a1b71c4fc2023429c6fdf47f00284cc727638afa5284640",
+      "git_blob_sha1": "9dcaf4e2d9a7f180c0e241f28b14a35b861c2a71"
+    },
+    {
+      "id": "636_JSP000636_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/5c23ecf6211449c9bd7f4ac9229300ed43f666b2/projects/jsp-000636/JSP000636.lean",
+      "bytes": 9467,
+      "sha256": "ea51a6baca6bed306a1b71c4fc2023429c6fdf47f00284cc727638afa5284640",
+      "git_blob_sha1": "9dcaf4e2d9a7f180c0e241f28b14a35b861c2a71"
+    },
+    {
+      "id": "636_Construction_prior",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/36da76e793678ee6a062f1703674fd3789334cbd/projects/jsp-000636/Construction.lean",
+      "bytes": 6547,
+      "sha256": "b0e6fd9ebb89aa9c2e0a6e04b38ef670702bf314202144c5ef99288b53304586",
+      "git_blob_sha1": "644e78a3892061ea55bbcd9eb847471581feec9b"
+    },
+    {
+      "id": "636_Construction_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/5c23ecf6211449c9bd7f4ac9229300ed43f666b2/projects/jsp-000636/Construction.lean",
+      "bytes": 6547,
+      "sha256": "b0e6fd9ebb89aa9c2e0a6e04b38ef670702bf314202144c5ef99288b53304586",
+      "git_blob_sha1": "644e78a3892061ea55bbcd9eb847471581feec9b"
+    },
+    {
+      "id": "636_Lower_prior",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/36da76e793678ee6a062f1703674fd3789334cbd/projects/jsp-000636/Lower.lean",
+      "bytes": 22437,
+      "sha256": "52febbca28f56fb543da906376d93545e5c307f144344df2b63ce1b5aa9458f4",
+      "git_blob_sha1": "97deaebd6a3975e2e221d0bc4d3436dd59e00d05"
+    },
+    {
+      "id": "636_Lower_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/5c23ecf6211449c9bd7f4ac9229300ed43f666b2/projects/jsp-000636/Lower.lean",
+      "bytes": 22437,
+      "sha256": "52febbca28f56fb543da906376d93545e5c307f144344df2b63ce1b5aa9458f4",
+      "git_blob_sha1": "97deaebd6a3975e2e221d0bc4d3436dd59e00d05"
+    },
+    {
+      "id": "636_Thinning_prior",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/36da76e793678ee6a062f1703674fd3789334cbd/projects/jsp-000636/Thinning.lean",
+      "bytes": 2529,
+      "sha256": "03e71f68214b7efcad0a48261fd8e48666875866a417b23ddf3ca1bb863c79db",
+      "git_blob_sha1": "f43768a6fb8e315aa55403f0f86c59033023d8ae"
+    },
+    {
+      "id": "636_Thinning_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/5c23ecf6211449c9bd7f4ac9229300ed43f666b2/projects/jsp-000636/Thinning.lean",
+      "bytes": 2529,
+      "sha256": "03e71f68214b7efcad0a48261fd8e48666875866a417b23ddf3ca1bb863c79db",
+      "git_blob_sha1": "f43768a6fb8e315aa55403f0f86c59033023d8ae"
+    },
+    {
+      "id": "636_Threshold_prior",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/36da76e793678ee6a062f1703674fd3789334cbd/projects/jsp-000636/Threshold.lean",
+      "bytes": 3454,
+      "sha256": "0b62a240f23f6b128050ae8ffc3ca5a8e3b6326ab86b3d6daa84764d057d7437",
+      "git_blob_sha1": "b4ef513f9b4ba12bb0e883966df8ea68cd7e82ab"
+    },
+    {
+      "id": "636_Threshold_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/5c23ecf6211449c9bd7f4ac9229300ed43f666b2/projects/jsp-000636/Threshold.lean",
+      "bytes": 3454,
+      "sha256": "0b62a240f23f6b128050ae8ffc3ca5a8e3b6326ab86b3d6daa84764d057d7437",
+      "git_blob_sha1": "b4ef513f9b4ba12bb0e883966df8ea68cd7e82ab"
+    },
+    {
+      "id": "636_Upper_prior",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/36da76e793678ee6a062f1703674fd3789334cbd/projects/jsp-000636/Upper.lean",
+      "bytes": 5417,
+      "sha256": "e8e79f1bf618ef9aa6fc5fcf3d01d66fbebd6569585d6c9a3cf41b9ee821ae61",
+      "git_blob_sha1": "4d6959b7a32e15d60bcf57fd19f2427fb325a347"
+    },
+    {
+      "id": "636_Upper_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/5c23ecf6211449c9bd7f4ac9229300ed43f666b2/projects/jsp-000636/Upper.lean",
+      "bytes": 5417,
+      "sha256": "e8e79f1bf618ef9aa6fc5fcf3d01d66fbebd6569585d6c9a3cf41b9ee821ae61",
+      "git_blob_sha1": "4d6959b7a32e15d60bcf57fd19f2427fb325a347"
+    },
+    {
+      "id": "636_Asymptotics_prior",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/36da76e793678ee6a062f1703674fd3789334cbd/projects/jsp-000636/Asymptotics.lean",
+      "bytes": 6501,
+      "sha256": "89c6b975c631322b245d652664a69e826c1c85053f6adb33d0c5075b30cf7c16",
+      "git_blob_sha1": "97d12a06cf6d7ab25507aa96131fbe41ad475e94"
+    },
+    {
+      "id": "636_Asymptotics_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/5c23ecf6211449c9bd7f4ac9229300ed43f666b2/projects/jsp-000636/Asymptotics.lean",
+      "bytes": 6501,
+      "sha256": "89c6b975c631322b245d652664a69e826c1c85053f6adb33d0c5075b30cf7c16",
+      "git_blob_sha1": "97d12a06cf6d7ab25507aa96131fbe41ad475e94"
+    },
+    {
+      "id": "636_endpoint",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/5c23ecf6211449c9bd7f4ac9229300ed43f666b2/projects/jsp-000636/OriginalQuestion.lean",
+      "bytes": 5955,
+      "sha256": "51d5577cb21fab7d1f8a0881840b29ed4fd6493f74b096c22cda83d09c1f0a1f",
+      "git_blob_sha1": "0aceba323ad3db3ae941723f7d7d72830e0cd624"
+    },
+    {
+      "id": "912_FullProof.lean_recovered",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/9074d0cebd4e132a6c1fa71c0817693246935398/projects/jsp-000912/FullProof.lean",
+      "bytes": 34032,
+      "sha256": "c78a3713e66eeb0ea0b7f9780493f89c0e157eed073f5a2fe9dd93f5619d5d1f",
+      "git_blob_sha1": "f22caa02a2a8d4cbcb8f85634c4ab160a69f7ef9"
+    },
+    {
+      "id": "912_FullProof.lean_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/bf99214b3104d89c628abb9c824a56d89a6bd6fe/projects/jsp-000912/FullProof.lean",
+      "bytes": 34042,
+      "sha256": "7b0ac6bd7e62beb2f76b91e9435092e492abdb54ac932e1f53133bcc1ca0c8be",
+      "git_blob_sha1": "f82adcfd7387bb0f3606363b5e1335b02952d3c2"
+    },
+    {
+      "id": "912_JSP912_Construction.lean_recovered",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/9074d0cebd4e132a6c1fa71c0817693246935398/projects/jsp-000912/JSP912/Construction.lean",
+      "bytes": 5872,
+      "sha256": "a0a6f900347bf5d60a3685fc197aac0eed12480d39756a4fe8fdfe4fb0f6cdda",
+      "git_blob_sha1": "7607f2d423d40cf9eb3c4d48bc5740b945f9bf51"
+    },
+    {
+      "id": "912_JSP912_Construction.lean_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/bf99214b3104d89c628abb9c824a56d89a6bd6fe/projects/jsp-000912/JSP912/Construction.lean",
+      "bytes": 5872,
+      "sha256": "a0a6f900347bf5d60a3685fc197aac0eed12480d39756a4fe8fdfe4fb0f6cdda",
+      "git_blob_sha1": "7607f2d423d40cf9eb3c4d48bc5740b945f9bf51"
+    },
+    {
+      "id": "912_JSP912_Decay.lean_recovered",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/9074d0cebd4e132a6c1fa71c0817693246935398/projects/jsp-000912/JSP912/Decay.lean",
+      "bytes": 5726,
+      "sha256": "395dde44635efdaeec49da1541202c3a875ab22b24e4871d8621381d45e4edf6",
+      "git_blob_sha1": "5383b85aa150b12c891430ac5a15d46d131df685"
+    },
+    {
+      "id": "912_JSP912_Decay.lean_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/bf99214b3104d89c628abb9c824a56d89a6bd6fe/projects/jsp-000912/JSP912/Decay.lean",
+      "bytes": 5726,
+      "sha256": "395dde44635efdaeec49da1541202c3a875ab22b24e4871d8621381d45e4edf6",
+      "git_blob_sha1": "5383b85aa150b12c891430ac5a15d46d131df685"
+    },
+    {
+      "id": "912_JSP912_Grid.lean_recovered",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/9074d0cebd4e132a6c1fa71c0817693246935398/projects/jsp-000912/JSP912/Grid.lean",
+      "bytes": 8770,
+      "sha256": "b33ac143b1d58b5d5ac7b5899c4d1062bb02d0c829157610b1eb460861af57ac",
+      "git_blob_sha1": "174e1362a477dc8514afc63d10998aab6cda6c7f"
+    },
+    {
+      "id": "912_JSP912_Grid.lean_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/bf99214b3104d89c628abb9c824a56d89a6bd6fe/projects/jsp-000912/JSP912/Grid.lean",
+      "bytes": 8717,
+      "sha256": "6e9ab49e64b9d79953388fa7a4f236c84a0ca29ad2edc74a9b0515a31baf3085",
+      "git_blob_sha1": "d6011df7c7fd3f343305c6e73da0f63139c9cb49"
+    },
+    {
+      "id": "912_JSP912_Main.lean_recovered",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/9074d0cebd4e132a6c1fa71c0817693246935398/projects/jsp-000912/JSP912/Main.lean",
+      "bytes": 5780,
+      "sha256": "9bcc9601654eb8ae43e257a07276d05743067c8b71bc273383d9e391055ebbfe",
+      "git_blob_sha1": "b379486bfce598a235c6ad561c2a158abe1b42dd"
+    },
+    {
+      "id": "912_JSP912_Main.lean_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/bf99214b3104d89c628abb9c824a56d89a6bd6fe/projects/jsp-000912/JSP912/Main.lean",
+      "bytes": 5761,
+      "sha256": "3b93f25c12852c7b2792dbf51daedb887d591835a154fd4c45c4e01cc935e417",
+      "git_blob_sha1": "014dedf279c115f9e74f918ff21d4ac66f4f6856"
+    },
+    {
+      "id": "912_JSP912_Potential.lean_recovered",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/9074d0cebd4e132a6c1fa71c0817693246935398/projects/jsp-000912/JSP912/Potential.lean",
+      "bytes": 7405,
+      "sha256": "5d4dbbe96f5a9f0eead2e954933811677f6ac6322112383362ab74561669e3d5",
+      "git_blob_sha1": "3a9d4a5a46630b9da2565627e3254382c6236a44"
+    },
+    {
+      "id": "912_JSP912_Potential.lean_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/bf99214b3104d89c628abb9c824a56d89a6bd6fe/projects/jsp-000912/JSP912/Potential.lean",
+      "bytes": 7398,
+      "sha256": "192de0dc1613ab6ba6175d3646af40bbb141c4750097291edb5838565480545d",
+      "git_blob_sha1": "8cc37886b96bfb8772a9f67a80d53f705bd6b9ba"
+    },
+    {
+      "id": "912_port_patch",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/bf99214b3104d89c628abb9c824a56d89a6bd6fe/projects/jsp-000912/LEAN4_34_PORT.patch",
+      "bytes": 5222,
+      "sha256": "189299cf31cbd22b39e34d76669adc7a08c513925d3db3bc189f41bba0ac9131",
+      "git_blob_sha1": "d4f24a7bc4faa0d8e508f19d167693ebb77cd649"
+    },
+    {
+      "id": "393_seed_original",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/a337720331a34599114a9d4669d6518d5e608f6f/JSP000393.lean",
+      "bytes": 6524,
+      "sha256": "32fc88e06d8897c326a6caa2b113bd3648ab8386062d4a136a219649ff165694",
+      "git_blob_sha1": "96054f2724ff3175c4160fd30909d4bdd34e6185"
+    },
+    {
+      "id": "393_seed_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/17e406594d644b40c9a742e843cd6d89f319c872/JSP000393.lean",
+      "bytes": 6524,
+      "sha256": "32fc88e06d8897c326a6caa2b113bd3648ab8386062d4a136a219649ff165694",
+      "git_blob_sha1": "96054f2724ff3175c4160fd30909d4bdd34e6185"
+    },
+    {
+      "id": "393_seed_verified",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/0e86d155839b409faa075233a1b62e32f2b7b1e3/JSP000393.lean",
+      "bytes": 6524,
+      "sha256": "32fc88e06d8897c326a6caa2b113bd3648ab8386062d4a136a219649ff165694",
+      "git_blob_sha1": "96054f2724ff3175c4160fd30909d4bdd34e6185"
+    },
+    {
+      "id": "393_JSP000393Complete.lean_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/17e406594d644b40c9a742e843cd6d89f319c872/JSP000393Complete.lean",
+      "bytes": 3813,
+      "sha256": "0fc815a5e74c3fb304352820c5b7aaf998dc8883664f5775db135535dbdbecaa",
+      "git_blob_sha1": "e19566050401b172e470f425fee9d78091ae062e"
+    },
+    {
+      "id": "393_JSP000393Complete.lean_verified",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/0e86d155839b409faa075233a1b62e32f2b7b1e3/JSP000393Complete.lean",
+      "bytes": 3813,
+      "sha256": "0fc815a5e74c3fb304352820c5b7aaf998dc8883664f5775db135535dbdbecaa",
+      "git_blob_sha1": "e19566050401b172e470f425fee9d78091ae062e"
+    },
+    {
+      "id": "393_UPSTREAM.json_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/17e406594d644b40c9a742e843cd6d89f319c872/UPSTREAM.json",
+      "bytes": 10051,
+      "sha256": "86f5088e5d322709df8681878644b287d20bda847735a251ba82db51f1e77245",
+      "git_blob_sha1": "d705d5c55c00054e1a007d0f20a1cabd78b7d9b7"
+    },
+    {
+      "id": "393_UPSTREAM.json_verified",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/0e86d155839b409faa075233a1b62e32f2b7b1e3/UPSTREAM.json",
+      "bytes": 10051,
+      "sha256": "86f5088e5d322709df8681878644b287d20bda847735a251ba82db51f1e77245",
+      "git_blob_sha1": "d705d5c55c00054e1a007d0f20a1cabd78b7d9b7"
+    },
+    {
+      "id": "393_lake-manifest.json_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/17e406594d644b40c9a742e843cd6d89f319c872/lake-manifest.json",
+      "bytes": 3506,
+      "sha256": "cb85dff7759f5e74300a86db0518198bd29a3ec5c888a57613ef80f6305bd876",
+      "git_blob_sha1": "a96585caa27d2a398ba7eaf2445f0ee3ca066838"
+    },
+    {
+      "id": "393_lake-manifest.json_verified",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/0e86d155839b409faa075233a1b62e32f2b7b1e3/lake-manifest.json",
+      "bytes": 3506,
+      "sha256": "cb85dff7759f5e74300a86db0518198bd29a3ec5c888a57613ef80f6305bd876",
+      "git_blob_sha1": "a96585caa27d2a398ba7eaf2445f0ee3ca066838"
+    },
+    {
+      "id": "393_historical_source",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/awards/587d7724e74ac78235b9d9d63e4cbe5fc46ba20e/submissions/jsp-000393-kz-sparse-squares/SOURCE.json",
+      "bytes": 1358,
+      "sha256": "d2e5c99de3b95d25be837eeb319a1a20f9a1e0fd1f425cf6a850ff2c829c85c9",
+      "git_blob_sha1": "20953a6d01bcbcc744fb33acde419668fab01b96"
+    },
+    {
+      "id": "393_peer921",
+      "url": "https://raw.githubusercontent.com/Drag0ndddd1118/jsp-000393-formalization/643f5a94e4264c7ab799877911c1de3e5d69bda4/JSP_000393.lean",
+      "bytes": 6147,
+      "sha256": "83a2f37ec7764379fe47fa96b2e13e9e46819c428dfba2f8d72380deb2f71209",
+      "git_blob_sha1": "d5b8a260551bf5aa9ee02c3195cbcd1898972d74"
+    },
+    {
+      "id": "728_lower_original",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/91fdee92a0e9122b9e41cfd3b24d0ab70a64b3c0/projects/jsp-000728/JSP000728.lean",
+      "bytes": 5666,
+      "sha256": "8f96cab09cc212de5cbe16fe8d28c6cf32d8e99cf5fc826663e5d944f0c99553",
+      "git_blob_sha1": "2a373b2ea75dc6849281a7b40e159e8d6e413058"
+    },
+    {
+      "id": "728_lower_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/22212651d30af02ad36f01a206984d31b0ec75c6/projects/jsp-000728/JSP000728.lean",
+      "bytes": 5666,
+      "sha256": "8f96cab09cc212de5cbe16fe8d28c6cf32d8e99cf5fc826663e5d944f0c99553",
+      "git_blob_sha1": "2a373b2ea75dc6849281a7b40e159e8d6e413058"
+    },
+    {
+      "id": "728_lower_historical",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/awards/fa77d5ecf712a1e0fadfdd642eeaf50ac1162968/docs/submissions/jsp-000728-kz/JSP000728.lean",
+      "bytes": 5666,
+      "sha256": "8f96cab09cc212de5cbe16fe8d28c6cf32d8e99cf5fc826663e5d944f0c99553",
+      "git_blob_sha1": "2a373b2ea75dc6849281a7b40e159e8d6e413058"
+    },
+    {
+      "id": "728_JSP000728Bridge.lean",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/22212651d30af02ad36f01a206984d31b0ec75c6/projects/jsp-000728/JSP000728Bridge.lean",
+      "bytes": 3425,
+      "sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "git_blob_sha1": "24f6851ba461fb51bb5696916847a907deb921e5"
+    },
+    {
+      "id": "728_JSP000728Complete.lean",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/22212651d30af02ad36f01a206984d31b0ec75c6/projects/jsp-000728/JSP000728Complete.lean",
+      "bytes": 3825,
+      "sha256": "fd4d4cdc0e6fe73f10666c37dc0ccd9dfd450478ed94ffe1cc36b4af942ae53f",
+      "git_blob_sha1": "b166f939852ab88d4a7fae3a45657da69226e05c"
+    }
+  ],
+  "limits": "Source provenance checks only; not a new Lean execution, global priority proof, identity verification or organizer decision."
+}
