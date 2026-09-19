@@ -34,19 +34,19 @@ if pending:
         patch_texts[p['name']] = data.decode()
 
 def restore(e):
-    data = fetch(e['url']); check(data, e)
+    data = b'' if 'added_by_patch' in e else fetch(e['url']); check(data, e)
     path = ROOT / e['path']; path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_bytes(data)
+    if 'added_by_patch' not in e: path.write_bytes(data)
     for patch in e.get('upstream_patches', []):
         found = False
         for section in re.split(r'(?=^diff --git )', patch_texts[patch['name']], flags=re.M):
-            match = re.search(r'^--- a/(.*)$', section, re.M)
+            match = re.search(r'^\+\+\+ b/(.*)$', section, re.M)
             if not match: continue
             original = match[1]
             rel = original.removeprefix('projects/HasseWeil/').removeprefix('Warning/')
             if rel != e['path']: continue
             section = section.replace('a/'+original, 'a/'+rel).replace('b/'+original, 'b/'+rel)
-            subprocess.run(['patch', '-p1', '--batch', '--forward'], cwd=ROOT,
+            subprocess.run(['patch', '-p1', '--batch', '--forward', '--fuzz=0'], cwd=ROOT,
                 input=section, text=True, check=True, capture_output=True)
             found = True
         if not found: raise RuntimeError('Missing pinned patch for ' + e['path'])

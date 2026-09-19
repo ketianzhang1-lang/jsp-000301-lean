@@ -167,6 +167,40 @@
     "edits": []
   },
   {
+    "path": "HasseWeil/Foundation/EC/GenericPoint.lean",
+    "repository": "CBirkbeck/AINTLIB",
+    "commit": "1c1c74664e40071c2c2165bc55ca2616a67ccd6b",
+    "source_path": "projects/HasseWeil/HasseWeil/Foundation/EC/GenericPoint.lean",
+    "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Foundation/EC/GenericPoint.lean",
+    "git_blob_sha": "4ae622fc96edd57e97e49978d11c91ce145d4a75",
+    "sha256": "80f6e425fc2e9ff37dcc61fc7c516aefa1884d7daf9e76d73a4a9e25dfa3730d",
+    "port_sha256": "9a9064a2ba4d26fd7991dae59831d40ea768dbf1c9ef74d132b0807f3a8711bb",
+    "edits": [],
+    "upstream_patches": [
+      {
+        "name": "hasseweil-linter-v4.33.0.patch",
+        "upstream_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e"
+      }
+    ]
+  },
+  {
+    "path": "HasseWeil/Foundation/EC/AffinePointMap.lean",
+    "repository": "CBirkbeck/AINTLIB",
+    "commit": "1c1c74664e40071c2c2165bc55ca2616a67ccd6b",
+    "source_path": "projects/HasseWeil/HasseWeil/Foundation/EC/AffinePointMap.lean",
+    "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Foundation/EC/AffinePointMap.lean",
+    "git_blob_sha": "8bc30a80a5c78ab31e294fd15c08e954f0a79a49",
+    "sha256": "6ed15e7930491ffa30222c347deb61cd4f65364105e971bc3c17d2a4d0e96c84",
+    "port_sha256": "74dddf949d347edd72634f58e42de93e078e63985b40cfaecb3abbe8c8e63455",
+    "edits": [],
+    "upstream_patches": [
+      {
+        "name": "hasseweil-linter-v4.33.0.patch",
+        "upstream_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e"
+      }
+    ]
+  },
+  {
     "path": "HasseWeil/Foundation/OmegaPullbackCoeff.lean",
     "repository": "CBirkbeck/AINTLIB",
     "commit": "1c1c74664e40071c2c2165bc55ca2616a67ccd6b",
@@ -174,7 +208,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Foundation/OmegaPullbackCoeff.lean",
     "git_blob_sha": "61150a90c77bd7eec1e15c5c6f7c36fa596fb47e",
     "sha256": "ec920173907717f75f987c9eb9a05ee9a391aff0af9e42a83815d6890e6bf9e8",
-    "port_sha256": "ec920173907717f75f987c9eb9a05ee9a391aff0af9e42a83815d6890e6bf9e8",
+    "port_sha256": "fdd75b19db6e6ad7ec1dfef0a6a21dcf6ae6eff4ff14e8d5f5e0f43ff64d38d8",
     "edits": [],
     "upstream_patches": [
       {
@@ -235,7 +269,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Isogeny/FunctionField.lean",
     "git_blob_sha": "390492635191ba845e1de1e9229b68c8537e35e1",
     "sha256": "b72446334810674b464d5cbb58b7fb0c102439a7bed6171ec7c8418bfaf1edb6",
-    "port_sha256": "b72446334810674b464d5cbb58b7fb0c102439a7bed6171ec7c8418bfaf1edb6",
+    "port_sha256": "05890247b9fd447b1b39effbcd8411cbcdf50e3f687228acf5d3ade7a442563b",
     "edits": [],
     "upstream_patches": [
       {
@@ -252,7 +286,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Foundation/Valuation.lean",
     "git_blob_sha": "ee38803ba17e0f1280b0a011b86816bcf8090f37",
     "sha256": "82c96eff4b7f0ca33afb221b35ee99a87898fa1a3d0ddc9f2f105367dc7d5db0",
-    "port_sha256": "82c96eff4b7f0ca33afb221b35ee99a87898fa1a3d0ddc9f2f105367dc7d5db0",
+    "port_sha256": "a5f5b98546b0b275b7a363f037d2e7cdc9d579ec6bbad07079cb9b4d248904c1",
     "edits": [],
     "upstream_patches": [
       {
@@ -379,40 +413,6 @@
     "edits": []
   },
   {
-    "path": "HasseWeil/Foundation/EC/AffinePointMap.lean",
-    "repository": "CBirkbeck/AINTLIB",
-    "commit": "1c1c74664e40071c2c2165bc55ca2616a67ccd6b",
-    "source_path": "projects/HasseWeil/HasseWeil/Foundation/EC/AffinePointMap.lean",
-    "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Foundation/EC/AffinePointMap.lean",
-    "git_blob_sha": "8bc30a80a5c78ab31e294fd15c08e954f0a79a49",
-    "sha256": "6ed15e7930491ffa30222c347deb61cd4f65364105e971bc3c17d2a4d0e96c84",
-    "port_sha256": "74dddf949d347edd72634f58e42de93e078e63985b40cfaecb3abbe8c8e63455",
-    "edits": [],
-    "upstream_patches": [
-      {
-        "name": "hasseweil-linter-v4.33.0.patch",
-        "upstream_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e"
-      }
-    ]
-  },
-  {
-    "path": "HasseWeil/Foundation/EC/GenericPoint.lean",
-    "repository": "CBirkbeck/AINTLIB",
-    "commit": "1c1c74664e40071c2c2165bc55ca2616a67ccd6b",
-    "source_path": "projects/HasseWeil/HasseWeil/Foundation/EC/GenericPoint.lean",
-    "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Foundation/EC/GenericPoint.lean",
-    "git_blob_sha": "4ae622fc96edd57e97e49978d11c91ce145d4a75",
-    "sha256": "80f6e425fc2e9ff37dcc61fc7c516aefa1884d7daf9e76d73a4a9e25dfa3730d",
-    "port_sha256": "9a9064a2ba4d26fd7991dae59831d40ea768dbf1c9ef74d132b0807f3a8711bb",
-    "edits": [],
-    "upstream_patches": [
-      {
-        "name": "hasseweil-linter-v4.33.0.patch",
-        "upstream_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e"
-      }
-    ]
-  },
-  {
     "path": "HasseWeil/Foundation/EC/MulByIntBaseCase.lean",
     "repository": "CBirkbeck/AINTLIB",
     "commit": "1c1c74664e40071c2c2165bc55ca2616a67ccd6b",
@@ -459,7 +459,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Isogeny/Frobenius/OrdAtInfty.lean",
     "git_blob_sha": "166040c82deddf88095d9e2fb99ccb8fa2a08ec2",
     "sha256": "6878345fceaead54b7711f25706d673564d072d8f5bde5afaedd814b253e914b",
-    "port_sha256": "6878345fceaead54b7711f25706d673564d072d8f5bde5afaedd814b253e914b",
+    "port_sha256": "75dfbaddbb0dcd88fe22ab30b34c00aaa02dd402179e5c9276a5d3eab48d397a",
     "edits": [],
     "upstream_patches": [
       {
@@ -509,7 +509,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Isogeny/Kernel.lean",
     "git_blob_sha": "2b2b0f7f5ddc6f714debdcc150811ebbed7280d0",
     "sha256": "13a105826661b6ffb75375f7323c9e2f54dc199164e0b59318022024dd32214f",
-    "port_sha256": "13a105826661b6ffb75375f7323c9e2f54dc199164e0b59318022024dd32214f",
+    "port_sha256": "800d9fa8b5a481209a0919e0205cf592582b13527f07f3ad48eff1cc7f94dd10",
     "edits": [],
     "upstream_patches": [
       {
@@ -562,6 +562,24 @@
     "sha256": "260698182301f227232054a57b3b68bea22275c0563dfef0bb73d3b20df1e39e",
     "port_sha256": "260698182301f227232054a57b3b68bea22275c0563dfef0bb73d3b20df1e39e",
     "edits": []
+  },
+  {
+    "path": "HasseWeil/Foundation/RamificationSum.lean",
+    "repository": "plby/lean-proofs",
+    "commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+    "source_path": "src/latest/patches/hasseweil-linter-v4.33.0.patch",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/patches/hasseweil-linter-v4.33.0.patch",
+    "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "port_sha256": "3eec66600bdab08470d94411ec22da29ff84241de8d1dd432f0408c09ed044e9",
+    "edits": [],
+    "upstream_patches": [
+      {
+        "name": "hasseweil-linter-v4.33.0.patch",
+        "upstream_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e"
+      }
+    ],
+    "added_by_patch": "hasseweil-linter-v4.33.0.patch"
   },
   {
     "path": "HasseWeil/Foundation/Curves/Map/CurveMap.lean",
@@ -649,7 +667,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Foundation/Verschiebung/PurelyInsep.lean",
     "git_blob_sha": "1c3155d4433ae41e3ab55fa01a8acab5eba4d4ad",
     "sha256": "27452041b89b0aa239247da156cb2cae3228efd2e84ff460278230b6f3579564",
-    "port_sha256": "27452041b89b0aa239247da156cb2cae3228efd2e84ff460278230b6f3579564",
+    "port_sha256": "32dc951b7c00db600ed62a69883d3e3e5d366ba8d854ade0aaea2afc2ddbed30",
     "edits": [],
     "upstream_patches": [
       {
@@ -666,7 +684,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Foundation/Verschiebung/QthRoots.lean",
     "git_blob_sha": "213df1491521d913e72a0ebd24a941e19ac94728",
     "sha256": "a2d5d6422be3c36c33e96cfa4a4a6d7a9e62f02df37bf77eeafe778472a32c4e",
-    "port_sha256": "a2d5d6422be3c36c33e96cfa4a4a6d7a9e62f02df37bf77eeafe778472a32c4e",
+    "port_sha256": "cd030e25854b37d8d5d3f18e391381f4a7288c8ac4864162706e89d04647a978",
     "edits": [],
     "upstream_patches": [
       {
@@ -683,7 +701,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/PointCount.lean",
     "git_blob_sha": "e004de056fc5d9f6389daf1ffe80042b800263e4",
     "sha256": "8faf8d217571294e8cbdba7d7261b0aac57ad9d91b1fd8defd84ec22f730f9fa",
-    "port_sha256": "8faf8d217571294e8cbdba7d7261b0aac57ad9d91b1fd8defd84ec22f730f9fa",
+    "port_sha256": "fd52cd028a955a7e022edc3cdac0ac89aeb250da83063a378ebabae5740bbb33",
     "edits": [],
     "upstream_patches": [
       {
@@ -872,7 +890,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Isogeny/FormalSeries.lean",
     "git_blob_sha": "0cabc394abc4ca7608ba92b737cb85363078b59b",
     "sha256": "abc97229e9809f4ca238a1c77709766763cdb888d8ed502a48323c6be6282d5e",
-    "port_sha256": "abc97229e9809f4ca238a1c77709766763cdb888d8ed502a48323c6be6282d5e",
+    "port_sha256": "991729fad503e6b4388018c784ed2de95daf9f05fec3e64701fd85589464eb3a",
     "edits": [],
     "upstream_patches": [
       {
@@ -945,7 +963,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Isogeny/Basic.lean",
     "git_blob_sha": "01ae90e295143eb110a787051074f27eb840f0c2",
     "sha256": "829cceddd2e62cb58bae5612571d455bb58539a7292b63c419d39ad5664b17d6",
-    "port_sha256": "829cceddd2e62cb58bae5612571d455bb58539a7292b63c419d39ad5664b17d6",
+    "port_sha256": "4c497efd424330c768bcdf25cec751ed93ba1c315c7e8a542dd45c5331b7a9d6",
     "edits": [],
     "upstream_patches": [
       {
@@ -1001,7 +1019,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/Separability.lean",
     "git_blob_sha": "b4d1cde93c6ae526dc5b22f4e156749452266d11",
     "sha256": "260fc142f1f9ede5ce40f7951c34ee5d081c000b6dbfe685b6c47812bfa9bbdc",
-    "port_sha256": "260fc142f1f9ede5ce40f7951c34ee5d081c000b6dbfe685b6c47812bfa9bbdc",
+    "port_sha256": "b2289559b46fcf61809311b9e1af7735a0176b3957afcd4742a9b515f1bc2ada",
     "edits": [],
     "upstream_patches": [
       {
@@ -1152,7 +1170,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/PoleDivisorFallback.lean",
     "git_blob_sha": "6c96651f4795880dc78a3532568e069e75c9f7d2",
     "sha256": "d9f2e9efe14e6beecb1dbaf73dbaaedcaa6be95cd6506ac8ebe139809c2aaebc",
-    "port_sha256": "d9f2e9efe14e6beecb1dbaf73dbaaedcaa6be95cd6506ac8ebe139809c2aaebc",
+    "port_sha256": "802e5e0a83c4a724155eabe77602d83eab52955f1f59b81f15d275a148914876",
     "edits": [],
     "upstream_patches": [
       {
@@ -1169,7 +1187,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/PoleDivisorTwoTorsion.lean",
     "git_blob_sha": "25f0c694866420d9fc427ad6bad58d30581698f5",
     "sha256": "70851c3f533229c2ed3df063ec2a6832f580277743ce9192ff46a8805cbd2f75",
-    "port_sha256": "70851c3f533229c2ed3df063ec2a6832f580277743ce9192ff46a8805cbd2f75",
+    "port_sha256": "99c7f3a90ba4edfa8a49880c15c5e2cc6d87a79aa55a22dc8cf476baa99259f7",
     "edits": [],
     "upstream_patches": [
       {
@@ -1203,7 +1221,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Isogeny/OrdTransport.lean",
     "git_blob_sha": "25e8c912a0a3eaa8a0e8f65574d833eab88714a1",
     "sha256": "5f6f039e8dc7d38e05446c339d224be108273e071b11984a6258d59ea6dc73af",
-    "port_sha256": "5f6f039e8dc7d38e05446c339d224be108273e071b11984a6258d59ea6dc73af",
+    "port_sha256": "82d4d9552ed215818154ce01a13b4ced78c2d23d0ea111518eb391ea373f438b",
     "edits": [],
     "upstream_patches": [
       {
@@ -1282,7 +1300,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Isogeny/GroupHom/PicZero.lean",
     "git_blob_sha": "1b98e70eec533a4bac61cd0a445abb7372a63eea",
     "sha256": "e945ca27d869731108bb400f8601ba1fb97a87c981487cda2c707f17ed3cee81",
-    "port_sha256": "e945ca27d869731108bb400f8601ba1fb97a87c981487cda2c707f17ed3cee81",
+    "port_sha256": "f4371311e563efeebae7a9e5b78d0231bc55cb6f568ee2ceee558c2ed0a8d62b",
     "edits": [],
     "upstream_patches": [
       {
@@ -1399,7 +1417,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/TorsionKernelRational.lean",
     "git_blob_sha": "378e2e72bb9884b89a8711ecd629c7594e123209",
     "sha256": "af550a8a2988ec1510e7603ee123871185064648be2f74caa4765a92bd0b2a99",
-    "port_sha256": "af550a8a2988ec1510e7603ee123871185064648be2f74caa4765a92bd0b2a99",
+    "port_sha256": "5ca24a49230bb29f32aec8157326b5f8e40249309e59d3a93d363c1fddde776a",
     "edits": [],
     "upstream_patches": [
       {
@@ -1433,7 +1451,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/Fiber.lean",
     "git_blob_sha": "2d0e9d56ee5637f4483cbf1cfca90338974bbe7e",
     "sha256": "dc8e12efde658b39af982b6d5f3340345ccacf133bb2f47224f1703f08ab63c3",
-    "port_sha256": "dc8e12efde658b39af982b6d5f3340345ccacf133bb2f47224f1703f08ab63c3",
+    "port_sha256": "797147d56d1c8b56770939f5260df7b67e07321743ca99a62821b65fdd687adf",
     "edits": [],
     "upstream_patches": [
       {
@@ -1450,7 +1468,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/Pullback.lean",
     "git_blob_sha": "6a6379829cee35a6abd17d4c8af071897c7d4cd7",
     "sha256": "038ece8f16627a7ee794552ac4cd59170c96524f1f3b88f6c1e71659d7b222bb",
-    "port_sha256": "038ece8f16627a7ee794552ac4cd59170c96524f1f3b88f6c1e71659d7b222bb",
+    "port_sha256": "3266428a16b31dab8d4a7b2398c191c044e54be1391e144cb7b287ffc89a31fa",
     "edits": [],
     "upstream_patches": [
       {
@@ -1467,7 +1485,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/SigmaBridge.lean",
     "git_blob_sha": "fd8f804078b979d55c2a44e2cbadd96fa3e61a1f",
     "sha256": "f9cff4bc42cec1efff8d32e17c832e832382c0b5fb27fc7ba37245fc2cc31e12",
-    "port_sha256": "f9cff4bc42cec1efff8d32e17c832e832382c0b5fb27fc7ba37245fc2cc31e12",
+    "port_sha256": "4c41b67aec6d04972ac95263c5d04fe208a106a29aed14b2e8b59282025b0c11",
     "edits": [],
     "upstream_patches": [
       {
@@ -1484,7 +1502,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/DivisorPullback.lean",
     "git_blob_sha": "aa75199b4c8a21a56869749acaa36ad865914cd1",
     "sha256": "63020afabb6cf7ee594a4116e52f5072d910690a55c4dbd13cfc3688549b8077",
-    "port_sha256": "63020afabb6cf7ee594a4116e52f5072d910690a55c4dbd13cfc3688549b8077",
+    "port_sha256": "9d677dc106ce1da7657af8c863cba7df33e954b9899c01795d61533a596ce832",
     "edits": [],
     "upstream_patches": [
       {
@@ -1501,7 +1519,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/Constancy.lean",
     "git_blob_sha": "bedd183a72d3268a7c15cfe322588a849dc5a7d7",
     "sha256": "0a3bb7f50f4f72ee3f26b3d411530be517b36c5c4e20860c91f9a70e93d90873",
-    "port_sha256": "0a3bb7f50f4f72ee3f26b3d411530be517b36c5c4e20860c91f9a70e93d90873",
+    "port_sha256": "e5534db414177c8038d0e05b3c1709963b71cd07c5c6d820c6734f89d004e0bb",
     "edits": [],
     "upstream_patches": [
       {
@@ -1540,7 +1558,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Isogeny/BaseChange/Basic.lean",
     "git_blob_sha": "5e7b88094453689a80fefbc79c4a6dcb9032a838",
     "sha256": "8cc2088ee517b23ec190fa4f28f5afb625aa519dce1f8749ce725374a326660c",
-    "port_sha256": "8cc2088ee517b23ec190fa4f28f5afb625aa519dce1f8749ce725374a326660c",
+    "port_sha256": "2875b3fca5d8ffecf1c0e3fcd3958496b8f47adb15c4792576e85ee52b7f90c0",
     "edits": [],
     "upstream_patches": [
       {
@@ -1596,7 +1614,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/DivisorTranslate.lean",
     "git_blob_sha": "5aa36976255219123ab2bde27f58329a19467e1a",
     "sha256": "e57acee62b30fe52f101189acf2c39dab146ae6e7438e438327aee19eb813ade",
-    "port_sha256": "e57acee62b30fe52f101189acf2c39dab146ae6e7438e438327aee19eb813ade",
+    "port_sha256": "730fe480b686102c446dd8f397898fc3223bbd9f149da75fba03b50f20f98bf9",
     "edits": [],
     "upstream_patches": [
       {
@@ -1624,7 +1642,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/TorsionModule.lean",
     "git_blob_sha": "e011591e16bed6be3b6f56c13ed61aef17193b32",
     "sha256": "72145aacaf2470b27e8c8f13854d2a2b4697f2d2fe2bfb7b1417dbb30663d67a",
-    "port_sha256": "72145aacaf2470b27e8c8f13854d2a2b4697f2d2fe2bfb7b1417dbb30663d67a",
+    "port_sha256": "1146160e993bc2813e1cc2208d2f593dcf104282bf435b2e5116982ec4bcd2a9",
     "edits": [],
     "upstream_patches": [
       {
@@ -1652,7 +1670,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/PairingProps.lean",
     "git_blob_sha": "403c142bccd14b46fb069f77121cb22bd4814168",
     "sha256": "6f600c8f42ac9629877c85bb3b410450a00620ff573cdd28971b94d69eb27fb5",
-    "port_sha256": "6f600c8f42ac9629877c85bb3b410450a00620ff573cdd28971b94d69eb27fb5",
+    "port_sha256": "8d182d6c35dde220b5652c10132ea501d9b8b53cb437b651675e540dc9490f4e",
     "edits": [],
     "upstream_patches": [
       {
@@ -1669,7 +1687,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Pic0/ClassGroupNorm.lean",
     "git_blob_sha": "588d6a1d4943b8629a7de324b105d6b3408715bd",
     "sha256": "8e5df818fca4aace189b3bfcd8b6e76517d95fcc7805506c9663de6c4f66684d",
-    "port_sha256": "8e5df818fca4aace189b3bfcd8b6e76517d95fcc7805506c9663de6c4f66684d",
+    "port_sha256": "a71d4274f651b96a7024b452584f343911b6ae43cfd4456976691e0acdc790e9",
     "edits": [],
     "upstream_patches": [
       {
@@ -1686,7 +1704,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Isogeny/ClassGroup.lean",
     "git_blob_sha": "9b2003a2eb404063839b655fc4382494641c4c9f",
     "sha256": "8d3e02179f8731ccccb3e49343d35a020a74c0869b6b6631e9b2ee373edf2c16",
-    "port_sha256": "8d3e02179f8731ccccb3e49343d35a020a74c0869b6b6631e9b2ee373edf2c16",
+    "port_sha256": "52848fcf5002e2b9aec4b1e44762a168c915e540ab093618b6a973c1bf70d8fa",
     "edits": [],
     "upstream_patches": [
       {
@@ -1703,7 +1721,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Pic0/ToClassSurjective.lean",
     "git_blob_sha": "8cd46a6c0e8daac227456925146e5abc98e3f87b",
     "sha256": "734c5c51c99cd4e69b7e3953f91f68998c3622113435253fcf5993681a32dbe2",
-    "port_sha256": "13968923f239d5366c7bce60a69f44d463cab523fbb17e4c3f5a40397e704d29",
+    "port_sha256": "75efa2a0d88793f5e3d7d7cf38560774b4c5faeaf535ab4d82e63aec94d5f2bc",
     "edits": [],
     "upstream_patches": [
       {
@@ -1724,7 +1742,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Pic0/PicDual.lean",
     "git_blob_sha": "d0543c22fa60a184a23863ad62d276e6974b7881",
     "sha256": "e2339e0ab2bf61833441f54660c0e07bb257faf38347e665cb9e7272d7aaa18b",
-    "port_sha256": "e2339e0ab2bf61833441f54660c0e07bb257faf38347e665cb9e7272d7aaa18b",
+    "port_sha256": "bfc23014ffc5d8f4f138b12de0ff2e07601d8eda6b788862414241068d534dae",
     "edits": [],
     "upstream_patches": [
       {
@@ -1752,7 +1770,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/PairingNondeg.lean",
     "git_blob_sha": "18c4b2749d1a4c565a17b3cf1fb9f33185f1b6bc",
     "sha256": "201e2829b768a02006ff4bee40d3652f170f059bfd2f539d63a018477c2637f4",
-    "port_sha256": "201e2829b768a02006ff4bee40d3652f170f059bfd2f539d63a018477c2637f4",
+    "port_sha256": "ec168872b168ed15f3845a6a12887120e88766752944feb72e5bda2f8120970d",
     "edits": [],
     "upstream_patches": [
       {
@@ -1902,7 +1920,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/Infrastructure.lean",
     "git_blob_sha": "9facfb997176c5ac380d29e70848729672edc3fd",
     "sha256": "090f58eb3948d6f2de2ee2d76db1118c9cfd785548c992a5f4d92f2690e7f3dd",
-    "port_sha256": "090f58eb3948d6f2de2ee2d76db1118c9cfd785548c992a5f4d92f2690e7f3dd",
+    "port_sha256": "a9ca33447ecad720281546a6b7f3e37df091ad071bcbb84fc3c0916e76807368",
     "edits": [],
     "upstream_patches": [
       {
@@ -1919,7 +1937,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/Primitives.lean",
     "git_blob_sha": "7b7c9f9bdd2de81fd56ed1658ddd95a0088e6cef",
     "sha256": "b02bd63c55852cb04920e002677a50ac2f41cd10c98d8ccb2bc832f1a0fd4dc5",
-    "port_sha256": "b02bd63c55852cb04920e002677a50ac2f41cd10c98d8ccb2bc832f1a0fd4dc5",
+    "port_sha256": "aad045f7e3ea7e5f216eb7fde4d604a7775b4958d2f3e49a10978db0e980119e",
     "edits": [],
     "upstream_patches": [
       {
@@ -1953,7 +1971,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Isogeny/OmegaCoeffViaFormalGroup.lean",
     "git_blob_sha": "b4f3c844a3d84552f61642e618d4c4c2e3ea997f",
     "sha256": "0ca9ca1e16177e34bf8f7109b33c5cb7916ca9327e0c0feabd3e7e232cae6801",
-    "port_sha256": "0ca9ca1e16177e34bf8f7109b33c5cb7916ca9327e0c0feabd3e7e232cae6801",
+    "port_sha256": "14349a9b9be4656b60bf625e657080d9ebb104ca144c241736a5a0b65189fbf1",
     "edits": [],
     "upstream_patches": [
       {
@@ -1970,7 +1988,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/SepDegreeEqPointCount.lean",
     "git_blob_sha": "b0f7c26f8594ff8704015e2653ececd9d147c830",
     "sha256": "12c50fce2a3e28ee914f00f26c5eb35c7ba3accfac5699143ed6bb993139c898",
-    "port_sha256": "12c50fce2a3e28ee914f00f26c5eb35c7ba3accfac5699143ed6bb993139c898",
+    "port_sha256": "2ca3446be0640f86375b7292fb06fa2fe5e7c8228f010b9085bd7ad7b0e0070c",
     "edits": [],
     "upstream_patches": [
       {
@@ -2032,7 +2050,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/SepDegreeWitnesses.lean",
     "git_blob_sha": "b7d23ea382f18485792bb3beac41715ddac0bdcd",
     "sha256": "29be0e2644f4e8877891b814158166891535c07b3ea180686c9fe6ecc936487f",
-    "port_sha256": "29be0e2644f4e8877891b814158166891535c07b3ea180686c9fe6ecc936487f",
+    "port_sha256": "990fd5dd9d229ea4071017bbc83a3a6474775fc2e97ff8e2c32b11832ccda056",
     "edits": [],
     "upstream_patches": [
       {
@@ -2049,7 +2067,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Foundation/Verschiebung/Route2Universal.lean",
     "git_blob_sha": "e3faca5e03a654390a884d8d34fdd46645422369",
     "sha256": "d623919953817d2877a2cc2edbe427c1bdef1bfa0d78315c5649261d57f59432",
-    "port_sha256": "d623919953817d2877a2cc2edbe427c1bdef1bfa0d78315c5649261d57f59432",
+    "port_sha256": "54f0e65a106a5e04e069ac5a983c6beb5356583dec667472604f09edb0a706a6",
     "edits": [],
     "upstream_patches": [
       {
@@ -2066,7 +2084,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Foundation/Verschiebung/UniversalQthRootWitness.lean",
     "git_blob_sha": "c7790ab473a7e7122bf712056cb006a08d153faf",
     "sha256": "0fc81b07931551fcdd4838f05c6f637d501739569ea301fc71e59b3a132d4498",
-    "port_sha256": "0fc81b07931551fcdd4838f05c6f637d501739569ea301fc71e59b3a132d4498",
+    "port_sha256": "40e91978e334bb0a072d6189182ee8c293959070fb024db8ddf3881ba6481f0e",
     "edits": [],
     "upstream_patches": [
       {
@@ -2083,7 +2101,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Isogeny/VerschiebungFactorization.lean",
     "git_blob_sha": "9df75f14c48fff1693246cfef6448916acdb2e95",
     "sha256": "c8c4ffbc891920dd2477d30a371da881a4d53bfa559a3e27d9476263b3d9a412",
-    "port_sha256": "c8c4ffbc891920dd2477d30a371da881a4d53bfa559a3e27d9476263b3d9a412",
+    "port_sha256": "960c16c675b8fd949a7599b7e1510dfc8e25374dfb092e6d8c000e33a22e890b",
     "edits": [],
     "upstream_patches": [
       {
@@ -2111,7 +2129,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/FrobMatrixData.lean",
     "git_blob_sha": "30cf18d00e68700e5ea2d635ed5806c57ab157bc",
     "sha256": "93f6dd90a2df85c322269e0b0332b3449b82b935629f5eca5d152bd2c27196f5",
-    "port_sha256": "93f6dd90a2df85c322269e0b0332b3449b82b935629f5eca5d152bd2c27196f5",
+    "port_sha256": "329d59072d8f0cc3837b621c26161e3a90b90d7f9d065fb94f399ff69eaa1e2c",
     "edits": [],
     "upstream_patches": [
       {
@@ -2139,7 +2157,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Foundation/Verschiebung/Genuine.lean",
     "git_blob_sha": "16c9844e05e8a3a4e84977c4344686797b691a85",
     "sha256": "0b59aeffe0fe7d6b4d38d0bf5f659281e619b2016100b0ba28814d43f9649503",
-    "port_sha256": "0b59aeffe0fe7d6b4d38d0bf5f659281e619b2016100b0ba28814d43f9649503",
+    "port_sha256": "fed5cc415a6794f24f0ab76a53e664d10c801924eebeda0ef6866b538d2008a8",
     "edits": [],
     "upstream_patches": [
       {
@@ -2156,7 +2174,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Foundation/WallA/VSideDual.lean",
     "git_blob_sha": "e5247f095a9c35385d3f8486a444a687707b6b29",
     "sha256": "169812ff76a5e43e066db566c842254d955c928aa3327846fb1584f2a7be8d4e",
-    "port_sha256": "169812ff76a5e43e066db566c842254d955c928aa3327846fb1584f2a7be8d4e",
+    "port_sha256": "36fb370ac2e98ed23df5420e95c77b6a87a2d9d1af112d3275e04913cb37b0ec",
     "edits": [],
     "upstream_patches": [
       {
@@ -2184,7 +2202,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/HfactLemma.lean",
     "git_blob_sha": "66737344a83819c55423a4cd216fb31c5c7b2b44",
     "sha256": "53fb1a25d04984514ebe9514fdabc2c378197248aa48b97e5a35641829d07984",
-    "port_sha256": "53fb1a25d04984514ebe9514fdabc2c378197248aa48b97e5a35641829d07984",
+    "port_sha256": "d00b69a18a30354786cc205e17f09e966e55b6d7264ac0e3b8b37f057a4bd0c5",
     "edits": [],
     "upstream_patches": [
       {
@@ -2212,7 +2230,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/Scaling/Separable.lean",
     "git_blob_sha": "af497faf2bb3780fc6a0ffbb0e47d99a5a4bc929",
     "sha256": "311d3e81655428a5b6a8b6afcb58dadf47249d28838bda7e615e8f37aabf00e3",
-    "port_sha256": "311d3e81655428a5b6a8b6afcb58dadf47249d28838bda7e615e8f37aabf00e3",
+    "port_sha256": "fad7996bbb041c725ce0ef2923a89d54e143289b18482b3fe32f502c00e720be",
     "edits": [],
     "upstream_patches": [
       {
@@ -2229,7 +2247,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/Scaling/OneSub.lean",
     "git_blob_sha": "033f2ded933033c5a031e10bef9f57e810170fa7",
     "sha256": "8dbd516a21bbd0412016010c1175a286542edd775a22192b5966ee6eded5a0f2",
-    "port_sha256": "8dbd516a21bbd0412016010c1175a286542edd775a22192b5966ee6eded5a0f2",
+    "port_sha256": "291433b632c6152daf9a4c19756411d47569453b27f7c90ad9af0518760a948f",
     "edits": [],
     "upstream_patches": [
       {
@@ -2246,7 +2264,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Isogeny/BaseChange/Concrete.lean",
     "git_blob_sha": "a56daff3375b20be6ac4b93dfb2f04c4f9bac6b1",
     "sha256": "74f27bc86f71ff2cb41918a50e4b039eb4ea58676598f0fce17d8d1f4eab592f",
-    "port_sha256": "74f27bc86f71ff2cb41918a50e4b039eb4ea58676598f0fce17d8d1f4eab592f",
+    "port_sha256": "ab6955a8a99058091df060c43fe8a7aeda5194d8fe18193e1526581ee8ab3745",
     "edits": [],
     "upstream_patches": [
       {
@@ -2263,7 +2281,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/OneSubFrobeniusBaseChangeWitnesses.lean",
     "git_blob_sha": "63ca18b80df1e38bf48e2bae8585fe2a8a29aadd",
     "sha256": "f547d41518a410bc3a65468f00a4f5c4d740a598a4baa722dd5f96a9357c2ef4",
-    "port_sha256": "f547d41518a410bc3a65468f00a4f5c4d740a598a4baa722dd5f96a9357c2ef4",
+    "port_sha256": "07bde0a297ecf234e2f536f1bfd24319ebaae3de02746cfc0d4bd788e46b1cec",
     "edits": [],
     "upstream_patches": [
       {
@@ -2280,7 +2298,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/OneSubDualDivisor.lean",
     "git_blob_sha": "d3000b32d30e10c2b46fc50f6a717384d41259f1",
     "sha256": "852b508b4686820579b29b437902e48373c8dabcb1f96af7624f6a19a2defc30",
-    "port_sha256": "852b508b4686820579b29b437902e48373c8dabcb1f96af7624f6a19a2defc30",
+    "port_sha256": "7bfb43cbc32e13b762b061e6e7b5b638aeb2ec0f0b61d57b1f98a8edfc1ed122",
     "edits": [],
     "upstream_patches": [
       {
@@ -2297,7 +2315,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/PencilDualDivisor.lean",
     "git_blob_sha": "5f516ab8e619e3cdfcf79eb728f53efdfb81a2c5",
     "sha256": "7e890dd150f7a22a39c55260a8c679a1574cf12696324a84d4c5a23e56811c88",
-    "port_sha256": "7e890dd150f7a22a39c55260a8c679a1574cf12696324a84d4c5a23e56811c88",
+    "port_sha256": "7aaa5cea3288827a42b5b5bdd5acd92cce4ec6dd9ee62a0cda7020bc3b848cb1",
     "edits": [],
     "upstream_patches": [
       {
@@ -2314,7 +2332,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/Isogeny/SeparableWitnessReductions.lean",
     "git_blob_sha": "a8ca2af446a345ac435d9f954c6af5b621ff0cba",
     "sha256": "8a4bf19048475136eddd30ba54cbb2706aae74c38bd21814e232373ceeb7527e",
-    "port_sha256": "8a4bf19048475136eddd30ba54cbb2706aae74c38bd21814e232373ceeb7527e",
+    "port_sha256": "b9dec5f62116166e4caa349623465f3797a72ff58ca328046ac306b37d1dcc09",
     "edits": [],
     "upstream_patches": [
       {
@@ -2342,7 +2360,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/FrobeniusGenericCovariance.lean",
     "git_blob_sha": "2e94ad5e465c6dada76ce68439b6c5d25480b4c3",
     "sha256": "824b07ea0986428b552ecd2a1cfdd391d58f8c7fb742ab9b1c79c58f3ed94e09",
-    "port_sha256": "824b07ea0986428b552ecd2a1cfdd391d58f8c7fb742ab9b1c79c58f3ed94e09",
+    "port_sha256": "dcff976b5becada262f882817f681f0f173c6eba8fb14154fdcca38e07655a51",
     "edits": [],
     "upstream_patches": [
       {
@@ -2359,7 +2377,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/WallAGenericRealization.lean",
     "git_blob_sha": "89fa4da1dfd6318db4d78fe49f4b0e0bbccb9c5f",
     "sha256": "e238f6be927442a92a8f481c533adc6989fe4e5dc81463c32edcc1077dd77fe2",
-    "port_sha256": "e238f6be927442a92a8f481c533adc6989fe4e5dc81463c32edcc1077dd77fe2",
+    "port_sha256": "38fb35dd364d02fe6c6fbb814e117cce657948b2cdac911fffba63bd286407e8",
     "edits": [],
     "upstream_patches": [
       {
@@ -2431,7 +2449,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/Scaling/Pencil.lean",
     "git_blob_sha": "5677c18646c9fb48b5b32e346b1dfb9051f919f8",
     "sha256": "9d939e3ddfdd24b1e018d6e5723d91b348485bd2bb681d5ff2bdb632fdd9dfb5",
-    "port_sha256": "9d939e3ddfdd24b1e018d6e5723d91b348485bd2bb681d5ff2bdb632fdd9dfb5",
+    "port_sha256": "d37a303d7c2d4172df500fb9629580e703e263f44dd3efb81dc56b94f3475cb3",
     "edits": [],
     "upstream_patches": [
       {
@@ -2498,7 +2516,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/OneSubAffineResidues.lean",
     "git_blob_sha": "0a2528dba8896f0ba40a10741636bd4bc82789ac",
     "sha256": "be3c14eb9eab61b06bd87a6fa289b952daf30ffc142a5d5b077ba5743bef88b6",
-    "port_sha256": "be3c14eb9eab61b06bd87a6fa289b952daf30ffc142a5d5b077ba5743bef88b6",
+    "port_sha256": "2d21161b0ca4f8ed0d5838df0b04ed88f2e60f2890694b70613d3dba10d171fd",
     "edits": [],
     "upstream_patches": [
       {
@@ -2526,7 +2544,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/PencilComapPointValuation.lean",
     "git_blob_sha": "5855092e8a5de6aa3caf7d04c06e1afa7e819487",
     "sha256": "e62d41ba99a2d94a613dc9978238e9406bafab74ee06e6c3114b8c82b267c83e",
-    "port_sha256": "e62d41ba99a2d94a613dc9978238e9406bafab74ee06e6c3114b8c82b267c83e",
+    "port_sha256": "c4fa073068ceb9c90c8e94fa3cb1f7f9ba307a9d7559c32d94a3f6ff9684ba05",
     "edits": [],
     "upstream_patches": [
       {
@@ -2565,7 +2583,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/FrobeniusDivisorGalois.lean",
     "git_blob_sha": "a5cecf0c52a3c331a1b88b8176ac6e0610fb16e9",
     "sha256": "0e714c23354b4e1230ec17138f1f62834bb402053be08e9f90e14174c15e809e",
-    "port_sha256": "0e714c23354b4e1230ec17138f1f62834bb402053be08e9f90e14174c15e809e",
+    "port_sha256": "10274fe736832237af9ca3b5c525902e9113ee550b440f756e0efd4a5b4aac1c",
     "edits": [],
     "upstream_patches": [
       {
@@ -2593,7 +2611,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/Scaling/FrobeniusGalois.lean",
     "git_blob_sha": "ef66a86e649eed9ded1a96df6f25baa29b62948a",
     "sha256": "6a877cdea2e326f8ff140568b62857fdaf4244e33cbcd7d87bd75733287f3460",
-    "port_sha256": "6a877cdea2e326f8ff140568b62857fdaf4244e33cbcd7d87bd75733287f3460",
+    "port_sha256": "2547419a5b4cd760b0509a2f455a5c1345fb338c6d2ce274e4f3ac621c081841",
     "edits": [],
     "upstream_patches": [
       {
@@ -2610,7 +2628,7 @@
     "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/1c1c74664e40071c2c2165bc55ca2616a67ccd6b/projects/HasseWeil/HasseWeil/HasseBound/WeilPairing/Scaling/OneSubTransport.lean",
     "git_blob_sha": "510a5b68745e357a4c60d3b1f4d5c295610d42c6",
     "sha256": "dc3271abd6ff5b38cbdb13bed09c718676d384eeb56f525a803bc8d7d5a60b5e",
-    "port_sha256": "dc3271abd6ff5b38cbdb13bed09c718676d384eeb56f525a803bc8d7d5a60b5e",
+    "port_sha256": "37ec0010c511194061aa17baa3a805d58679154d720d6838e753e3ff1b0ac951",
     "edits": [],
     "upstream_patches": [
       {
@@ -3001,7 +3019,7 @@
     "url": "https://raw.githubusercontent.com/frenzymath/FormalPantheon/ffbb65c21afc8a36ace67720f1b0df1c63d26bd1/Warning/Waring/Analytic/ChenThree.lean",
     "git_blob_sha": "cda1afde63926c0b59be820c137d716e2b4ee0e1",
     "sha256": "7b3a7a0c9a52fef9c58c9b2c5049064b410dd66b7f7b51c9e014ff55cbe6cbce",
-    "port_sha256": "7b3a7a0c9a52fef9c58c9b2c5049064b410dd66b7f7b51c9e014ff55cbe6cbce",
+    "port_sha256": "2612c201edf0192bd8b6fb6b8b0ff84ee6975b9fea6597794e6947192e750d9f",
     "edits": [],
     "upstream_patches": [
       {
@@ -3029,7 +3047,7 @@
     "url": "https://raw.githubusercontent.com/frenzymath/FormalPantheon/ffbb65c21afc8a36ace67720f1b0df1c63d26bd1/Warning/Waring/Analytic/FivePrimePower.lean",
     "git_blob_sha": "cde4d67c191e12f4fbd7e0f29931728e7a6c4257",
     "sha256": "b9bf503f5997219f74e6eaa4aa4c77e72c92741f9331667ee004d5aaa912f120",
-    "port_sha256": "b9bf503f5997219f74e6eaa4aa4c77e72c92741f9331667ee004d5aaa912f120",
+    "port_sha256": "edf76cb66953c1468afd5d9810b0711dd8a02db4445158c72c19d0a9941e8661",
     "edits": [],
     "upstream_patches": [
       {
@@ -3046,7 +3064,7 @@
     "url": "https://raw.githubusercontent.com/frenzymath/FormalPantheon/ffbb65c21afc8a36ace67720f1b0df1c63d26bd1/Warning/Waring/Analytic/NonfivePrimePower.lean",
     "git_blob_sha": "7b8d611f6fb9dde87552bc40a30c5805ff87c505",
     "sha256": "a7378068a78b51f5d78d7fc569294f89588d95c140902a031c9b5dee42210ec5",
-    "port_sha256": "a7378068a78b51f5d78d7fc569294f89588d95c140902a031c9b5dee42210ec5",
+    "port_sha256": "7756e305de7d581c921ac8344dc601e057008fc42dbda3d74bac91644269180f",
     "edits": [],
     "upstream_patches": [
       {
@@ -3063,7 +3081,7 @@
     "url": "https://raw.githubusercontent.com/frenzymath/FormalPantheon/ffbb65c21afc8a36ace67720f1b0df1c63d26bd1/Warning/Waring/Analytic/PrimeGauss.lean",
     "git_blob_sha": "5546c95bde64bf33b87707874fd0b93c6b9c2512",
     "sha256": "8acc29ecd8bcf701bfb8209b6723708409fa8146bcaa7e481c4084529898bb45",
-    "port_sha256": "8acc29ecd8bcf701bfb8209b6723708409fa8146bcaa7e481c4084529898bb45",
+    "port_sha256": "cb0187c5d7a3f8a5076d65035d79b540992b2975cd0935b0977358158a2ea839",
     "edits": [],
     "upstream_patches": [
       {
@@ -3091,7 +3109,7 @@
     "url": "https://raw.githubusercontent.com/frenzymath/FormalPantheon/ffbb65c21afc8a36ace67720f1b0df1c63d26bd1/Warning/Waring/Analytic/ChenTwo.lean",
     "git_blob_sha": "6e04e664ec2d74fc4f7a74b3345bfb1ca03fd6fa",
     "sha256": "113b051bfbce347466c3b63730a714323f1730a3e7ad984568d3aec2d1597ced",
-    "port_sha256": "113b051bfbce347466c3b63730a714323f1730a3e7ad984568d3aec2d1597ced",
+    "port_sha256": "da379f3ea40030f5450ea4bd726a0928d96a2ef76c9a05e79279ca028e10e5cf",
     "edits": [],
     "upstream_patches": [
       {
@@ -3141,7 +3159,7 @@
     "url": "https://raw.githubusercontent.com/frenzymath/FormalPantheon/ffbb65c21afc8a36ace67720f1b0df1c63d26bd1/Warning/Waring/Analytic/FourierCoefficientSum.lean",
     "git_blob_sha": "26ed1b056e1ebcbd6896df2701e1920f6e4c0e5b",
     "sha256": "a9fae919cd63edbcca2b607cb089feb3b0a85c089782059483dd85a169205575",
-    "port_sha256": "a9fae919cd63edbcca2b607cb089feb3b0a85c089782059483dd85a169205575",
+    "port_sha256": "e6c11566b1c5bdd06db1be997026d3e374a261dba08db80d8ea5431af5b1adeb",
     "edits": [],
     "upstream_patches": [
       {

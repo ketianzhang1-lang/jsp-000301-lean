@@ -28,7 +28,7 @@ bash scripts/verify.sh
 bash scripts/verify_nanoda.sh
 ```
 
-The bootstrap script restores 442 upstream modules from immutable, checksum-checked
+The bootstrap script restores 443 upstream modules from immutable, checksum-checked
 sources and applies their existing documented compatibility patches. The verification
 script compiles that closure and our files, audits all 40 listed theorem endpoints,
 and replays the Lean kernel. The separate script exports the selected endpoints and

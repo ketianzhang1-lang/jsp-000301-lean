@@ -18,7 +18,7 @@ notices. Its Erdős 587 root credits Codex and GPT-5.6 Sol for the formalization
 the Formal Conjectures authors for the statement, and Nguyen–Vu for the mathematics.
 We retain those credits and the individual contributor notices in all restored files.
 
-The exact import closure contains 241 files from that repository, 187 from
+The exact import closure contains 241 source files plus one patch-supplied source file from that repository, 187 from
 [CBirkbeck/AINTLIB](https://github.com/CBirkbeck/AINTLIB/tree/1c1c74664e40071c2c2165bc55ca2616a67ccd6b)
 at `1c1c74664e40071c2c2165bc55ca2616a67ccd6b`, and 14 from
 [frenzymath/FormalPantheon](https://github.com/frenzymath/FormalPantheon/tree/ffbb65c21afc8a36ace67720f1b0df1c63d26bd1/Warning)
@@ -29,9 +29,13 @@ for the per-file contributor notices.
 
 `UPSTREAM.json` records the repository, immutable URL, Git blob SHA, original
 SHA-256, and restored SHA-256 for every file. `UPSTREAM_PATCHES.json` records the
-three existing upstream Lean/Mathlib 4.33 compatibility patches. We apply only
-the sections for files in this closure: one API patch, 95 HasseWeil linter patches,
-and six Waring linter patches. These are **upstream patches**, not our new proof work.
+three existing upstream Lean/Mathlib 4.33 patches. Their names include “linter”,
+but the HasseWeil patch also supplies a missing module and substantive proof
+repairs. We apply every relevant section, including those repairs; the raw
+AINTLIB checkout alone is not the verified dependency. These are **upstream
+proof repairs and patches**, not our new proof work. Exact original and final
+bytes are identified in the manifest. The reconstruction is tested from an
+empty directory before the complete compilation run.
 
 ## Our work
 
