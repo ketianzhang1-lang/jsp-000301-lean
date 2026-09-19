@@ -1,0 +1,51 @@
+name: JSP-000301 strict target closure verification
+on:
+  push:
+    branches: [jsp-000301-strict-verification-20260919]
+    paths: [Audit301Strict.lean, scripts/verify_301_strict.py, scripts/verify_301_nanoda.sh, .github/workflows/jsp-000301-strict.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install exact toolchain and fetch locked dependency cache
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.elan/bin:$PATH"
+          elan toolchain install "$(cat lean-toolchain)"
+          test -s lake-manifest.json
+          lake exe cache get
+          git diff --exit-code -- lake-manifest.json
+      - name: Build, kernel replay, eight strict axiom audits and negative control
+        run: python3 scripts/verify_301_strict.py
+      - name: Strict independent NaNoda check and statement printing
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/strict-301
+          bash scripts/verify_301_nanoda.sh 2>&1 | tee evidence/strict-301/nanoda-build.log
+      - name: Archive tested source and logs
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/strict-301
+          git rev-parse HEAD > evidence/strict-301/VERIFICATION_COMMIT
+          git archive HEAD JSP000301.lean lakefile.lean lake-manifest.json lean-toolchain Audit301Strict.lean scripts/verify_301_strict.py scripts/verify_301_nanoda.sh .github/workflows/jsp-000301-strict.yml | gzip -n > evidence/strict-301/source.tar.gz
+          sha256sum evidence/strict-301/source.tar.gz > evidence/strict-301/ARCHIVE_SHA256
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: jsp-000301-strict-evidence
+          path: evidence/strict-301
+          if-no-files-found: error
