@@ -55,6 +55,7 @@ if sys.argv[1]=='prepare':
     if (ROOT/'scripts/bootstrap.py').exists():
         run(['python3','scripts/bootstrap.py'],'bootstrap')
     run([LAKE,'exe','cache','get','Mathlib'],'mathlib-cache')
+    run([LAKE,'build','Mathlib'],'mathlib-root-build')
     pins()
     sys.exit(0)
 
