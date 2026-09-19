@@ -1,0 +1,321 @@
+{
+  "inspected_utc_date": "2026-09-19",
+  "sources": [
+    {
+      "id": "465_main_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/6a793b157c1afdf29f3e6bbbf3cf514535d1dfca/projects/jsp-000465/JSP000465.lean",
+      "bytes": 4726,
+      "sha256": "60aa8dbbddc81f84487a84824961a13e0ccaf9ec0ba3031b5abffc9f4245f550",
+      "git_blob_sha1": "e2fc0c00bdda9fa48e4b669b61670c14b5b97c00"
+    },
+    {
+      "id": "465_main_later",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/cafcabe4fbd5c0f5b6c34d7162f35d4881c58925/projects/jsp-000465/JSP000465.lean",
+      "bytes": 4726,
+      "sha256": "60aa8dbbddc81f84487a84824961a13e0ccaf9ec0ba3031b5abffc9f4245f550",
+      "git_blob_sha1": "e2fc0c00bdda9fa48e4b669b61670c14b5b97c00"
+    },
+    {
+      "id": "465_lake-manifest.json_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/6a793b157c1afdf29f3e6bbbf3cf514535d1dfca/projects/jsp-000465/lake-manifest.json",
+      "bytes": 3506,
+      "sha256": "3011852f9ff465bef33895386e3ed9ae825ab1ea6f819d9f2aed29786fdc658a",
+      "git_blob_sha1": "6b512758b718499e290c85b60de3d25960b8f7ca"
+    },
+    {
+      "id": "465_lake-manifest.json_later",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/cafcabe4fbd5c0f5b6c34d7162f35d4881c58925/projects/jsp-000465/lake-manifest.json",
+      "bytes": 3506,
+      "sha256": "3011852f9ff465bef33895386e3ed9ae825ab1ea6f819d9f2aed29786fdc658a",
+      "git_blob_sha1": "6b512758b718499e290c85b60de3d25960b8f7ca"
+    },
+    {
+      "id": "897_main_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/914c6fa28200985d6409b5b34588b9f5c4a87d00/projects/jsp-000897/JSP000897.lean",
+      "bytes": 2706,
+      "sha256": "2d97e3772478b411b730fb5f96a3e3971b978ad9890101d2d7ff9141b3eed1c8",
+      "git_blob_sha1": "dfd9966001bb2585bd938c60701fbafdd233ad33"
+    },
+    {
+      "id": "897_main_later",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/9270ec89da6567daaa899d98bc95546073326c7d/projects/jsp-000897/JSP000897.lean",
+      "bytes": 2706,
+      "sha256": "2d97e3772478b411b730fb5f96a3e3971b978ad9890101d2d7ff9141b3eed1c8",
+      "git_blob_sha1": "dfd9966001bb2585bd938c60701fbafdd233ad33"
+    },
+    {
+      "id": "897_lake-manifest.json_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/914c6fa28200985d6409b5b34588b9f5c4a87d00/projects/jsp-000897/lake-manifest.json",
+      "bytes": 3506,
+      "sha256": "82a685aa63c7f3b823c3f7b6a0405bb268e65484393e890614df2240ab003920",
+      "git_blob_sha1": "8e34aeddfb10226d508bf9f0112d47a9ea139c28"
+    },
+    {
+      "id": "897_lake-manifest.json_later",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/9270ec89da6567daaa899d98bc95546073326c7d/projects/jsp-000897/lake-manifest.json",
+      "bytes": 3506,
+      "sha256": "82a685aa63c7f3b823c3f7b6a0405bb268e65484393e890614df2240ab003920",
+      "git_blob_sha1": "8e34aeddfb10226d508bf9f0112d47a9ea139c28"
+    },
+    {
+      "id": "746_main_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/4dfb40abe0cd1e538bbfccb1cc50f4829fb7383a/projects/jsp-000746-sharp/JSP000746.lean",
+      "bytes": 2048,
+      "sha256": "a74b15701a452435fd87b7a08a9f5341222746601c4122b6c2955b5adb5e95c2",
+      "git_blob_sha1": "9a324debac30d91d916b384cc7f73b9275ff7176"
+    },
+    {
+      "id": "746_main_later",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/d38c1169bbea335d1683589ba2bda3cf78c1b932/projects/jsp-000746-sharp/JSP000746.lean",
+      "bytes": 2048,
+      "sha256": "a74b15701a452435fd87b7a08a9f5341222746601c4122b6c2955b5adb5e95c2",
+      "git_blob_sha1": "9a324debac30d91d916b384cc7f73b9275ff7176"
+    },
+    {
+      "id": "746_lake-manifest.json_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/4dfb40abe0cd1e538bbfccb1cc50f4829fb7383a/projects/jsp-000746-sharp/lake-manifest.json",
+      "bytes": 3506,
+      "sha256": "74c3199126a1a4b8cf6a4c52e8be1cf0080a2a0421eb479bb663fab1100f0d60",
+      "git_blob_sha1": "5c8119e86f7a0a282f1d9dbe05a08e3df1d77ecc"
+    },
+    {
+      "id": "746_lake-manifest.json_later",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/d38c1169bbea335d1683589ba2bda3cf78c1b932/projects/jsp-000746-sharp/lake-manifest.json",
+      "bytes": 3506,
+      "sha256": "74c3199126a1a4b8cf6a4c52e8be1cf0080a2a0421eb479bb663fab1100f0d60",
+      "git_blob_sha1": "5c8119e86f7a0a282f1d9dbe05a08e3df1d77ecc"
+    },
+    {
+      "id": "746_UPSTREAM.json_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/4dfb40abe0cd1e538bbfccb1cc50f4829fb7383a/projects/jsp-000746-sharp/UPSTREAM.json",
+      "bytes": 1102,
+      "sha256": "430b332dca6b68eddb7c2cc110ddd8404a7df2cd7361bdad7da72bffdac07b1b",
+      "git_blob_sha1": "5efe47028c451d8a8befbf136309b4ed8459fa52"
+    },
+    {
+      "id": "746_UPSTREAM.json_later",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/d38c1169bbea335d1683589ba2bda3cf78c1b932/projects/jsp-000746-sharp/UPSTREAM.json",
+      "bytes": 1102,
+      "sha256": "430b332dca6b68eddb7c2cc110ddd8404a7df2cd7361bdad7da72bffdac07b1b",
+      "git_blob_sha1": "5efe47028c451d8a8befbf136309b4ed8459fa52"
+    },
+    {
+      "id": "1021_main_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/7642a7f5eb190da6319b6ae7f11c829d7737e2dd/projects/jsp-001021/JSP001021.lean",
+      "bytes": 3110,
+      "sha256": "80ec1972b4ddcad8f3c2a7247a9aa21a64183430b9686b34fc310804778fe6d5",
+      "git_blob_sha1": "ba3a286805a8eaf4acfe3695f524e0f874d12c5a"
+    },
+    {
+      "id": "1021_main_later",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/3ebcc72d98b50f59ff456feb5963f85815b2d09c/projects/jsp-001021/JSP001021.lean",
+      "bytes": 3110,
+      "sha256": "80ec1972b4ddcad8f3c2a7247a9aa21a64183430b9686b34fc310804778fe6d5",
+      "git_blob_sha1": "ba3a286805a8eaf4acfe3695f524e0f874d12c5a"
+    },
+    {
+      "id": "1021_lake-manifest.json_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/7642a7f5eb190da6319b6ae7f11c829d7737e2dd/projects/jsp-001021/lake-manifest.json",
+      "bytes": 3506,
+      "sha256": "74c3199126a1a4b8cf6a4c52e8be1cf0080a2a0421eb479bb663fab1100f0d60",
+      "git_blob_sha1": "5c8119e86f7a0a282f1d9dbe05a08e3df1d77ecc"
+    },
+    {
+      "id": "1021_lake-manifest.json_later",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/3ebcc72d98b50f59ff456feb5963f85815b2d09c/projects/jsp-001021/lake-manifest.json",
+      "bytes": 3506,
+      "sha256": "74c3199126a1a4b8cf6a4c52e8be1cf0080a2a0421eb479bb663fab1100f0d60",
+      "git_blob_sha1": "5c8119e86f7a0a282f1d9dbe05a08e3df1d77ecc"
+    },
+    {
+      "id": "1021_UPSTREAM.json_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/7642a7f5eb190da6319b6ae7f11c829d7737e2dd/projects/jsp-001021/UPSTREAM.json",
+      "bytes": 763,
+      "sha256": "3fcaf4bc1d8fe22c8b9f8f08b17a7569e6d5369e08e3cd1217efde5913745c77",
+      "git_blob_sha1": "3f8cf19228828b49ae68f910e83b498d1da7eb0f"
+    },
+    {
+      "id": "1021_UPSTREAM.json_later",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/3ebcc72d98b50f59ff456feb5963f85815b2d09c/projects/jsp-001021/UPSTREAM.json",
+      "bytes": 763,
+      "sha256": "3fcaf4bc1d8fe22c8b9f8f08b17a7569e6d5369e08e3cd1217efde5913745c77",
+      "git_blob_sha1": "3f8cf19228828b49ae68f910e83b498d1da7eb0f"
+    },
+    {
+      "id": "465_Foundations_upstream",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Foundations.lean",
+      "bytes": 27478,
+      "sha256": "070993af86c49059521f2a4500353eaea5173b011f7f8b1c234ec8b8816bfad5",
+      "git_blob_sha1": "d4bafb11cc8a5783098d27fd7f16eae08c8c10dc"
+    },
+    {
+      "id": "465_Foundations_ported",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/6a793b157c1afdf29f3e6bbbf3cf514535d1dfca/projects/jsp-000465/ErdosProblems/Erdos180/Foundations.lean",
+      "bytes": 27483,
+      "sha256": "72d3c2c5561cfed6bad7cbf29e31a4fbbc0442b76d79203f81d49c7537efccbb",
+      "git_blob_sha1": "38c0af604b821bd43e6f33ab9e80535505b867c5"
+    },
+    {
+      "id": "465_Geometry_upstream",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Geometry.lean",
+      "bytes": 65772,
+      "sha256": "2e44104c297a0330f2429a6be3808ad78cc4150c7f4f8195a971adfa4abea086",
+      "git_blob_sha1": "f33386a06029097b5b63caf351237bdf534acc56"
+    },
+    {
+      "id": "465_Geometry_ported",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/6a793b157c1afdf29f3e6bbbf3cf514535d1dfca/projects/jsp-000465/ErdosProblems/Erdos180/Geometry.lean",
+      "bytes": 65772,
+      "sha256": "2e44104c297a0330f2429a6be3808ad78cc4150c7f4f8195a971adfa4abea086",
+      "git_blob_sha1": "f33386a06029097b5b63caf351237bdf534acc56"
+    },
+    {
+      "id": "465_Subgraphs_upstream",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Subgraphs.lean",
+      "bytes": 58021,
+      "sha256": "f337768bb0dd4607f1d8ede15984571ec99821c1318d5571a25845b0dfc3a300",
+      "git_blob_sha1": "2625d4a61dc352d11a56120d2340dfa7a370a400"
+    },
+    {
+      "id": "465_Subgraphs_ported",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/6a793b157c1afdf29f3e6bbbf3cf514535d1dfca/projects/jsp-000465/ErdosProblems/Erdos180/Subgraphs.lean",
+      "bytes": 58021,
+      "sha256": "f337768bb0dd4607f1d8ede15984571ec99821c1318d5571a25845b0dfc3a300",
+      "git_blob_sha1": "2625d4a61dc352d11a56120d2340dfa7a370a400"
+    },
+    {
+      "id": "465_Counting_upstream",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Counting.lean",
+      "bytes": 86489,
+      "sha256": "e477accd07bf3984a8f4b67173d6189f45f5738185fdb42d5bfee2ea965444f9",
+      "git_blob_sha1": "5e0857feb3baa6da8ff155f6b0c6a63238e2e109"
+    },
+    {
+      "id": "465_Counting_ported",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/6a793b157c1afdf29f3e6bbbf3cf514535d1dfca/projects/jsp-000465/ErdosProblems/Erdos180/Counting.lean",
+      "bytes": 86477,
+      "sha256": "49b1b27ba19a64aa561af80118ae17461c623afb6e4d880f251769621a8ec4a6",
+      "git_blob_sha1": "a143aa412a4e64bd0e098c83844ab664ac598735"
+    },
+    {
+      "id": "465_Coordinates_upstream",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Coordinates.lean",
+      "bytes": 63018,
+      "sha256": "fc483689a0735b88c18a73adcda7094bb52ecec2e8f4d26aca8e304f0381a359",
+      "git_blob_sha1": "9727269181770fe8e5dcc8e54cde35be3a4ead9d"
+    },
+    {
+      "id": "465_Coordinates_ported",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/6a793b157c1afdf29f3e6bbbf3cf514535d1dfca/projects/jsp-000465/ErdosProblems/Erdos180/Coordinates.lean",
+      "bytes": 63018,
+      "sha256": "fc483689a0735b88c18a73adcda7094bb52ecec2e8f4d26aca8e304f0381a359",
+      "git_blob_sha1": "9727269181770fe8e5dcc8e54cde35be3a4ead9d"
+    },
+    {
+      "id": "465_Counterexample_upstream",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Counterexample.lean",
+      "bytes": 33461,
+      "sha256": "7d90d312ce26b5fde73c3b24cbc495cc6f74b7a2876b083786bb8456540dbafc",
+      "git_blob_sha1": "08a00a77f66792921a268b3ed014a30b204119d2"
+    },
+    {
+      "id": "465_Counterexample_ported",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/6a793b157c1afdf29f3e6bbbf3cf514535d1dfca/projects/jsp-000465/ErdosProblems/Erdos180/Counterexample.lean",
+      "bytes": 33461,
+      "sha256": "7d90d312ce26b5fde73c3b24cbc495cc6f74b7a2876b083786bb8456540dbafc",
+      "git_blob_sha1": "08a00a77f66792921a268b3ed014a30b204119d2"
+    },
+    {
+      "id": "465_Quantitative_upstream",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Quantitative.lean",
+      "bytes": 17208,
+      "sha256": "dab124356489c351ebe49e01fb13303a9e0fa471406c96a37e634c193dfda38e",
+      "git_blob_sha1": "da0a5ddde9c68710a79dd3489d6916cffe1f75a6"
+    },
+    {
+      "id": "465_Quantitative_ported",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/6a793b157c1afdf29f3e6bbbf3cf514535d1dfca/projects/jsp-000465/ErdosProblems/Erdos180/Quantitative.lean",
+      "bytes": 17208,
+      "sha256": "dab124356489c351ebe49e01fb13303a9e0fa471406c96a37e634c193dfda38e",
+      "git_blob_sha1": "da0a5ddde9c68710a79dd3489d6916cffe1f75a6"
+    },
+    {
+      "id": "465_patch",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/6a793b157c1afdf29f3e6bbbf3cf514535d1dfca/projects/jsp-000465/PORT.patch",
+      "bytes": 1137,
+      "sha256": "631e06248c959265e7d9d908a51f11e5f14697e9e5620778528b7e6a589e29c4",
+      "git_blob_sha1": "483e3986f1f132a5f5a37d0358f65abf01139df2"
+    },
+    {
+      "id": "465_upstream_hashes",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/6a793b157c1afdf29f3e6bbbf3cf514535d1dfca/projects/jsp-000465/UPSTREAM_SHA256SUMS",
+      "bytes": 738,
+      "sha256": "c902f92b48893bb39eb5eb24be1372b6bc7d170ad0dadc1fee01de181adc8314",
+      "git_blob_sha1": "bca342b81131b0d013fc3e3fb696d449c35db391"
+    },
+    {
+      "id": "465_main_historical",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/awards/90a8714f2f036112f39f0c7bb136c3b8751553b4/docs/submissions/jsp-000465-kz/proof/JSP000465.lean",
+      "bytes": 4726,
+      "sha256": "60aa8dbbddc81f84487a84824961a13e0ccaf9ec0ba3031b5abffc9f4245f550",
+      "git_blob_sha1": "e2fc0c00bdda9fa48e4b669b61670c14b5b97c00"
+    },
+    {
+      "id": "897_original",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1079.lean",
+      "bytes": 18306,
+      "sha256": "09efec8509c86a61575eed184fd68d76d09a4f74ca94b7338478cb5657f9cae3",
+      "git_blob_sha1": "917d69abbd4bc41b2143e8ef7e030948ce912837"
+    },
+    {
+      "id": "897_retained",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/914c6fa28200985d6409b5b34588b9f5c4a87d00/projects/jsp-000897/upstream/Erdos1079.lean",
+      "bytes": 18306,
+      "sha256": "09efec8509c86a61575eed184fd68d76d09a4f74ca94b7338478cb5657f9cae3",
+      "git_blob_sha1": "917d69abbd4bc41b2143e8ef7e030948ce912837"
+    },
+    {
+      "id": "897_ported",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/914c6fa28200985d6409b5b34588b9f5c4a87d00/projects/jsp-000897/Erdos1079.lean",
+      "bytes": 18235,
+      "sha256": "58a0fa37a3e16b8156d9bac0af46d22d17b0f89c4f6a0869f39ed761b4bfccfc",
+      "git_blob_sha1": "0fb9c3f1ceefc0cb3273988e7f57c1c92e981c81"
+    },
+    {
+      "id": "897_main_historical",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/awards/f8c1861271c900fdb8015ffb1abb06ed1562b068/docs/submissions/jsp-000897-kz/JSP000897.lean",
+      "bytes": 2706,
+      "sha256": "2d97e3772478b411b730fb5f96a3e3971b978ad9890101d2d7ff9141b3eed1c8",
+      "git_blob_sha1": "dfd9966001bb2585bd938c60701fbafdd233ad33"
+    },
+    {
+      "id": "746_supplement_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/4dfb40abe0cd1e538bbfccb1cc50f4829fb7383a/projects/jsp-000746-sharp/JSP000746Sharp.lean",
+      "bytes": 4055,
+      "sha256": "8f3ffdbdc222b94abe89e74413833f011880651136767e8b8cc3fe90190803b2",
+      "git_blob_sha1": "3f22cb4e89cbdce2a4290a892aad90a57f855622"
+    },
+    {
+      "id": "746_supplement_later",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/d38c1169bbea335d1683589ba2bda3cf78c1b932/projects/jsp-000746-sharp/JSP000746Sharp.lean",
+      "bytes": 4055,
+      "sha256": "8f3ffdbdc222b94abe89e74413833f011880651136767e8b8cc3fe90190803b2",
+      "git_blob_sha1": "3f22cb4e89cbdce2a4290a892aad90a57f855622"
+    },
+    {
+      "id": "1021_supplement_selected",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/7642a7f5eb190da6319b6ae7f11c829d7737e2dd/projects/jsp-001021/FiniteChecks.lean",
+      "bytes": 5191,
+      "sha256": "ab692b3a986b595c63af2e0530f25ce1351254af5e8769854b71bf6aaaddb762",
+      "git_blob_sha1": "e6c0be4c999a084d750e8cacc98fccda14e2b2cb"
+    },
+    {
+      "id": "1021_supplement_later",
+      "url": "https://raw.githubusercontent.com/ketianzhang1-lang/jsp-000301-lean/3ebcc72d98b50f59ff456feb5963f85815b2d09c/projects/jsp-001021/FiniteChecks.lean",
+      "bytes": 5191,
+      "sha256": "ab692b3a986b595c63af2e0530f25ce1351254af5e8769854b71bf6aaaddb762",
+      "git_blob_sha1": "e6c0be4c999a084d750e8cacc98fccda14e2b2cb"
+    }
+  ],
+  "limits": "Source provenance checks only; not a new Lean execution, global priority proof, identity verification or organizer decision."
+}
