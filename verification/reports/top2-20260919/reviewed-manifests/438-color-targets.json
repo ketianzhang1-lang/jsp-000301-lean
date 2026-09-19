@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-000438",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "0175b2a7a50f7687ece92f61bbe0e3a2f377913a",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000438",
+      "source": "https://github.com/google-deepmind/formal-conjectures/blob/40e7c98697de6f66b8cbdbf641749ab39ed9c152/FormalConjectures/ErdosProblems/547.lean",
+      "requirements": [
+        {
+          "id": "base",
+          "description": "Full two-color target is retained for all orders n>=2.",
+          "targets": [
+            "t0",
+            "t1",
+            "t2",
+            "t3",
+            "t4"
+          ],
+          "coverage": "full",
+          "evidence": "report.md statement review; original executed manifest and per-target logs in evidence/438-color/remote/audit/; independent checker output in evidence/438-color/remote/nanoda-statements.txt"
+        },
+        {
+          "id": "cover",
+          "description": "A finite family of color graphs covers all host edges; counting uses exact finite cardinalities.",
+          "targets": [
+            "t5",
+            "t6"
+          ],
+          "coverage": "full",
+          "evidence": "report.md statement review; original executed manifest and per-target logs in evidence/438-color/remote/audit/; independent checker output in evidence/438-color/remote/nanoda-statements.txt"
+        },
+        {
+          "id": "embedding",
+          "description": "For every finite nonempty color family and prescribed trees of orders >=2, an injective monochromatic embedding exists at the stated sum bound.",
+          "targets": [
+            "t7",
+            "b0"
+          ],
+          "coverage": "full",
+          "evidence": "report.md statement review; original executed manifest and per-target logs in evidence/438-color/remote/audit/; independent checker output in evidence/438-color/remote/nanoda-statements.txt"
+        },
+        {
+          "id": "ramsey",
+          "description": "The multicolor natural infimum has the explicit coloring witness, with nonempty colors and all tree orders covered.",
+          "targets": [
+            "t8"
+          ],
+          "coverage": "full",
+          "evidence": "report.md statement review; original executed manifest and per-target logs in evidence/438-color/remote/audit/; independent checker output in evidence/438-color/remote/nanoda-statements.txt"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "t0",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "Upstream548",
+      "source": "Upstream548.lean",
+      "declaration": "Erdos548.tree_free_edge_bound"
+    },
+    {
+      "id": "t1",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "JSP000438",
+      "source": "JSP000438.lean",
+      "declaration": "JSP000438.trees_monochromatic"
+    },
+    {
+      "id": "t2",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "JSP000438",
+      "source": "JSP000438.lean",
+      "declaration": "JSP000438.tree_monochromatic"
+    },
+    {
+      "id": "t3",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "JSP000438",
+      "source": "JSP000438.lean",
+      "declaration": "JSP000438.graphRamsey_trees"
+    },
+    {
+      "id": "t4",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "JSP000438",
+      "source": "JSP000438.lean",
+      "declaration": "Erdos547.erdos_547"
+    },
+    {
+      "id": "t5",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "Multicolor",
+      "source": "Multicolor.lean",
+      "declaration": "JSP000438.sum_edges_of_cover"
+    },
+    {
+      "id": "t6",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "Multicolor",
+      "source": "Multicolor.lean",
+      "declaration": "JSP000438.multicolor_trees_monochromatic"
+    },
+    {
+      "id": "t7",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "Multicolor",
+      "source": "Multicolor.lean",
+      "declaration": "JSP000438.multicolor_tree_embedding"
+    },
+    {
+      "id": "t8",
+      "problem": "JSP-000438",
+      "role": "theorem",
+      "module": "Multicolor",
+      "source": "Multicolor.lean",
+      "declaration": "JSP000438.multicolorGraphRamsey_trees"
+    },
+    {
+      "id": "b0",
+      "problem": "JSP-000438",
+      "role": "bridge",
+      "module": "JSP000438.VerificationBridge",
+      "source": "JSP000438/VerificationBridge.lean",
+      "declaration": "Verify438Color.intended"
+    }
+  ]
+}

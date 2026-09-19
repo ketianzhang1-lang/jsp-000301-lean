@@ -1,0 +1,106 @@
+[
+  {
+    "key": "391",
+    "commit": "14e5155e68554de4e053e4aacd77095a93e96dd4",
+    "branch": "jsp-000391-digit-recurrence",
+    "tip": "5d2b0e94d01867a96de34ca96c335d2602b27d4e",
+    "ancestor_exit": 0,
+    "preflight": {
+      "ready_for_target_checks": true,
+      "issues": [],
+      "head": "14e5155e68554de4e053e4aacd77095a93e96dd4",
+      "git_status": "?? projects/jsp-000391/JSP000391/VerificationBridge.lean",
+      "toolchain_file": "leanprover/lean4:v4.34.0",
+      "file_sha256": {
+        "JSP000391.lean": "45386884f2986d13fbfd9561e16bd5337e2f7d6ed63328cfd9eab8c4b34cce01",
+        "JSP000391/VerificationBridge.lean": "d65253d27c898592e46d1885ed54f2cb0f637a423a225e0290a60b268aac3717",
+        "JSP000391Main.lean": "caadfdd332960d70d9d7fe9c4da55fd82fd24b529518203c4c510e1965e05793",
+        "lake-manifest.json": "b632df90749e1af39c67cd918f6a229d5abd94a73bd85e751af6de8e75fefcf0",
+        "lakefile.lean": "3576bdbda506613162abdbc14b966d76fa6266f0706cc23f8bcb5e7863209c60",
+        "lakefile.toml": null,
+        "lean-toolchain": "8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632"
+      },
+      "manual_preconditions": [
+        "isolation and resource limits established",
+        "clean source build and trusted cache provenance recorded",
+        "actual dependency SHAs match fixed evidence",
+        "tool binaries are trusted and match the pinned toolchain",
+        "all untracked inputs and module/source mappings reviewed"
+      ],
+      "checker_compatibility": "not_probed; inspect pinned checker separately",
+      "manifest_sha256": "6f9347f65d1b4489fed6dc5d7254246fa1ff3c2789339288f80532d5969c0922",
+      "script_sha256": "72a3901eea331853dbd65a843cd0b7f7b5b0255240ce1006c2cab1a51ffbea95",
+      "exit_code": 0
+    }
+  },
+  {
+    "key": "438-main",
+    "commit": "5f94d026ec88696bb5047506c433ad401e5f02ef",
+    "branch": "jsp-000438-sharp-stars-kz",
+    "tip": "95f343b916e1bf7ad5b62525e49e148e4c531da5",
+    "ancestor_exit": 0,
+    "preflight": {
+      "ready_for_target_checks": true,
+      "issues": [],
+      "head": "5f94d026ec88696bb5047506c433ad401e5f02ef",
+      "git_status": "?? projects/jsp-000438/JSP000438/VerificationBridge.lean",
+      "toolchain_file": "leanprover/lean4:v4.34.0",
+      "file_sha256": {
+        "JSP000438.lean": "70550b04230e8eee2d4984e1efb8d99e31f613925cf7b77e119e80642b2424fd",
+        "JSP000438/VerificationBridge.lean": "bd85bb376f00c24f749fa025bf505cd174fae35418c68f6b0f30b99873227540",
+        "StarSharpness.lean": "9e806333996d5b700cdfad8e6c06d2cab483e035a369438cf2c2f294a888c361",
+        "Upstream548.lean": "460409e526f8a52c96fa0163073c9b6d9cbeb36722823a800cb172457e4b6602",
+        "lake-manifest.json": "e4dc13e0e55ad406376abf189dc290c76fee35aac0164f9706728fdae22378d8",
+        "lakefile.lean": "fc579af05da15fb5db3afcf27f2094ccf628b1f36b233591c5d0dca6622a01c4",
+        "lakefile.toml": null,
+        "lean-toolchain": "8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632"
+      },
+      "manual_preconditions": [
+        "isolation and resource limits established",
+        "clean source build and trusted cache provenance recorded",
+        "actual dependency SHAs match fixed evidence",
+        "tool binaries are trusted and match the pinned toolchain",
+        "all untracked inputs and module/source mappings reviewed"
+      ],
+      "checker_compatibility": "not_probed; inspect pinned checker separately",
+      "manifest_sha256": "3174840dd10ff5e91a9d6f2db5f52b5f49af59e086e3a66da7e36d46f52a0cce",
+      "script_sha256": "72a3901eea331853dbd65a843cd0b7f7b5b0255240ce1006c2cab1a51ffbea95",
+      "exit_code": 0
+    }
+  },
+  {
+    "key": "438-color",
+    "commit": "0175b2a7a50f7687ece92f61bbe0e3a2f377913a",
+    "branch": "jsp-000438-multicolor",
+    "tip": "ccdebdef7d10314ecad4184176af499b331661e6",
+    "ancestor_exit": 0,
+    "preflight": {
+      "ready_for_target_checks": true,
+      "issues": [],
+      "head": "0175b2a7a50f7687ece92f61bbe0e3a2f377913a",
+      "git_status": "?? projects/jsp-000438/JSP000438/VerificationBridge.lean",
+      "toolchain_file": "leanprover/lean4:v4.34.0",
+      "file_sha256": {
+        "JSP000438.lean": "70550b04230e8eee2d4984e1efb8d99e31f613925cf7b77e119e80642b2424fd",
+        "JSP000438/VerificationBridge.lean": "2ef2006c194e3b7ecc7884387c0beaaec4c9c83d63ca64a1d95979ec392efc6d",
+        "Multicolor.lean": "47d94c31ae8f51477ca370febb1d9896cbe59d91e4f6d99137bc1edda4506fd2",
+        "Upstream548.lean": "460409e526f8a52c96fa0163073c9b6d9cbeb36722823a800cb172457e4b6602",
+        "lake-manifest.json": "e4dc13e0e55ad406376abf189dc290c76fee35aac0164f9706728fdae22378d8",
+        "lakefile.lean": "d106d4d51c27220c81d7630a4e3666b6db8473938272c735c0bf25e6983a0b13",
+        "lakefile.toml": null,
+        "lean-toolchain": "8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632"
+      },
+      "manual_preconditions": [
+        "isolation and resource limits established",
+        "clean source build and trusted cache provenance recorded",
+        "actual dependency SHAs match fixed evidence",
+        "tool binaries are trusted and match the pinned toolchain",
+        "all untracked inputs and module/source mappings reviewed"
+      ],
+      "checker_compatibility": "not_probed; inspect pinned checker separately",
+      "manifest_sha256": "b72342f21a43763cc5e229d3fa71d1ffe6d5b5b09c10b14bc927e19303369573",
+      "script_sha256": "72a3901eea331853dbd65a843cd0b7f7b5b0255240ce1006c2cab1a51ffbea95",
+      "exit_code": 0
+    }
+  }
+]
