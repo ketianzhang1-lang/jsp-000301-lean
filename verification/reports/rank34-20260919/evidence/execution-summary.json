@@ -1,0 +1,210 @@
+{
+  "925": {
+    "proof_commit": "7b545f0e021b06d434654b17881c11819f3ff1b7",
+    "mechanical_status": "standard_axioms_only",
+    "target_count": 9,
+    "manifest_sha256": "83473de0022333dbab7bf683e038fba66877096a087d2a448419a04f599ce396",
+    "official_script_sha256": "5db45dddcb4d588bc27e7c7161fbca5cedaa3e73e1c40843d21f5a214323cd07",
+    "image_id": "sha256:7b8f7990d742432277663a23b84c98ba3a9bff7068084553f286f0bd9b1d0603",
+    "source_inputs_stable": true,
+    "stages": {
+      "clean-build": {
+        "argv": [
+          "lake",
+          "build",
+          "--wfail"
+        ],
+        "cwd": "/work/projects/jsp-000925-strict",
+        "exit_code": 0,
+        "seconds": 57.6643488407135
+      },
+      "historical-verifier": {
+        "argv": [
+          "bash",
+          "scripts/verify.sh"
+        ],
+        "cwd": "/work/projects/jsp-000925-strict",
+        "exit_code": 0,
+        "seconds": 49.0682315826416
+      },
+      "official-preflight": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "preflight",
+          "/out/targets.json",
+          "--out",
+          "/out/preflight"
+        ],
+        "cwd": "/work/projects/jsp-000925-strict",
+        "exit_code": 0,
+        "seconds": 0.06398463249206543
+      },
+      "official-audit": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "run",
+          "/out/targets.json",
+          "--out",
+          "/out/audit",
+          "--lake",
+          "/opt/elan/toolchains/leanprover--lean4---v4.34.0/bin/lake",
+          "--timeout",
+          "1200"
+        ],
+        "cwd": "/work/projects/jsp-000925-strict",
+        "exit_code": 0,
+        "seconds": 174.87250113487244
+      },
+      "bridge-kernel": {
+        "argv": [
+          "lake",
+          "env",
+          "leanchecker",
+          "JSP000925Strict.VerificationBridge"
+        ],
+        "cwd": "/work/projects/jsp-000925-strict",
+        "exit_code": 0,
+        "seconds": 10.737748384475708
+      },
+      "independent-nanoda": {
+        "argv": [
+          "/out/tools/checker/target/release/nanoda_bin",
+          "/out/nanoda-config.json"
+        ],
+        "cwd": "/work/projects/jsp-000925-strict",
+        "exit_code": 0,
+        "seconds": 27.823609113693237
+      },
+      "dependencies": {
+        "argv": [
+          "python3",
+          "-c",
+          "import json,subprocess;from pathlib import Path;ps=json.loads(Path('lake-manifest.json').read_text())['packages'];actual={p['name']:subprocess.check_output(['git','-C','.lake/packages/'+p['name'],'rev-parse','HEAD'],text=True).strip() for p in ps};print(json.dumps(actual,indent=2));assert all(actual[p['name']]==p['rev'] for p in ps)"
+        ],
+        "cwd": "/work/projects/jsp-000925-strict",
+        "exit_code": 0,
+        "seconds": 0.06399679183959961
+      }
+    },
+    "nanoda": "Checked 50929 declarations with no errors",
+    "dependencies": {
+      "mathlib": "5ed2965256430c3649e86755f9576b54eca72435",
+      "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+      "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+    },
+    "branch_tip": "491ddda5bbaab48b4c2f4c5bff6b3b1f29ea1a58",
+    "export_exit": 0
+  },
+  "250": {
+    "proof_commit": "e2f4c737ad4c2c9d7f4dcbfd4214fd2f2c96c876",
+    "mechanical_status": "standard_axioms_only",
+    "target_count": 23,
+    "manifest_sha256": "42d81b84a27fff113daf86416468c7c8506e02e951fe1d89aaf2c91593549ec5",
+    "official_script_sha256": "5db45dddcb4d588bc27e7c7161fbca5cedaa3e73e1c40843d21f5a214323cd07",
+    "image_id": "sha256:0fa4b8624125790203230cd241785554e4c20c01e38cd6fc1f9fc57d5e6cc192",
+    "source_inputs_stable": true,
+    "stages": {
+      "clean-build": {
+        "argv": [
+          "lake",
+          "build",
+          "--wfail"
+        ],
+        "cwd": "/work/projects/jsp-000250",
+        "exit_code": 0,
+        "seconds": 15.035686731338501
+      },
+      "historical-verifier": {
+        "argv": [
+          "bash",
+          "scripts/verify.sh"
+        ],
+        "cwd": "/work/projects/jsp-000250",
+        "exit_code": 0,
+        "seconds": 1508.9906902313232
+      },
+      "official-preflight": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "preflight",
+          "/out/targets.json",
+          "--out",
+          "/out/preflight"
+        ],
+        "cwd": "/work/projects/jsp-000250",
+        "exit_code": 0,
+        "seconds": 0.11429715156555176
+      },
+      "official-audit": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "run",
+          "/out/targets.json",
+          "--out",
+          "/out/audit",
+          "--lake",
+          "/opt/elan/toolchains/leanprover--lean4---v4.34.0/bin/lake",
+          "--timeout",
+          "1200"
+        ],
+        "cwd": "/work/projects/jsp-000250",
+        "exit_code": 0,
+        "seconds": 1165.6268329620361
+      },
+      "bridge-kernel": {
+        "argv": [
+          "lake",
+          "env",
+          "leanchecker",
+          "JSP000250.VerificationBridge"
+        ],
+        "cwd": "/work/projects/jsp-000250",
+        "exit_code": 0,
+        "seconds": 10.891258716583252
+      },
+      "independent-nanoda": {
+        "argv": [
+          "/out/tools/checker/target/release/nanoda_bin",
+          "/out/nanoda-config.json"
+        ],
+        "cwd": "/work/projects/jsp-000250",
+        "exit_code": 0,
+        "seconds": 73.91272068023682
+      },
+      "dependencies": {
+        "argv": [
+          "python3",
+          "-c",
+          "import json,subprocess;from pathlib import Path;ps=json.loads(Path('lake-manifest.json').read_text())['packages'];actual={p['name']:subprocess.check_output(['git','-C','.lake/packages/'+p['name'],'rev-parse','HEAD'],text=True).strip() for p in ps};print(json.dumps(actual,indent=2));assert all(actual[p['name']]==p['rev'] for p in ps)"
+        ],
+        "cwd": "/work/projects/jsp-000250",
+        "exit_code": 0,
+        "seconds": 0.06410527229309082
+      }
+    },
+    "nanoda": "Checked 75855 declarations with no errors",
+    "dependencies": {
+      "mathlib": "5ed2965256430c3649e86755f9576b54eca72435",
+      "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+      "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+    },
+    "branch_tip": "78111be812678635a30867e8122e818e8396c1d2",
+    "export_exit": 0
+  }
+}

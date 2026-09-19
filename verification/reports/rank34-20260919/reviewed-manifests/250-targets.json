@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-000250",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "e2f4c737ad4c2c9d7f4dcbfd4214fd2f2c96c876",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000250",
+      "source": "https://arxiv.org/html/2404.07113v1#S1.Thmtheorem6",
+      "requirements": [
+        {
+          "id": "representation",
+          "description": "Distinct positive denominators with least element t, cutoff N and exact reciprocal sum one; exact finite-set/increasing-sequence correspondence.",
+          "targets": [
+            "t11",
+            "t12",
+            "b0"
+          ],
+          "coverage": "full",
+          "evidence": "report.md statement review; original executed manifest and per-target logs in evidence/250/remote/audit/; independent checker output in evidence/250/remote/nanoda-statements.txt"
+        },
+        {
+          "id": "least-exception",
+          "description": "Positive nonrepresentable least denominator exists and all smaller positive denominators are representable; no artificial infimum default including N=0.",
+          "targets": [
+            "t3",
+            "t4",
+            "t5",
+            "t8",
+            "t13",
+            "b1"
+          ],
+          "coverage": "full",
+          "evidence": "report.md statement review; original executed manifest and per-target logs in evidence/250/remote/audit/; independent checker output in evidence/250/remote/nanoda-statements.txt"
+        },
+        {
+          "id": "upper",
+          "description": "Unconditional eventual upper estimate 128*N/log N from the original prime-obstruction proof.",
+          "targets": [
+            "t0",
+            "t1",
+            "t2",
+            "t6",
+            "t7",
+            "t9",
+            "t10",
+            "t18",
+            "b1"
+          ],
+          "coverage": "full",
+          "evidence": "report.md statement review; original executed manifest and per-target logs in evidence/250/remote/audit/; independent checker output in evidence/250/remote/nanoda-statements.txt"
+        },
+        {
+          "id": "lower",
+          "description": "Unconditional eventual lower estimate with positive explicit constant and triple-log exponent 20, plus representation witnesses including denominators 1 and 2.",
+          "targets": [
+            "t14",
+            "t15",
+            "t16",
+            "t17",
+            "b1"
+          ],
+          "coverage": "full",
+          "evidence": "report.md statement review; original executed manifest and per-target logs in evidence/250/remote/audit/; independent checker output in evidence/250/remote/nanoda-statements.txt"
+        },
+        {
+          "id": "full",
+          "description": "Two-sided comparison in the original sequence model, for all sufficiently large natural cutoffs, with existential positive constants and exponent.",
+          "targets": [
+            "t19",
+            "t20",
+            "b0",
+            "b1"
+          ],
+          "coverage": "full",
+          "evidence": "report.md statement review; original executed manifest and per-target logs in evidence/250/remote/audit/; independent checker output in evidence/250/remote/nanoda-statements.txt"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "t0",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250",
+      "source": "JSP000250.lean",
+      "declaration": "JSP000250.clear_denominators"
+    },
+    {
+      "id": "t1",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250",
+      "source": "JSP000250.lean",
+      "declaration": "JSP000250.prime_obstruction_split"
+    },
+    {
+      "id": "t2",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250",
+      "source": "JSP000250.lean",
+      "declaration": "JSP000250.prime_not_representable"
+    },
+    {
+      "id": "t3",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250",
+      "source": "JSP000250.lean",
+      "declaration": "JSP000250.exists_exception"
+    },
+    {
+      "id": "t4",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250",
+      "source": "JSP000250.lean",
+      "declaration": "JSP000250.firstException_spec"
+    },
+    {
+      "id": "t5",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250",
+      "source": "JSP000250.lean",
+      "declaration": "JSP000250.firstException_le"
+    },
+    {
+      "id": "t6",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250",
+      "source": "JSP000250.lean",
+      "declaration": "JSP000250.log_lcm_bound"
+    },
+    {
+      "id": "t7",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250",
+      "source": "JSP000250.lean",
+      "declaration": "JSP000250.prime_exception_upper_bound"
+    },
+    {
+      "id": "t8",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250",
+      "source": "JSP000250.lean",
+      "declaration": "JSP000250.smaller_denominators_representable"
+    },
+    {
+      "id": "t9",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250",
+      "source": "JSP000250.lean",
+      "declaration": "JSP000250.firstException_upper_bound"
+    },
+    {
+      "id": "t10",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250",
+      "source": "JSP000250.lean",
+      "declaration": "JSP000250.firstException_isBigO"
+    },
+    {
+      "id": "t11",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250Complete",
+      "source": "JSP000250Complete.lean",
+      "declaration": "JSP000250.representable_iff_upstream"
+    },
+    {
+      "id": "t12",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250Complete",
+      "source": "JSP000250Complete.lean",
+      "declaration": "JSP000250.representable_iff_increasing_sequence"
+    },
+    {
+      "id": "t13",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250Complete",
+      "source": "JSP000250Complete.lean",
+      "declaration": "JSP000250.firstException_eq_firstForbidden"
+    },
+    {
+      "id": "t14",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250Complete",
+      "source": "JSP000250Complete.lean",
+      "declaration": "JSP000250.lowerProfile_eq_upstream"
+    },
+    {
+      "id": "t15",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250Complete",
+      "source": "JSP000250Complete.lean",
+      "declaration": "JSP000250.eventually_all_small_denominators_representable"
+    },
+    {
+      "id": "t16",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250Complete",
+      "source": "JSP000250Complete.lean",
+      "declaration": "JSP000250.eventually_all_small_denominators_sequences"
+    },
+    {
+      "id": "t17",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250Complete",
+      "source": "JSP000250Complete.lean",
+      "declaration": "JSP000250.eventually_strict_lower_bound"
+    },
+    {
+      "id": "t18",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250Complete",
+      "source": "JSP000250Complete.lean",
+      "declaration": "JSP000250.eventually_explicit_upper_bound"
+    },
+    {
+      "id": "t19",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250Complete",
+      "source": "JSP000250Complete.lean",
+      "declaration": "JSP000250.jsp_000250"
+    },
+    {
+      "id": "t20",
+      "problem": "JSP-000250",
+      "role": "theorem",
+      "module": "JSP000250Complete",
+      "source": "JSP000250Complete.lean",
+      "declaration": "JSP000250.liu_sawhney_resolution"
+    },
+    {
+      "id": "b0",
+      "problem": "JSP-000250",
+      "role": "bridge",
+      "module": "JSP000250.VerificationBridge",
+      "source": "JSP000250/VerificationBridge.lean",
+      "declaration": "Verify250.sequence_iff"
+    },
+    {
+      "id": "b1",
+      "problem": "JSP-000250",
+      "role": "bridge",
+      "module": "JSP000250.VerificationBridge",
+      "source": "JSP000250/VerificationBridge.lean",
+      "declaration": "Verify250.intended"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "retrieved_at": "2026-09-19T17:25:57.469Z",
+  "rules": "38e63c424c7196f8d4ceb664c5c25f0c0529d5e2",
+  "pr342": {
+    "head": "f9083a134b3e185ebbc6b94f59ac21819e93f755",
+    "merged": false
+  },
+  "pr354": {
+    "head": "45174adb114d9ebd8fffc5e3fe3314a93f56aed5",
+    "merged": false
+  },
+  "run": {
+    "id": 35455281765,
+    "status": "completed",
+    "conclusion": "success"
+  }
+}
