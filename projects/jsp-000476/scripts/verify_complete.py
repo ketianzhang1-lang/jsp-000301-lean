@@ -6,6 +6,7 @@ import concurrent.futures, hashlib, json, os, re, subprocess, sys
 ROOT = Path(__file__).resolve().parents[1]
 os.chdir(ROOT); os.environ['LEAN_NUM_THREADS'] = '1'
 EVIDENCE = ROOT / 'evidence-complete'; EVIDENCE.mkdir(exist_ok=True)
+LEAN_OPTIONS = ['-DwarningAsError=true', '-DmaxSynthPendingDepth=3', '-DrelaxedAutoImplicit=false']
 
 def run(args, logname):
     path = EVIDENCE / logname
@@ -53,7 +54,7 @@ visit('AuditComplete')
 assert set(order)==set(sources), 'Unexpected unused upstream source'
 source_hashes={n:hashlib.sha256(sources[n].read_bytes()).hexdigest() for n in order}
 fingerprints={}
-environment=hashlib.sha256((Path('lake-manifest.json').read_text()+version).encode()).hexdigest()
+environment=hashlib.sha256((Path('lake-manifest.json').read_text()+version+repr(LEAN_OPTIONS)).encode()).hexdigest()
 for n in order:
     fingerprints[n]=hashlib.sha256((environment+source_hashes[n]+''.join(fingerprints[d] for d in deps[n])).encode()).hexdigest()
 progress=EVIDENCE/'build-progress.json'
@@ -70,7 +71,7 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
             log='build-'+n+'.log'
             if resume.get(n)==fingerprints[n] and out.exists() and (EVIDENCE/log).exists():
                 done[n]=fingerprints[n];continue
-            future=pool.submit(run,['lake','env','lean','-DwarningAsError=true','-j1','-M12000','-o',str(out),'./'+str(sources[n])],log)
+            future=pool.submit(run,['lake','env','lean',*LEAN_OPTIONS,'-j1','-M12000','-o',str(out),'./'+str(sources[n])],log)
             running[future]=n
         if not running:
             if failed:break
@@ -86,7 +87,7 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
                 print(f'Compiled {len(done)}/{len(order)}: {n}',flush=True)
         if failed and not running:break
 if failed:raise SystemExit(str(failed))
-run(['lake','env','lean','-DwarningAsError=true','AuditComplete.lean'],'axioms.log')
+run(['lake','env','lean',*LEAN_OPTIONS,'AuditComplete.lean'],'axioms.log')
 expected=json.loads(Path('AUDIT_TARGETS.json').read_text())
 assert re.findall(r'^#print axioms (\S+)',Path('AuditComplete.lean').read_text(),re.M)==expected
 log=(EVIDENCE/'axioms.log').read_text();allowed={'propext','Classical.choice','Quot.sound'}
