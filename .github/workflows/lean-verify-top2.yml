@@ -37,7 +37,6 @@ jobs:
           cp official/skills/lean-verify/scripts/audit.py harness/audit.py
           cp -a official/skills/lean-verify evidence/official-skill
           cp -a harness evidence/harness
-          sudo chown -R 10001:10001 proof evidence
       - name: Build disposable verification environment
         shell: bash
         run: |
@@ -45,6 +44,7 @@ jobs:
           docker build -t lean-top2-audit harness 2>&1 | tee image-build.log
           docker image inspect lean-top2-audit > evidence/image-inspect.json
           cp image-build.log evidence/
+          sudo chown -R 10001:10001 proof evidence
       - name: Prepare pinned dependencies and independent checker
         shell: bash
         run: |
