@@ -1,0 +1,20 @@
+[
+  {
+    "name": "hasseweil-linter-v4.33.0.patch",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/patches/hasseweil-linter-v4.33.0.patch",
+    "git_blob_sha": "de07708b124f4a5704d16acb0c467b47a62fd8e3",
+    "sha256": "403b89111bd56c39b7509e7b861f65f227dd770014b29fde548607b7061944e2"
+  },
+  {
+    "name": "waring-linter-v4.33.0.patch",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/patches/waring-linter-v4.33.0.patch",
+    "git_blob_sha": "981c78d177d2f819b7115451dc57e86aa4035e0a",
+    "sha256": "77f2f804b8b37193567a0d172866dbd5d019626f66e291cdae793ff5685a86c9"
+  },
+  {
+    "name": "aintlib-v4.33.0.patch",
+    "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/patches/aintlib-v4.33.0.patch",
+    "git_blob_sha": "e02a679298d785fa4e0af18e531356ba4fdacf02",
+    "sha256": "6370edfcf6e4d5542881c2ff2461c732fd77c520422f51634aa270583e23b014"
+  }
+]

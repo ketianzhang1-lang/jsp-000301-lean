@@ -1,3 +1,14 @@
 .lake/
 evidence/
-Negative.lean
+evidence-complete/
+ErdosProblems/
+HasseWeil/
+Waring/
+UnitFractions/
+*.olean
+*.ilean
+*.orig
+*.rej
+NegativeComplete.lean
+__pycache__/
+*.pyc

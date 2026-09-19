@@ -1,0 +1,61 @@
+name: JSP-000476 complete square-sum-free bounds
+on:
+  push:
+    branches: [jsp-000476-full-kz]
+    paths: [projects/jsp-000476/**, .github/workflows/jsp-000476-complete.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    defaults:
+      run:
+        shell: bash
+        working-directory: projects/jsp-000476
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install pinned compiler and dependencies
+        run: |
+          set -euo pipefail
+          curl -sSf https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.elan/bin:$PATH"
+          elan toolchain install "$(cat lean-toolchain)"
+          lake exe cache get Mathlib
+          git diff --exit-code -- lake-manifest.json
+      - name: Preserve pinned dependency cache for reproduction
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: jsp-000476-mathlib-cache
+          path: ~/.cache/mathlib/*.ltar
+          compression-level: 0
+          retention-days: 7
+          if-no-files-found: error
+      - name: Compile the complete import closure and audit it
+        env:
+          JSP476_BUILD_JOBS: '2'
+        run: bash scripts/verify.sh
+      - name: Independent NaNoda replay of the endpoint dependency closure
+        run: bash scripts/verify_nanoda.sh 2>&1 | tee evidence/nanoda-build.log
+      - name: Record exact source and evidence
+        if: always()
+        run: |
+          mkdir -p evidence
+          git rev-parse HEAD > evidence/SOURCE_COMMIT
+          cp lake-manifest.json evidence/lake-manifest.json
+          git diff --exit-code -- lake-manifest.json
+          tar --exclude=.lake --exclude=evidence --exclude=evidence-complete -czf evidence/source.tar.gz .
+          sha256sum evidence/source.tar.gz > evidence/ARCHIVE_SHA256
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: jsp-000476-complete-evidence
+          path: |
+            projects/jsp-000476/evidence
+            projects/jsp-000476/evidence-complete
+          retention-days: 90
+          if-no-files-found: error
