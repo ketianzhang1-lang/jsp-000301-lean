@@ -15,17 +15,17 @@
           "id": "finite-families",
           "description": "All sum-free subsets and all inclusion-maximal sum-free subsets of the entire finite interval [1,N], allowing x=y in x+y=z.",
           "targets": [
-            "JSP000728.mem_maximalSets",
-            "JSP000728.exists_maximal_extension",
-            "JSP000728.sumFree_iff_upstream",
-            "JSP000728.maximalSumFree_iff_upstream",
-            "JSP000728.maximalSets_eq_upstream",
-            "JSP000728.maximalSets_card_eq_upstream",
-            "JSP000728.allSumFreeSets_eq_upstream",
-            "Verify728.sumFree_iff",
-            "Verify728.maximal_iff",
-            "Verify728.maximal_count",
-            "Verify728.all_count"
+            "t008",
+            "t009",
+            "t017",
+            "t018",
+            "t019",
+            "t020",
+            "t021",
+            "t003",
+            "t004",
+            "t005",
+            "t006"
           ],
           "coverage": "pending"
         },
@@ -33,16 +33,16 @@
           "id": "all-n-lower",
           "description": "For every natural N including zero, 2^floor(N/4) is at most the number M(N) of maximal sum-free subsets.",
           "targets": [
-            "JSP000728.exists_maximal_extension",
-            "JSP000728.pick_bounds",
-            "JSP000728.pick_sum_ne",
-            "JSP000728.seed_subset",
-            "JSP000728.seed_sumFree",
-            "JSP000728.different_choices_incompatible",
-            "JSP000728.lower_bound_multiple",
-            "JSP000728.cameron_erdos_lower_bound",
-            "JSP000728.upstream_count_lower_bound",
-            "Verify728.intended"
+            "t009",
+            "t010",
+            "t011",
+            "t012",
+            "t013",
+            "t014",
+            "t015",
+            "t016",
+            "t027",
+            "t007"
           ],
           "coverage": "pending"
         },
@@ -50,14 +50,14 @@
           "id": "benchmark-upper",
           "description": "The claimed imported upper bound M(N)=o(2^(N/2)) and eventual bound with a fixed exponent below 1/2.",
           "targets": [
-            "JSP000728.maximalCount_isLittleO_benchmark",
-            "JSP000728.maximalCount_exponential_bound",
-            "Verify728.upstream_littleO",
-            "Verify728.upstream_exponential",
-            "Verify728.upstream_exponent_lt_half",
-            "Erdos877.erdos_877",
-            "Erdos877.erdos_877_exponential_bound",
-            "Erdos877.resolutionExponent_lt_half"
+            "t025",
+            "t026",
+            "t000",
+            "t001",
+            "t002",
+            "t032",
+            "t033",
+            "t034"
           ],
           "coverage": "pending"
         },
@@ -65,9 +65,9 @@
           "id": "all-count-benchmark",
           "description": "All subsets of the upper half are counted; F(N)>=2^ceil(N/2)>=2^(N/2).",
           "targets": [
-            "JSP000728.upperHalf_powerset_subset",
-            "JSP000728.allSumFreeSets_lower_bound",
-            "JSP000728.benchmark_le_allSumFreeSets"
+            "t022",
+            "t023",
+            "t024"
           ],
           "coverage": "pending"
         },
@@ -75,10 +75,10 @@
           "id": "relative-negligibility",
           "description": "The original question M(N)=o(F(N)), equivalently here M(N)/F(N) tends to zero as N tends to infinity.",
           "targets": [
-            "JSP000728.maximalCount_isLittleO_allCount",
-            "JSP000728.maximal_to_all_ratio_tendsto_zero",
-            "JSP000728.jsp_000728",
-            "Verify728.intended"
+            "t028",
+            "t029",
+            "t031",
+            "t007"
           ],
           "coverage": "pending"
         },
@@ -86,9 +86,9 @@
           "id": "fixed-exponential-saving",
           "description": "There exists one real delta>0, independent of N, such that eventually M(N)<=F(N)/2^(delta*N).",
           "targets": [
-            "JSP000728.relative_exponential_saving",
-            "JSP000728.jsp_000728",
-            "Verify728.intended"
+            "t030",
+            "t031",
+            "t007"
           ],
           "coverage": "pending"
         }
@@ -97,7 +97,7 @@
   ],
   "targets": [
     {
-      "id": "Verify728.upstream_littleO",
+      "id": "t000",
       "problem": "JSP-000728",
       "role": "bridge",
       "module": "JSP000728.VerificationBridge",
@@ -105,7 +105,7 @@
       "declaration": "Verify728.upstream_littleO"
     },
     {
-      "id": "Verify728.upstream_exponential",
+      "id": "t001",
       "problem": "JSP-000728",
       "role": "bridge",
       "module": "JSP000728.VerificationBridge",
@@ -113,7 +113,7 @@
       "declaration": "Verify728.upstream_exponential"
     },
     {
-      "id": "Verify728.upstream_exponent_lt_half",
+      "id": "t002",
       "problem": "JSP-000728",
       "role": "bridge",
       "module": "JSP000728.VerificationBridge",
@@ -121,7 +121,7 @@
       "declaration": "Verify728.upstream_exponent_lt_half"
     },
     {
-      "id": "Verify728.sumFree_iff",
+      "id": "t003",
       "problem": "JSP-000728",
       "role": "bridge",
       "module": "JSP000728.VerificationBridge",
@@ -129,7 +129,7 @@
       "declaration": "Verify728.sumFree_iff"
     },
     {
-      "id": "Verify728.maximal_iff",
+      "id": "t004",
       "problem": "JSP-000728",
       "role": "bridge",
       "module": "JSP000728.VerificationBridge",
@@ -137,7 +137,7 @@
       "declaration": "Verify728.maximal_iff"
     },
     {
-      "id": "Verify728.maximal_count",
+      "id": "t005",
       "problem": "JSP-000728",
       "role": "bridge",
       "module": "JSP000728.VerificationBridge",
@@ -145,7 +145,7 @@
       "declaration": "Verify728.maximal_count"
     },
     {
-      "id": "Verify728.all_count",
+      "id": "t006",
       "problem": "JSP-000728",
       "role": "bridge",
       "module": "JSP000728.VerificationBridge",
@@ -153,7 +153,7 @@
       "declaration": "Verify728.all_count"
     },
     {
-      "id": "Verify728.intended",
+      "id": "t007",
       "problem": "JSP-000728",
       "role": "bridge",
       "module": "JSP000728.VerificationBridge",
@@ -161,7 +161,7 @@
       "declaration": "Verify728.intended"
     },
     {
-      "id": "JSP000728.mem_maximalSets",
+      "id": "t008",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728",
@@ -169,7 +169,7 @@
       "declaration": "JSP000728.mem_maximalSets"
     },
     {
-      "id": "JSP000728.exists_maximal_extension",
+      "id": "t009",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728",
@@ -177,7 +177,7 @@
       "declaration": "JSP000728.exists_maximal_extension"
     },
     {
-      "id": "JSP000728.pick_bounds",
+      "id": "t010",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728",
@@ -185,7 +185,7 @@
       "declaration": "JSP000728.pick_bounds"
     },
     {
-      "id": "JSP000728.pick_sum_ne",
+      "id": "t011",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728",
@@ -193,7 +193,7 @@
       "declaration": "JSP000728.pick_sum_ne"
     },
     {
-      "id": "JSP000728.seed_subset",
+      "id": "t012",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728",
@@ -201,7 +201,7 @@
       "declaration": "JSP000728.seed_subset"
     },
     {
-      "id": "JSP000728.seed_sumFree",
+      "id": "t013",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728",
@@ -209,7 +209,7 @@
       "declaration": "JSP000728.seed_sumFree"
     },
     {
-      "id": "JSP000728.different_choices_incompatible",
+      "id": "t014",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728",
@@ -217,7 +217,7 @@
       "declaration": "JSP000728.different_choices_incompatible"
     },
     {
-      "id": "JSP000728.lower_bound_multiple",
+      "id": "t015",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728",
@@ -225,7 +225,7 @@
       "declaration": "JSP000728.lower_bound_multiple"
     },
     {
-      "id": "JSP000728.cameron_erdos_lower_bound",
+      "id": "t016",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728",
@@ -233,7 +233,7 @@
       "declaration": "JSP000728.cameron_erdos_lower_bound"
     },
     {
-      "id": "JSP000728.sumFree_iff_upstream",
+      "id": "t017",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728Bridge",
@@ -241,7 +241,7 @@
       "declaration": "JSP000728.sumFree_iff_upstream"
     },
     {
-      "id": "JSP000728.maximalSumFree_iff_upstream",
+      "id": "t018",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728Bridge",
@@ -249,7 +249,7 @@
       "declaration": "JSP000728.maximalSumFree_iff_upstream"
     },
     {
-      "id": "JSP000728.maximalSets_eq_upstream",
+      "id": "t019",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728Bridge",
@@ -257,7 +257,7 @@
       "declaration": "JSP000728.maximalSets_eq_upstream"
     },
     {
-      "id": "JSP000728.maximalSets_card_eq_upstream",
+      "id": "t020",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728Bridge",
@@ -265,7 +265,7 @@
       "declaration": "JSP000728.maximalSets_card_eq_upstream"
     },
     {
-      "id": "JSP000728.allSumFreeSets_eq_upstream",
+      "id": "t021",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728Bridge",
@@ -273,7 +273,7 @@
       "declaration": "JSP000728.allSumFreeSets_eq_upstream"
     },
     {
-      "id": "JSP000728.upperHalf_powerset_subset",
+      "id": "t022",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728Bridge",
@@ -281,7 +281,7 @@
       "declaration": "JSP000728.upperHalf_powerset_subset"
     },
     {
-      "id": "JSP000728.allSumFreeSets_lower_bound",
+      "id": "t023",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728Bridge",
@@ -289,7 +289,7 @@
       "declaration": "JSP000728.allSumFreeSets_lower_bound"
     },
     {
-      "id": "JSP000728.benchmark_le_allSumFreeSets",
+      "id": "t024",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728Bridge",
@@ -297,7 +297,7 @@
       "declaration": "JSP000728.benchmark_le_allSumFreeSets"
     },
     {
-      "id": "JSP000728.maximalCount_isLittleO_benchmark",
+      "id": "t025",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728Complete",
@@ -305,7 +305,7 @@
       "declaration": "JSP000728.maximalCount_isLittleO_benchmark"
     },
     {
-      "id": "JSP000728.maximalCount_exponential_bound",
+      "id": "t026",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728Complete",
@@ -313,7 +313,7 @@
       "declaration": "JSP000728.maximalCount_exponential_bound"
     },
     {
-      "id": "JSP000728.upstream_count_lower_bound",
+      "id": "t027",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728Complete",
@@ -321,7 +321,7 @@
       "declaration": "JSP000728.upstream_count_lower_bound"
     },
     {
-      "id": "JSP000728.maximalCount_isLittleO_allCount",
+      "id": "t028",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728Complete",
@@ -329,7 +329,7 @@
       "declaration": "JSP000728.maximalCount_isLittleO_allCount"
     },
     {
-      "id": "JSP000728.maximal_to_all_ratio_tendsto_zero",
+      "id": "t029",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728Complete",
@@ -337,7 +337,7 @@
       "declaration": "JSP000728.maximal_to_all_ratio_tendsto_zero"
     },
     {
-      "id": "JSP000728.relative_exponential_saving",
+      "id": "t030",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728Complete",
@@ -345,7 +345,7 @@
       "declaration": "JSP000728.relative_exponential_saving"
     },
     {
-      "id": "JSP000728.jsp_000728",
+      "id": "t031",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "JSP000728Complete",
@@ -353,7 +353,7 @@
       "declaration": "JSP000728.jsp_000728"
     },
     {
-      "id": "Erdos877.erdos_877",
+      "id": "t032",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "AuditComplete",
@@ -362,7 +362,7 @@
       "definition_source": "ErdosProblems/Erdos877.lean"
     },
     {
-      "id": "Erdos877.erdos_877_exponential_bound",
+      "id": "t033",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "AuditComplete",
@@ -371,7 +371,7 @@
       "definition_source": "ErdosProblems/Erdos877.lean"
     },
     {
-      "id": "Erdos877.resolutionExponent_lt_half",
+      "id": "t034",
       "problem": "JSP-000728",
       "role": "theorem",
       "module": "AuditComplete",
