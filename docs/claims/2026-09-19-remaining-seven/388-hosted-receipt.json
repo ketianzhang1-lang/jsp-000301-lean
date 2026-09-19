@@ -1,0 +1,76 @@
+{
+  "inspected_date": "2026-09-19",
+  "proof_commit": "a9eae7a01edade3d5d9a386144dcd2848b4de917",
+  "run_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35295466997",
+  "job_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/actions/runs/35295466997/job/105447003884",
+  "conclusion": "success",
+  "completed_at": "2026-09-18T01:59:17Z",
+  "steps": [
+    {
+      "name": "Set up job",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "conclusion": "success"
+    },
+    {
+      "name": "Provide swap for kernel replay",
+      "conclusion": "success"
+    },
+    {
+      "name": "Install exact toolchain and locked dependencies",
+      "conclusion": "success"
+    },
+    {
+      "name": "Compile full proof chain, replay, 18 axiom audits and negative control",
+      "conclusion": "success"
+    },
+    {
+      "name": "Independent strict-allowlist NaNoda verification",
+      "conclusion": "success"
+    },
+    {
+      "name": "Archive tested source and logs",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "conclusion": "success"
+    },
+    {
+      "name": "Complete job",
+      "conclusion": "success"
+    }
+  ],
+  "log_excerpt": [
+    "2026-09-18T01:58:55.4157592Z Checked 70658 declarations with no errors",
+    "2026-09-18T01:59:14.9935883Z SHA256 digest of uploaded artifact zip is 4b9b1dc4c3638fd8a302d90f928983103b36c611700b48253276a394e2493c82",
+    "2026-09-18T01:59:15.2038524Z Artifact jsp-000388-evidence.zip successfully finalized. Artifact ID 10529045270"
+  ],
+  "artifact": {
+    "id": 10529045270,
+    "node_id": "MDg6QXJ0aWZhY3QxMDUyOTA0NTI3MA==",
+    "name": "jsp-000388-evidence",
+    "size_in_bytes": 89373751,
+    "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10529045270",
+    "archive_download_url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/actions/artifacts/10529045270/zip",
+    "expired": false,
+    "digest": "sha256:4b9b1dc4c3638fd8a302d90f928983103b36c611700b48253276a394e2493c82",
+    "created_at": "2026-09-18T01:59:15Z",
+    "updated_at": "2026-09-18T01:59:15Z",
+    "expires_at": "2026-12-17T01:28:45Z",
+    "workflow_run": {
+      "id": 35295466997,
+      "repository_id": 1373404416,
+      "head_repository_id": 1373404416,
+      "head_branch": "jsp-000388-quadratic-obstruction",
+      "head_sha": "a9eae7a01edade3d5d9a386144dcd2848b4de917"
+    }
+  },
+  "limits": "Job and log observed via GitHub API; artifact digest reported by GitHub, not recomputed from a downloaded zip. Contributor-operated automated run, no independent human review."
+}
