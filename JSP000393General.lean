@@ -88,6 +88,7 @@ theorem minimum_attained (k : ℕ) :
     exact hQ
   simpa only [minimumSquareTerms, Set.mem_ofPred_eq] using Nat.sInf_mem hnonempty
 
+omit [CharZero K] in
 theorem minimum_le {k : ℕ} {P : K[X]} (hP : P.support.card = k) :
     minimumSquareTerms K k ≤ (P ^ 2).support.card :=
   Nat.sInf_le ⟨P, hP, rfl⟩
