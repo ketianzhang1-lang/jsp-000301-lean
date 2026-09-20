@@ -1,4 +1,10 @@
-# Statement fidelity: complete minimum-support question
+# Statement fidelity: original complex-coefficient question
+
+The current completion is documented in [GENERAL_COEFFICIENTS.md](GENERAL_COEFFICIENTS.md). Its endpoint `JSP000393General.complex_original` states the divergence of the literal support-cardinality minimum over all complex polynomials. The generic theorem covers all characteristic-zero fields. No narrower rational-only surrogate is used for this endpoint.
+
+The preceding version `17e406594d644b40c9a742e843cd6d89f319c872` proves only the rational/integer formulation, despite its former complete-scope wording. Its `JSP000393Complete.jsp_000393` remains valid within that disclosed domain. The new proof does not retroactively change the scope of that historical commit.
+
+# Historical rational package: definitions and mapping
 
 `Erdos485.termCount P` is `P.support.card` for `P : Polynomial ℚ`.
 `Erdos485.squareTermCounts n` contains exactly the support sizes of squares of
@@ -13,10 +19,10 @@ Filter.Tendsto Erdos485.f Filter.atTop Filter.atTop
 
 All auxiliary Schinzel reduction hypotheses are discharged in the pinned
 upstream chain. The final theorem takes no additional unproved assumptions.
-This is the main question identified as Erdős 485 / JSP-000393, and includes
-the corresponding integer-polynomial lower-bound assertion. Our scope is the
-rational/integer formulation; no extension to arbitrary coefficient fields,
-optimal quantitative bound, or all-support-size optimal upper bound is claimed.
+This is the narrower rational formulation associated with Erdős 485 / JSP-000393, and includes
+the corresponding integer-polynomial lower-bound assertion. That historical revision has only rational/integer scope. It does not establish
+the broader coefficient-domain claim, an optimal quantitative bound, or an
+all-support-size optimal upper bound.
 
 Our original family remains an actual recursively defined integer polynomial:
 `F₀ = 1`, `F_(k+1) = S * expand ℤ 25 F_k`. The square of the seed has degree
@@ -25,7 +31,7 @@ The source module is unchanged from `a337720331a34599114a9d4669d6518d5e608f6f`.
 
 `integer_support` proves equality of supports after the injective coefficient
 map from integers to rationals. `rational_family_counts` then gives exact
-counts `13^k` and `12^k` in the same domain as the original minimum. Applying
+counts `13^k` and `12^k` in the domain of that historical rational minimum. Applying
 `f_minimal` yields the genuine minimum bound, rather than a newly defined
 surrogate quantity.
 
@@ -37,7 +43,7 @@ already established integer inequality `(k+12)*12^k ≤ 12*13^k`.
 `2 + 32^(2^B)` terms has a square with more than `B` terms. It follows from
 the full imported Schinzel bound, not a hypothesis replacing that bound.
 
-The combined theorem `JSP000393Complete.jsp_000393` includes the original
+The combined theorem `JSP000393Complete.jsp_000393` includes the rational
 limit theorem and our constructive consequences. The lower-bound contribution
 retains its upstream attribution; the combination is not represented as an
 independent new proof of Schinzel's result. Organizer review remains necessary.
