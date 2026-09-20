@@ -38,6 +38,17 @@ in `UPSTREAM-LICENSE.txt`; imported source is covered by its Apache 2.0 notices.
 hashes. These edits adapt syntax/library APIs; they do not replace a mathematical
 obligation with an assumption. Mathlib and its dependencies retain their licenses.
 
+The full Apache 2.0 license text is supplied in `APACHE-2.0.txt` for the
+imported source and any distributed compatibility-port copies. The own-project
+MIT license does not replace or relicense the upstream Apache 2.0 material.
+Retain original source headers, this attribution record and the per-file
+original/ported hashes and compatibility changes recorded in `UPSTREAM.json`.
+
+This license-documentation supplement changes no Lean source, build script,
+toolchain or dependency pin. The selected proof revision remains
+`a9eae7a01edade3d5d9a386144dcd2848b4de917`; the later documentation commit
+is not a separately verified replacement proof.
+
 ## Existing prize work and limits of requested credit
 
 [PR #61](https://github.com/TheJustinSunPrize/awards/pull/61), by `KunHcz`, is an
