@@ -13,12 +13,7 @@ theorem encode15_get (R : Fin 15 → Fin 15 → Bool) (i j : Fin 15) :
   have hidx : i.val * 15 + j.val < 15 * 15 := by omega
   simp only [encode15, BitVec.getLsbD_cast, BitVec.getLsbD_ofBoolListLE]
   simp only [List.getD, List.getElem?_ofFn, dite_eq_left hidx, Option.getD_some]
-  congr 2
-  · apply Fin.ext
-    simp
-    omega
-  · apply Fin.ext
-    simp
+  congr 2 <;> omega
 
 /-- No tournament is lost by the bit-vector representation. -/
 theorem encode15_arc (R : Fin 15 → Fin 15 → Bool)
@@ -50,6 +45,10 @@ theorem fifteen_all_relations (R : Fin 15 → Fin 15 → Bool)
   have h := harc i j hij
   rw [encode15_arc R hloop hreverse] at h
   exact h
+
+-- Match the upstream definition's classical decision procedure. Different
+-- synthesized DecidablePred instances need not reduce definitionally alike.
+attribute [local instance] Classical.propDecidable
 
 /-- The extremal function is the largest universally guaranteed transitive order, bounded by n. -/
 noncomputable def extremal (n : ℕ) : ℕ :=
