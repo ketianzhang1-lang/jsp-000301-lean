@@ -34,8 +34,9 @@
         },
         {
           "id": "sharp-vertex-threshold",
-          "description": "Supplementary exact forcing threshold18 on labels1..n, including counterexamples every n<=17; no edge-minimization claim.",
+          "description": "Supplementary exact forcing threshold18 on labels1..n, including the credited eventual finite upper theorem and counterexamples every n<=17; no edge-minimization claim.",
           "targets": [
+            "t000",
             "t001",
             "t002",
             "t003",

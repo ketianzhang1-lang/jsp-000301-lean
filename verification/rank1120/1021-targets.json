@@ -47,8 +47,9 @@
         },
         {
           "id": "fifteen-vertex-counterexample",
-          "description": "Every fifteen-vertex tournament has transitive five-set; f(15)>=5>floor(log2 15)+1=4.",
+          "description": "The credited fourteen-vertex theorem, transported to every fifteen-vertex tournament, guarantees a transitive five-set; f(15)>=5>floor(log2 15)+1=4.",
           "targets": [
+            "t000",
             "t004",
             "t005",
             "t006",
