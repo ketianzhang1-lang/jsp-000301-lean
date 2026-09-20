@@ -148,8 +148,8 @@
     "commit": "555ce4f13bf7e8e8557020728f7f97ad3d1f51e0",
     "branch": "jsp-000907-complete-kz",
     "bridge_file": "bridge907.lean",
-    "bridge_path": "JSP000907/VerificationBridge.lean",
-    "bridge_module": "JSP000907.VerificationBridge",
+    "bridge_path": "JSP000907Complete/VerificationBridge.lean",
+    "bridge_module": "JSP000907Complete.VerificationBridge",
     "evidence_dir": "evidence-complete",
     "bootstrap": [
       "python3",
@@ -273,7 +273,8 @@
           ]
         }
       ]
-    }
+    },
+    "bridge_routing_note": "The first audit used JSP000907.VerificationBridge, which is outside the selected Lake roots. All 35 original targets and the strict direct bridge precheck passed, but the five bridge Lake-target builds failed as unknown module. The identical auditor source is now placed under the existing configured JSP000907Complete root. Lake v4.34 LeanLibConfig.isBuildableModule includes submodules of configured roots. No submitted proof source or lakefile changes."
   },
   "465": {
     "id": "JSP-000465",

@@ -404,40 +404,40 @@
       "id": "t035",
       "problem": "JSP-000907",
       "role": "bridge",
-      "module": "JSP000907.VerificationBridge",
-      "source": "JSP000907/VerificationBridge.lean",
+      "module": "JSP000907Complete.VerificationBridge",
+      "source": "JSP000907Complete/VerificationBridge.lean",
       "declaration": "Verify907.chord_count_formula"
     },
     {
       "id": "t036",
       "problem": "JSP-000907",
       "role": "bridge",
-      "module": "JSP000907.VerificationBridge",
-      "source": "JSP000907/VerificationBridge.lean",
+      "module": "JSP000907Complete.VerificationBridge",
+      "source": "JSP000907Complete/VerificationBridge.lean",
       "declaration": "Verify907.affirmative_literal"
     },
     {
       "id": "t037",
       "problem": "JSP-000907",
       "role": "bridge",
-      "module": "JSP000907.VerificationBridge",
-      "source": "JSP000907/VerificationBridge.lean",
+      "module": "JSP000907Complete.VerificationBridge",
+      "source": "JSP000907Complete/VerificationBridge.lean",
       "declaration": "Verify907.counterexample_literal"
     },
     {
       "id": "t038",
       "problem": "JSP-000907",
       "role": "bridge",
-      "module": "JSP000907.VerificationBridge",
-      "source": "JSP000907/VerificationBridge.lean",
+      "module": "JSP000907Complete.VerificationBridge",
+      "source": "JSP000907Complete/VerificationBridge.lean",
       "declaration": "Verify907.any_guarantee_bounded"
     },
     {
       "id": "t039",
       "problem": "JSP-000907",
       "role": "bridge",
-      "module": "JSP000907.VerificationBridge",
-      "source": "JSP000907/VerificationBridge.lean",
+      "module": "JSP000907Complete.VerificationBridge",
+      "source": "JSP000907Complete/VerificationBridge.lean",
       "declaration": "Verify907.no_diverging_guarantee_literal"
     }
   ]

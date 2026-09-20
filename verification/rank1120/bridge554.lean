@@ -44,21 +44,37 @@ theorem bad_predicate_iff (n : ℕ) :
 
 theorem density_one_literal_count :
     Tendsto (fun N : ℕ => (goodCount N : ℝ) / N) atTop (𝓝 1) := by
-  have hset : {n : ℕ | RoughGap n} = JSP000554.goodGapIndices := by
-    ext n
+  have hcount (N : ℕ) :
+      goodCount N = Erdos682.prefixCount JSP000554.goodGapIndices N := by
+    classical
+    unfold goodCount Erdos682.prefixCount
+    apply congrArg Finset.card
+    apply Finset.filter_congr
+    intro n _
     exact good_predicate_iff n
-  have h := JSP000554.goodGap_count_ratio_tendsto
-  rw [← hset] at h
-  simpa only [goodCount, Erdos682.prefixCount, Set.mem_setOf_eq] using h
+  have hfun : (fun N : ℕ => (goodCount N : ℝ) / N) =
+      (fun N : ℕ => (Erdos682.prefixCount JSP000554.goodGapIndices N : ℝ) / N) := by
+    funext N
+    rw [hcount N]
+  rw [hfun]
+  exact JSP000554.goodGap_count_ratio_tendsto
 
 theorem density_zero_literal_count :
     Tendsto (fun N : ℕ => (badCount N : ℝ) / N) atTop (𝓝 0) := by
-  have hset : {n : ℕ | ¬ RoughGap n} = JSP000554.badGapIndices := by
-    ext n
+  have hcount (N : ℕ) :
+      badCount N = Erdos682.prefixCount JSP000554.badGapIndices N := by
+    classical
+    unfold badCount Erdos682.prefixCount
+    apply congrArg Finset.card
+    apply Finset.filter_congr
+    intro n _
     exact bad_predicate_iff n
-  have h := JSP000554.badGap_count_ratio_tendsto
-  rw [← hset] at h
-  simpa only [badCount, Erdos682.prefixCount, Set.mem_setOf_eq] using h
+  have hfun : (fun N : ℕ => (badCount N : ℝ) / N) =
+      (fun N : ℕ => (Erdos682.prefixCount JSP000554.badGapIndices N : ℝ) / N) := by
+    funext N
+    rw [hcount N]
+  rw [hfun]
+  exact JSP000554.badGap_count_ratio_tendsto
 
 theorem residue_equivalence_with_prime_endpoints (p h : ℕ) (hh : 2 ≤ h) :
     (p.Prime ∧ (p + h).Prime ∧

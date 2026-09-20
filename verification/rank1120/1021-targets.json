@@ -76,25 +76,34 @@
       "id": "t000",
       "problem": "JSP-001021",
       "role": "theorem",
-      "module": "ErdosProblems.Erdos1216",
-      "source": "ErdosProblems/Erdos1216.lean",
-      "declaration": "Erdos1216.directed_ramsey_five_fourteen"
+      "module": "JSP001021",
+      "source": "JSP001021.lean",
+      "declaration": "Erdos1216.directed_ramsey_five_fourteen",
+      "definition_source": "ErdosProblems/Erdos1216.lean",
+      "definition_sha256": "352f0cc4def0150e62858792f60ca80b70088f97b53d020722b8e56f4a079491",
+      "verification_entry_note": "The unchanged tracked project entry imports the immutable bootstrapped upstream definition. The original clean verifier compiles and kernel-replays that definition module; its original and ported hashes are checked by UPSTREAM.json. The official auditor checks this exact declaration individually through the tracked native Lake entry, while the evidence inspector separately checks definition_source against definition_sha256. No proof source or Lake configuration is modified."
     },
     {
       "id": "t001",
       "problem": "JSP-001021",
       "role": "theorem",
-      "module": "ErdosProblems.Erdos1216",
-      "source": "ErdosProblems/Erdos1216.lean",
-      "declaration": "Erdos1216.f_fourteen_eq_five"
+      "module": "JSP001021",
+      "source": "JSP001021.lean",
+      "declaration": "Erdos1216.f_fourteen_eq_five",
+      "definition_source": "ErdosProblems/Erdos1216.lean",
+      "definition_sha256": "352f0cc4def0150e62858792f60ca80b70088f97b53d020722b8e56f4a079491",
+      "verification_entry_note": "The unchanged tracked project entry imports the immutable bootstrapped upstream definition. The original clean verifier compiles and kernel-replays that definition module; its original and ported hashes are checked by UPSTREAM.json. The official auditor checks this exact declaration individually through the tracked native Lake entry, while the evidence inspector separately checks definition_source against definition_sha256. No proof source or Lake configuration is modified."
     },
     {
       "id": "t002",
       "problem": "JSP-001021",
       "role": "theorem",
-      "module": "ErdosProblems.Erdos1216",
-      "source": "ErdosProblems/Erdos1216.lean",
-      "declaration": "Erdos1216.not_erdos_1216"
+      "module": "JSP001021",
+      "source": "JSP001021.lean",
+      "declaration": "Erdos1216.not_erdos_1216",
+      "definition_source": "ErdosProblems/Erdos1216.lean",
+      "definition_sha256": "352f0cc4def0150e62858792f60ca80b70088f97b53d020722b8e56f4a079491",
+      "verification_entry_note": "The unchanged tracked project entry imports the immutable bootstrapped upstream definition. The original clean verifier compiles and kernel-replays that definition module; its original and ported hashes are checked by UPSTREAM.json. The official auditor checks this exact declaration individually through the tracked native Lake entry, while the evidence inspector separately checks definition_source against definition_sha256. No proof source or Lake configuration is modified."
     },
     {
       "id": "t003",
