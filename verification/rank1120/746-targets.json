@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-000746-sharp",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "4dfb40abe0cd1e538bbfccb1cc50f4829fb7383a",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000746",
+      "source": "https://www.erdosproblems.com/895",
+      "requirements": [
+        {
+          "id": "integers",
+          "description": "Every triangle-free simple graph on all integers; no finiteness or positivity assumptions on the graph.",
+          "targets": [
+            "t006",
+            "t007",
+            "t008",
+            "t009"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "distinct-independent-additive-triple",
+          "description": "Three distinct pairwise nonadjacent integers with c=a+b; all three inequalities and nonedges.",
+          "targets": [
+            "t007",
+            "t008",
+            "t009"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "sharp-vertex-threshold",
+          "description": "Supplementary exact forcing threshold18 on labels1..n, including counterexamples every n<=17; no edge-minimization claim.",
+          "targets": [
+            "t001",
+            "t002",
+            "t003",
+            "t004",
+            "t005",
+            "t010",
+            "t011"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "t000",
+      "problem": "JSP-000746",
+      "role": "theorem",
+      "module": "Erdos895",
+      "source": "Erdos895.lean",
+      "declaration": "Erdos895.erdos_895"
+    },
+    {
+      "id": "t001",
+      "problem": "JSP-000746",
+      "role": "theorem",
+      "module": "JSP000746Sharp",
+      "source": "JSP000746Sharp.lean",
+      "declaration": "JSP000746Sharp.witness_triangle_free"
+    },
+    {
+      "id": "t002",
+      "problem": "JSP-000746",
+      "role": "theorem",
+      "module": "JSP000746Sharp",
+      "source": "JSP000746Sharp.lean",
+      "declaration": "JSP000746Sharp.witness_no_independent_schur_triple"
+    },
+    {
+      "id": "t003",
+      "problem": "JSP-000746",
+      "role": "theorem",
+      "module": "JSP000746Sharp",
+      "source": "JSP000746Sharp.lean",
+      "declaration": "JSP000746Sharp.counterexamples_below_eighteen"
+    },
+    {
+      "id": "t004",
+      "problem": "JSP-000746",
+      "role": "theorem",
+      "module": "JSP000746Sharp",
+      "source": "JSP000746Sharp.lean",
+      "declaration": "JSP000746Sharp.exact_threshold"
+    },
+    {
+      "id": "t005",
+      "problem": "JSP-000746",
+      "role": "theorem",
+      "module": "JSP000746Sharp",
+      "source": "JSP000746Sharp.lean",
+      "declaration": "JSP000746Sharp.least_threshold"
+    },
+    {
+      "id": "t006",
+      "problem": "JSP-000746",
+      "role": "theorem",
+      "module": "JSP000746",
+      "source": "JSP000746.lean",
+      "declaration": "JSP000746.integer_graph"
+    },
+    {
+      "id": "t007",
+      "problem": "JSP-000746",
+      "role": "theorem",
+      "module": "JSP000746",
+      "source": "JSP000746.lean",
+      "declaration": "JSP000746.jsp_000746"
+    },
+    {
+      "id": "t008",
+      "problem": "JSP-000746",
+      "role": "bridge",
+      "module": "JSP000746.VerificationBridge",
+      "source": "JSP000746/VerificationBridge.lean",
+      "declaration": "Verify746.intended"
+    },
+    {
+      "id": "t009",
+      "problem": "JSP-000746",
+      "role": "bridge",
+      "module": "JSP000746.VerificationBridge",
+      "source": "JSP000746/VerificationBridge.lean",
+      "declaration": "Verify746.bounded_positive"
+    },
+    {
+      "id": "t010",
+      "problem": "JSP-000746",
+      "role": "bridge",
+      "module": "JSP000746.VerificationBridge",
+      "source": "JSP000746/VerificationBridge.lean",
+      "declaration": "Verify746.exact_finite_threshold"
+    },
+    {
+      "id": "t011",
+      "problem": "JSP-000746",
+      "role": "bridge",
+      "module": "JSP000746.VerificationBridge",
+      "source": "JSP000746/VerificationBridge.lean",
+      "declaration": "Verify746.witness_edge_list_length"
+    }
+  ]
+}

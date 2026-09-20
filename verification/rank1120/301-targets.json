@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "e1a17b0d6728b9d4929d1d4abd3721a27377369a",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000301",
+      "source": "https://github.com/TheJustinSunPrize/awards/blob/38e63c424c7196f8d4ceb664c5c25f0c0529d5e2/problems/catalog-0301-0400.md#JSP-000301",
+      "requirements": [
+        {
+          "id": "positive-powerful-pair",
+          "description": "Both witness integers are positive and consecutive, and every prime divisor has its square dividing that integer.",
+          "targets": [
+            "t000",
+            "t002",
+            "t003",
+            "t006",
+            "t008",
+            "t009"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "both-nonsquare",
+          "description": "Neither witness is a square of any natural number; exact factorizations and the bounding consecutive squares are checked.",
+          "targets": [
+            "t001",
+            "t004",
+            "t005",
+            "t006",
+            "t008",
+            "t009"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "negation-of-catalog-question",
+          "description": "Completely refute the catalog universal yes/no claim, not the distinct open counting problem at Erd\u0151s365.",
+          "targets": [
+            "t006",
+            "t007",
+            "t009",
+            "t010"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "t000",
+      "problem": "JSP-000301",
+      "role": "theorem",
+      "module": "JSP000301",
+      "source": "JSP000301.lean",
+      "declaration": "JSP000301.Powerful"
+    },
+    {
+      "id": "t001",
+      "problem": "JSP-000301",
+      "role": "theorem",
+      "module": "JSP000301",
+      "source": "JSP000301.lean",
+      "declaration": "JSP000301.PerfectSquare"
+    },
+    {
+      "id": "t002",
+      "problem": "JSP-000301",
+      "role": "theorem",
+      "module": "JSP000301",
+      "source": "JSP000301.lean",
+      "declaration": "JSP000301.powerful_12167"
+    },
+    {
+      "id": "t003",
+      "problem": "JSP-000301",
+      "role": "theorem",
+      "module": "JSP000301",
+      "source": "JSP000301.lean",
+      "declaration": "JSP000301.powerful_12168"
+    },
+    {
+      "id": "t004",
+      "problem": "JSP-000301",
+      "role": "theorem",
+      "module": "JSP000301",
+      "source": "JSP000301.lean",
+      "declaration": "JSP000301.not_square_12167"
+    },
+    {
+      "id": "t005",
+      "problem": "JSP-000301",
+      "role": "theorem",
+      "module": "JSP000301",
+      "source": "JSP000301.lean",
+      "declaration": "JSP000301.not_square_12168"
+    },
+    {
+      "id": "t006",
+      "problem": "JSP-000301",
+      "role": "theorem",
+      "module": "JSP000301",
+      "source": "JSP000301.lean",
+      "declaration": "JSP000301.jsp_000301_counterexample"
+    },
+    {
+      "id": "t007",
+      "problem": "JSP-000301",
+      "role": "theorem",
+      "module": "JSP000301",
+      "source": "JSP000301.lean",
+      "declaration": "JSP000301.jsp_000301_disproved"
+    },
+    {
+      "id": "t008",
+      "problem": "JSP-000301",
+      "role": "bridge",
+      "module": "JSP000301.VerificationBridge",
+      "source": "JSP000301/VerificationBridge.lean",
+      "declaration": "Verify301.witness_arithmetic"
+    },
+    {
+      "id": "t009",
+      "problem": "JSP-000301",
+      "role": "bridge",
+      "module": "JSP000301.VerificationBridge",
+      "source": "JSP000301/VerificationBridge.lean",
+      "declaration": "Verify301.positive_pair"
+    },
+    {
+      "id": "t010",
+      "problem": "JSP-000301",
+      "role": "bridge",
+      "module": "JSP000301.VerificationBridge",
+      "source": "JSP000301/VerificationBridge.lean",
+      "declaration": "Verify301.original_question_false"
+    }
+  ]
+}

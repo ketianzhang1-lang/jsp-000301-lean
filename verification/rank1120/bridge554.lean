@@ -1,0 +1,71 @@
+import JSP000554Complete
+
+namespace Verify554
+open Filter
+open scoped Topology
+
+-- Use Mathlib's genuine prime enumeration and least prime factor directly.
+def RoughGap (n : ℕ) : Prop :=
+  ∃ m : ℕ, Nat.nth Nat.Prime n < m ∧ m < Nat.nth Nat.Prime (n + 1) ∧
+    Nat.nth Nat.Prime (n + 1) - Nat.nth Nat.Prime n ≤ m.minFac
+
+noncomputable def goodCount (N : ℕ) : ℕ := by
+  classical
+  exact ((Finset.range N).filter RoughGap).card
+
+noncomputable def badCount (N : ℕ) : ℕ := by
+  classical
+  exact ((Finset.range N).filter fun n => ¬ RoughGap n).card
+
+theorem consecutive_primes (n : ℕ) :
+    (Nat.nth Nat.Prime n).Prime ∧ (Nat.nth Nat.Prime (n + 1)).Prime ∧
+      Nat.nth Nat.Prime n < Nat.nth Nat.Prime (n + 1) ∧
+      ∀ m : ℕ, Nat.nth Nat.Prime n < m →
+        m < Nat.nth Nat.Prime (n + 1) → ¬ m.Prime := by
+  exact ⟨Erdos682.nthPrime_prime n, Erdos682.nthPrime_prime (n + 1),
+    Erdos682.nthPrime_lt_succ n, Erdos682.no_prime_between_nthPrime n⟩
+
+theorem actual_least_prime_factor (m : ℕ) (hm : 1 < m) :
+    m.minFac.Prime ∧ m.minFac ∣ m ∧
+      ∀ q : ℕ, q.Prime → q ∣ m → m.minFac ≤ q := by
+  refine ⟨Nat.minFac_prime (by omega), Nat.minFac_dvd m, ?_⟩
+  intro q hq hd
+  exact Nat.minFac_le_of_dvd hq.two_le hd
+
+theorem good_predicate_iff (n : ℕ) :
+    RoughGap n ↔ n ∈ JSP000554.goodGapIndices := by
+  exact (JSP000554.mem_goodGapIndices_iff n).symm
+
+theorem bad_predicate_iff (n : ℕ) :
+    (¬ RoughGap n) ↔
+      JSP000554.BadGap (Nat.nth Nat.Prime n)
+        (Nat.nth Nat.Prime (n + 1) - Nat.nth Nat.Prime n) := by
+  exact (JSP000554.badGap_iff_exceptional n).symm
+
+theorem density_one_literal_count :
+    Tendsto (fun N : ℕ => (goodCount N : ℝ) / N) atTop (𝓝 1) := by
+  have hset : {n : ℕ | RoughGap n} = JSP000554.goodGapIndices := by
+    ext n
+    exact good_predicate_iff n
+  have h := JSP000554.goodGap_count_ratio_tendsto
+  rw [← hset] at h
+  simpa only [goodCount, Erdos682.prefixCount, Set.mem_setOf_eq] using h
+
+theorem density_zero_literal_count :
+    Tendsto (fun N : ℕ => (badCount N : ℝ) / N) atTop (𝓝 0) := by
+  have hset : {n : ℕ | ¬ RoughGap n} = JSP000554.badGapIndices := by
+    ext n
+    exact bad_predicate_iff n
+  have h := JSP000554.badGap_count_ratio_tendsto
+  rw [← hset] at h
+  simpa only [badCount, Erdos682.prefixCount, Set.mem_setOf_eq] using h
+
+theorem residue_equivalence_with_prime_endpoints (p h : ℕ) (hh : 2 ≤ h) :
+    (p.Prime ∧ (p + h).Prime ∧
+      (∀ m : ℕ, p < m → m < p + h → ¬ m.Prime) ∧
+      ∀ m : ℕ, p < m → m < p + h → m.minFac < h) ↔
+    h ≤ p ∧ p.Prime ∧ (p + h).Prime ∧
+      p % JSP000554.primorial h ∈ JSP000554.omegaSet h := by
+  exact JSP000554.badGap_iff_residue_all hh
+
+end Verify554
