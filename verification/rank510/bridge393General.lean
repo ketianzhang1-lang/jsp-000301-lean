@@ -30,20 +30,26 @@ theorem complex_uniform_threshold (B : ℕ) (P : ℂ[X])
   JSP000393General.uniform_threshold B P hP
 
 theorem complex_zero_and_one : complexMinimum 0 = 0 ∧ complexMinimum 1 = 1 := by
+  have hzero : (0 : ℂ[X]).support.card = 0 := by
+    rw [Polynomial.support_zero, Finset.card_empty]
+  have hone : (1 : ℂ[X]).support.card = 1 := by
+    rw [← Polynomial.C_1, Polynomial.support_C one_ne_zero, Finset.card_singleton]
   constructor
-  · apply Nat.eq_zero_of_le_zero
-    have h := JSP000393General.minimum_le (K := ℂ) (P := 0)
-      (show (0 : ℂ[X]).support.card = 0 by simp)
-    simpa using h
-  · apply Nat.le_antisymm
-    · have h := JSP000393General.minimum_le (K := ℂ) (P := 1)
-        (show (1 : ℂ[X]).support.card = 1 by simp)
-      simpa using h
-    · obtain ⟨P, hP, hP2⟩ := complex_attained 1
+  · rw [minimum_definition]
+    apply Nat.eq_zero_of_le_zero
+    have h := JSP000393General.minimum_le (K := ℂ) (P := 0) hzero
+    rw [zero_pow (by decide : 2 ≠ 0), hzero] at h
+    exact h
+  · rw [minimum_definition]
+    apply Nat.le_antisymm
+    · have h := JSP000393General.minimum_le (K := ℂ) (P := 1) hone
+      rw [one_pow, hone] at h
+      exact h
+    · obtain ⟨P, hP, hP2⟩ := JSP000393General.minimum_attained (K := ℂ) 1
       have hPne : P ≠ 0 := by
         intro h
-        subst P
-        simpa using hP
+        rw [h, hzero] at hP
+        omega
       have hsquare : P ^ 2 ≠ 0 := pow_ne_zero 2 hPne
       have hcard : 0 < (P ^ 2).support.card := by
         exact Nat.pos_of_ne_zero (fun h => hsquare (Polynomial.card_support_eq_zero.mp h))

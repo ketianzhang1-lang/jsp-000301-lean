@@ -236,65 +236,89 @@
       "id": "t017",
       "problem": "JSP-000728",
       "role": "theorem",
-      "module": "JSP000728Bridge",
-      "source": "JSP000728Bridge.lean",
-      "declaration": "JSP000728.sumFree_iff_upstream"
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.sumFree_iff_upstream",
+      "definition_source": "JSP000728Bridge.lean",
+      "definition_sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "entry_note": "Configured tracked complete-module verification entry imports the definition module. Original clean verifier separately compiles JSP000728Bridge.lean and replays its kernel prefix. The definition module is not an independent Lake root in the submitted configuration."
     },
     {
       "id": "t018",
       "problem": "JSP-000728",
       "role": "theorem",
-      "module": "JSP000728Bridge",
-      "source": "JSP000728Bridge.lean",
-      "declaration": "JSP000728.maximalSumFree_iff_upstream"
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.maximalSumFree_iff_upstream",
+      "definition_source": "JSP000728Bridge.lean",
+      "definition_sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "entry_note": "Configured tracked complete-module verification entry imports the definition module. Original clean verifier separately compiles JSP000728Bridge.lean and replays its kernel prefix. The definition module is not an independent Lake root in the submitted configuration."
     },
     {
       "id": "t019",
       "problem": "JSP-000728",
       "role": "theorem",
-      "module": "JSP000728Bridge",
-      "source": "JSP000728Bridge.lean",
-      "declaration": "JSP000728.maximalSets_eq_upstream"
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.maximalSets_eq_upstream",
+      "definition_source": "JSP000728Bridge.lean",
+      "definition_sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "entry_note": "Configured tracked complete-module verification entry imports the definition module. Original clean verifier separately compiles JSP000728Bridge.lean and replays its kernel prefix. The definition module is not an independent Lake root in the submitted configuration."
     },
     {
       "id": "t020",
       "problem": "JSP-000728",
       "role": "theorem",
-      "module": "JSP000728Bridge",
-      "source": "JSP000728Bridge.lean",
-      "declaration": "JSP000728.maximalSets_card_eq_upstream"
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.maximalSets_card_eq_upstream",
+      "definition_source": "JSP000728Bridge.lean",
+      "definition_sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "entry_note": "Configured tracked complete-module verification entry imports the definition module. Original clean verifier separately compiles JSP000728Bridge.lean and replays its kernel prefix. The definition module is not an independent Lake root in the submitted configuration."
     },
     {
       "id": "t021",
       "problem": "JSP-000728",
       "role": "theorem",
-      "module": "JSP000728Bridge",
-      "source": "JSP000728Bridge.lean",
-      "declaration": "JSP000728.allSumFreeSets_eq_upstream"
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.allSumFreeSets_eq_upstream",
+      "definition_source": "JSP000728Bridge.lean",
+      "definition_sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "entry_note": "Configured tracked complete-module verification entry imports the definition module. Original clean verifier separately compiles JSP000728Bridge.lean and replays its kernel prefix. The definition module is not an independent Lake root in the submitted configuration."
     },
     {
       "id": "t022",
       "problem": "JSP-000728",
       "role": "theorem",
-      "module": "JSP000728Bridge",
-      "source": "JSP000728Bridge.lean",
-      "declaration": "JSP000728.upperHalf_powerset_subset"
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.upperHalf_powerset_subset",
+      "definition_source": "JSP000728Bridge.lean",
+      "definition_sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "entry_note": "Configured tracked complete-module verification entry imports the definition module. Original clean verifier separately compiles JSP000728Bridge.lean and replays its kernel prefix. The definition module is not an independent Lake root in the submitted configuration."
     },
     {
       "id": "t023",
       "problem": "JSP-000728",
       "role": "theorem",
-      "module": "JSP000728Bridge",
-      "source": "JSP000728Bridge.lean",
-      "declaration": "JSP000728.allSumFreeSets_lower_bound"
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.allSumFreeSets_lower_bound",
+      "definition_source": "JSP000728Bridge.lean",
+      "definition_sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "entry_note": "Configured tracked complete-module verification entry imports the definition module. Original clean verifier separately compiles JSP000728Bridge.lean and replays its kernel prefix. The definition module is not an independent Lake root in the submitted configuration."
     },
     {
       "id": "t024",
       "problem": "JSP-000728",
       "role": "theorem",
-      "module": "JSP000728Bridge",
-      "source": "JSP000728Bridge.lean",
-      "declaration": "JSP000728.benchmark_le_allSumFreeSets"
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.benchmark_le_allSumFreeSets",
+      "definition_source": "JSP000728Bridge.lean",
+      "definition_sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "entry_note": "Configured tracked complete-module verification entry imports the definition module. Original clean verifier separately compiles JSP000728Bridge.lean and replays its kernel prefix. The definition module is not an independent Lake root in the submitted configuration."
     },
     {
       "id": "t025",
