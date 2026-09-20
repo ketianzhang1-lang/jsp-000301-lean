@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "leanchecker",
+    "JSP000506.VerificationSelection"
+  ],
+  "cwd": "/work/projects/jsp-000506",
+  "exit_code": 0,
+  "seconds": 8.177420616149902
+}

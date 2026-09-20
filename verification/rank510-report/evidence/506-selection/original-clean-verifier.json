@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "python3",
+    "scripts/verify_selection.py"
+  ],
+  "cwd": "/work/projects/jsp-000506",
+  "exit_code": 0,
+  "seconds": 751.0521333217621
+}

@@ -1,0 +1,26 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "822237f2cd0e3610a2be884dfd4cee83b3a8e06018c145a9077a503d5ff31d19",
+  "original_bytes": 1035,
+  "data": {
+    "repository": "ketianzhang1-lang/awards",
+    "branch": "jsp-000393-sparse-squares-evidence",
+    "expected_head": "e7850f739564ea77ccb8e7b3832c5ea5d4be3eba",
+    "path": "problems/catalog-0301-0400.md",
+    "original_git_blob": "ca30c314f8641105d4339b683d29ac7b51c37799",
+    "original_sha256": "aad037b4fde092d7555870b9e2b2b8ac967921e7a4806a56bc4988781d4762a3",
+    "replacement_sha256": "2eaf66dca89892f4d448238854914d4392383c093ce55f1a1b3da99a81e5c397",
+    "only_changed_fields": [
+      "Lean proof",
+      "Attribution basis"
+    ],
+    "all_other_entry_bytes_preserved": true,
+    "proof_commit": "aa1ed1bac2eb0c1ec33723ff802ff3b9b6c02ee8",
+    "published": true,
+    "prepared_git_tree": "b317eb0c071cec4b6c03f915eb04a9a88df81cd1",
+    "prepared_base_tree": "2769127a8ed88a6e388913d5bd993902fcb3e4c5",
+    "commit": "de7fe6666f4e4cf41ea1559c1193509b3ae33e21",
+    "url": "https://github.com/ketianzhang1-lang/awards/commit/de7fe6666f4e4cf41ea1559c1193509b3ae33e21",
+    "readback_sha256": "2eaf66dca89892f4d448238854914d4392383c093ce55f1a1b3da99a81e5c397"
+  }
+}

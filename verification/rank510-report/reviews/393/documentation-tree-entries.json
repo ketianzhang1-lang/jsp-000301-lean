@@ -1,0 +1,55 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "ee9becf8a619e86475ab1664eb10818972f055d4f69243797b59a1acb0d4528d",
+  "original_bytes": 14533,
+  "data": {
+    "repository_full_name": "ketianzhang1-lang/jsp-000301-lean",
+    "base_tree_sha": "0222df5cd40febec42f503da46b5983382187aba",
+    "tree_elements": [
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "content": {
+          "text_omitted": true,
+          "reason": "full text retained only in the private historical evidence",
+          "utf8_bytes": 2485,
+          "sha256": "d0db3db959b04f9c20210a1a581cb2f6bbdb187486ec4bb068c3e13bae938f53"
+        }
+      },
+      {
+        "path": "GENERAL_COEFFICIENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "content": {
+          "text_omitted": true,
+          "reason": "full text retained only in the private historical evidence",
+          "utf8_bytes": 4542,
+          "sha256": "c48b2140536c2c388cdbe8c093b5be321865c322cc422121e91db8dce3741a0a"
+        }
+      },
+      {
+        "path": "STATEMENT_FIDELITY.md",
+        "mode": "100644",
+        "type": "blob",
+        "content": {
+          "text_omitted": true,
+          "reason": "full text retained only in the private historical evidence",
+          "utf8_bytes": 3090,
+          "sha256": "b42d00af17072f902ff24975699e61987dcd1bae34b21ecd69023e63c8aea03f"
+        }
+      },
+      {
+        "path": "PROVENANCE.md",
+        "mode": "100644",
+        "type": "blob",
+        "content": {
+          "text_omitted": true,
+          "reason": "full text retained only in the private historical evidence",
+          "utf8_bytes": 3655,
+          "sha256": "ad253e80007cfcb4e468b2ecd05633810f847b63953e68142e570739b277edb9"
+        }
+      }
+    ]
+  }
+}

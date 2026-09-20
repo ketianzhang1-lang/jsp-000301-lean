@@ -1,0 +1,11 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "7d0117e24370359faf236125dcfd13b04be3894d743b54b0f54176677fda65e0",
+  "original_bytes": 204,
+  "data": {
+    "url": "https://arxiv.org/html/2602.09803v1",
+    "retrieved_at": "2026-09-19T23:20:37.524207+00:00",
+    "sha256": "feff4b66979f32763457b632bc7936aa357da6dbca8f2c0eef9c46122ba80f15",
+    "bytes": 454334
+  }
+}

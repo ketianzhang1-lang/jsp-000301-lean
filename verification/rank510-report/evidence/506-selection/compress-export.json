@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "gzip",
+    "-n",
+    "/out/export.ndjson"
+  ],
+  "cwd": "/out",
+  "exit_code": 0,
+  "seconds": 8.026177883148193
+}

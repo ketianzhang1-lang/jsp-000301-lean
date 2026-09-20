@@ -1,0 +1,673 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/catlin-research",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "9661ef0f170e750b1ac2153b9017bad86044680c",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000585",
+      "source": "https://arxiv.org/pdf/1107.1920v3#page=2",
+      "requirements": [
+        {
+          "id": "finite-certificate",
+          "description": "The declared Catlin graph is C5[K3]; exact coloring, exhaustive profile and genuine simple-path budget bound justify the finite obstruction.",
+          "targets": [
+            "t0",
+            "t1",
+            "t2",
+            "t3",
+            "t4",
+            "t5",
+            "t6",
+            "t7",
+            "t8",
+            "t9",
+            "t10",
+            "t11",
+            "t12",
+            "t13",
+            "t14",
+            "t15",
+            "t16",
+            "t17",
+            "t18",
+            "t19",
+            "t20",
+            "t21",
+            "t22",
+            "t23",
+            "t24",
+            "t25",
+            "t26",
+            "t27",
+            "t28",
+            "t29",
+            "t30"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "sharpness",
+          "description": "An actual K7 subdivision exists; restriction yields all r <= 7 and the K8 obstruction excludes every r > 7.",
+          "targets": [
+            "t31",
+            "t32",
+            "t33",
+            "t34",
+            "t35",
+            "t36",
+            "t49",
+            "t50",
+            "t51",
+            "t52",
+            "t53",
+            "b3"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "subdivision-model",
+          "description": "Finite branch sets and indexed simple paths express the same complete subdivision, including r=0, all branch pairs, orientation reversal, disjoint interiors and branch avoidance.",
+          "targets": [
+            "t37",
+            "t38",
+            "t39",
+            "t40",
+            "t41",
+            "t42",
+            "t43",
+            "t44",
+            "t45",
+            "t46",
+            "t47",
+            "t48",
+            "b0",
+            "b1"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "uniform-bound",
+          "description": "One positive absolute real C works for every finite simple graph on n >= 2 vertices, chi/sigma <= C sqrt(n)/log(n), with attained positive maximum sigma and no density or connectivity premise.",
+          "targets": [
+            "t54",
+            "t60",
+            "b1",
+            "b2"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "extremal-consequences",
+          "description": "Supremum over all graphs on Fin n obeys the same upper bound. The explicit finite witness gives H(15) >= 8/7 and a necessary lower bound on any uniform C, not an optimal C or exact H(15).",
+          "targets": [
+            "t55",
+            "t56",
+            "t57",
+            "t58",
+            "t59"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "b0",
+      "problem": "JSP-000585",
+      "role": "bridge",
+      "module": "Catlin.VerificationBridge",
+      "source": "Catlin/VerificationBridge.lean",
+      "declaration": "Verify585.subdivision_iff"
+    },
+    {
+      "id": "b1",
+      "problem": "JSP-000585",
+      "role": "bridge",
+      "module": "Catlin.VerificationBridge",
+      "source": "Catlin/VerificationBridge.lean",
+      "declaration": "Verify585.sigma_spec"
+    },
+    {
+      "id": "b2",
+      "problem": "JSP-000585",
+      "role": "bridge",
+      "module": "Catlin.VerificationBridge",
+      "source": "Catlin/VerificationBridge.lean",
+      "declaration": "Verify585.uniform_ratio"
+    },
+    {
+      "id": "b3",
+      "problem": "JSP-000585",
+      "role": "bridge",
+      "module": "Catlin.VerificationBridge",
+      "source": "Catlin/VerificationBridge.lean",
+      "declaration": "Verify585.catlin_exact"
+    },
+    {
+      "id": "t0",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Certificate",
+      "source": "Certificate.lean",
+      "declaration": "CatlinCertificates.eight_colours"
+    },
+    {
+      "id": "t1",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Certificate",
+      "source": "Certificate.lean",
+      "declaration": "CatlinCertificates.proper_eight_colouring"
+    },
+    {
+      "id": "t2",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Certificate",
+      "source": "Certificate.lean",
+      "declaration": "CatlinCertificates.no_independent_triple"
+    },
+    {
+      "id": "t3",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Certificate",
+      "source": "Certificate.lean",
+      "declaration": "CatlinCertificates.finite_budget_certificate"
+    },
+    {
+      "id": "t4",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Certificate",
+      "source": "Certificate.lean",
+      "declaration": "CatlinCertificates.budget_bound"
+    },
+    {
+      "id": "t5",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Certificate",
+      "source": "Certificate.lean",
+      "declaration": "CatlinCertificates.no_feasible_resource_tuple"
+    },
+    {
+      "id": "t6",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "GraphCore",
+      "source": "GraphCore.lean",
+      "declaration": "CatlinComplete.mem_inside"
+    },
+    {
+      "id": "t7",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "GraphCore",
+      "source": "GraphCore.lean",
+      "declaration": "CatlinComplete.card_inside"
+    },
+    {
+      "id": "t8",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "GraphCore",
+      "source": "GraphCore.lean",
+      "declaration": "CatlinComplete.length_ge_two"
+    },
+    {
+      "id": "t9",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "GraphCore",
+      "source": "GraphCore.lean",
+      "declaration": "CatlinComplete.length_ge_three"
+    },
+    {
+      "id": "t10",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "GraphCore",
+      "source": "GraphCore.lean",
+      "declaration": "CatlinComplete.demand_le_inside"
+    },
+    {
+      "id": "t11",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Profile",
+      "source": "Profile.lean",
+      "declaration": "CatlinComplete.profile_certificate"
+    },
+    {
+      "id": "t12",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Profile",
+      "source": "Profile.lean",
+      "declaration": "CatlinComplete.separated_endpoints"
+    },
+    {
+      "id": "t13",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Profile",
+      "source": "Profile.lean",
+      "declaration": "CatlinComplete.common_in_middle"
+    },
+    {
+      "id": "t14",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Profile",
+      "source": "Profile.lean",
+      "declaration": "CatlinComplete.cluster_size"
+    },
+    {
+      "id": "t15",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Profile",
+      "source": "Profile.lean",
+      "declaration": "CatlinComplete.count_le_three"
+    },
+    {
+      "id": "t16",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Profile",
+      "source": "Profile.lean",
+      "declaration": "CatlinComplete.sum_counts"
+    },
+    {
+      "id": "t17",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Profile",
+      "source": "Profile.lean",
+      "declaration": "CatlinComplete.full_cluster"
+    },
+    {
+      "id": "t18",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Profile",
+      "source": "Profile.lean",
+      "declaration": "CatlinComplete.weight_le_demand"
+    },
+    {
+      "id": "t19",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Profile",
+      "source": "Profile.lean",
+      "declaration": "CatlinComplete.regroup"
+    },
+    {
+      "id": "t20",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Profile",
+      "source": "Profile.lean",
+      "declaration": "CatlinComplete.regroup_twice"
+    },
+    {
+      "id": "t21",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Profile",
+      "source": "Profile.lean",
+      "declaration": "CatlinComplete.profileCost_le_budget"
+    },
+    {
+      "id": "t22",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Profile",
+      "source": "Profile.lean",
+      "declaration": "CatlinComplete.budget_ge_eight"
+    },
+    {
+      "id": "t23",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Subdivision",
+      "source": "Subdivision.lean",
+      "declaration": "CatlinComplete.sum_demand_edges"
+    },
+    {
+      "id": "t24",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Subdivision",
+      "source": "Subdivision.lean",
+      "declaration": "CatlinComplete.total_inside_bound"
+    },
+    {
+      "id": "t25",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Subdivision",
+      "source": "Subdivision.lean",
+      "declaration": "CatlinComplete.subdivision_budget_bound"
+    },
+    {
+      "id": "t26",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Colouring",
+      "source": "Colouring.lean",
+      "declaration": "CatlinComplete.colour_fiber_card_le_two"
+    },
+    {
+      "id": "t27",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Colouring",
+      "source": "Colouring.lean",
+      "declaration": "CatlinComplete.not_seven_colorable"
+    },
+    {
+      "id": "t28",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Colouring",
+      "source": "Colouring.lean",
+      "declaration": "CatlinComplete.chromaticNumber_eq_eight"
+    },
+    {
+      "id": "t29",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Catlin",
+      "source": "Catlin.lean",
+      "declaration": "CatlinComplete.no_K8_subdivision"
+    },
+    {
+      "id": "t30",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Catlin",
+      "source": "Catlin.lean",
+      "declaration": "CatlinComplete.catlin_counterexample"
+    },
+    {
+      "id": "t31",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Sharp",
+      "source": "Sharp.lean",
+      "declaration": "CatlinComplete.seven_exceptional"
+    },
+    {
+      "id": "t32",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Sharp",
+      "source": "Sharp.lean",
+      "declaration": "CatlinComplete.seven_detour"
+    },
+    {
+      "id": "t33",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Sharp",
+      "source": "Sharp.lean",
+      "declaration": "CatlinComplete.contains_K7_subdivision"
+    },
+    {
+      "id": "t34",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Sharp",
+      "source": "Sharp.lean",
+      "declaration": "CatlinComplete.containsCliqueSubdivision_antitone"
+    },
+    {
+      "id": "t35",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Sharp",
+      "source": "Sharp.lean",
+      "declaration": "CatlinComplete.containsCliqueSubdivision_iff"
+    },
+    {
+      "id": "t36",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "Sharp",
+      "source": "Sharp.lean",
+      "declaration": "CatlinComplete.sharp_catlin_counterexample"
+    },
+    {
+      "id": "t37",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000585.edge_left_mem",
+      "definition_source": "JSP000585Bridge.lean",
+      "definition_sha256": "4c50be4cac948be703496ab0e68d5c9192574e19fcf2c623298178d9c4bbc456",
+      "verification_entry_note": "The tracked definition module is compiled and kernel-replayed by the unchanged original verifier but is not a registered native Lake module target. Tracked configured AuditComplete.lean imports the complete closure and exposes this exact declaration; all 11 declarations remain individually checked, printed and axiom-audited. No proof source or Lake configuration is modified."
+    },
+    {
+      "id": "t38",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000585.edge_right_mem",
+      "definition_source": "JSP000585Bridge.lean",
+      "definition_sha256": "4c50be4cac948be703496ab0e68d5c9192574e19fcf2c623298178d9c4bbc456",
+      "verification_entry_note": "The tracked definition module is compiled and kernel-replayed by the unchanged original verifier but is not a registered native Lake module target. Tracked configured AuditComplete.lean imports the complete closure and exposes this exact declaration; all 11 declarations remain individually checked, printed and axiom-audited. No proof source or Lake configuration is modified."
+    },
+    {
+      "id": "t39",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000585.edge_lt",
+      "definition_source": "JSP000585Bridge.lean",
+      "definition_sha256": "4c50be4cac948be703496ab0e68d5c9192574e19fcf2c623298178d9c4bbc456",
+      "verification_entry_note": "The tracked definition module is compiled and kernel-replayed by the unchanged original verifier but is not a registered native Lake module target. Tracked configured AuditComplete.lean imports the complete closure and exposes this exact declaration; all 11 declarations remain individually checked, printed and axiom-audited. No proof source or Lake configuration is modified."
+    },
+    {
+      "id": "t40",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000585.card_branchSet",
+      "definition_source": "JSP000585Bridge.lean",
+      "definition_sha256": "4c50be4cac948be703496ab0e68d5c9192574e19fcf2c623298178d9c4bbc456",
+      "verification_entry_note": "The tracked definition module is compiled and kernel-replayed by the unchanged original verifier but is not a registered native Lake module target. Tracked configured AuditComplete.lean imports the complete closure and exposes this exact declaration; all 11 declarations remain individually checked, printed and axiom-audited. No proof source or Lake configuration is modified."
+    },
+    {
+      "id": "t41",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000585.mem_branchSet",
+      "definition_source": "JSP000585Bridge.lean",
+      "definition_sha256": "4c50be4cac948be703496ab0e68d5c9192574e19fcf2c623298178d9c4bbc456",
+      "verification_entry_note": "The tracked definition module is compiled and kernel-replayed by the unchanged original verifier but is not a registered native Lake module target. Tracked configured AuditComplete.lean imports the complete closure and exposes this exact declaration; all 11 declarations remain individually checked, printed and axiom-audited. No proof source or Lake configuration is modified."
+    },
+    {
+      "id": "t42",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000585.branch_branchLabel",
+      "definition_source": "JSP000585Bridge.lean",
+      "definition_sha256": "4c50be4cac948be703496ab0e68d5c9192574e19fcf2c623298178d9c4bbc456",
+      "verification_entry_note": "The tracked definition module is compiled and kernel-replayed by the unchanged original verifier but is not a registered native Lake module target. Tracked configured AuditComplete.lean imports the complete closure and exposes this exact declaration; all 11 declarations remain individually checked, printed and axiom-audited. No proof source or Lake configuration is modified."
+    },
+    {
+      "id": "t43",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000585.labels_ne",
+      "definition_source": "JSP000585Bridge.lean",
+      "definition_sha256": "4c50be4cac948be703496ab0e68d5c9192574e19fcf2c623298178d9c4bbc456",
+      "verification_entry_note": "The tracked definition module is compiled and kernel-replayed by the unchanged original verifier but is not a registered native Lake module target. Tracked configured AuditComplete.lean imports the complete closure and exposes this exact declaration; all 11 declarations remain individually checked, printed and axiom-audited. No proof source or Lake configuration is modified."
+    },
+    {
+      "id": "t44",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000585.indexedEdge_injective",
+      "definition_source": "JSP000585Bridge.lean",
+      "definition_sha256": "4c50be4cac948be703496ab0e68d5c9192574e19fcf2c623298178d9c4bbc456",
+      "verification_entry_note": "The tracked definition module is compiled and kernel-replayed by the unchanged original verifier but is not a registered native Lake module target. Tracked configured AuditComplete.lean imports the complete closure and exposes this exact declaration; all 11 declarations remain individually checked, printed and axiom-audited. No proof source or Lake configuration is modified."
+    },
+    {
+      "id": "t45",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000585.convertedPath_isPath",
+      "definition_source": "JSP000585Bridge.lean",
+      "definition_sha256": "4c50be4cac948be703496ab0e68d5c9192574e19fcf2c623298178d9c4bbc456",
+      "verification_entry_note": "The tracked definition module is compiled and kernel-replayed by the unchanged original verifier but is not a registered native Lake module target. Tracked configured AuditComplete.lean imports the complete closure and exposes this exact declaration; all 11 declarations remain individually checked, printed and axiom-audited. No proof source or Lake configuration is modified."
+    },
+    {
+      "id": "t46",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000585.inside_convertedPath",
+      "definition_source": "JSP000585Bridge.lean",
+      "definition_sha256": "4c50be4cac948be703496ab0e68d5c9192574e19fcf2c623298178d9c4bbc456",
+      "verification_entry_note": "The tracked definition module is compiled and kernel-replayed by the unchanged original verifier but is not a registered native Lake module target. Tracked configured AuditComplete.lean imports the complete closure and exposes this exact declaration; all 11 declarations remain individually checked, printed and axiom-audited. No proof source or Lake configuration is modified."
+    },
+    {
+      "id": "t47",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000585.containsSubdivision_iff_indexed",
+      "definition_source": "JSP000585Bridge.lean",
+      "definition_sha256": "4c50be4cac948be703496ab0e68d5c9192574e19fcf2c623298178d9c4bbc456",
+      "verification_entry_note": "The tracked definition module is compiled and kernel-replayed by the unchanged original verifier but is not a registered native Lake module target. Tracked configured AuditComplete.lean imports the complete closure and exposes this exact declaration; all 11 declarations remain individually checked, printed and axiom-audited. No proof source or Lake configuration is modified."
+    },
+    {
+      "id": "t48",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "JSP000585Complete",
+      "source": "JSP000585Complete.lean",
+      "declaration": "JSP000585.subdivisionModels_iff"
+    },
+    {
+      "id": "t49",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "JSP000585Complete",
+      "source": "JSP000585Complete.lean",
+      "declaration": "JSP000585.catlin_subdivision_iff"
+    },
+    {
+      "id": "t50",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "JSP000585Complete",
+      "source": "JSP000585Complete.lean",
+      "declaration": "JSP000585.catlin_sigma_eq_seven"
+    },
+    {
+      "id": "t51",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "JSP000585Complete",
+      "source": "JSP000585Complete.lean",
+      "declaration": "JSP000585.catlin_chi_eq_eight"
+    },
+    {
+      "id": "t52",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "JSP000585Complete",
+      "source": "JSP000585Complete.lean",
+      "declaration": "JSP000585.catlin_ratio_eq"
+    },
+    {
+      "id": "t53",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "JSP000585Complete",
+      "source": "JSP000585Complete.lean",
+      "declaration": "JSP000585.catlin_ratio_gt_one"
+    },
+    {
+      "id": "t54",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "JSP000585Complete",
+      "source": "JSP000585Complete.lean",
+      "declaration": "JSP000585.exists_universal_ratio_bound"
+    },
+    {
+      "id": "t55",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "JSP000585Complete",
+      "source": "JSP000585Complete.lean",
+      "declaration": "JSP000585.ratio_range_bddAbove"
+    },
+    {
+      "id": "t56",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "JSP000585Complete",
+      "source": "JSP000585Complete.lean",
+      "declaration": "JSP000585.extremal_upper_bound"
+    },
+    {
+      "id": "t57",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "JSP000585Complete",
+      "source": "JSP000585Complete.lean",
+      "declaration": "JSP000585.catlin_extremal_lower_bound"
+    },
+    {
+      "id": "t58",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "JSP000585Complete",
+      "source": "JSP000585Complete.lean",
+      "declaration": "JSP000585.catlin_constant_lower_bound"
+    },
+    {
+      "id": "t59",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "JSP000585Complete",
+      "source": "JSP000585Complete.lean",
+      "declaration": "JSP000585.jsp_000585"
+    },
+    {
+      "id": "t60",
+      "problem": "JSP-000585",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos717.erdos_717"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "leanchecker",
+    "Catlin.VerificationBridge"
+  ],
+  "cwd": "/work/projects/catlin-research",
+  "exit_code": 0,
+  "seconds": 8.131463289260864
+}

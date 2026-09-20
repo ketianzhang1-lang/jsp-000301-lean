@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "-j1",
+    "-M12000",
+    "-o",
+    "/work/projects/jsp-000728/.lake/build/lib/lean/JSP000728/VerificationBridge.olean",
+    "/work/projects/jsp-000728/JSP000728/VerificationBridge.lean"
+  ],
+  "cwd": "/work/projects/jsp-000728",
+  "exit_code": 0,
+  "seconds": 5.62783670425415
+}

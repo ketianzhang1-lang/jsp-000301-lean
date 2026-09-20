@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "/out/tools/exporter/.lake/build/bin/lean4export",
+    "FullProof.VerificationBridge",
+    "--",
+    "Verify912.literal_formula",
+    "Verify912.intended",
+    "JSP912.grid_approx",
+    "JSP912.partialProd_bound",
+    "JSP912.lower_gap_weight",
+    "JSP912.all_gap_cost",
+    "JSP912.hAlpha_candidate_bound",
+    "JSP912.jsp_000912_full",
+    "JSP912.erdos_1099"
+  ],
+  "cwd": "/work/projects/jsp-000912",
+  "exit_code": 0,
+  "seconds": 5.644334554672241
+}

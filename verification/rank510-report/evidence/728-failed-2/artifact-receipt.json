@@ -1,0 +1,9 @@
+{
+  "artifact_id": 10594747791,
+  "workflow_run": 35477208711,
+  "harness_commit": "e8b533e5fc41ca9e5c24085315d3617ef20d3c54",
+  "filename": "728-failed-2.zip",
+  "sha256": "65af5b66ce4a8faf82dcc1558acfc0e80a7870959ed5b11918d7d78b5190dd47",
+  "bytes": 221735,
+  "internal_files_verified": 258
+}

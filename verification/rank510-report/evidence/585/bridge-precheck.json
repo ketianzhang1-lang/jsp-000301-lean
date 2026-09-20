@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "-j1",
+    "-M12000",
+    "-o",
+    "/work/projects/catlin-research/.lake/build/lib/lean/Catlin/VerificationBridge.olean",
+    "/work/projects/catlin-research/Catlin/VerificationBridge.lean"
+  ],
+  "cwd": "/work/projects/catlin-research",
+  "exit_code": 0,
+  "seconds": 3.220672845840454
+}

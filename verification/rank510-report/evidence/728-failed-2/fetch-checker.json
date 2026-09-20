@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "git",
+    "-C",
+    "/out/tools/checker",
+    "fetch",
+    "--depth",
+    "1",
+    "https://github.com/ammkrn/nanoda_lib.git",
+    "4c544ed4099c8227f07d5de77ad1e69fb0740a27"
+  ],
+  "cwd": "/out",
+  "exit_code": 0,
+  "seconds": 0.6149404048919678
+}

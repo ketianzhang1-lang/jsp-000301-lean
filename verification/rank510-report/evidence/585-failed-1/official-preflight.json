@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "/harness/audit.py",
+    "preflight",
+    "/out/targets.json",
+    "--out",
+    "/out/preflight"
+  ],
+  "cwd": "/work/projects/catlin-research",
+  "exit_code": 0,
+  "seconds": 0.3140866756439209
+}

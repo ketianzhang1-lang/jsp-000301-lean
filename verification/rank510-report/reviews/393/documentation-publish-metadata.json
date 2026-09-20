@@ -1,0 +1,28 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "5e64f5d95571ca86e30af2aa5d302b7cde86de4c5d23d3db51d6a4bd62a8a84b",
+  "original_bytes": 1218,
+  "data": {
+    "expected_parent_commit": "aa1ed1bac2eb0c1ec33723ff802ff3b9b6c02ee8",
+    "branch": "jsp-000393-general-coefficients",
+    "purpose": "Documentation-only follow-up; selected checked proof remains aa1ed1bac2eb0c1ec33723ff802ff3b9b6c02ee8",
+    "wait_before_publish": "Root should publish only after final verification decision is known, without treating this new docs commit as the checked proof.",
+    "paths": [
+      "README.md",
+      "GENERAL_COEFFICIENTS.md",
+      "STATEMENT_FIDELITY.md",
+      "PROVENANCE.md"
+    ],
+    "source_content_hashes": {
+      "README.md": "d0db3db959b04f9c20210a1a581cb2f6bbdb187486ec4bb068c3e13bae938f53",
+      "GENERAL_COEFFICIENTS.md": "c48b2140536c2c388cdbe8c093b5be321865c322cc422121e91db8dce3741a0a",
+      "STATEMENT_FIDELITY.md": "b42d00af17072f902ff24975699e61987dcd1bae34b21ecd69023e63c8aea03f",
+      "PROVENANCE.md": "ad253e80007cfcb4e468b2ecd05633810f847b63953e68142e570739b277edb9"
+    },
+    "contains_lean_or_manifest_changes": false,
+    "prepared_git_tree": "10265531ed79878a5ffcfbbcd45c3980024b0fdc",
+    "published": true,
+    "commit": "2801fefafa39cb26e5bb351c5d3ac94bbcf27252",
+    "url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/commit/2801fefafa39cb26e5bb351c5d3ac94bbcf27252"
+  }
+}

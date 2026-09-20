@@ -1,0 +1,94 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "8791e940a0df173bf1769d9f32c4d3d692965db922b3e3a96f1088001b186a0b",
+  "original_bytes": 2730,
+  "data": {
+    "checked_at": "2026-09-19T23:20:59.476995+00:00",
+    "checkout": "5c23ecf6211449c9bd7f4ac9229300ed43f666b2",
+    "branch_tip": "5c23ecf6211449c9bd7f4ac9229300ed43f666b2",
+    "ancestor_exit_code": 0,
+    "retained_proof_modules": [
+      {
+        "file": "JSP000636.lean",
+        "identical": true,
+        "old_sha256": "ea51a6baca6bed306a1b71c4fc2023429c6fdf47f00284cc727638afa5284640",
+        "new_sha256": "ea51a6baca6bed306a1b71c4fc2023429c6fdf47f00284cc727638afa5284640"
+      },
+      {
+        "file": "Lower.lean",
+        "identical": true,
+        "old_sha256": "52febbca28f56fb543da906376d93545e5c307f144344df2b63ce1b5aa9458f4",
+        "new_sha256": "52febbca28f56fb543da906376d93545e5c307f144344df2b63ce1b5aa9458f4"
+      },
+      {
+        "file": "Upper.lean",
+        "identical": true,
+        "old_sha256": "e8e79f1bf618ef9aa6fc5fcf3d01d66fbebd6569585d6c9a3cf41b9ee821ae61",
+        "new_sha256": "e8e79f1bf618ef9aa6fc5fcf3d01d66fbebd6569585d6c9a3cf41b9ee821ae61"
+      },
+      {
+        "file": "Construction.lean",
+        "identical": true,
+        "old_sha256": "b0e6fd9ebb89aa9c2e0a6e04b38ef670702bf314202144c5ef99288b53304586",
+        "new_sha256": "b0e6fd9ebb89aa9c2e0a6e04b38ef670702bf314202144c5ef99288b53304586"
+      },
+      {
+        "file": "Threshold.lean",
+        "identical": true,
+        "old_sha256": "0b62a240f23f6b128050ae8ffc3ca5a8e3b6326ab86b3d6daa84764d057d7437",
+        "new_sha256": "0b62a240f23f6b128050ae8ffc3ca5a8e3b6326ab86b3d6daa84764d057d7437"
+      },
+      {
+        "file": "Thinning.lean",
+        "identical": true,
+        "old_sha256": "03e71f68214b7efcad0a48261fd8e48666875866a417b23ddf3ca1bb863c79db",
+        "new_sha256": "03e71f68214b7efcad0a48261fd8e48666875866a417b23ddf3ca1bb863c79db"
+      },
+      {
+        "file": "Asymptotics.lean",
+        "identical": true,
+        "old_sha256": "89c6b975c631322b245d652664a69e826c1c85053f6adb33d0c5075b30cf7c16",
+        "new_sha256": "89c6b975c631322b245d652664a69e826c1c85053f6adb33d0c5075b30cf7c16"
+      }
+    ],
+    "imports": {
+      "OriginalQuestion.lean": [
+        "Asymptotics"
+      ],
+      "Asymptotics.lean": [
+        "Thinning",
+        "Mathlib.Analysis.SpecificLimits.Basic"
+      ],
+      "Thinning.lean": [
+        "Threshold"
+      ],
+      "Lower.lean": [
+        "JSP000636",
+        "Mathlib.Data.Finset.Prod"
+      ],
+      "JSP000636.lean": [
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Order.Interval.Finset.Nat",
+        "Mathlib.Tactic"
+      ],
+      "Construction.lean": [
+        "Upper"
+      ],
+      "lakefile.lean": [
+        "Lake"
+      ],
+      "Audit.lean": [
+        "OriginalQuestion"
+      ],
+      "Upper.lean": [
+        "Lower",
+        "Mathlib.Order.Interval.Finset.Fin",
+        "Mathlib.Data.Fintype.EquivFin",
+        "Mathlib.Data.Nat.Sqrt"
+      ],
+      "Threshold.lean": [
+        "Construction"
+      ]
+    }
+  }
+}

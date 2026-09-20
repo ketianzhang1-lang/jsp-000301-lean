@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "lake",
+    "exe",
+    "cache",
+    "get",
+    "Mathlib"
+  ],
+  "cwd": "/work/projects/jsp-000506",
+  "exit_code": 0,
+  "seconds": 106.06407594680786
+}

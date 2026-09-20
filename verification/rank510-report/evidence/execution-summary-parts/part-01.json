@@ -1,0 +1,1669 @@
+{
+  "636": {
+    "status": "mechanical_evidence_validated",
+    "semantic_verdict": "requires_separate_review",
+    "proof_commit": "5c23ecf6211449c9bd7f4ac9229300ed43f666b2",
+    "branch_tip": "5c23ecf6211449c9bd7f4ac9229300ed43f666b2",
+    "target_count": 82,
+    "original_target_count": 79,
+    "axioms": {
+      "Verify636.profile_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify636.original": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify636.intended": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.antichain_iff_isAntichain": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.twins_of_multiplicity": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.card_pos_of_twins": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.antichain_complements": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.twins_complements": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.card_sizes_complements": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.card_le_of_singleton": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.size_count_le_of_singleton": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.size_count_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.card_eq_mul_size_count": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.exact_multiplicity_card_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.sharp_at_four": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.three_is_exception": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.one_is_exception": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.pair_eq_of_mem": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.pair_of_mem": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.mem_crossPairs": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.hits_crossPairs": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.cross_intersecting_pairs_intersect": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.intersecting_pairs_star": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.star_image": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.card_leaves": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.common_star": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.level_card_ge": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.complements_involutive": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.multiplicity_complements": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.card_singles": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.sizes_bound_of_singles": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.full_profile": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.small_contains_center": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.subset_avoiding_leaves": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.erase_not_subset": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.coatom_blockers_card": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.middle_contains_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.card_complements": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.critical_size_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.extremal_critical_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.threshold_lower_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.choose_ge_self": [
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.pair_capacity": [
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.select_subsets": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.HalfFamily.mem_family": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.HalfFamily.antichain": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.HalfFamily.card_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.HalfFamily.common_mem": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.HalfFamily.multiplicity": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.HalfFamily.full_antichain": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.HalfFamily.full_multiplicity": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.HalfFamily.all_sizes": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.HalfFamily.full_size_count": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.pairLabel_half_exists": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.sqrt_pair_capacity": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.attaining_family": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.extremal_eventually_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.threshold_upper_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.threshold_exists": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.leastThreshold_spec": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.leastThreshold_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.leastThreshold_bounds": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.thin_to_exact": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.exact_attaining_family": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.exactExtremal_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.exactExtremal_eventually_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.threshold_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.threshold_exact_spec": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.threshold_bounds": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.threshold_relative_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.threshold_ratio_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.threshold_ratio_tendsto": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.exact_threshold_estimate": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.jsp_000636_estimate": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.mapFamily_card": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.mapFamily_level_card": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.mapFamily_antichain_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.mapFamily_exact_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.finite_type_card_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.finite_type_attaining_family": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.original_threshold_question": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000636.jsp_000636": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "source_inputs_stable": true,
+    "dependency_count": 9,
+    "dependencies": {
+      "mathlib": "5ed2965256430c3649e86755f9576b54eca72435",
+      "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+      "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+    },
+    "nanoda_declarations": 11667,
+    "official_script_sha256": "5db45dddcb4d588bc27e7c7161fbca5cedaa3e73e1c40843d21f5a214323cd07",
+    "manifest_sha256": "aa244389e120740decc27cfd081449963c07ec1ef35f109a7b4e4bf8545b2d00",
+    "image_id": "sha256:f799d1cdf50bf218f6ab9d75d1b1b37c071dd1998246bb4676448492342ba7df",
+    "artifact_files_hashed": 454,
+    "original_verification_records": [],
+    "original_kernel_logs": [
+      "fresh-project-evidence/leanchecker-JSP000636.log",
+      "fresh-project-evidence/leanchecker-Lower.log",
+      "fresh-project-evidence/leanchecker-Upper.log",
+      "fresh-project-evidence/leanchecker-Construction.log",
+      "fresh-project-evidence/leanchecker-Threshold.log",
+      "fresh-project-evidence/leanchecker-Thinning.log",
+      "fresh-project-evidence/leanchecker-Asymptotics.log",
+      "fresh-project-evidence/leanchecker-OriginalQuestion.log"
+    ],
+    "original_axiom_outputs": [
+      {
+        "log": "fresh-project-evidence/axioms.log",
+        "source": "Audit.lean",
+        "targets": 79
+      }
+    ],
+    "negative_controls": [
+      {
+        "log": "fresh-project-evidence/negative-control.log",
+        "expected_exit": "nonzero",
+        "exit_evidence": "semantic Lean error; nonzero exit enforced by successful original verifier",
+        "separate_exit_code_recorded": false
+      }
+    ],
+    "strict_bridge_precheck": "validated",
+    "bridge_source_sha256": "fe4dbf17d4bc7f227ca26d3647981511f8c0640ef2484ba0ff6412878011fbb4",
+    "manual_equivalent_builds": 0,
+    "stages": {
+      "versions": {
+        "argv": [
+          "bash",
+          "-c",
+          "set -e; lean --version; lake --version; rustc --version; cargo --version; id; uname -a"
+        ],
+        "cwd": "/work/projects/jsp-000636",
+        "exit_code": 0,
+        "seconds": 0.21500587463378906
+      },
+      "build-exporter": {
+        "argv": [
+          "lake",
+          "build"
+        ],
+        "cwd": "/out/tools/exporter",
+        "exit_code": 0,
+        "seconds": 9.485657930374146
+      },
+      "build-checker": {
+        "argv": [
+          "cargo",
+          "build",
+          "--release",
+          "--locked"
+        ],
+        "cwd": "/out/tools/checker",
+        "exit_code": 0,
+        "seconds": 18.824806928634644
+      },
+      "original-clean-verifier": {
+        "argv": [
+          "bash",
+          "scripts/verify.sh"
+        ],
+        "cwd": "/work/projects/jsp-000636",
+        "exit_code": 0,
+        "seconds": 105.61158227920532
+      },
+      "official-preflight": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "preflight",
+          "/out/targets.json",
+          "--out",
+          "/out/preflight"
+        ],
+        "cwd": "/work/projects/jsp-000636",
+        "exit_code": 0,
+        "seconds": 0.21431851387023926
+      },
+      "official-audit": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "run",
+          "/out/targets.json",
+          "--out",
+          "/out/audit",
+          "--lake",
+          "/opt/elan/toolchains/leanprover--lean4---v4.34.0/bin/lake",
+          "--timeout",
+          "2400"
+        ],
+        "cwd": "/work/projects/jsp-000636",
+        "exit_code": 0,
+        "seconds": 721.7845437526703
+      },
+      "bridge-kernel": {
+        "argv": [
+          "lake",
+          "env",
+          "leanchecker",
+          "JSP000636.VerificationBridge"
+        ],
+        "cwd": "/work/projects/jsp-000636",
+        "exit_code": 0,
+        "seconds": 8.783480167388916
+      },
+      "independent-nanoda": {
+        "argv": [
+          "/out/tools/checker/target/release/nanoda_bin",
+          "/out/nanoda-config.json"
+        ],
+        "cwd": "/work/projects/jsp-000636",
+        "exit_code": 0,
+        "seconds": 4.222500324249268
+      },
+      "dependencies": {
+        "argv": [
+          "python3",
+          "-c",
+          "import json,subprocess;from pathlib import Path;ps=json.loads(Path('lake-manifest.json').read_text())['packages'];a={p['name']:subprocess.check_output(['git','-C','.lake/packages/'+p['name'],'rev-parse','HEAD'],text=True).strip() for p in ps};print(json.dumps(a,indent=2));assert all(a[p['name']]==p['rev'] for p in ps)"
+        ],
+        "cwd": "/work/projects/jsp-000636",
+        "exit_code": 0,
+        "seconds": 0.0641012191772461
+      },
+      "final-status": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain",
+          "--untracked-files=all"
+        ],
+        "cwd": "/work/projects/jsp-000636",
+        "exit_code": 0,
+        "seconds": 0.003629446029663086
+      },
+      "compress-export": {
+        "argv": [
+          "gzip",
+          "-n",
+          "/out/export.ndjson"
+        ],
+        "cwd": "/out",
+        "exit_code": 0,
+        "seconds": 1.3167695999145508
+      },
+      "prepare-dependencies-0": {
+        "argv": [
+          "lake",
+          "exe",
+          "cache",
+          "get",
+          "Mathlib"
+        ],
+        "cwd": "/work/projects/jsp-000636",
+        "exit_code": 0,
+        "seconds": 99.4161159992218
+      },
+      "prepare-dependencies-1": {
+        "argv": [
+          "lake",
+          "build",
+          "Mathlib"
+        ],
+        "cwd": "/work/projects/jsp-000636",
+        "exit_code": 0,
+        "seconds": 15.395913124084473
+      },
+      "bridge-precheck": {
+        "argv": [
+          "lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "-j1",
+          "-M12000",
+          "-o",
+          "/work/projects/jsp-000636/.lake/build/lib/lean/JSP000636/VerificationBridge.olean",
+          "/work/projects/jsp-000636/JSP000636/VerificationBridge.lean"
+        ],
+        "cwd": "/work/projects/jsp-000636",
+        "exit_code": 0,
+        "seconds": 3.1712512969970703
+      }
+    }
+  },
+  "912-full": {
+    "status": "mechanical_evidence_validated",
+    "semantic_verdict": "requires_separate_review",
+    "proof_commit": "bf99214b3104d89c628abb9c824a56d89a6bd6fe",
+    "branch_tip": "b4e47f3491c8278997b7998c535eee0eb7ccdc73",
+    "target_count": 9,
+    "original_target_count": 7,
+    "axioms": {
+      "Verify912.literal_formula": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify912.intended": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP912.grid_approx": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP912.partialProd_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP912.lower_gap_weight": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP912.all_gap_cost": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP912.hAlpha_candidate_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP912.jsp_000912_full": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP912.erdos_1099": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "source_inputs_stable": true,
+    "dependency_count": 9,
+    "dependencies": {
+      "mathlib": "5ed2965256430c3649e86755f9576b54eca72435",
+      "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+      "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+    },
+    "nanoda_declarations": 17957,
+    "official_script_sha256": "5db45dddcb4d588bc27e7c7161fbca5cedaa3e73e1c40843d21f5a214323cd07",
+    "manifest_sha256": "70fc89dea47cb145f1372accac32a5ed97fae84aa01de586a7ccfbf982136dee",
+    "image_id": "sha256:e82d48bd54610d607c524b59057dc25185b4068faeba8c410a4e6c4218226c86",
+    "artifact_files_hashed": 158,
+    "original_verification_records": [],
+    "original_kernel_logs": [
+      "fresh-project-evidence/leanchecker-FullProof.log",
+      "fresh-project-evidence/leanchecker-JSP912.Grid.log",
+      "fresh-project-evidence/leanchecker-JSP912.Construction.log",
+      "fresh-project-evidence/leanchecker-JSP912.Decay.log",
+      "fresh-project-evidence/leanchecker-JSP912.Potential.log",
+      "fresh-project-evidence/leanchecker-JSP912.Main.log"
+    ],
+    "original_axiom_outputs": [
+      {
+        "log": "fresh-project-evidence/axioms.log",
+        "source": "Audit.lean",
+        "targets": 7
+      },
+      {
+        "log": "fresh-project-evidence/axioms-modular.log",
+        "source": "Audit.lean",
+        "targets": 7
+      }
+    ],
+    "negative_controls": [
+      {
+        "log": "fresh-project-evidence/negative-control.log",
+        "expected_exit": "nonzero",
+        "exit_evidence": "semantic Lean error; nonzero exit enforced by successful original verifier",
+        "separate_exit_code_recorded": false
+      }
+    ],
+    "strict_bridge_precheck": "absent_in_older_runner",
+    "bridge_source_sha256": "df3f7a7bef5d043a20318538994b3cbb1276150dbf2d127ebe490be7c813809f",
+    "manual_equivalent_builds": 0,
+    "stages": {
+      "versions": {
+        "argv": [
+          "bash",
+          "-c",
+          "set -e; lean --version; lake --version; rustc --version; cargo --version; id; uname -a"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 0.16492891311645508
+      },
+      "build-exporter": {
+        "argv": [
+          "lake",
+          "build"
+        ],
+        "cwd": "/out/tools/exporter",
+        "exit_code": 0,
+        "seconds": 10.087782621383667
+      },
+      "build-checker": {
+        "argv": [
+          "cargo",
+          "build",
+          "--release",
+          "--locked"
+        ],
+        "cwd": "/out/tools/checker",
+        "exit_code": 0,
+        "seconds": 15.557940244674683
+      },
+      "original-clean-verifier": {
+        "argv": [
+          "bash",
+          "scripts/verify.sh"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 77.42212128639221
+      },
+      "official-preflight": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "preflight",
+          "/out/targets.json",
+          "--out",
+          "/out/preflight"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 0.06399130821228027
+      },
+      "official-audit": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "run",
+          "/out/targets.json",
+          "--out",
+          "/out/audit",
+          "--lake",
+          "/opt/elan/toolchains/leanprover--lean4---v4.34.0/bin/lake",
+          "--timeout",
+          "2400"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 104.35316395759583
+      },
+      "bridge-kernel": {
+        "argv": [
+          "lake",
+          "env",
+          "leanchecker",
+          "FullProof.VerificationBridge"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 7.983165740966797
+      },
+      "independent-nanoda": {
+        "argv": [
+          "/out/tools/checker/target/release/nanoda_bin",
+          "/out/nanoda-config.json"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 4.775372266769409
+      },
+      "dependencies": {
+        "argv": [
+          "python3",
+          "-c",
+          "import json,subprocess;from pathlib import Path;ps=json.loads(Path('lake-manifest.json').read_text())['packages'];a={p['name']:subprocess.check_output(['git','-C','.lake/packages/'+p['name'],'rev-parse','HEAD'],text=True).strip() for p in ps};print(json.dumps(a,indent=2));assert all(a[p['name']]==p['rev'] for p in ps)"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 0.0639798641204834
+      },
+      "final-status": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain",
+          "--untracked-files=all"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 0.003575563430786133
+      },
+      "compress-export": {
+        "argv": [
+          "gzip",
+          "-n",
+          "/out/export.ndjson"
+        ],
+        "cwd": "/out",
+        "exit_code": 0,
+        "seconds": 1.8676118850708008
+      },
+      "prepare-dependencies-0": {
+        "argv": [
+          "lake",
+          "exe",
+          "cache",
+          "get",
+          "Mathlib"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 92.8010823726654
+      },
+      "prepare-dependencies-1": {
+        "argv": [
+          "lake",
+          "build",
+          "Mathlib"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 20.957425117492676
+      }
+    }
+  },
+  "912-modular": {
+    "status": "mechanical_evidence_validated",
+    "semantic_verdict": "requires_separate_review",
+    "proof_commit": "bf99214b3104d89c628abb9c824a56d89a6bd6fe",
+    "branch_tip": "b4e47f3491c8278997b7998c535eee0eb7ccdc73",
+    "target_count": 9,
+    "original_target_count": 7,
+    "axioms": {
+      "Verify912.literal_formula": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify912.intended": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP912.grid_approx": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP912.partialProd_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP912.lower_gap_weight": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP912.all_gap_cost": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP912.hAlpha_candidate_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP912.jsp_000912_full": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP912.erdos_1099": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "source_inputs_stable": true,
+    "dependency_count": 9,
+    "dependencies": {
+      "mathlib": "5ed2965256430c3649e86755f9576b54eca72435",
+      "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+      "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+    },
+    "nanoda_declarations": 17958,
+    "official_script_sha256": "5db45dddcb4d588bc27e7c7161fbca5cedaa3e73e1c40843d21f5a214323cd07",
+    "manifest_sha256": "c09f44d3c7b427bdca6bd54f2fc58a2e523e97a30a1d07107669e4105aed3066",
+    "image_id": "sha256:0cf90e236f6d63d33575b7a7d05d7270c375bca918ca228cbd5b7f48989c919f",
+    "artifact_files_hashed": 158,
+    "original_verification_records": [],
+    "original_kernel_logs": [
+      "fresh-project-evidence/leanchecker-FullProof.log",
+      "fresh-project-evidence/leanchecker-JSP912.Grid.log",
+      "fresh-project-evidence/leanchecker-JSP912.Construction.log",
+      "fresh-project-evidence/leanchecker-JSP912.Decay.log",
+      "fresh-project-evidence/leanchecker-JSP912.Potential.log",
+      "fresh-project-evidence/leanchecker-JSP912.Main.log"
+    ],
+    "original_axiom_outputs": [
+      {
+        "log": "fresh-project-evidence/axioms.log",
+        "source": "Audit.lean",
+        "targets": 7
+      },
+      {
+        "log": "fresh-project-evidence/axioms-modular.log",
+        "source": "Audit.lean",
+        "targets": 7
+      }
+    ],
+    "negative_controls": [
+      {
+        "log": "fresh-project-evidence/negative-control.log",
+        "expected_exit": "nonzero",
+        "exit_evidence": "semantic Lean error; nonzero exit enforced by successful original verifier",
+        "separate_exit_code_recorded": false
+      }
+    ],
+    "strict_bridge_precheck": "absent_in_older_runner",
+    "bridge_source_sha256": "6d9803f8fd6c8172ed2bc2d589ad98c0f681f3119d31634ed2e62992f86d92fc",
+    "manual_equivalent_builds": 0,
+    "stages": {
+      "versions": {
+        "argv": [
+          "bash",
+          "-c",
+          "set -e; lean --version; lake --version; rustc --version; cargo --version; id; uname -a"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 0.2143840789794922
+      },
+      "build-exporter": {
+        "argv": [
+          "lake",
+          "build"
+        ],
+        "cwd": "/out/tools/exporter",
+        "exit_code": 0,
+        "seconds": 9.598104476928711
+      },
+      "build-checker": {
+        "argv": [
+          "cargo",
+          "build",
+          "--release",
+          "--locked"
+        ],
+        "cwd": "/out/tools/checker",
+        "exit_code": 0,
+        "seconds": 19.78597378730774
+      },
+      "original-clean-verifier": {
+        "argv": [
+          "bash",
+          "scripts/verify.sh"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 91.02396702766418
+      },
+      "official-preflight": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "preflight",
+          "/out/targets.json",
+          "--out",
+          "/out/preflight"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 0.06397533416748047
+      },
+      "official-audit": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "run",
+          "/out/targets.json",
+          "--out",
+          "/out/audit",
+          "--lake",
+          "/opt/elan/toolchains/leanprover--lean4---v4.34.0/bin/lake",
+          "--timeout",
+          "2400"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 84.04386830329895
+      },
+      "bridge-kernel": {
+        "argv": [
+          "lake",
+          "env",
+          "leanchecker",
+          "JSP912.VerificationBridge"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 9.040664911270142
+      },
+      "independent-nanoda": {
+        "argv": [
+          "/out/tools/checker/target/release/nanoda_bin",
+          "/out/nanoda-config.json"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 5.575625658035278
+      },
+      "dependencies": {
+        "argv": [
+          "python3",
+          "-c",
+          "import json,subprocess;from pathlib import Path;ps=json.loads(Path('lake-manifest.json').read_text())['packages'];a={p['name']:subprocess.check_output(['git','-C','.lake/packages/'+p['name'],'rev-parse','HEAD'],text=True).strip() for p in ps};print(json.dumps(a,indent=2));assert all(a[p['name']]==p['rev'] for p in ps)"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 0.06405258178710938
+      },
+      "final-status": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain",
+          "--untracked-files=all"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 0.003671407699584961
+      },
+      "compress-export": {
+        "argv": [
+          "gzip",
+          "-n",
+          "/out/export.ndjson"
+        ],
+        "cwd": "/out",
+        "exit_code": 0,
+        "seconds": 2.11814284324646
+      },
+      "prepare-dependencies-0": {
+        "argv": [
+          "lake",
+          "exe",
+          "cache",
+          "get",
+          "Mathlib"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 98.79546236991882
+      },
+      "prepare-dependencies-1": {
+        "argv": [
+          "lake",
+          "build",
+          "Mathlib"
+        ],
+        "cwd": "/work/projects/jsp-000912",
+        "exit_code": 0,
+        "seconds": 12.646394491195679
+      }
+    }
+  },
+  "393-general": {
+    "status": "mechanical_evidence_validated",
+    "semantic_verdict": "requires_separate_review",
+    "proof_commit": "aa1ed1bac2eb0c1ec33723ff802ff3b9b6c02ee8",
+    "branch_tip": "aa1ed1bac2eb0c1ec33723ff802ff3b9b6c02ee8",
+    "target_count": 29,
+    "original_target_count": 24,
+    "axioms": {
+      "Verify393General.minimum_definition": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify393General.complex_attained": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify393General.intended": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify393General.complex_uniform_threshold": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify393General.complex_zero_and_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393.family_counts": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393.arbitrarily_sparse_squares": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Erdos485.f_attained": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Erdos485.schinzel_support_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Erdos485.erdos_485": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393Complete.integer_support": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393Complete.rational_family_counts": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393Complete.minimum_family_upper_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393Complete.arbitrarily_large_small_ratio": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393Complete.integer_schinzel_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393Complete.integer_uniform_threshold": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393Complete.minimum_diverges": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393Complete.jsp_000393": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393General.schinzel_support_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393General.schinzel_term_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393General.uniform_threshold": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393General.minimum_attained": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393General.minimum_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393General.minimum_diverges": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393General.family_counts": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393General.minimum_family_upper_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393General.arbitrarily_large_small_ratio": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393General.jsp_000393": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000393General.complex_original": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "source_inputs_stable": true,
+    "dependency_count": 9,
+    "dependencies": {
+      "mathlib": "5ed2965256430c3649e86755f9576b54eca72435",
+      "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+      "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+    },
+    "nanoda_declarations": 35655,
+    "official_script_sha256": "5db45dddcb4d588bc27e7c7161fbca5cedaa3e73e1c40843d21f5a214323cd07",
+    "manifest_sha256": "4e34791f38f1c8baa038f99f1b4a952fe59a3af5fa85d7d1111d4d9c0c9954b7",
+    "image_id": "sha256:59f136237a74ae7e3f62e54c49ef030feda3babd7e9687592e22aa59697667bc",
+    "artifact_files_hashed": 295,
+    "original_verification_records": [
+      {
+        "status": "passed",
+        "toolchain": "leanprover/lean4:v4.34.0",
+        "preparation_head": "aa1ed1bac2eb0c1ec33723ff802ff3b9b6c02ee8",
+        "modules_compiled": [
+          "ErdosProblems.Erdos485.Arithmetic",
+          "ErdosProblems.Erdos485.Basic",
+          "ErdosProblems.Erdos485.Hajos",
+          "ErdosProblems.Erdos485.SquareDescent",
+          "ErdosProblems.Erdos485.Normalization",
+          "ErdosProblems.Erdos485.Trinomial",
+          "ErdosProblems.Erdos485.Dirichlet",
+          "ErdosProblems.Erdos485.Bivariate",
+          "ErdosProblems.Erdos485.Deformation",
+          "ErdosProblems.Erdos485.SquarefreeFactor",
+          "ErdosProblems.Erdos485.ResultantDegree",
+          "ErdosProblems.Erdos485.Weighted",
+          "ErdosProblems.Erdos485.WeightedCoprime",
+          "ErdosProblems.Erdos485.EvenMultiplicity",
+          "ErdosProblems.Erdos485.ResultantGap",
+          "ErdosProblems.Erdos485.ResultantSpecialize",
+          "ErdosProblems.Erdos485.Laurent",
+          "ErdosProblems.Erdos485.SquarefreeGap",
+          "ErdosProblems.Erdos485.Specialization",
+          "ErdosProblems.Erdos485.RecursiveSpecialization",
+          "ErdosProblems.Erdos485.Schinzel",
+          "ErdosProblems.Erdos485",
+          "JSP000393",
+          "JSP000393Complete",
+          "AuditComplete",
+          "JSP000393General",
+          "AuditGeneral"
+        ],
+        "original_axiom_reports": 13,
+        "general_axiom_reports": 11,
+        "allowed_axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "dependency_count": 9,
+        "kernel_prefixes": [
+          "ErdosProblems.Erdos485",
+          "JSP000393",
+          "JSP000393Complete",
+          "JSP000393General"
+        ],
+        "source_sha256": {
+          "ErdosProblems/Erdos485/Arithmetic.lean": "e014aa0eff9511d6bc3b3dc95762d07d6ea33d7f04c6e3bdc3134e977a8a0c23",
+          "ErdosProblems/Erdos485/Basic.lean": "d6598953a850d434c9bc2decbb46b6b033a0b72475c6d8aa722c912c7ee81c28",
+          "ErdosProblems/Erdos485/Hajos.lean": "5acdd2a7942d55ec8242c5614498256dd71b62415541590c4b9df96d6df21a68",
+          "ErdosProblems/Erdos485/SquareDescent.lean": "8e73dcb175f45bac5bd3acb3022a0ecb2e94d282408c7965df39520328e6105d",
+          "ErdosProblems/Erdos485/Normalization.lean": "70305ae93f74662950dcd23a9ca84072c49d9245ec3f0cea95d46dfe53c0bca8",
+          "ErdosProblems/Erdos485/Trinomial.lean": "d8cc674790cedb96c8d9e5d4752bb54145f121d8056cda1384b3ef454529fcbf",
+          "ErdosProblems/Erdos485/Dirichlet.lean": "37af4f9ed1260810dda0017ba40ac82de703697aab730248b8bff46d867aa1ca",
+          "ErdosProblems/Erdos485/Bivariate.lean": "f620bfd120c9b16cd4f18744a9ac07c8906f1d76ef778b5a808efe32d64a9604",
+          "ErdosProblems/Erdos485/Deformation.lean": "ea42c2011099a780b47447a463d8c8f9d253fee92bf37599de0d21805e9c7821",
+          "ErdosProblems/Erdos485/SquarefreeFactor.lean": "374bc001bc40511099c60e64c0e115da4e10dc291dc39b0140c6426a09cd4f66",
+          "ErdosProblems/Erdos485/ResultantDegree.lean": "93f7a80e770b7e0c915c2084fab63ebd78adf6f81d6752abc85670ac34b670e7",
+          "ErdosProblems/Erdos485/Weighted.lean": "8f0d75090bbd968d4b3fee360b662ac24986012ef8ba6de2eda116e0b2dca134",
+          "ErdosProblems/Erdos485/WeightedCoprime.lean": "4ad89381c339d0f36e1df79c7b774d0b60c244dbba623608f71ae98792cec6fd",
+          "ErdosProblems/Erdos485/EvenMultiplicity.lean": "2612c37e115197543243307a99783ff0b1580067f92a65fdbbf097fa0d6a72a3",
+          "ErdosProblems/Erdos485/ResultantGap.lean": "e9d3ed4db7df4faef42d3240a0b22f64e26739011c94d1aa61d1ec8a44214f32",
+          "ErdosProblems/Erdos485/ResultantSpecialize.lean": "193e65e4651609e2847216ec2a156ccd172cdea6d0d516015d56d69ac62953c8",
+          "ErdosProblems/Erdos485/Laurent.lean": "49764d30c68f6a324e9abb09bce6edce6db3aa5f11b1213063113f6e6fab57e1",
+          "ErdosProblems/Erdos485/SquarefreeGap.lean": "ad817821cf9d82c17ee68d12d73825d48997495c0ff82873efa67971e7161cbc",
+          "ErdosProblems/Erdos485/Specialization.lean": "0f10b619b633b9a42b613e2c825fb31a223b321d33515b71ccc3dbf8e38eab99",
+          "ErdosProblems/Erdos485/RecursiveSpecialization.lean": "2df8d4d653bee2570e9bd884bae7f0ce69329ba5e1f5dab51495508064a173dd",
+          "ErdosProblems/Erdos485/Schinzel.lean": "233c59c5df7ee6bedb5b46b1511f5c314d97889e63bcd7c54b644dc4c6e409b3",
+          "ErdosProblems/Erdos485.lean": "b92791393456c2074304809d4a9a2ec3d714e8fb283848d32ee3b58c96f4e6dc",
+          "JSP000393.lean": "32fc88e06d8897c326a6caa2b113bd3648ab8386062d4a136a219649ff165694",
+          "JSP000393Complete.lean": "0fc815a5e74c3fb304352820c5b7aaf998dc8883664f5775db135535dbdbecaa",
+          "AuditComplete.lean": "968331c0810b2331b8d5f1fe6e898026b333aeb86652e39d9f581fd0aa7dd026",
+          "JSP000393General.lean": "1a017d44477daf23cadf1d39a9297c73258dc888070b962749fe7313cd5e6b08",
+          "AuditGeneral.lean": "b1657145e8096e116bf667452f64f6f8c9114f2a7e4051a7fa550334904bf0b3"
+        },
+        "limits": "Contributor-run replay with cached pinned Mathlib; no independent human certification."
+      },
+      {
+        "status": "passed",
+        "toolchain": "leanprover/lean4:v4.34.0",
+        "preparation_head": "aa1ed1bac2eb0c1ec33723ff802ff3b9b6c02ee8",
+        "modules_compiled": [
+          "ErdosProblems.Erdos485.Arithmetic",
+          "ErdosProblems.Erdos485.Basic",
+          "ErdosProblems.Erdos485.Hajos",
+          "ErdosProblems.Erdos485.SquareDescent",
+          "ErdosProblems.Erdos485.Normalization",
+          "ErdosProblems.Erdos485.Trinomial",
+          "ErdosProblems.Erdos485.Dirichlet",
+          "ErdosProblems.Erdos485.Bivariate",
+          "ErdosProblems.Erdos485.Deformation",
+          "ErdosProblems.Erdos485.SquarefreeFactor",
+          "ErdosProblems.Erdos485.ResultantDegree",
+          "ErdosProblems.Erdos485.Weighted",
+          "ErdosProblems.Erdos485.WeightedCoprime",
+          "ErdosProblems.Erdos485.EvenMultiplicity",
+          "ErdosProblems.Erdos485.ResultantGap",
+          "ErdosProblems.Erdos485.ResultantSpecialize",
+          "ErdosProblems.Erdos485.Laurent",
+          "ErdosProblems.Erdos485.SquarefreeGap",
+          "ErdosProblems.Erdos485.Specialization",
+          "ErdosProblems.Erdos485.RecursiveSpecialization",
+          "ErdosProblems.Erdos485.Schinzel",
+          "ErdosProblems.Erdos485",
+          "JSP000393",
+          "JSP000393Complete",
+          "AuditComplete"
+        ],
+        "axiom_reports": 13,
+        "allowed_axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "dependency_count": 9,
+        "kernel_prefixes": [
+          "ErdosProblems.Erdos485",
+          "JSP000393",
+          "JSP000393Complete"
+        ],
+        "source_sha256": {
+          "ErdosProblems/Erdos485.lean": "b92791393456c2074304809d4a9a2ec3d714e8fb283848d32ee3b58c96f4e6dc",
+          "ErdosProblems/Erdos485/ResultantDegree.lean": "93f7a80e770b7e0c915c2084fab63ebd78adf6f81d6752abc85670ac34b670e7",
+          "ErdosProblems/Erdos485/Schinzel.lean": "233c59c5df7ee6bedb5b46b1511f5c314d97889e63bcd7c54b644dc4c6e409b3",
+          "ErdosProblems/Erdos485/ResultantSpecialize.lean": "193e65e4651609e2847216ec2a156ccd172cdea6d0d516015d56d69ac62953c8",
+          "ErdosProblems/Erdos485/Trinomial.lean": "d8cc674790cedb96c8d9e5d4752bb54145f121d8056cda1384b3ef454529fcbf",
+          "ErdosProblems/Erdos485/Weighted.lean": "8f0d75090bbd968d4b3fee360b662ac24986012ef8ba6de2eda116e0b2dca134",
+          "ErdosProblems/Erdos485/Hajos.lean": "5acdd2a7942d55ec8242c5614498256dd71b62415541590c4b9df96d6df21a68",
+          "ErdosProblems/Erdos485/Bivariate.lean": "f620bfd120c9b16cd4f18744a9ac07c8906f1d76ef778b5a808efe32d64a9604",
+          "ErdosProblems/Erdos485/SquarefreeGap.lean": "ad817821cf9d82c17ee68d12d73825d48997495c0ff82873efa67971e7161cbc",
+          "ErdosProblems/Erdos485/Deformation.lean": "ea42c2011099a780b47447a463d8c8f9d253fee92bf37599de0d21805e9c7821",
+          "ErdosProblems/Erdos485/ResultantGap.lean": "e9d3ed4db7df4faef42d3240a0b22f64e26739011c94d1aa61d1ec8a44214f32",
+          "ErdosProblems/Erdos485/Laurent.lean": "49764d30c68f6a324e9abb09bce6edce6db3aa5f11b1213063113f6e6fab57e1",
+          "ErdosProblems/Erdos485/Dirichlet.lean": "37af4f9ed1260810dda0017ba40ac82de703697aab730248b8bff46d867aa1ca",
+          "ErdosProblems/Erdos485/SquarefreeFactor.lean": "374bc001bc40511099c60e64c0e115da4e10dc291dc39b0140c6426a09cd4f66",
+          "ErdosProblems/Erdos485/Arithmetic.lean": "e014aa0eff9511d6bc3b3dc95762d07d6ea33d7f04c6e3bdc3134e977a8a0c23",
+          "ErdosProblems/Erdos485/RecursiveSpecialization.lean": "2df8d4d653bee2570e9bd884bae7f0ce69329ba5e1f5dab51495508064a173dd",
+          "ErdosProblems/Erdos485/Normalization.lean": "70305ae93f74662950dcd23a9ca84072c49d9245ec3f0cea95d46dfe53c0bca8",
+          "ErdosProblems/Erdos485/Specialization.lean": "0f10b619b633b9a42b613e2c825fb31a223b321d33515b71ccc3dbf8e38eab99",
+          "ErdosProblems/Erdos485/SquareDescent.lean": "8e73dcb175f45bac5bd3acb3022a0ecb2e94d282408c7965df39520328e6105d",
+          "ErdosProblems/Erdos485/Basic.lean": "d6598953a850d434c9bc2decbb46b6b033a0b72475c6d8aa722c912c7ee81c28",
+          "ErdosProblems/Erdos485/WeightedCoprime.lean": "4ad89381c339d0f36e1df79c7b774d0b60c244dbba623608f71ae98792cec6fd",
+          "ErdosProblems/Erdos485/EvenMultiplicity.lean": "2612c37e115197543243307a99783ff0b1580067f92a65fdbbf097fa0d6a72a3",
+          "JSP000393.lean": "32fc88e06d8897c326a6caa2b113bd3648ab8386062d4a136a219649ff165694",
+          "JSP000393Complete.lean": "0fc815a5e74c3fb304352820c5b7aaf998dc8883664f5775db135535dbdbecaa",
+          "AuditComplete.lean": "968331c0810b2331b8d5f1fe6e898026b333aeb86652e39d9f581fd0aa7dd026"
+        },
+        "limits": "Contributor-run replay with cached pinned Mathlib; no independent human certification."
+      }
+    ],
+    "original_kernel_logs": [
+      "fresh-project-evidence/kernel-ErdosProblems.Erdos485.log",
+      "fresh-project-evidence/kernel-JSP000393.log",
+      "fresh-project-evidence/kernel-JSP000393Complete.log",
+      "fresh-project-evidence/kernel-JSP000393General.log",
+      "fresh-extra-1/kernel-ErdosProblems.Erdos485.log",
+      "fresh-extra-1/kernel-JSP000393.log",
+      "fresh-extra-1/kernel-JSP000393Complete.log"
+    ],
+    "original_axiom_outputs": [
+      {
+        "log": "fresh-project-evidence/build-AuditGeneral.log",
+        "source": "AuditGeneral.lean",
+        "targets": 11
+      },
+      {
+        "log": "fresh-extra-1/build-AuditComplete.log",
+        "source": "AuditComplete.lean",
+        "targets": 13
+      }
+    ],
+    "negative_controls": [
+      {
+        "log": "fresh-project-evidence/negative-control.log",
+        "expected_exit": "nonzero",
+        "exit_evidence": "semantic Lean error; nonzero exit enforced by successful original verifier",
+        "separate_exit_code_recorded": false
+      },
+      {
+        "log": "fresh-extra-1/negative-control.log",
+        "expected_exit": "nonzero",
+        "exit_evidence": "semantic Lean error; nonzero exit enforced by successful original verifier",
+        "separate_exit_code_recorded": false
+      }
+    ],
+    "strict_bridge_precheck": "validated",
+    "bridge_source_sha256": "d35b577311e7b2302fb6759b7ee1a4fc404938ae713ffe770f9e73196f1e0ad4",
+    "manual_equivalent_builds": 0,
+    "stages": {
+      "versions": {
+        "argv": [
+          "bash",
+          "-c",
+          "set -e; lean --version; lake --version; rustc --version; cargo --version; id; uname -a"
+        ],
+        "cwd": "/work",
+        "exit_code": 0,
+        "seconds": 0.16405868530273438
+      },
+      "build-exporter": {
+        "argv": [
+          "lake",
+          "build"
+        ],
+        "cwd": "/out/tools/exporter",
+        "exit_code": 0,
+        "seconds": 13.09440302848816
+      },
+      "build-checker": {
+        "argv": [
+          "cargo",
+          "build",
+          "--release",
+          "--locked"
+        ],
+        "cwd": "/out/tools/checker",
+        "exit_code": 0,
+        "seconds": 15.254387378692627
+      },
+      "original-clean-verifier": {
+        "argv": [
+          "python3",
+          "scripts/verify_general.py"
+        ],
+        "cwd": "/work",
+        "exit_code": 0,
+        "seconds": 352.1777093410492
+      },
+      "official-preflight": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "preflight",
+          "/out/targets.json",
+          "--out",
+          "/out/preflight"
+        ],
+        "cwd": "/work",
+        "exit_code": 0,
+        "seconds": 0.11401510238647461
+      },
+      "official-audit": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "run",
+          "/out/targets.json",
+          "--out",
+          "/out/audit",
+          "--lake",
+          "/opt/elan/toolchains/leanprover--lean4---v4.34.0/bin/lake",
+          "--timeout",
+          "2400"
+        ],
+        "cwd": "/work",
+        "exit_code": 0,
+        "seconds": 453.6004915237427
+      },
+      "bridge-kernel": {
+        "argv": [
+          "lake",
+          "env",
+          "leanchecker",
+          "JSP000393General.VerificationBridge"
+        ],
+        "cwd": "/work",
+        "exit_code": 0,
+        "seconds": 8.883437871932983
+      },
+      "independent-nanoda": {
+        "argv": [
+          "/out/tools/checker/target/release/nanoda_bin",
+          "/out/nanoda-config.json"
+        ],
+        "cwd": "/work",
+        "exit_code": 0,
+        "seconds": 15.446938037872314
+      },
+      "dependencies": {
+        "argv": [
+          "python3",
+          "-c",
+          "import json,subprocess;from pathlib import Path;ps=json.loads(Path('lake-manifest.json').read_text())['packages'];a={p['name']:subprocess.check_output(['git','-C','.lake/packages/'+p['name'],'rev-parse','HEAD'],text=True).strip() for p in ps};print(json.dumps(a,indent=2));assert all(a[p['name']]==p['rev'] for p in ps)"
+        ],
+        "cwd": "/work",
+        "exit_code": 0,
+        "seconds": 0.03179216384887695
+      },
+      "final-status": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain",
+          "--untracked-files=all"
+        ],
+        "cwd": "/work",
+        "exit_code": 0,
+        "seconds": 0.003458261489868164
+      },
+      "compress-export": {
+        "argv": [
+          "gzip",
+          "-n",
+          "/out/export.ndjson"
+        ],
+        "cwd": "/out",
+        "exit_code": 0,
+        "seconds": 4.873999118804932
+      },
+      "prepare-dependencies-0": {
+        "argv": [
+          "lake",
+          "exe",
+          "cache",
+          "get",
+          "Mathlib"
+        ],
+        "cwd": "/work",
+        "exit_code": 0,
+        "seconds": 101.53273749351501
+      },
+      "prepare-dependencies-1": {
+        "argv": [
+          "lake",
+          "build",
+          "Mathlib"
+        ],
+        "cwd": "/work",
+        "exit_code": 0,
+        "seconds": 29.8254177570343
+      },
+      "bootstrap": {
+        "argv": [
+          "python3",
+          "scripts/bootstrap.py"
+        ],
+        "cwd": "/work",
+        "exit_code": 0,
+        "seconds": 3.4208948612213135
+      },
+      "extra-kernel-ErdosProblems.Erdos485": {
+        "argv": [
+          "lake",
+          "env",
+          "leanchecker",
+          "--verbose",
+          "ErdosProblems.Erdos485"
+        ],
+        "cwd": "/work",
+        "exit_code": 0,
+        "seconds": 57.60574269294739
+      },
+      "bridge-precheck": {
+        "argv": [
+          "lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "-j1",
+          "-M12000",
+          "-o",
+          "/work/.lake/build/lib/lean/JSP000393General/VerificationBridge.olean",
+          "/work/JSP000393General/VerificationBridge.lean"
+        ],
+        "cwd": "/work",
+        "exit_code": 0,
+        "seconds": 5.826319932937622
+      }
+    }
+  }
+}

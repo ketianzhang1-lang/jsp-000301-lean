@@ -1,0 +1,503 @@
+{
+  "636": {
+    "id": "JSP-000636",
+    "project": "projects/jsp-000636",
+    "commit": "5c23ecf6211449c9bd7f4ac9229300ed43f666b2",
+    "branch": "jsp-000636-pair-label-upper-kz",
+    "bridge_file": "bridge636.lean",
+    "bridge_path": "JSP000636/VerificationBridge.lean",
+    "bridge_module": "JSP000636.VerificationBridge",
+    "evidence_dir": "evidence",
+    "bootstrap": null,
+    "verify_command": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "modules": [
+      "JSP000636",
+      "Lower",
+      "Upper",
+      "Construction",
+      "Threshold",
+      "Thinning",
+      "Asymptotics",
+      "OriginalQuestion"
+    ],
+    "extra_inputs": [],
+    "original_target_count": 79,
+    "total_target_count": 82,
+    "source_key": "636",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "lean_version": "4.34.0",
+    "prepare_commands": [
+      [
+        "lake",
+        "exe",
+        "cache",
+        "get",
+        "Mathlib"
+      ],
+      [
+        "lake",
+        "build",
+        "Mathlib"
+      ]
+    ],
+    "exporter_commit": "6cea97789dc088ea47fcea15692db85685aedac5",
+    "nanoda_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+    "environment": {
+      "LEAN_NUM_THREADS": "2"
+    }
+  },
+  "912-full": {
+    "id": "JSP-000912",
+    "project": "projects/jsp-000912",
+    "commit": "bf99214b3104d89c628abb9c824a56d89a6bd6fe",
+    "branch": "jsp-000912-complete-proof",
+    "bridge_file": "bridge912-full.lean",
+    "bridge_path": "FullProof/VerificationBridge.lean",
+    "bridge_module": "FullProof.VerificationBridge",
+    "evidence_dir": "evidence/current",
+    "bootstrap": null,
+    "verify_command": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "additional_inputs": [],
+    "notes": "Do not import FullProof and JSP912.Main into the same Lean process: same namespace/declarations. Original verifier checks 7 closures under each layout in separate processes, 6 kernel replays and exact source synchronization.",
+    "runner_key": "912-full",
+    "source_key": "912",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "lean_version": "4.34.0",
+    "prepare_commands": [
+      [
+        "lake",
+        "exe",
+        "cache",
+        "get",
+        "Mathlib"
+      ],
+      [
+        "lake",
+        "build",
+        "Mathlib"
+      ]
+    ],
+    "exporter_commit": "6cea97789dc088ea47fcea15692db85685aedac5",
+    "nanoda_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+    "environment": {
+      "LEAN_NUM_THREADS": "2"
+    }
+  },
+  "912-modular": {
+    "id": "JSP-000912",
+    "project": "projects/jsp-000912",
+    "commit": "bf99214b3104d89c628abb9c824a56d89a6bd6fe",
+    "branch": "jsp-000912-complete-proof",
+    "bridge_file": "bridge912-modular.lean",
+    "bridge_path": "JSP912/VerificationBridge.lean",
+    "bridge_module": "JSP912.VerificationBridge",
+    "evidence_dir": "evidence/current",
+    "bootstrap": null,
+    "verify_command": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "additional_inputs": [],
+    "notes": "Do not import FullProof and JSP912.Main into the same Lean process: same namespace/declarations. Original verifier checks 7 closures under each layout in separate processes, 6 kernel replays and exact source synchronization.",
+    "runner_key": "912-modular",
+    "source_key": "912",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "lean_version": "4.34.0",
+    "prepare_commands": [
+      [
+        "lake",
+        "exe",
+        "cache",
+        "get",
+        "Mathlib"
+      ],
+      [
+        "lake",
+        "build",
+        "Mathlib"
+      ]
+    ],
+    "exporter_commit": "6cea97789dc088ea47fcea15692db85685aedac5",
+    "nanoda_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+    "environment": {
+      "LEAN_NUM_THREADS": "2"
+    }
+  },
+  "728": {
+    "id": "JSP-000728",
+    "project": "projects/jsp-000728",
+    "commit": "22212651d30af02ad36f01a206984d31b0ec75c6",
+    "branch": "jsp-000728-lower-bound-kz",
+    "bridge_file": "bridge728.lean",
+    "bridge_path": "JSP000728/VerificationBridge.lean",
+    "bridge_module": "JSP000728.VerificationBridge",
+    "evidence_dir": "evidence-complete",
+    "bootstrap": [
+      "python3",
+      "scripts/bootstrap.py"
+    ],
+    "cache_args": [
+      "Mathlib"
+    ],
+    "prepare_mathlib_build": true,
+    "verify_command": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "upstream_modules": 43,
+    "original_modules": 47,
+    "original_targets": 27,
+    "total_targets": 35,
+    "build_note": "Default Lake roots include complete endpoint and AuditComplete; bridge is explicitly included by the official target manifest. Original complete verifier compiles all 47 modules sequentially without --resume.",
+    "source_key": "728",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "lean_version": "4.34.0",
+    "prepare_commands": [
+      [
+        "lake",
+        "exe",
+        "cache",
+        "get",
+        "Mathlib"
+      ],
+      [
+        "lake",
+        "build",
+        "Mathlib"
+      ]
+    ],
+    "exporter_commit": "6cea97789dc088ea47fcea15692db85685aedac5",
+    "nanoda_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+    "environment": {
+      "LEAN_NUM_THREADS": "2"
+    }
+  },
+  "585": {
+    "id": "JSP-000585",
+    "project": "projects/catlin-research",
+    "commit": "9661ef0f170e750b1ac2153b9017bad86044680c",
+    "branch": "catlin-sharp-kz",
+    "bridge_file": "bridge585.lean",
+    "bridge_path": "Catlin/VerificationBridge.lean",
+    "bridge_module": "Catlin.VerificationBridge",
+    "evidence_dir": "evidence-complete",
+    "bootstrap_command": [
+      "python3",
+      "scripts/bootstrap.py"
+    ],
+    "dependency_preparation": [
+      [
+        "lake",
+        "exe",
+        "cache",
+        "get",
+        "Mathlib"
+      ],
+      [
+        "lake",
+        "build",
+        "Mathlib"
+      ]
+    ],
+    "original_verify_command": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "module_count": 66,
+    "original_audit_target_count": 61,
+    "fresh_audit_target_count": 65,
+    "default_target_notes": "Default Catlin library roots include JSP000585Complete and AuditComplete; original verifier rebuilds 56 pinned upstream modules plus 10 local modules, serially, without --resume. Erdos717.erdos_717 target is exposed by tracked AuditComplete.lean; immutable upstream source manifest and hash checks establish its actual source provenance. Bridge is untracked auditor input.",
+    "source_key": "585",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "lean_version": "4.34.0",
+    "bootstrap": [
+      "python3",
+      "scripts/bootstrap.py"
+    ],
+    "verify_command": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "prepare_commands": [
+      [
+        "lake",
+        "exe",
+        "cache",
+        "get",
+        "Mathlib"
+      ],
+      [
+        "lake",
+        "build",
+        "Mathlib"
+      ]
+    ],
+    "exporter_commit": "6cea97789dc088ea47fcea15692db85685aedac5",
+    "nanoda_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+    "environment": {
+      "LEAN_NUM_THREADS": "2"
+    }
+  },
+  "506-main": {
+    "id": "JSP-000506",
+    "project": "projects/jsp-000506",
+    "commit": "2aca2f16eba715d7ad672dfa017481b647c00063",
+    "branch": "jsp-000506-complete-kz",
+    "toolchain": "leanprover/lean4:v4.31.0",
+    "bridge_file": "bridge506-main.lean",
+    "bridge_path": "JSP000506/VerificationMain.lean",
+    "bridge_module": "JSP000506.VerificationMain",
+    "evidence_dir": "evidence-complete",
+    "additional_evidence_dirs": [],
+    "bootstrap": [
+      "python3",
+      "scripts/bootstrap.py"
+    ],
+    "prepare_commands": [
+      [
+        "lake",
+        "exe",
+        "cache",
+        "get",
+        "Mathlib"
+      ],
+      [
+        "lake",
+        "build",
+        "Mathlib"
+      ]
+    ],
+    "verify_command": [
+      "bash",
+      "scripts/verify.sh"
+    ],
+    "clean_original_build_in_verifier": true,
+    "exporter_commit": "8554815c2dc6b7abe99ec1f08849c9759ba77947",
+    "nanoda_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+    "kernel_command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "--verbose"
+    ],
+    "kernel_modules": [
+      "Erdos625SelfContained",
+      "JSP000506",
+      "JSP000506Bridge",
+      "JSP000506Complete"
+    ],
+    "environment": {
+      "JSP506_BUILD_JOBS": "1",
+      "LEAN_NUM_THREADS": "1"
+    },
+    "git_history_required": [],
+    "default_target_omits": [
+      "AuditComplete"
+    ],
+    "immutable_bootstrap_source": {
+      "path": "Erdos625SelfContained.lean",
+      "sha256": "53060b9563330f20a5f2133ffdf8f56e5a41eae6d0f772487193d9c54133e837",
+      "git_blob_sha": "3df42367a79afc10af5b024b19fe1a6026b3c945",
+      "source_commit": "b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea"
+    },
+    "external_source_target_ids": [
+      "t45",
+      "t46",
+      "t47",
+      "t48"
+    ],
+    "official_preflight_limit": "Four upstream declarations use tracked configured JSP000506Complete.lean as verification entry. Real definitions are identified by definition_source and double-hash-pinned bootstrap provenance. Original verifier clean-compiles and replays the full source. No proof source or audit script is changed.",
+    "original_targets": 49,
+    "auditor_bridges": 6,
+    "total_targets": 55,
+    "source_key": "506-main",
+    "lean_version": "4.31.0"
+  },
+  "506-selection": {
+    "id": "JSP-000506",
+    "project": "projects/jsp-000506",
+    "commit": "90e1298ec99973eefe607f9c21bfffa750804087",
+    "branch": "jsp-000506-selection-20260919",
+    "toolchain": "leanprover/lean4:v4.31.0",
+    "bridge_file": "bridge506-selection.lean",
+    "bridge_path": "JSP000506/VerificationSelection.lean",
+    "bridge_module": "JSP000506.VerificationSelection",
+    "evidence_dir": "evidence-selection",
+    "additional_evidence_dirs": [
+      "evidence-complete"
+    ],
+    "bootstrap": [
+      "python3",
+      "scripts/bootstrap.py"
+    ],
+    "prepare_commands": [
+      [
+        "lake",
+        "exe",
+        "cache",
+        "get",
+        "Mathlib"
+      ],
+      [
+        "lake",
+        "build",
+        "Mathlib"
+      ]
+    ],
+    "verify_command": [
+      "python3",
+      "scripts/verify_selection.py"
+    ],
+    "clean_original_build_in_verifier": true,
+    "exporter_commit": "8554815c2dc6b7abe99ec1f08849c9759ba77947",
+    "nanoda_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+    "kernel_command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "--verbose"
+    ],
+    "kernel_modules": [
+      "Erdos625SelfContained",
+      "JSP000506",
+      "JSP000506Bridge",
+      "JSP000506Complete",
+      "JSP000506Selection"
+    ],
+    "environment": {
+      "JSP506_BUILD_JOBS": "1",
+      "LEAN_NUM_THREADS": "1"
+    },
+    "git_history_required": [
+      "2aca2f16eba715d7ad672dfa017481b647c00063"
+    ],
+    "default_target_omits": [
+      "JSP000506Selection",
+      "AuditSelection"
+    ],
+    "immutable_bootstrap_source": {
+      "path": "Erdos625SelfContained.lean",
+      "sha256": "53060b9563330f20a5f2133ffdf8f56e5a41eae6d0f772487193d9c54133e837",
+      "git_blob_sha": "3df42367a79afc10af5b024b19fe1a6026b3c945",
+      "source_commit": "b3fdc4d3efbe6c999faac3da4614cc3036b3b3ea"
+    },
+    "external_source_target_ids": [
+      "t45",
+      "t46",
+      "t47",
+      "t48"
+    ],
+    "official_preflight_limit": "Four upstream declarations use tracked configured JSP000506Complete.lean as verification entry. Real definitions are identified by definition_source and double-hash-pinned bootstrap provenance. Original verifier clean-compiles and replays the full source. No proof source or audit script is changed.",
+    "original_targets": 60,
+    "auditor_bridges": 8,
+    "total_targets": 68,
+    "source_key": "506-selection",
+    "lean_version": "4.31.0",
+    "lake_adapter": {
+      "file": "manual-lake-adapter.py",
+      "intercepted_argv": [
+        [
+          "build",
+          "+JSP000506Selection"
+        ],
+        [
+          "build",
+          "+JSP000506.VerificationSelection"
+        ]
+      ],
+      "replacement": "The actual pinned Lake invokes env lean -DwarningAsError=true -j1 -M12000 -o .lake/build/lib/lean/MODULE.olean SOURCE.lean on every invocation. All other argv exec the real Lake unchanged.",
+      "evidence": "/out/manual-module-builds.jsonl, per-invocation output logs and /out/manual-equivalence.json",
+      "reason": "Lean 4.31 roots omit JSP000506Selection; the official lean-verify reproduction reference permits equivalent explicit module/source checks. No proof source, Lake config or official audit script modification.",
+      "limits": "Auditor-owned manual-equivalence adapter; these two builds are not native Lake target builds. Original verifier and kernel replay still call the real pinned Lake."
+    }
+  },
+  "393-general": {
+    "id": "JSP-000393",
+    "project": ".",
+    "commit": "aa1ed1bac2eb0c1ec33723ff802ff3b9b6c02ee8",
+    "branch": "jsp-000393-general-coefficients",
+    "bridge_file": "bridge393General.lean",
+    "bridge_path": "JSP000393General/VerificationBridge.lean",
+    "bridge_module": "JSP000393General.VerificationBridge",
+    "evidence_dir": "evidence-general",
+    "bootstrap": [
+      "python3",
+      "scripts/bootstrap.py"
+    ],
+    "cache_get": [
+      "lake",
+      "exe",
+      "cache",
+      "get",
+      "Mathlib"
+    ],
+    "cache_build": [
+      "lake",
+      "build",
+      "Mathlib"
+    ],
+    "verify_command": [
+      "python3",
+      "scripts/verify_general.py"
+    ],
+    "expected_original_modules": 27,
+    "expected_original_axiom_reports": 24,
+    "extra_kernel_prefixes": [
+      "ErdosProblems.Erdos485"
+    ],
+    "default_targets": "JSP000393 and JSP000393Complete (the latter roots include AuditComplete). The reviewed verify_complete.py explicitly recompiles every one of 22 upstream + 2 local proof + 1 audit modules; do not rely solely on default Lake target. General extension adds default JSP000393General roots including AuditGeneral.",
+    "upstream_targets": {
+      "reason": "The three original AuditComplete upstream declarations retain schema role=theorem and use tracked AuditComplete.lean as their verification entry. The definition_source and definition_sha256 fields point to each hash-pinned bootstrap input. The original complete verifier freshly compiles all 22 upstream sources before the official audit; AuditComplete imports the full closure. This does not assert that downloaded definition sources are tracked in the selected commit.",
+      "declarations": [
+        "Erdos485.f_attained",
+        "Erdos485.schinzel_support_bound",
+        "Erdos485.erdos_485"
+      ]
+    },
+    "additional_inputs": [
+      "UPSTREAM.json",
+      "UPSTREAM-LICENSE.txt",
+      "SOURCE_SHA256SUMS",
+      "ErdosProblems/**/*.lean"
+    ],
+    "notes": [
+      "Keep original proof commit separate from verification-only commit 0e86d155839b409faa075233a1b62e32f2b7b1e3.",
+      "Bootstrap reviews and validates every original and compatibility-port SHA256.",
+      "No local Lean code has been executed by the semantic reviewer.",
+      "Selected proof sources are a new coefficient-domain completion; prior proof sources and upstream manifest remain unchanged."
+    ],
+    "additional_evidence_dirs": [
+      "evidence-complete"
+    ],
+    "original_priority_commit": "a337720331a34599114a9d4669d6518d5e608f6f",
+    "original_complete_rational_commit": "17e406594d644b40c9a742e843cd6d89f319c872",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "lean_version": "4.34.0",
+    "source_key": "393-general",
+    "prepare_commands": [
+      [
+        "lake",
+        "exe",
+        "cache",
+        "get",
+        "Mathlib"
+      ],
+      [
+        "lake",
+        "build",
+        "Mathlib"
+      ]
+    ],
+    "exporter_commit": "6cea97789dc088ea47fcea15692db85685aedac5",
+    "nanoda_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+    "environment": {
+      "LEAN_NUM_THREADS": "2"
+    }
+  }
+}

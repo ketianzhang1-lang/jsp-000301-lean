@@ -1,0 +1,35 @@
+{
+  "rules_commit": "38e63c424c7196f8d4ceb664c5c25f0c0529d5e2",
+  "proof_393": "aa1ed1bac2eb0c1ec33723ff802ff3b9b6c02ee8",
+  "harness_commits": [
+    "2f9ef20458520451c2d02e93315f7fa84e9f7cd1",
+    "e0b1376df9db3a704d4e015790e15d436c891f73",
+    "e8b533e5fc41ca9e5c24085315d3617ef20d3c54",
+    "12fb870e5c449902bf7085c00684b606ac06fa5d",
+    "3195910470b2fcd7712bd983c241d624937321d5",
+    "1e52e4f5851d9751ddc637d383e365047b749fad"
+  ],
+  "runs": [
+    35476644569,
+    35477117193,
+    35477208711,
+    35477834039,
+    35479808961,
+    35479940510
+  ],
+  "status": "completed",
+  "target_count": 352,
+  "superseded_393": {
+    "commit": "ed82d0cb2d35fca55f32b00cb75bdd5271226eb8",
+    "failure": "warning-as-error: unused CharZero section variable in minimum_le",
+    "corrected_by": "omit [CharZero K] in"
+  },
+  "harness_fix_728": "Replace dot-containing target IDs with t000..t034 and matching requirement references; unchanged declarations and proof",
+  "harness_fix_636": "Unfold literal extremal profile and use congr to equate proof-irrelevant DecidablePred instances",
+  "harness_fix_585": "Fix independent bridge record literal syntax and route t37..t47 through configured AuditComplete with separately hashed definition_source",
+  "harness_fix_393_run5": "Explicit rewrite of independently defined complex minimum and zero/one support identities in auditor bridge; selected proof unchanged",
+  "harness_fix_728_run5": "Eight submitted JSP000728Bridge declarations audited via configured JSP000728Complete entry, with separately hashed definition source; auditor bridge itself passed previous attempt",
+  "harness_fix_506": "Shared independent scale divergence bridge now uses explicit definitional change instead of simp on an unapplied function",
+  "completed_at_utc": "2026-09-20T01:50:25.498663+00:00",
+  "completion_basis": "Eight separately selected successful jobs, not success of every historical workflow run."
+}

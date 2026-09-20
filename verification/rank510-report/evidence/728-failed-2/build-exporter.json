@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "lake",
+    "build"
+  ],
+  "cwd": "/out/tools/exporter",
+  "exit_code": 0,
+  "seconds": 9.888379335403442
+}

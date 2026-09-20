@@ -1,0 +1,394 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "d2692bac24f3f771836063c2ccb57afd92820c61f645675d9c57122728fd2931",
+  "original_bytes": 402887,
+  "data": {
+    "0": {
+      "url": "https://github.com/TheJustinSunPrize/awards/blob/ff33abd13163e789790eb1014e55f57c05f94432/problems/catalog-0501-0600.md",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": {
+                "text_omitted": true,
+                "reason": "full text retained only in the private historical evidence",
+                "utf8_bytes": 17,
+                "sha256": "d466be6feb6e54b212253f218a6971fe2478837bae8d11fde4d19f8e171019fa"
+              }
+            }
+          ],
+          "structuredContent": {
+            "content": {
+              "text_omitted": true,
+              "reason": "full text retained only in the private historical evidence",
+              "utf8_bytes": 83395,
+              "sha256": "8e760e26b5ccd9e3f568d756bd30dc5b49f0aad63ce679fefedfb428ff04e240"
+            },
+            "title": "catalog-0501-0600.md",
+            "modified_date": "2026-09-17T15:09:43Z",
+            "url": "https://github.com/TheJustinSunPrize/awards/blob/ff33abd13163e789790eb1014e55f57c05f94432/problems/catalog-0501-0600.md",
+            "display_url": "https://github.com/TheJustinSunPrize/awards/blob/ff33abd13163e789790eb1014e55f57c05f94432/problems/catalog-0501-0600.md",
+            "display_title": "catalog-0501-0600.md",
+            "structuredContent": {
+              "title": "catalog-0501-0600.md",
+              "content": {
+                "text_omitted": true,
+                "reason": "full text retained only in the private historical evidence",
+                "utf8_bytes": 83395,
+                "sha256": "8e760e26b5ccd9e3f568d756bd30dc5b49f0aad63ce679fefedfb428ff04e240"
+              },
+              "display_url": "https://github.com/TheJustinSunPrize/awards/blob/ff33abd13163e789790eb1014e55f57c05f94432/problems/catalog-0501-0600.md"
+            }
+          },
+          "isError": false
+        }
+      }
+    },
+    "1": {
+      "url": "https://github.com/ketianzhang1-lang/awards/blob/27fddf6dee0d9fb92a34643f05615da57be80574/problems/catalog-0501-0600.md",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": {
+                "text_omitted": true,
+                "reason": "full text retained only in the private historical evidence",
+                "utf8_bytes": 17,
+                "sha256": "d466be6feb6e54b212253f218a6971fe2478837bae8d11fde4d19f8e171019fa"
+              }
+            }
+          ],
+          "structuredContent": {
+            "content": {
+              "text_omitted": true,
+              "reason": "full text retained only in the private historical evidence",
+              "utf8_bytes": 86581,
+              "sha256": "714b1a6872408f35e7a6f582c8c843e86cbfe8788be1bade71def73a44034011"
+            },
+            "title": "catalog-0501-0600.md",
+            "modified_date": "2026-09-19T04:45:49Z",
+            "url": "https://github.com/ketianzhang1-lang/awards/blob/27fddf6dee0d9fb92a34643f05615da57be80574/problems/catalog-0501-0600.md",
+            "display_url": "https://github.com/ketianzhang1-lang/awards/blob/27fddf6dee0d9fb92a34643f05615da57be80574/problems/catalog-0501-0600.md",
+            "display_title": "catalog-0501-0600.md",
+            "structuredContent": {
+              "title": "catalog-0501-0600.md",
+              "content": {
+                "text_omitted": true,
+                "reason": "full text retained only in the private historical evidence",
+                "utf8_bytes": 86581,
+                "sha256": "714b1a6872408f35e7a6f582c8c843e86cbfe8788be1bade71def73a44034011"
+              },
+              "display_url": "https://github.com/ketianzhang1-lang/awards/blob/27fddf6dee0d9fb92a34643f05615da57be80574/problems/catalog-0501-0600.md"
+            }
+          },
+          "isError": false
+        }
+      }
+    },
+    "2": {
+      "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1075",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": {
+                "text_omitted": true,
+                "reason": "full text retained only in the private historical evidence",
+                "utf8_bytes": 17,
+                "sha256": "d466be6feb6e54b212253f218a6971fe2478837bae8d11fde4d19f8e171019fa"
+              }
+            }
+          ],
+          "structuredContent": {
+            "content": {
+              "id": 5496336833,
+              "number": 1075,
+              "title": "[Award claim] JSP-000506 — Lean formalization",
+              "html_url": "https://github.com/TheJustinSunPrize/awards/issues/1075",
+              "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1075",
+              "state": "closed",
+              "state_reason": "completed",
+              "created_at": "2026-09-18T06:17:36Z",
+              "updated_at": "2026-09-18T06:39:03Z",
+              "closed_at": "2026-09-18T06:39:03Z",
+              "user": {
+                "login": "Drag0ndddd1118",
+                "html_url": "https://github.com/Drag0ndddd1118"
+              },
+              "body": {
+                "text_omitted": true,
+                "reason": "full text retained only in the private historical evidence",
+                "utf8_bytes": 1443,
+                "sha256": "2aa6f8a85a10dd51b431b03c7e8aab49de36d47cb786dcd2678cf7cd2608b850"
+              }
+            },
+            "title": "1075",
+            "modified_date": null,
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1075",
+            "display_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1075",
+            "display_title": "1075",
+            "structuredContent": {
+              "title": "1075",
+              "content": {
+                "id": 5496336833,
+                "number": 1075,
+                "title": "[Award claim] JSP-000506 — Lean formalization",
+                "html_url": "https://github.com/TheJustinSunPrize/awards/issues/1075",
+                "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1075",
+                "state": "closed",
+                "state_reason": "completed",
+                "created_at": "2026-09-18T06:17:36Z",
+                "updated_at": "2026-09-18T06:39:03Z",
+                "closed_at": "2026-09-18T06:39:03Z",
+                "user": {
+                  "login": "Drag0ndddd1118",
+                  "html_url": "https://github.com/Drag0ndddd1118"
+                },
+                "body": {
+                  "text_omitted": true,
+                  "reason": "full text retained only in the private historical evidence",
+                  "utf8_bytes": 1443,
+                  "sha256": "2aa6f8a85a10dd51b431b03c7e8aab49de36d47cb786dcd2678cf7cd2608b850"
+                }
+              },
+              "display_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1075"
+            }
+          },
+          "isError": false
+        }
+      }
+    },
+    "3": {
+      "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1073",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": {
+                "text_omitted": true,
+                "reason": "full text retained only in the private historical evidence",
+                "utf8_bytes": 17,
+                "sha256": "d466be6feb6e54b212253f218a6971fe2478837bae8d11fde4d19f8e171019fa"
+              }
+            }
+          ],
+          "structuredContent": {
+            "content": {
+              "id": 5496319330,
+              "number": 1073,
+              "title": "docs: record Lean formalization for JSP-000506 (Erdős #762)",
+              "html_url": "https://github.com/TheJustinSunPrize/awards/pull/1073",
+              "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1073",
+              "state": "closed",
+              "state_reason": null,
+              "created_at": "2026-09-18T06:15:01Z",
+              "updated_at": "2026-09-18T06:39:25Z",
+              "closed_at": "2026-09-18T06:39:25Z",
+              "user": {
+                "login": "Drag0ndddd1118",
+                "html_url": "https://github.com/Drag0ndddd1118"
+              },
+              "body": {
+                "text_omitted": true,
+                "reason": "full text retained only in the private historical evidence",
+                "utf8_bytes": 3210,
+                "sha256": "70f7055f980fd032c35b441dd64ddf132b3ead48973605b6c5ef41713ce17ad3"
+              }
+            },
+            "title": "1073",
+            "modified_date": null,
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1073",
+            "display_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1073",
+            "display_title": "1073",
+            "structuredContent": {
+              "title": "1073",
+              "content": {
+                "id": 5496319330,
+                "number": 1073,
+                "title": "docs: record Lean formalization for JSP-000506 (Erdős #762)",
+                "html_url": "https://github.com/TheJustinSunPrize/awards/pull/1073",
+                "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1073",
+                "state": "closed",
+                "state_reason": null,
+                "created_at": "2026-09-18T06:15:01Z",
+                "updated_at": "2026-09-18T06:39:25Z",
+                "closed_at": "2026-09-18T06:39:25Z",
+                "user": {
+                  "login": "Drag0ndddd1118",
+                  "html_url": "https://github.com/Drag0ndddd1118"
+                },
+                "body": {
+                  "text_omitted": true,
+                  "reason": "full text retained only in the private historical evidence",
+                  "utf8_bytes": 3210,
+                  "sha256": "70f7055f980fd032c35b441dd64ddf132b3ead48973605b6c5ef41713ce17ad3"
+                }
+              },
+              "display_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1073"
+            }
+          },
+          "isError": false
+        }
+      }
+    },
+    "4": {
+      "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1599",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": {
+                "text_omitted": true,
+                "reason": "full text retained only in the private historical evidence",
+                "utf8_bytes": 17,
+                "sha256": "d466be6feb6e54b212253f218a6971fe2478837bae8d11fde4d19f8e171019fa"
+              }
+            }
+          ],
+          "structuredContent": {
+            "content": {
+              "id": 5506463038,
+              "number": 1599,
+              "title": "Add verified Lean proof reference for JSP-000506 (random graph coloring)",
+              "html_url": "https://github.com/TheJustinSunPrize/awards/pull/1599",
+              "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1599",
+              "state": "closed",
+              "state_reason": null,
+              "created_at": "2026-09-19T00:32:02Z",
+              "updated_at": "2026-09-19T11:13:27Z",
+              "closed_at": "2026-09-19T11:13:27Z",
+              "user": {
+                "login": "zjukop3",
+                "html_url": "https://github.com/zjukop3"
+              },
+              "body": {
+                "text_omitted": true,
+                "reason": "full text retained only in the private historical evidence",
+                "utf8_bytes": 580,
+                "sha256": "97da7eb3ba69c6521b3d47d0921f5ce3e50033c7a9a7367ef105631cb1b99d96"
+              }
+            },
+            "title": "1599",
+            "modified_date": null,
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1599",
+            "display_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1599",
+            "display_title": "1599",
+            "structuredContent": {
+              "title": "1599",
+              "content": {
+                "id": 5506463038,
+                "number": 1599,
+                "title": "Add verified Lean proof reference for JSP-000506 (random graph coloring)",
+                "html_url": "https://github.com/TheJustinSunPrize/awards/pull/1599",
+                "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1599",
+                "state": "closed",
+                "state_reason": null,
+                "created_at": "2026-09-19T00:32:02Z",
+                "updated_at": "2026-09-19T11:13:27Z",
+                "closed_at": "2026-09-19T11:13:27Z",
+                "user": {
+                  "login": "zjukop3",
+                  "html_url": "https://github.com/zjukop3"
+                },
+                "body": {
+                  "text_omitted": true,
+                  "reason": "full text retained only in the private historical evidence",
+                  "utf8_bytes": 580,
+                  "sha256": "97da7eb3ba69c6521b3d47d0921f5ce3e50033c7a9a7367ef105631cb1b99d96"
+                }
+              },
+              "display_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1599"
+            }
+          },
+          "isError": false
+        }
+      }
+    },
+    "5": {
+      "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/40",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": {
+                "text_omitted": true,
+                "reason": "full text retained only in the private historical evidence",
+                "utf8_bytes": 17,
+                "sha256": "d466be6feb6e54b212253f218a6971fe2478837bae8d11fde4d19f8e171019fa"
+              }
+            }
+          ],
+          "structuredContent": {
+            "content": {
+              "id": 5474084856,
+              "number": 40,
+              "title": "docs: register existing Lean evidence for 78 catalog records",
+              "html_url": "https://github.com/TheJustinSunPrize/awards/pull/40",
+              "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/40",
+              "state": "open",
+              "state_reason": null,
+              "created_at": "2026-09-16T11:46:42Z",
+              "updated_at": "2026-09-16T13:15:43Z",
+              "closed_at": null,
+              "user": {
+                "login": "superpilot69",
+                "html_url": "https://github.com/superpilot69"
+              },
+              "body": {
+                "text_omitted": true,
+                "reason": "full text retained only in the private historical evidence",
+                "utf8_bytes": 4832,
+                "sha256": "64301b96a58304c8f8ef03b249aae85de31cf57c78a5b8d53807bf3cba879d5d"
+              }
+            },
+            "title": "40",
+            "modified_date": null,
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/40",
+            "display_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/40",
+            "display_title": "40",
+            "structuredContent": {
+              "title": "40",
+              "content": {
+                "id": 5474084856,
+                "number": 40,
+                "title": "docs: register existing Lean evidence for 78 catalog records",
+                "html_url": "https://github.com/TheJustinSunPrize/awards/pull/40",
+                "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/40",
+                "state": "open",
+                "state_reason": null,
+                "created_at": "2026-09-16T11:46:42Z",
+                "updated_at": "2026-09-16T13:15:43Z",
+                "closed_at": null,
+                "user": {
+                  "login": "superpilot69",
+                  "html_url": "https://github.com/superpilot69"
+                },
+                "body": {
+                  "text_omitted": true,
+                  "reason": "full text retained only in the private historical evidence",
+                  "utf8_bytes": 4832,
+                  "sha256": "64301b96a58304c8f8ef03b249aae85de31cf57c78a5b8d53807bf3cba879d5d"
+                }
+              },
+              "display_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/40"
+            }
+          },
+          "isError": false
+        }
+      }
+    },
+    "retrieved_at": "2026-09-19T23:19:51.216Z"
+  }
+}

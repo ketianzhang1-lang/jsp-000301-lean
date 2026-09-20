@@ -1,0 +1,23 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "61e9d6f52ec6793806b9108b3968de950e70192cb631a46d7d988359380cad4f",
+  "original_bytes": 331,
+  "data": {
+    "status": "byte-identical",
+    "sha256": {
+      "proof_revision": {
+        "text_omitted": true,
+        "reason": "full text retained only in the private historical evidence",
+        "utf8_bytes": 64,
+        "sha256": "7c22b4751898098cd1f53e7b44f391ebd27e674943bdf657d03f2674251f7aa1"
+      },
+      "initial_catalog_revision": {
+        "text_omitted": true,
+        "reason": "full text retained only in the private historical evidence",
+        "utf8_bytes": 64,
+        "sha256": "7c22b4751898098cd1f53e7b44f391ebd27e674943bdf657d03f2674251f7aa1"
+      },
+      "selected_proof": "8f96cab09cc212de5cbe16fe8d28c6cf32d8e99cf5fc826663e5d944f0c99553"
+    }
+  }
+}

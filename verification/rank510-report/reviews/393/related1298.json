@@ -1,0 +1,79 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "6646a1b970f11d3cd512c2312914a4bc60196707b98b2d17a31343eb42d38a9e",
+  "original_bytes": 21067,
+  "data": {
+    "id": 4570870684,
+    "number": 1298,
+    "title": "JSP-000393: record existing Lean formalization (plby/lean-proofs)",
+    "html_url": "https://github.com/TheJustinSunPrize/awards/pull/1298",
+    "url": "https://api.github.com/repos/TheJustinSunPrize/awards/pulls/1298",
+    "state": "open",
+    "created_at": "2026-09-18T16:40:48Z",
+    "updated_at": "2026-09-18T19:02:34Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merged": false,
+    "merge_commit_sha": "70058e0ed6d5dbfa57a9315a3da7b60141e48e6d",
+    "changed_files": 1,
+    "commits": 1,
+    "head": {
+      "label": "xinkuangsi-spec:jsp-000393-record",
+      "ref": "jsp-000393-record",
+      "sha": "fa09b0436cd7e6b07caefb0a8c6e48b8577b4ca0",
+      "user": {
+        "login": "xinkuangsi-spec",
+        "html_url": "https://github.com/xinkuangsi-spec"
+      },
+      "repo": {
+        "full_name": "xinkuangsi-spec/awards",
+        "html_url": "https://github.com/xinkuangsi-spec/awards",
+        "default_branch": "main",
+        "owner": {
+          "login": "xinkuangsi-spec",
+          "html_url": "https://github.com/xinkuangsi-spec"
+        },
+        "license": {
+          "key": "other",
+          "name": "Other",
+          "spdx_id": "NOASSERTION",
+          "url": null
+        }
+      }
+    },
+    "base": {
+      "label": "TheJustinSunPrize:main",
+      "ref": "main",
+      "sha": "ff33abd13163e789790eb1014e55f57c05f94432",
+      "user": {
+        "login": "TheJustinSunPrize",
+        "html_url": "https://github.com/TheJustinSunPrize"
+      },
+      "repo": {
+        "full_name": "TheJustinSunPrize/awards",
+        "html_url": "https://github.com/TheJustinSunPrize/awards",
+        "default_branch": "main",
+        "owner": {
+          "login": "TheJustinSunPrize",
+          "html_url": "https://github.com/TheJustinSunPrize"
+        },
+        "license": {
+          "key": "other",
+          "name": "Other",
+          "spdx_id": "NOASSERTION",
+          "url": null
+        }
+      }
+    },
+    "user": {
+      "login": "xinkuangsi-spec",
+      "html_url": "https://github.com/xinkuangsi-spec"
+    },
+    "body": {
+      "text_omitted": true,
+      "reason": "full text retained only in the private historical evidence",
+      "utf8_bytes": 1650,
+      "sha256": "e817c69c3288b976d44bdbfa392b3e11eff97b1bceab6843d8fed7dfc9930de1"
+    }
+  }
+}

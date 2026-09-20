@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "lake",
+    "build",
+    "Mathlib"
+  ],
+  "cwd": "/work",
+  "exit_code": 0,
+  "seconds": 12.74547815322876
+}

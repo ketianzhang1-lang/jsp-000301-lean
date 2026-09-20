@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "leanchecker",
+    "--verbose",
+    "ErdosProblems.Erdos485"
+  ],
+  "cwd": "/work",
+  "exit_code": 0,
+  "seconds": 58.24253988265991
+}

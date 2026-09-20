@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "leanchecker",
+    "FullProof.VerificationBridge"
+  ],
+  "cwd": "/work/projects/jsp-000912",
+  "exit_code": 0,
+  "seconds": 7.983165740966797
+}

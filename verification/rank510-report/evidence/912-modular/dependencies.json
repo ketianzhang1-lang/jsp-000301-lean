@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "python3",
+    "-c",
+    "import json,subprocess;from pathlib import Path;ps=json.loads(Path('lake-manifest.json').read_text())['packages'];a={p['name']:subprocess.check_output(['git','-C','.lake/packages/'+p['name'],'rev-parse','HEAD'],text=True).strip() for p in ps};print(json.dumps(a,indent=2));assert all(a[p['name']]==p['rev'] for p in ps)"
+  ],
+  "cwd": "/work/projects/jsp-000912",
+  "exit_code": 0,
+  "seconds": 0.06405258178710938
+}

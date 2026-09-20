@@ -1,0 +1,13 @@
+| t53 | theorem | `JSP000506.joint_threshold_tendsto_one` | `JSP000506Selection` / `JSP000506Selection.lean` | `JSP000506Selection.lean` / 105 | [fixed source](https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/90e1298ec99973eefe607f9c21bfffa750804087/projects/jsp-000506/JSP000506Selection.lean) |
+| t54 | theorem | `JSP000506.conditional_joint_failure_bounds` | `JSP000506Selection` / `JSP000506Selection.lean` | `JSP000506Selection.lean` / 120 | [fixed source](https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/90e1298ec99973eefe607f9c21bfffa750804087/projects/jsp-000506/JSP000506Selection.lean) |
+| t55 | theorem | `JSP000506.conditional_joint_gap_tendsto_one` | `JSP000506Selection` / `JSP000506Selection.lean` | `JSP000506Selection.lean` / 136 | [fixed source](https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/90e1298ec99973eefe607f9c21bfffa750804087/projects/jsp-000506/JSP000506Selection.lean) |
+| t56 | theorem | `JSP000506.positive_mass_conditioning_tendsto_one` | `JSP000506Selection` / `JSP000506Selection.lean` | `JSP000506Selection.lean` / 157 | [fixed source](https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/90e1298ec99973eefe607f9c21bfffa750804087/projects/jsp-000506/JSP000506Selection.lean) |
+| t57 | theorem | `JSP000506.mean_minimum_pair_gap_lower` | `JSP000506Selection` / `JSP000506Selection.lean` | `JSP000506Selection.lean` / 186 | [fixed source](https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/90e1298ec99973eefe607f9c21bfffa750804087/projects/jsp-000506/JSP000506Selection.lean) |
+| t58 | theorem | `JSP000506.mean_minimum_pair_gap_scale_lower` | `JSP000506Selection` / `JSP000506Selection.lean` | `JSP000506Selection.lean` / 214 | [fixed source](https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/90e1298ec99973eefe607f9c21bfffa750804087/projects/jsp-000506/JSP000506Selection.lean) |
+| t59 | theorem | `JSP000506.mean_minimum_pair_gap_tendsto_atTop` | `JSP000506Selection` / `JSP000506Selection.lean` | `JSP000506Selection.lean` / 226 | [fixed source](https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/90e1298ec99973eefe607f9c21bfffa750804087/projects/jsp-000506/JSP000506Selection.lean) |
+
+## Index interpretation
+
+The 506 selection build adapter and the 4.34 exporter compatibility rebuild are described in [how-to-reproduce.md](../how-to-reproduce.md). Target ids match their own manifest and log group; ids and Lean names are not globally unique across the eight groups. Auditor bridge sources belong to the harness, not to the original proof commit.
+
+A tracked verification entry exposing an imported theorem does not remove the requirement to compile its actual hash-pinned source and check the full dependency closure.

@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-000728",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "22212651d30af02ad36f01a206984d31b0ec75c6",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000728",
+      "source": "https://arxiv.org/html/1409.5661v1#S1",
+      "requirements": [
+        {
+          "id": "finite-families",
+          "description": "All sum-free subsets and all inclusion-maximal sum-free subsets of the entire finite interval [1,N], allowing x=y in x+y=z.",
+          "targets": [
+            "t008",
+            "t009",
+            "t017",
+            "t018",
+            "t019",
+            "t020",
+            "t021",
+            "t003",
+            "t004",
+            "t005",
+            "t006"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "all-n-lower",
+          "description": "For every natural N including zero, 2^floor(N/4) is at most the number M(N) of maximal sum-free subsets.",
+          "targets": [
+            "t009",
+            "t010",
+            "t011",
+            "t012",
+            "t013",
+            "t014",
+            "t015",
+            "t016",
+            "t027",
+            "t007"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "benchmark-upper",
+          "description": "The claimed imported upper bound M(N)=o(2^(N/2)) and eventual bound with a fixed exponent below 1/2.",
+          "targets": [
+            "t025",
+            "t026",
+            "t000",
+            "t001",
+            "t002",
+            "t032",
+            "t033",
+            "t034"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "all-count-benchmark",
+          "description": "All subsets of the upper half are counted; F(N)>=2^ceil(N/2)>=2^(N/2).",
+          "targets": [
+            "t022",
+            "t023",
+            "t024"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "relative-negligibility",
+          "description": "The original question M(N)=o(F(N)), equivalently here M(N)/F(N) tends to zero as N tends to infinity.",
+          "targets": [
+            "t028",
+            "t029",
+            "t031",
+            "t007"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "fixed-exponential-saving",
+          "description": "There exists one real delta>0, independent of N, such that eventually M(N)<=F(N)/2^(delta*N).",
+          "targets": [
+            "t030",
+            "t031",
+            "t007"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "t000",
+      "problem": "JSP-000728",
+      "role": "bridge",
+      "module": "JSP000728.VerificationBridge",
+      "source": "JSP000728/VerificationBridge.lean",
+      "declaration": "Verify728.upstream_littleO"
+    },
+    {
+      "id": "t001",
+      "problem": "JSP-000728",
+      "role": "bridge",
+      "module": "JSP000728.VerificationBridge",
+      "source": "JSP000728/VerificationBridge.lean",
+      "declaration": "Verify728.upstream_exponential"
+    },
+    {
+      "id": "t002",
+      "problem": "JSP-000728",
+      "role": "bridge",
+      "module": "JSP000728.VerificationBridge",
+      "source": "JSP000728/VerificationBridge.lean",
+      "declaration": "Verify728.upstream_exponent_lt_half"
+    },
+    {
+      "id": "t003",
+      "problem": "JSP-000728",
+      "role": "bridge",
+      "module": "JSP000728.VerificationBridge",
+      "source": "JSP000728/VerificationBridge.lean",
+      "declaration": "Verify728.sumFree_iff"
+    },
+    {
+      "id": "t004",
+      "problem": "JSP-000728",
+      "role": "bridge",
+      "module": "JSP000728.VerificationBridge",
+      "source": "JSP000728/VerificationBridge.lean",
+      "declaration": "Verify728.maximal_iff"
+    },
+    {
+      "id": "t005",
+      "problem": "JSP-000728",
+      "role": "bridge",
+      "module": "JSP000728.VerificationBridge",
+      "source": "JSP000728/VerificationBridge.lean",
+      "declaration": "Verify728.maximal_count"
+    },
+    {
+      "id": "t006",
+      "problem": "JSP-000728",
+      "role": "bridge",
+      "module": "JSP000728.VerificationBridge",
+      "source": "JSP000728/VerificationBridge.lean",
+      "declaration": "Verify728.all_count"
+    },
+    {
+      "id": "t007",
+      "problem": "JSP-000728",
+      "role": "bridge",
+      "module": "JSP000728.VerificationBridge",
+      "source": "JSP000728/VerificationBridge.lean",
+      "declaration": "Verify728.intended"
+    },
+    {
+      "id": "t008",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728",
+      "source": "JSP000728.lean",
+      "declaration": "JSP000728.mem_maximalSets"
+    },
+    {
+      "id": "t009",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728",
+      "source": "JSP000728.lean",
+      "declaration": "JSP000728.exists_maximal_extension"
+    },
+    {
+      "id": "t010",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728",
+      "source": "JSP000728.lean",
+      "declaration": "JSP000728.pick_bounds"
+    },
+    {
+      "id": "t011",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728",
+      "source": "JSP000728.lean",
+      "declaration": "JSP000728.pick_sum_ne"
+    },
+    {
+      "id": "t012",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728",
+      "source": "JSP000728.lean",
+      "declaration": "JSP000728.seed_subset"
+    },
+    {
+      "id": "t013",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728",
+      "source": "JSP000728.lean",
+      "declaration": "JSP000728.seed_sumFree"
+    },
+    {
+      "id": "t014",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728",
+      "source": "JSP000728.lean",
+      "declaration": "JSP000728.different_choices_incompatible"
+    },
+    {
+      "id": "t015",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728",
+      "source": "JSP000728.lean",
+      "declaration": "JSP000728.lower_bound_multiple"
+    },
+    {
+      "id": "t016",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728",
+      "source": "JSP000728.lean",
+      "declaration": "JSP000728.cameron_erdos_lower_bound"
+    },
+    {
+      "id": "t017",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.sumFree_iff_upstream",
+      "definition_source": "JSP000728Bridge.lean",
+      "definition_sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "entry_note": "Configured tracked complete-module verification entry imports the definition module. Original clean verifier separately compiles JSP000728Bridge.lean and replays its kernel prefix. The definition module is not an independent Lake root in the submitted configuration."
+    },
+    {
+      "id": "t018",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.maximalSumFree_iff_upstream",
+      "definition_source": "JSP000728Bridge.lean",
+      "definition_sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "entry_note": "Configured tracked complete-module verification entry imports the definition module. Original clean verifier separately compiles JSP000728Bridge.lean and replays its kernel prefix. The definition module is not an independent Lake root in the submitted configuration."
+    },
+    {
+      "id": "t019",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.maximalSets_eq_upstream",
+      "definition_source": "JSP000728Bridge.lean",
+      "definition_sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "entry_note": "Configured tracked complete-module verification entry imports the definition module. Original clean verifier separately compiles JSP000728Bridge.lean and replays its kernel prefix. The definition module is not an independent Lake root in the submitted configuration."
+    },
+    {
+      "id": "t020",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.maximalSets_card_eq_upstream",
+      "definition_source": "JSP000728Bridge.lean",
+      "definition_sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "entry_note": "Configured tracked complete-module verification entry imports the definition module. Original clean verifier separately compiles JSP000728Bridge.lean and replays its kernel prefix. The definition module is not an independent Lake root in the submitted configuration."
+    },
+    {
+      "id": "t021",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.allSumFreeSets_eq_upstream",
+      "definition_source": "JSP000728Bridge.lean",
+      "definition_sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "entry_note": "Configured tracked complete-module verification entry imports the definition module. Original clean verifier separately compiles JSP000728Bridge.lean and replays its kernel prefix. The definition module is not an independent Lake root in the submitted configuration."
+    },
+    {
+      "id": "t022",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.upperHalf_powerset_subset",
+      "definition_source": "JSP000728Bridge.lean",
+      "definition_sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "entry_note": "Configured tracked complete-module verification entry imports the definition module. Original clean verifier separately compiles JSP000728Bridge.lean and replays its kernel prefix. The definition module is not an independent Lake root in the submitted configuration."
+    },
+    {
+      "id": "t023",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.allSumFreeSets_lower_bound",
+      "definition_source": "JSP000728Bridge.lean",
+      "definition_sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "entry_note": "Configured tracked complete-module verification entry imports the definition module. Original clean verifier separately compiles JSP000728Bridge.lean and replays its kernel prefix. The definition module is not an independent Lake root in the submitted configuration."
+    },
+    {
+      "id": "t024",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.benchmark_le_allSumFreeSets",
+      "definition_source": "JSP000728Bridge.lean",
+      "definition_sha256": "f5c0d3997678f9443f197ad1693ce0ea72f62798e0ed6c5845f676ea69eb9ada",
+      "entry_note": "Configured tracked complete-module verification entry imports the definition module. Original clean verifier separately compiles JSP000728Bridge.lean and replays its kernel prefix. The definition module is not an independent Lake root in the submitted configuration."
+    },
+    {
+      "id": "t025",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.maximalCount_isLittleO_benchmark"
+    },
+    {
+      "id": "t026",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.maximalCount_exponential_bound"
+    },
+    {
+      "id": "t027",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.upstream_count_lower_bound"
+    },
+    {
+      "id": "t028",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.maximalCount_isLittleO_allCount"
+    },
+    {
+      "id": "t029",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.maximal_to_all_ratio_tendsto_zero"
+    },
+    {
+      "id": "t030",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.relative_exponential_saving"
+    },
+    {
+      "id": "t031",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "JSP000728Complete",
+      "source": "JSP000728Complete.lean",
+      "declaration": "JSP000728.jsp_000728"
+    },
+    {
+      "id": "t032",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos877.erdos_877",
+      "definition_source": "ErdosProblems/Erdos877.lean"
+    },
+    {
+      "id": "t033",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos877.erdos_877_exponential_bound",
+      "definition_source": "ErdosProblems/Erdos877.lean"
+    },
+    {
+      "id": "t034",
+      "problem": "JSP-000728",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos877.resolutionExponent_lt_half",
+      "definition_source": "ErdosProblems/Erdos877.lean"
+    }
+  ]
+}

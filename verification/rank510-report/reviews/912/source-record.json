@@ -1,0 +1,30 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "5c9f66d787d44919cffbae497664f6645f929543722ab30d0498acf777aac421",
+  "original_bytes": 6177,
+  "data": {
+    "retrieved_at": "2026-09-19T23:22:57.175Z",
+    "primary": {
+      "url": "https://users.renyi.hu/~p_erdos/1981-33.pdf",
+      "title": "Some problems and results on additive and multiplicative number theory",
+      "author": "P. Erdős",
+      "year": 1981,
+      "location": "p. 171, equation (1.1) and following paragraph",
+      "sha256": "55e7d25c6cf2467214bdcc1e0d8e55678ad8909571102c9b74d98afe82c13682",
+      "visual_inspection": "Page 1 (printed p171) reviewed"
+    },
+    "blocked_sources": [
+      "https://www.erdosproblems.com/1099 returned HTTP403",
+      "https://www.erdosproblems.com/latex/1099 returned HTTP403",
+      "https://www.sciencedirect.com/science/article/abs/pii/0022314X84901070 inaccessible; Vose bibliographic attribution retained from catalog, original full text not used"
+    ],
+    "base_catalog": " · What bounds hold for the sum of prescribed powers of consecutive divisor ratios minus one?\n\n| Field | Content |\n| --- | --- |\n| Date proposed | No later than 1981 (bibliographic evidence) |\n| Mathematical area | Number theory / Divisors |\n| Problem description | What bounds hold for the sum of prescribed powers of consecutive divisor ratios minus one? |\n| Current status | Solved |\n| Lean proof | No |\n| Eligible to claim | No |\n| Historical bounty |  |\n| Elapsed years | About 3 years (since 1981) |\n| Publication details | &#91;Er81h&#93; [Some problems and results on additive and multiplicative number theory](https://doi.org/10.1007/bfb0096460) — Analytic number theory (Philadelphia, Pa., 1980) (1981), 171-182.<br>&#91;Vo84&#93; Integers with consecutive divisors in small ratio — J. Number Theory (1984), 233--238. |\n| Public review | Unverified: no public recognition specifically identifying this result was found (such as an award citation or authoritative public confirmation). |\n\n<a id=\"JSP-000913\"></a>\n\n",
+    "issue24_scope": " — Erdős 1099\n\nFor every real alpha > 1, the target provides a finite nonnegative constant C, depending on alpha, such that h_alpha(n) <= C for arbitrarily large natural numbers n and the liminf of h_alpha is at most C. Here h_alpha sums the alpha-th powers of consecutive relative gaps in the complete increasing list of positive divisors, using (d_{i+1}/d_i-1)^alpha. The proof supplies an explicit cofinal Vose sequence, rather than relying on finitely many examples or a merely assumed sequence. This is the primary bounded-liminf assertion; it does not identify the separate factorial or least-common-multiple sequences as successful witnesses. The bound depends on alpha > 1 and holds for arbitrarily large n, not eventually for every n. The theorem establishes the main bounded-liminf question via its explicit Vose sequence. It does not resolve the page's separate questions for n!, lcm(1,...,n), or the alpha=1 logarithmic variant. The seven-file source closure and its notices must be preserved.\n\nChecked 7 local module(s); all were compiled and replayed. Target axiom output:\n\n```text\n'Erdos1099.erdos_1099' depends on axioms: [propext, Classical.choice, Quot.sound]\n```\n\nThe `JSP-000912` record in the immutable metadata lists the complete source closure and actual checks. To reproduce from the pinned upstream `src/latest` project after installing its pinned dependencies/cache, run `lake build ErdosProblems.Erdos1099`, then `lake env leanchecker --verbose <module>` for every module in that record's `compile_order`. Import the main module in an audit file and run `#print axioms` for **each** target listed above.\n\n",
+    "source_history": {
+      "text_omitted": true,
+      "reason": "full text retained only in the private historical evidence",
+      "utf8_bytes": 2582,
+      "sha256": "4d24e8ee5548c1a25ad523354da9ddb802698fc4126ab58addf9b49f670675c8"
+    }
+  }
+}

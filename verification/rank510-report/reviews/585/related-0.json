@@ -1,0 +1,56 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "b82a1f257abd0bb1799150b88a87f4cc58cb3d329945dda18f82f64909085bd0",
+  "original_bytes": 12184,
+  "data": {
+    "total_count": 2,
+    "incomplete_results": false,
+    "items": [
+      {
+        "id": 5504401633,
+        "number": 1584,
+        "title": "[Award claim] JSP-000585: Lean formalization",
+        "html_url": "https://github.com/TheJustinSunPrize/awards/issues/1584",
+        "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1584",
+        "state": "open",
+        "state_reason": null,
+        "created_at": "2026-09-18T20:26:11Z",
+        "updated_at": "2026-09-18T20:26:11Z",
+        "closed_at": null,
+        "user": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "body": {
+          "text_omitted": true,
+          "reason": "full text retained only in the private historical evidence",
+          "utf8_bytes": 4498,
+          "sha256": "5dc77516b08549443fea5706fb74a92ff5bd883f30e0e11a8a8c8718d9aa436e"
+        }
+      },
+      {
+        "id": 5482315309,
+        "number": 417,
+        "title": "[Recipient] JSP-000585: verified exact Catlin subdivision threshold (scoped)",
+        "html_url": "https://github.com/TheJustinSunPrize/awards/issues/417",
+        "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/417",
+        "state": "open",
+        "state_reason": null,
+        "created_at": "2026-09-17T03:04:00Z",
+        "updated_at": "2026-09-17T03:04:00Z",
+        "closed_at": null,
+        "user": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "body": {
+          "text_omitted": true,
+          "reason": "full text retained only in the private historical evidence",
+          "utf8_bytes": 1194,
+          "sha256": "3b4095c8e0bd188cf3346d4a5e0d9e51ca21523cc4396c1ffc6ba8a80a71381b"
+        }
+      }
+    ],
+    "search_type": "lexical"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "git",
+    "restore",
+    "--",
+    "evidence/original-4.19/PACKAGE_SHA256SUMS",
+    "evidence/original-4.19/clean-directory-reproduction.log",
+    "evidence/original-4.19/mathlib-dependency-manifest.json",
+    "evidence/original-4.19/metadata.json",
+    "evidence/original-4.19/standalone-verification.log"
+  ],
+  "cwd": "/work/projects/jsp-000912",
+  "exit_code": 0,
+  "seconds": 0.0036895275115966797
+}

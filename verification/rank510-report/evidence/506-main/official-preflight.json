@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "/harness/audit.py",
+    "preflight",
+    "/out/targets.json",
+    "--out",
+    "/out/preflight"
+  ],
+  "cwd": "/work/projects/jsp-000506",
+  "exit_code": 0,
+  "seconds": 0.16411423683166504
+}

@@ -1,0 +1,24 @@
+{
+  "real_lake": "/opt/elan/toolchains/leanprover--lean4---v4.31.0/bin/lake",
+  "adapter": "/out/manual-lake-adapter",
+  "adapter_sha256": "9818eb64e87d201969cb4bc522cfe7abb6dc270ab57fb20afcf677c3b13aa806",
+  "scope": {
+    "file": "manual-lake-adapter.py",
+    "intercepted_argv": [
+      [
+        "build",
+        "+JSP000506Selection"
+      ],
+      [
+        "build",
+        "+JSP000506.VerificationSelection"
+      ]
+    ],
+    "replacement": "The actual pinned Lake invokes env lean -DwarningAsError=true -j1 -M12000 -o .lake/build/lib/lean/MODULE.olean SOURCE.lean on every invocation. All other argv exec the real Lake unchanged.",
+    "evidence": "/out/manual-module-builds.jsonl, per-invocation output logs and /out/manual-equivalence.json",
+    "reason": "Lean 4.31 roots omit JSP000506Selection; the official lean-verify reproduction reference permits equivalent explicit module/source checks. No proof source, Lake config or official audit script modification.",
+    "limits": "Auditor-owned manual-equivalence adapter; these two builds are not native Lake target builds. Original verifier and kernel replay still call the real pinned Lake."
+  },
+  "official_audit_script_unchanged": true,
+  "proof_lakefile_unchanged": true
+}

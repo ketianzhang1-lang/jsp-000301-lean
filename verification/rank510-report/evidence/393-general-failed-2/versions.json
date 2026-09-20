@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "set -e; lean --version; lake --version; rustc --version; cargo --version; id; uname -a"
+  ],
+  "cwd": "/work",
+  "exit_code": 0,
+  "seconds": 0.21439290046691895
+}

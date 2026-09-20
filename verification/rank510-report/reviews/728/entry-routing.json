@@ -1,0 +1,23 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "b7e65530cbb7fd63f752ee1954d421d1c8a3d4ead919a9aca0f93f2242b90218",
+  "original_bytes": 987,
+  "data": {
+    "reason": "Original JSP000728Bridge module is imported but omitted from Lake roots; the eight target declarations are now audited through configured tracked JSP000728Complete verification entry.",
+    "original_build_and_kernel": "Passed unchanged original verifier in run35477208711; must rerun unchanged original verifier for next complete run.",
+    "definitions": [
+      "JSP000728.sumFree_iff_upstream",
+      "JSP000728.maximalSumFree_iff_upstream",
+      "JSP000728.maximalSets_eq_upstream",
+      "JSP000728.maximalSets_card_eq_upstream",
+      "JSP000728.allSumFreeSets_eq_upstream",
+      "JSP000728.upperHalf_powerset_subset",
+      "JSP000728.allSumFreeSets_lower_bound",
+      "JSP000728.benchmark_le_allSumFreeSets"
+    ],
+    "definition_source": "JSP000728Bridge.lean",
+    "verification_module": "JSP000728Complete",
+    "verification_source": "JSP000728Complete.lean",
+    "independent_bridge": "JSP000728.VerificationBridge already compiled successfully in failed run and remains unchanged"
+  }
+}

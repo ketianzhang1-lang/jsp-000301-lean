@@ -1,0 +1,547 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-000506",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "2aca2f16eba715d7ad672dfa017481b647c00063",
+    "toolchain": "leanprover/lean4:v4.31.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000506",
+      "source": "https://arxiv.org/html/2408.13839v1#S1",
+      "requirements": [
+        {
+          "id": "finite-model",
+          "description": "Exact uniform Boolean-cube mass; all labelled simple graphs; proper/cocolouring minima; finite concentration reduction with its explicit 999/1000 premise.",
+          "targets": [
+            "t0",
+            "t1",
+            "t2",
+            "t3",
+            "t4",
+            "t5",
+            "t6",
+            "t7",
+            "t8",
+            "t9",
+            "t10",
+            "t11",
+            "t12",
+            "t13",
+            "t14",
+            "t15",
+            "t16",
+            "t17",
+            "t18",
+            "t19",
+            "t20",
+            "t21",
+            "t22",
+            "t23",
+            "t24",
+            "t25",
+            "t26",
+            "t27",
+            "t28",
+            "t29",
+            "t30",
+            "t31",
+            "t32",
+            "t33"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "full-sequence",
+          "description": "Unconditional full-sequence limit for every fixed real/natural gap threshold; positive literal C*n/log(n)^3 scale; all small orders handled by eventual limits; no pathwise assertion.",
+          "targets": [
+            "t34",
+            "t35",
+            "t36",
+            "t37",
+            "t38",
+            "t39",
+            "t40",
+            "t41",
+            "t42",
+            "t43",
+            "t44",
+            "t45",
+            "t46",
+            "t47",
+            "t48"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "independent-model",
+          "description": "Independent cocolouring predicate and minimum, Mathlib binomial law, literal fixed-threshold and quantitative conclusions; explicit conditional and expectation formulas for supplement.",
+          "targets": [
+            "b0",
+            "b1",
+            "b2",
+            "b3",
+            "b4",
+            "b5"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "b0",
+      "problem": "JSP-000506",
+      "role": "bridge",
+      "module": "JSP000506.VerificationMain",
+      "source": "JSP000506/VerificationMain.lean",
+      "declaration": "Verify506.exists_coColourable"
+    },
+    {
+      "id": "b1",
+      "problem": "JSP-000506",
+      "role": "bridge",
+      "module": "JSP000506.VerificationMain",
+      "source": "JSP000506/VerificationMain.lean",
+      "declaration": "Verify506.coColourable_iff"
+    },
+    {
+      "id": "b2",
+      "problem": "JSP-000506",
+      "role": "bridge",
+      "module": "JSP000506.VerificationMain",
+      "source": "JSP000506/VerificationMain.lean",
+      "declaration": "Verify506.coNumber_eq"
+    },
+    {
+      "id": "b3",
+      "problem": "JSP-000506",
+      "role": "bridge",
+      "module": "JSP000506.VerificationMain",
+      "source": "JSP000506/VerificationMain.lean",
+      "declaration": "Verify506.intended"
+    },
+    {
+      "id": "b4",
+      "problem": "JSP-000506",
+      "role": "bridge",
+      "module": "JSP000506.VerificationMain",
+      "source": "JSP000506/VerificationMain.lean",
+      "declaration": "Verify506.explicit_quantitative"
+    },
+    {
+      "id": "b5",
+      "problem": "JSP-000506",
+      "role": "bridge",
+      "module": "JSP000506.VerificationMain",
+      "source": "JSP000506/VerificationMain.lean",
+      "declaration": "Verify506.explicit_scale_diverges"
+    },
+    {
+      "id": "t0",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.mass_nonneg"
+    },
+    {
+      "id": "t1",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.mass_univ"
+    },
+    {
+      "id": "t2",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.mass_mono"
+    },
+    {
+      "id": "t3",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.mass_compl"
+    },
+    {
+      "id": "t4",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.mass_union_le"
+    },
+    {
+      "id": "t5",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.mass_cover"
+    },
+    {
+      "id": "t6",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.mem_event"
+    },
+    {
+      "id": "t7",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.mass_event_compl"
+    },
+    {
+      "id": "t8",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.mass_anticorrelation"
+    },
+    {
+      "id": "t9",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.concentration_reduction"
+    },
+    {
+      "id": "t10",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.proper_n"
+    },
+    {
+      "id": "t11",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.proper_to_coProper"
+    },
+    {
+      "id": "t12",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.coProper_compl"
+    },
+    {
+      "id": "t13",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.chi_spec"
+    },
+    {
+      "id": "t14",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.zeta_spec"
+    },
+    {
+      "id": "t15",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.chi_mono"
+    },
+    {
+      "id": "t16",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.zeta_le_chi"
+    },
+    {
+      "id": "t17",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.zeta_compl"
+    },
+    {
+      "id": "t18",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506",
+      "source": "JSP000506.lean",
+      "declaration": "JSP000506.heckel_proposition3"
+    },
+    {
+      "id": "t19",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Bridge",
+      "source": "JSP000506Bridge.lean",
+      "declaration": "JSP000506.mem_fromGraph"
+    },
+    {
+      "id": "t20",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Bridge",
+      "source": "JSP000506Bridge.lean",
+      "declaration": "JSP000506.toGraph_adj_iff"
+    },
+    {
+      "id": "t21",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Bridge",
+      "source": "JSP000506Bridge.lean",
+      "declaration": "JSP000506.fromGraph_toGraph"
+    },
+    {
+      "id": "t22",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Bridge",
+      "source": "JSP000506Bridge.lean",
+      "declaration": "JSP000506.toGraph_fromGraph"
+    },
+    {
+      "id": "t23",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Bridge",
+      "source": "JSP000506Bridge.lean",
+      "declaration": "JSP000506.proper_iff_colorable"
+    },
+    {
+      "id": "t24",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Bridge",
+      "source": "JSP000506Bridge.lean",
+      "declaration": "JSP000506.coProper_iff_all_pairs"
+    },
+    {
+      "id": "t25",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Bridge",
+      "source": "JSP000506Bridge.lean",
+      "declaration": "JSP000506.coProper_iff_coColorable"
+    },
+    {
+      "id": "t26",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Bridge",
+      "source": "JSP000506Bridge.lean",
+      "declaration": "JSP000506.chi_eq_chromaticNumberNat"
+    },
+    {
+      "id": "t27",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Bridge",
+      "source": "JSP000506Bridge.lean",
+      "declaration": "JSP000506.zeta_eq_cochromaticNumber"
+    },
+    {
+      "id": "t28",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Bridge",
+      "source": "JSP000506Bridge.lean",
+      "declaration": "JSP000506.gap_cast_eq"
+    },
+    {
+      "id": "t29",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Bridge",
+      "source": "JSP000506Bridge.lean",
+      "declaration": "JSP000506.card_graph_space"
+    },
+    {
+      "id": "t30",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Bridge",
+      "source": "JSP000506Bridge.lean",
+      "declaration": "JSP000506.card_event_eq_graph_event"
+    },
+    {
+      "id": "t31",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Bridge",
+      "source": "JSP000506Bridge.lean",
+      "declaration": "JSP000506.mass_event_eq_randomGraph"
+    },
+    {
+      "id": "t32",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Bridge",
+      "source": "JSP000506Bridge.lean",
+      "declaration": "JSP000506.mass_le_one"
+    },
+    {
+      "id": "t33",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Complete",
+      "source": "JSP000506Complete.lean",
+      "declaration": "JSP000506.gapProbability_nonneg"
+    },
+    {
+      "id": "t34",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Complete",
+      "source": "JSP000506Complete.lean",
+      "declaration": "JSP000506.gapProbability_le_one"
+    },
+    {
+      "id": "t35",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Complete",
+      "source": "JSP000506Complete.lean",
+      "declaration": "JSP000506.gapProbability_antitone"
+    },
+    {
+      "id": "t36",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Complete",
+      "source": "JSP000506Complete.lean",
+      "declaration": "JSP000506.gapProbability_eq_standard"
+    },
+    {
+      "id": "t37",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Complete",
+      "source": "JSP000506Complete.lean",
+      "declaration": "JSP000506.quantitative_gap_tendsto_one"
+    },
+    {
+      "id": "t38",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Complete",
+      "source": "JSP000506Complete.lean",
+      "declaration": "JSP000506.gapScale_tendsto_atTop"
+    },
+    {
+      "id": "t39",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Complete",
+      "source": "JSP000506Complete.lean",
+      "declaration": "JSP000506.threshold_tendsto_one"
+    },
+    {
+      "id": "t40",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Complete",
+      "source": "JSP000506Complete.lean",
+      "declaration": "JSP000506.fixed_threshold_tendsto_one"
+    },
+    {
+      "id": "t41",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Complete",
+      "source": "JSP000506Complete.lean",
+      "declaration": "JSP000506.small_gap_probability_tendsto_zero"
+    },
+    {
+      "id": "t42",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Complete",
+      "source": "JSP000506Complete.lean",
+      "declaration": "JSP000506.eventually_not_heckel_premise"
+    },
+    {
+      "id": "t43",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Complete",
+      "source": "JSP000506Complete.lean",
+      "declaration": "JSP000506.jsp_000506"
+    },
+    {
+      "id": "t44",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Complete",
+      "source": "JSP000506Complete.lean",
+      "declaration": "JSP000506.complete_package"
+    },
+    {
+      "id": "t45",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Complete",
+      "source": "JSP000506Complete.lean",
+      "declaration": "Erdos625.erdos625",
+      "definition_source": "Erdos625SelfContained.lean",
+      "definition_module": "Erdos625SelfContained",
+      "source_role": "Tracked configured proof entry imports the exact upstream declaration; actual definition is in the checksum-verified bootstrap source."
+    },
+    {
+      "id": "t46",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Complete",
+      "source": "JSP000506Complete.lean",
+      "declaration": "Erdos625.erdos625Statement_iff_real",
+      "definition_source": "Erdos625SelfContained.lean",
+      "definition_module": "Erdos625SelfContained",
+      "source_role": "Tracked configured proof entry imports the exact upstream declaration; actual definition is in the checksum-verified bootstrap source."
+    },
+    {
+      "id": "t47",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Complete",
+      "source": "JSP000506Complete.lean",
+      "declaration": "Erdos625.randomGraphMeasure_eq_uniformOn_univ",
+      "definition_source": "Erdos625SelfContained.lean",
+      "definition_module": "Erdos625SelfContained",
+      "source_role": "Tracked configured proof entry imports the exact upstream declaration; actual definition is in the checksum-verified bootstrap source."
+    },
+    {
+      "id": "t48",
+      "problem": "JSP-000506",
+      "role": "theorem",
+      "module": "JSP000506Complete",
+      "source": "JSP000506Complete.lean",
+      "declaration": "Erdos625.gapConstant_pos",
+      "definition_source": "Erdos625SelfContained.lean",
+      "definition_module": "Erdos625SelfContained",
+      "source_role": "Tracked configured proof entry imports the exact upstream declaration; actual definition is in the checksum-verified bootstrap source."
+    }
+  ]
+}

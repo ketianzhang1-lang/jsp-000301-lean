@@ -1,0 +1,122 @@
+{
+  "rules_commit": "38e63c424c7196f8d4ceb664c5c25f0c0529d5e2",
+  "semantic_review_confirmed": [
+    636,
+    912,
+    393,
+    728,
+    585,
+    506
+  ],
+  "jobs": {
+    "636": {
+      "run_id": 35477834039,
+      "job_id": 105990063474,
+      "harness_commit": "12fb870e5c449902bf7085c00684b606ac06fa5d"
+    },
+    "912-full": {
+      "run_id": 35476644569,
+      "job_id": 105986918905,
+      "harness_commit": "2f9ef20458520451c2d02e93315f7fa84e9f7cd1"
+    },
+    "912-modular": {
+      "run_id": 35476644569,
+      "job_id": 105986918908,
+      "harness_commit": "2f9ef20458520451c2d02e93315f7fa84e9f7cd1"
+    },
+    "393-general": {
+      "job_id": 105995470656,
+      "run_id": 35479808961,
+      "harness_commit": "3195910470b2fcd7712bd983c241d624937321d5"
+    },
+    "728": {
+      "job_id": 105995470643,
+      "run_id": 35479808961,
+      "harness_commit": "3195910470b2fcd7712bd983c241d624937321d5"
+    },
+    "585": {
+      "run_id": 35477834039,
+      "job_id": 105990063509,
+      "harness_commit": "12fb870e5c449902bf7085c00684b606ac06fa5d"
+    },
+    "506-main": {
+      "job_id": 105995827916,
+      "run_id": 35479940510,
+      "harness_commit": "1e52e4f5851d9751ddc637d383e365047b749fad"
+    },
+    "506-selection": {
+      "job_id": 105995827933,
+      "run_id": 35479940510,
+      "harness_commit": "1e52e4f5851d9751ddc637d383e365047b749fad"
+    }
+  },
+  "failure_history": {
+    "636-failed-1": "The original complete proof passed. An independently introduced profile bridge used rfl across elaborated DecidablePred instances; the revised bridge unfolds the literal predicates and proves equality with congr. No selected proof source or theorem statement changed.",
+    "585-failed-1": "The original complete proof passed. The independent bridge contained record-literal parsing errors and eleven audited declarations were routed through an unregistered Lake module. The rerun fixes bridge syntax and routes those same declarations through the configured AuditComplete entry while separately binding their actual definition_source and SHA-256. No selected proof source changed.",
+    "393-general-failed-2": "The selected aa1e proof passed its full original verifier and explicit Erdos485 kernel replay. Independent complex minimum zero/one bridge simplification failed; the next harness uses explicit definitional rewrites. The proof commit is unchanged.",
+    "728-failed-2": "All eight independently introduced auditor bridges passed. Eight original declarations defined in JSP000728Bridge were addressed through an unregistered Lake root. They are now checked through the configured JSP000728Complete import entry with separately hashed actual definitions. The proof commit is unchanged.",
+    "506-main-failed-1": "All original target declarations passed the official source and axiom checks, following a successful clean original verifier. Only the shared auditor scale-divergence bridge failed because simp did not unfold an unapplied function inside Tendsto. The corrected bridge uses explicit definitional change; the submitted proof commit and statement are unchanged.",
+    "506-selection-failed-1": "All original target declarations passed the official source and axiom checks, following a successful clean original verifier. Only the shared auditor scale-divergence bridge failed because simp did not unfold an unapplied function inside Tendsto. The corrected bridge uses explicit definitional change; the submitted proof commit and statement are unchanged."
+  },
+  "prs": {
+    "393": {
+      "pr": 368,
+      "head": "de7fe6666f4e4cf41ea1559c1193509b3ae33e21",
+      "state": "open",
+      "merged": false,
+      "mergeable": true,
+      "updated_at": "2026-09-20T01:14:16Z"
+    },
+    "506": {
+      "pr": 363,
+      "head": "27fddf6dee0d9fb92a34643f05615da57be80574",
+      "state": "open",
+      "merged": false,
+      "mergeable": true,
+      "updated_at": "2026-09-19T10:01:09Z"
+    },
+    "585": {
+      "pr": 432,
+      "head": "30ad37f593a6c55bb642915b4877ca896d23acf1",
+      "state": "open",
+      "merged": false,
+      "mergeable": true,
+      "updated_at": "2026-09-19T10:00:28Z"
+    },
+    "636": {
+      "pr": 382,
+      "head": "7b918856f1732ddde1d03a6398ac66d5d52144f5",
+      "state": "open",
+      "merged": false,
+      "mergeable": true,
+      "updated_at": "2026-09-19T09:57:12Z"
+    },
+    "728": {
+      "pr": 373,
+      "head": "f6336c16b2f6d06ca2a7e829a36cb4056389338d",
+      "state": "open",
+      "merged": false,
+      "mergeable": true,
+      "updated_at": "2026-09-19T09:59:38Z"
+    },
+    "912": {
+      "pr": 691,
+      "head": "2c1242af9bc691f0c052c46c309baa6b197458a2",
+      "state": "open",
+      "merged": false,
+      "mergeable": true,
+      "updated_at": "2026-09-19T09:58:05Z"
+    }
+  },
+  "catalog_393_update": {
+    "commit": "de7fe6666f4e4cf41ea1559c1193509b3ae33e21",
+    "url": "https://github.com/ketianzhang1-lang/awards/commit/de7fe6666f4e4cf41ea1559c1193509b3ae33e21",
+    "published": true
+  },
+  "proof_documentation_393": {
+    "commit": "2801fefafa39cb26e5bb351c5d3ac94bbcf27252",
+    "selected_proof_unchanged": "aa1ed1bac2eb0c1ec33723ff802ff3b9b6c02ee8"
+  },
+  "official_state_checked_at_utc": "2026-09-20T01:48:57.541378+00:00",
+  "finalized_at_utc": "2026-09-20T01:50:25.498663+00:00"
+}

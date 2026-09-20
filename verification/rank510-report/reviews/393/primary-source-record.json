@@ -1,0 +1,40 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "26aa5745073e6deab79246d7fcf928fccc4fbb0d307d828633e778369db09963",
+  "original_bytes": 2049,
+  "data": {
+    "date": "2026-09-19",
+    "original_sources": [
+      {
+        "title": "Schinzel (1987), On the number of terms of a power of a polynomial",
+        "url": "https://matwbn.icm.edu.pl/ksiazki/aa/aa49/aa4916.pdf",
+        "sha256": "b2dc9ffd681efe84581cb39a20449605a9b5946f8371dd5123c86dd7513c5401",
+        "decisive_location": "printed page 55 (first PDF page, right half): original conjecture uses nonzero complex coefficients; Theorem 1 gives general characteristic-zero-field scope."
+      },
+      {
+        "title": "Coppersmith and Davenport (1991), Polynomials whose powers are sparse",
+        "url": "https://matwbn.icm.edu.pl/ksiazki/aa/aa58/aa5816.pdf",
+        "sha256": "d096c7eb7e7c05699598f2dba5fa843a3687a2b51db96f1f469a531f6009ed3d",
+        "decisive_location": "printed page 86 (last PDF page, left half), section A smaller example for squares: exact 13-term polynomial and 12-term square."
+      },
+      {
+        "title": "Hayman and Lingham, Research Problems in Function Theory, arXiv v2 (2018)",
+        "url": "https://arxiv.org/abs/1809.07200v2",
+        "sha256": "8e28fd4403a07e4e19a9816b7efaafddf9f475d59cf8c34a8255cb03833ed4f0",
+        "decisive_location": "printed page 73/PDF page 74, Problem 4.4: uniform threshold for all polynomials; surrounding chapter uses complex polynomials."
+      }
+    ],
+    "secondary_formal_reference": {
+      "url": "https://github.com/google-deepmind/formal-conjectures/blob/5657b3b9ae1c174fdbab9d9d600b018238ba573c/FormalConjectures/ErdosProblems/485.lean",
+      "sha256": "c6c93e5c1d3a43b4e0c67cabe90eda0ab8ccae77aa99ac3e77dd3b3856acdebd",
+      "scope": "Explicit rational coefficient formulation, not organizer-approved; sorry placeholder is not imported."
+    },
+    "failed_access": [
+      {
+        "url": "https://www.erdosproblems.com/485",
+        "reason": "HTTP403 both web and read-only direct request; no browser fallback."
+      }
+    ],
+    "delivery_note": "Retain primary PDFs/screenshots only as reviewer scratch. Distribute source URLs, hashes and short paraphrases; do not bundle copyrighted full papers or pages."
+  }
+}

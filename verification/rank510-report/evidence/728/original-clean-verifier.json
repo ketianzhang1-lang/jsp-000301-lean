@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "bash",
+    "scripts/verify.sh"
+  ],
+  "cwd": "/work/projects/jsp-000728",
+  "exit_code": 0,
+  "seconds": 458.91824173927307
+}

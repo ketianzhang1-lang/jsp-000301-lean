@@ -1,0 +1,1280 @@
+{
+  "585": {
+    "status": "mechanical_evidence_validated",
+    "semantic_verdict": "requires_separate_review",
+    "proof_commit": "9661ef0f170e750b1ac2153b9017bad86044680c",
+    "branch_tip": "963a9e6b283b83d3265ff20fbb748cfc9f693d0d",
+    "target_count": 65,
+    "original_target_count": 61,
+    "axioms": {
+      "Verify585.subdivision_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify585.sigma_spec": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify585.uniform_ratio": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify585.catlin_exact": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinCertificates.eight_colours": [],
+      "CatlinCertificates.proper_eight_colouring": [],
+      "CatlinCertificates.no_independent_triple": [],
+      "CatlinCertificates.finite_budget_certificate": [],
+      "CatlinCertificates.budget_bound": [],
+      "CatlinCertificates.no_feasible_resource_tuple": [],
+      "CatlinComplete.mem_inside": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.card_inside": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.length_ge_two": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.length_ge_three": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.demand_le_inside": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.profile_certificate": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.separated_endpoints": [
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.common_in_middle": [
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.cluster_size": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.count_le_three": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.sum_counts": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.full_cluster": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.weight_le_demand": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.regroup": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.regroup_twice": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.profileCost_le_budget": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.budget_ge_eight": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.sum_demand_edges": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.total_inside_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.subdivision_budget_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.colour_fiber_card_le_two": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.not_seven_colorable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.chromaticNumber_eq_eight": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.no_K8_subdivision": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.catlin_counterexample": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.seven_exceptional": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.seven_detour": [
+        "propext"
+      ],
+      "CatlinComplete.contains_K7_subdivision": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.containsCliqueSubdivision_antitone": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.containsCliqueSubdivision_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CatlinComplete.sharp_catlin_counterexample": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.edge_left_mem": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.edge_right_mem": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.edge_lt": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.card_branchSet": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.mem_branchSet": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.branch_branchLabel": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.labels_ne": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.indexedEdge_injective": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.convertedPath_isPath": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.inside_convertedPath": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.containsSubdivision_iff_indexed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.subdivisionModels_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.catlin_subdivision_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.catlin_sigma_eq_seven": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.catlin_chi_eq_eight": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.catlin_ratio_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.catlin_ratio_gt_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.exists_universal_ratio_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.ratio_range_bddAbove": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.extremal_upper_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.catlin_extremal_lower_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.catlin_constant_lower_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000585.jsp_000585": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Erdos717.erdos_717": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "source_inputs_stable": true,
+    "dependency_count": 9,
+    "dependencies": {
+      "mathlib": "5ed2965256430c3649e86755f9576b54eca72435",
+      "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+      "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+    },
+    "nanoda_declarations": 48450,
+    "official_script_sha256": "5db45dddcb4d588bc27e7c7161fbca5cedaa3e73e1c40843d21f5a214323cd07",
+    "manifest_sha256": "50ddef0a7180c6456668bff48fcbadb9ffee030fe1d8bdbd4b6490874a945482",
+    "image_id": "sha256:9acc44c6fd2862edfa9854e8bb03943701db29eeefdfb8401a7f0cd6d533bfb8",
+    "artifact_files_hashed": 521,
+    "original_verification_records": [
+      {
+        "status": "passed",
+        "toolchain": "leanprover/lean4:v4.34.0",
+        "preparation_head": "9661ef0f170e750b1ac2153b9017bad86044680c",
+        "modules_compiled": [
+          "Certificate",
+          "GraphCore",
+          "Profile",
+          "Subdivision",
+          "Colouring",
+          "Catlin",
+          "Sharp",
+          "ErdosProblems.Erdos599.Countable",
+          "ErdosProblems.Erdos718.Erdos718Core",
+          "JSP000585Bridge",
+          "ErdosProblems.Erdos717.MaximumCut",
+          "ErdosProblems.Erdos717.DependentRandomChoice",
+          "ErdosProblems.Erdos717.GreedySelection",
+          "ErdosProblems.Erdos717.RouteAssembly",
+          "ErdosProblems.Erdos717.RouteReservoir",
+          "ErdosProblems.Erdos717.ReservoirCleanup",
+          "ErdosProblems.Erdos717.ReservoirSubdivision",
+          "ErdosProblems.Erdos717.ShortPathReservoir",
+          "ErdosProblems.Erdos717.NearlyComplete",
+          "ErdosProblems.Erdos717.DenseReservoir",
+          "ErdosProblems.Erdos717.NeighborhoodPattern",
+          "ErdosProblems.Erdos717.LocalIndependence",
+          "ErdosProblems.Erdos717.SparseHighDensity",
+          "ErdosProblems.Erdos717.ReservoirArithmetic",
+          "ErdosProblems.Erdos717.SubsetSampling",
+          "ErdosProblems.Erdos717.OptimalReservoir",
+          "ErdosProblems.Erdos717.DegreePruning",
+          "ErdosProblems.Erdos717.SparseDenseStep",
+          "ErdosProblems.Erdos717.SparseParameters",
+          "ErdosProblems.Erdos717.SparseDensity",
+          "ErdosProblems.Erdos717.SparseLogArithmetic",
+          "ErdosProblems.Erdos717.SparseHighStep",
+          "ErdosProblems.Erdos717.SparseInductionArithmetic",
+          "ErdosProblems.Erdos717.ThomasWollan",
+          "ErdosProblems.Erdos717.DenseMinor",
+          "ErdosProblems.Erdos717.ContractLinkage",
+          "ErdosProblems.Erdos717.ThomasWollanMassed",
+          "ErdosProblems.Erdos717.TerminalCompletion",
+          "ErdosProblems.Erdos717.MinimalMassed",
+          "ErdosProblems.Erdos717.MassedContraction",
+          "ErdosProblems.Erdos717.DenseNeighborhood",
+          "ErdosProblems.Erdos717.InduceLinkage",
+          "ErdosProblems.Erdos717.NoIsolated",
+          "ErdosProblems.Erdos717.RigidSeparation",
+          "ErdosProblems.Erdos717.RestrictLinkage",
+          "ErdosProblems.Erdos717.ContractRigidity",
+          "ErdosProblems.Erdos717.GlueLinkage",
+          "ErdosProblems.Erdos717.TorsoLinkage",
+          "ErdosProblems.Erdos717.TorsoExpansion",
+          "ErdosProblems.Erdos717.LeftTorsoMass",
+          "ErdosProblems.Erdos717.NestedTorso",
+          "ErdosProblems.Erdos717.NoRigid",
+          "ErdosProblems.Erdos717.FullArms",
+          "ErdosProblems.Erdos717.ClaimTwo",
+          "ErdosProblems.Erdos717.NoSmallRigid",
+          "ErdosProblems.Erdos717.EmbeddedLinkage",
+          "ErdosProblems.Erdos717.MassedLinkage",
+          "ErdosProblems.Erdos717.DensityTheorem",
+          "ErdosProblems.Erdos717.SparseInduction",
+          "ErdosProblems.Erdos717.DenseStep",
+          "ErdosProblems.Erdos717.DenseLogArithmetic",
+          "ErdosProblems.Erdos717.DensePotential",
+          "ErdosProblems.Erdos717.GlobalArithmetic",
+          "ErdosProblems.Erdos717",
+          "JSP000585Complete",
+          "AuditComplete"
+        ],
+        "axiom_reports": 61,
+        "allowed_axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "dependency_count": 9,
+        "kernel_prefixes": [
+          "ErdosProblems",
+          "Certificate",
+          "GraphCore",
+          "Profile",
+          "Subdivision",
+          "Colouring",
+          "Catlin",
+          "Sharp",
+          "JSP000585Bridge",
+          "JSP000585Complete"
+        ],
+        "source_sha256": {
+          "Certificate.lean": "f2fb199565a4a51e127a3b3b806fcc1e4956c9dd952aad275b0586522f990e07",
+          "GraphCore.lean": "a099c28693b5a000f6bc6613e65962a7921b0ef6db6d9be1a617018e74f216a7",
+          "Profile.lean": "33cc5eb8092be55271f350fe9f9950aa83e9c7151a9bdd153cc792f8c50ed1dc",
+          "Subdivision.lean": "bbb612563a52c17333ce3f5b1e5582ca3d7d440b667aa112107f6728b9f9d52f",
+          "Colouring.lean": "805a835573606392633a43b50674d1c20cfa255dd4c74883ecdc6355aaee56a0",
+          "Catlin.lean": "241abd3d47518b918bc866dedc15589b74496b44dabfdd515021c116cf378689",
+          "Sharp.lean": "737e5210163831ed2fa579cf0b02abcb11b72b051f6f987c2fe1c0a68fa5f11e",
+          "ErdosProblems/Erdos599/Countable.lean": "f19cecfbc21a30ecbbacd2d99b1339b62397bac90e07f6832020f82941878560",
+          "ErdosProblems/Erdos718/Erdos718Core.lean": "fc0b8d379585c5aff161f1b75cae17aa8e565f9915d6a2fc418151ea476c4f87",
+          "JSP000585Bridge.lean": "4c50be4cac948be703496ab0e68d5c9192574e19fcf2c623298178d9c4bbc456",
+          "ErdosProblems/Erdos717/MaximumCut.lean": "a63cbe80597f576111e1d99da0ba5c09fba116d08d03023424b0f2c4055559a5",
+          "ErdosProblems/Erdos717/DependentRandomChoice.lean": "f6e6b242283af45dce39156edc88bcc3b7ad7de37f92dbc7fd3ddf3951549c49",
+          "ErdosProblems/Erdos717/GreedySelection.lean": "5f2406961f679de608e351123cbfd7e9f2781aa6bb50e87dcbfff411b404b951",
+          "ErdosProblems/Erdos717/RouteAssembly.lean": "d65903ab96ae447bf38fc00f0d424b89be075184b6cb51cb28e2b15a1c0772f9",
+          "ErdosProblems/Erdos717/RouteReservoir.lean": "657099e542bc0958808791ddcbe9dc0fb60ab2e9a073b74eb2a1adb3b28662b8",
+          "ErdosProblems/Erdos717/ReservoirCleanup.lean": "710f4b329598dad86814482ebcc994ca8262f04edcc5ac10796721f2e5327563",
+          "ErdosProblems/Erdos717/ReservoirSubdivision.lean": "4377b38b7907565ffb8881b6e80adf9d5faf9ec19f7ba7f525028d9c1dedde81",
+          "ErdosProblems/Erdos717/ShortPathReservoir.lean": "b37c81c8af5119b981679780a3bda66b7ebefbae8885221d4a75175cd7d1f41f",
+          "ErdosProblems/Erdos717/NearlyComplete.lean": "c43dd03137c4494056be7bb65030227a5027452b721b0f135529dd59e865dcc6",
+          "ErdosProblems/Erdos717/DenseReservoir.lean": "6e4d8ecc33cd96ed77e6b8f61222aead0824b0b183384ce137d02502bcde6e70",
+          "ErdosProblems/Erdos717/NeighborhoodPattern.lean": "dfd0a540cd60fcb4330abf7fb4a32567083f1e1e84a82dfe23a3a936f9e3052a",
+          "ErdosProblems/Erdos717/LocalIndependence.lean": "55530ffbfebfef169709109224fae52a95a9ef7637726c62c1f988f48f2a3157",
+          "ErdosProblems/Erdos717/SparseHighDensity.lean": "cd2f42d47c61d9472607e98be12fd0d8ee72e3d32316a714626ff92ce08a6afc",
+          "ErdosProblems/Erdos717/ReservoirArithmetic.lean": "0503b7e2f2441fcb016dccf733853816ad1ec1a47cfbf55144fca3cefb501a6a",
+          "ErdosProblems/Erdos717/SubsetSampling.lean": "8bc9749bd7640e040b43b8b7500f5672bf479c8afaccbe56540c9f5789995897",
+          "ErdosProblems/Erdos717/OptimalReservoir.lean": "9e8da821e581c63104edcd6559ce394396823635e3f907bbf218b7d96349191b",
+          "ErdosProblems/Erdos717/DegreePruning.lean": "2a73c3ddd888fd401f574e00a225674b24a29c048a925a1668b2a4bcf5c3c705",
+          "ErdosProblems/Erdos717/SparseDenseStep.lean": "69ae82ca2a228fee0d1c30d4aa4077490a895b1d00fff582ee50e3bef2b77a8c",
+          "ErdosProblems/Erdos717/SparseParameters.lean": "81d3627b663bb9575bda4e9d9df58c164a4dfeabaa1ee002c85857b75467226c",
+          "ErdosProblems/Erdos717/SparseDensity.lean": "75acb1ec2ac7d8fb7b21bef34cebcc0eb3ff4567df76c822bc8378129d483eb2",
+          "ErdosProblems/Erdos717/SparseLogArithmetic.lean": "5ea3221be821a483579c47f1de2567cd10225876d4624da0de63ae605367ce00",
+          "ErdosProblems/Erdos717/SparseHighStep.lean": "1b728a2ad98a47514624ab022c221856879560c4f8e4744957dd02cb9b4f28de",
+          "ErdosProblems/Erdos717/SparseInductionArithmetic.lean": "a6fab75323f5d6da4ecb90b337624ab026b9af0d32301280f61e5fa299a979d0",
+          "ErdosProblems/Erdos717/ThomasWollan.lean": "37831e3609d57e448a0764f2a9a6d9dac052e7317db8c4667957b0d6c11f4399",
+          "ErdosProblems/Erdos717/DenseMinor.lean": "d2553550bafb92cac0e13afddfa88d5c76c98a52dad3d1a3f2331f24b96d6c14",
+          "ErdosProblems/Erdos717/ContractLinkage.lean": "69842c1a796e8eec164187e188688551ff07fbd8b136e1e1f3beee130ccf1162",
+          "ErdosProblems/Erdos717/ThomasWollanMassed.lean": "cf25838d0b23e30d38ec92a427bd2b499677036423fe7def680508bb63d555f8",
+          "ErdosProblems/Erdos717/TerminalCompletion.lean": "c1503e953ffde8bf33c81cd1b5524af896dccbbc94d779d157a85729b4e7d4be",
+          "ErdosProblems/Erdos717/MinimalMassed.lean": "f308a78c767bc9f0d6d48aaa86d214b537e82a8fe79790a2f1498f91ca7a9277",
+          "ErdosProblems/Erdos717/MassedContraction.lean": "b19229bbe5158b187cdccb2ea22a4c30907b72ef34e47e467d512bfd7e3c0be6",
+          "ErdosProblems/Erdos717/DenseNeighborhood.lean": "2ec068ed2f0b087344e803ba8cd4d65300134464cf6e91d0a28c5ed073fa3439",
+          "ErdosProblems/Erdos717/InduceLinkage.lean": "a0dd97a40488e70dceb24f6d30d169f626c6c040217ee835598d22283511fa63",
+          "ErdosProblems/Erdos717/NoIsolated.lean": "d3045b22d99264d7b464d725f8791c9314c7455db60ca3dc70bf28f825a2f6db",
+          "ErdosProblems/Erdos717/RigidSeparation.lean": "85855b3d930e7f0027f8b9263acfdef08cdbd556114fbee505f39d5a20ab67e8",
+          "ErdosProblems/Erdos717/RestrictLinkage.lean": "920a520a698f170e9f050945b3e19bd9f78f28915b496324e142df6802decab6",
+          "ErdosProblems/Erdos717/ContractRigidity.lean": "c66ef27d3b390bc97a97e32414c556fe45cf6a7979e3552f230e99ea73a67c13",
+          "ErdosProblems/Erdos717/GlueLinkage.lean": "5cd67dd28cdb9dfe4cf8fc7c82ce504c94d2af92061d6e14ba09fc314c38318e",
+          "ErdosProblems/Erdos717/TorsoLinkage.lean": "03b5d4b5d546008aacf76feaabdbbe6ff7a8e9341d63ba040e5aadc35057c76d",
+          "ErdosProblems/Erdos717/TorsoExpansion.lean": "23a3355f423eda089aa92f0bbf6d1d4770fd4ce86166468dff0334c25518fc03",
+          "ErdosProblems/Erdos717/LeftTorsoMass.lean": "bc714327b3a05c4c0931b602483e85f624768b0c68f13311ab1a8bb9d3fec7cb",
+          "ErdosProblems/Erdos717/NestedTorso.lean": "5300a4ae8602e859b535eaac7ccf8ef5066de4d26048452195623a2a6c245440",
+          "ErdosProblems/Erdos717/NoRigid.lean": "1110ec3ad655cd1adf6ff82975ccf2cd811f7b467b6aa4ce8fb22acfdb5975a7",
+          "ErdosProblems/Erdos717/FullArms.lean": "5c3c6568a5b3ee704b6a833e0c006634cd78951320e64f6abdbb7513d8c4e8e0",
+          "ErdosProblems/Erdos717/ClaimTwo.lean": "b66b585d82e9705705795a6ce1da2b3eca72c6bdb6a6f98747c8e9f95a44386e",
+          "ErdosProblems/Erdos717/NoSmallRigid.lean": "7709aeb28c410212a010e835f4786e7b6ce250311e70770fca884efabd591230",
+          "ErdosProblems/Erdos717/EmbeddedLinkage.lean": "33c0219eaaab33febbd2d34ccea278aaf0d8f41bb6d9444bd614ca30c48e15d3",
+          "ErdosProblems/Erdos717/MassedLinkage.lean": "1f656d7b24597a51a137059a5076c0c7b5deed8926581e96b8fada9576479a04",
+          "ErdosProblems/Erdos717/DensityTheorem.lean": "f253a2ed5a0b41a5457a470c15bc68ae43437636c2d11b8ac8c2d56eaadd2e9c",
+          "ErdosProblems/Erdos717/SparseInduction.lean": "54fbb06e6f45dec22fc61f90ffcad0638e7ef5f740efa402d945690cfdf3daa7",
+          "ErdosProblems/Erdos717/DenseStep.lean": "0a2ac7f0201a2542b908aa5643d2d5715f2707576339feb4462555d973f9e1b5",
+          "ErdosProblems/Erdos717/DenseLogArithmetic.lean": "518db8396d5bf0f7914ca3490d7e425b94e023eafd5e0bd4ce21efb3be259848",
+          "ErdosProblems/Erdos717/DensePotential.lean": "7b29e25bc772648da700c8ecdf6d39a0a25a9f32ba23dfd07fd39db4652c3d2f",
+          "ErdosProblems/Erdos717/GlobalArithmetic.lean": "c0ab59465ed9ce7fab22a44e2cec4b5b072e8df80d3fe40693e9c8c9313793cb",
+          "ErdosProblems/Erdos717.lean": "ab069043128f5638599070f2dcd6cea50e9aa658462f3be6217f3f06b8d33dfc",
+          "JSP000585Complete.lean": "d404fbe11d5c418dbdf660fa3543fccc5e50bcd37aef28caf2e45a98b119a7b8",
+          "AuditComplete.lean": "c555480bf3b78abb289eabbbc6f56685ff2d429eab52913b0cda1a879f69533e"
+        },
+        "object_sha256": {
+          "Certificate": "638baa127486e6e6174f5ff9d50ecb6dc68c7d70a8bff9779a33e0358c8ac643",
+          "GraphCore": "befad32c9dbe0ef66a1823967d79867302bb51211de315664d44e58b279c128e",
+          "Profile": "a62cda256712c540878a5c6666a1ccc5a5c74091a7020cbddf1f43d9697d47dc",
+          "Subdivision": "013d02fe8c330592082d130046d74fd80891edda5a92fad736011da89f21c4cc",
+          "Colouring": "2eeb496e4bee0856bbdd04f37dc8b0e51465f1b41b9ad2b7e384c17c25cdc006",
+          "Catlin": "a552f586937b5ccb93281f5f6605b4ec5409bd536e3b84b8dde0a9ce78a5a9aa",
+          "Sharp": "50e5595f1dc81e0b24d24e889bb34a750ded4622503aeed2b4860748eb1af6fb",
+          "ErdosProblems.Erdos599.Countable": "9f88bd925346f3cdf20aa9dcf75bd1be8a670b88fed4056e26e087bf3d9fd3e8",
+          "ErdosProblems.Erdos718.Erdos718Core": "8afc6e2ae7a1ed0e830d124598ad8b9de7cc9b06bff3e9b6fb29fcf5a5cb750a",
+          "JSP000585Bridge": "49239178f9f722f0eea06c7d16b5f307455e76d14364cb612d8636c795cc60dd",
+          "ErdosProblems.Erdos717.MaximumCut": "3352ca9812b53af2e85b07a7ffc3992bea96499b36fabc4cbce63326417b5576",
+          "ErdosProblems.Erdos717.DependentRandomChoice": "7dc777f0b1b8fe4c2867a8d58ec535d8a20abe23aba0ab6e290d0862a0f7cfde",
+          "ErdosProblems.Erdos717.GreedySelection": "6f0e654ee895acdcaf0305e5b374f5fc991604c5120c3b3089aed0bd5ba05520",
+          "ErdosProblems.Erdos717.RouteAssembly": "f82b127a832679753aa62bd97a4892c3483a7b07802b8d267e5f049cd5fd2672",
+          "ErdosProblems.Erdos717.RouteReservoir": "4bf9a907a1860c6f466eadd6b22af1294b660a9e439546df479d02d933f2534f",
+          "ErdosProblems.Erdos717.ReservoirCleanup": "bf6395710789d3641d3deefcb984d166fef85beed85a65f52d2b24e5adefb413",
+          "ErdosProblems.Erdos717.ReservoirSubdivision": "a7097509dbe61e89f70007c2c893f2d1d4ac3786e4185821714a4ed14d9f0a6a",
+          "ErdosProblems.Erdos717.ShortPathReservoir": "8814d960b39bd1ef31e30e4869bbac4482bdf19f5beca7b658f2481b8130f620",
+          "ErdosProblems.Erdos717.NearlyComplete": "2418a6726eb72fd75c80c511044c287e5c7d6d0e5169c26b180e1ce2d7746df0",
+          "ErdosProblems.Erdos717.DenseReservoir": "70ed2c399978507fc154675112863e2d6461f1b5a00de2e086c2d7c75c767001",
+          "ErdosProblems.Erdos717.NeighborhoodPattern": "65a28c92612681e6f9d8de48184c2329d4888347ef08bf7875e9376f94aef0c7",
+          "ErdosProblems.Erdos717.LocalIndependence": "aafe4dd83bf1024a53a10652907475abbb4b650f26793884814c1027ef22c168",
+          "ErdosProblems.Erdos717.SparseHighDensity": "b1b79aa75be52ae347015cb183de6b422b2b46e266fa4684caf2ff0782d0445e",
+          "ErdosProblems.Erdos717.ReservoirArithmetic": "78861e884e59eb66d31ab69615d40d5cabf153b043370bfb1a254312bae767cc",
+          "ErdosProblems.Erdos717.SubsetSampling": "b998928c615c1d85bfc423020484ee8fefef1f07f000a907e3b37285df74cdd2",
+          "ErdosProblems.Erdos717.OptimalReservoir": "e53ce366dd909323e37e7de7cbf5dee725a9c6bceb0ec8664481ee758b15844e",
+          "ErdosProblems.Erdos717.DegreePruning": "5659f40ef423cb94457fa2b6e3cd673f132cbb943d5fc26dfba63cf10b285032",
+          "ErdosProblems.Erdos717.SparseDenseStep": "0280720c1f2e4d2e7d5cf30477928a28451d93ddbc7b9bef34f6fd7eb59f53d6",
+          "ErdosProblems.Erdos717.SparseParameters": "d5c8e1f4eec0e69208a7e9d453127ca958d275f0f6f5cb86b73de163e3303bae",
+          "ErdosProblems.Erdos717.SparseDensity": "f30b765babbcc7497a09e840b8432e4e160ef2c79080d5983f9ced85e1741f8b",
+          "ErdosProblems.Erdos717.SparseLogArithmetic": "7841141342fb5aea7c76cacc72c7c2cd1e944137f5c94a10f47abbfd053694ac",
+          "ErdosProblems.Erdos717.SparseHighStep": "2bc3bb9400187260873ccab5c74528db52fd1059cba3860ec4a5b3ba68151594",
+          "ErdosProblems.Erdos717.SparseInductionArithmetic": "ff17a8e0eaaf70ff8d2661a1bf18882553885e7e09f87917b32d4ee5c3d2c02f",
+          "ErdosProblems.Erdos717.ThomasWollan": "db068f19bb051a11188275cbf6e0df2e944a46775be0c62fbaccb8e2dae3a754",
+          "ErdosProblems.Erdos717.DenseMinor": "4052fce14f71728e391a59dbb5734a97171a935ac5e94b9dd89b329a17b49160",
+          "ErdosProblems.Erdos717.ContractLinkage": "96f90c2fcfecf81e5410c9053558e31aad913af0b68c488955c6dd15eaa064c1",
+          "ErdosProblems.Erdos717.ThomasWollanMassed": "b43996f1c68049a56022748280f48725f4574c389a5194470d4171b79bf68562",
+          "ErdosProblems.Erdos717.TerminalCompletion": "b03ab63a13400fd08c83d43fbf9115cba0f57122b6230a34f35ec142fb26b652",
+          "ErdosProblems.Erdos717.MinimalMassed": "2d6f10db8881e6d3b3adf9507f62cb897f12da9d6cb6c4174efb688d2aa3fa3a",
+          "ErdosProblems.Erdos717.MassedContraction": "ea70688f262ce75ce5d03f257bac41bfe2478c4bf7ef9791487c4a59d2817e9a",
+          "ErdosProblems.Erdos717.DenseNeighborhood": "83c69f3c6ac0db400696687ccc42850eb716e1b74af16fe110e50fdd062ed753",
+          "ErdosProblems.Erdos717.InduceLinkage": "db0cfefbae5f4b1098100b3528e8c6bc4c916927fcf39d391181e245a1f8a987",
+          "ErdosProblems.Erdos717.NoIsolated": "e057592a983f82cd7cbdb0498e5e5ea235b8618a4b1b93d5c3665b0876f228ac",
+          "ErdosProblems.Erdos717.RigidSeparation": "02eb6dfe036f5be505fd20502a6e1910ae40a3d84d1e8f4429de61fcc5336191",
+          "ErdosProblems.Erdos717.RestrictLinkage": "060fc66df493a1efeb0527b073a2def39cce244d9d5f855f7defb12043ae203f",
+          "ErdosProblems.Erdos717.ContractRigidity": "54a9efb302826515637ffb38840fd2c4cf32f294a89d45ea0dc99c407850ac6e",
+          "ErdosProblems.Erdos717.GlueLinkage": "51ab5e9c654481ebbc020603194c120bc585a71ba1c232fb3c478428704fe4fc",
+          "ErdosProblems.Erdos717.TorsoLinkage": "7e7ecbb1572afe83b3f4db56a2628d5a0004623f1e9f6a39bdc5e4b4061efdb3",
+          "ErdosProblems.Erdos717.TorsoExpansion": "170e2933bf0d6f26e22db5b60847edbf4913410d50ddb1d07cd9408281cee7c5",
+          "ErdosProblems.Erdos717.LeftTorsoMass": "894803311866e206c43ede43224084fa049905efaf9f026e5ad784ceed4bb76c",
+          "ErdosProblems.Erdos717.NestedTorso": "19df50af9451e2175abb3f3ace40ba50364ebfe6bca543dbce781c21c22cb364",
+          "ErdosProblems.Erdos717.NoRigid": "e4f073da6600a154d1e6221b8adca205586909ee2de2b3183a4886c72c5003e3",
+          "ErdosProblems.Erdos717.FullArms": "e44701a0807ec4765751f82d24788753268d1a287d135912a7f2fe50d6c4ee45",
+          "ErdosProblems.Erdos717.ClaimTwo": "3e89a5631afe3cd5353173e24a685866c4e41a0c91b4d7c88d89c3f6b9cf6117",
+          "ErdosProblems.Erdos717.NoSmallRigid": "a8cf094cd4856bd3641bb17ba35b9f0bf5b4a0051dff6583220f741595ba299e",
+          "ErdosProblems.Erdos717.EmbeddedLinkage": "84035acf77431e0bfe5bc3297ccfbcad9ea23076b3e1f62c57dc0f5d69e4f097",
+          "ErdosProblems.Erdos717.MassedLinkage": "3a3e39bf8d343e75b0db65e926aeda217811b9cb0e2c6b35ced8c385bdb818bf",
+          "ErdosProblems.Erdos717.DensityTheorem": "47e19c73ea41479a35eaf772db74ce4ececb918439d042d6918bb5caec42f73c",
+          "ErdosProblems.Erdos717.SparseInduction": "07d492f27885076cfc93416e67444d6791cccae24222c0ccbf0a0e708539f29f",
+          "ErdosProblems.Erdos717.DenseStep": "970af55b297e3153c37d56735d6cbc5a94e895210452dfa381045a5b205922eb",
+          "ErdosProblems.Erdos717.DenseLogArithmetic": "571ee6fc7a51d1bbd25c8fc0bc02f8df0c513e89e3bffa10c3129fde7f045ecc",
+          "ErdosProblems.Erdos717.DensePotential": "b451381c515ca1a72bee3bfa987a12be576065f2a66925fab31a220c0b7a6f11",
+          "ErdosProblems.Erdos717.GlobalArithmetic": "b0d12b84da1b3aedac694234620e1b4f8cc167d912ec0b43337908a3db7d9f9c",
+          "ErdosProblems.Erdos717": "26e3b445538f6ca52a796a9deda05151cc4a7c93c92e320e472659b9d644a102",
+          "JSP000585Complete": "4f8318b933044a1663a78730b67ecec409afbbb04d9681154daad29716be1703",
+          "AuditComplete": "1484fadde37ed08548c90b25447da9f7c3c2a5ac5b7659309f424b3400650987"
+        },
+        "limits": "Contributor-run compilation and replay with cached pinned Mathlib. Resumed local builds are explicitly hash-matched. No independent human certification."
+      }
+    ],
+    "original_kernel_logs": [
+      "fresh-project-evidence/kernel-ErdosProblems.log",
+      "fresh-project-evidence/kernel-Certificate.log",
+      "fresh-project-evidence/kernel-GraphCore.log",
+      "fresh-project-evidence/kernel-Profile.log",
+      "fresh-project-evidence/kernel-Subdivision.log",
+      "fresh-project-evidence/kernel-Colouring.log",
+      "fresh-project-evidence/kernel-Catlin.log",
+      "fresh-project-evidence/kernel-Sharp.log",
+      "fresh-project-evidence/kernel-JSP000585Bridge.log",
+      "fresh-project-evidence/kernel-JSP000585Complete.log"
+    ],
+    "original_axiom_outputs": [
+      {
+        "log": "fresh-project-evidence/axioms.log",
+        "source": "AuditComplete.lean",
+        "targets": 61
+      }
+    ],
+    "negative_controls": [
+      {
+        "log": "fresh-project-evidence/negative-control.log",
+        "expected_exit": "nonzero",
+        "exit_evidence": "semantic Lean error; nonzero exit enforced by successful original verifier",
+        "separate_exit_code_recorded": false
+      }
+    ],
+    "strict_bridge_precheck": "validated",
+    "bridge_source_sha256": "f84737897b3758fe7e3b5987281466511a80bdb09fffba0740a778fb1f71e4b3",
+    "manual_equivalent_builds": 0,
+    "stages": {
+      "versions": {
+        "argv": [
+          "bash",
+          "-c",
+          "set -e; lean --version; lake --version; rustc --version; cargo --version; id; uname -a"
+        ],
+        "cwd": "/work/projects/catlin-research",
+        "exit_code": 0,
+        "seconds": 0.16443586349487305
+      },
+      "build-exporter": {
+        "argv": [
+          "lake",
+          "build"
+        ],
+        "cwd": "/out/tools/exporter",
+        "exit_code": 0,
+        "seconds": 5.677156209945679
+      },
+      "build-checker": {
+        "argv": [
+          "cargo",
+          "build",
+          "--release",
+          "--locked"
+        ],
+        "cwd": "/out/tools/checker",
+        "exit_code": 0,
+        "seconds": 14.908626079559326
+      },
+      "original-clean-verifier": {
+        "argv": [
+          "bash",
+          "scripts/verify.sh"
+        ],
+        "cwd": "/work/projects/catlin-research",
+        "exit_code": 0,
+        "seconds": 502.85546016693115
+      },
+      "official-preflight": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "preflight",
+          "/out/targets.json",
+          "--out",
+          "/out/preflight"
+        ],
+        "cwd": "/work/projects/catlin-research",
+        "exit_code": 0,
+        "seconds": 0.16402649879455566
+      },
+      "official-audit": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "run",
+          "/out/targets.json",
+          "--out",
+          "/out/audit",
+          "--lake",
+          "/opt/elan/toolchains/leanprover--lean4---v4.34.0/bin/lake",
+          "--timeout",
+          "2400"
+        ],
+        "cwd": "/work/projects/catlin-research",
+        "exit_code": 0,
+        "seconds": 638.7801692485809
+      },
+      "bridge-kernel": {
+        "argv": [
+          "lake",
+          "env",
+          "leanchecker",
+          "Catlin.VerificationBridge"
+        ],
+        "cwd": "/work/projects/catlin-research",
+        "exit_code": 0,
+        "seconds": 8.131463289260864
+      },
+      "independent-nanoda": {
+        "argv": [
+          "/out/tools/checker/target/release/nanoda_bin",
+          "/out/nanoda-config.json"
+        ],
+        "cwd": "/work/projects/catlin-research",
+        "exit_code": 0,
+        "seconds": 26.573041439056396
+      },
+      "dependencies": {
+        "argv": [
+          "python3",
+          "-c",
+          "import json,subprocess;from pathlib import Path;ps=json.loads(Path('lake-manifest.json').read_text())['packages'];a={p['name']:subprocess.check_output(['git','-C','.lake/packages/'+p['name'],'rev-parse','HEAD'],text=True).strip() for p in ps};print(json.dumps(a,indent=2));assert all(a[p['name']]==p['rev'] for p in ps)"
+        ],
+        "cwd": "/work/projects/catlin-research",
+        "exit_code": 0,
+        "seconds": 0.0318760871887207
+      },
+      "final-status": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain",
+          "--untracked-files=all"
+        ],
+        "cwd": "/work/projects/catlin-research",
+        "exit_code": 0,
+        "seconds": 0.0035419464111328125
+      },
+      "compress-export": {
+        "argv": [
+          "gzip",
+          "-n",
+          "/out/export.ndjson"
+        ],
+        "cwd": "/out",
+        "exit_code": 0,
+        "seconds": 7.327596664428711
+      },
+      "prepare-dependencies-0": {
+        "argv": [
+          "lake",
+          "exe",
+          "cache",
+          "get",
+          "Mathlib"
+        ],
+        "cwd": "/work/projects/catlin-research",
+        "exit_code": 0,
+        "seconds": 101.24972772598267
+      },
+      "prepare-dependencies-1": {
+        "argv": [
+          "lake",
+          "build",
+          "Mathlib"
+        ],
+        "cwd": "/work/projects/catlin-research",
+        "exit_code": 0,
+        "seconds": 21.003940105438232
+      },
+      "bootstrap": {
+        "argv": [
+          "python3",
+          "scripts/bootstrap.py"
+        ],
+        "cwd": "/work/projects/catlin-research",
+        "exit_code": 0,
+        "seconds": 10.83694052696228
+      },
+      "bridge-precheck": {
+        "argv": [
+          "lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "-j1",
+          "-M12000",
+          "-o",
+          "/work/projects/catlin-research/.lake/build/lib/lean/Catlin/VerificationBridge.olean",
+          "/work/projects/catlin-research/Catlin/VerificationBridge.lean"
+        ],
+        "cwd": "/work/projects/catlin-research",
+        "exit_code": 0,
+        "seconds": 3.220672845840454
+      }
+    }
+  },
+  "506-main": {
+    "status": "mechanical_evidence_validated",
+    "semantic_verdict": "requires_separate_review",
+    "proof_commit": "2aca2f16eba715d7ad672dfa017481b647c00063",
+    "branch_tip": "742231e63aaadff9ca8af64eb02825c2bd664184",
+    "target_count": 55,
+    "original_target_count": 49,
+    "axioms": {
+      "Verify506.exists_coColourable": [],
+      "Verify506.coColourable_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify506.coNumber_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify506.intended": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify506.explicit_quantitative": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify506.explicit_scale_diverges": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_nonneg": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_univ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_mono": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_compl": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_union_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_cover": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mem_event": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_event_compl": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_anticorrelation": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.concentration_reduction": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.proper_n": [
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.proper_to_coProper": [
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.coProper_compl": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.chi_spec": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.zeta_spec": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.chi_mono": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.zeta_le_chi": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.zeta_compl": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.heckel_proposition3": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mem_fromGraph": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.toGraph_adj_iff": [
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.fromGraph_toGraph": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.toGraph_fromGraph": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.proper_iff_colorable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.coProper_iff_all_pairs": [
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.coProper_iff_coColorable": [
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.chi_eq_chromaticNumberNat": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.zeta_eq_cochromaticNumber": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.gap_cast_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.card_graph_space": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.card_event_eq_graph_event": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_event_eq_randomGraph": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_le_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.gapProbability_nonneg": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.gapProbability_le_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.gapProbability_antitone": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.gapProbability_eq_standard": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.quantitative_gap_tendsto_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.gapScale_tendsto_atTop": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.threshold_tendsto_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.fixed_threshold_tendsto_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.small_gap_probability_tendsto_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.eventually_not_heckel_premise": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.jsp_000506": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.complete_package": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Erdos625.erdos625": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Erdos625.erdos625Statement_iff_real": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Erdos625.randomGraphMeasure_eq_uniformOn_univ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Erdos625.gapConstant_pos": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "source_inputs_stable": true,
+    "dependency_count": 9,
+    "dependencies": {
+      "mathlib": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+      "plausible": "63045536fe95024e6c18fc7b48e03f506701c5bc",
+      "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "importGraph": "5c7542ed018c78194f1e2b903eaf6a792b74c03d",
+      "proofwidgets": "24b0d9dc081c5423f8eec7e866c441e5184f29d9",
+      "aesop": "e3cb2f741431ce31bf73549fb52316a57368b06f",
+      "Qq": "f46324995fca5f0483b742e4eb4daec7f4ee50d2",
+      "batteries": "fa08db58b30eb033edcdab331bba000827f9f785",
+      "Cli": "92564e5770e4d09f2d86dfbf8ada1e9c715b384c"
+    },
+    "nanoda_declarations": 60143,
+    "official_script_sha256": "5db45dddcb4d588bc27e7c7161fbca5cedaa3e73e1c40843d21f5a214323cd07",
+    "manifest_sha256": "9f24dfe39caa59b970695fa63e3c0314b1cc4d4d9afa72f9f75327c6acd258a7",
+    "image_id": "sha256:4e8567084ee84c1823fbca7c6866561a1c3a1f862ef727e89ca09a8c1f76e22f",
+    "artifact_files_hashed": 362,
+    "original_verification_records": [
+      {
+        "status": "passed",
+        "toolchain": "leanprover/lean4:v4.31.0",
+        "preparation_head": "2aca2f16eba715d7ad672dfa017481b647c00063",
+        "modules_compiled": [
+          "JSP000506",
+          "Erdos625SelfContained",
+          "JSP000506Bridge",
+          "JSP000506Complete",
+          "AuditComplete"
+        ],
+        "upstream_embedded_source_modules": 480,
+        "axiom_reports": 49,
+        "allowed_axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "dependency_count": 9,
+        "kernel_prefixes": [
+          "Erdos625SelfContained",
+          "JSP000506",
+          "JSP000506Bridge",
+          "JSP000506Complete"
+        ],
+        "source_sha256": {
+          "JSP000506.lean": "3f469ec816a59782342009e1ad0df1d47a4b2d82e429c8f77f00a4d08210263e",
+          "Erdos625SelfContained.lean": "53060b9563330f20a5f2133ffdf8f56e5a41eae6d0f772487193d9c54133e837",
+          "JSP000506Bridge.lean": "99a6d34f1d2cf9c531d97fd4a1f58a38bb947d0f85aae6d1313c8e396be0e5fc",
+          "JSP000506Complete.lean": "2316be5df3b2661727bda3b5ccc5d7a8781ee40e3810458ea55c82497c7995ff",
+          "AuditComplete.lean": "140d5d30beb10ed204e0499ca4fa70582d08f8c3aca73f6438ddd692ccc62e3a"
+        },
+        "limits": "Contributor-run compilation and replay with cached pinned Mathlib. Local --resume fingerprints include transitive source dependencies. No independent human review."
+      }
+    ],
+    "original_kernel_logs": [
+      "fresh-project-evidence/kernel-Erdos625SelfContained.log",
+      "fresh-project-evidence/kernel-JSP000506.log",
+      "fresh-project-evidence/kernel-JSP000506Bridge.log",
+      "fresh-project-evidence/kernel-JSP000506Complete.log"
+    ],
+    "original_axiom_outputs": [
+      {
+        "log": "fresh-project-evidence/axioms.log",
+        "source": "AuditComplete.lean",
+        "targets": 49
+      }
+    ],
+    "negative_controls": [
+      {
+        "log": "fresh-project-evidence/negative-control.log",
+        "expected_exit": "nonzero",
+        "exit_evidence": "semantic Lean error; nonzero exit enforced by successful original verifier",
+        "separate_exit_code_recorded": false
+      }
+    ],
+    "strict_bridge_precheck": "validated",
+    "bridge_source_sha256": "18306f3627d4b05dfe1d9462a20f2813d535bb408358179a19150e4a32bdf50d",
+    "manual_equivalent_builds": 0,
+    "stages": {
+      "versions": {
+        "argv": [
+          "bash",
+          "-c",
+          "set -e; lean --version; lake --version; rustc --version; cargo --version; id; uname -a"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 0.21577668190002441
+      },
+      "build-exporter": {
+        "argv": [
+          "lake",
+          "build"
+        ],
+        "cwd": "/out/tools/exporter",
+        "exit_code": 0,
+        "seconds": 13.596394062042236
+      },
+      "build-checker": {
+        "argv": [
+          "cargo",
+          "build",
+          "--release",
+          "--locked"
+        ],
+        "cwd": "/out/tools/checker",
+        "exit_code": 0,
+        "seconds": 18.93390679359436
+      },
+      "original-clean-verifier": {
+        "argv": [
+          "bash",
+          "scripts/verify.sh"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 1315.1002295017242
+      },
+      "official-preflight": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "preflight",
+          "/out/targets.json",
+          "--out",
+          "/out/preflight"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 0.16411423683166504
+      },
+      "official-audit": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "run",
+          "/out/targets.json",
+          "--out",
+          "/out/audit",
+          "--lake",
+          "/opt/elan/toolchains/leanprover--lean4---v4.31.0/bin/lake",
+          "--timeout",
+          "2400"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 1688.6079652309418
+      },
+      "bridge-kernel": {
+        "argv": [
+          "lake",
+          "env",
+          "leanchecker",
+          "JSP000506.VerificationMain"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 10.389512062072754
+      },
+      "independent-nanoda": {
+        "argv": [
+          "/out/tools/checker/target/release/nanoda_bin",
+          "/out/nanoda-config.json"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 50.995596170425415
+      },
+      "dependencies": {
+        "argv": [
+          "python3",
+          "-c",
+          "import json,subprocess;from pathlib import Path;ps=json.loads(Path('lake-manifest.json').read_text())['packages'];a={p['name']:subprocess.check_output(['git','-C','.lake/packages/'+p['name'],'rev-parse','HEAD'],text=True).strip() for p in ps};print(json.dumps(a,indent=2));assert all(a[p['name']]==p['rev'] for p in ps)"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 0.0641636848449707
+      },
+      "final-status": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain",
+          "--untracked-files=all"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 0.0037260055541992188
+      },
+      "compress-export": {
+        "argv": [
+          "gzip",
+          "-n",
+          "/out/export.ndjson"
+        ],
+        "cwd": "/out",
+        "exit_code": 0,
+        "seconds": 11.598989725112915
+      },
+      "prepare-dependencies-0": {
+        "argv": [
+          "lake",
+          "exe",
+          "cache",
+          "get",
+          "Mathlib"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 95.4174451828003
+      },
+      "prepare-dependencies-1": {
+        "argv": [
+          "lake",
+          "build",
+          "Mathlib"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 7.831801176071167
+      },
+      "bootstrap": {
+        "argv": [
+          "python3",
+          "scripts/bootstrap.py"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 0.31467747688293457
+      },
+      "bridge-precheck": {
+        "argv": [
+          "lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "-j1",
+          "-M12000",
+          "-o",
+          "/work/projects/jsp-000506/.lake/build/lib/lean/JSP000506/VerificationMain.olean",
+          "/work/projects/jsp-000506/JSP000506/VerificationMain.lean"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 5.827393531799316
+      }
+    }
+  }
+}

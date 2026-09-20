@@ -1,0 +1,11 @@
+{
+  "split_for_publication": true,
+  "original_utf8_sha256": "d3a20b09da8c368a831e6a87bad4e71cb3445a0331900fe2289b92cd411c07c7",
+  "original_utf8_bytes": 148517,
+  "parts": [
+    "inspection-summary-parts/part-01.json",
+    "inspection-summary-parts/part-02.json",
+    "inspection-summary-parts/part-03.json",
+    "inspection-summary-parts/part-04.json"
+  ]
+}

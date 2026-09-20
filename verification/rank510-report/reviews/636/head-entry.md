@@ -1,0 +1,18 @@
+
+
+## JSP-000636 · How many different set sizes can an antichain realize if each size must occur with prescribed multiplicity?
+
+| Field | Content |
+| --- | --- |
+| Date proposed | No later than 1981 (bibliographic evidence) |
+| Mathematical area | Combinatorics |
+| Problem description | How many different set sizes can an antichain realize if each size must occur with prescribed multiplicity? |
+| Current status | Solved. Proof contributors: Yixin He and Quanyu Tang (mathematical threshold estimates; arXiv:2602.09803v1). |
+| Lean proof | Pending verification: complete original threshold-estimate formalization for every multiplicity r≥2 and every finite ground set, including exact-r attainment and impossibility, the actual least-threshold semantics, explicit two-sided estimates and `n₀(r)/r → 2`. Scope follows [He–Tang Problem 1.1](https://arxiv.org/html/2602.09803v1#S1), which asks for threshold estimates. Repository: [ketianzhang1-lang/jsp-000301-lean](https://github.com/ketianzhang1-lang/jsp-000301-lean); branch: `jsp-000636-pair-label-upper-kz`; commit: `5c23ecf6211449c9bd7f4ac9229300ed43f666b2`. Main theorem: `JSP000636.jsp_000636` in [OriginalQuestion.lean](https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/5c23ecf6211449c9bd7f4ac9229300ed43f666b2/projects/jsp-000636/OriginalQuestion.lean). [README and reproduction](https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/5c23ecf6211449c9bd7f4ac9229300ed43f666b2/projects/jsp-000636/README.md); [statement correspondence](https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/5c23ecf6211449c9bd7f4ac9229300ed43f666b2/projects/jsp-000636/STATEMENT_FIDELITY.md); [executed verification](https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/5c23ecf6211449c9bd7f4ac9229300ed43f666b2/projects/jsp-000636/VERIFICATION.md). |
+| Attribution basis | We separately implemented the obstruction, pair-label construction, exact-multiplicity bridge, least-threshold asymptotics, finite-ground-set relabeling and original-statement endpoint under GitHub account `ketianzhang1-lang`, with OpenAI ChatGPT/Codex assistance. Mathematical credit remains with Yixin He and Quanyu Tang for the bound and construction method in [arXiv:2602.09803v1](https://arxiv.org/abs/2602.09803), and with Erdős and Trotter for the classical problem and obstruction. [Source and contribution record](https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/5c23ecf6211449c9bd7f4ac9229300ed43f666b2/projects/jsp-000636/PROVENANCE.md). The stronger exact-formula submission [PR #677](https://github.com/TheJustinSunPrize/awards/pull/677), by `peilinliu66-dev`, is acknowledged and is not imported. No new-mathematics, exact-formula or first-formalization claim; contribution eligibility remains for maintainer review. [Reproducible source-history audit](https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/39874257f3b9df912caf3619c89fd4d72fafaf03/docs/claims/2026-09-19-more-claims/README.md#jsp-000636) binds all seven retained proof modules to the preceding public revision and maps the finite-ground-set extension to the complete endpoint. |
+| Eligible to claim | No |
+| Historical bounty |  |
+| Elapsed years | About 45 years (since 1981) |
+| Publication details | Yixin He and Quanyu Tang, [An Erdős–Trotter problem on antichains with multiplicity r on each occurring level](https://arxiv.org/html/2602.09803v1), arXiv:2602.09803v1 (10 February 2026). Problem 1.1 states the original threshold-estimate question; Remark 1.2 and Definition 1.3 specify multiplicity and least-cutoff semantics; the paper proves quantitative threshold bounds. |
+| Public review |  |
+

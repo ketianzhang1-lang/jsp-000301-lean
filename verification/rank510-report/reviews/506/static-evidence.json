@@ -1,0 +1,117 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "5eb5ba82c9444f90d1859399bae5cf70ecc23d418ecf1f9013b5048897815244",
+  "original_bytes": 3123,
+  "data": {
+    "equal_inputs": [
+      {
+        "file": "JSP000506.lean",
+        "sha256": "3f469ec816a59782342009e1ad0df1d47a4b2d82e429c8f77f00a4d08210263e",
+        "equal_in_both_commits": true
+      },
+      {
+        "file": "JSP000506Bridge.lean",
+        "sha256": "99a6d34f1d2cf9c531d97fd4a1f58a38bb947d0f85aae6d1313c8e396be0e5fc",
+        "equal_in_both_commits": true
+      },
+      {
+        "file": "JSP000506Complete.lean",
+        "sha256": "2316be5df3b2661727bda3b5ccc5d7a8781ee40e3810458ea55c82497c7995ff",
+        "equal_in_both_commits": true
+      },
+      {
+        "file": "lakefile.lean",
+        "sha256": "8e2f383a32cf6e979aca68d26e6ec59f788a23b41f9c14fe4e8071265cc04786",
+        "equal_in_both_commits": true
+      },
+      {
+        "file": "lean-toolchain",
+        "sha256": "efac0b94923b2d8b6840cd35be9177ad0fc5ab2332f4f4311c98712cee92fdee",
+        "equal_in_both_commits": true
+      },
+      {
+        "file": "lake-manifest.json",
+        "sha256": "82742dca940db0e0620da93dba119d13de1bafded48ae86cd17834eb52d61ba3",
+        "equal_in_both_commits": true
+      },
+      {
+        "file": "UPSTREAM.json",
+        "sha256": "5b5e802dd837471c45e32433541029a5fd8fba8fde976c4ce8bcf26c5eb6e32a",
+        "equal_in_both_commits": true
+      },
+      {
+        "file": "AUDIT_TARGETS.json",
+        "sha256": "c51182f4c64dcd70a2dea1f3acac1be4525da2d251bba058a118d3dc48abe415",
+        "equal_in_both_commits": true
+      }
+    ],
+    "upstream_bytes": 3896926,
+    "upstream_embedded_modules": 480,
+    "upstream_unique_embedded_modules": 480,
+    "static_keyword_locations": [
+      [
+        98,
+        "permanent axiom audit, and final theorem"
+      ],
+      [
+        3516,
+        "This definition is a proposition, not an axiom; the downstream enumeration"
+      ],
+      [
+        52268,
+        "definition, not an axiom or a theorem claimed by this module. -/"
+      ],
+      [
+        56119,
+        "classically; it introduces no axiom beyond Lean's standard classical choice. -/"
+      ],
+      [
+        88488,
+        "No placeholder axiom or project-defined axiom may appear."
+      ],
+      [
+        89522,
+        "for the definitions, intermediate statements, and permanent axiom audit."
+      ]
+    ],
+    "dependency_pins": [
+      {
+        "name": "mathlib",
+        "rev": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f"
+      },
+      {
+        "name": "plausible",
+        "rev": "63045536fe95024e6c18fc7b48e03f506701c5bc"
+      },
+      {
+        "name": "LeanSearchClient",
+        "rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843"
+      },
+      {
+        "name": "importGraph",
+        "rev": "5c7542ed018c78194f1e2b903eaf6a792b74c03d"
+      },
+      {
+        "name": "proofwidgets",
+        "rev": "24b0d9dc081c5423f8eec7e866c441e5184f29d9"
+      },
+      {
+        "name": "aesop",
+        "rev": "e3cb2f741431ce31bf73549fb52316a57368b06f"
+      },
+      {
+        "name": "Qq",
+        "rev": "f46324995fca5f0483b742e4eb4daec7f4ee50d2"
+      },
+      {
+        "name": "batteries",
+        "rev": "fa08db58b30eb033edcdab331bba000827f9f785"
+      },
+      {
+        "name": "Cli",
+        "rev": "92564e5770e4d09f2d86dfbf8ada1e9c715b384c"
+      }
+    ],
+    "limits": "Static inspection and hash comparisons only; no Lean/Lake executed locally. Keyword scan does not certify proof closure."
+  }
+}

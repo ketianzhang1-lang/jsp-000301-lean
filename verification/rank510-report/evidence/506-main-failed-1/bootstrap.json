@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "python3",
+    "scripts/bootstrap.py"
+  ],
+  "cwd": "/work/projects/jsp-000506",
+  "exit_code": 0,
+  "seconds": 0.16415715217590332
+}

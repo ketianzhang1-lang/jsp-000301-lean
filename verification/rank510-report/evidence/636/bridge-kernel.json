@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "leanchecker",
+    "JSP000636.VerificationBridge"
+  ],
+  "cwd": "/work/projects/jsp-000636",
+  "exit_code": 0,
+  "seconds": 8.783480167388916
+}

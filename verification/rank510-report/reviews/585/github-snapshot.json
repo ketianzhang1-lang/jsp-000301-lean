@@ -1,0 +1,334 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "e4da5e88bebe9803d7d88b5f3accdac117ff6aa7433cb7d1a5c317cef932dcf0",
+  "original_bytes": 63623,
+  "data": {
+    "comments": [],
+    "claim": {
+      "id": 5504401633,
+      "number": 1584,
+      "title": "[Award claim] JSP-000585: Lean formalization",
+      "html_url": "https://github.com/TheJustinSunPrize/awards/issues/1584",
+      "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1584",
+      "state": "open",
+      "state_reason": null,
+      "created_at": "2026-09-18T20:26:11Z",
+      "updated_at": "2026-09-18T20:26:11Z",
+      "closed_at": null,
+      "user": {
+        "login": "ketianzhang1-lang",
+        "html_url": "https://github.com/ketianzhang1-lang"
+      },
+      "body": {
+        "text_omitted": true,
+        "reason": "full text retained only in the private historical evidence",
+        "utf8_bytes": 4498,
+        "sha256": "5dc77516b08549443fea5706fb74a92ff5bd883f30e0e11a8a8c8718d9aa436e"
+      }
+    },
+    "reviews": [],
+    "inline": [],
+    "prior": {
+      "id": 5482315309,
+      "number": 417,
+      "title": "[Recipient] JSP-000585: verified exact Catlin subdivision threshold (scoped)",
+      "html_url": "https://github.com/TheJustinSunPrize/awards/issues/417",
+      "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/417",
+      "state": "open",
+      "state_reason": null,
+      "created_at": "2026-09-17T03:04:00Z",
+      "updated_at": "2026-09-17T03:04:00Z",
+      "closed_at": null,
+      "user": {
+        "login": "ketianzhang1-lang",
+        "html_url": "https://github.com/ketianzhang1-lang"
+      },
+      "body": {
+        "text_omitted": true,
+        "reason": "full text retained only in the private historical evidence",
+        "utf8_bytes": 1194,
+        "sha256": "3b4095c8e0bd188cf3346d4a5e0d9e51ca21523cc4396c1ffc6ba8a80a71381b"
+      }
+    },
+    "files": [
+      {
+        "sha": "b243a8b266527efc3c1941f06cc6dbe9364b92b8",
+        "filename": "problems/catalog-0501-0600.md",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 1,
+        "changes": 3,
+        "blob_url": "https://github.com/TheJustinSunPrize/awards/blob/30ad37f593a6c55bb642915b4877ca896d23acf1/problems%2Fcatalog-0501-0600.md",
+        "raw_url": "https://github.com/TheJustinSunPrize/awards/raw/30ad37f593a6c55bb642915b4877ca896d23acf1/problems%2Fcatalog-0501-0600.md",
+        "contents_url": "https://api.github.com/repos/TheJustinSunPrize/awards/contents/problems%2Fcatalog-0501-0600.md?ref=30ad37f593a6c55bb642915b4877ca896d23acf1",
+        "patch": {
+          "text_omitted": true,
+          "reason": "full text retained only in the private historical evidence",
+          "utf8_bytes": 3371,
+          "sha256": "278a2c5b6318d13e0013ac5f941c177bd7148d874104362e7ad294b679f620e9"
+        }
+      }
+    ],
+    "commits": [
+      {
+        "sha": "9237a0d47f2976277bc93375c523be36ced3d998",
+        "commit": {
+          "author": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-17T03:20:58Z"
+          },
+          "committer": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-17T03:20:58Z"
+          },
+          "message": "Add verified sharp Catlin formalization package related to issue 417",
+          "tree": {
+            "sha": "f330bc08ed9b685044a401b9b094feb7ef6599aa",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/git/trees/f330bc08ed9b685044a401b9b094feb7ef6599aa"
+          },
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/git/commits/9237a0d47f2976277bc93375c523be36ced3d998",
+          "comment_count": 0,
+          "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "signature": null,
+            "payload": null,
+            "verified_at": null
+          }
+        },
+        "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/9237a0d47f2976277bc93375c523be36ced3d998",
+        "html_url": "https://github.com/TheJustinSunPrize/awards/commit/9237a0d47f2976277bc93375c523be36ced3d998",
+        "comments_url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/9237a0d47f2976277bc93375c523be36ced3d998/comments",
+        "author": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "committer": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "parents": [
+          {
+            "sha": "f4e7173d89dfe91022a185427d63452c8ffbf6ae",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/f4e7173d89dfe91022a185427d63452c8ffbf6ae",
+            "html_url": "https://github.com/TheJustinSunPrize/awards/commit/f4e7173d89dfe91022a185427d63452c8ffbf6ae"
+          }
+        ]
+      },
+      {
+        "sha": "2510ea83ff5967bf11a520cd44401384804095a4",
+        "commit": {
+          "author": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-18T09:57:59Z"
+          },
+          "committer": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-18T09:57:59Z"
+          },
+          "message": "Update JSP-000585 catalog with complete pinned proof and retain attribution",
+          "tree": {
+            "sha": "322cd6cb35d594c8c7892ac123be2de1bafd4162",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/git/trees/322cd6cb35d594c8c7892ac123be2de1bafd4162"
+          },
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/git/commits/2510ea83ff5967bf11a520cd44401384804095a4",
+          "comment_count": 0,
+          "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "signature": null,
+            "payload": null,
+            "verified_at": null
+          }
+        },
+        "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/2510ea83ff5967bf11a520cd44401384804095a4",
+        "html_url": "https://github.com/TheJustinSunPrize/awards/commit/2510ea83ff5967bf11a520cd44401384804095a4",
+        "comments_url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/2510ea83ff5967bf11a520cd44401384804095a4/comments",
+        "author": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "committer": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "parents": [
+          {
+            "sha": "9237a0d47f2976277bc93375c523be36ced3d998",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/9237a0d47f2976277bc93375c523be36ced3d998",
+            "html_url": "https://github.com/TheJustinSunPrize/awards/commit/9237a0d47f2976277bc93375c523be36ced3d998"
+          },
+          {
+            "sha": "ff33abd13163e789790eb1014e55f57c05f94432",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/ff33abd13163e789790eb1014e55f57c05f94432",
+            "html_url": "https://github.com/TheJustinSunPrize/awards/commit/ff33abd13163e789790eb1014e55f57c05f94432"
+          }
+        ]
+      },
+      {
+        "sha": "e05239ac488b0e3636a59351ce6b68f81ec622dd",
+        "commit": {
+          "author": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-18T10:08:00Z"
+          },
+          "committer": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-18T10:08:00Z"
+          },
+          "message": "Link JSP-000585 README and executed independent verification receipts",
+          "tree": {
+            "sha": "83ac1ea5f08ea4b196ce94330eb2d624f97d71ba",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/git/trees/83ac1ea5f08ea4b196ce94330eb2d624f97d71ba"
+          },
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/git/commits/e05239ac488b0e3636a59351ce6b68f81ec622dd",
+          "comment_count": 0,
+          "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "signature": null,
+            "payload": null,
+            "verified_at": null
+          }
+        },
+        "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/e05239ac488b0e3636a59351ce6b68f81ec622dd",
+        "html_url": "https://github.com/TheJustinSunPrize/awards/commit/e05239ac488b0e3636a59351ce6b68f81ec622dd",
+        "comments_url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/e05239ac488b0e3636a59351ce6b68f81ec622dd/comments",
+        "author": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "committer": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "parents": [
+          {
+            "sha": "2510ea83ff5967bf11a520cd44401384804095a4",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/2510ea83ff5967bf11a520cd44401384804095a4",
+            "html_url": "https://github.com/TheJustinSunPrize/awards/commit/2510ea83ff5967bf11a520cd44401384804095a4"
+          }
+        ]
+      },
+      {
+        "sha": "30ad37f593a6c55bb642915b4877ca896d23acf1",
+        "commit": {
+          "author": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-19T01:55:34Z"
+          },
+          "committer": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-19T01:55:34Z"
+          },
+          "message": "Strengthen JSP-000585 contribution evidence and source bindings",
+          "tree": {
+            "sha": "0ab68ec697e3629adeaf16a73ed2715c937d5224",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/git/trees/0ab68ec697e3629adeaf16a73ed2715c937d5224"
+          },
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/git/commits/30ad37f593a6c55bb642915b4877ca896d23acf1",
+          "comment_count": 0,
+          "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "signature": null,
+            "payload": null,
+            "verified_at": null
+          }
+        },
+        "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/30ad37f593a6c55bb642915b4877ca896d23acf1",
+        "html_url": "https://github.com/TheJustinSunPrize/awards/commit/30ad37f593a6c55bb642915b4877ca896d23acf1",
+        "comments_url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/30ad37f593a6c55bb642915b4877ca896d23acf1/comments",
+        "author": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "committer": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "parents": [
+          {
+            "sha": "e05239ac488b0e3636a59351ce6b68f81ec622dd",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/e05239ac488b0e3636a59351ce6b68f81ec622dd",
+            "html_url": "https://github.com/TheJustinSunPrize/awards/commit/e05239ac488b0e3636a59351ce6b68f81ec622dd"
+          }
+        ]
+      }
+    ],
+    "pr": {
+      "id": 4554266065,
+      "number": 432,
+      "title": "JSP-000585: complete uniform bound with our exact Catlin witness and subdivision bridge",
+      "html_url": "https://github.com/TheJustinSunPrize/awards/pull/432",
+      "url": "https://api.github.com/repos/TheJustinSunPrize/awards/pulls/432",
+      "state": "open",
+      "created_at": "2026-09-17T03:24:41Z",
+      "updated_at": "2026-09-19T10:00:28Z",
+      "closed_at": null,
+      "merged_at": null,
+      "merged": false,
+      "merge_commit_sha": "e403dc52185cf61c281c6dd21de88afeb504a678",
+      "changed_files": 1,
+      "commits": 4,
+      "head": {
+        "label": "ketianzhang1-lang:jsp-000585-catlin-sharp-kz",
+        "ref": "jsp-000585-catlin-sharp-kz",
+        "sha": "30ad37f593a6c55bb642915b4877ca896d23acf1",
+        "user": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "repo": {
+          "full_name": "ketianzhang1-lang/awards",
+          "html_url": "https://github.com/ketianzhang1-lang/awards",
+          "default_branch": "main",
+          "owner": {
+            "login": "ketianzhang1-lang",
+            "html_url": "https://github.com/ketianzhang1-lang"
+          },
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null
+          }
+        }
+      },
+      "base": {
+        "label": "TheJustinSunPrize:main",
+        "ref": "main",
+        "sha": "ff33abd13163e789790eb1014e55f57c05f94432",
+        "user": {
+          "login": "TheJustinSunPrize",
+          "html_url": "https://github.com/TheJustinSunPrize"
+        },
+        "repo": {
+          "full_name": "TheJustinSunPrize/awards",
+          "html_url": "https://github.com/TheJustinSunPrize/awards",
+          "default_branch": "main",
+          "owner": {
+            "login": "TheJustinSunPrize",
+            "html_url": "https://github.com/TheJustinSunPrize"
+          },
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null
+          }
+        }
+      },
+      "user": {
+        "login": "ketianzhang1-lang",
+        "html_url": "https://github.com/ketianzhang1-lang"
+      },
+      "body": {
+        "text_omitted": true,
+        "reason": "full text retained only in the private historical evidence",
+        "utf8_bytes": 9400,
+        "sha256": "e97194a3561949afff9a5b0f35bb9cdfce0dbf5db0568e0fe9960a003b4fc5f9"
+      }
+    }
+  }
+}

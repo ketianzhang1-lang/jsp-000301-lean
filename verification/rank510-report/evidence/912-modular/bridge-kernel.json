@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "leanchecker",
+    "JSP912.VerificationBridge"
+  ],
+  "cwd": "/work/projects/jsp-000912",
+  "exit_code": 0,
+  "seconds": 9.040664911270142
+}

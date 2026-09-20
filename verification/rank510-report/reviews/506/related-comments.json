@@ -1,0 +1,225 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "233e23ee616985453fb35d81c395f7f8806729fed25a71887878ab36b5de2eae",
+  "original_bytes": 16296,
+  "data": {
+    "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1075/comments?per_page=100": {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": {
+              "text_omitted": true,
+              "reason": "full text retained only in the private historical evidence",
+              "utf8_bytes": 17,
+              "sha256": "d466be6feb6e54b212253f218a6971fe2478837bae8d11fde4d19f8e171019fa"
+            }
+          }
+        ],
+        "structuredContent": {
+          "content": [
+            {
+              "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/comments/5726210159",
+              "html_url": "https://github.com/TheJustinSunPrize/awards/issues/1075#issuecomment-5726210159",
+              "issue_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1075",
+              "id": 5726210159,
+              "user": {
+                "login": "Drag0ndddd1118",
+                "html_url": "https://github.com/Drag0ndddd1118"
+              },
+              "created_at": "2026-09-18T06:39:02Z",
+              "updated_at": "2026-09-18T06:39:02Z",
+              "body": {
+                "text_omitted": true,
+                "reason": "full text retained only in the private historical evidence",
+                "utf8_bytes": 560,
+                "sha256": "4b661d6a8d35006c206109f3e45becdd4e8273275c7b089cc232e267027613b9"
+              },
+              "pin": null,
+              "performed_via_github_app": null,
+              "minimized": null
+            }
+          ],
+          "title": "comments",
+          "modified_date": null,
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1075/comments?per_page=100",
+          "display_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1075/comments?per_page=100",
+          "display_title": "comments",
+          "structuredContent": {
+            "title": "comments",
+            "content": [
+              {
+                "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/comments/5726210159",
+                "html_url": "https://github.com/TheJustinSunPrize/awards/issues/1075#issuecomment-5726210159",
+                "issue_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1075",
+                "id": 5726210159,
+                "user": {
+                  "login": "Drag0ndddd1118",
+                  "html_url": "https://github.com/Drag0ndddd1118"
+                },
+                "created_at": "2026-09-18T06:39:02Z",
+                "updated_at": "2026-09-18T06:39:02Z",
+                "body": {
+                  "text_omitted": true,
+                  "reason": "full text retained only in the private historical evidence",
+                  "utf8_bytes": 560,
+                  "sha256": "4b661d6a8d35006c206109f3e45becdd4e8273275c7b089cc232e267027613b9"
+                },
+                "pin": null,
+                "performed_via_github_app": null,
+                "minimized": null
+              }
+            ],
+            "display_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1075/comments?per_page=100"
+          }
+        },
+        "isError": false
+      }
+    },
+    "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1073/comments?per_page=100": {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": {
+              "text_omitted": true,
+              "reason": "full text retained only in the private historical evidence",
+              "utf8_bytes": 17,
+              "sha256": "d466be6feb6e54b212253f218a6971fe2478837bae8d11fde4d19f8e171019fa"
+            }
+          }
+        ],
+        "structuredContent": {
+          "content": [
+            {
+              "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/comments/5726213266",
+              "html_url": "https://github.com/TheJustinSunPrize/awards/pull/1073#issuecomment-5726213266",
+              "issue_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1073",
+              "id": 5726213266,
+              "user": {
+                "login": "Drag0ndddd1118",
+                "html_url": "https://github.com/Drag0ndddd1118"
+              },
+              "created_at": "2026-09-18T06:39:23Z",
+              "updated_at": "2026-09-18T06:39:23Z",
+              "body": {
+                "text_omitted": true,
+                "reason": "full text retained only in the private historical evidence",
+                "utf8_bytes": 483,
+                "sha256": "182afe1a5022802dc3e661b98040918bb758746ee31f6904f92a35144a14b68f"
+              },
+              "performed_via_github_app": null,
+              "minimized": null
+            }
+          ],
+          "title": "comments",
+          "modified_date": null,
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1073/comments?per_page=100",
+          "display_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1073/comments?per_page=100",
+          "display_title": "comments",
+          "structuredContent": {
+            "title": "comments",
+            "content": [
+              {
+                "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/comments/5726213266",
+                "html_url": "https://github.com/TheJustinSunPrize/awards/pull/1073#issuecomment-5726213266",
+                "issue_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1073",
+                "id": 5726213266,
+                "user": {
+                  "login": "Drag0ndddd1118",
+                  "html_url": "https://github.com/Drag0ndddd1118"
+                },
+                "created_at": "2026-09-18T06:39:23Z",
+                "updated_at": "2026-09-18T06:39:23Z",
+                "body": {
+                  "text_omitted": true,
+                  "reason": "full text retained only in the private historical evidence",
+                  "utf8_bytes": 483,
+                  "sha256": "182afe1a5022802dc3e661b98040918bb758746ee31f6904f92a35144a14b68f"
+                },
+                "performed_via_github_app": null,
+                "minimized": null
+              }
+            ],
+            "display_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1073/comments?per_page=100"
+          }
+        },
+        "isError": false
+      }
+    },
+    "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1599/comments?per_page=100": {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": {
+              "text_omitted": true,
+              "reason": "full text retained only in the private historical evidence",
+              "utf8_bytes": 17,
+              "sha256": "d466be6feb6e54b212253f218a6971fe2478837bae8d11fde4d19f8e171019fa"
+            }
+          }
+        ],
+        "structuredContent": {
+          "content": [
+            {
+              "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/comments/5741357758",
+              "html_url": "https://github.com/TheJustinSunPrize/awards/pull/1599#issuecomment-5741357758",
+              "issue_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1599",
+              "id": 5741357758,
+              "user": {
+                "login": "zjukop3",
+                "html_url": "https://github.com/zjukop3"
+              },
+              "created_at": "2026-09-19T11:13:25Z",
+              "updated_at": "2026-09-19T11:13:25Z",
+              "body": {
+                "text_omitted": true,
+                "reason": "full text retained only in the private historical evidence",
+                "utf8_bytes": 369,
+                "sha256": "03555db51957150c8dd5711ad82931a0772a04bd9a67f2bb7fd23f0de5ce64d1"
+              },
+              "performed_via_github_app": null,
+              "minimized": null
+            }
+          ],
+          "title": "comments",
+          "modified_date": null,
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1599/comments?per_page=100",
+          "display_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1599/comments?per_page=100",
+          "display_title": "comments",
+          "structuredContent": {
+            "title": "comments",
+            "content": [
+              {
+                "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/comments/5741357758",
+                "html_url": "https://github.com/TheJustinSunPrize/awards/pull/1599#issuecomment-5741357758",
+                "issue_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1599",
+                "id": 5741357758,
+                "user": {
+                  "login": "zjukop3",
+                  "html_url": "https://github.com/zjukop3"
+                },
+                "created_at": "2026-09-19T11:13:25Z",
+                "updated_at": "2026-09-19T11:13:25Z",
+                "body": {
+                  "text_omitted": true,
+                  "reason": "full text retained only in the private historical evidence",
+                  "utf8_bytes": 369,
+                  "sha256": "03555db51957150c8dd5711ad82931a0772a04bd9a67f2bb7fd23f0de5ce64d1"
+                },
+                "performed_via_github_app": null,
+                "minimized": null
+              }
+            ],
+            "display_url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1599/comments?per_page=100"
+          }
+        },
+        "isError": false
+      }
+    }
+  }
+}

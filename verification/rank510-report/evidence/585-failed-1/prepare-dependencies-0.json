@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "lake",
+    "exe",
+    "cache",
+    "get",
+    "Mathlib"
+  ],
+  "cwd": "/work/projects/catlin-research",
+  "exit_code": 0,
+  "seconds": 101.81329560279846
+}

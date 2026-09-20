@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "git",
+    "init",
+    "/out/tools/exporter"
+  ],
+  "cwd": "/out",
+  "exit_code": 0,
+  "seconds": 0.007875442504882812
+}

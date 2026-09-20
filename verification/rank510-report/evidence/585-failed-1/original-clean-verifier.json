@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "bash",
+    "scripts/verify.sh"
+  ],
+  "cwd": "/work/projects/catlin-research",
+  "exit_code": 0,
+  "seconds": 400.96835470199585
+}

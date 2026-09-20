@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-000912",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "bf99214b3104d89c628abb9c824a56d89a6bd6fe",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000912",
+      "source": "https://www.erdosproblems.com/1099",
+      "requirements": [
+        {
+          "id": "full-divisor-list",
+          "description": "For every positive integer n, use every adjacent pair in the complete increasing list of positive divisors; real division and real exponentiation.",
+          "targets": [
+            "t3",
+            "t4",
+            "t5",
+            "t6",
+            "b0",
+            "b1"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "all-real-exponents",
+          "description": "For every real alpha strictly greater than one, including exponents arbitrarily close to one, with no additional density or gap hypothesis.",
+          "targets": [
+            "t0",
+            "t2",
+            "t4",
+            "t5",
+            "t6",
+            "b1"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "cofinal-uniform-bound",
+          "description": "A finite positive constant C depending on alpha but independent of the natural cutoff M; for every M a strictly positive n >= M has gap sum <= C.",
+          "targets": [
+            "t1",
+            "t4",
+            "t5",
+            "t6",
+            "b1"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "all-adjacent-gaps",
+          "description": "Control the complete divisor list, including the upper half by complementary-divisor reflection and the central crossing, not only chosen grid divisors.",
+          "targets": [
+            "t0",
+            "t2",
+            "t3",
+            "t4",
+            "b1"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "b0",
+      "problem": "JSP-000912",
+      "role": "bridge",
+      "module": "JSP912.VerificationBridge",
+      "source": "JSP912/VerificationBridge.lean",
+      "declaration": "Verify912.literal_formula"
+    },
+    {
+      "id": "b1",
+      "problem": "JSP-000912",
+      "role": "bridge",
+      "module": "JSP912.VerificationBridge",
+      "source": "JSP912/VerificationBridge.lean",
+      "declaration": "Verify912.intended"
+    },
+    {
+      "id": "t0",
+      "problem": "JSP-000912",
+      "role": "theorem",
+      "module": "JSP912.Grid",
+      "source": "JSP912/Grid.lean",
+      "declaration": "JSP912.grid_approx"
+    },
+    {
+      "id": "t1",
+      "problem": "JSP-000912",
+      "role": "theorem",
+      "module": "JSP912.Construction",
+      "source": "JSP912/Construction.lean",
+      "declaration": "JSP912.partialProd_bound"
+    },
+    {
+      "id": "t2",
+      "problem": "JSP-000912",
+      "role": "theorem",
+      "module": "JSP912.Decay",
+      "source": "JSP912/Decay.lean",
+      "declaration": "JSP912.lower_gap_weight"
+    },
+    {
+      "id": "t3",
+      "problem": "JSP-000912",
+      "role": "theorem",
+      "module": "JSP912.Potential",
+      "source": "JSP912/Potential.lean",
+      "declaration": "JSP912.all_gap_cost"
+    },
+    {
+      "id": "t4",
+      "problem": "JSP-000912",
+      "role": "theorem",
+      "module": "JSP912.Main",
+      "source": "JSP912/Main.lean",
+      "declaration": "JSP912.hAlpha_candidate_bound"
+    },
+    {
+      "id": "t5",
+      "problem": "JSP-000912",
+      "role": "theorem",
+      "module": "JSP912.Main",
+      "source": "JSP912/Main.lean",
+      "declaration": "JSP912.jsp_000912_full"
+    },
+    {
+      "id": "t6",
+      "problem": "JSP-000912",
+      "role": "theorem",
+      "module": "JSP912.Main",
+      "source": "JSP912/Main.lean",
+      "declaration": "JSP912.erdos_1099"
+    }
+  ]
+}

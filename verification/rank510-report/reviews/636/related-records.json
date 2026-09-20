@@ -1,0 +1,126 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "cad584aba55fc2fb43c6fb42e98d8c9ee32458ac5a6ddd2e1039e10ca1158639",
+  "original_bytes": 89957,
+  "data": {
+    "fetched_at": "2026-09-19T23:19:44.287Z",
+    "pr677": {
+      "id": 4557957700,
+      "number": 677,
+      "title": "JSP-000636: full multiplicity threshold formalization for all r >= 2",
+      "html_url": "https://github.com/TheJustinSunPrize/awards/pull/677",
+      "url": "https://api.github.com/repos/TheJustinSunPrize/awards/pulls/677",
+      "state": "open",
+      "created_at": "2026-09-17T11:37:21Z",
+      "updated_at": "2026-09-19T05:00:12Z",
+      "closed_at": null,
+      "merged_at": null,
+      "merged": false,
+      "merge_commit_sha": "404bb8331a9dba1fbc9aa64546e47c8a5d0d97e7",
+      "changed_files": 1,
+      "commits": 2,
+      "head": {
+        "label": "peilinliu66-dev:codex/submit-jsp000636-full-threshold",
+        "ref": "codex/submit-jsp000636-full-threshold",
+        "sha": "62f7e28cee8c32353a684f880c75081a35b8a83f",
+        "user": {
+          "login": "peilinliu66-dev",
+          "html_url": "https://github.com/peilinliu66-dev"
+        },
+        "repo": {
+          "full_name": "peilinliu66-dev/awards",
+          "html_url": "https://github.com/peilinliu66-dev/awards",
+          "default_branch": "main",
+          "owner": {
+            "login": "peilinliu66-dev",
+            "html_url": "https://github.com/peilinliu66-dev"
+          },
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null
+          }
+        }
+      },
+      "base": {
+        "label": "TheJustinSunPrize:main",
+        "ref": "main",
+        "sha": "ff33abd13163e789790eb1014e55f57c05f94432",
+        "user": {
+          "login": "TheJustinSunPrize",
+          "html_url": "https://github.com/TheJustinSunPrize"
+        },
+        "repo": {
+          "full_name": "TheJustinSunPrize/awards",
+          "html_url": "https://github.com/TheJustinSunPrize/awards",
+          "default_branch": "main",
+          "owner": {
+            "login": "TheJustinSunPrize",
+            "html_url": "https://github.com/TheJustinSunPrize"
+          },
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null
+          }
+        }
+      },
+      "user": {
+        "login": "peilinliu66-dev",
+        "html_url": "https://github.com/peilinliu66-dev"
+      },
+      "body": {
+        "text_omitted": true,
+        "reason": "full text retained only in the private historical evidence",
+        "utf8_bytes": 9889,
+        "sha256": "2fafd5c459cf1f5fd759a56cfa7015bd7ee208b1f9ee57e56116184e70228c1e"
+      }
+    },
+    "claim679": {
+      "id": 5486821598,
+      "number": 679,
+      "title": "[Award claim] JSP-000636: Lean formalization",
+      "html_url": "https://github.com/TheJustinSunPrize/awards/issues/679",
+      "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/679",
+      "state": "open",
+      "state_reason": null,
+      "created_at": "2026-09-17T11:38:09Z",
+      "updated_at": "2026-09-17T16:44:35Z",
+      "closed_at": null,
+      "user": {
+        "login": "peilinliu66-dev",
+        "html_url": "https://github.com/peilinliu66-dev"
+      },
+      "body": {
+        "text_omitted": true,
+        "reason": "full text retained only in the private historical evidence",
+        "utf8_bytes": 2916,
+        "sha256": "88546de28d7b56ac82692ad8cbd37c4eee3ca75cb0301b4ed29ecfb49e2a4066"
+      }
+    },
+    "intake24": {
+      "id": 5473014752,
+      "number": 24,
+      "title": "[Correction] Batch 4: register reproduced existing Lean proof evidence",
+      "html_url": "https://github.com/TheJustinSunPrize/awards/issues/24",
+      "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/24",
+      "state": "open",
+      "state_reason": null,
+      "created_at": "2026-09-16T09:59:41Z",
+      "updated_at": "2026-09-16T16:42:13Z",
+      "closed_at": null,
+      "user": {
+        "login": "zifanersuotang",
+        "html_url": "https://github.com/zifanersuotang"
+      },
+      "body": {
+        "text_omitted": true,
+        "reason": "full text retained only in the private historical evidence",
+        "utf8_bytes": 50424,
+        "sha256": "5f3c28866f0184529385932b10b8edb190331f4fa904121f000e21dc3a183635"
+      }
+    }
+  }
+}

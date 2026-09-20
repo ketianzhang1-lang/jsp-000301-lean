@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "python3",
+    "/harness/audit.py",
+    "run",
+    "/out/targets.json",
+    "--out",
+    "/out/audit",
+    "--lake",
+    "/opt/elan/toolchains/leanprover--lean4---v4.34.0/bin/lake",
+    "--timeout",
+    "2400"
+  ],
+  "cwd": "/work/projects/catlin-research",
+  "exit_code": 2,
+  "seconds": 438.93798995018005
+}

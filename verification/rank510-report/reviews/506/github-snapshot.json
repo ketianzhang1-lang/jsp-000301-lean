@@ -1,0 +1,314 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "01018ef80754ddad855b56287d9f4a53518e282a23516b3d2b418c4e2bc0b8f4",
+  "original_bytes": 63844,
+  "data": {
+    "retrieved_at": "2026-09-19T23:19:11.061Z",
+    "pr": {
+      "id": 4553613612,
+      "number": 363,
+      "title": "JSP-000506: complete random-graph gap formalization with our exact probability and threshold bridges",
+      "html_url": "https://github.com/TheJustinSunPrize/awards/pull/363",
+      "url": "https://api.github.com/repos/TheJustinSunPrize/awards/pulls/363",
+      "state": "open",
+      "created_at": "2026-09-17T01:18:35Z",
+      "updated_at": "2026-09-19T10:01:09Z",
+      "closed_at": null,
+      "merged_at": null,
+      "merged": false,
+      "merge_commit_sha": "4bb3129b83eb1c7368abd27b66f72566f8fa7567",
+      "changed_files": 1,
+      "commits": 4,
+      "head": {
+        "label": "ketianzhang1-lang:jsp-000506-heckel-evidence",
+        "ref": "jsp-000506-heckel-evidence",
+        "sha": "27fddf6dee0d9fb92a34643f05615da57be80574",
+        "user": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "repo": {
+          "full_name": "ketianzhang1-lang/awards",
+          "html_url": "https://github.com/ketianzhang1-lang/awards",
+          "default_branch": "main",
+          "owner": {
+            "login": "ketianzhang1-lang",
+            "html_url": "https://github.com/ketianzhang1-lang"
+          },
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null
+          }
+        }
+      },
+      "base": {
+        "label": "TheJustinSunPrize:main",
+        "ref": "main",
+        "sha": "ff33abd13163e789790eb1014e55f57c05f94432",
+        "user": {
+          "login": "TheJustinSunPrize",
+          "html_url": "https://github.com/TheJustinSunPrize"
+        },
+        "repo": {
+          "full_name": "TheJustinSunPrize/awards",
+          "html_url": "https://github.com/TheJustinSunPrize/awards",
+          "default_branch": "main",
+          "owner": {
+            "login": "TheJustinSunPrize",
+            "html_url": "https://github.com/TheJustinSunPrize"
+          },
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null
+          }
+        }
+      },
+      "user": {
+        "login": "ketianzhang1-lang",
+        "html_url": "https://github.com/ketianzhang1-lang"
+      },
+      "body": {
+        "text_omitted": true,
+        "reason": "full text retained only in the private historical evidence",
+        "utf8_bytes": 13396,
+        "sha256": "1044935d967963bcc36f551b3e7c17069067710997f007526e15774b37ca802f"
+      }
+    },
+    "claim": {
+      "id": 5507227458,
+      "number": 1623,
+      "title": "[Award claim] JSP-000506: Lean formalization",
+      "html_url": "https://github.com/TheJustinSunPrize/awards/issues/1623",
+      "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/1623",
+      "state": "open",
+      "state_reason": null,
+      "created_at": "2026-09-19T02:42:31Z",
+      "updated_at": "2026-09-19T02:42:31Z",
+      "closed_at": null,
+      "user": {
+        "login": "ketianzhang1-lang",
+        "html_url": "https://github.com/ketianzhang1-lang"
+      },
+      "body": {
+        "text_omitted": true,
+        "reason": "full text retained only in the private historical evidence",
+        "utf8_bytes": 4480,
+        "sha256": "028171dc87dc50bce54a4cb3012627b0147fb69f0259449183ed2bf18ce2395f"
+      }
+    },
+    "files": [
+      {
+        "sha": "f928a0274f85a41448caeb37499847878aed862e",
+        "filename": "problems/catalog-0501-0600.md",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 1,
+        "changes": 3,
+        "blob_url": "https://github.com/TheJustinSunPrize/awards/blob/27fddf6dee0d9fb92a34643f05615da57be80574/problems%2Fcatalog-0501-0600.md",
+        "raw_url": "https://github.com/TheJustinSunPrize/awards/raw/27fddf6dee0d9fb92a34643f05615da57be80574/problems%2Fcatalog-0501-0600.md",
+        "contents_url": "https://api.github.com/repos/TheJustinSunPrize/awards/contents/problems%2Fcatalog-0501-0600.md?ref=27fddf6dee0d9fb92a34643f05615da57be80574",
+        "patch": {
+          "text_omitted": true,
+          "reason": "full text retained only in the private historical evidence",
+          "utf8_bytes": 3680,
+          "sha256": "7dc60c9fc8b56521bce859ff8f2deb71244e9e759453e8a7ffbcc1a23e3a3b79"
+        }
+      }
+    ],
+    "commits": [
+      {
+        "sha": "d89278c887fe0918d0a9dbf276a7eb3b046d5fbf",
+        "commit": {
+          "author": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-17T01:11:48Z"
+          },
+          "committer": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-17T01:11:48Z"
+          },
+          "message": "Add scoped JSP-000506 finite-reduction evidence for eligibility review",
+          "tree": {
+            "sha": "95bd9dbd6276ac2e17b3e7544abd7e226eb70911",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/git/trees/95bd9dbd6276ac2e17b3e7544abd7e226eb70911"
+          },
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/git/commits/d89278c887fe0918d0a9dbf276a7eb3b046d5fbf",
+          "comment_count": 0,
+          "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "signature": null,
+            "payload": null,
+            "verified_at": null
+          }
+        },
+        "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/d89278c887fe0918d0a9dbf276a7eb3b046d5fbf",
+        "html_url": "https://github.com/TheJustinSunPrize/awards/commit/d89278c887fe0918d0a9dbf276a7eb3b046d5fbf",
+        "comments_url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/d89278c887fe0918d0a9dbf276a7eb3b046d5fbf/comments",
+        "author": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "committer": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "parents": [
+          {
+            "sha": "f4e7173d89dfe91022a185427d63452c8ffbf6ae",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/f4e7173d89dfe91022a185427d63452c8ffbf6ae",
+            "html_url": "https://github.com/TheJustinSunPrize/awards/commit/f4e7173d89dfe91022a185427d63452c8ffbf6ae"
+          }
+        ]
+      },
+      {
+        "sha": "627e29126d352305565ab51da55bbb40803645a0",
+        "commit": {
+          "author": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-18T21:40:51Z"
+          },
+          "committer": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-18T21:40:51Z"
+          },
+          "message": "JSP-000506: replace finite-only note with verified complete proof references",
+          "tree": {
+            "sha": "a9c2f36a95da93fd6a43736ca2a795bbf300db45",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/git/trees/a9c2f36a95da93fd6a43736ca2a795bbf300db45"
+          },
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/git/commits/627e29126d352305565ab51da55bbb40803645a0",
+          "comment_count": 0,
+          "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "signature": null,
+            "payload": null,
+            "verified_at": null
+          }
+        },
+        "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/627e29126d352305565ab51da55bbb40803645a0",
+        "html_url": "https://github.com/TheJustinSunPrize/awards/commit/627e29126d352305565ab51da55bbb40803645a0",
+        "comments_url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/627e29126d352305565ab51da55bbb40803645a0/comments",
+        "author": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "committer": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "parents": [
+          {
+            "sha": "d89278c887fe0918d0a9dbf276a7eb3b046d5fbf",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/d89278c887fe0918d0a9dbf276a7eb3b046d5fbf",
+            "html_url": "https://github.com/TheJustinSunPrize/awards/commit/d89278c887fe0918d0a9dbf276a7eb3b046d5fbf"
+          },
+          {
+            "sha": "ff33abd13163e789790eb1014e55f57c05f94432",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/ff33abd13163e789790eb1014e55f57c05f94432",
+            "html_url": "https://github.com/TheJustinSunPrize/awards/commit/ff33abd13163e789790eb1014e55f57c05f94432"
+          }
+        ]
+      },
+      {
+        "sha": "6cb8c0101ffae4f8caab83f4369e7ef0c52003b5",
+        "commit": {
+          "author": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-19T03:22:33Z"
+          },
+          "committer": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-19T03:22:33Z"
+          },
+          "message": "docs(jsp-000506): add verified joint-gap, conditioning and expected-gap contributions",
+          "tree": {
+            "sha": "920fdc2f85e3fce59f58c4bb46a08c33a904f746",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/git/trees/920fdc2f85e3fce59f58c4bb46a08c33a904f746"
+          },
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/git/commits/6cb8c0101ffae4f8caab83f4369e7ef0c52003b5",
+          "comment_count": 0,
+          "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "signature": null,
+            "payload": null,
+            "verified_at": null
+          }
+        },
+        "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/6cb8c0101ffae4f8caab83f4369e7ef0c52003b5",
+        "html_url": "https://github.com/TheJustinSunPrize/awards/commit/6cb8c0101ffae4f8caab83f4369e7ef0c52003b5",
+        "comments_url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/6cb8c0101ffae4f8caab83f4369e7ef0c52003b5/comments",
+        "author": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "committer": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "parents": [
+          {
+            "sha": "627e29126d352305565ab51da55bbb40803645a0",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/627e29126d352305565ab51da55bbb40803645a0",
+            "html_url": "https://github.com/TheJustinSunPrize/awards/commit/627e29126d352305565ab51da55bbb40803645a0"
+          }
+        ]
+      },
+      {
+        "sha": "27fddf6dee0d9fb92a34643f05615da57be80574",
+        "commit": {
+          "author": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-19T04:45:49Z"
+          },
+          "committer": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-19T04:45:49Z"
+          },
+          "message": "docs(jsp-000506): link clarified upstream license navigation",
+          "tree": {
+            "sha": "d2e37680cd996fe6a08e32c9812570c3da4267ea",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/git/trees/d2e37680cd996fe6a08e32c9812570c3da4267ea"
+          },
+          "url": "https://api.github.com/repos/TheJustinSunPrize/awards/git/commits/27fddf6dee0d9fb92a34643f05615da57be80574",
+          "comment_count": 0,
+          "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "signature": null,
+            "payload": null,
+            "verified_at": null
+          }
+        },
+        "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/27fddf6dee0d9fb92a34643f05615da57be80574",
+        "html_url": "https://github.com/TheJustinSunPrize/awards/commit/27fddf6dee0d9fb92a34643f05615da57be80574",
+        "comments_url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/27fddf6dee0d9fb92a34643f05615da57be80574/comments",
+        "author": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "committer": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "parents": [
+          {
+            "sha": "6cb8c0101ffae4f8caab83f4369e7ef0c52003b5",
+            "url": "https://api.github.com/repos/TheJustinSunPrize/awards/commits/6cb8c0101ffae4f8caab83f4369e7ef0c52003b5",
+            "html_url": "https://github.com/TheJustinSunPrize/awards/commit/6cb8c0101ffae4f8caab83f4369e7ef0c52003b5"
+          }
+        ]
+      }
+    ],
+    "reviews": [],
+    "inline_comments": [],
+    "pr_comments": [],
+    "claim_comments": []
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "python3",
+    "scripts/verify_general.py"
+  ],
+  "cwd": "/work",
+  "exit_code": 0,
+  "seconds": 352.1777093410492
+}

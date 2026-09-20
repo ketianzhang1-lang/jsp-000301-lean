@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "python3",
+    "/harness/audit.py",
+    "run",
+    "/out/targets.json",
+    "--out",
+    "/out/audit",
+    "--lake",
+    "/out/manual-lake-adapter",
+    "--timeout",
+    "2400"
+  ],
+  "cwd": "/work/projects/jsp-000506",
+  "exit_code": 0,
+  "seconds": 1191.9645426273346
+}

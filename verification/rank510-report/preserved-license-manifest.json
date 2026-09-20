@@ -1,0 +1,142 @@
+[
+  {
+    "run_key": "636",
+    "proof_commit": "5c23ecf6211449c9bd7f4ac9229300ed43f666b2",
+    "source_path": "LICENSE",
+    "delivery_path": "evidence/636/preserved-licenses/LICENSE",
+    "sha256": "204880ffa0c3a59bde2fe27661a91e481a1ae7215e5d7cb3c6644f925ae6ef81"
+  },
+  {
+    "run_key": "636",
+    "proof_commit": "5c23ecf6211449c9bd7f4ac9229300ed43f666b2",
+    "source_path": "projects/jsp-000636/LICENSE.LEAN",
+    "delivery_path": "evidence/636/preserved-licenses/projects/jsp-000636/LICENSE.LEAN",
+    "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+  },
+  {
+    "run_key": "912-full",
+    "proof_commit": "bf99214b3104d89c628abb9c824a56d89a6bd6fe",
+    "source_path": "LICENSE",
+    "delivery_path": "evidence/912-full/preserved-licenses/LICENSE",
+    "sha256": "204880ffa0c3a59bde2fe27661a91e481a1ae7215e5d7cb3c6644f925ae6ef81"
+  },
+  {
+    "run_key": "912-modular",
+    "proof_commit": "bf99214b3104d89c628abb9c824a56d89a6bd6fe",
+    "source_path": "LICENSE",
+    "delivery_path": "evidence/912-modular/preserved-licenses/LICENSE",
+    "sha256": "204880ffa0c3a59bde2fe27661a91e481a1ae7215e5d7cb3c6644f925ae6ef81"
+  },
+  {
+    "run_key": "393-general",
+    "proof_commit": "aa1ed1bac2eb0c1ec33723ff802ff3b9b6c02ee8",
+    "source_path": "LICENSE",
+    "delivery_path": "evidence/393-general/preserved-licenses/LICENSE",
+    "sha256": "204880ffa0c3a59bde2fe27661a91e481a1ae7215e5d7cb3c6644f925ae6ef81"
+  },
+  {
+    "run_key": "393-general",
+    "proof_commit": "aa1ed1bac2eb0c1ec33723ff802ff3b9b6c02ee8",
+    "source_path": "UPSTREAM-LICENSE.txt",
+    "delivery_path": "evidence/393-general/preserved-licenses/UPSTREAM-LICENSE.txt",
+    "sha256": "41e26750cf7403beef1b82310454ca79eb1da04b1dab82d4d42f377e15c01ea9"
+  },
+  {
+    "run_key": "728",
+    "proof_commit": "22212651d30af02ad36f01a206984d31b0ec75c6",
+    "source_path": "LICENSE",
+    "delivery_path": "evidence/728/preserved-licenses/LICENSE",
+    "sha256": "204880ffa0c3a59bde2fe27661a91e481a1ae7215e5d7cb3c6644f925ae6ef81"
+  },
+  {
+    "run_key": "728",
+    "proof_commit": "22212651d30af02ad36f01a206984d31b0ec75c6",
+    "source_path": "projects/jsp-000728/UPSTREAM-LICENSE.txt",
+    "delivery_path": "evidence/728/preserved-licenses/projects/jsp-000728/UPSTREAM-LICENSE.txt",
+    "sha256": "41e26750cf7403beef1b82310454ca79eb1da04b1dab82d4d42f377e15c01ea9"
+  },
+  {
+    "run_key": "585",
+    "proof_commit": "9661ef0f170e750b1ac2153b9017bad86044680c",
+    "source_path": "LICENSE",
+    "delivery_path": "evidence/585/preserved-licenses/LICENSE",
+    "sha256": "204880ffa0c3a59bde2fe27661a91e481a1ae7215e5d7cb3c6644f925ae6ef81"
+  },
+  {
+    "run_key": "585",
+    "proof_commit": "9661ef0f170e750b1ac2153b9017bad86044680c",
+    "source_path": "projects/catlin-research/UPSTREAM-LICENSE.txt",
+    "delivery_path": "evidence/585/preserved-licenses/projects/catlin-research/UPSTREAM-LICENSE.txt",
+    "sha256": "f6b0f83c94786f17323cc622422de5c5e37d7b30fca97d9e864d855f122f34a4"
+  },
+  {
+    "run_key": "506-main",
+    "proof_commit": "2aca2f16eba715d7ad672dfa017481b647c00063",
+    "source_path": "LICENSE",
+    "delivery_path": "evidence/506-main/preserved-licenses/LICENSE",
+    "sha256": "204880ffa0c3a59bde2fe27661a91e481a1ae7215e5d7cb3c6644f925ae6ef81"
+  },
+  {
+    "run_key": "506-main",
+    "proof_commit": "2aca2f16eba715d7ad672dfa017481b647c00063",
+    "source_path": "projects/jsp-000506/LICENSE",
+    "delivery_path": "evidence/506-main/preserved-licenses/projects/jsp-000506/LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "run_key": "506-main",
+    "proof_commit": "2aca2f16eba715d7ad672dfa017481b647c00063",
+    "source_path": "projects/jsp-000506/UPSTREAM_CITATION.cff",
+    "delivery_path": "evidence/506-main/preserved-licenses/projects/jsp-000506/UPSTREAM_CITATION.cff",
+    "sha256": "0fd16fde58d8072242d396d7db6b0c68a722e6788f9240907600f4c79c378681"
+  },
+  {
+    "run_key": "506-main",
+    "proof_commit": "2aca2f16eba715d7ad672dfa017481b647c00063",
+    "source_path": "projects/jsp-000506/UPSTREAM_LICENSE",
+    "delivery_path": "evidence/506-main/preserved-licenses/projects/jsp-000506/UPSTREAM_LICENSE",
+    "sha256": "f5b745ef98087f531e719ee8ca6a96809444573ecc7173c6fa68eaad39b3cc3f"
+  },
+  {
+    "run_key": "506-main",
+    "proof_commit": "2aca2f16eba715d7ad672dfa017481b647c00063",
+    "source_path": "projects/jsp-000506/UPSTREAM_LICENSE_SCOPE.md",
+    "delivery_path": "evidence/506-main/preserved-licenses/projects/jsp-000506/UPSTREAM_LICENSE_SCOPE.md",
+    "sha256": "39d0b550e66a7b0a153146b2682ef6a077aeba6a31a1cd180cef16db23d6a03c"
+  },
+  {
+    "run_key": "506-selection",
+    "proof_commit": "90e1298ec99973eefe607f9c21bfffa750804087",
+    "source_path": "LICENSE",
+    "delivery_path": "evidence/506-selection/preserved-licenses/LICENSE",
+    "sha256": "204880ffa0c3a59bde2fe27661a91e481a1ae7215e5d7cb3c6644f925ae6ef81"
+  },
+  {
+    "run_key": "506-selection",
+    "proof_commit": "90e1298ec99973eefe607f9c21bfffa750804087",
+    "source_path": "projects/jsp-000506/LICENSE",
+    "delivery_path": "evidence/506-selection/preserved-licenses/projects/jsp-000506/LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "run_key": "506-selection",
+    "proof_commit": "90e1298ec99973eefe607f9c21bfffa750804087",
+    "source_path": "projects/jsp-000506/UPSTREAM_CITATION.cff",
+    "delivery_path": "evidence/506-selection/preserved-licenses/projects/jsp-000506/UPSTREAM_CITATION.cff",
+    "sha256": "0fd16fde58d8072242d396d7db6b0c68a722e6788f9240907600f4c79c378681"
+  },
+  {
+    "run_key": "506-selection",
+    "proof_commit": "90e1298ec99973eefe607f9c21bfffa750804087",
+    "source_path": "projects/jsp-000506/UPSTREAM_LICENSE",
+    "delivery_path": "evidence/506-selection/preserved-licenses/projects/jsp-000506/UPSTREAM_LICENSE",
+    "sha256": "f5b745ef98087f531e719ee8ca6a96809444573ecc7173c6fa68eaad39b3cc3f"
+  },
+  {
+    "run_key": "506-selection",
+    "proof_commit": "90e1298ec99973eefe607f9c21bfffa750804087",
+    "source_path": "projects/jsp-000506/UPSTREAM_LICENSE_SCOPE.md",
+    "delivery_path": "evidence/506-selection/preserved-licenses/projects/jsp-000506/UPSTREAM_LICENSE_SCOPE.md",
+    "sha256": "39d0b550e66a7b0a153146b2682ef6a077aeba6a31a1cd180cef16db23d6a03c"
+  }
+]

@@ -1,0 +1,714 @@
+{
+  "506-selection": {
+    "status": "mechanical_evidence_validated",
+    "semantic_verdict": "requires_separate_review",
+    "proof_commit": "90e1298ec99973eefe607f9c21bfffa750804087",
+    "branch_tip": "90e1298ec99973eefe607f9c21bfffa750804087",
+    "target_count": 68,
+    "original_target_count": 60,
+    "axioms": {
+      "Verify506.exists_coColourable": [],
+      "Verify506.coColourable_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify506.coNumber_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify506.intended": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify506.explicit_quantitative": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify506.explicit_scale_diverges": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify506.conditional_explicit": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify506.expectation_explicit": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_nonneg": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_univ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_mono": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_compl": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_union_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_cover": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mem_event": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_event_compl": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_anticorrelation": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.concentration_reduction": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.proper_n": [
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.proper_to_coProper": [
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.coProper_compl": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.chi_spec": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.zeta_spec": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.chi_mono": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.zeta_le_chi": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.zeta_compl": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.heckel_proposition3": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mem_fromGraph": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.toGraph_adj_iff": [
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.fromGraph_toGraph": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.toGraph_fromGraph": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.proper_iff_colorable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.coProper_iff_all_pairs": [
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.coProper_iff_coColorable": [
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.chi_eq_chromaticNumberNat": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.zeta_eq_cochromaticNumber": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.gap_cast_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.card_graph_space": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.card_event_eq_graph_event": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_event_eq_randomGraph": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mass_le_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.gapProbability_nonneg": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.gapProbability_le_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.gapProbability_antitone": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.gapProbability_eq_standard": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.quantitative_gap_tendsto_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.gapScale_tendsto_atTop": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.threshold_tendsto_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.fixed_threshold_tendsto_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.small_gap_probability_tendsto_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.eventually_not_heckel_premise": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.jsp_000506": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.complete_package": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Erdos625.erdos625": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Erdos625.erdos625Statement_iff_real": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Erdos625.randomGraphMeasure_eq_uniformOn_univ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Erdos625.gapConstant_pos": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.intersection_probability_lower": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.conditional_failure_bounds": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.joint_gap_probability_bounds": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.joint_quantitative_gap_tendsto_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.joint_threshold_tendsto_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.conditional_joint_failure_bounds": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.conditional_joint_gap_tendsto_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.positive_mass_conditioning_tendsto_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mean_minimum_pair_gap_lower": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mean_minimum_pair_gap_scale_lower": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000506.mean_minimum_pair_gap_tendsto_atTop": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "source_inputs_stable": true,
+    "dependency_count": 9,
+    "dependencies": {
+      "mathlib": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+      "plausible": "63045536fe95024e6c18fc7b48e03f506701c5bc",
+      "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "importGraph": "5c7542ed018c78194f1e2b903eaf6a792b74c03d",
+      "proofwidgets": "24b0d9dc081c5423f8eec7e866c441e5184f29d9",
+      "aesop": "e3cb2f741431ce31bf73549fb52316a57368b06f",
+      "Qq": "f46324995fca5f0483b742e4eb4daec7f4ee50d2",
+      "batteries": "fa08db58b30eb033edcdab331bba000827f9f785",
+      "Cli": "92564e5770e4d09f2d86dfbf8ada1e9c715b384c"
+    },
+    "nanoda_declarations": 60196,
+    "official_script_sha256": "5db45dddcb4d588bc27e7c7161fbca5cedaa3e73e1c40843d21f5a214323cd07",
+    "manifest_sha256": "0198cf55ceb75539e2f299223032121350941f60efd3901e0ba7289ce51f7e95",
+    "image_id": "sha256:518959d57c765e565143d14bf1e04cc3d7460d615d96f52a12cf4c61baa23d48",
+    "artifact_files_hashed": 448,
+    "original_verification_records": [
+      {
+        "status": "passed",
+        "original_proof_commit": "2aca2f16eba715d7ad672dfa017481b647c00063",
+        "verification_commit": "90e1298ec99973eefe607f9c21bfffa750804087",
+        "original_input_sha256": {
+          "projects/jsp-000506/AUDIT_TARGETS.json": "c51182f4c64dcd70a2dea1f3acac1be4525da2d251bba058a118d3dc48abe415",
+          "projects/jsp-000506/Audit.lean": "a592187035cea335ab5b2acdcd49f0a4dc34dbb84351dd97a46e0e89295d05dc",
+          "projects/jsp-000506/AuditComplete.lean": "140d5d30beb10ed204e0499ca4fa70582d08f8c3aca73f6438ddd692ccc62e3a",
+          "projects/jsp-000506/JSP000506.lean": "3f469ec816a59782342009e1ad0df1d47a4b2d82e429c8f77f00a4d08210263e",
+          "projects/jsp-000506/JSP000506Bridge.lean": "99a6d34f1d2cf9c531d97fd4a1f58a38bb947d0f85aae6d1313c8e396be0e5fc",
+          "projects/jsp-000506/JSP000506Complete.lean": "2316be5df3b2661727bda3b5ccc5d7a8781ee40e3810458ea55c82497c7995ff",
+          "projects/jsp-000506/ORIGINAL_PROOF_SHA256": "1a5a572814b24a60c6846ecf5955b70fe41b2352f833c713811f9cd5205611c8",
+          "projects/jsp-000506/UPSTREAM.json": "5b5e802dd837471c45e32433541029a5fd8fba8fde976c4ce8bcf26c5eb6e32a",
+          "projects/jsp-000506/UPSTREAM_LAKE_MANIFEST.json": "2d44c1423a5b32897c583a81237ccce01d4a8ab48d6a1d4ac85f7fc47c17e3d9",
+          "projects/jsp-000506/UPSTREAM_LICENSE": "f5b745ef98087f531e719ee8ca6a96809444573ecc7173c6fa68eaad39b3cc3f",
+          "projects/jsp-000506/lake-manifest.json": "82742dca940db0e0620da93dba119d13de1bafded48ae86cd17834eb52d61ba3",
+          "projects/jsp-000506/lakefile.lean": "8e2f383a32cf6e979aca68d26e6ec59f788a23b41f9c14fe4e8071265cc04786",
+          "projects/jsp-000506/lean-toolchain": "efac0b94923b2d8b6840cd35be9177ad0fc5ab2332f4f4311c98712cee92fdee",
+          "projects/jsp-000506/scripts/bootstrap.py": "f07c91154c767dc918045cfaa73a7a85aefa5324c2ac75ea2e1f5f25afaa7e81",
+          "projects/jsp-000506/scripts/verify.sh": "15521fd434c798b41a25746d54ba71841c4de3851236c876e25423496741596a",
+          "projects/jsp-000506/scripts/verify_complete.py": "de3ce10e02d8067c399b60ae766a0305480d7ffc986955110c5ca5ae77f4d866",
+          "projects/jsp-000506/scripts/verify_nanoda.sh": "3d65a24436bf986c56883c55e47a0bafcc8ee50847395b38e3fe9349122b38e8"
+        },
+        "supplement_input_sha256": {
+          "JSP000506Selection.lean": "d371504c930490b7ba657189fa7252f959735d01d9858ea1644d669ca17aca09",
+          "AuditSelection.lean": "9a0a76b748efc45f00be5e5d3bf0eda252e2b550d6a8d430aa97b67511911a41",
+          "SELECTION_TARGETS.json": "1a3d64c4509147536fd8e1e2879e37d6ba651608ed7783f7a3d0c649e6ab8b7c",
+          "scripts/verify_selection.py": "c8e92f3a9bbd7ce83592a3f6eabbf0ff32b3fc6fee0ce2a2f692f5610b09f5b9",
+          "scripts/verify_selection_nanoda.sh": "1fde9580ed5e28a01524615b659bd206c21c00a62ff6cd0fd74622b87dba2ef3"
+        },
+        "targets": [
+          "JSP000506.mass_nonneg",
+          "JSP000506.mass_univ",
+          "JSP000506.mass_mono",
+          "JSP000506.mass_compl",
+          "JSP000506.mass_union_le",
+          "JSP000506.mass_cover",
+          "JSP000506.mem_event",
+          "JSP000506.mass_event_compl",
+          "JSP000506.mass_anticorrelation",
+          "JSP000506.concentration_reduction",
+          "JSP000506.proper_n",
+          "JSP000506.proper_to_coProper",
+          "JSP000506.coProper_compl",
+          "JSP000506.chi_spec",
+          "JSP000506.zeta_spec",
+          "JSP000506.chi_mono",
+          "JSP000506.zeta_le_chi",
+          "JSP000506.zeta_compl",
+          "JSP000506.heckel_proposition3",
+          "JSP000506.mem_fromGraph",
+          "JSP000506.toGraph_adj_iff",
+          "JSP000506.fromGraph_toGraph",
+          "JSP000506.toGraph_fromGraph",
+          "JSP000506.proper_iff_colorable",
+          "JSP000506.coProper_iff_all_pairs",
+          "JSP000506.coProper_iff_coColorable",
+          "JSP000506.chi_eq_chromaticNumberNat",
+          "JSP000506.zeta_eq_cochromaticNumber",
+          "JSP000506.gap_cast_eq",
+          "JSP000506.card_graph_space",
+          "JSP000506.card_event_eq_graph_event",
+          "JSP000506.mass_event_eq_randomGraph",
+          "JSP000506.mass_le_one",
+          "JSP000506.gapProbability_nonneg",
+          "JSP000506.gapProbability_le_one",
+          "JSP000506.gapProbability_antitone",
+          "JSP000506.gapProbability_eq_standard",
+          "JSP000506.quantitative_gap_tendsto_one",
+          "JSP000506.gapScale_tendsto_atTop",
+          "JSP000506.threshold_tendsto_one",
+          "JSP000506.fixed_threshold_tendsto_one",
+          "JSP000506.small_gap_probability_tendsto_zero",
+          "JSP000506.eventually_not_heckel_premise",
+          "JSP000506.jsp_000506",
+          "JSP000506.complete_package",
+          "Erdos625.erdos625",
+          "Erdos625.erdos625Statement_iff_real",
+          "Erdos625.randomGraphMeasure_eq_uniformOn_univ",
+          "Erdos625.gapConstant_pos",
+          "JSP000506.intersection_probability_lower",
+          "JSP000506.conditional_failure_bounds",
+          "JSP000506.joint_gap_probability_bounds",
+          "JSP000506.joint_quantitative_gap_tendsto_one",
+          "JSP000506.joint_threshold_tendsto_one",
+          "JSP000506.conditional_joint_failure_bounds",
+          "JSP000506.conditional_joint_gap_tendsto_one",
+          "JSP000506.positive_mass_conditioning_tendsto_one",
+          "JSP000506.mean_minimum_pair_gap_lower",
+          "JSP000506.mean_minimum_pair_gap_scale_lower",
+          "JSP000506.mean_minimum_pair_gap_tendsto_atTop"
+        ],
+        "new_theorems": [
+          "JSP000506.intersection_probability_lower",
+          "JSP000506.conditional_failure_bounds",
+          "JSP000506.joint_gap_probability_bounds",
+          "JSP000506.joint_quantitative_gap_tendsto_one",
+          "JSP000506.joint_threshold_tendsto_one",
+          "JSP000506.conditional_joint_failure_bounds",
+          "JSP000506.conditional_joint_gap_tendsto_one",
+          "JSP000506.positive_mass_conditioning_tendsto_one",
+          "JSP000506.mean_minimum_pair_gap_lower",
+          "JSP000506.mean_minimum_pair_gap_scale_lower",
+          "JSP000506.mean_minimum_pair_gap_tendsto_atTop"
+        ],
+        "allowed_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "limits": "Contributor-run verification with cached pinned Mathlib; not independent human review."
+      },
+      {
+        "status": "passed",
+        "toolchain": "leanprover/lean4:v4.31.0",
+        "preparation_head": "90e1298ec99973eefe607f9c21bfffa750804087",
+        "modules_compiled": [
+          "JSP000506",
+          "Erdos625SelfContained",
+          "JSP000506Bridge",
+          "JSP000506Complete",
+          "AuditComplete"
+        ],
+        "upstream_embedded_source_modules": 480,
+        "axiom_reports": 49,
+        "allowed_axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "dependency_count": 9,
+        "kernel_prefixes": [
+          "Erdos625SelfContained",
+          "JSP000506",
+          "JSP000506Bridge",
+          "JSP000506Complete"
+        ],
+        "source_sha256": {
+          "JSP000506.lean": "3f469ec816a59782342009e1ad0df1d47a4b2d82e429c8f77f00a4d08210263e",
+          "Erdos625SelfContained.lean": "53060b9563330f20a5f2133ffdf8f56e5a41eae6d0f772487193d9c54133e837",
+          "JSP000506Bridge.lean": "99a6d34f1d2cf9c531d97fd4a1f58a38bb947d0f85aae6d1313c8e396be0e5fc",
+          "JSP000506Complete.lean": "2316be5df3b2661727bda3b5ccc5d7a8781ee40e3810458ea55c82497c7995ff",
+          "AuditComplete.lean": "140d5d30beb10ed204e0499ca4fa70582d08f8c3aca73f6438ddd692ccc62e3a"
+        },
+        "limits": "Contributor-run compilation and replay with cached pinned Mathlib. Local --resume fingerprints include transitive source dependencies. No independent human review."
+      }
+    ],
+    "original_kernel_logs": [
+      "fresh-extra-1/kernel-Erdos625SelfContained.log",
+      "fresh-extra-1/kernel-JSP000506.log",
+      "fresh-extra-1/kernel-JSP000506Bridge.log",
+      "fresh-extra-1/kernel-JSP000506Complete.log",
+      "fresh-project-evidence/selection-kernel.log"
+    ],
+    "original_axiom_outputs": [
+      {
+        "log": "fresh-project-evidence/axioms.log",
+        "source": "AuditSelection.lean",
+        "targets": 60
+      },
+      {
+        "log": "fresh-extra-1/axioms.log",
+        "source": "AuditComplete.lean",
+        "targets": 49
+      }
+    ],
+    "negative_controls": [
+      {
+        "log": "fresh-project-evidence/negative-control.log",
+        "expected_exit": "nonzero",
+        "exit_evidence": "semantic Lean error; nonzero exit enforced by successful original verifier",
+        "separate_exit_code_recorded": false
+      },
+      {
+        "log": "fresh-extra-1/negative-control.log",
+        "expected_exit": "nonzero",
+        "exit_evidence": "semantic Lean error; nonzero exit enforced by successful original verifier",
+        "separate_exit_code_recorded": false
+      }
+    ],
+    "strict_bridge_precheck": "validated",
+    "bridge_source_sha256": "f4c364b751dd76c086418a21a5f50ad2a1b653f7ac550d26470326b8adcd37ed",
+    "manual_equivalent_builds": 19,
+    "stages": {
+      "versions": {
+        "argv": [
+          "bash",
+          "-c",
+          "set -e; lean --version; lake --version; rustc --version; cargo --version; id; uname -a"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 0.16417956352233887
+      },
+      "build-exporter": {
+        "argv": [
+          "lake",
+          "build"
+        ],
+        "cwd": "/out/tools/exporter",
+        "exit_code": 0,
+        "seconds": 5.77898383140564
+      },
+      "build-checker": {
+        "argv": [
+          "cargo",
+          "build",
+          "--release",
+          "--locked"
+        ],
+        "cwd": "/out/tools/checker",
+        "exit_code": 0,
+        "seconds": 12.654514074325562
+      },
+      "original-clean-verifier": {
+        "argv": [
+          "python3",
+          "scripts/verify_selection.py"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 751.0521333217621
+      },
+      "official-preflight": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "preflight",
+          "/out/targets.json",
+          "--out",
+          "/out/preflight"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 0.11384129524230957
+      },
+      "official-audit": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "run",
+          "/out/targets.json",
+          "--out",
+          "/out/audit",
+          "--lake",
+          "/out/manual-lake-adapter",
+          "--timeout",
+          "2400"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 1191.9645426273346
+      },
+      "bridge-kernel": {
+        "argv": [
+          "lake",
+          "env",
+          "leanchecker",
+          "JSP000506.VerificationSelection"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 8.177420616149902
+      },
+      "independent-nanoda": {
+        "argv": [
+          "/out/tools/checker/target/release/nanoda_bin",
+          "/out/nanoda-config.json"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 29.980717420578003
+      },
+      "dependencies": {
+        "argv": [
+          "python3",
+          "-c",
+          "import json,subprocess;from pathlib import Path;ps=json.loads(Path('lake-manifest.json').read_text())['packages'];a={p['name']:subprocess.check_output(['git','-C','.lake/packages/'+p['name'],'rev-parse','HEAD'],text=True).strip() for p in ps};print(json.dumps(a,indent=2));assert all(a[p['name']]==p['rev'] for p in ps)"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 0.03176736831665039
+      },
+      "final-status": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain",
+          "--untracked-files=all"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 0.0034863948822021484
+      },
+      "compress-export": {
+        "argv": [
+          "gzip",
+          "-n",
+          "/out/export.ndjson"
+        ],
+        "cwd": "/out",
+        "exit_code": 0,
+        "seconds": 8.026177883148193
+      },
+      "prepare-dependencies-0": {
+        "argv": [
+          "lake",
+          "exe",
+          "cache",
+          "get",
+          "Mathlib"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 92.33014035224915
+      },
+      "prepare-dependencies-1": {
+        "argv": [
+          "lake",
+          "build",
+          "Mathlib"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 9.97938323020935
+      },
+      "bootstrap": {
+        "argv": [
+          "python3",
+          "scripts/bootstrap.py"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 0.4144618511199951
+      },
+      "bridge-precheck": {
+        "argv": [
+          "lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "-j1",
+          "-M12000",
+          "-o",
+          "/work/projects/jsp-000506/.lake/build/lib/lean/JSP000506/VerificationSelection.olean",
+          "/work/projects/jsp-000506/JSP000506/VerificationSelection.lean"
+        ],
+        "cwd": "/work/projects/jsp-000506",
+        "exit_code": 0,
+        "seconds": 4.4226155281066895
+      }
+    }
+  }
+}

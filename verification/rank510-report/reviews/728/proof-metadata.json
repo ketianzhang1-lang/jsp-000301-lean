@@ -1,0 +1,158 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "91bcbc0d5baa2fbac6e91ec3fc836912cf896d7fbf3daed5edac553edd8f62a6",
+  "original_bytes": 27253,
+  "data": {
+    "0": {
+      "name": "jsp-000728-lower-bound-kz",
+      "commit": {
+        "sha": "22212651d30af02ad36f01a206984d31b0ec75c6",
+        "commit": {
+          "author": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-18T02:37:44Z"
+          },
+          "committer": {
+            "name": "ketianzhang1-lang",
+            "date": "2026-09-18T02:37:44Z"
+          },
+          "message": "Retry transient source download failures without weakening checksum verification",
+          "tree": {
+            "sha": "6745fc44e54a011e62af425436b314aba36d24dc",
+            "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/git/trees/6745fc44e54a011e62af425436b314aba36d24dc"
+          },
+          "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/git/commits/22212651d30af02ad36f01a206984d31b0ec75c6",
+          "comment_count": 0,
+          "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "signature": null,
+            "payload": null,
+            "verified_at": null
+          }
+        },
+        "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/commits/22212651d30af02ad36f01a206984d31b0ec75c6",
+        "html_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/commit/22212651d30af02ad36f01a206984d31b0ec75c6",
+        "comments_url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/commits/22212651d30af02ad36f01a206984d31b0ec75c6/comments",
+        "author": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "committer": {
+          "login": "ketianzhang1-lang",
+          "html_url": "https://github.com/ketianzhang1-lang"
+        },
+        "parents": [
+          {
+            "sha": "4c90c260a28cdb4b8e287767ccdedf26751e60f4",
+            "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/commits/4c90c260a28cdb4b8e287767ccdedf26751e60f4",
+            "html_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/commit/4c90c260a28cdb4b8e287767ccdedf26751e60f4"
+          }
+        ]
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/branches/jsp-000728-lower-bound-kz/protection"
+    },
+    "1": {
+      "sha": "22212651d30af02ad36f01a206984d31b0ec75c6",
+      "commit": {
+        "author": {
+          "name": "ketianzhang1-lang",
+          "date": "2026-09-18T02:37:44Z"
+        },
+        "committer": {
+          "name": "ketianzhang1-lang",
+          "date": "2026-09-18T02:37:44Z"
+        },
+        "message": "Retry transient source download failures without weakening checksum verification",
+        "tree": {
+          "sha": "6745fc44e54a011e62af425436b314aba36d24dc",
+          "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/git/trees/6745fc44e54a011e62af425436b314aba36d24dc"
+        },
+        "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/git/commits/22212651d30af02ad36f01a206984d31b0ec75c6",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/commits/22212651d30af02ad36f01a206984d31b0ec75c6",
+      "html_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/commit/22212651d30af02ad36f01a206984d31b0ec75c6",
+      "comments_url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/commits/22212651d30af02ad36f01a206984d31b0ec75c6/comments",
+      "author": {
+        "login": "ketianzhang1-lang",
+        "html_url": "https://github.com/ketianzhang1-lang"
+      },
+      "committer": {
+        "login": "ketianzhang1-lang",
+        "html_url": "https://github.com/ketianzhang1-lang"
+      },
+      "parents": [
+        {
+          "sha": "4c90c260a28cdb4b8e287767ccdedf26751e60f4",
+          "url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/commits/4c90c260a28cdb4b8e287767ccdedf26751e60f4",
+          "html_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/commit/4c90c260a28cdb4b8e287767ccdedf26751e60f4"
+        }
+      ],
+      "stats": {
+        "total": 22,
+        "additions": 20,
+        "deletions": 2
+      },
+      "files": [
+        {
+          "sha": "036ef0ed4fa1f75ce08ad0c4aacfc68de1aeb66f",
+          "filename": "projects/jsp-000728/scripts/bootstrap.py",
+          "status": "modified",
+          "additions": 19,
+          "deletions": 1,
+          "changes": 20,
+          "blob_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/22212651d30af02ad36f01a206984d31b0ec75c6/projects%2Fjsp-000728%2Fscripts%2Fbootstrap.py",
+          "raw_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/raw/22212651d30af02ad36f01a206984d31b0ec75c6/projects%2Fjsp-000728%2Fscripts%2Fbootstrap.py",
+          "contents_url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/contents/projects%2Fjsp-000728%2Fscripts%2Fbootstrap.py?ref=22212651d30af02ad36f01a206984d31b0ec75c6",
+          "patch": {
+            "text_omitted": true,
+            "reason": "full text retained only in the private historical evidence",
+            "utf8_bytes": 1456,
+            "sha256": "5b89db3f18187ed6f56f08a8e0102a46f8fb405029c3d2586a52db109b7817ad"
+          }
+        },
+        {
+          "sha": "5665fa23c96b07a613c3708938276ddaed249f67",
+          "filename": "projects/jsp-000728/verification/SOURCE_SHA256SUMS",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "blob_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/blob/22212651d30af02ad36f01a206984d31b0ec75c6/projects%2Fjsp-000728%2Fverification%2FSOURCE_SHA256SUMS",
+          "raw_url": "https://github.com/ketianzhang1-lang/jsp-000301-lean/raw/22212651d30af02ad36f01a206984d31b0ec75c6/projects%2Fjsp-000728%2Fverification%2FSOURCE_SHA256SUMS",
+          "contents_url": "https://api.github.com/repos/ketianzhang1-lang/jsp-000301-lean/contents/projects%2Fjsp-000728%2Fverification%2FSOURCE_SHA256SUMS?ref=22212651d30af02ad36f01a206984d31b0ec75c6",
+          "patch": {
+            "text_omitted": true,
+            "reason": "full text retained only in the private historical evidence",
+            "utf8_bytes": 954,
+            "sha256": "64fb9f966dcf9beb2eee114a504b712aea8e05921f660bc2c090370d433c61b0"
+          }
+        }
+      ]
+    },
+    "2": {
+      "text_omitted": true,
+      "reason": "full text retained only in the private historical evidence",
+      "utf8_bytes": 14617,
+      "sha256": "6a6c15335c843dca680ae17cc26f2bc54afe27b9446289759d5e9fa1729bd855"
+    },
+    "fetched_at": "2026-09-19T23:23:40.529Z"
+  }
+}

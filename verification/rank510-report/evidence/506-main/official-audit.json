@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "python3",
+    "/harness/audit.py",
+    "run",
+    "/out/targets.json",
+    "--out",
+    "/out/audit",
+    "--lake",
+    "/opt/elan/toolchains/leanprover--lean4---v4.31.0/bin/lake",
+    "--timeout",
+    "2400"
+  ],
+  "cwd": "/work/projects/jsp-000506",
+  "exit_code": 0,
+  "seconds": 1688.6079652309418
+}

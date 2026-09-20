@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "-j1",
+    "-M12000",
+    "-o",
+    "/work/projects/jsp-000506/.lake/build/lib/lean/JSP000506/VerificationSelection.olean",
+    "/work/projects/jsp-000506/JSP000506/VerificationSelection.lean"
+  ],
+  "cwd": "/work/projects/jsp-000506",
+  "exit_code": 0,
+  "seconds": 4.4226155281066895
+}

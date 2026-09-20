@@ -1,0 +1,18 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "e4455b2fd3a564bcc887195435dd43525d27509b0adf85852c0b62a42f150be8",
+  "original_bytes": 5903,
+  "data": {
+    "retrieved_at": "2026-09-19T23:22:02.418Z",
+    "base_entry": "<a id=\"JSP-000585\"></a>\n\n## JSP-000585 · How does a graph's chromatic number relate to the order of its largest complete-graph subdivision?\n\n| Field | Content |\n| --- | --- |\n| Date proposed | No later than 1981 (bibliographic evidence) |\n| Mathematical area | Graph theory |\n| Problem description | How does a graph's chromatic number relate to the order of its largest complete-graph subdivision? |\n| Current status | Solved |\n| Lean proof | No |\n| Eligible to claim | No |\n| Historical bounty |  |\n| Elapsed years | About 32 years (since 1981) |\n| Publication details | &#91;Di52&#93; [A property of $4$-chromatic graphs and some remarks on critical graphs](https://doi.org/10.1112/jlms/s1-27.1.85) — J. London Math. Soc. (1952), 85-92.<br>&#91;Ca74&#93; Subgraphs of graphs. I — Discrete Math. (1974), 225-233.<br>&#91;ErFa81&#93; On the conjecture of Hajós — Combinatorica (1981), 141-143.<br>&#91;FLS13&#93; Chromatic number, clique subdivisions, and the conjectures of Hajós and Erdős-Fajtlowicz ([bibliographic record](https://www.erdosproblems.com/bibs/FLS13)) — Combinatorica (2013), 181-197. |\n| Public review | Unverified: no public recognition specifically identifying this result was found (such as an award citation or authoritative public confirmation). |\n\n",
+    "head_entry": {
+      "text_omitted": true,
+      "reason": "full text retained only in the private historical evidence",
+      "utf8_bytes": 4296,
+      "sha256": "070a1e2bfe789bf4151e07aaad5165393d6ffac9a0921ac9c1d91ef97f72308d"
+    },
+    "proof_commit": "9661ef0f170e750b1ac2153b9017bad86044680c",
+    "proof_commit_tree": "e4c6bf015d38bf5b38b877438654428151d98138",
+    "proof_branch_tip": "963a9e6b283b83d3265ff20fbb748cfc9f693d0d"
+  }
+}

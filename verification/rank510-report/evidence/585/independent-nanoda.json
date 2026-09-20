@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "/out/tools/checker/target/release/nanoda_bin",
+    "/out/nanoda-config.json"
+  ],
+  "cwd": "/work/projects/catlin-research",
+  "exit_code": 0,
+  "seconds": 26.573041439056396
+}

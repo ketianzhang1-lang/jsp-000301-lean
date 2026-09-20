@@ -1,0 +1,7 @@
+{
+  "proof_commit": "bf99214b3104d89c628abb9c824a56d89a6bd6fe",
+  "mechanical_checks": "completed",
+  "semantic_verdict": "requires separate review",
+  "network_during_verification": "disabled",
+  "targets": 9
+}

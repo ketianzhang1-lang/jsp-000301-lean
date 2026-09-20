@@ -1,0 +1,116 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "fca11d430b48334529a05da8686564f4ce5f79cd4d3f931128ae5b86a6bf7f4e",
+  "original_bytes": 245634,
+  "data": {
+    "0": {
+      "id": 4570911052,
+      "number": 1326,
+      "title": "JSP-000728: record existing Lean formalization (plby/lean-proofs)",
+      "html_url": "https://github.com/TheJustinSunPrize/awards/pull/1326",
+      "url": "https://api.github.com/repos/TheJustinSunPrize/awards/pulls/1326",
+      "state": "open",
+      "created_at": "2026-09-18T16:46:00Z",
+      "updated_at": "2026-09-18T19:01:05Z",
+      "closed_at": null,
+      "merged_at": null,
+      "merged": false,
+      "merge_commit_sha": "cf2f83d996e982c01e71189d067fae3e192f16a4",
+      "changed_files": 1,
+      "commits": 1,
+      "head": {
+        "label": "xinkuangsi-spec:jsp-000728-record",
+        "ref": "jsp-000728-record",
+        "sha": "8b01fc9694d81b7eceaab07c5fe9c753bc19f87f",
+        "user": {
+          "login": "xinkuangsi-spec",
+          "html_url": "https://github.com/xinkuangsi-spec"
+        },
+        "repo": {
+          "full_name": "xinkuangsi-spec/awards",
+          "html_url": "https://github.com/xinkuangsi-spec/awards",
+          "default_branch": "main",
+          "owner": {
+            "login": "xinkuangsi-spec",
+            "html_url": "https://github.com/xinkuangsi-spec"
+          },
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null
+          }
+        }
+      },
+      "base": {
+        "label": "TheJustinSunPrize:main",
+        "ref": "main",
+        "sha": "ff33abd13163e789790eb1014e55f57c05f94432",
+        "user": {
+          "login": "TheJustinSunPrize",
+          "html_url": "https://github.com/TheJustinSunPrize"
+        },
+        "repo": {
+          "full_name": "TheJustinSunPrize/awards",
+          "html_url": "https://github.com/TheJustinSunPrize/awards",
+          "default_branch": "main",
+          "owner": {
+            "login": "TheJustinSunPrize",
+            "html_url": "https://github.com/TheJustinSunPrize"
+          },
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null
+          }
+        }
+      },
+      "user": {
+        "login": "xinkuangsi-spec",
+        "html_url": "https://github.com/xinkuangsi-spec"
+      },
+      "body": {
+        "text_omitted": true,
+        "reason": "full text retained only in the private historical evidence",
+        "utf8_bytes": 1650,
+        "sha256": "61ae227ebe2b296bb527ed14aa704ea627afdbf1996d224ee5da5a325ff37743"
+      }
+    },
+    "1": {
+      "id": 5473014752,
+      "number": 24,
+      "title": "[Correction] Batch 4: register reproduced existing Lean proof evidence",
+      "html_url": "https://github.com/TheJustinSunPrize/awards/issues/24",
+      "url": "https://api.github.com/repos/TheJustinSunPrize/awards/issues/24",
+      "state": "open",
+      "state_reason": null,
+      "created_at": "2026-09-16T09:59:41Z",
+      "updated_at": "2026-09-16T16:42:13Z",
+      "closed_at": null,
+      "user": {
+        "login": "zifanersuotang",
+        "html_url": "https://github.com/zifanersuotang"
+      },
+      "body": {
+        "text_omitted": true,
+        "reason": "full text retained only in the private historical evidence",
+        "utf8_bytes": 50424,
+        "sha256": "5f3c28866f0184529385932b10b8edb190331f4fa904121f000e21dc3a183635"
+      }
+    },
+    "2": {
+      "text_omitted": true,
+      "reason": "full text retained only in the private historical evidence",
+      "utf8_bytes": 82631,
+      "sha256": "8c2ee03417e04957f859577065e1a2021b616d4566d9b0506a8fac74f9cbf85b"
+    },
+    "3": {
+      "text_omitted": true,
+      "reason": "full text retained only in the private historical evidence",
+      "utf8_bytes": 85618,
+      "sha256": "573bdc217f49c95ddfe008167d33badcb7d0a3ac98835fd68fde5fdf3168c4a8"
+    },
+    "fetched_at": "2026-09-19T23:19:31.768Z"
+  }
+}

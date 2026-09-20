@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "git",
+    "-C",
+    "/out/tools/exporter",
+    "checkout",
+    "--detach",
+    "6cea97789dc088ea47fcea15692db85685aedac5"
+  ],
+  "cwd": "/out",
+  "exit_code": 0,
+  "seconds": 0.007853031158447266
+}

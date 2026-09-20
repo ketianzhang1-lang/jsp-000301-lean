@@ -1,0 +1,10 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "3aa8fe028d5623f27b7c9d45a8e7d31fda27cd7bf0b50b53269b658ae4c445d1",
+  "original_bytes": 123,
+  "data": {
+    "warning": "Text scan only; actual transitive dependency audit remains mandatory",
+    "findings": [],
+    "sources": 24
+  }
+}

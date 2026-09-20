@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "git",
+    "restore",
+    "--",
+    "evidence/local-axioms.log",
+    "evidence/local-build.log"
+  ],
+  "cwd": "/work/projects/catlin-research",
+  "exit_code": 0,
+  "seconds": 0.003532886505126953
+}
