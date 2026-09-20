@@ -11,18 +11,25 @@ noncomputable def literalExtremal (F : Finset FiniteGraph) (n : ℕ) : ℕ :=
     ∀ H ∈ F, H.graph.Free G).sup (fun G => G.edgeFinset.card)
 
 theorem extremal_formula (F : Finset FiniteGraph) (n : ℕ) :
-    familyExtremal F n = literalExtremal F n := rfl
+    familyExtremal F n = literalExtremal F n := by
+  classical
+  unfold familyExtremal literalExtremal
+  congr 1
+  ext G
+  simp [FamilyFree]
 
 theorem singleton_literal (H : FiniteGraph) (n : ℕ) :
-    literalExtremal {H} n = SimpleGraph.extremalNumber n H.graph :=
-  JSP000465.familyExtremal_singleton H n
+    literalExtremal {H} n = SimpleGraph.extremalNumber n H.graph := by
+  rw [← extremal_formula]
+  exact JSP000465.familyExtremal_singleton H n
 
 /-- Every order, including zero, has a real admissible maximizing host. -/
 theorem extremal_attained_literal (n : ℕ) :
     ∃ G : SimpleGraph (Fin n),
       (∀ H ∈ proposedFamily, H.graph.Free G) ∧
-      G.edgeFinset.card = literalExtremal proposedFamily n :=
-  JSP000465.familyExtremal_attained n
+      G.edgeFinset.card = literalExtremal proposedFamily n := by
+  simpa only [FamilyFree, extremal_formula] using
+    JSP000465.familyExtremal_attained n
 
 /-- The eventual threshold is chosen after the constant, and before the host
 order and forbidden member. This is the simultaneous all-orders statement. -/
@@ -35,7 +42,7 @@ theorem connected_cyclic_counterexample_literal :
   obtain ⟨F, hne, hshape, hsep⟩ := JSP000465.connected_bipartite_counterexample
   refine ⟨F, hne, hshape, ?_⟩
   intro K hK
-  exact Filter.eventually_atTop.mp (hsep K hK)
+  simpa only [extremal_formula] using Filter.eventually_atTop.mp (hsep K hK)
 
 /-- The stronger corrected compactness conjecture, which excludes forests,
 is also refuted; the witness has connected bipartite cyclic members. -/
@@ -45,8 +52,9 @@ theorem corrected_compactness_false_literal :
       ∃ H ∈ F, ∃ K : ℝ, 0 < K ∧
         ∀ᶠ n : ℕ in atTop,
           (SimpleGraph.extremalNumber n H.graph : ℝ) ≤
-            K * (literalExtremal F n : ℝ)) :=
-  Erdos180.not_erdos_180_source
+            K * (literalExtremal F n : ℝ)) := by
+  simpa only [CompactnessConjectureStatement, IsCyclicFamily, IsCompactFamily,
+    extremal_formula] using Erdos180.not_erdos_180_source
 
 /-- The catalog's weaker bipartite-member formulation is refuted as well. -/
 theorem bipartite_compactness_false_literal :
@@ -55,7 +63,7 @@ theorem bipartite_compactness_false_literal :
       ∃ H ∈ F, ∃ K : ℝ, 0 < K ∧
         ∀ᶠ n : ℕ in atTop,
           (SimpleGraph.extremalNumber n H.graph : ℝ) ≤
-            K * (literalExtremal F n : ℝ)) :=
-  JSP000465.not_bipartite_compactness
+            K * (literalExtremal F n : ℝ)) := by
+  simpa only [extremal_formula] using JSP000465.not_bipartite_compactness
 
 end Verify465

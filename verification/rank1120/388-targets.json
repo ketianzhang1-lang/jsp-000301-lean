@@ -15,10 +15,12 @@
           "id": "original-existence",
           "description": "There exists an integer polynomial of degree at least two and a complement set of unrestricted integers with a unique pair of summand values for every integer.",
           "targets": [
-            "t018",
-            "t019",
+            "t009",
             "t014",
-            "t016"
+            "t015",
+            "t016",
+            "t018",
+            "t019"
           ],
           "coverage": "pending"
         },
@@ -26,9 +28,9 @@
           "id": "actual-sixth-power",
           "description": "The complete affirmative witness is the actual integer polynomial X^6, with the full unconditional finite-avoidance, geometry and counting chain.",
           "targets": [
-            "t020",
             "t011",
-            "t017"
+            "t017",
+            "t020"
           ],
           "coverage": "pending"
         },
@@ -37,8 +39,9 @@
           "description": "For every integer constant c, the translated sixth-power polynomial has an exact complement.",
           "targets": [
             "t010",
-            "t021",
-            "t013"
+            "t012",
+            "t013",
+            "t021"
           ],
           "coverage": "pending"
         },
@@ -46,10 +49,17 @@
           "id": "quadratic-obstruction",
           "description": "For every a,b,c with a nonzero and a dividing b, no exact complement exists; b=0 and either sign of a are included.",
           "targets": [
-            "t022",
+            "t000",
+            "t001",
+            "t002",
+            "t003",
+            "t004",
+            "t005",
             "t006",
+            "t007",
             "t008",
-            "t007"
+            "t015",
+            "t022"
           ],
           "coverage": "pending"
         }

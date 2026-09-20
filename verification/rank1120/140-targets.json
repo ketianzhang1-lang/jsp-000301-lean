@@ -15,10 +15,15 @@
           "id": "unordered-edges",
           "description": "Colours assigned to genuine unordered edges of the complete simple graph, with at least five distinct colours on every four-vertex embedding.",
           "targets": [
-            "t046",
+            "t022",
+            "t023",
             "t024",
+            "t025",
             "t026",
-            "t029"
+            "t027",
+            "t028",
+            "t029",
+            "t046"
           ],
           "coverage": "pending"
         },
@@ -26,6 +31,12 @@
           "id": "attained-minimum",
           "description": "The standard finite palette minimum exists and is attained for all natural n; pair-model equivalence is restricted correctly to n>=2.",
           "targets": [
+            "t030",
+            "t031",
+            "t032",
+            "t033",
+            "t034",
+            "t035",
             "t047",
             "t048",
             "t049",
@@ -38,10 +49,12 @@
           "id": "asymptotic-original",
           "description": "The normalized minimum f(n,4,5)/n tends to 5/6 as n tends through all natural numbers to infinity.",
           "targets": [
-            "t052",
-            "t044",
             "t038",
-            "t039"
+            "t039",
+            "t043",
+            "t044",
+            "t045",
+            "t052"
           ],
           "coverage": "pending"
         },
@@ -49,8 +62,8 @@
           "id": "eventual-construction",
           "description": "For every real epsilon>0, actual admissible colourings exist for every sufficiently large n with palette below (5/6+epsilon)n.",
           "targets": [
-            "t054",
-            "t040"
+            "t040",
+            "t054"
           ],
           "coverage": "pending"
         },
@@ -58,9 +71,33 @@
           "id": "finite-lower",
           "description": "For all n>=4 the stronger strict finite bound 5(n-1)<6f(n,4,5) and integer rounding are proved.",
           "targets": [
-            "t053",
+            "t000",
+            "t001",
+            "t002",
+            "t003",
+            "t004",
+            "t005",
+            "t006",
+            "t007",
+            "t008",
+            "t009",
+            "t010",
+            "t011",
+            "t012",
+            "t013",
+            "t014",
+            "t015",
+            "t016",
+            "t017",
             "t018",
-            "t042"
+            "t019",
+            "t020",
+            "t021",
+            "t036",
+            "t037",
+            "t041",
+            "t042",
+            "t053"
           ],
           "coverage": "pending"
         }
