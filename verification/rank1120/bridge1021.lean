@@ -46,8 +46,9 @@ theorem fifteen_all_relations (R : Fin 15 → Fin 15 → Bool)
   rw [encode15_arc R hloop hreverse] at h
   exact h
 
--- Match the upstream definition's classical decision procedure. Different
--- synthesized DecidablePred instances need not reduce definitionally alike.
+-- Classical decidability is used for the literal universal predicate.
+-- Equality of the two maxima is proved extensionally below, without requiring
+-- their synthesized DecidablePred instances to reduce definitionally alike.
 attribute [local instance] Classical.propDecidable
 
 /-- The extremal function is the largest universally guaranteed transitive order, bounded by n. -/
@@ -56,7 +57,15 @@ noncomputable def extremal (n : ℕ) : ℕ :=
     ∃ v : Fin k → Fin n, Function.Injective v ∧
       ∀ i j : Fin k, i < j → T.arc (v i) (v j) = true) n
 
-theorem literal_extremal (n : ℕ) : extremal n = Erdos1216.f n := rfl
+theorem literal_extremal (n : ℕ) : extremal n = Erdos1216.f n := by
+  unfold extremal Erdos1216.f
+  apply Nat.le_antisymm
+  · refine Nat.findGreatest_mono_left ?_ n
+    intro k hk
+    exact ⟨hk.1, fun T => hk.2 T⟩
+  · refine Nat.findGreatest_mono_left ?_ n
+    intro k hk
+    exact ⟨hk.1, fun T => hk.2 T⟩
 
 /-- The historical n=15 question has a strict negative answer. No exact value at 15 is asserted. -/
 theorem counterexample_at_fifteen : Nat.log2 15 + 1 < extremal 15 := by
