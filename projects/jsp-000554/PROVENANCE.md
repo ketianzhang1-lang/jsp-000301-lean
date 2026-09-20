@@ -35,8 +35,17 @@ The complete density proof is an imported dependency, not our original proof.
 `UPSTREAM.json` records original URLs, Git blob hashes, SHA-256 hashes,
 all compatibility changes and the hashes of the resulting source files.
 `scripts/bootstrap.py` verifies these hashes before using the imported source.
-`UPSTREAM-LICENSE` preserves the distributor's license notice; `LICENSE`
-contains the Apache 2.0 license. Exporter and NaNoda authors retain their licenses.
+`UPSTREAM-LICENSE` preserves the distributor's license notice. The accompanying
+[APACHE-2.0.txt](APACHE-2.0.txt) supplies the Apache 2.0 license for the source files
+that carry that license. The repository-root MIT license does not replace any
+third-party or per-file Apache license. Original copyright, author and modification
+notices remain in the source. Exporter and NaNoda authors retain their licenses.
+
+This documentation correction adds the previously missing local Apache license
+copy and fixes the earlier inaccurate reference to a project `LICENSE` file.
+It does not alter the selected proof commit
+`21fcf006fd68b0bead9f979b704c92032f05cba8`, proof statements, dependency revisions,
+or verification scripts.
 
 We request assessment of our independently prepared finite classification,
 statement correspondence, integration and verification. No global first
