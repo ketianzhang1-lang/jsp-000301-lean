@@ -64,8 +64,8 @@ theorem explicit_quantitative :
 theorem explicit_scale_diverges :
     Tendsto (fun n : ℕ => ((Real.log 2)^2 / 4 * Real.log (200 / 153 : ℝ)) *
       (n : ℝ) / (Real.log (n : ℝ))^3) atTop atTop := by
-  simpa only [Erdos625.gapScale, Erdos625.gapConstant] using
-    JSP000506.gapScale_tendsto_atTop
+  change Tendsto Erdos625.gapScale atTop atTop
+  exact JSP000506.gapScale_tendsto_atTop
 
 end
 end Verify506
