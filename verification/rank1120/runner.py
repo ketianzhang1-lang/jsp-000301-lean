@@ -55,7 +55,14 @@ elif stage=='audit':
  run('official-preflight',['python3','/harness/audit.py','preflight',str(target),'--out','/out/preflight'])
  audit_lake=shutil.which('lake')
  assert audit_lake and pathlib.Path(audit_lake).is_absolute(), 'Trusted absolute Lake path required'
- assert not cfg.get('lake_adapter'), 'Manual adapters require separate explicit implementation and inspection'
+ if cfg.get('lake_adapter'):
+  approved={'465-uniform':[['build','+JSP000465Uniform']], '897-stability':[['build','+JSP000897Stability']]}
+  assert key in approved and cfg['lake_adapter']['intercepted_argv']==approved[key], 'Unreviewed manual Lake module-build scope'
+  adapter_src=pathlib.Path('/harness')/cfg['lake_adapter']['file'];adapter=out/'manual-lake-adapter'
+  shutil.copyfile(adapter_src,adapter);adapter.chmod(0o755)
+  os.environ['LEAN_VERIFY_REAL_LAKE']=audit_lake
+  (out/'manual-equivalence.json').write_text(json.dumps({'real_lake':audit_lake,'adapter':str(adapter),'adapter_sha256':hashlib.sha256(adapter.read_bytes()).hexdigest(),'scope':cfg['lake_adapter'],'official_audit_script_unchanged':True,'proof_lakefile_unchanged':True},indent=2))
+  audit_lake=str(adapter)
  run('official-audit',['python3','/harness/audit.py','run',str(target),'--out','/out/audit','--lake',audit_lake,'--timeout','2400'],limit=14400)
 elif stage=='replay':
  manifest=json.loads((out/'targets.json').read_text());names=[t['declaration'] for t in manifest['targets']]

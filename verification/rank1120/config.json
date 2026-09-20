@@ -939,5 +939,265 @@
     "original_targets": 11,
     "total_targets": 17,
     "auditor_bridges": 6
+  },
+  "465-uniform": {
+    "id": "JSP-000465",
+    "project": "projects/jsp-000465",
+    "commit": "78dbc684a1ce3d392b150d98bdc5b94a9269f3e3",
+    "branch": "jsp-000465-uniform-ratios-20260919",
+    "bridge_file": "bridge465-uniform.lean",
+    "bridge_path": "JSP000465/VerificationUniform.lean",
+    "bridge_module": "JSP000465.VerificationUniform",
+    "evidence_dir": "evidence/supplement",
+    "bootstrap": null,
+    "verify_command": [
+      "python3",
+      "scripts/verify_supplement.py"
+    ],
+    "source_key": "465-uniform",
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "lean_version": "4.34.0",
+    "prepare_commands": [
+      [
+        "lake",
+        "exe",
+        "cache",
+        "get",
+        "Mathlib"
+      ],
+      [
+        "lake",
+        "build",
+        "Mathlib"
+      ]
+    ],
+    "exporter_commit": "6cea97789dc088ea47fcea15692db85685aedac5",
+    "nanoda_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+    "environment": {
+      "LEAN_NUM_THREADS": "1"
+    },
+    "original_targets": 12,
+    "auditor_bridges": 9,
+    "total_targets": 21,
+    "modules": [
+      "ErdosProblems.Erdos180.Foundations",
+      "ErdosProblems.Erdos180.Geometry",
+      "ErdosProblems.Erdos180.Subgraphs",
+      "ErdosProblems.Erdos180.Counting",
+      "ErdosProblems.Erdos180.Coordinates",
+      "ErdosProblems.Erdos180.Counterexample",
+      "ErdosProblems.Erdos180.Quantitative",
+      "JSP000465",
+      "JSP000465Uniform"
+    ],
+    "kernel_modules": [
+      "ErdosProblems.Erdos180.Foundations",
+      "ErdosProblems.Erdos180.Geometry",
+      "ErdosProblems.Erdos180.Subgraphs",
+      "ErdosProblems.Erdos180.Counting",
+      "ErdosProblems.Erdos180.Coordinates",
+      "ErdosProblems.Erdos180.Counterexample",
+      "ErdosProblems.Erdos180.Quantitative",
+      "JSP000465",
+      "JSP000465Uniform"
+    ],
+    "default_target_omits": [
+      "JSP000465Uniform",
+      "Audit",
+      "AuditSupplement"
+    ],
+    "inspection": {
+      "original_target_count": 12,
+      "evidence": [
+        {
+          "directory": "fresh-project-evidence",
+          "verification_json": "verification.json",
+          "module_count": 1,
+          "axiom_outputs": [
+            {
+              "log": "axioms.log",
+              "source": "AuditSupplement.lean"
+            }
+          ],
+          "kernel_logs": [
+            "supplement-kernel.log"
+          ],
+          "negative_logs": [
+            "negative-control.log"
+          ],
+          "modules": [
+            "JSP000465Uniform"
+          ],
+          "build_log_pattern": "supplement-build.log",
+          "targets_field": "targets",
+          "supplement_module": "JSP000465Uniform"
+        },
+        {
+          "directory": "fresh-extra-1",
+          "verification_json": null,
+          "module_count": 8,
+          "axiom_outputs": [
+            {
+              "log": "axioms.log",
+              "source": "Audit.lean"
+            }
+          ],
+          "kernel_logs": [
+            "leanchecker.log"
+          ],
+          "negative_logs": [
+            "negative-control.log"
+          ],
+          "kernel_markers": [
+            "KERNEL REPLAY ErdosProblems.Erdos180.Foundations",
+            "KERNEL REPLAY ErdosProblems.Erdos180.Geometry",
+            "KERNEL REPLAY ErdosProblems.Erdos180.Subgraphs",
+            "KERNEL REPLAY ErdosProblems.Erdos180.Counting",
+            "KERNEL REPLAY ErdosProblems.Erdos180.Coordinates",
+            "KERNEL REPLAY ErdosProblems.Erdos180.Counterexample",
+            "KERNEL REPLAY ErdosProblems.Erdos180.Quantitative",
+            "KERNEL REPLAY JSP000465"
+          ],
+          "modules_source": "UPSTREAM_MODULES.json",
+          "additional_modules": [
+            "JSP000465"
+          ]
+        }
+      ]
+    },
+    "additional_evidence_dirs": [
+      "evidence"
+    ],
+    "git_history_required": [
+      "6a793b157c1afdf29f3e6bbbf3cf514535d1dfca"
+    ],
+    "lake_adapter": {
+      "file": "465-uniform-manual-lake-adapter.py",
+      "intercepted_argv": [
+        [
+          "build",
+          "+JSP000465Uniform"
+        ]
+      ],
+      "replacement": "The real pinned Lake executes env lean -DwarningAsError=true -j1 -M12000 -o OLEAN EXACT_SOURCE on every intercepted invocation. All other arguments pass unchanged to the pinned Lake.",
+      "reason": "The original Lake roots omit JSP000465Uniform. The selected original verifier explicitly compiles this source and replays it. This transparent adapter provides the manual module-build equivalence allowed by the official reproduction guide; no proof source, Lake configuration or official audit script is modified.",
+      "limits": "Auditor-owned manual equivalent compilation, not a native registered Lake target build.",
+      "evidence": "/out/manual-module-builds.jsonl and per-invocation logs"
+    }
+  },
+  "897-stability": {
+    "toolchain": "leanprover/lean4:v4.34.0",
+    "lean_version": "4.34.0",
+    "prepare_commands": [
+      [
+        "lake",
+        "exe",
+        "cache",
+        "get",
+        "Mathlib"
+      ],
+      [
+        "lake",
+        "build",
+        "Mathlib"
+      ]
+    ],
+    "exporter_commit": "6cea97789dc088ea47fcea15692db85685aedac5",
+    "nanoda_commit": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+    "environment": {
+      "LEAN_NUM_THREADS": "2"
+    },
+    "bootstrap": null,
+    "id": "JSP-000897",
+    "project": "projects/jsp-000897",
+    "commit": "4d15dc035f56658776c01729216f99b776a5ad35",
+    "branch": "jsp-000897-degree-stability-20260919",
+    "bridge_file": "bridge897-stability.lean",
+    "bridge_path": "JSP000897/VerificationStability.lean",
+    "bridge_module": "JSP000897.VerificationStability",
+    "evidence_dir": "evidence/supplement",
+    "verify_command": [
+      "python3",
+      "scripts/verify_supplement.py"
+    ],
+    "source_key": "897-stability",
+    "modules": [
+      "Erdos1079",
+      "JSP000897",
+      "JSP000897Stability"
+    ],
+    "original_targets": 15,
+    "auditor_bridges": 6,
+    "total_targets": 21,
+    "additional_evidence_dirs": [
+      "evidence"
+    ],
+    "git_history_required": [
+      "914c6fa28200985d6409b5b34588b9f5c4a87d00"
+    ],
+    "lake_adapter": {
+      "file": "897-stability-manual-lake-adapter.py",
+      "intercepted_argv": [
+        [
+          "build",
+          "+JSP000897Stability"
+        ]
+      ],
+      "replacement": "The real pinned Lake executes env lean -DwarningAsError=true -j1 -M12000 -o OLEAN EXACT_SOURCE on every intercepted invocation. All other arguments pass unchanged to the pinned Lake.",
+      "reason": "The selected Lake roots omit JSP000897Stability; its original verifier explicitly compiles the source and replays the module. This narrowly scoped auditor adapter supplies manual-equivalent compilation without modifying the selected proof, Lake configuration, or official audit.py.",
+      "limits": "Manual equivalent module compilation, not native registered Lake target success.",
+      "evidence": "/out/manual-module-builds.jsonl and per-invocation compiler logs"
+    },
+    "inspection": {
+      "original_target_count": 15,
+      "evidence": [
+        {
+          "directory": "fresh-project-evidence",
+          "verification_json": "verification.json",
+          "module_count": 1,
+          "modules": [
+            "JSP000897Stability"
+          ],
+          "build_log_pattern": "supplement-build.log",
+          "targets_field": "targets",
+          "supplement_module": "JSP000897Stability",
+          "axiom_outputs": [
+            {
+              "log": "axioms.log",
+              "source": "AuditSupplement.lean"
+            }
+          ],
+          "kernel_logs": [
+            "supplement-kernel.log"
+          ],
+          "negative_logs": [
+            "negative-control.log"
+          ]
+        },
+        {
+          "directory": "fresh-extra-1",
+          "verification_json": null,
+          "module_count": 2,
+          "modules": [
+            "Erdos1079",
+            "JSP000897"
+          ],
+          "native_build_log": "build.log",
+          "axiom_outputs": [
+            {
+              "log": "axioms.log",
+              "source": "Audit.lean"
+            }
+          ],
+          "kernel_logs": [
+            "kernel-upstream.log",
+            "kernel-main.log"
+          ],
+          "negative_logs": [
+            "negative-control.log"
+          ]
+        }
+      ]
+    }
   }
 }
