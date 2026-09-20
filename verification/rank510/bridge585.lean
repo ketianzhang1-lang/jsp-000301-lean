@@ -23,11 +23,21 @@ theorem subdivision_iff {V : Type*} (G : SimpleGraph V) (r : ℕ) :
     Contains G r ↔ Erdos717.ContainsCliqueSubdivision G r := by
   constructor
   · rintro ⟨S⟩
-    exact ⟨{ branch := S.branch, path := S.path, path_isPath := S.simple,
-      interior_avoids_branch := S.avoids, interior_pairwise := S.disjoint }⟩
+    exact ⟨{
+      branch := S.branch
+      path := S.path
+      path_isPath := S.simple
+      interior_avoids_branch := S.avoids
+      interior_pairwise := S.disjoint
+    }⟩
   · rintro ⟨S⟩
-    exact ⟨{ branch := S.branch, path := S.path, simple := S.path_isPath,
-      avoids := S.interior_avoids_branch, disjoint := S.interior_pairwise }⟩
+    exact ⟨{
+      branch := S.branch
+      path := S.path
+      simple := S.path_isPath
+      avoids := S.interior_avoids_branch
+      disjoint := S.interior_pairwise
+    }⟩
 
 theorem sigma_spec {V : Type*} [Fintype V] (G : SimpleGraph V) :
     Contains G (Erdos717.cliqueSubdivisionNumber G) ∧
@@ -48,7 +58,7 @@ theorem uniform_ratio :
   obtain ⟨C, hC, h⟩ := JSP000585.exists_universal_ratio_bound
   refine ⟨C, hC, ?_⟩
   intro V _ G hn
-  letI : Nonempty V := Fintype.card_pos_iff.mp (by omega)
+  have : Nonempty V := Fintype.card_pos_iff.mp (by omega)
   have hmax := sigma_spec G
   refine ⟨Erdos717.cliqueSubdivisionNumber G, ?_, hmax.1, hmax.2, ?_⟩
   · exact lt_of_lt_of_le (by decide : 0 < 1)

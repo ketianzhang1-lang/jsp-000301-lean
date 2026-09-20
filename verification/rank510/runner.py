@@ -43,6 +43,8 @@ elif stage=='original':
  (out/'original-completion.json').write_text(json.dumps({'commit':cfg['commit'],'original_clean_verification':'completed','inputs_stable':True}))
 elif stage=='audit':
  bridge=project/cfg['bridge_path'];bridge.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile('/harness/'+cfg['bridge_file'],bridge)
+ bridge_output=project/'.lake/build/lib/lean'/pathlib.Path(cfg['bridge_module'].replace('.','/')+'.olean');bridge_output.parent.mkdir(parents=True,exist_ok=True)
+ run('bridge-precheck',['lake','env','lean','-DwarningAsError=true','-j1','-M12000','-o',str(bridge_output),str(bridge)],limit=2400)
  manifest=json.loads(pathlib.Path('/harness/'+key+'-targets.json').read_text());manifest['project']['root']=str(project)
  target=out/'targets.json';target.write_text(json.dumps(manifest,indent=2))
  run('official-preflight',['python3','/harness/audit.py','preflight',str(target),'--out','/out/preflight'])

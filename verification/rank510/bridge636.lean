@@ -17,7 +17,13 @@ noncomputable def profile (n r : ℕ) : ℕ := by
       (fun F => (F.image Finset.card).card)
 
 theorem profile_eq (n r : ℕ) : profile n r = JSP000636.exactExtremal n r := by
-  rfl
+  classical
+  -- The literal predicates coincide after unfolding. Their independently
+  -- elaborated DecidablePred arguments need propositional subsingleton
+  -- equality, rather than definitional equality of the two finite filters.
+  unfold profile JSP000636.exactExtremal JSP000636.Antichain
+    JSP000636.ExactMultiplicity JSP000636.sizes
+  congr
 
 /-- The original exact-r existence and impossibility assertions on arbitrary
 finite types, with the level condition expanded in the audit statement. -/
