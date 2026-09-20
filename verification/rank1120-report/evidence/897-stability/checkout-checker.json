@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "git",
+    "-C",
+    "/out/tools/checker",
+    "checkout",
+    "--detach",
+    "4c544ed4099c8227f07d5de77ad1e69fb0740a27"
+  ],
+  "cwd": "/out",
+  "exit_code": 0,
+  "seconds": 0.007737159729003906,
+  "log": "/out/checkout-checker.log",
+  "log_sha256": "93a6123cbaf6fd851223a8f691b1d1bc98066350b00f286ed6946ca4562a4e0d"
+}

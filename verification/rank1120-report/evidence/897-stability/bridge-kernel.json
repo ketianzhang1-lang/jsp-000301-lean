@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "leanchecker",
+    "JSP000897.VerificationStability"
+  ],
+  "cwd": "/work/projects/jsp-000897",
+  "exit_code": 0,
+  "seconds": 8.88704800605774,
+  "log": "/out/bridge-kernel.log",
+  "log_sha256": "9122cf7400628745a1e5c3502fddee093d26350491bb9518b22bc0a6937377ab"
+}

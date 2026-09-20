@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "git",
+    "-C",
+    "/out/tools/checker",
+    "fetch",
+    "--depth",
+    "1",
+    "https://github.com/ammkrn/nanoda_lib.git",
+    "4c544ed4099c8227f07d5de77ad1e69fb0740a27"
+  ],
+  "cwd": "/out",
+  "exit_code": 0,
+  "seconds": 0.5153911113739014,
+  "log": "/out/fetch-checker.log",
+  "log_sha256": "3bfd0160938a0b8d35941a87c378c78aa0e7ddad2b4861c555995d0e690caf63"
+}

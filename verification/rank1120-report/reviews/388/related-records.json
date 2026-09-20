@@ -1,0 +1,28 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "82ce7082e9ed36d964f08453d0cd24ff18185dff2f4cb434abb0f3fe1e1eb762",
+  "original_bytes": 815,
+  "data": [
+    {
+      "number": 61,
+      "title": "JSP-000388: submit Lean proof of the complete quadratic case",
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/61",
+      "state": "closed",
+      "merged": false
+    },
+    {
+      "number": 1129,
+      "title": "JSP-000388: Polynomial value set with additive complement — verification",
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/1129",
+      "state": "open",
+      "merged": false
+    },
+    {
+      "number": 1429,
+      "title": "JSP-000388: record existing Lean formalization (plby/lean-proofs)",
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/1429",
+      "state": "open",
+      "merged": false
+    }
+  ]
+}

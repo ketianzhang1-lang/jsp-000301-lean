@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "git",
+    "restore",
+    "--",
+    "evidence/CI_EXCERPT.txt"
+  ],
+  "cwd": "/work/projects/jsp-000897",
+  "exit_code": 0,
+  "seconds": 0.0036497116088867188,
+  "log": "/out/restore-historical-evidence.log",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

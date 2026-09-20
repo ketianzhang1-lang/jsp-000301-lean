@@ -1,0 +1,10 @@
+{
+  "artifact_id": 10596309119,
+  "workflow_run": 35484922308,
+  "harness_commit": "2eff10da34032979ab2b5d8ec2f69e0915406ee5",
+  "filename": "rank1120-465-uniform-1.zip",
+  "sha256": "0813bd3880621f2c4e8f0fc0666335edb0cb5df300960ca3ef77c9568c1b07ed",
+  "bytes": 126455,
+  "internal_files_verified": 97,
+  "workflow_job": 106009440088
+}

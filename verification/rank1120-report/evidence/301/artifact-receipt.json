@@ -1,0 +1,10 @@
+{
+  "artifact_id": 10597367595,
+  "workflow_run": 35484654492,
+  "harness_commit": "784e798f90142e91aecbf3500e84e25f51a4ba84",
+  "filename": "rank1120-301-1.zip",
+  "sha256": "db1434f90e5d1e6740baea95fc6de8f3d63220cbfcb33807dddc9ca43bbd5be4",
+  "bytes": 2158288,
+  "internal_files_verified": 161,
+  "workflow_job": 106008713557
+}

@@ -1,0 +1,20 @@
+{
+  "real_lake": "/opt/elan/toolchains/leanprover--lean4---v4.34.0/bin/lake",
+  "adapter": "/out/manual-lake-adapter",
+  "adapter_sha256": "4ec1f1788a49896fe8dd6bd107c53464268835aa45a4be32144718810ecb2d67",
+  "scope": {
+    "file": "897-stability-manual-lake-adapter.py",
+    "intercepted_argv": [
+      [
+        "build",
+        "+JSP000897Stability"
+      ]
+    ],
+    "replacement": "The real pinned Lake executes env lean -DwarningAsError=true -j1 -M12000 -o OLEAN EXACT_SOURCE on every intercepted invocation. All other arguments pass unchanged to the pinned Lake.",
+    "reason": "The selected Lake roots omit JSP000897Stability; its original verifier explicitly compiles the source and replays the module. This narrowly scoped auditor adapter supplies manual-equivalent compilation without modifying the selected proof, Lake configuration, or official audit.py.",
+    "limits": "Manual equivalent module compilation, not native registered Lake target success.",
+    "evidence": "/out/manual-module-builds.jsonl and per-invocation compiler logs"
+  },
+  "official_audit_script_unchanged": true,
+  "proof_lakefile_unchanged": true
+}

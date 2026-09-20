@@ -1,0 +1,42 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "903683686980209854bd9574fffef1934fb9c183401f5b7fa8163d84e0b6019b",
+  "original_bytes": 1226,
+  "data": [
+    {
+      "number": 40,
+      "title": "docs: register existing Lean evidence for 78 catalog records",
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/40",
+      "state": "open",
+      "user": "superpilot69"
+    },
+    {
+      "number": 44,
+      "title": "[Correction] Further verification evidence for existing Lean proofs (batch 2, part 2)",
+      "url": "https://github.com/TheJustinSunPrize/awards/issues/44",
+      "state": "open",
+      "user": "zifanersuotang"
+    },
+    {
+      "number": 58,
+      "title": "[Correction] JSP-000465 Lean proof attribution (OpenAI ten-proofs; packaging is not Eligible Yes)",
+      "url": "https://github.com/TheJustinSunPrize/awards/issues/58",
+      "state": "closed",
+      "user": "xneolxnoel"
+    },
+    {
+      "number": 59,
+      "title": "[Recipient] JSP-000465 formalization — WITHDRAWN (vendored OpenAI Lean; not independent formalizer credit)",
+      "url": "https://github.com/TheJustinSunPrize/awards/issues/59",
+      "state": "closed",
+      "user": "xneolxnoel"
+    },
+    {
+      "number": 401,
+      "title": "JSP-000465: Lean proof of the unrestricted compactness counterexample (scoped)",
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/401",
+      "state": "open",
+      "user": "dumbjack"
+    }
+  ]
+}

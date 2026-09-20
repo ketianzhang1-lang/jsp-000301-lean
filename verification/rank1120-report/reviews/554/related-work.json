@@ -1,0 +1,50 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "bc34f46c80c78cd510ebfa2cf22849fdc36e7e62d3b8949ce34588ddb0a80bc2",
+  "original_bytes": 1604,
+  "data": {
+    "checked_at_utc": "2026-09-20",
+    "records": [
+      {
+        "number": 1133,
+        "title": "[Award claim] JSP-000554 — independent Lean formalization",
+        "url": "https://github.com/TheJustinSunPrize/awards/issues/1133",
+        "state": "open",
+        "updated_at": "2026-09-18T09:16:10Z",
+        "merged": null
+      },
+      {
+        "number": 1130,
+        "title": "JSP-000554: record independent pinned Lean evidence",
+        "url": "https://github.com/TheJustinSunPrize/awards/pull/1130",
+        "state": "open",
+        "updated_at": "2026-09-18T09:09:07Z",
+        "merged": false
+      },
+      {
+        "number": 829,
+        "title": "JSP-000554: Lean formalization — rough numbers between consecutive primes",
+        "url": "https://github.com/TheJustinSunPrize/awards/pull/829",
+        "state": "open",
+        "updated_at": "2026-09-17T16:55:19Z",
+        "merged": false
+      },
+      {
+        "number": 1116,
+        "title": "JSP-000554: add Lean formalization (prime-gap counterexample 89, 97)",
+        "url": "https://github.com/TheJustinSunPrize/awards/pull/1116",
+        "state": "open",
+        "updated_at": "2026-09-18T08:17:57Z",
+        "merged": false
+      },
+      {
+        "number": 1306,
+        "title": "JSP-000554: record existing Lean formalization (plby/lean-proofs)",
+        "url": "https://github.com/TheJustinSunPrize/awards/pull/1306",
+        "state": "open",
+        "updated_at": "2026-09-18T19:02:05Z",
+        "merged": false
+      }
+    ]
+  }
+}

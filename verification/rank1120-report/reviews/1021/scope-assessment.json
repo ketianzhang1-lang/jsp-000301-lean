@@ -1,0 +1,30 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "c780f4435dfc85b8d9862a634c644496bd2c8b6cce9c6a120cec1cd8b32f0525",
+  "original_bytes": 2457,
+  "data": {
+    "reviewed_at_utc": "2026-09-20T02:57:20.634830+00:00",
+    "rules_commit": "38e63c424c7196f8d4ceb664c5c25f0c0529d5e2",
+    "catalog_source": "https://github.com/TheJustinSunPrize/awards/blob/38e63c424c7196f8d4ceb664c5c25f0c0529d5e2/problems/catalog-1001-1022.md#JSP-001021",
+    "catalog_literal_question": "How large a transitive subtournament must every tournament of prescribed order contain?",
+    "catalog_explicit_lower_bound_only": false,
+    "catalog_explicit_universal_equality": false,
+    "catalog_scope": "General extremal question, underspecified without cited original source.",
+    "bibliography_observations": [
+      "Catalog cites Stearns1959 lower-bound source, Erdos–Moser1964 original problem, Reid–Parker1970 disproof, and later Sanchez-Flores papers.",
+      "Solved status and elapsed about6years since1964 are consistent with the1970 disproof; this is contextual inference, not an explicit formal scope approval."
+    ],
+    "primary_source": "https://real.mtak.hu/189065/1/cut_MATKUTINT_1964_1_-_2_pp125_-_132.pdf#page=3",
+    "primary_source_pages": "125 definition;126–127 bounds;127 universal equality andn15 question",
+    "competing_claim": "https://github.com/TheJustinSunPrize/awards/issues/1147",
+    "competing_claim_is_organizer_ruling": false,
+    "semantic_result": "Complete negative answer to the historical universal formula atn15; does not establish exactextremal values alln or claim a formalization of the logarithmic lowerbound for alln.",
+    "four_judgments_after_actual_all_checks_pass": {
+      "specified_original_problem_correspondence": "Yes, for the explicitly identified Erdos–Moser1964 universal equality; organizer interpretation of broad catalog summary remains unresolved.",
+      "exact_selected_commit_execution": "Yes only after actual new successful exactcommit evidence is inspected; presently defer to root execution record.",
+      "complete_original_coverage": "Yes, complete refutation of that universal conjecture; no all-orders exactvalue theorem asserted.",
+      "lean_completeness": "Satisfied for that explicitly specified mathematical target only when every necessary check passes; not a blanket ruling on catalog acceptance or awards."
+    },
+    "unqualified_catalog_judgment": "Do not represent the broad catalog interpretation as already organizer-approved. If a judgment is instead framed as resolving every possible interpretation of that summary, correspondence and fullcoverage remain unable to confirm."
+  }
+}

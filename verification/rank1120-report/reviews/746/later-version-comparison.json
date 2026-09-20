@@ -1,0 +1,107 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "fbbb43698020905551032ecbbcecacc030090d24b4cbfd8db1d6d5842fc4ad96",
+  "original_bytes": 2955,
+  "data": [
+    {
+      "status": "ahead",
+      "ahead_by": 2,
+      "base": "4dfb40abe0cd1e538bbfccb1cc50f4829fb7383a",
+      "merge_base": "4dfb40abe0cd1e538bbfccb1cc50f4829fb7383a",
+      "files": [
+        {
+          "filename": ".github/workflows/jsp-000746-sharp.yml",
+          "status": "modified",
+          "changes": 6
+        },
+        {
+          "filename": "projects/jsp-000746-sharp/README.md",
+          "status": "modified",
+          "changes": 2
+        },
+        {
+          "filename": "projects/jsp-000746-sharp/SOURCE_SHA256SUMS",
+          "status": "modified",
+          "changes": 1
+        },
+        {
+          "filename": "projects/jsp-000746-sharp/VERIFICATION.md",
+          "status": "modified",
+          "changes": 4
+        },
+        {
+          "filename": "projects/jsp-000746-sharp/scripts/verify_nanoda.sh",
+          "status": "added",
+          "changes": 70
+        }
+      ],
+      "commits": [
+        {
+          "sha": "2029d4c4c5c8c90c747f59b75295e5babc354b6b",
+          "date": "2026-09-17T21:53:25Z",
+          "message": "Document successful public verification of the full JSP-000746 endpoint"
+        },
+        {
+          "sha": "d38c1169bbea335d1683589ba2bda3cf78c1b932",
+          "date": "2026-09-18T03:11:19Z",
+          "message": "ci: independently check all JSP-000746 target closures with strict NaNoda"
+        }
+      ]
+    },
+    {
+      "status": "ahead",
+      "ahead_by": 3,
+      "base": "4dfb40abe0cd1e538bbfccb1cc50f4829fb7383a",
+      "merge_base": "4dfb40abe0cd1e538bbfccb1cc50f4829fb7383a",
+      "files": [
+        {
+          "filename": ".github/workflows/jsp-000746-sharp.yml",
+          "status": "modified",
+          "changes": 6
+        },
+        {
+          "filename": "projects/jsp-000746-sharp/README.md",
+          "status": "modified",
+          "changes": 21
+        },
+        {
+          "filename": "projects/jsp-000746-sharp/SOURCE_SHA256SUMS",
+          "status": "modified",
+          "changes": 1
+        },
+        {
+          "filename": "projects/jsp-000746-sharp/VERIFICATION.md",
+          "status": "modified",
+          "changes": 23
+        },
+        {
+          "filename": "projects/jsp-000746-sharp/scripts/verify_nanoda.sh",
+          "status": "added",
+          "changes": 70
+        },
+        {
+          "filename": "projects/jsp-000746-sharp/verification/nanoda-ci.json",
+          "status": "added",
+          "changes": 86
+        }
+      ],
+      "commits": [
+        {
+          "sha": "2029d4c4c5c8c90c747f59b75295e5babc354b6b",
+          "date": "2026-09-17T21:53:25Z",
+          "message": "Document successful public verification of the full JSP-000746 endpoint"
+        },
+        {
+          "sha": "d38c1169bbea335d1683589ba2bda3cf78c1b932",
+          "date": "2026-09-18T03:11:19Z",
+          "message": "ci: independently check all JSP-000746 target closures with strict NaNoda"
+        },
+        {
+          "sha": "f606b97bf0bad47b288cf2c9d97c044f0a3d9730",
+          "date": "2026-09-18T03:16:50Z",
+          "message": "docs: record successful strict NaNoda verification for JSP-000746 [skip ci]"
+        }
+      ]
+    }
+  ]
+}

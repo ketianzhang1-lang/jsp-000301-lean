@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "/out/tools/exporter/.lake/build/bin/lean4export",
+    "JSP000897.VerificationBridge",
+    "--",
+    "Erdos1079.turan_split_le",
+    "Erdos1079.maximumDegree_edge_bound",
+    "Erdos1079.erdos_problem_1079",
+    "Erdos1079.erdos_1079",
+    "JSP000897.surplus_at_every_maximum",
+    "JSP000897.resolution_with_surplus",
+    "JSP000897.surplus_dominates",
+    "JSP000897.strict_resolution",
+    "Verify897.catalog_threshold",
+    "Verify897.forcing_threshold",
+    "Verify897.uniform_linear_constant",
+    "Verify897.every_maximum_surplus"
+  ],
+  "cwd": "/work/projects/jsp-000897",
+  "exit_code": 0,
+  "seconds": 5.795742511749268,
+  "log": "/out/export-stderr.log",
+  "log_sha256": "9122cf7400628745a1e5c3502fddee093d26350491bb9518b22bc0a6937377ab"
+}

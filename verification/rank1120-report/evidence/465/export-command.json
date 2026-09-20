@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "/out/tools/exporter/.lake/build/bin/lean4export",
+    "JSP000465.VerificationBridge",
+    "--",
+    "JSP000465.familyExtremal_singleton",
+    "JSP000465.familyExtremal_attained",
+    "JSP000465.simultaneous_member_lower",
+    "JSP000465.uniform_separation",
+    "JSP000465.connected_bipartite_counterexample",
+    "JSP000465.not_bipartite_compactness",
+    "Erdos180.quantitativeCompactnessCounterexample",
+    "Verify465.extremal_formula",
+    "Verify465.singleton_literal",
+    "Verify465.extremal_attained_literal",
+    "Verify465.connected_cyclic_counterexample_literal",
+    "Verify465.corrected_compactness_false_literal",
+    "Verify465.bipartite_compactness_false_literal"
+  ],
+  "cwd": "/work/projects/jsp-000465",
+  "exit_code": 0,
+  "seconds": 19.609254360198975,
+  "log": "/out/export-stderr.log",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

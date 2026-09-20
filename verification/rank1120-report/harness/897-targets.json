@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-000897",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "914c6fa28200985d6409b5b34588b9f5c4a87d00",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000897",
+      "source": "https://www.renyi.hu/~p_erdos/1975-42.pdf#page=12",
+      "requirements": [
+        {
+          "id": "ordinary-graph-semantics",
+          "description": "All finite simple undirected graphs on n vertices; genuine edge counts, open neighbourhood and usual clique extremal number.",
+          "targets": [
+            "t000",
+            "t001",
+            "t002",
+            "t003",
+            "t004",
+            "t005",
+            "t006",
+            "t007",
+            "t008",
+            "t009",
+            "t010",
+            "t011"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "full-nonstrict-threshold",
+          "description": "All r>=4 and n>=2 at or above ex(n,K_r): maximum-degree vertex, n<=2d and local threshold ex(d,K_(r-1)).",
+          "targets": [
+            "t002",
+            "t005",
+            "t008"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "original-forcing-threshold-and-linear-degree",
+          "description": "Erd\u0151s1975 p14 uses f_r(n)=ex(n,K_r)+1; preserve +1 also locally, and exhibit a positive constant c_r with degree>c_r*n; c=1/4 works uniformly.",
+          "targets": [
+            "t003",
+            "t007",
+            "t009",
+            "t010"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "claimed-surplus-refinement",
+          "description": "Every certified natural surplus at every maximum-degree vertex; existence with exact surplus, difference comparison and strict corollary.",
+          "targets": [
+            "t000",
+            "t001",
+            "t004",
+            "t005",
+            "t006",
+            "t007",
+            "t011"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "t000",
+      "problem": "JSP-000897",
+      "role": "theorem",
+      "module": "Erdos1079",
+      "source": "Erdos1079.lean",
+      "declaration": "Erdos1079.turan_split_le"
+    },
+    {
+      "id": "t001",
+      "problem": "JSP-000897",
+      "role": "theorem",
+      "module": "Erdos1079",
+      "source": "Erdos1079.lean",
+      "declaration": "Erdos1079.maximumDegree_edge_bound"
+    },
+    {
+      "id": "t002",
+      "problem": "JSP-000897",
+      "role": "theorem",
+      "module": "Erdos1079",
+      "source": "Erdos1079.lean",
+      "declaration": "Erdos1079.erdos_problem_1079"
+    },
+    {
+      "id": "t003",
+      "problem": "JSP-000897",
+      "role": "theorem",
+      "module": "Erdos1079",
+      "source": "Erdos1079.lean",
+      "declaration": "Erdos1079.erdos_1079"
+    },
+    {
+      "id": "t004",
+      "problem": "JSP-000897",
+      "role": "theorem",
+      "module": "JSP000897",
+      "source": "JSP000897.lean",
+      "declaration": "JSP000897.surplus_at_every_maximum"
+    },
+    {
+      "id": "t005",
+      "problem": "JSP-000897",
+      "role": "theorem",
+      "module": "JSP000897",
+      "source": "JSP000897.lean",
+      "declaration": "JSP000897.resolution_with_surplus"
+    },
+    {
+      "id": "t006",
+      "problem": "JSP-000897",
+      "role": "theorem",
+      "module": "JSP000897",
+      "source": "JSP000897.lean",
+      "declaration": "JSP000897.surplus_dominates"
+    },
+    {
+      "id": "t007",
+      "problem": "JSP-000897",
+      "role": "theorem",
+      "module": "JSP000897",
+      "source": "JSP000897.lean",
+      "declaration": "JSP000897.strict_resolution"
+    },
+    {
+      "id": "t008",
+      "problem": "JSP-000897",
+      "role": "bridge",
+      "module": "JSP000897.VerificationBridge",
+      "source": "JSP000897/VerificationBridge.lean",
+      "declaration": "Verify897.catalog_threshold"
+    },
+    {
+      "id": "t009",
+      "problem": "JSP-000897",
+      "role": "bridge",
+      "module": "JSP000897.VerificationBridge",
+      "source": "JSP000897/VerificationBridge.lean",
+      "declaration": "Verify897.forcing_threshold"
+    },
+    {
+      "id": "t010",
+      "problem": "JSP-000897",
+      "role": "bridge",
+      "module": "JSP000897.VerificationBridge",
+      "source": "JSP000897/VerificationBridge.lean",
+      "declaration": "Verify897.uniform_linear_constant"
+    },
+    {
+      "id": "t011",
+      "problem": "JSP-000897",
+      "role": "bridge",
+      "module": "JSP000897.VerificationBridge",
+      "source": "JSP000897/VerificationBridge.lean",
+      "declaration": "Verify897.every_maximum_surplus"
+    }
+  ]
+}

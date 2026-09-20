@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "/out/tools/exporter/.lake/build/bin/lean4export",
+    "JSP000746.VerificationBridge",
+    "--",
+    "Erdos895.erdos_895",
+    "JSP000746Sharp.witness_triangle_free",
+    "JSP000746Sharp.witness_no_independent_schur_triple",
+    "JSP000746Sharp.counterexamples_below_eighteen",
+    "JSP000746Sharp.exact_threshold",
+    "JSP000746Sharp.least_threshold",
+    "JSP000746.integer_graph",
+    "JSP000746.jsp_000746",
+    "Verify746.intended",
+    "Verify746.bounded_positive",
+    "Verify746.exact_finite_threshold",
+    "Verify746.witness_edge_list_length"
+  ],
+  "cwd": "/work/projects/jsp-000746-sharp",
+  "exit_code": 0,
+  "seconds": 2.9791624546051025,
+  "log": "/out/export-stderr.log",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

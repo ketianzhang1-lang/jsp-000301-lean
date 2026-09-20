@@ -1,0 +1,278 @@
+[
+  {
+    "id": 301,
+    "pr": 187,
+    "claim": 1413,
+    "proof": {
+      "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+      "branch": "main",
+      "commit": "e1a17b0d6728b9d4929d1d4abd3721a27377369a"
+    },
+    "project": ".",
+    "awards_head": "096e9cd0e3120181dce16ebfcc63c09eea92ddb8",
+    "awards_branch": "jsp-000301-formalization-evidence",
+    "source_available": true,
+    "execution_groups": [
+      "301"
+    ],
+    "proof_versions": [
+      {
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "branch": "main",
+        "commit": "e1a17b0d6728b9d4929d1d4abd3721a27377369a",
+        "project": ".",
+        "execution_group": "301"
+      }
+    ]
+  },
+  {
+    "id": 897,
+    "pr": 439,
+    "claim": 1573,
+    "proof": {
+      "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+      "branch": "jsp-000897-dense-neighborhood-kz",
+      "commit": "914c6fa28200985d6409b5b34588b9f5c4a87d00"
+    },
+    "project": "projects/jsp-000897",
+    "awards_head": "ed4fc4f546603d21ccf0dfd50a52d65d4db1d8cc",
+    "awards_branch": "submit-jsp-000897-dense-neighborhood-kz",
+    "source_available": true,
+    "execution_groups": [
+      "897",
+      "897-stability"
+    ],
+    "proof_versions": [
+      {
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "branch": "jsp-000897-dense-neighborhood-kz",
+        "commit": "914c6fa28200985d6409b5b34588b9f5c4a87d00",
+        "project": "projects/jsp-000897",
+        "execution_group": "897"
+      },
+      {
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "branch": "jsp-000897-degree-stability-20260919",
+        "commit": "4d15dc035f56658776c01729216f99b776a5ad35",
+        "project": "projects/jsp-000897",
+        "execution_group": "897-stability"
+      }
+    ]
+  },
+  {
+    "id": 907,
+    "pr": 696,
+    "claim": 1588,
+    "proof": {
+      "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+      "branch": "jsp-000907-complete-kz",
+      "commit": "555ce4f13bf7e8e8557020728f7f97ad3d1f51e0"
+    },
+    "project": "projects/jsp-000907",
+    "awards_head": "1b879d7019554bf75253c89b81bfb163a1cc777e",
+    "awards_branch": "jsp-000907-four-chord-note",
+    "source_available": true,
+    "execution_groups": [
+      "907"
+    ],
+    "proof_versions": [
+      {
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "branch": "jsp-000907-complete-kz",
+        "commit": "555ce4f13bf7e8e8557020728f7f97ad3d1f51e0",
+        "project": "projects/jsp-000907",
+        "execution_group": "907"
+      }
+    ]
+  },
+  {
+    "id": 465,
+    "pr": 442,
+    "claim": 1572,
+    "proof": {
+      "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+      "branch": "jsp-000465-verified-kz",
+      "commit": "6a793b157c1afdf29f3e6bbbf3cf514535d1dfca"
+    },
+    "project": "projects/jsp-000465",
+    "awards_head": "de18e5d8fa57cdfd064bb18aa75f4b9983858590",
+    "awards_branch": "jsp-000465-verified-kz",
+    "source_available": true,
+    "execution_groups": [
+      "465",
+      "465-uniform"
+    ],
+    "proof_versions": [
+      {
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "branch": "jsp-000465-verified-kz",
+        "commit": "6a793b157c1afdf29f3e6bbbf3cf514535d1dfca",
+        "project": "projects/jsp-000465",
+        "execution_group": "465"
+      },
+      {
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "branch": "jsp-000465-uniform-ratios-20260919",
+        "commit": "78dbc684a1ce3d392b150d98bdc5b94a9269f3e3",
+        "project": "projects/jsp-000465",
+        "execution_group": "465-uniform"
+      }
+    ]
+  },
+  {
+    "id": 388,
+    "pr": 343,
+    "claim": 1475,
+    "proof": {
+      "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+      "branch": "jsp-000388-quadratic-obstruction",
+      "commit": "a9eae7a01edade3d5d9a386144dcd2848b4de917"
+    },
+    "project": "projects/jsp-000388",
+    "awards_head": "6578f3b4e3d86bb6cd087ef940aa29cf6631ee3a",
+    "awards_branch": "submit-jsp-000388-quadratic",
+    "source_available": true,
+    "execution_groups": [
+      "388"
+    ],
+    "proof_versions": [
+      {
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "branch": "jsp-000388-quadratic-obstruction",
+        "commit": "a9eae7a01edade3d5d9a386144dcd2848b4de917",
+        "project": "projects/jsp-000388",
+        "execution_group": "388"
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "pr": 443,
+    "claim": 1467,
+    "proof": {
+      "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+      "branch": "jsp-000140-coloring-kz",
+      "commit": "724a733a2b498d7b3b956e66b76d7334cc906eaf"
+    },
+    "project": "projects/jsp-000140",
+    "awards_head": "ed26116da7c30a65fb8159c5034d71666f035e86",
+    "awards_branch": "jsp-000140-lower-bound-kz",
+    "source_available": true,
+    "execution_groups": [
+      "140"
+    ],
+    "proof_versions": [
+      {
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "branch": "jsp-000140-coloring-kz",
+        "commit": "724a733a2b498d7b3b956e66b76d7334cc906eaf",
+        "project": "projects/jsp-000140",
+        "execution_group": "140"
+      }
+    ]
+  },
+  {
+    "id": 725,
+    "pr": 361,
+    "claim": 1412,
+    "proof": {
+      "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+      "branch": "jsp-000725-interval",
+      "commit": "d0d37952bba030d7c8a68f000094e0d601d9fed7"
+    },
+    "project": "projects/jsp-000725",
+    "awards_head": "8765191628536b03c5f7e6265fadae15678f35b7",
+    "awards_branch": "jsp-000725-interval-evidence",
+    "source_available": true,
+    "execution_groups": [
+      "725"
+    ],
+    "proof_versions": [
+      {
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "branch": "jsp-000725-interval",
+        "commit": "d0d37952bba030d7c8a68f000094e0d601d9fed7",
+        "project": "projects/jsp-000725",
+        "execution_group": "725"
+      }
+    ]
+  },
+  {
+    "id": 554,
+    "pr": 369,
+    "claim": 1577,
+    "proof": {
+      "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+      "branch": "jsp-000554-residue-reduction",
+      "commit": "21fcf006fd68b0bead9f979b704c92032f05cba8"
+    },
+    "project": "projects/jsp-000554",
+    "awards_head": "388fbf61e647ea2a4a10e8d78344cb7688cf48c4",
+    "awards_branch": "jsp-000554-residue-reduction-kz",
+    "source_available": true,
+    "execution_groups": [
+      "554"
+    ],
+    "proof_versions": [
+      {
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "branch": "jsp-000554-residue-reduction",
+        "commit": "21fcf006fd68b0bead9f979b704c92032f05cba8",
+        "project": "projects/jsp-000554",
+        "execution_group": "554"
+      }
+    ]
+  },
+  {
+    "id": 746,
+    "pr": 402,
+    "claim": 1468,
+    "proof": {
+      "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+      "branch": "jsp-000746-sharp-kz",
+      "commit": "4dfb40abe0cd1e538bbfccb1cc50f4829fb7383a"
+    },
+    "project": "projects/jsp-000746-sharp",
+    "awards_head": "459668c825230b77e01bcb269ccb977090ddd4ab",
+    "awards_branch": "submit-jsp-000746-sharp-kz",
+    "source_available": true,
+    "execution_groups": [
+      "746"
+    ],
+    "proof_versions": [
+      {
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "branch": "jsp-000746-sharp-kz",
+        "commit": "4dfb40abe0cd1e538bbfccb1cc50f4829fb7383a",
+        "project": "projects/jsp-000746-sharp",
+        "execution_group": "746"
+      }
+    ]
+  },
+  {
+    "id": 1021,
+    "pr": 699,
+    "claim": 1586,
+    "proof": {
+      "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+      "branch": "jsp-001021-tournament-verification",
+      "commit": "7642a7f5eb190da6319b6ae7f11c829d7737e2dd"
+    },
+    "project": "projects/jsp-001021",
+    "awards_head": "80525e5901e034f4a8bad52e7ee1e8e6f532a0a8",
+    "awards_branch": "jsp-001021-independent-reproduction",
+    "source_available": true,
+    "execution_groups": [
+      "1021"
+    ],
+    "proof_versions": [
+      {
+        "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+        "branch": "jsp-001021-tournament-verification",
+        "commit": "7642a7f5eb190da6319b6ae7f11c829d7737e2dd",
+        "project": "projects/jsp-001021",
+        "execution_group": "1021"
+      }
+    ]
+  }
+]

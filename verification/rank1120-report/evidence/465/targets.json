@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-000465",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "6a793b157c1afdf29f3e6bbbf3cf514535d1dfca",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000465",
+      "source": "https://www.erdosproblems.com/575",
+      "requirements": [
+        {
+          "id": "ordinary-family-extremal",
+          "description": "Maximum edge count over all n-vertex simple graphs avoiding every forbidden member as an ordinary, not induced, subgraph; singleton agrees with Mathlib.",
+          "targets": [
+            "t000",
+            "t007",
+            "t008"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "attained-all-orders",
+          "description": "The family-free class is nonempty and the maximum is attained by an actual graph at every natural order including zero.",
+          "targets": [
+            "t001",
+            "t009"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "fixed-connected-bipartite-cyclic-family",
+          "description": "One finite nonempty forbidden family is fixed before all asymptotic parameters; every member is connected, bipartite and contains a cycle.",
+          "targets": [
+            "t004",
+            "t006",
+            "t010"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "uniform-separation",
+          "description": "For every real K>0, one threshold N works simultaneously for all n>=N and all family members with strict separation.",
+          "targets": [
+            "t002",
+            "t003",
+            "t004",
+            "t010"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "full-compactness-negation",
+          "description": "Negates both the catalog bipartite-member conjecture and the strengthened forest-excluding compactness conjecture.",
+          "targets": [
+            "t005",
+            "t006",
+            "t011",
+            "t012"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "t000",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465",
+      "source": "JSP000465.lean",
+      "declaration": "JSP000465.familyExtremal_singleton"
+    },
+    {
+      "id": "t001",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465",
+      "source": "JSP000465.lean",
+      "declaration": "JSP000465.familyExtremal_attained"
+    },
+    {
+      "id": "t002",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465",
+      "source": "JSP000465.lean",
+      "declaration": "JSP000465.simultaneous_member_lower"
+    },
+    {
+      "id": "t003",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465",
+      "source": "JSP000465.lean",
+      "declaration": "JSP000465.uniform_separation"
+    },
+    {
+      "id": "t004",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465",
+      "source": "JSP000465.lean",
+      "declaration": "JSP000465.connected_bipartite_counterexample"
+    },
+    {
+      "id": "t005",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465",
+      "source": "JSP000465.lean",
+      "declaration": "JSP000465.not_bipartite_compactness"
+    },
+    {
+      "id": "t006",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "ErdosProblems.Erdos180.Quantitative",
+      "source": "ErdosProblems/Erdos180/Quantitative.lean",
+      "declaration": "Erdos180.quantitativeCompactnessCounterexample"
+    },
+    {
+      "id": "t007",
+      "problem": "JSP-000465",
+      "role": "bridge",
+      "module": "JSP000465.VerificationBridge",
+      "source": "JSP000465/VerificationBridge.lean",
+      "declaration": "Verify465.extremal_formula"
+    },
+    {
+      "id": "t008",
+      "problem": "JSP-000465",
+      "role": "bridge",
+      "module": "JSP000465.VerificationBridge",
+      "source": "JSP000465/VerificationBridge.lean",
+      "declaration": "Verify465.singleton_literal"
+    },
+    {
+      "id": "t009",
+      "problem": "JSP-000465",
+      "role": "bridge",
+      "module": "JSP000465.VerificationBridge",
+      "source": "JSP000465/VerificationBridge.lean",
+      "declaration": "Verify465.extremal_attained_literal"
+    },
+    {
+      "id": "t010",
+      "problem": "JSP-000465",
+      "role": "bridge",
+      "module": "JSP000465.VerificationBridge",
+      "source": "JSP000465/VerificationBridge.lean",
+      "declaration": "Verify465.connected_cyclic_counterexample_literal"
+    },
+    {
+      "id": "t011",
+      "problem": "JSP-000465",
+      "role": "bridge",
+      "module": "JSP000465.VerificationBridge",
+      "source": "JSP000465/VerificationBridge.lean",
+      "declaration": "Verify465.corrected_compactness_false_literal"
+    },
+    {
+      "id": "t012",
+      "problem": "JSP-000465",
+      "role": "bridge",
+      "module": "JSP000465.VerificationBridge",
+      "source": "JSP000465/VerificationBridge.lean",
+      "declaration": "Verify465.bipartite_compactness_false_literal"
+    }
+  ]
+}

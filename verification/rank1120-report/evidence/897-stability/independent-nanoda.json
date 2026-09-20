@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "/out/tools/checker/target/release/nanoda_bin",
+    "/out/nanoda-config.json"
+  ],
+  "cwd": "/work/projects/jsp-000897",
+  "exit_code": 0,
+  "seconds": 3.9229674339294434,
+  "log": "/out/independent-nanoda.log",
+  "log_sha256": "341a6d2356d8e51cc5a71b18f6c01f4b1e0d2272982b03cb0e571bc4d051f282"
+}

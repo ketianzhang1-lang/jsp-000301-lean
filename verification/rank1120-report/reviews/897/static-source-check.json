@@ -1,0 +1,36 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "133203e20490e103f0573abdb7375781e65870e897af2a6033396981a08f4409",
+  "original_bytes": 2321,
+  "data": {
+    "retrieved_at_utc": "2026-09-20T02:47:20.484901+00:00",
+    "files": {
+      "lean-toolchain": "8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632",
+      "PROVENANCE.md": "cf62db58b239c3186b006ea654a2ac010413d804c52db75b01d89b036b18bf48",
+      "lakefile.lean": "65323d63a89fe400dd27af44c9cab048d4397a63ee3a9f3803f5e928383db67b",
+      "SOURCE_SHA256SUMS": "1f2c6961966381e15f3152c27c653dc86945cd560c875a4733f088def1fed81b",
+      "Erdos1079.lean": "58a0fa37a3e16b8156d9bac0af46d22d17b0f89c4f6a0869f39ed761b4bfccfc",
+      "LICENSE": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+      "lake-manifest.json": "82a685aa63c7f3b823c3f7b6a0405bb268e65484393e890614df2240ab003920",
+      "JSP000897.lean": "2d97e3772478b411b730fb5f96a3e3971b978ad9890101d2d7ff9141b3eed1c8",
+      "VERIFICATION.md": "75831b073e0e5a89db4b6a4f0a9f31e9fd5717e0298457685828a81191f1bccb",
+      "README.md": "0d50da1cf3462100e82b6fda94834f47a93e9e33633b14226edf7efdfe0f3723",
+      "Audit.lean": "6296423baa4fa572e45a7140cb8d6c5d035c468d2b00565cf5de3747c8add495",
+      "upstream/Erdos1079.lean": "09efec8509c86a61575eed184fd68d76d09a4f74ca94b7338478cb5657f9cae3",
+      "scripts/verify.sh": "cc8418e0edc3f63c771265997b2a400a42c10999d854fac75a81f11b87d68e86",
+      "scripts/verify_nanoda.sh": "345409057f3cf7197ac78df4d7db89074af923f6bf5aa8700fe400794c492b95"
+    },
+    "stability_retained_files": {
+      "lean-toolchain": "8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632",
+      "lakefile.lean": "65323d63a89fe400dd27af44c9cab048d4397a63ee3a9f3803f5e928383db67b",
+      "Erdos1079.lean": "58a0fa37a3e16b8156d9bac0af46d22d17b0f89c4f6a0869f39ed761b4bfccfc",
+      "lake-manifest.json": "82a685aa63c7f3b823c3f7b6a0405bb268e65484393e890614df2240ab003920",
+      "JSP000897.lean": "2d97e3772478b411b730fb5f96a3e3971b978ad9890101d2d7ff9141b3eed1c8",
+      "Audit.lean": "6296423baa4fa572e45a7140cb8d6c5d035c468d2b00565cf5de3747c8add495",
+      "upstream/Erdos1079.lean": "09efec8509c86a61575eed184fd68d76d09a4f74ca94b7338478cb5657f9cae3"
+    },
+    "original_source_pdf_sha256": "467600ae548916e8311cf935e90de8f0c93c7771c9fda2a199cf992d79faeec4",
+    "original_source_url": "https://www.renyi.hu/~p_erdos/1975-42.pdf#page=12",
+    "original_source_location": "Printed p14 / PDF page12; scan visually reviewed; no article reproduction in delivery"
+  }
+}

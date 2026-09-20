@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "lake",
+    "build"
+  ],
+  "cwd": "/out/tools/exporter",
+  "exit_code": 0,
+  "seconds": 8.986290216445923,
+  "log": "/out/build-exporter.log",
+  "log_sha256": "ea3814d557ac7432c7041d3a630edc1ae013d22782a642ec16aa48db4a4b04ee"
+}

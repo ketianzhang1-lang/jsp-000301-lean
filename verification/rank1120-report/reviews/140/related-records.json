@@ -1,0 +1,14 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "9a902779eae4aa436fb9f70071a8b9123070087a6f02534e77ed302e4d2cc623",
+  "original_bytes": 262,
+  "data": [
+    {
+      "number": 930,
+      "title": "feat: record formal Lean 4 verification for JSP-000140",
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/930",
+      "state": "closed",
+      "merged": false
+    }
+  ]
+}

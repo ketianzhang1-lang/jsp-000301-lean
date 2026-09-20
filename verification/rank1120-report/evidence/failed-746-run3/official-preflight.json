@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "python3",
+    "/harness/audit.py",
+    "preflight",
+    "/out/targets.json",
+    "--out",
+    "/out/preflight"
+  ],
+  "cwd": "/work/projects/jsp-000746-sharp",
+  "exit_code": 2,
+  "seconds": 0.06421494483947754,
+  "log": "/out/official-preflight.log",
+  "log_sha256": "613c62a2a33d6e15c24e4c8d44d434f3c225e9990fbd4b1486f9106432caa5ee"
+}

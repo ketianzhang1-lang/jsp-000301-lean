@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "bash",
+    "scripts/verify.sh"
+  ],
+  "cwd": "/work/projects/jsp-000907",
+  "exit_code": 0,
+  "seconds": 466.88563990592957,
+  "log": "/out/original-clean-verifier.log",
+  "log_sha256": "2f6050f4fff87b9911815a33a4d3599fc189d84ab75cc6edd257f4148c8e92c0"
+}

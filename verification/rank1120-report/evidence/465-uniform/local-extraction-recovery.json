@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-09-20T03:11:05.712192+00:00",
+  "cause": "Unknown local extraction truncation; original GitHub ZIP and every restored member match their original immutable hashes.",
+  "archive_sha256": "74428fc2aa821f1c9a0559ea27a8b1bd66e4a617cef5cf410a06d375e59750e4",
+  "mismatches": [
+    {
+      "member": "export.ndjson.gz",
+      "expected_sha256": "1b77a399fb11ad88022cea2e3bbb69537da874c5870fc897e30cd9b24e2fb1d0",
+      "actual_sha256": "916b8fae6713e27fd24e67861c60e5d3721620017e59b50ae3727aee74f959db",
+      "actual_bytes": 32243712
+    }
+  ],
+  "original_inventory_changed": false,
+  "retained_local_copy": "diagnostic-truncated-raw"
+}

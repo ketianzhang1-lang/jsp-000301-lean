@@ -1,0 +1,87 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "1aa296d7f5cf76d4eaa211c0c3cc907bb029b20aa88e3d353f099cac321d81e9",
+  "original_bytes": 2223,
+  "data": [
+    {
+      "status": "ahead",
+      "ahead_by": 1,
+      "base": "7642a7f5eb190da6319b6ae7f11c829d7737e2dd",
+      "merge_base": "7642a7f5eb190da6319b6ae7f11c829d7737e2dd",
+      "files": [
+        {
+          "filename": ".github/workflows/jsp-001021.yml",
+          "status": "modified",
+          "changes": 6
+        },
+        {
+          "filename": "projects/jsp-001021/SOURCE_SHA256SUMS",
+          "status": "modified",
+          "changes": 1
+        },
+        {
+          "filename": "projects/jsp-001021/scripts/verify_nanoda.sh",
+          "status": "added",
+          "changes": 70
+        }
+      ],
+      "commits": [
+        {
+          "sha": "3ebcc72d98b50f59ff456feb5963f85815b2d09c",
+          "date": "2026-09-18T03:11:20Z",
+          "message": "ci: independently check all JSP-001021 target closures with strict NaNoda"
+        }
+      ]
+    },
+    {
+      "status": "ahead",
+      "ahead_by": 2,
+      "base": "7642a7f5eb190da6319b6ae7f11c829d7737e2dd",
+      "merge_base": "7642a7f5eb190da6319b6ae7f11c829d7737e2dd",
+      "files": [
+        {
+          "filename": ".github/workflows/jsp-001021.yml",
+          "status": "modified",
+          "changes": 6
+        },
+        {
+          "filename": "projects/jsp-001021/README.md",
+          "status": "modified",
+          "changes": 19
+        },
+        {
+          "filename": "projects/jsp-001021/SOURCE_SHA256SUMS",
+          "status": "modified",
+          "changes": 1
+        },
+        {
+          "filename": "projects/jsp-001021/VERIFICATION.md",
+          "status": "modified",
+          "changes": 21
+        },
+        {
+          "filename": "projects/jsp-001021/scripts/verify_nanoda.sh",
+          "status": "added",
+          "changes": 70
+        },
+        {
+          "filename": "projects/jsp-001021/verification/nanoda-ci.json",
+          "status": "added",
+          "changes": 83
+        }
+      ],
+      "commits": [
+        {
+          "sha": "3ebcc72d98b50f59ff456feb5963f85815b2d09c",
+          "date": "2026-09-18T03:11:20Z",
+          "message": "ci: independently check all JSP-001021 target closures with strict NaNoda"
+        },
+        {
+          "sha": "6abe6a772ac84d1b24cceda0ba1bf4c27428b56e",
+          "date": "2026-09-18T03:31:37Z",
+          "message": "docs: record successful strict NaNoda verification for JSP-001021 [skip ci]"
+        }
+      ]
+    }
+  ]
+}

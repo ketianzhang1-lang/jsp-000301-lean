@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-000465",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "78dbc684a1ce3d392b150d98bdc5b94a9269f3e3",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000465",
+      "source": "https://www.erdosproblems.com/575",
+      "requirements": [
+        {
+          "id": "ordinary-family-extremal",
+          "description": "Maximum edge count over all n-vertex simple graphs avoiding every forbidden member as an ordinary, not induced, subgraph; singleton agrees with Mathlib.",
+          "targets": [
+            "t000",
+            "t012",
+            "t013"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "attained-all-orders",
+          "description": "The family-free class is nonempty and the maximum is attained by an actual graph at every natural order including zero.",
+          "targets": [
+            "t001",
+            "t014"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "fixed-connected-bipartite-cyclic-family",
+          "description": "One finite nonempty forbidden family is fixed before all asymptotic parameters; every member is connected, bipartite and contains a cycle.",
+          "targets": [
+            "t004",
+            "t006",
+            "t015"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "uniform-separation",
+          "description": "For every real K>0, one threshold N works simultaneously for all n>=N and all family members with strict separation.",
+          "targets": [
+            "t002",
+            "t003",
+            "t004",
+            "t015"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "full-compactness-negation",
+          "description": "Negates both the catalog bipartite-member conjecture and the strengthened forest-excluding compactness conjecture.",
+          "targets": [
+            "t005",
+            "t006",
+            "t016",
+            "t017"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "uniform-positive-ratios",
+          "description": "Simultaneous positivity and arbitrarily small real ratios for every family member at all large host orders; denominator positivity excludes division-by-zero vacuity.",
+          "targets": [
+            "t007",
+            "t008",
+            "t018"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "adaptive-selector",
+          "description": "The member may vary arbitrarily with n, membership is only eventually required, and the literal extremal ratio tends to zero in the usual real topology; no adaptive constant-factor comparison exists.",
+          "targets": [
+            "t009",
+            "t010",
+            "t011",
+            "t019",
+            "t020"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "t000",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465",
+      "source": "JSP000465.lean",
+      "declaration": "JSP000465.familyExtremal_singleton"
+    },
+    {
+      "id": "t001",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465",
+      "source": "JSP000465.lean",
+      "declaration": "JSP000465.familyExtremal_attained"
+    },
+    {
+      "id": "t002",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465",
+      "source": "JSP000465.lean",
+      "declaration": "JSP000465.simultaneous_member_lower"
+    },
+    {
+      "id": "t003",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465",
+      "source": "JSP000465.lean",
+      "declaration": "JSP000465.uniform_separation"
+    },
+    {
+      "id": "t004",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465",
+      "source": "JSP000465.lean",
+      "declaration": "JSP000465.connected_bipartite_counterexample"
+    },
+    {
+      "id": "t005",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465",
+      "source": "JSP000465.lean",
+      "declaration": "JSP000465.not_bipartite_compactness"
+    },
+    {
+      "id": "t006",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "ErdosProblems.Erdos180.Quantitative",
+      "source": "ErdosProblems/Erdos180/Quantitative.lean",
+      "declaration": "Erdos180.quantitativeCompactnessCounterexample"
+    },
+    {
+      "id": "t007",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465Uniform",
+      "source": "JSP000465Uniform.lean",
+      "declaration": "JSP000465.eventually_member_positive"
+    },
+    {
+      "id": "t008",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465Uniform",
+      "source": "JSP000465Uniform.lean",
+      "declaration": "JSP000465.uniform_ratio_small"
+    },
+    {
+      "id": "t009",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465Uniform",
+      "source": "JSP000465Uniform.lean",
+      "declaration": "JSP000465.adaptive_ratio_tendsto"
+    },
+    {
+      "id": "t010",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465Uniform",
+      "source": "JSP000465Uniform.lean",
+      "declaration": "JSP000465.no_adaptive_comparison"
+    },
+    {
+      "id": "t011",
+      "problem": "JSP-000465",
+      "role": "theorem",
+      "module": "JSP000465Uniform",
+      "source": "JSP000465Uniform.lean",
+      "declaration": "JSP000465.adaptive_compactness_counterexample"
+    },
+    {
+      "id": "t012",
+      "problem": "JSP-000465",
+      "role": "bridge",
+      "module": "JSP000465.VerificationUniform",
+      "source": "JSP000465/VerificationUniform.lean",
+      "declaration": "Verify465Uniform.extremal_formula"
+    },
+    {
+      "id": "t013",
+      "problem": "JSP-000465",
+      "role": "bridge",
+      "module": "JSP000465.VerificationUniform",
+      "source": "JSP000465/VerificationUniform.lean",
+      "declaration": "Verify465Uniform.singleton_literal"
+    },
+    {
+      "id": "t014",
+      "problem": "JSP-000465",
+      "role": "bridge",
+      "module": "JSP000465.VerificationUniform",
+      "source": "JSP000465/VerificationUniform.lean",
+      "declaration": "Verify465Uniform.extremal_attained_literal"
+    },
+    {
+      "id": "t015",
+      "problem": "JSP-000465",
+      "role": "bridge",
+      "module": "JSP000465.VerificationUniform",
+      "source": "JSP000465/VerificationUniform.lean",
+      "declaration": "Verify465Uniform.connected_cyclic_counterexample_literal"
+    },
+    {
+      "id": "t016",
+      "problem": "JSP-000465",
+      "role": "bridge",
+      "module": "JSP000465.VerificationUniform",
+      "source": "JSP000465/VerificationUniform.lean",
+      "declaration": "Verify465Uniform.corrected_compactness_false_literal"
+    },
+    {
+      "id": "t017",
+      "problem": "JSP-000465",
+      "role": "bridge",
+      "module": "JSP000465.VerificationUniform",
+      "source": "JSP000465/VerificationUniform.lean",
+      "declaration": "Verify465Uniform.bipartite_compactness_false_literal"
+    },
+    {
+      "id": "t018",
+      "problem": "JSP-000465",
+      "role": "bridge",
+      "module": "JSP000465.VerificationUniform",
+      "source": "JSP000465/VerificationUniform.lean",
+      "declaration": "Verify465Uniform.uniform_ratio_literal"
+    },
+    {
+      "id": "t019",
+      "problem": "JSP-000465",
+      "role": "bridge",
+      "module": "JSP000465.VerificationUniform",
+      "source": "JSP000465/VerificationUniform.lean",
+      "declaration": "Verify465Uniform.adaptive_ratio_literal"
+    },
+    {
+      "id": "t020",
+      "problem": "JSP-000465",
+      "role": "bridge",
+      "module": "JSP000465.VerificationUniform",
+      "source": "JSP000465/VerificationUniform.lean",
+      "declaration": "Verify465Uniform.adaptive_counterexample_literal"
+    }
+  ]
+}

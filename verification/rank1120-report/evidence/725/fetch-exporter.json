@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "git",
+    "-C",
+    "/out/tools/exporter",
+    "fetch",
+    "--depth",
+    "1",
+    "https://github.com/leanprover/lean4export.git",
+    "6cea97789dc088ea47fcea15692db85685aedac5"
+  ],
+  "cwd": "/out",
+  "exit_code": 0,
+  "seconds": 0.9158051013946533,
+  "log": "/out/fetch-exporter.log",
+  "log_sha256": "255d18734e742547e9d901ce180356ef7fea701c2c36c46aa21ebe07d50f4f47"
+}

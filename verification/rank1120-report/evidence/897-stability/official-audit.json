@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "python3",
+    "/harness/audit.py",
+    "run",
+    "/out/targets.json",
+    "--out",
+    "/out/audit",
+    "--lake",
+    "/out/manual-lake-adapter",
+    "--timeout",
+    "2400"
+  ],
+  "cwd": "/work/projects/jsp-000897",
+  "exit_code": 0,
+  "seconds": 192.28747153282166,
+  "log": "/out/official-audit.log",
+  "log_sha256": "f9a7cf59effb4c972a387d69d0548e59162cb66f1d03fcc41d2114bb0d64820f"
+}

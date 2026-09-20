@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "git",
+    "status",
+    "--porcelain",
+    "--untracked-files=all"
+  ],
+  "cwd": "/work/projects/jsp-000465",
+  "exit_code": 0,
+  "seconds": 0.0077228546142578125,
+  "log": "/out/final-status.log",
+  "log_sha256": "f6a730468bcd2bfad3fce8bec8cebe9e391ee57fb077b7e2f755062f57fe7e30"
+}

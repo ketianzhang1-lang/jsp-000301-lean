@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-000388",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "a9eae7a01edade3d5d9a386144dcd2848b4de917",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000388",
+      "source": "https://www.erdosproblems.com/477",
+      "requirements": [
+        {
+          "id": "original-existence",
+          "description": "There exists an integer polynomial of degree at least two and a complement set of unrestricted integers with a unique pair of summand values for every integer.",
+          "targets": [
+            "t018",
+            "t019",
+            "t014",
+            "t016"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "actual-sixth-power",
+          "description": "The complete affirmative witness is the actual integer polynomial X^6, with the full unconditional finite-avoidance, geometry and counting chain.",
+          "targets": [
+            "t020",
+            "t011",
+            "t017"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "translation",
+          "description": "For every integer constant c, the translated sixth-power polynomial has an exact complement.",
+          "targets": [
+            "t010",
+            "t021",
+            "t013"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "quadratic-obstruction",
+          "description": "For every a,b,c with a nonzero and a dividing b, no exact complement exists; b=0 and either sign of a are included.",
+          "targets": [
+            "t022",
+            "t006",
+            "t008",
+            "t007"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "t000",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "JSP000388.normalized_difference",
+      "module": "JSP000388",
+      "source": "JSP000388.lean"
+    },
+    {
+      "id": "t001",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "JSP000388.quadratic_difference",
+      "module": "JSP000388",
+      "source": "JSP000388.lean"
+    },
+    {
+      "id": "t002",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "JSP000388.left_unique",
+      "module": "JSP000388",
+      "source": "JSP000388.lean"
+    },
+    {
+      "id": "t003",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "JSP000388.complement_finite",
+      "module": "JSP000388",
+      "source": "JSP000388.lean"
+    },
+    {
+      "id": "t004",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "JSP000388.normalized_lower_bound",
+      "module": "JSP000388",
+      "source": "JSP000388.lean"
+    },
+    {
+      "id": "t005",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "JSP000388.no_quadratic_complement",
+      "module": "JSP000388",
+      "source": "JSP000388.lean"
+    },
+    {
+      "id": "t006",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "JSP000388.no_divisible_quadratic_complement",
+      "module": "JSP000388",
+      "source": "JSP000388.lean"
+    },
+    {
+      "id": "t007",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "JSP000388.no_square_complement",
+      "module": "JSP000388",
+      "source": "JSP000388.lean"
+    },
+    {
+      "id": "t008",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "JSP000388.polynomial_quadratic_obstruction",
+      "module": "JSP000388",
+      "source": "JSP000388.lean"
+    },
+    {
+      "id": "t009",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "JSP000388.exactComplement_iff_tiling",
+      "module": "JSP000388Complete",
+      "source": "JSP000388Complete.lean"
+    },
+    {
+      "id": "t010",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "JSP000388.exactComplement_translate",
+      "module": "JSP000388Complete",
+      "source": "JSP000388Complete.lean"
+    },
+    {
+      "id": "t011",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "JSP000388.exists_sixth_power_complement",
+      "module": "JSP000388Complete",
+      "source": "JSP000388Complete.lean"
+    },
+    {
+      "id": "t012",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "JSP000388.exists_shifted_sixth_power_complement",
+      "module": "JSP000388Complete",
+      "source": "JSP000388Complete.lean"
+    },
+    {
+      "id": "t013",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "JSP000388.exists_shifted_polynomial_complement",
+      "module": "JSP000388Complete",
+      "source": "JSP000388Complete.lean"
+    },
+    {
+      "id": "t014",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "JSP000388.jsp_000388",
+      "module": "JSP000388Complete",
+      "source": "JSP000388Complete.lean"
+    },
+    {
+      "id": "t015",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "JSP000388.existence_and_quadratic_obstruction",
+      "module": "JSP000388Complete",
+      "source": "JSP000388Complete.lean"
+    },
+    {
+      "id": "t016",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "Erdos477.erdos477",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "definition_source": "ErdosProblems/Erdos477.lean",
+      "definition_sha256": "ec594a1aaa0714bbfd23347323eb0d29ea0ccddb148f9889d65664dd7a158564"
+    },
+    {
+      "id": "t017",
+      "problem": "JSP-000388",
+      "role": "theorem",
+      "declaration": "Erdos477.erdos477_sixth_power",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "definition_source": "ErdosProblems/Erdos477.lean",
+      "definition_sha256": "ec594a1aaa0714bbfd23347323eb0d29ea0ccddb148f9889d65664dd7a158564"
+    },
+    {
+      "id": "t018",
+      "problem": "JSP-000388",
+      "role": "bridge",
+      "module": "JSP000388.VerificationBridge",
+      "source": "JSP000388/VerificationBridge.lean",
+      "declaration": "Verify388.tiles_iff"
+    },
+    {
+      "id": "t019",
+      "problem": "JSP-000388",
+      "role": "bridge",
+      "module": "JSP000388.VerificationBridge",
+      "source": "JSP000388/VerificationBridge.lean",
+      "declaration": "Verify388.original"
+    },
+    {
+      "id": "t020",
+      "problem": "JSP-000388",
+      "role": "bridge",
+      "module": "JSP000388.VerificationBridge",
+      "source": "JSP000388/VerificationBridge.lean",
+      "declaration": "Verify388.sixth_power"
+    },
+    {
+      "id": "t021",
+      "problem": "JSP-000388",
+      "role": "bridge",
+      "module": "JSP000388.VerificationBridge",
+      "source": "JSP000388/VerificationBridge.lean",
+      "declaration": "Verify388.every_integer_translate"
+    },
+    {
+      "id": "t022",
+      "problem": "JSP-000388",
+      "role": "bridge",
+      "module": "JSP000388.VerificationBridge",
+      "source": "JSP000388/VerificationBridge.lean",
+      "declaration": "Verify388.quadratic_obstruction"
+    }
+  ]
+}

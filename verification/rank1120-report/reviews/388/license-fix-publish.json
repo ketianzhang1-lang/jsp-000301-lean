@@ -1,0 +1,41 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "47a3f6a7e9b76c5f1d5b40d0e2107451c24f441a45f3e64a0ee10feaa5dc3b06",
+  "original_bytes": 16168,
+  "data": {
+    "repository_full_name": "ketianzhang1-lang/jsp-000301-lean",
+    "branch_name": "jsp-000388-quadratic-obstruction",
+    "parent_sha": "a9eae7a01edade3d5d9a386144dcd2848b4de917",
+    "base_tree_sha": "5e58a038010d0982d7c0f324cb4af21350a2b76f",
+    "selected_proof_unchanged": "a9eae7a01edade3d5d9a386144dcd2848b4de917",
+    "message": "Document complete Apache license for attributed JSP-000388 inputs",
+    "tree_elements": [
+      {
+        "path": "projects/jsp-000388/PROVENANCE.md",
+        "mode": "100644",
+        "type": "blob",
+        "content": {
+          "text_omitted": true,
+          "reason": "full text retained only in the private historical evidence",
+          "utf8_bytes": 3581,
+          "sha256": "7d12b7525ed318dad71d2985698c0c0147c38a15a07ae92f092333dae327b4b1"
+        }
+      },
+      {
+        "path": "projects/jsp-000388/APACHE-2.0.txt",
+        "mode": "100644",
+        "type": "blob",
+        "content": {
+          "text_omitted": true,
+          "reason": "full text retained only in the private historical evidence",
+          "utf8_bytes": 11357,
+          "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+        }
+      }
+    ],
+    "file_sha256": {
+      "projects/jsp-000388/PROVENANCE.md": "7d12b7525ed318dad71d2985698c0c0147c38a15a07ae92f092333dae327b4b1",
+      "projects/jsp-000388/APACHE-2.0.txt": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    }
+  }
+}

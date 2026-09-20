@@ -1,0 +1,553 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-000140",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "724a733a2b498d7b3b956e66b76d7334cc906eaf",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000140",
+      "source": "https://arxiv.org/abs/2207.02920v1",
+      "requirements": [
+        {
+          "id": "unordered-edges",
+          "description": "Colours assigned to genuine unordered edges of the complete simple graph, with at least five distinct colours on every four-vertex embedding.",
+          "targets": [
+            "t022",
+            "t023",
+            "t024",
+            "t025",
+            "t026",
+            "t027",
+            "t028",
+            "t029",
+            "t046"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "attained-minimum",
+          "description": "The standard finite palette minimum exists and is attained for all natural n; pair-model equivalence is restricted correctly to n>=2.",
+          "targets": [
+            "t030",
+            "t031",
+            "t032",
+            "t033",
+            "t034",
+            "t035",
+            "t047",
+            "t048",
+            "t049",
+            "t050",
+            "t051"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "asymptotic-original",
+          "description": "The normalized minimum f(n,4,5)/n tends to 5/6 as n tends through all natural numbers to infinity.",
+          "targets": [
+            "t038",
+            "t039",
+            "t043",
+            "t044",
+            "t045",
+            "t052"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "eventual-construction",
+          "description": "For every real epsilon>0, actual admissible colourings exist for every sufficiently large n with palette below (5/6+epsilon)n.",
+          "targets": [
+            "t040",
+            "t054"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "finite-lower",
+          "description": "For all n>=4 the stronger strict finite bound 5(n-1)<6f(n,4,5) and integer rounding are proved.",
+          "targets": [
+            "t000",
+            "t001",
+            "t002",
+            "t003",
+            "t004",
+            "t005",
+            "t006",
+            "t007",
+            "t008",
+            "t009",
+            "t010",
+            "t011",
+            "t012",
+            "t013",
+            "t014",
+            "t015",
+            "t016",
+            "t017",
+            "t018",
+            "t019",
+            "t020",
+            "t021",
+            "t036",
+            "t037",
+            "t041",
+            "t042",
+            "t053"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "t000",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.card_le_four",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t001",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.bad_quad",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t002",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.triangle_not_mono",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t003",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.fork_center_unique",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t004",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.fork_swap",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t005",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.fork_centers_not_adjacent",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t006",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.fork_closing_isolated",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t007",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.fork_closing_unique",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t008",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.edgeImage_injective",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t009",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.edgeImage_mem",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t010",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.fork_packing",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t011",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.fork_card_eq",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t012",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.sum_degree",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t013",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.quadratic_degree_bound",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t014",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.incidence_bound",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t015",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.lower_bound",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t016",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.fork_absent_color",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t017",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.strict_incidence_bound",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t018",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.strict_lower_bound",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t019",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.integer_lower_bound",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t020",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.edgeColors_four",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t021",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.lower_bound_from_vertex_sets",
+      "module": "JSP000140",
+      "source": "JSP000140.lean"
+    },
+    {
+      "id": "t022",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.four_edges",
+      "module": "JSP000140Bridge",
+      "source": "JSP000140Bridge.lean"
+    },
+    {
+      "id": "t023",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.pullback_topEdge",
+      "module": "JSP000140Bridge",
+      "source": "JSP000140Bridge.lean"
+    },
+    {
+      "id": "t024",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.six_image",
+      "module": "JSP000140Bridge",
+      "source": "JSP000140Bridge.lean"
+    },
+    {
+      "id": "t025",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.toEdges_apply",
+      "module": "JSP000140Bridge",
+      "source": "JSP000140Bridge.lean"
+    },
+    {
+      "id": "t026",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.toEdges_admissible",
+      "module": "JSP000140Bridge",
+      "source": "JSP000140Bridge.lean"
+    },
+    {
+      "id": "t027",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.fromEdges_apply",
+      "module": "JSP000140Bridge",
+      "source": "JSP000140Bridge.lean"
+    },
+    {
+      "id": "t028",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.fromEdges_symm",
+      "module": "JSP000140Bridge",
+      "source": "JSP000140Bridge.lean"
+    },
+    {
+      "id": "t029",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.fromEdges_admissible",
+      "module": "JSP000140Bridge",
+      "source": "JSP000140Bridge.lean"
+    },
+    {
+      "id": "t030",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.edge_palette_pos",
+      "module": "JSP000140Bridge",
+      "source": "JSP000140Bridge.lean"
+    },
+    {
+      "id": "t031",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.pairColorable_iff",
+      "module": "JSP000140Bridge",
+      "source": "JSP000140Bridge.lean"
+    },
+    {
+      "id": "t032",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.pairColorable_nonempty",
+      "module": "JSP000140Bridge",
+      "source": "JSP000140Bridge.lean"
+    },
+    {
+      "id": "t033",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.minPalette_spec",
+      "module": "JSP000140Bridge",
+      "source": "JSP000140Bridge.lean"
+    },
+    {
+      "id": "t034",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.minPalette_le",
+      "module": "JSP000140Bridge",
+      "source": "JSP000140Bridge.lean"
+    },
+    {
+      "id": "t035",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.minPalette_eq",
+      "module": "JSP000140Bridge",
+      "source": "JSP000140Bridge.lean"
+    },
+    {
+      "id": "t036",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.minPalette_strict_lower",
+      "module": "JSP000140Bridge",
+      "source": "JSP000140Bridge.lean"
+    },
+    {
+      "id": "t037",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.minPalette_integer_lower",
+      "module": "JSP000140Bridge",
+      "source": "JSP000140Bridge.lean"
+    },
+    {
+      "id": "t038",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.minPalette_tendsto",
+      "module": "JSP000140Complete",
+      "source": "JSP000140Complete.lean"
+    },
+    {
+      "id": "t039",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.minPalette_asymptotic",
+      "module": "JSP000140Complete",
+      "source": "JSP000140Complete.lean"
+    },
+    {
+      "id": "t040",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.eventually_near_optimal",
+      "module": "JSP000140Complete",
+      "source": "JSP000140Complete.lean"
+    },
+    {
+      "id": "t041",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.upstream_strict_lower",
+      "module": "JSP000140Complete",
+      "source": "JSP000140Complete.lean"
+    },
+    {
+      "id": "t042",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.upstream_integer_lower",
+      "module": "JSP000140Complete",
+      "source": "JSP000140Complete.lean"
+    },
+    {
+      "id": "t043",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "JSP000140.jsp_000140",
+      "module": "JSP000140Complete",
+      "source": "JSP000140Complete.lean"
+    },
+    {
+      "id": "t044",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "Erdos136.erdos_136",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "definition_source": "ErdosProblems/Erdos136.lean",
+      "definition_sha256": "9440045eefbaf31ea9c82ac4b615aa555fe44ca90a5552321918a4288694fe7c"
+    },
+    {
+      "id": "t045",
+      "problem": "JSP-000140",
+      "role": "theorem",
+      "declaration": "Erdos136.erdos136_asymptotic",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "definition_source": "ErdosProblems/Erdos136.lean",
+      "definition_sha256": "9440045eefbaf31ea9c82ac4b615aa555fe44ca90a5552321918a4288694fe7c"
+    },
+    {
+      "id": "t046",
+      "problem": "JSP-000140",
+      "role": "bridge",
+      "module": "JSP000140.VerificationBridge",
+      "source": "JSP000140/VerificationBridge.lean",
+      "declaration": "Verify140.colorable_iff"
+    },
+    {
+      "id": "t047",
+      "problem": "JSP-000140",
+      "role": "bridge",
+      "module": "JSP000140.VerificationBridge",
+      "source": "JSP000140/VerificationBridge.lean",
+      "declaration": "Verify140.colorable_exists"
+    },
+    {
+      "id": "t048",
+      "problem": "JSP-000140",
+      "role": "bridge",
+      "module": "JSP000140.VerificationBridge",
+      "source": "JSP000140/VerificationBridge.lean",
+      "declaration": "Verify140.minimum_eq"
+    },
+    {
+      "id": "t049",
+      "problem": "JSP-000140",
+      "role": "bridge",
+      "module": "JSP000140.VerificationBridge",
+      "source": "JSP000140/VerificationBridge.lean",
+      "declaration": "Verify140.minimum_attained"
+    },
+    {
+      "id": "t050",
+      "problem": "JSP-000140",
+      "role": "bridge",
+      "module": "JSP000140.VerificationBridge",
+      "source": "JSP000140/VerificationBridge.lean",
+      "declaration": "Verify140.minimum_le"
+    },
+    {
+      "id": "t051",
+      "problem": "JSP-000140",
+      "role": "bridge",
+      "module": "JSP000140.VerificationBridge",
+      "source": "JSP000140/VerificationBridge.lean",
+      "declaration": "Verify140.pair_minimum_eq"
+    },
+    {
+      "id": "t052",
+      "problem": "JSP-000140",
+      "role": "bridge",
+      "module": "JSP000140.VerificationBridge",
+      "source": "JSP000140/VerificationBridge.lean",
+      "declaration": "Verify140.original"
+    },
+    {
+      "id": "t053",
+      "problem": "JSP-000140",
+      "role": "bridge",
+      "module": "JSP000140.VerificationBridge",
+      "source": "JSP000140/VerificationBridge.lean",
+      "declaration": "Verify140.finite_strict_lower"
+    },
+    {
+      "id": "t054",
+      "problem": "JSP-000140",
+      "role": "bridge",
+      "module": "JSP000140.VerificationBridge",
+      "source": "JSP000140/VerificationBridge.lean",
+      "declaration": "Verify140.genuine_eventual_colourings"
+    }
+  ]
+}

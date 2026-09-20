@@ -1,0 +1,35 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "e155bbcce1c5996e2751eb3d805f695f76c69df3d38526fe900c4acee4150615",
+  "original_bytes": 1636,
+  "data": {
+    "static_review_only": true,
+    "selected_commit": "724a733a2b498d7b3b956e66b76d7334cc906eaf",
+    "checked_at_utc": "2026-09-20T02:46:19.225829+00:00",
+    "original_target_count": 46,
+    "fresh_bridge_count": 9,
+    "target_count": 55,
+    "original_source_hashes": {
+      "JSP000140Bridge.lean": "79b59e6ccafcd942d64b6cc2dc6d2f53c3d31005042c6b7d508d6674018be6e6",
+      "JSP000140.lean": "e41cf87887310cfbc9a1c83e70e090ddc790e35e6c504b16599b39360180060d",
+      "JSP000140Complete.lean": "0e402dcee96eb9ff77780462cc7b18944ae47645df9fd564391123d46dbe9a02"
+    },
+    "upstream_count": 20,
+    "upstream_port_changed_count": 6,
+    "dependency_pins": {
+      "mathlib": "5ed2965256430c3649e86755f9576b54eca72435",
+      "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+      "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+    },
+    "upstream_source_manifest_sha256": "2a94ef48e46c1a16ec03f2561cc3787378df7b37b4f57de46afd15d140c4caf2",
+    "target_manifest_sha256": "5f26ce800147f889185cfe3511296fac557f42f9371c34bfdfef393417df2315",
+    "bridge_sha256": "ce739ea03b8652d8f7e32a95625d9f7daaebb6674c9ce28cdafef5d3f4b5d70b",
+    "review_limit": "No local Lean/Lake/external proof checker executed. Final exact-version execution and acceptance judgments depend on root CI evidence inspection."
+  }
+}

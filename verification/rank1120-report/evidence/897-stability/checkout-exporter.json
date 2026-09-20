@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "git",
+    "-C",
+    "/out/tools/exporter",
+    "checkout",
+    "--detach",
+    "6cea97789dc088ea47fcea15692db85685aedac5"
+  ],
+  "cwd": "/out",
+  "exit_code": 0,
+  "seconds": 0.007710933685302734,
+  "log": "/out/checkout-exporter.log",
+  "log_sha256": "aec7627fd5aec56fc674233a33368c806a5ece948f7bc2c67e0369f878a1b037"
+}

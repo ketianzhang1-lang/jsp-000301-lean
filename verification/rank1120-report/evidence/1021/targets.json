@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-001021",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "7642a7f5eb190da6319b6ae7f11c829d7737e2dd",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-001021",
+      "source": "https://www.erdosproblems.com/1216",
+      "requirements": [
+        {
+          "id": "all-tournament-objects",
+          "description": "The relation encodes every loop-free orientation of the complete graph and preserves its arcs.",
+          "targets": [
+            "t003",
+            "t004",
+            "t005",
+            "t011",
+            "t012",
+            "t013"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "actual-extremal-function",
+          "description": "Largest k<=n guaranteed in every n-vertex tournament, with genuinely injective ordered transitive subsets.",
+          "targets": [
+            "t001",
+            "t006",
+            "t014"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "universal-formula-negated",
+          "description": "Original Erdos-Moser1964 page127 universal equality for all positive n is disproved; not an all-n exact-value computation.",
+          "targets": [
+            "t002",
+            "t007",
+            "t015",
+            "t016"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "fifteen-vertex-counterexample",
+          "description": "The credited fourteen-vertex theorem, transported to every fifteen-vertex tournament, guarantees a transitive five-set; f(15)>=5>floor(log2 15)+1=4.",
+          "targets": [
+            "t000",
+            "t004",
+            "t005",
+            "t006",
+            "t013",
+            "t015"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "supplementary-local-certificates",
+          "description": "Independent reconstruction supplies only stated local exclusions, retained count and forced-model witness; full main route remains credited upstream14 proof.",
+          "targets": [
+            "t008",
+            "t009",
+            "t010"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "t000",
+      "problem": "JSP-001021",
+      "role": "theorem",
+      "module": "JSP001021",
+      "source": "JSP001021.lean",
+      "declaration": "Erdos1216.directed_ramsey_five_fourteen",
+      "definition_source": "ErdosProblems/Erdos1216.lean",
+      "definition_sha256": "352f0cc4def0150e62858792f60ca80b70088f97b53d020722b8e56f4a079491",
+      "verification_entry_note": "The unchanged tracked project entry imports the immutable bootstrapped upstream definition. The original clean verifier compiles and kernel-replays that definition module; its original and ported hashes are checked by UPSTREAM.json. The official auditor checks this exact declaration individually through the tracked native Lake entry, while the evidence inspector separately checks definition_source against definition_sha256. No proof source or Lake configuration is modified."
+    },
+    {
+      "id": "t001",
+      "problem": "JSP-001021",
+      "role": "theorem",
+      "module": "JSP001021",
+      "source": "JSP001021.lean",
+      "declaration": "Erdos1216.f_fourteen_eq_five",
+      "definition_source": "ErdosProblems/Erdos1216.lean",
+      "definition_sha256": "352f0cc4def0150e62858792f60ca80b70088f97b53d020722b8e56f4a079491",
+      "verification_entry_note": "The unchanged tracked project entry imports the immutable bootstrapped upstream definition. The original clean verifier compiles and kernel-replays that definition module; its original and ported hashes are checked by UPSTREAM.json. The official auditor checks this exact declaration individually through the tracked native Lake entry, while the evidence inspector separately checks definition_source against definition_sha256. No proof source or Lake configuration is modified."
+    },
+    {
+      "id": "t002",
+      "problem": "JSP-001021",
+      "role": "theorem",
+      "module": "JSP001021",
+      "source": "JSP001021.lean",
+      "declaration": "Erdos1216.not_erdos_1216",
+      "definition_source": "ErdosProblems/Erdos1216.lean",
+      "definition_sha256": "352f0cc4def0150e62858792f60ca80b70088f97b53d020722b8e56f4a079491",
+      "verification_entry_note": "The unchanged tracked project entry imports the immutable bootstrapped upstream definition. The original clean verifier compiles and kernel-replays that definition module; its original and ported hashes are checked by UPSTREAM.json. The official auditor checks this exact declaration individually through the tracked native Lake entry, while the evidence inspector separately checks definition_source against definition_sha256. No proof source or Lake configuration is modified."
+    },
+    {
+      "id": "t003",
+      "problem": "JSP-001021",
+      "role": "theorem",
+      "module": "JSP001021",
+      "source": "JSP001021.lean",
+      "declaration": "JSP001021.restrict14_arc"
+    },
+    {
+      "id": "t004",
+      "problem": "JSP-001021",
+      "role": "theorem",
+      "module": "JSP001021",
+      "source": "JSP001021.lean",
+      "declaration": "JSP001021.all_orders"
+    },
+    {
+      "id": "t005",
+      "problem": "JSP-001021",
+      "role": "theorem",
+      "module": "JSP001021",
+      "source": "JSP001021.lean",
+      "declaration": "JSP001021.fifteen_vertices"
+    },
+    {
+      "id": "t006",
+      "problem": "JSP-001021",
+      "role": "theorem",
+      "module": "JSP001021",
+      "source": "JSP001021.lean",
+      "declaration": "JSP001021.five_le_f_fifteen"
+    },
+    {
+      "id": "t007",
+      "problem": "JSP-001021",
+      "role": "theorem",
+      "module": "JSP001021",
+      "source": "JSP001021.lean",
+      "declaration": "JSP001021.jsp_001021"
+    },
+    {
+      "id": "t008",
+      "problem": "JSP-001021",
+      "role": "theorem",
+      "module": "FiniteChecks",
+      "source": "FiniteChecks.lean",
+      "declaration": "JSP001021.LocalChecks.local_exclusions"
+    },
+    {
+      "id": "t009",
+      "problem": "JSP-001021",
+      "role": "theorem",
+      "module": "FiniteChecks",
+      "source": "FiniteChecks.lean",
+      "declaration": "JSP001021.LocalChecks.retained_count"
+    },
+    {
+      "id": "t010",
+      "problem": "JSP-001021",
+      "role": "theorem",
+      "module": "FiniteChecks",
+      "source": "FiniteChecks.lean",
+      "declaration": "JSP001021.LocalChecks.final_transitive_five"
+    },
+    {
+      "id": "t011",
+      "problem": "JSP-001021",
+      "role": "bridge",
+      "module": "JSP001021.VerificationBridge",
+      "source": "JSP001021/VerificationBridge.lean",
+      "declaration": "Verify1021.encode15_get"
+    },
+    {
+      "id": "t012",
+      "problem": "JSP-001021",
+      "role": "bridge",
+      "module": "JSP001021.VerificationBridge",
+      "source": "JSP001021/VerificationBridge.lean",
+      "declaration": "Verify1021.encode15_arc"
+    },
+    {
+      "id": "t013",
+      "problem": "JSP-001021",
+      "role": "bridge",
+      "module": "JSP001021.VerificationBridge",
+      "source": "JSP001021/VerificationBridge.lean",
+      "declaration": "Verify1021.fifteen_all_relations"
+    },
+    {
+      "id": "t014",
+      "problem": "JSP-001021",
+      "role": "bridge",
+      "module": "JSP001021.VerificationBridge",
+      "source": "JSP001021/VerificationBridge.lean",
+      "declaration": "Verify1021.literal_extremal"
+    },
+    {
+      "id": "t015",
+      "problem": "JSP-001021",
+      "role": "bridge",
+      "module": "JSP001021.VerificationBridge",
+      "source": "JSP001021/VerificationBridge.lean",
+      "declaration": "Verify1021.counterexample_at_fifteen"
+    },
+    {
+      "id": "t016",
+      "problem": "JSP-001021",
+      "role": "bridge",
+      "module": "JSP001021.VerificationBridge",
+      "source": "JSP001021/VerificationBridge.lean",
+      "declaration": "Verify1021.intended"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "artifact_id": 10597700221,
+  "workflow_run": 35484654492,
+  "harness_commit": "784e798f90142e91aecbf3500e84e25f51a4ba84",
+  "filename": "failed-388-run1.zip",
+  "sha256": "5a983383a176fde419ab243cababc2932ea64c0ae87a1a7f8cb03cf9622ce7ba",
+  "bytes": 209656,
+  "internal_files_verified": 244,
+  "workflow_job": 106008713521
+}

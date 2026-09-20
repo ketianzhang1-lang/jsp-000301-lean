@@ -1,0 +1,1212 @@
+{
+  "140": {
+    "status": "mechanical_evidence_validated",
+    "semantic_verdict": "requires_separate_review",
+    "proof_commit": "724a733a2b498d7b3b956e66b76d7334cc906eaf",
+    "branch_tip": "57d5fd25ccc2f965f58c205d7a7e2f65267a190a",
+    "target_count": 55,
+    "original_target_count": 46,
+    "axioms": {
+      "JSP000140.card_le_four": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.bad_quad": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.triangle_not_mono": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.fork_center_unique": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.fork_swap": [],
+      "JSP000140.fork_centers_not_adjacent": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.fork_closing_isolated": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.fork_closing_unique": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.edgeImage_injective": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.edgeImage_mem": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.fork_packing": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.fork_card_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.sum_degree": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.quadratic_degree_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.incidence_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.lower_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.fork_absent_color": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.strict_incidence_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.strict_lower_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.integer_lower_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.edgeColors_four": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.lower_bound_from_vertex_sets": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.four_edges": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.pullback_topEdge": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.six_image": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.toEdges_apply": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.toEdges_admissible": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.fromEdges_apply": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.fromEdges_symm": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.fromEdges_admissible": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.edge_palette_pos": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.pairColorable_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.pairColorable_nonempty": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.minPalette_spec": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.minPalette_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.minPalette_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.minPalette_strict_lower": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.minPalette_integer_lower": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.minPalette_tendsto": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.minPalette_asymptotic": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.eventually_near_optimal": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.upstream_strict_lower": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.upstream_integer_lower": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000140.jsp_000140": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Erdos136.erdos_136": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Erdos136.erdos136_asymptotic": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify140.colorable_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify140.colorable_exists": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify140.minimum_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify140.minimum_attained": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify140.minimum_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify140.pair_minimum_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify140.original": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify140.finite_strict_lower": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify140.genuine_eventual_colourings": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "source_inputs_stable": true,
+    "dependency_count": 9,
+    "dependencies": {
+      "mathlib": "5ed2965256430c3649e86755f9576b54eca72435",
+      "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+      "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+    },
+    "nanoda_declarations": 56018,
+    "official_script_sha256": "5db45dddcb4d588bc27e7c7161fbca5cedaa3e73e1c40843d21f5a214323cd07",
+    "manifest_sha256": "f3a3d6eb86b89abc11b32c8b3c0fb24033d80134a860bb8f5b3d884060d8d788",
+    "image_id": "sha256:d2adad51124ddc14629871b30f6904b08d8abb3b4368ccdfb53eac8d381dcc1e",
+    "artifact_files_hashed": 403,
+    "original_verification_records": [
+      {
+        "status": "passed",
+        "toolchain": "leanprover/lean4:v4.34.0",
+        "preparation_head": "724a733a2b498d7b3b956e66b76d7334cc906eaf",
+        "modules_compiled": [
+          "JSP000140",
+          "ErdosProblems.Erdos136.Definitions",
+          "JSP000140Bridge",
+          "ErdosProblems.Erdos136.Hypergraph",
+          "ErdosProblems.Erdos136.Freedman",
+          "ErdosProblems.Erdos136.CFMTrajectories",
+          "ErdosProblems.Erdos136.McDiarmid",
+          "ErdosProblems.Erdos136.CFMRegularization",
+          "ErdosProblems.Erdos136.ConflictFreeMatching",
+          "ErdosProblems.Erdos136.Completion",
+          "ErdosProblems.Erdos136.PartialConstruction",
+          "ErdosProblems.Erdos136.UpperParameters",
+          "ErdosProblems.Erdos136.AuxConcentration",
+          "ErdosProblems.Erdos136.ConflictCounts",
+          "ErdosProblems.Erdos136.TrackedTests",
+          "ErdosProblems.Erdos136.LowerBound",
+          "ErdosProblems.Erdos136.Asymptotics",
+          "ErdosProblems.Erdos136.LocalLemma",
+          "ErdosProblems.Erdos136.LeaveCompletion",
+          "ErdosProblems.Erdos136.UpperReduction",
+          "ErdosProblems.Erdos136.UpperConstruction",
+          "ErdosProblems.Erdos136",
+          "JSP000140Complete",
+          "AuditComplete"
+        ],
+        "axiom_reports": 46,
+        "allowed_axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "dependency_count": 9,
+        "kernel_prefixes": [
+          "ErdosProblems",
+          "JSP000140",
+          "JSP000140Bridge",
+          "JSP000140Complete"
+        ],
+        "source_sha256": {
+          "JSP000140.lean": "e41cf87887310cfbc9a1c83e70e090ddc790e35e6c504b16599b39360180060d",
+          "ErdosProblems/Erdos136/Definitions.lean": "552ac551a78723420d6ea33bf56eab55935405071a81a4e0993aad3651ea54de",
+          "JSP000140Bridge.lean": "79b59e6ccafcd942d64b6cc2dc6d2f53c3d31005042c6b7d508d6674018be6e6",
+          "ErdosProblems/Erdos136/Hypergraph.lean": "296802f3f7f489b41a4fab8b694713219065d8c0e956f46a6dcaafda228d5b4d",
+          "ErdosProblems/Erdos136/Freedman.lean": "b7185993b93f5488f45d638ee1793b0b928a2405fc5f87c57fcb5b6297847841",
+          "ErdosProblems/Erdos136/CFMTrajectories.lean": "beb19525712e9a003fe08ff16653c3c9b9a4374ef437ca9471ee8da3cb827494",
+          "ErdosProblems/Erdos136/McDiarmid.lean": "04f3cf0c11011eb344aa5db69158520b4840cf4ea50d195b980aa7cb82cf3d9c",
+          "ErdosProblems/Erdos136/CFMRegularization.lean": "bf7e1a5fce418436d8b844bcd187c67d21a071e9b49b2e4105551bdb18b36520",
+          "ErdosProblems/Erdos136/ConflictFreeMatching.lean": "f1d0f24d55d0895d2d59fbefdcd8a170d92a86613d0c89379112e3e75fce2a10",
+          "ErdosProblems/Erdos136/Completion.lean": "df69d0ab964805e908e78657a5008aaf1c37cd5b7a4f1778b7e241655815c6c0",
+          "ErdosProblems/Erdos136/PartialConstruction.lean": "ce9d25957f554e6dba200398f3fabcc9f44f5b98bb21fd8d55402cb1f0e02fa1",
+          "ErdosProblems/Erdos136/UpperParameters.lean": "6282a94107b950d17a9de52a4123fe5cc9ded83940b203dcc8ad71edc364061b",
+          "ErdosProblems/Erdos136/AuxConcentration.lean": "46683923586423eb17b5e7d5c5c86d9b1c157aa707896f8f4884f6d644fb9e5a",
+          "ErdosProblems/Erdos136/ConflictCounts.lean": "7a07b3ece4533417c4ddb5282be610cfd9bb375346ec57857e013f1672877d4a",
+          "ErdosProblems/Erdos136/TrackedTests.lean": "51bc55f40dfeea6e558fde25abddbbbc095c21846d7bd413cbe8e6ecd9ac9386",
+          "ErdosProblems/Erdos136/LowerBound.lean": "674f2005ac41f57c79b2137e26a700bff35b1469bf3ae7134e4a068a18c1488a",
+          "ErdosProblems/Erdos136/Asymptotics.lean": "37575a8b1255bd9422e187950c0b2bd728ed1cab5c3eadf304dc99a20d1d4f44",
+          "ErdosProblems/Erdos136/LocalLemma.lean": "46373b6e649177544eec4b8b1c12fdd8917bcd783fe552b1f2e7df6dab7bd548",
+          "ErdosProblems/Erdos136/LeaveCompletion.lean": "a605e284511201aebf483d67d257b4eefde941397b7c27b50c32b5905d103960",
+          "ErdosProblems/Erdos136/UpperReduction.lean": "9029c770e559f7d7047d510bab202da4d54bf4d30335ba310b334673211002c0",
+          "ErdosProblems/Erdos136/UpperConstruction.lean": "07a9e63958bd5fa60414c511aca6912574c79bb49ff83e78aaea3e8978a7ca4d",
+          "ErdosProblems/Erdos136.lean": "9440045eefbaf31ea9c82ac4b615aa555fe44ca90a5552321918a4288694fe7c",
+          "JSP000140Complete.lean": "0e402dcee96eb9ff77780462cc7b18944ae47645df9fd564391123d46dbe9a02",
+          "AuditComplete.lean": "87c108cf02956ce57e02a3c281eba57d9f0bc26920bbf9d8c936b5b6247025fa"
+        },
+        "object_sha256": {
+          "JSP000140": "bb3f23826cca66bbd996790e44aeb5eff7d9c52b2cdd6d68d668663e75c87305",
+          "ErdosProblems.Erdos136.Definitions": "ba7b1d551bceda61711ead0a807bc527b2781def616634b60456a8a332170881",
+          "JSP000140Bridge": "bdd79cd038515a091d8025211e90b37522b177d3b4f91c7bd6e4124039f35bac",
+          "ErdosProblems.Erdos136.Hypergraph": "13081f46fa8e56247345370c84102b2a5ff47927ae81c3d242910ccc9f1e639a",
+          "ErdosProblems.Erdos136.Freedman": "c0f987fb63516160ae3d0c2a1015678c91e5c4798430f94dd776591111fc1b5c",
+          "ErdosProblems.Erdos136.CFMTrajectories": "9d2bfa074563512043f05c56701be35e7ff7a67fa4bf0618ac4ec71c114a1627",
+          "ErdosProblems.Erdos136.McDiarmid": "d68ed830255eeecf2397db3a123f044d3cca6df6d26e4c56b9a9c6bcb1edd75c",
+          "ErdosProblems.Erdos136.CFMRegularization": "1f0d2754c864e6acdf5b1e5e45608aec8800f9ff8e27439efd0ed6991108f434",
+          "ErdosProblems.Erdos136.ConflictFreeMatching": "e333cfa4427bfe8a6fec5c3771a91063c73447feaaa6d57814baade2f2f4a9c7",
+          "ErdosProblems.Erdos136.Completion": "e35ba007c40cc65b6fd85848da81f41229d256ff7fca8d08770968784be5a338",
+          "ErdosProblems.Erdos136.PartialConstruction": "afee926ac61aa3e3a6d7b6ec23766d71b388fa5cabc2636b4fe5d1b3428f6993",
+          "ErdosProblems.Erdos136.UpperParameters": "006604cc1a2536a065ed2703f26ab569b1a654f43a3e511ad20e29194097d8ce",
+          "ErdosProblems.Erdos136.AuxConcentration": "b987a9ac579f5f3882dde50c91f51edb4d3495afaafd64bb8ea1ef125fc92789",
+          "ErdosProblems.Erdos136.ConflictCounts": "e3fe79d353efbbeac30453c01274817050ff3794912853e8c0fd957aa7e1c0ec",
+          "ErdosProblems.Erdos136.TrackedTests": "f84c5812d0a1a94820514fabf182589e54f65ffe0aa6b133f644fb38750b6d69",
+          "ErdosProblems.Erdos136.LowerBound": "61974379711c988e7f4bbdafafcdc8366d1de0ed7541c801b64d0039d20a5db5",
+          "ErdosProblems.Erdos136.Asymptotics": "247606c9fefb766bfd3b334251a2ab44feab5ae50fabb8a551b4a44e5aa9c272",
+          "ErdosProblems.Erdos136.LocalLemma": "a20337e8bd623afc43e33403aa44aea44f446fb5648fc13fc84c65d908738b57",
+          "ErdosProblems.Erdos136.LeaveCompletion": "1a92e32936f182ca438e5a1d46e62ed949a7c7f3916d9a6a537ac309cf7da586",
+          "ErdosProblems.Erdos136.UpperReduction": "b15a7cea8329391e4a3d2c8a069943389a301957fd00da0f02a9e324632ebc1e",
+          "ErdosProblems.Erdos136.UpperConstruction": "8a96d00d47937992d3200be148c1892f08d6e6e97ce4d03e91cc41ecb7839760",
+          "ErdosProblems.Erdos136": "be8c6320933da3c56b5bc07e2033d5d5d34ee83b4e6429d013f7cca298696f66",
+          "JSP000140Complete": "27a379e295fd1bf1c8fa421217e3100c2492609c8402d4f801ed79fad1fe9589",
+          "AuditComplete": "bbaf84204b79c111b09358a922fb363cadd0d7c1f9a03da723681e36995da46e"
+        },
+        "limits": "Contributor-run compilation and replay with cached pinned Mathlib. Resumed local builds are explicitly hash-matched. No independent human certification."
+      }
+    ],
+    "original_kernel_logs": [
+      "fresh-project-evidence/kernel-ErdosProblems.log",
+      "fresh-project-evidence/kernel-JSP000140.log",
+      "fresh-project-evidence/kernel-JSP000140Bridge.log",
+      "fresh-project-evidence/kernel-JSP000140Complete.log"
+    ],
+    "original_axiom_outputs": [
+      {
+        "log": "fresh-project-evidence/axioms.log",
+        "source": "AuditComplete.lean",
+        "targets": 46
+      }
+    ],
+    "negative_controls": [
+      {
+        "log": "fresh-project-evidence/negative-control.log",
+        "expected_exit": "nonzero",
+        "proposition": "1 = 0",
+        "exit_evidence": "mathematical Lean error; nonzero exit enforced by successful original verifier",
+        "separate_exit_code_recorded": false
+      }
+    ],
+    "strict_bridge_precheck": "validated",
+    "bridge_source_sha256": "ce739ea03b8652d8f7e32a95625d9f7daaebb6674c9ce28cdafef5d3f4b5d70b",
+    "manual_equivalent_builds": 0,
+    "reviewed_infrastructure_warnings": [],
+    "stages": {
+      "versions": {
+        "argv": [
+          "bash",
+          "-c",
+          "set -e; lean --version; lake --version; rustc --version; cargo --version; id; uname -a"
+        ],
+        "cwd": "/work/projects/jsp-000140",
+        "exit_code": 0,
+        "seconds": 0.16418790817260742,
+        "log": "/out/versions.log",
+        "log_sha256": "88e168f92bc2de426097e998e59aebc5ab298c61a120cf8c4f13cde9bf1ff484"
+      },
+      "build-exporter": {
+        "argv": [
+          "lake",
+          "build"
+        ],
+        "cwd": "/out/tools/exporter",
+        "exit_code": 0,
+        "seconds": 8.881438493728638,
+        "log": "/out/build-exporter.log",
+        "log_sha256": "2b226561603ac2cfc746120a0a06b3e80b8f9cb418175f26f2a97386789c6c4b"
+      },
+      "build-checker": {
+        "argv": [
+          "cargo",
+          "build",
+          "--release",
+          "--locked"
+        ],
+        "cwd": "/out/tools/checker",
+        "exit_code": 0,
+        "seconds": 16.808319091796875,
+        "log": "/out/build-checker.log",
+        "log_sha256": "a3cd7f40e2be4c24ac8c0c1252bd933bc898683059ec2ac10df4a54ad7bb122b"
+      },
+      "original-clean-verifier": {
+        "argv": [
+          "python3",
+          "scripts/verify_complete.py"
+        ],
+        "cwd": "/work/projects/jsp-000140",
+        "exit_code": 0,
+        "seconds": 952.5019843578339,
+        "log": "/out/original-clean-verifier.log",
+        "log_sha256": "46bbf74bfab5277afae9a0236132a961c6f2d14c188c2cd4086001fca594f35c"
+      },
+      "official-preflight": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "preflight",
+          "/out/targets.json",
+          "--out",
+          "/out/preflight"
+        ],
+        "cwd": "/work/projects/jsp-000140",
+        "exit_code": 0,
+        "seconds": 0.11403226852416992,
+        "log": "/out/official-preflight.log",
+        "log_sha256": "613c62a2a33d6e15c24e4c8d44d434f3c225e9990fbd4b1486f9106432caa5ee"
+      },
+      "official-audit": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "run",
+          "/out/targets.json",
+          "--out",
+          "/out/audit",
+          "--lake",
+          "/opt/elan/toolchains/leanprover--lean4---v4.34.0/bin/lake",
+          "--timeout",
+          "2400"
+        ],
+        "cwd": "/work/projects/jsp-000140",
+        "exit_code": 0,
+        "seconds": 1116.4620025157928,
+        "log": "/out/official-audit.log",
+        "log_sha256": "f9a7cf59effb4c972a387d69d0548e59162cb66f1d03fcc41d2114bb0d64820f"
+      },
+      "bridge-kernel": {
+        "argv": [
+          "lake",
+          "env",
+          "leanchecker",
+          "JSP000140.VerificationBridge"
+        ],
+        "cwd": "/work/projects/jsp-000140",
+        "exit_code": 0,
+        "seconds": 5.123186826705933,
+        "log": "/out/bridge-kernel.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "independent-nanoda": {
+        "argv": [
+          "/out/tools/checker/target/release/nanoda_bin",
+          "/out/nanoda-config.json"
+        ],
+        "cwd": "/work/projects/jsp-000140",
+        "exit_code": 0,
+        "seconds": 37.595130920410156,
+        "log": "/out/independent-nanoda.log",
+        "log_sha256": "085b55c04e68b48316507124d80f2136be3a09f4fef0c74e6ca08db8ab41ec10"
+      },
+      "dependencies": {
+        "argv": [
+          "python3",
+          "-c",
+          "import json,subprocess;from pathlib import Path;ps=json.loads(Path('lake-manifest.json').read_text())['packages'];a={p['name']:subprocess.check_output(['git','-C','.lake/packages/'+p['name'],'rev-parse','HEAD'],text=True).strip() for p in ps};print(json.dumps(a,indent=2));assert all(a[p['name']]==p['rev'] for p in ps)"
+        ],
+        "cwd": "/work/projects/jsp-000140",
+        "exit_code": 0,
+        "seconds": 0.03191113471984863,
+        "log": "/out/dependencies.log",
+        "log_sha256": "b2a8633ca0ace385dd76cab4bf1f246bfa7a38bb7e1fa377cac97a4c27a11a44"
+      },
+      "final-status": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain",
+          "--untracked-files=all"
+        ],
+        "cwd": "/work/projects/jsp-000140",
+        "exit_code": 0,
+        "seconds": 0.003548860549926758,
+        "log": "/out/final-status.log",
+        "log_sha256": "f406a4eb558ebcdae396ef7a82ee21fa9884b451da44161164d297d16161e97e"
+      },
+      "compress-export": {
+        "argv": [
+          "gzip",
+          "-n",
+          "/out/export.ndjson"
+        ],
+        "cwd": "/out",
+        "exit_code": 0,
+        "seconds": 10.736597299575806,
+        "log": "/out/compress-export.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "prepare-dependencies-0": {
+        "argv": [
+          "lake",
+          "exe",
+          "cache",
+          "get",
+          "Mathlib"
+        ],
+        "cwd": "/work/projects/jsp-000140",
+        "exit_code": 0,
+        "seconds": 102.95095729827881,
+        "log": "/out/prepare-dependencies-0.log",
+        "log_sha256": "c3cb4921f70c1873e6262d70f53c65959b3d36733f5532c1dcc94e23dc4a1ec1"
+      },
+      "prepare-dependencies-1": {
+        "argv": [
+          "lake",
+          "build",
+          "Mathlib"
+        ],
+        "cwd": "/work/projects/jsp-000140",
+        "exit_code": 0,
+        "seconds": 18.344549894332886,
+        "log": "/out/prepare-dependencies-1.log",
+        "log_sha256": "615739919799ccbacebef03bc961258a6574f4f54d8e45304c706c3b348d1b96"
+      },
+      "bootstrap": {
+        "argv": [
+          "python3",
+          "scripts/bootstrap.py"
+        ],
+        "cwd": "/work/projects/jsp-000140",
+        "exit_code": 0,
+        "seconds": 3.9708361625671387,
+        "log": "/out/bootstrap.log",
+        "log_sha256": "6f4d18bfa2ef0f248ea95c5d1ddd9f378937daae4f9544f91d6ceb4aa5b25b94"
+      },
+      "bridge-precheck": {
+        "argv": [
+          "lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "-j1",
+          "-M12000",
+          "-o",
+          "/work/projects/jsp-000140/.lake/build/lib/lean/JSP000140/VerificationBridge.olean",
+          "/work/projects/jsp-000140/JSP000140/VerificationBridge.lean"
+        ],
+        "cwd": "/work/projects/jsp-000140",
+        "exit_code": 0,
+        "seconds": 3.8721272945404053,
+        "log": "/out/bridge-precheck.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  "725": {
+    "status": "mechanical_evidence_validated",
+    "semantic_verdict": "requires_separate_review",
+    "proof_commit": "d0d37952bba030d7c8a68f000094e0d601d9fed7",
+    "branch_tip": "5a83c4c7822c43a65d22e894595514f841d76609",
+    "target_count": 34,
+    "original_target_count": 28,
+    "axioms": {
+      "JSP000725.sum_lower": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.sum_upper": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.interval_ordered_sums": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.interval_admissible": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.interval_card": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.length_le_endpoint": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.construction_for_every_N": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.even_length_family": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.sum_block": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.boundary_obstruction": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.card_toInt": [
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.sum_toInt": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.admissible_iff_cardinality_determined": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.admissible_iff_upstream": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.bounded_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.boundedAdmissible_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.exists_nat_preimage": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.mem_admissibleFamily": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.maxCard_eq_upstream": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.strausLength_feasible": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.terminalInterval_spec": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.card_le_maxCard": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.eventual_maxCard_exact": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.eventual_terminalInterval_optimal": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.maxCard_asymptotic": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "JSP000725.jsp_000725": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Erdos874.erdos_874_eventual_exact": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Erdos874.erdos_874": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify725.admissible_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify725.all_N_witness": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify725.maximum_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify725.eventual_arbitrary_set_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify725.eventual_attained_maximum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Verify725.sharp_asymptotic": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "source_inputs_stable": true,
+    "dependency_count": 9,
+    "dependencies": {
+      "mathlib": "5ed2965256430c3649e86755f9576b54eca72435",
+      "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+      "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+    },
+    "nanoda_declarations": 33095,
+    "official_script_sha256": "5db45dddcb4d588bc27e7c7161fbca5cedaa3e73e1c40843d21f5a214323cd07",
+    "manifest_sha256": "31700d3d37e63dfa8f1ba02e5aa0df9502020b41a9e0b9a330daa1defc09e9de",
+    "image_id": "sha256:0b0abf08673d0f454a66438b560c6e9a0aba95933c1a5344acbcbf175c44d817",
+    "artifact_files_hashed": 353,
+    "original_verification_records": [
+      {
+        "status": "passed",
+        "toolchain": "leanprover/lean4:v4.34.0",
+        "preparation_head": "d0d37952bba030d7c8a68f000094e0d601d9fed7",
+        "modules_compiled": [
+          "JSP000725",
+          "ErdosProblems.Erdos874.Foundations",
+          "JSP000725Bridge",
+          "ErdosProblems.Erdos874.Tail",
+          "ErdosProblems.Erdos874.Asymptotics",
+          "ErdosProblems.Erdos874.ExactUpper",
+          "ErdosProblems.Erdos874.RestrictedGrowth",
+          "ErdosProblems.Erdos874.FreimanDimension",
+          "ErdosProblems.Erdos874.FreimanNormalization",
+          "ErdosProblems.Erdos13.Erdos13MulStab",
+          "ErdosProblems.Erdos13.Erdos13Kneser",
+          "ErdosProblems.Erdos13.Erdos13Additive",
+          "ErdosProblems.Erdos874.LevSmelianski",
+          "ErdosProblems.Erdos874.FreimanNormalizedCore",
+          "ErdosProblems.Erdos874.FreimanThreeKInductive",
+          "ErdosProblems.Erdos874.FreimanThreeKMinusFour",
+          "ErdosProblems.Erdos874.ProgressionExtraction",
+          "ErdosProblems.Erdos874.LongProgression",
+          "ErdosProblems.Erdos874.PopularPairs",
+          "ErdosProblems.Erdos874.NearIndexFiber",
+          "ErdosProblems.Erdos874.RestrictedSums",
+          "ErdosProblems.Erdos874.FreimanEngine",
+          "ErdosProblems.Erdos874.LayerSelection",
+          "ErdosProblems.Erdos874.ModularDecomposition",
+          "ErdosProblems.Erdos874.ResidueSubgroup",
+          "ErdosProblems.Erdos874.SubgroupGenerators",
+          "ErdosProblems.Erdos874.ConvexTranslate",
+          "ErdosProblems.Erdos874.MixedSumPath",
+          "ErdosProblems.Erdos874.ResidueAlignment",
+          "ErdosProblems.Erdos874.AlignedBlockSum",
+          "ErdosProblems.Erdos874.RegularSpan",
+          "ErdosProblems.Erdos874.ModularStructure",
+          "ErdosProblems.Erdos874.RoughUpper",
+          "ErdosProblems.Erdos874.SmallFourLayer",
+          "ErdosProblems.Erdos874.StrausUpper",
+          "ErdosProblems.Erdos874.Thresholds",
+          "ErdosProblems.Erdos874.Structure",
+          "ErdosProblems.Erdos874.CentralSpan",
+          "ErdosProblems.Erdos874.LayerOrdering",
+          "ErdosProblems.Erdos874.LocalDensity",
+          "ErdosProblems.Erdos874.DensityEndgame",
+          "ErdosProblems.Erdos874.CentralExtractor",
+          "ErdosProblems.Erdos874.EndpointOrientation",
+          "ErdosProblems.Erdos874",
+          "JSP000725Complete",
+          "AuditComplete"
+        ],
+        "axiom_reports": 28,
+        "allowed_axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "dependency_count": 9,
+        "kernel_prefixes": [
+          "ErdosProblems",
+          "JSP000725",
+          "JSP000725Bridge",
+          "JSP000725Complete"
+        ],
+        "source_sha256": {
+          "JSP000725.lean": "a3c0add755c8df4967e688693e7024610965b623d803127abbf72b287f6b1e2a",
+          "ErdosProblems/Erdos874/Foundations.lean": "01f06ab553112b05a3a5905a28da86d21701b0eb737e6cfe2e77e855bd577972",
+          "JSP000725Bridge.lean": "b6544600d228333d3aae5e24127c8461f92757b77bd1e62a786a0a810199f2b9",
+          "ErdosProblems/Erdos874/Tail.lean": "359f793d98bcb723451d6c72b5e3bda843b33d88456248418a4d7abf04f57f63",
+          "ErdosProblems/Erdos874/Asymptotics.lean": "4dbda88e95304f35ec6df3055da302dc49a66637109b14ea6c9202da0546a38a",
+          "ErdosProblems/Erdos874/ExactUpper.lean": "ddfd4698dff9ea04c93dba05c84e076a8c6d2293f188dc62201a4fa0edc88920",
+          "ErdosProblems/Erdos874/RestrictedGrowth.lean": "8c0cfce6ef0bb8f858803840f9a049b55ec27c96b19331bc2394b31301bd86d0",
+          "ErdosProblems/Erdos874/FreimanDimension.lean": "211bf31912130cd033de6d83c425330348925089220aa7cc8c4ba7cfbc9dacbb",
+          "ErdosProblems/Erdos874/FreimanNormalization.lean": "14eb302dcf928932d98b055856c6dbf3f80165d79ba2865b6caa0954c83094cb",
+          "ErdosProblems/Erdos13/Erdos13MulStab.lean": "0b5c6339a5e2518ea0086245602b49738f79f83398363d31ac62525d5328394d",
+          "ErdosProblems/Erdos13/Erdos13Kneser.lean": "cb0d5c08c5c8db560f5ccfd4dff0160972941ffbfc7fa3117aa5e73558f8e9af",
+          "ErdosProblems/Erdos13/Erdos13Additive.lean": "5d6d0ec78a839f60f078d634b96087e10b3b3606c21f1475c751816301d8bbd5",
+          "ErdosProblems/Erdos874/LevSmelianski.lean": "31bf9397d20aa08bf324891f7794e1f3030a1f69a243837c84f334c6f3769e6c",
+          "ErdosProblems/Erdos874/FreimanNormalizedCore.lean": "4066e81dc741a78360881c855006eb5ad0c6245c6d2300295527aa86445192d4",
+          "ErdosProblems/Erdos874/FreimanThreeKInductive.lean": "c987245fcef1f25d87fdb0533a180b8296400825a6d9d216dff635ff0ddd49ad",
+          "ErdosProblems/Erdos874/FreimanThreeKMinusFour.lean": "1954d28753217f58302a575f6228cb259b852ec1d1be92c7601390e9988d762f",
+          "ErdosProblems/Erdos874/ProgressionExtraction.lean": "c9f9b854c60a2ef0b40aaec4b1584dcb2247ddbf7d1c9b66938b0d61bec1e273",
+          "ErdosProblems/Erdos874/LongProgression.lean": "0b55aa5a67b2fa553c5b03e708900fe98e99498b6648c4ee32e17266c94978b5",
+          "ErdosProblems/Erdos874/PopularPairs.lean": "da20718dc2a9115c973350e59ced9b872c370880c5b71216d0c7ef79651fabf4",
+          "ErdosProblems/Erdos874/NearIndexFiber.lean": "c44bd4bc89f8e48a18e8cad60b54f76ff02662b483e75c7644294d1a9023b504",
+          "ErdosProblems/Erdos874/RestrictedSums.lean": "7d9825b579b49d36854f234b0c8e32a1a6353a9bc4961cb3a36fbab53c05edb8",
+          "ErdosProblems/Erdos874/FreimanEngine.lean": "41bf3e2e4cc3426e8480485eb06e3c84f6583cdb695ae4eafba1de9a59b3079c",
+          "ErdosProblems/Erdos874/LayerSelection.lean": "5aca109c762013b8122ca6bf2b8a649211b71bd4d110e226c6cbb168d7bc5462",
+          "ErdosProblems/Erdos874/ModularDecomposition.lean": "7427f4405aca6b828de7c515c641da22292bd7e15b6ae2476eb677485f4f82b9",
+          "ErdosProblems/Erdos874/ResidueSubgroup.lean": "b6d05387f6fc923c71e8a5a0d7ff8142cd091b660ec89488489f7f33b467dc94",
+          "ErdosProblems/Erdos874/SubgroupGenerators.lean": "e833c85341acc295a81246fa87665c74c31d77419b28ec9a04698635cfa76177",
+          "ErdosProblems/Erdos874/ConvexTranslate.lean": "1130e4cba3cfa39ac6169da6724fc55c3073ab98921358c48d160d0fc49fe138",
+          "ErdosProblems/Erdos874/MixedSumPath.lean": "c662600ad4e9032e668b1d9825456583080533d84d4e80281fb61b0aacc06bdc",
+          "ErdosProblems/Erdos874/ResidueAlignment.lean": "c2405189ac0dbc13eddebca54e7554db4ab2258c9c63628e982ce3b75876295c",
+          "ErdosProblems/Erdos874/AlignedBlockSum.lean": "01398876ddc6f6796a30e1734cc3eff8d8558de9aa5355201cac4ca92b583cf6",
+          "ErdosProblems/Erdos874/RegularSpan.lean": "491679cf1d330a6e9805f8341fb877cfc299be435d26262df3df5bf08282f3fe",
+          "ErdosProblems/Erdos874/ModularStructure.lean": "30cf24186ccfa995fbc4185e435e45579967a028693be4f580e4f6294cac5a56",
+          "ErdosProblems/Erdos874/RoughUpper.lean": "9834dc63ea41a6e8b7faa839c082e1514a423017c5b639e65eeb1e5b44b2e689",
+          "ErdosProblems/Erdos874/SmallFourLayer.lean": "43c7419bc4e4f105126167c57961c11505ad0fb8caa66f099641fb0e14217a60",
+          "ErdosProblems/Erdos874/StrausUpper.lean": "26e75144ff7060a280d2cd4cbd649fa6ca18fc736280cc6047721ab148887662",
+          "ErdosProblems/Erdos874/Thresholds.lean": "83f6e51c4a36c36a5aa6cc3d51790c793ed8558337751c3733c0c664c2f79947",
+          "ErdosProblems/Erdos874/Structure.lean": "dd4f0edc0b6627e34b9761df14dbf7ee465e4f9eac490407fef4f9984197e9a9",
+          "ErdosProblems/Erdos874/CentralSpan.lean": "013b56801c2481b848d273dcbf952f00348a56a7eb6ec5dc25f218cba0c473f6",
+          "ErdosProblems/Erdos874/LayerOrdering.lean": "e3163d64ae158393fd52afa984362b4dbcb09858ce0c9a81618bdccbc02dfd1d",
+          "ErdosProblems/Erdos874/LocalDensity.lean": "131d2267528bf871fa1051b2fd35956decc9ff120a0b72875a9a0e86ac56830e",
+          "ErdosProblems/Erdos874/DensityEndgame.lean": "343c543bd4b0fbef0af5334dbf28f3106c77c127147621185daa5971222a2953",
+          "ErdosProblems/Erdos874/CentralExtractor.lean": "9550c720694524bd822d260821d26d951ab7a04b97c0ea71876a73118ffc0d6b",
+          "ErdosProblems/Erdos874/EndpointOrientation.lean": "d12db23622c3942391bf4227d98c101e097a7ffa944cbb5aea2aecbf98b573d5",
+          "ErdosProblems/Erdos874.lean": "19826df408b708db0d1e5a0dd32018bfedb340a2c3c1c9c8614d9fb1a4a82ef8",
+          "JSP000725Complete.lean": "dda6808843124418c228936e9ef349b9b51a0e54e19bc410749d4d8f8cbfbfa2",
+          "AuditComplete.lean": "8655dfc29eea85bfd150aa5dee77d44063286532e50718554aa98acdf074bf52"
+        },
+        "object_sha256": {
+          "JSP000725": "56164a1ddb92f6f3662a52a7c81ecfdb602676573ad81e193e16e6d8207b42e3",
+          "ErdosProblems.Erdos874.Foundations": "442f931a16dd0ed30a957643ddab1185479fb904c5d7d01093a561f003238bc0",
+          "JSP000725Bridge": "eb81b0c6eef4d3046930c6d2774183a887c65a10b5a2fce101e4227d3f11a89b",
+          "ErdosProblems.Erdos874.Tail": "d4354e7bf1e025829482bc0cad376d321813b2c01e2c6242cce874af9318c122",
+          "ErdosProblems.Erdos874.Asymptotics": "9710b25cbd1abb0b567cf3358fe443a12aac3aee6274875c5c729a50e80450df",
+          "ErdosProblems.Erdos874.ExactUpper": "ac4c289740302c5dde547006ef48f577dc4114d209905f06386f71c13d4bb629",
+          "ErdosProblems.Erdos874.RestrictedGrowth": "821cc3ad84deb7f1e4cbd45accb19f69a14f571b6bac16f9b3b4cc8c0364aad4",
+          "ErdosProblems.Erdos874.FreimanDimension": "e1a1b8da84f934832a180285d94280bd9564427b4a51035e6022ecb2b5b2a430",
+          "ErdosProblems.Erdos874.FreimanNormalization": "c89fe00f12150a1180c280d0d78f9f1b60de45e2b5e9f673183ec06ba4a3ca00",
+          "ErdosProblems.Erdos13.Erdos13MulStab": "32d801bd84db7fbb3b74fdfc75abcc29fab29d80e19dfddb171e8ba14f06b248",
+          "ErdosProblems.Erdos13.Erdos13Kneser": "a7d0b79cbac73a68fd565caa04d3a50f8d96da88e99705295bd5204abfd2d379",
+          "ErdosProblems.Erdos13.Erdos13Additive": "c1bdf3a4b13487d99a95f207ae284b4a7c71583b9e0c78d0ae21a36f26066fa2",
+          "ErdosProblems.Erdos874.LevSmelianski": "866cac80ffe05afef13d85edeb72b3cedb6d58dc95237773f8423595edf8ac8a",
+          "ErdosProblems.Erdos874.FreimanNormalizedCore": "31800cff8c42433ab5f0adb884f6bae86a08fe2e83f70e8d39d10c4e45171e09",
+          "ErdosProblems.Erdos874.FreimanThreeKInductive": "167ff7f3c381544679e1cc6f106629ffe4f1fdeb31d1c9449846b3c3897c5b8b",
+          "ErdosProblems.Erdos874.FreimanThreeKMinusFour": "61c66f740a875b3e7f4393684e1cb70fa249ae45ed14526d3d1290d0d31a7440",
+          "ErdosProblems.Erdos874.ProgressionExtraction": "fe8845f7304c8b75e972521471db2c3db1340da6709cefd8e4e82f775352a5cd",
+          "ErdosProblems.Erdos874.LongProgression": "68f713ffa73be36d48eba989984d1913f9adfa10062eed9b57b201d62245a990",
+          "ErdosProblems.Erdos874.PopularPairs": "13facb5858169c169879f02708bd12447bd10a2333f5c78662c2c424cbc44d77",
+          "ErdosProblems.Erdos874.NearIndexFiber": "8442cd53470cfda4c9709b4dd8eb7606bfe54c7a9589627dc9598babbd493f80",
+          "ErdosProblems.Erdos874.RestrictedSums": "7f6406675ef9ed269358b6964c80077bae4c3beb215744dcb6bcbb48fc9f04e5",
+          "ErdosProblems.Erdos874.FreimanEngine": "fe3c0896f0e44aec4d18a5456ea4cbd94cd90fb1c98ea3a8ff579cdbaf677187",
+          "ErdosProblems.Erdos874.LayerSelection": "69d152aa93cadc3ae1cef45f7e4a8e637b771d66c7cef19eb99ca5c12eae36e5",
+          "ErdosProblems.Erdos874.ModularDecomposition": "e0726c973e2a70242d4c67dfca2a04dc228ba20b45067346cef86e6b6396d3ae",
+          "ErdosProblems.Erdos874.ResidueSubgroup": "79703ac33d10eb5894d1b6b50eebb1a0085a4e0f2af9ad8c3c6a761030574a61",
+          "ErdosProblems.Erdos874.SubgroupGenerators": "f83ba34e1232609af2d5a0bca65f5919d622a32f85d1f932a249b34fb9c0b772",
+          "ErdosProblems.Erdos874.ConvexTranslate": "c8d54dbb4963d6466b7fea25603e1b3dc783f9e9853fecba249e7fe4de1cff39",
+          "ErdosProblems.Erdos874.MixedSumPath": "f61cc34452cb578db9e771786dc4c2f4a7f5f12f216f4e936dd07a6cdc5c05ad",
+          "ErdosProblems.Erdos874.ResidueAlignment": "e997304e87c9f99c1baeefbd66df327d088076af44074f07cb3913217965e287",
+          "ErdosProblems.Erdos874.AlignedBlockSum": "94eb5b1d5e0bb0e553a9f44f8b87d6070a6a4528f8c50a1627f8e58fea7ac206",
+          "ErdosProblems.Erdos874.RegularSpan": "9a5eff5175f831ec5401dea3d2bfd643b11d00aa6c0f104a37c4442c91c74968",
+          "ErdosProblems.Erdos874.ModularStructure": "dce7d8a612fe33877cc3d2caf99a226f9866e255cea926fbebf3aab76a42e03e",
+          "ErdosProblems.Erdos874.RoughUpper": "14e42631c5eb7a46a8f5cd24ba64c8c7f91aaf8d1cd546e897088646c60358a6",
+          "ErdosProblems.Erdos874.SmallFourLayer": "b649c81444426dfa843332df5fc19f406f243b66e0c8e5118fb00de65cd71c33",
+          "ErdosProblems.Erdos874.StrausUpper": "e6c31ff5000be9620b95bc356a4e17dd6ad8a4c2e972954ce98f30b93d9a5687",
+          "ErdosProblems.Erdos874.Thresholds": "164d511399147b9ea20e48d6b899121ec2e45c4b813743fb5f335b4501f65e77",
+          "ErdosProblems.Erdos874.Structure": "45788e3e67a78ed7b63b995c6ad1b86093443e4c83abe69788a2e3f2c1d0ef08",
+          "ErdosProblems.Erdos874.CentralSpan": "b03e9f117c7399c9c151ff40fd36a91e998cdd29f2bf0989b5d8dd7b264fa94c",
+          "ErdosProblems.Erdos874.LayerOrdering": "9f289c9fec9aeff7969ba3a1bc1eebc02a2d39aaeb83bb5b1c54ee106dd71dee",
+          "ErdosProblems.Erdos874.LocalDensity": "e609ee0432d3b678c4bec9f5cb8c38abf7104785327b1b43686e0ffedd16a0b0",
+          "ErdosProblems.Erdos874.DensityEndgame": "bce3180aa0892620a9d519a2a453199c74ae1b67b229ea0423336eb2f62013fb",
+          "ErdosProblems.Erdos874.CentralExtractor": "35e7633b56ac18b4bef8843ae25022032f3c46df11ae87fddc59ae88161c3106",
+          "ErdosProblems.Erdos874.EndpointOrientation": "be7aaa8f974d629dce6bd01c6025ae35986363ab781a4b1e4056cf9881ef1dd5",
+          "ErdosProblems.Erdos874": "e0108eca2498482f8f75a752e8b4205d2e2981d5ea0f2c6c8102f66bd4105988",
+          "JSP000725Complete": "0f7515a75a02a68f9295c40d91a2d53daca071c82ed224cef20a5c092a7184a4",
+          "AuditComplete": "a7bb1056eff88de7dface6b139bbc07b095d540800844b0c8348859775ffda5b"
+        },
+        "limits": "Contributor-run compilation and replay with cached pinned Mathlib. Resumed local builds are explicitly hash-matched. No independent human certification."
+      }
+    ],
+    "original_kernel_logs": [
+      "fresh-project-evidence/kernel-ErdosProblems.log",
+      "fresh-project-evidence/kernel-JSP000725.log",
+      "fresh-project-evidence/kernel-JSP000725Bridge.log",
+      "fresh-project-evidence/kernel-JSP000725Complete.log"
+    ],
+    "original_axiom_outputs": [
+      {
+        "log": "fresh-project-evidence/axioms.log",
+        "source": "AuditComplete.lean",
+        "targets": 28
+      }
+    ],
+    "negative_controls": [
+      {
+        "log": "fresh-project-evidence/negative-control.log",
+        "expected_exit": "nonzero",
+        "proposition": "1 = 0",
+        "exit_evidence": "mathematical Lean error; nonzero exit enforced by successful original verifier",
+        "separate_exit_code_recorded": false
+      }
+    ],
+    "strict_bridge_precheck": "validated",
+    "bridge_source_sha256": "a9d9587539bf3f8324497fa80a9668fe9d248089ba49718ffe2faa868af68ae9",
+    "manual_equivalent_builds": 0,
+    "reviewed_infrastructure_warnings": [],
+    "stages": {
+      "versions": {
+        "argv": [
+          "bash",
+          "-c",
+          "set -e; lean --version; lake --version; rustc --version; cargo --version; id; uname -a"
+        ],
+        "cwd": "/work/projects/jsp-000725",
+        "exit_code": 0,
+        "seconds": 0.1646575927734375,
+        "log": "/out/versions.log",
+        "log_sha256": "4497ecc53fc5c75ac1d38885261aae9dd1bc03b4348496699cda048bb0c635f5"
+      },
+      "build-exporter": {
+        "argv": [
+          "lake",
+          "build"
+        ],
+        "cwd": "/out/tools/exporter",
+        "exit_code": 0,
+        "seconds": 11.994029521942139,
+        "log": "/out/build-exporter.log",
+        "log_sha256": "691b14ee470d6f6e87c40fa5e5e61687e85a76960276637ba94593e8062d5ecf"
+      },
+      "build-checker": {
+        "argv": [
+          "cargo",
+          "build",
+          "--release",
+          "--locked"
+        ],
+        "cwd": "/out/tools/checker",
+        "exit_code": 0,
+        "seconds": 15.508506059646606,
+        "log": "/out/build-checker.log",
+        "log_sha256": "a76ccf2806921523cb251a072a8f99213da7f20c0d078b5b936ec7fb5817d1c3"
+      },
+      "original-clean-verifier": {
+        "argv": [
+          "bash",
+          "scripts/verify.sh"
+        ],
+        "cwd": "/work/projects/jsp-000725",
+        "exit_code": 0,
+        "seconds": 686.1471183300018,
+        "log": "/out/original-clean-verifier.log",
+        "log_sha256": "ef1b64b976689efc1afb91172e25f1c8bd69a2cc1fcfe8e4e40332b7373950dd"
+      },
+      "official-preflight": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "preflight",
+          "/out/targets.json",
+          "--out",
+          "/out/preflight"
+        ],
+        "cwd": "/work/projects/jsp-000725",
+        "exit_code": 0,
+        "seconds": 0.11397361755371094,
+        "log": "/out/official-preflight.log",
+        "log_sha256": "613c62a2a33d6e15c24e4c8d44d434f3c225e9990fbd4b1486f9106432caa5ee"
+      },
+      "official-audit": {
+        "argv": [
+          "python3",
+          "/harness/audit.py",
+          "run",
+          "/out/targets.json",
+          "--out",
+          "/out/audit",
+          "--lake",
+          "/opt/elan/toolchains/leanprover--lean4---v4.34.0/bin/lake",
+          "--timeout",
+          "2400"
+        ],
+        "cwd": "/work/projects/jsp-000725",
+        "exit_code": 0,
+        "seconds": 768.6225554943085,
+        "log": "/out/official-audit.log",
+        "log_sha256": "f9a7cf59effb4c972a387d69d0548e59162cb66f1d03fcc41d2114bb0d64820f"
+      },
+      "bridge-kernel": {
+        "argv": [
+          "lake",
+          "env",
+          "leanchecker",
+          "JSP000725.VerificationBridge"
+        ],
+        "cwd": "/work/projects/jsp-000725",
+        "exit_code": 0,
+        "seconds": 9.736862182617188,
+        "log": "/out/bridge-kernel.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "independent-nanoda": {
+        "argv": [
+          "/out/tools/checker/target/release/nanoda_bin",
+          "/out/nanoda-config.json"
+        ],
+        "cwd": "/work/projects/jsp-000725",
+        "exit_code": 0,
+        "seconds": 22.01998209953308,
+        "log": "/out/independent-nanoda.log",
+        "log_sha256": "203487cbaa59f11a6575db0eba0552f3009b204dd34f20c3620a71e7790d9d82"
+      },
+      "dependencies": {
+        "argv": [
+          "python3",
+          "-c",
+          "import json,subprocess;from pathlib import Path;ps=json.loads(Path('lake-manifest.json').read_text())['packages'];a={p['name']:subprocess.check_output(['git','-C','.lake/packages/'+p['name'],'rev-parse','HEAD'],text=True).strip() for p in ps};print(json.dumps(a,indent=2));assert all(a[p['name']]==p['rev'] for p in ps)"
+        ],
+        "cwd": "/work/projects/jsp-000725",
+        "exit_code": 0,
+        "seconds": 0.03188514709472656,
+        "log": "/out/dependencies.log",
+        "log_sha256": "b2a8633ca0ace385dd76cab4bf1f246bfa7a38bb7e1fa377cac97a4c27a11a44"
+      },
+      "final-status": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain",
+          "--untracked-files=all"
+        ],
+        "cwd": "/work/projects/jsp-000725",
+        "exit_code": 0,
+        "seconds": 0.003545522689819336,
+        "log": "/out/final-status.log",
+        "log_sha256": "08c02f8c92a9565fd481e890d81757ef9769b8e2c772a94e45de0fc8c8fed4f4"
+      },
+      "compress-export": {
+        "argv": [
+          "gzip",
+          "-n",
+          "/out/export.ndjson"
+        ],
+        "cwd": "/out",
+        "exit_code": 0,
+        "seconds": 4.823065519332886,
+        "log": "/out/compress-export.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "prepare-dependencies-0": {
+        "argv": [
+          "lake",
+          "exe",
+          "cache",
+          "get",
+          "Mathlib"
+        ],
+        "cwd": "/work/projects/jsp-000725",
+        "exit_code": 0,
+        "seconds": 109.49570941925049,
+        "log": "/out/prepare-dependencies-0.log",
+        "log_sha256": "378784c5e40f5a6a6195a99cbbd0a128d30e72af46b530d1c515873d0a138cdb"
+      },
+      "prepare-dependencies-1": {
+        "argv": [
+          "lake",
+          "build",
+          "Mathlib"
+        ],
+        "cwd": "/work/projects/jsp-000725",
+        "exit_code": 0,
+        "seconds": 30.173115730285645,
+        "log": "/out/prepare-dependencies-1.log",
+        "log_sha256": "ec5344fde309fbbab9dc29ae886c315fd651f2040127b03f46fd093c838856a4"
+      },
+      "bootstrap": {
+        "argv": [
+          "python3",
+          "scripts/bootstrap.py"
+        ],
+        "cwd": "/work/projects/jsp-000725",
+        "exit_code": 0,
+        "seconds": 8.683274507522583,
+        "log": "/out/bootstrap.log",
+        "log_sha256": "61a9d570e72a4fcd203a150a4616afed8f4b140a47b09c3f1a8f710c1862410e"
+      },
+      "bridge-precheck": {
+        "argv": [
+          "lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "-j1",
+          "-M12000",
+          "-o",
+          "/work/projects/jsp-000725/.lake/build/lib/lean/JSP000725/VerificationBridge.olean",
+          "/work/projects/jsp-000725/JSP000725/VerificationBridge.lean"
+        ],
+        "cwd": "/work/projects/jsp-000725",
+        "exit_code": 0,
+        "seconds": 4.924626588821411,
+        "log": "/out/bridge-precheck.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  }
+}

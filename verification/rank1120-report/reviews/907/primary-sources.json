@@ -1,0 +1,24 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "8525921a139f5f6197d26c9083e23192c2bf2c144c4c7ff0a6aa905b825c7955",
+  "original_bytes": 752,
+  "data": {
+    "recorded_at_utc": "2026-09-20T02:53:47.436286+00:00",
+    "sources": [
+      {
+        "url": "https://www.erdosproblems.com/1091",
+        "result": "403 on direct web retrieval; not used as independently obtained page contents"
+      },
+      {
+        "url": "https://arxiv.org/html/2604.06609v1#S4",
+        "result": "full primary text retrieved",
+        "location": "Section 4.1, original two-chord theorem and quantitative question; Theorem4.1; Sections4.2–4.5"
+      },
+      {
+        "url": "https://github.com/leanprover-community/mathlib4/blob/5ed2965256430c3649e86755f9576b54eca72435/Mathlib/Combinatorics/SimpleGraph/Walk/Chord.lean",
+        "result": "exact fixed source retrieved",
+        "location": "SimpleGraph.Walk.IsChord definition"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "python3",
+    "/harness/301-original.py"
+  ],
+  "cwd": "/work",
+  "exit_code": 0,
+  "seconds": 15.25168776512146,
+  "log": "/out/original-clean-verifier.log",
+  "log_sha256": "0313eba4a5ae5cbd9536815d44c2a32ecfc44c6f6dfcb1304abc51b7af08fe77"
+}

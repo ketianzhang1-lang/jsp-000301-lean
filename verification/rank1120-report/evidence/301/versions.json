@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "set -e; lean --version; lake --version; rustc --version; cargo --version; id; uname -a"
+  ],
+  "cwd": "/work",
+  "exit_code": 0,
+  "seconds": 0.21454238891601562,
+  "log": "/out/versions.log",
+  "log_sha256": "ed6f736e68a973ce104fc5da1a7ad8595de8359ef525faaa7a926bfb0666be79"
+}

@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "lake",
+    "exe",
+    "cache",
+    "get",
+    "Mathlib"
+  ],
+  "cwd": "/work",
+  "exit_code": 0,
+  "seconds": 96.23327779769897,
+  "log": "/out/prepare-dependencies-0.log",
+  "log_sha256": "1504adcd6ecdcdbcf5de5e476921b4a39907a4cce280a06e802e3373668c1c43"
+}

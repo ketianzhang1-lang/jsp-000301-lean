@@ -1,0 +1,418 @@
+{
+  "rules_commit": "38e63c424c7196f8d4ceb664c5c25f0c0529d5e2",
+  "semantic_review_confirmed": [
+    301,
+    897,
+    907,
+    465,
+    388,
+    140,
+    725,
+    554,
+    746,
+    1021
+  ],
+  "semantic_scopes": {
+    "301": {
+      "scope": "A complete negative answer to the catalog's universal assertion about consecutive positive powerful numbers: 12167 and 12168 are both powerful and neither is a square.",
+      "sources": [
+        {
+          "title": "Pinned catalog question and record-correction note",
+          "url": "https://github.com/TheJustinSunPrize/awards/blob/38e63c424c7196f8d4ceb664c5c25f0c0529d5e2/problems/catalog-0301-0400.md#JSP-000301"
+        },
+        {
+          "title": "Golomb, Powerful Numbers (1970), bibliographic record",
+          "url": "https://doi.org/10.2307/2317020"
+        }
+      ],
+      "source_access": "The unambiguous catalog target and literal arithmetic witness were independently checked; fresh access did not expose the full Golomb article, and no full-paper reading is claimed.",
+      "limits": "This does not resolve the different counting question in Erdős Problem 365 or establish first-formalization priority.",
+      "attribution": "Golomb retains mathematical credit; the applicant's contribution is a separate Mathlib-based implementation and verification with disclosed OpenAI assistance.",
+      "submission_changes": "The selected historical commit has no strict verifier script. A clearly identified auditor-owned script checks that exact original source; a later verifier commit is not substituted as the mathematical proof."
+    },
+    "897": {
+      "scope": "For every r at least 4 and every finite simple graph at the complete-graph forcing threshold, a maximum-degree vertex has an open neighbourhood at the corresponding lower-order threshold and degree greater than c times the host order for a positive constant c. Both strict forcing-threshold and non-strict catalog formulations are covered; the separately selected stability version retains them and adds degree-deficit and triangle-threshold refinements.",
+      "sources": [
+        {
+          "title": "Erdős (1975), printed page 14 / PDF page 12",
+          "url": "https://www.renyi.hu/~p_erdos/1975-42.pdf#page=12"
+        }
+      ],
+      "source_access": "The original scan was visually inspected. Its forcing threshold is ex plus one; an OCR error was not used as the statement. The direct Erdős Problems webpage returned 403.",
+      "limits": "The stability loss estimate is not claimed optimal. No equality classification, independent mathematical discovery or first-formalization priority is claimed.",
+      "attribution": "The Bollobás–Thomason mathematical argument and Bondy's strict strengthening, and the credited upstream Codex/GPT-5.6 Sol formalization, remain attributed. Applicant contributions include the compatibility port, surplus/stability interfaces and integration.",
+      "submission_changes": "The old PR body omitted the stability proof already selected in the catalog. Both exact commits are now identified and separately checked; only the unregistered flat stability module uses the disclosed manual-equivalent build adapter."
+    },
+    "907": {
+      "scope": "Both original questions are covered: every finite four-chromatic K4-free graph has an odd simple cycle with at least two chords; the proposed unbounded strengthening is false, using arbitrarily large four-chromatic examples whose small subgraphs are three-colourable while every cycle has at most ten chords.",
+      "sources": [
+        {
+          "title": "APSSV, arXiv:2604.06609v1, sections 4.1–4.5",
+          "url": "https://arxiv.org/html/2604.06609v1#S4"
+        }
+      ],
+      "source_access": "The source text stating both questions and their resolutions was read. The original Erdős Problems webpage returned 403; no inaccessible page is claimed as newly read.",
+      "limits": "The real-valued threshold disproof is uniform in every natural parameter. The proof does not assume an unformalized research note, and no optimal chord bound is claimed.",
+      "attribution": "The Voss affirmative result and APSSV counterexample mathematics, together with the credited complete upstream formalization, remain attributed; the applicant's construction interfaces, odd-rim additions and integration remain separately identified.",
+      "submission_changes": "The complete two-part endpoint, true chord-count predicate and arbitrary-small-subgraph condition are stated explicitly and supported by separate audit bridges."
+    },
+    "465": {
+      "scope": "A complete extremal-graph compactness counterexample: one fixed nonempty finite family of connected bipartite cyclic graphs has family extremal number eventually smaller by every prescribed positive constant factor than each member's individual extremal number, with one threshold uniform over the family. The second selected version additionally proves positive-denominator ratio limits and arbitrary eventual member selection.",
+      "sources": [
+        {
+          "title": "OpenAI, Ten Advances, Chapter 10, Theorem 1.1 (PDF page 241)",
+          "url": "https://cdn.openai.com/pdf/ten-proofs-oai.pdf#page=241"
+        }
+      ],
+      "source_access": "The primary theorem and its exclusion of the trivial forest case were read. The inaccessible Erdős Problems page is not represented as newly read.",
+      "limits": "No optimal exponent, smallest family, independently invented core counterexample or global first formalization is claimed.",
+      "attribution": "The OpenAI/Astra source and the credited seven-module upstream development retain their authorship and Apache notices. Applicant work is the equivalence, attainment, uniform-separation and adaptive-ratio integration.",
+      "submission_changes": "The old PR/claim omitted the uniform-ratio version already selected in the catalog. Both proof commits receive separate evidence; the unregistered flat supplement module has a narrowly scoped disclosed build adapter."
+    },
+    "388": {
+      "scope": "The original existential polynomial-tiling problem is answered affirmatively by an integer polynomial of degree at least two, concretely X^6, whose value set has an unrestricted integer complement giving a unique pair of summand values for every integer. Translation consequences and the stated quadratic obstruction are retained.",
+      "sources": [
+        {
+          "title": "Independent fixed Formal Conjectures original-question transcription",
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/cd0084c96ac8764cac2c4dcb1b6f1815112f1155/FormalConjectures/ErdosProblems/477.lean"
+        }
+      ],
+      "source_access": "The independent statement transcription was read and used only as a specification; its placeholders are not imported. The original problem webpage returned 403. Attribution to linked mathematical expositions does not imply that every exposition was freshly downloaded.",
+      "limits": "Uniqueness concerns summand values, not polynomial inputs. No classification of all degrees, cubic resolution or every higher-even-power result is asserted.",
+      "attribution": "The complete affirmative sixth-power proof remains credited upstream. The applicant's quadratic development, predicate bridge, translations and integration are distinct contributions, with source headers, notices and port history retained.",
+      "submission_changes": "The integrated compatibility port is the selected proof. Its upstream source is disclosed as a dependency rather than falsely presented as another original checkout independently verified by this batch. A separately pinned documentation repair also supplies the missing complete Apache license and corrects the provenance description without altering the selected proof."
+    },
+    "140": {
+      "scope": "For complete-graph edge colourings requiring at least five colours on every K4, the genuine minimum palette divided by the number of vertices tends to 5/6 along all natural sizes. Actual eventual colourings, attained minima, model equivalence and the claimed strict finite lower bound are covered.",
+      "sources": [
+        {
+          "title": "Bennett–Cushman–Dudek–Prałat, Definition 1 and Theorem 1",
+          "url": "https://arxiv.org/abs/2207.02920v1"
+        },
+        {
+          "title": "Joos–Mubayi construction",
+          "url": "https://arxiv.org/abs/2208.12563"
+        }
+      ],
+      "source_access": "The defining minimum and relevant asymptotic theorem were inspected directly in the primary paper. The source-model review distinguishes unordered edges and small-size conventions.",
+      "limits": "The result is a full asymptotic, not an exact formula for every size. The complete imported upper-construction proof is not claimed as the applicant's independent reimplementation.",
+      "attribution": "The cited mathematical authors and credited Codex/GPT-5.6 Sol upstream formalization retain attribution. Applicant contributions are the separate strict lower development, exact models and attained-minimum transport.",
+      "submission_changes": "The PR now supplies the required formal-statement, structured proof references, complete closure and four distinct self-check judgments."
+    },
+    "725": {
+      "scope": "For subsets of the positive interval 1 through N whose equal subset sums determine the number of summands, the unrestricted maximum size has eventual exact value floor(sqrt(4N+1)) minus one and normalized limit 2 after division by sqrt(N). Every-N terminal-interval lower constructions and natural/integer model transport are covered.",
+      "sources": [
+        {
+          "title": "Deshouillers–Freiman (1999), abstract, introduction and Theorem 1",
+          "url": "https://www.numdam.org/article/AST_1999__258__141_0.pdf#page=3"
+        }
+      ],
+      "source_access": "The original paper was read, including its admissibility definition and eventual upper theorem. The original problem webpage returned 403.",
+      "limits": "No exact formula for every small N, explicit numerical threshold or classification of all maximizers is claimed.",
+      "attribution": "Straus and Deshouillers–Freiman retain mathematical credit; the complete upstream upper proof and per-file formal authors remain attributed. Applicant contributions are the all-N interval construction and exact model/extremal interfaces.",
+      "submission_changes": "The full universal maximum and eventual upper bound are distinguished from the earlier lower construction; routed declaration entries retain their actual definition-source hashes."
+    },
+    "554": {
+      "scope": "The indices of consecutive prime gaps containing an interior integer whose least prime factor is at least the gap length have natural density one; the complementary index count divided by N tends to zero. The original residue classifications, hypotheses and finite counts remain included.",
+      "sources": [
+        {
+          "title": "Gafni–Tao, equation (1.1), Theorem 1.1 and Section 4",
+          "url": "https://arxiv.org/html/2508.06463v1#S1"
+        }
+      ],
+      "source_access": "The primary theorem, surrounding discussion and residue definitions were read. The denominator counts prime-gap indices, not prime values, and the direct original-problem webpage returned 403.",
+      "limits": "This does not claim every sufficiently late gap is good, the stronger strict least-factor inequality, an optimal quantitative error term or infinitely many bad gaps.",
+      "attribution": "Gafni–Tao and the credited complete analytic formalization retain authorship; applicant work is the finite residue development, exact density/count bridge and integration. All reused project and dependency notices remain effective.",
+      "submission_changes": "A missing Apache license file and inaccurate PROVENANCE description are corrected in a separately pinned documentation commit. The exact selected historical proof source and dependency pins remain unchanged."
+    },
+    "746": {
+      "scope": "Every triangle-free simple graph on the integers contains three distinct pairwise nonadjacent integers, one the sum of the other two. The finite positive-label version has exact vertex threshold 18, including explicit counterexamples at every smaller natural order.",
+      "sources": [
+        {
+          "title": "Pinned catalog integer-graph question",
+          "url": "https://github.com/TheJustinSunPrize/awards/blob/38e63c424c7196f8d4ceb664c5c25f0c0529d5e2/problems/catalog-0701-0800.md#JSP-000746"
+        },
+        {
+          "title": "Independent Formal Conjectures statement and source reference",
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/0f34955e1a6841d31c59d76c99252423894752d1/FormalConjectures/ErdosProblems/895.lean"
+        }
+      ],
+      "source_access": "The catalog and independent statement were read; the 1995 original scan was not obtained and the problem webpage returned 403. The independent file's placeholders are statement evidence only.",
+      "limits": "The stronger open Hindman-set question and minimum-edge optimality are expressly excluded.",
+      "attribution": "Ben Barber retains credit for the eighteen-vertex mathematics and the credited upstream authors retain the upper proof/certificates. Applicant contributions are the seventeen-vertex witness, restrictions, sharp-threshold integration and integer transport.",
+      "submission_changes": "The arbitrary infinite integer graph is distinguished from the internal finite restriction, and the exact all-n finite threshold is separately audited."
+    },
+    "1021": {
+      "scope": "A complete disproof of the historical Erdős–Moser universal equality f(n)=floor(log₂ n)+1: every fifteen-vertex tournament contains a transitive five-set, while the proposed value there is four. The proof uses the credited fourteen-vertex theorem followed by explicit order/restriction transport.",
+      "sources": [
+        {
+          "title": "Erdős–Moser (1964), introduction and Section 1, printed pages 125–127",
+          "url": "https://real.mtak.hu/189065/1/cut_MATKUTINT_1964_1_-_2_pp125_-_132.pdf#page=3"
+        }
+      ],
+      "source_access": "The primary paper was retrieved and its universal-equality conjecture distinguished from other functions later in the paper. The problem webpage returned 403.",
+      "limits": "The broader catalog summary and a competing lower-bound-only interpretation require organizer scope adjudication. This self-check certifies the explicitly stated historical conjecture, not an exact all-n extremal formula or a full proof of the separate supplementary reconstruction.",
+      "attribution": "Reid–Parker retain mathematical credit and the upstream fourteen-vertex formal proof retains its credited authors and Apache notices. Applicant additions are restriction/orientation transport, the fifteen-vertex endpoint, local certificates and integration.",
+      "submission_changes": "The replacement explicitly discloses the catalog interpretation issue and separates complete main proof dependencies from merely local supplementary certificates."
+    }
+  },
+  "jobs": {
+    "301": {
+      "run_id": 35484654492,
+      "job_id": 106008713557,
+      "harness_commit": "784e798f90142e91aecbf3500e84e25f51a4ba84",
+      "started_at": "2026-09-20T02:42:00Z",
+      "completed_at": "2026-09-20T02:46:43Z",
+      "conclusion": "success"
+    },
+    "897": {
+      "run_id": 35484654492,
+      "job_id": 106008713536,
+      "harness_commit": "784e798f90142e91aecbf3500e84e25f51a4ba84",
+      "started_at": "2026-09-20T02:42:00Z",
+      "completed_at": "2026-09-20T02:48:35Z",
+      "conclusion": "success"
+    },
+    "907": {
+      "run_id": 35485853057,
+      "job_id": 106011977016,
+      "harness_commit": "31b2395743695fee2be30dae3ba006b4b240e5be",
+      "started_at": "2026-09-20T03:09:52Z",
+      "completed_at": "2026-09-20T03:34:12Z",
+      "conclusion": "success"
+    },
+    "465": {
+      "run_id": 35485174811,
+      "job_id": 106010114425,
+      "harness_commit": "7c5551ac6a716eb73cfd599575358883e6549b75",
+      "started_at": "2026-09-20T02:53:58Z",
+      "completed_at": "2026-09-20T03:06:23Z",
+      "conclusion": "success"
+    },
+    "388": {
+      "run_id": 35485174811,
+      "job_id": 106010114390,
+      "harness_commit": "7c5551ac6a716eb73cfd599575358883e6549b75",
+      "started_at": "2026-09-20T02:53:58Z",
+      "completed_at": "2026-09-20T03:50:07Z",
+      "conclusion": "success"
+    },
+    "140": {
+      "run_id": 35485174811,
+      "job_id": 106010114343,
+      "harness_commit": "7c5551ac6a716eb73cfd599575358883e6549b75",
+      "started_at": "2026-09-20T02:53:58Z",
+      "completed_at": "2026-09-20T03:33:55Z",
+      "conclusion": "success"
+    },
+    "725": {
+      "run_id": 35484654492,
+      "job_id": 106008713611,
+      "harness_commit": "784e798f90142e91aecbf3500e84e25f51a4ba84",
+      "started_at": "2026-09-20T02:42:00Z",
+      "completed_at": "2026-09-20T03:11:42Z",
+      "conclusion": "success"
+    },
+    "554": {
+      "run_id": 35485853057,
+      "job_id": 106011976984,
+      "harness_commit": "31b2395743695fee2be30dae3ba006b4b240e5be",
+      "started_at": "2026-09-20T03:09:51Z",
+      "completed_at": "2026-09-20T03:42:18Z",
+      "conclusion": "success"
+    },
+    "746": {
+      "run_id": 35485853057,
+      "job_id": 106011976943,
+      "harness_commit": "31b2395743695fee2be30dae3ba006b4b240e5be",
+      "started_at": "2026-09-20T03:09:51Z",
+      "completed_at": "2026-09-20T03:18:29Z",
+      "conclusion": "success"
+    },
+    "1021": {
+      "run_id": 35486985097,
+      "job_id": 106015067112,
+      "harness_commit": "d5631f8e784961d2afe6fe24830be3dd06aaf955",
+      "started_at": "2026-09-20T03:35:56Z",
+      "completed_at": "2026-09-20T04:04:08Z",
+      "conclusion": "success"
+    },
+    "465-uniform": {
+      "run_id": 35485174811,
+      "job_id": 106010114318,
+      "harness_commit": "7c5551ac6a716eb73cfd599575358883e6549b75",
+      "started_at": "2026-09-20T02:53:59Z",
+      "completed_at": "2026-09-20T03:08:12Z",
+      "conclusion": "success"
+    },
+    "897-stability": {
+      "run_id": 35484922308,
+      "job_id": 106009440085,
+      "harness_commit": "2eff10da34032979ab2b5d8ec2f69e0915406ee5",
+      "started_at": "2026-09-20T02:48:11Z",
+      "completed_at": "2026-09-20T02:56:13Z",
+      "conclusion": "success"
+    }
+  },
+  "failure_history": {
+    "failed-746-run1": "The selected original proof and strict auditor bridge compilation passed. Official preflight rejected one credited upstream target missing a requirement mapping. The manifest was completed without changing any theorem or proof source.",
+    "failed-746-run3": "The original proof and strict auditor bridge compilation passed. Official preflight identified source_not_in_commit:t000 because the upstream module is materialized by the pinned bootstrap. The same declaration is now audited through a tracked native import entry, while its actual definition file and ported SHA remain separately recorded.",
+    "failed-465-run1": "The exact original clean verifier passed. The independently introduced literal-extremal bridge incorrectly used definitional equality across different predicate instances. The repaired bridge preserves the literal definition and proves the finite-set equality explicitly, then rewrites dependent statements. No selected proof source changed.",
+    "failed-465-uniform-run2": "The complete original package and uniform supplement passed their original verifier. The same auditor-only literal-extremal equality error affected the base and additional ratio bridges. The next attempt proves that equality explicitly and retains every supplemental target and hypothesis, without changing the selected proof.",
+    "failed-554-run1": "The full original 54-module verifier passed. Strict auditor bridge checking rejected a deprecated simplification lemma and unresolved equivalence between two literal counting functions. The repaired bridge proves finite-filter cardinality equalities and rewrites the actual limit functions explicitly. The original proof and all selected statements are unchanged.",
+    "failed-140-run1": "The original 24-module clean verifier and all nine strict auditor bridges passed. Official preflight rejected incomplete requirement mapping for supplemental targets. Every unchanged target is now assigned to its actual original or explicitly supplemental obligation.",
+    "failed-907-run1": "The original 43-module verifier, strict bridge precheck, official preflight and all 35 original targets passed. Five auditor bridges failed their native Lake build because their chosen module prefix was not a configured root. The identical bridge source now uses the configured JSP000907Complete submodule path; no adapter or original proof change is required.",
+    "failed-1021-run1": "The original clean verifier passed. Strict auditor bridge checking rejected an unnecessary Fin.ext application after congruence had already exposed natural-number arithmetic goals, and a definitional equality using a different classical decision instance. The repaired auditor bridge uses omega on the exposed arithmetic goals and matches the upstream classical decision procedure. No selected proof changed.",
+    "failed-1021-run3": "This repeated attempt retained the same auditor bridge errors as the initial run and therefore failed before official preflight. The original complete verifier again passed. Later harness revisions preserve the same proof commit, repair that bridge, and proactively route the three bootstrapped upstream declarations through a tracked native import entry.",
+    "failed-388-run1": "The original 158-module verifier and all five strict auditor bridges passed. Official preflight rejected incomplete requirement mapping for auxiliary targets. All unchanged declarations are now mapped to the original existence problem or the explicitly retained supplemental claims.",
+    "failed-1021-run5": "The unchanged original proof clean build and submitted verifier passed. This attempt still contained the old auditor bridge: applying Fin.ext after congr 2 failed on natural-number division and remainder goals, and the literal extremal rfl bridge used a different decidable instance. The bridge failed before official preflight. Run 6 replaces only these auditor-owned bridge steps and retains the corrected tracked-source routing; no mathematical source was changed.",
+    "failed-1021-run6": "The unchanged original proof clean build and verifier passed, as did the corrected independent Boolean relation encoding. The auditor literal_extremal rfl equality still failed because the two Nat.findGreatest decision procedures were not definitionally equal. Run 7 replaces only this bridge with two predicate-monotonicity inequalities and antisymmetry, checked against the pinned Mathlib API; the selected proof is unchanged."
+  },
+  "prs": {
+    "140": {
+      "pr": 443,
+      "head": "ed26116da7c30a65fb8159c5034d71666f035e86",
+      "state": "open",
+      "merged": false,
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/443",
+      "updated_at": "2026-09-19T01:55:32Z"
+    },
+    "301": {
+      "pr": 187,
+      "head": "096e9cd0e3120181dce16ebfcc63c09eea92ddb8",
+      "state": "open",
+      "merged": false,
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/187",
+      "updated_at": "2026-09-19T02:01:21Z"
+    },
+    "388": {
+      "pr": 343,
+      "head": "6578f3b4e3d86bb6cd087ef940aa29cf6631ee3a",
+      "state": "open",
+      "merged": false,
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/343",
+      "updated_at": "2026-09-19T02:02:27Z"
+    },
+    "465": {
+      "pr": 442,
+      "head": "de18e5d8fa57cdfd064bb18aa75f4b9983858590",
+      "state": "open",
+      "merged": false,
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/442",
+      "updated_at": "2026-09-19T02:30:42Z"
+    },
+    "554": {
+      "pr": 369,
+      "head": "388fbf61e647ea2a4a10e8d78344cb7688cf48c4",
+      "state": "open",
+      "merged": false,
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/369",
+      "updated_at": "2026-09-19T01:55:34Z"
+    },
+    "725": {
+      "pr": 361,
+      "head": "8765191628536b03c5f7e6265fadae15678f35b7",
+      "state": "open",
+      "merged": false,
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/361",
+      "updated_at": "2026-09-19T01:55:31Z"
+    },
+    "746": {
+      "pr": 402,
+      "head": "459668c825230b77e01bcb269ccb977090ddd4ab",
+      "state": "open",
+      "merged": false,
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/402",
+      "updated_at": "2026-09-19T01:27:14Z"
+    },
+    "897": {
+      "pr": 439,
+      "head": "ed4fc4f546603d21ccf0dfd50a52d65d4db1d8cc",
+      "state": "open",
+      "merged": false,
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/439",
+      "updated_at": "2026-09-19T02:24:37Z"
+    },
+    "907": {
+      "pr": 696,
+      "head": "1b879d7019554bf75253c89b81bfb163a1cc777e",
+      "state": "open",
+      "merged": false,
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/696",
+      "updated_at": "2026-09-19T01:55:36Z"
+    },
+    "1021": {
+      "pr": 699,
+      "head": "80525e5901e034f4a8bad52e7ee1e8e6f532a0a8",
+      "state": "open",
+      "merged": false,
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/699",
+      "updated_at": "2026-09-19T01:28:28Z"
+    }
+  },
+  "claims": {
+    "140": {
+      "claim": 1467,
+      "state": "open",
+      "url": "https://github.com/TheJustinSunPrize/awards/issues/1467",
+      "updated_at": "2026-09-18T18:11:55Z"
+    },
+    "301": {
+      "claim": 1413,
+      "state": "open",
+      "url": "https://github.com/TheJustinSunPrize/awards/issues/1413",
+      "updated_at": "2026-09-18T17:54:51Z"
+    },
+    "388": {
+      "claim": 1475,
+      "state": "open",
+      "url": "https://github.com/TheJustinSunPrize/awards/issues/1475",
+      "updated_at": "2026-09-18T18:29:54Z"
+    },
+    "465": {
+      "claim": 1572,
+      "state": "open",
+      "url": "https://github.com/TheJustinSunPrize/awards/issues/1572",
+      "updated_at": "2026-09-18T19:47:13Z"
+    },
+    "554": {
+      "claim": 1577,
+      "state": "open",
+      "url": "https://github.com/TheJustinSunPrize/awards/issues/1577",
+      "updated_at": "2026-09-18T19:55:10Z"
+    },
+    "725": {
+      "claim": 1412,
+      "state": "open",
+      "url": "https://github.com/TheJustinSunPrize/awards/issues/1412",
+      "updated_at": "2026-09-18T17:53:09Z"
+    },
+    "746": {
+      "claim": 1468,
+      "state": "open",
+      "url": "https://github.com/TheJustinSunPrize/awards/issues/1468",
+      "updated_at": "2026-09-18T18:14:09Z"
+    },
+    "897": {
+      "claim": 1573,
+      "state": "open",
+      "url": "https://github.com/TheJustinSunPrize/awards/issues/1573",
+      "updated_at": "2026-09-18T19:52:13Z"
+    },
+    "907": {
+      "claim": 1588,
+      "state": "open",
+      "url": "https://github.com/TheJustinSunPrize/awards/issues/1588",
+      "updated_at": "2026-09-18T20:59:51Z"
+    },
+    "1021": {
+      "claim": 1586,
+      "state": "open",
+      "url": "https://github.com/TheJustinSunPrize/awards/issues/1586",
+      "updated_at": "2026-09-18T20:29:38Z"
+    }
+  },
+  "official_state_checked_at_utc": "2026-09-20T04:05:31.290Z",
+  "workflow_state_checked_at_utc": "2026-09-20T04:04:58.255Z",
+  "finalized_at_utc": "2026-09-20T04:05:31.779387+00:00"
+}

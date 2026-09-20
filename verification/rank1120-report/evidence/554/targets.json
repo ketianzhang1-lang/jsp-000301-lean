@@ -1,0 +1,453 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-000554",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "21fcf006fd68b0bead9f979b704c92032f05cba8",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000554",
+      "source": "https://arxiv.org/html/2508.06463v1#S1",
+      "requirements": [
+        {
+          "id": "prime-gap-model",
+          "description": "Zero-indexed genuine nth primes, prime endpoints and consecutivity, all natural indices; roughness means gap length <= actual least prime factor of an interior integer.",
+          "targets": [
+            "t023",
+            "t024",
+            "t025",
+            "t026",
+            "t027",
+            "t037",
+            "t038",
+            "t039",
+            "t040"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "density-one",
+          "description": "Ordinary natural density one of successful prime-gap indices; literal count among indices 0,...,N-1 divided by N tends to one, without an added analytic hypothesis.",
+          "targets": [
+            "t029",
+            "t031",
+            "t034",
+            "t035",
+            "t039",
+            "t041"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "density-zero",
+          "description": "Complementary exceptional prime-gap indices have ordinary natural density zero and the literal prefix-count ratio tends to zero.",
+          "targets": [
+            "t028",
+            "t030",
+            "t033",
+            "t036",
+            "t040",
+            "t042"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "residue-classifier",
+          "description": "Retained exact uniform residue equivalence for every h>=2 with endpoint primality and start-size condition; actual finite counts and the complete h=2,4,6,8,10,12 tables; no inference of infinitely many prime pairs.",
+          "targets": [
+            "t000",
+            "t001",
+            "t002",
+            "t003",
+            "t004",
+            "t005",
+            "t006",
+            "t007",
+            "t008",
+            "t009",
+            "t010",
+            "t011",
+            "t012",
+            "t013",
+            "t014",
+            "t015",
+            "t016",
+            "t017",
+            "t018",
+            "t019",
+            "t020",
+            "t021",
+            "t022",
+            "t032",
+            "t033",
+            "t034",
+            "t043"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "t000",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.primorial_pos"
+    },
+    {
+      "id": "t001",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.coprime_primorial_iff"
+    },
+    {
+      "id": "t002",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.minFac_lt_iff_not_coprime"
+    },
+    {
+      "id": "t003",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.prime_coprime_primorial"
+    },
+    {
+      "id": "t004",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.coprime_mod_add"
+    },
+    {
+      "id": "t005",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.badGap_iff_residue"
+    },
+    {
+      "id": "t006",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.badGap_start_ge_length"
+    },
+    {
+      "id": "t007",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.badGap_iff_residue_all"
+    },
+    {
+      "id": "t008",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.count_badGaps"
+    },
+    {
+      "id": "t009",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.count_badGaps_all"
+    },
+    {
+      "id": "t010",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.primorial_values"
+    },
+    {
+      "id": "t011",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.omega_two"
+    },
+    {
+      "id": "t012",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.omega_four"
+    },
+    {
+      "id": "t013",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.omega_six"
+    },
+    {
+      "id": "t014",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.omega_eight"
+    },
+    {
+      "id": "t015",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.omega_ten"
+    },
+    {
+      "id": "t016",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.omega_twelve"
+    },
+    {
+      "id": "t017",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.no_bad_twin_gap"
+    },
+    {
+      "id": "t018",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.gap_four_classification"
+    },
+    {
+      "id": "t019",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.gap_six_classification"
+    },
+    {
+      "id": "t020",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.gap_eight_classification"
+    },
+    {
+      "id": "t021",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.gap_ten_classification"
+    },
+    {
+      "id": "t022",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554",
+      "source": "JSP000554.lean",
+      "declaration": "JSP000554.gap_twelve_classification"
+    },
+    {
+      "id": "t023",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554Complete",
+      "source": "JSP000554Complete.lean",
+      "declaration": "JSP000554.lower_add_gap"
+    },
+    {
+      "id": "t024",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554Complete",
+      "source": "JSP000554Complete.lean",
+      "declaration": "JSP000554.badGap_iff_exceptional"
+    },
+    {
+      "id": "t025",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554Complete",
+      "source": "JSP000554Complete.lean",
+      "declaration": "JSP000554.badGapIndices_eq"
+    },
+    {
+      "id": "t026",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554Complete",
+      "source": "JSP000554Complete.lean",
+      "declaration": "JSP000554.mem_goodGapIndices_iff"
+    },
+    {
+      "id": "t027",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554Complete",
+      "source": "JSP000554Complete.lean",
+      "declaration": "JSP000554.goodGapIndices_eq"
+    },
+    {
+      "id": "t028",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554Complete",
+      "source": "JSP000554Complete.lean",
+      "declaration": "JSP000554.badGapIndices_density_zero"
+    },
+    {
+      "id": "t029",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554Complete",
+      "source": "JSP000554Complete.lean",
+      "declaration": "JSP000554.goodGapIndices_density_one"
+    },
+    {
+      "id": "t030",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554Complete",
+      "source": "JSP000554Complete.lean",
+      "declaration": "JSP000554.badGap_count_ratio_tendsto"
+    },
+    {
+      "id": "t031",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554Complete",
+      "source": "JSP000554Complete.lean",
+      "declaration": "JSP000554.goodGap_count_ratio_tendsto"
+    },
+    {
+      "id": "t032",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554Complete",
+      "source": "JSP000554Complete.lean",
+      "declaration": "JSP000554.exceptional_iff_residue"
+    },
+    {
+      "id": "t033",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554Complete",
+      "source": "JSP000554Complete.lean",
+      "declaration": "JSP000554.mem_residueExceptionIndices_iff"
+    },
+    {
+      "id": "t034",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "JSP000554Complete",
+      "source": "JSP000554Complete.lean",
+      "declaration": "JSP000554.jsp_000554"
+    },
+    {
+      "id": "t035",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos682.erdos_682",
+      "definition_source": "ErdosProblems/Erdos682.lean",
+      "definition_sha256": "8289d763e1baa4d9f0d636e637ec731ccee29a92e7ab4b11e94155e18585c646",
+      "verification_entry_note": "Tracked configured AuditComplete.lean exposes this exact declaration. The original clean verifier compiles and kernel-replays its actual definition module; immutable UPSTREAM.json hashes pin downloaded definitions. This entry routing does not assert the definition is in AuditComplete or modify original proof/Lake files."
+    },
+    {
+      "id": "t036",
+      "problem": "JSP-000554",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos682.exceptionalGapIndices_density_zero",
+      "definition_source": "ErdosProblems/Erdos682.lean",
+      "definition_sha256": "8289d763e1baa4d9f0d636e637ec731ccee29a92e7ab4b11e94155e18585c646",
+      "verification_entry_note": "Tracked configured AuditComplete.lean exposes this exact declaration. The original clean verifier compiles and kernel-replays its actual definition module; immutable UPSTREAM.json hashes pin downloaded definitions. This entry routing does not assert the definition is in AuditComplete or modify original proof/Lake files."
+    },
+    {
+      "id": "t037",
+      "problem": "JSP-000554",
+      "role": "bridge",
+      "module": "JSP000554.VerificationBridge",
+      "source": "JSP000554/VerificationBridge.lean",
+      "declaration": "Verify554.consecutive_primes"
+    },
+    {
+      "id": "t038",
+      "problem": "JSP-000554",
+      "role": "bridge",
+      "module": "JSP000554.VerificationBridge",
+      "source": "JSP000554/VerificationBridge.lean",
+      "declaration": "Verify554.actual_least_prime_factor"
+    },
+    {
+      "id": "t039",
+      "problem": "JSP-000554",
+      "role": "bridge",
+      "module": "JSP000554.VerificationBridge",
+      "source": "JSP000554/VerificationBridge.lean",
+      "declaration": "Verify554.good_predicate_iff"
+    },
+    {
+      "id": "t040",
+      "problem": "JSP-000554",
+      "role": "bridge",
+      "module": "JSP000554.VerificationBridge",
+      "source": "JSP000554/VerificationBridge.lean",
+      "declaration": "Verify554.bad_predicate_iff"
+    },
+    {
+      "id": "t041",
+      "problem": "JSP-000554",
+      "role": "bridge",
+      "module": "JSP000554.VerificationBridge",
+      "source": "JSP000554/VerificationBridge.lean",
+      "declaration": "Verify554.density_one_literal_count"
+    },
+    {
+      "id": "t042",
+      "problem": "JSP-000554",
+      "role": "bridge",
+      "module": "JSP000554.VerificationBridge",
+      "source": "JSP000554/VerificationBridge.lean",
+      "declaration": "Verify554.density_zero_literal_count"
+    },
+    {
+      "id": "t043",
+      "problem": "JSP-000554",
+      "role": "bridge",
+      "module": "JSP000554.VerificationBridge",
+      "source": "JSP000554/VerificationBridge.lean",
+      "declaration": "Verify554.residue_equivalence_with_prime_endpoints"
+    }
+  ]
+}

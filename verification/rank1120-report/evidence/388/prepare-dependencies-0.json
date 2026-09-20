@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "lake",
+    "exe",
+    "cache",
+    "get",
+    "Mathlib"
+  ],
+  "cwd": "/work/projects/jsp-000388",
+  "exit_code": 0,
+  "seconds": 113.47461891174316,
+  "log": "/out/prepare-dependencies-0.log",
+  "log_sha256": "e9b6b03d5f7c648eb74a8c1702f75baed01e55f2508567ed6fa51904b1d48827"
+}

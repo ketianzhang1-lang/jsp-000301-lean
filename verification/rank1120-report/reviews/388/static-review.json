@@ -1,0 +1,41 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "1b1d07c75298568539315f2ce03b1e4ea5563e83b82826720360224c17edd2a1",
+  "original_bytes": 1954,
+  "data": {
+    "static_review_only": true,
+    "selected_commit": "a9eae7a01edade3d5d9a386144dcd2848b4de917",
+    "checked_at_utc": "2026-09-20T02:46:19.224073+00:00",
+    "original_target_count": 18,
+    "fresh_bridge_count": 5,
+    "target_count": 23,
+    "original_source_hashes": {
+      "JSP000388Complete.lean": "43811fee0ff2e4cfe1fb6206bfd537cc92ad949abe64f634a46089dfeb20c62d",
+      "JSP000388.lean": "19c18f800c45a7aa7a7a3bd73eeaab3de4afd17acbab20cddbbfa5541883be78"
+    },
+    "upstream_count": 155,
+    "upstream_port_changed_count": 17,
+    "dependency_pins": {
+      "mathlib": "5ed2965256430c3649e86755f9576b54eca72435",
+      "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+      "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+    },
+    "upstream_source_manifest_sha256": "4a5673e28454b871b62cdf147039a8963f0e16811136e8120c4d663b5b4a57f3",
+    "target_manifest_sha256": "d71c37e9a706e97f7e9a7d907c0b03a7fb345247fe984fe3c5f4deff3d4bcfb8",
+    "bridge_sha256": "09eae1db1a53d9fad175484e537a37b7841626606fc17951207f8cc7d7d53e04",
+    "review_limit": "No local Lean/Lake/external proof checker executed. Final exact-version execution and acceptance judgments depend on root CI evidence inspection.",
+    "static_upstream_download": {
+      "downloaded_source_count": 110,
+      "required_source_count": 155,
+      "all_downloaded_port_hashes_match": true,
+      "complete": false,
+      "remaining_observation": "The local pure-Python downloader was stopped by network policy for raw.githubusercontent.com; it was not rerun. Full immutable source acquisition/verification remains in the authorized isolated GitHub CI."
+    }
+  }
+}

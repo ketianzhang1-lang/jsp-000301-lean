@@ -1,0 +1,10 @@
+{
+  "artifact_id": 10597263697,
+  "workflow_run": 35484922308,
+  "harness_commit": "2eff10da34032979ab2b5d8ec2f69e0915406ee5",
+  "filename": "rank1120-897-stability-1.zip",
+  "sha256": "0f622bf7ea80e99af5c10423eae6c5dda1bcedb79fc021a14c58bc1095c98596",
+  "bytes": 10398023,
+  "internal_files_verified": 235,
+  "workflow_job": 106009440085
+}

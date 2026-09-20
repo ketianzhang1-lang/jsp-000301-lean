@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "git",
+    "init",
+    "/out/tools/exporter"
+  ],
+  "cwd": "/out",
+  "exit_code": 0,
+  "seconds": 0.007744550704956055,
+  "log": "/out/init-exporter.log",
+  "log_sha256": "4df000d4987ab9be255c8c53ca5feee8933cb6f4264b8a77fee5a758c35ac3fd"
+}

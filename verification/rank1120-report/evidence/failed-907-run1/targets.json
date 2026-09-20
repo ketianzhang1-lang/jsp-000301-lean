@@ -1,0 +1,444 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-000907",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "555ce4f13bf7e8e8557020728f7f97ad3d1f51e0",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000907",
+      "source": "https://www.erdosproblems.com/1091",
+      "requirements": [
+        {
+          "id": "chords-and-odd-cycles",
+          "description": "Mathlib simple cycles and literal counts of distinct unordered chord edges; no orientation double-counting.",
+          "targets": [
+            "t034",
+            "t035",
+            "t036",
+            "t037"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "affirmative-all-finite-graphs",
+          "description": "Every finite K4-free graph of chromatic number exactly four has an odd cycle with at least two chords.",
+          "targets": [
+            "t026",
+            "t027",
+            "t029",
+            "t036"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "negative-all-subgraphs",
+          "description": "Every subgraph on at most r vertices, including edge deletions; for every natural r an explicit K4-free counterexample exists.",
+          "targets": [
+            "t019",
+            "t021",
+            "t037"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "arbitrary-real-thresholds",
+          "description": "No real function tending to infinity guarantees its value as a chord threshold; no monotonicity assumption, every r and every finite graph.",
+          "targets": [
+            "t022",
+            "t025",
+            "t027",
+            "t038",
+            "t039"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "own-additional-construction",
+          "description": "All 29 public local theorem closures, including arbitrary base, every odd rim and the explicit four-chord witness; no unproved universal four-chord cap is asserted.",
+          "targets": [
+            "t000",
+            "t001",
+            "t002",
+            "t003",
+            "t004",
+            "t005",
+            "t006",
+            "t007",
+            "t008",
+            "t009",
+            "t010",
+            "t011",
+            "t012",
+            "t013",
+            "t014",
+            "t015",
+            "t016",
+            "t017",
+            "t018",
+            "t019",
+            "t020",
+            "t021",
+            "t022",
+            "t023",
+            "t024",
+            "t025",
+            "t026",
+            "t027",
+            "t028"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "upstream-full-resolution",
+          "description": "All six originally claimed upstream endpoints, including the full two-part resolution and full critical counterexample family, are audited in their entirety.",
+          "targets": [
+            "t029",
+            "t030",
+            "t031",
+            "t032",
+            "t033",
+            "t034"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "t000",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Construction",
+      "source": "JSP000907Construction.lean",
+      "declaration": "JSP000907.Construction.localAdj_symm"
+    },
+    {
+      "id": "t001",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Construction",
+      "source": "JSP000907Construction.lean",
+      "declaration": "JSP000907.Construction.localAdj_irrefl"
+    },
+    {
+      "id": "t002",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Construction",
+      "source": "JSP000907Construction.lean",
+      "declaration": "JSP000907.Construction.card_vertex"
+    },
+    {
+      "id": "t003",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Construction",
+      "source": "JSP000907Construction.lean",
+      "declaration": "JSP000907.Construction.attachment_forcing"
+    },
+    {
+      "id": "t004",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Construction",
+      "source": "JSP000907Construction.lean",
+      "declaration": "JSP000907.Construction.rim_avoids_hub"
+    },
+    {
+      "id": "t005",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Construction",
+      "source": "JSP000907Construction.lean",
+      "declaration": "JSP000907.Construction.base_two_colorable_of_three_colorable"
+    },
+    {
+      "id": "t006",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Construction",
+      "source": "JSP000907Construction.lean",
+      "declaration": "JSP000907.Construction.chromatic_four_of_base_three"
+    },
+    {
+      "id": "t007",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Construction",
+      "source": "JSP000907Construction.lean",
+      "declaration": "JSP000907.Construction.three_colorable_of_base_two_colorable"
+    },
+    {
+      "id": "t008",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Construction",
+      "source": "JSP000907Construction.lean",
+      "declaration": "JSP000907.Construction.three_colorable_iff_base_two_colorable"
+    },
+    {
+      "id": "t009",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907OddRim",
+      "source": "JSP000907OddRim.lean",
+      "declaration": "JSP000907.oddRim_card"
+    },
+    {
+      "id": "t010",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907OddRim",
+      "source": "JSP000907OddRim.lean",
+      "declaration": "JSP000907.cycle_three_colorable"
+    },
+    {
+      "id": "t011",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907OddRim",
+      "source": "JSP000907OddRim.lean",
+      "declaration": "JSP000907.odd_cycle_not_two_colorable"
+    },
+    {
+      "id": "t012",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907OddRim",
+      "source": "JSP000907OddRim.lean",
+      "declaration": "JSP000907.oddRim_chromatic_four"
+    },
+    {
+      "id": "t013",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907OddRim",
+      "source": "JSP000907OddRim.lean",
+      "declaration": "JSP000907.oddRim_arbitrarily_large"
+    },
+    {
+      "id": "t014",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Witness",
+      "source": "JSP000907Witness.lean",
+      "declaration": "JSP000907.nineCycle_length"
+    },
+    {
+      "id": "t015",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Witness",
+      "source": "JSP000907Witness.lean",
+      "declaration": "JSP000907.nineCycle_isCycle"
+    },
+    {
+      "id": "t016",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Witness",
+      "source": "JSP000907Witness.lean",
+      "declaration": "JSP000907.fourChords_card"
+    },
+    {
+      "id": "t017",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Witness",
+      "source": "JSP000907Witness.lean",
+      "declaration": "JSP000907.fourChords_subset"
+    },
+    {
+      "id": "t018",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Witness",
+      "source": "JSP000907Witness.lean",
+      "declaration": "JSP000907.nineCycle_four_chords"
+    },
+    {
+      "id": "t019",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Complete",
+      "source": "JSP000907Complete.lean",
+      "declaration": "JSP000907.smallSubgraphs_iff_induced"
+    },
+    {
+      "id": "t020",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Complete",
+      "source": "JSP000907Complete.lean",
+      "declaration": "JSP000907.smallSubgraphs_mono"
+    },
+    {
+      "id": "t021",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Complete",
+      "source": "JSP000907Complete.lean",
+      "declaration": "JSP000907.explicit_counterexample"
+    },
+    {
+      "id": "t022",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Complete",
+      "source": "JSP000907Complete.lean",
+      "declaration": "JSP000907.realGuarantee_le_ten"
+    },
+    {
+      "id": "t023",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Complete",
+      "source": "JSP000907Complete.lean",
+      "declaration": "JSP000907.realGuarantee_range_bounded"
+    },
+    {
+      "id": "t024",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Complete",
+      "source": "JSP000907Complete.lean",
+      "declaration": "JSP000907.no_unbounded_realGuarantee"
+    },
+    {
+      "id": "t025",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Complete",
+      "source": "JSP000907Complete.lean",
+      "declaration": "JSP000907.no_diverging_realGuarantee"
+    },
+    {
+      "id": "t026",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Complete",
+      "source": "JSP000907Complete.lean",
+      "declaration": "JSP000907.affirmative"
+    },
+    {
+      "id": "t027",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Complete",
+      "source": "JSP000907Complete.lean",
+      "declaration": "JSP000907.jsp_000907"
+    },
+    {
+      "id": "t028",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "JSP000907Complete",
+      "source": "JSP000907Complete.lean",
+      "declaration": "JSP000907.complete_package"
+    },
+    {
+      "id": "t029",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos1091.erdos_1091_affirmative",
+      "definition_source": "ErdosProblems/Erdos1091.lean",
+      "definition_sha256": "6870185ca213b0dd003480178a32e327db09aa9ab53e89612094ce47e0c1b7cc"
+    },
+    {
+      "id": "t030",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos1091.erdos_1091_quantitative_negative",
+      "definition_source": "ErdosProblems/Erdos1091.lean",
+      "definition_sha256": "6870185ca213b0dd003480178a32e327db09aa9ab53e89612094ce47e0c1b7cc"
+    },
+    {
+      "id": "t031",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos1091.apssv_four_critical_family",
+      "definition_source": "ErdosProblems/Erdos1091.lean",
+      "definition_sha256": "6870185ca213b0dd003480178a32e327db09aa9ab53e89612094ce47e0c1b7cc"
+    },
+    {
+      "id": "t032",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos1091.erdos_1091_resolution",
+      "definition_source": "ErdosProblems/Erdos1091.lean",
+      "definition_sha256": "6870185ca213b0dd003480178a32e327db09aa9ab53e89612094ce47e0c1b7cc"
+    },
+    {
+      "id": "t033",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos1091.erdos_1091",
+      "definition_source": "ErdosProblems/Erdos1091.lean",
+      "definition_sha256": "6870185ca213b0dd003480178a32e327db09aa9ab53e89612094ce47e0c1b7cc"
+    },
+    {
+      "id": "t034",
+      "problem": "JSP-000907",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos1091.erdos_1091_four_critical_counterexamples",
+      "definition_source": "ErdosProblems/Erdos1091.lean",
+      "definition_sha256": "6870185ca213b0dd003480178a32e327db09aa9ab53e89612094ce47e0c1b7cc"
+    },
+    {
+      "id": "t035",
+      "problem": "JSP-000907",
+      "role": "bridge",
+      "module": "JSP000907.VerificationBridge",
+      "source": "JSP000907/VerificationBridge.lean",
+      "declaration": "Verify907.chord_count_formula"
+    },
+    {
+      "id": "t036",
+      "problem": "JSP-000907",
+      "role": "bridge",
+      "module": "JSP000907.VerificationBridge",
+      "source": "JSP000907/VerificationBridge.lean",
+      "declaration": "Verify907.affirmative_literal"
+    },
+    {
+      "id": "t037",
+      "problem": "JSP-000907",
+      "role": "bridge",
+      "module": "JSP000907.VerificationBridge",
+      "source": "JSP000907/VerificationBridge.lean",
+      "declaration": "Verify907.counterexample_literal"
+    },
+    {
+      "id": "t038",
+      "problem": "JSP-000907",
+      "role": "bridge",
+      "module": "JSP000907.VerificationBridge",
+      "source": "JSP000907/VerificationBridge.lean",
+      "declaration": "Verify907.any_guarantee_bounded"
+    },
+    {
+      "id": "t039",
+      "problem": "JSP-000907",
+      "role": "bridge",
+      "module": "JSP000907.VerificationBridge",
+      "source": "JSP000907/VerificationBridge.lean",
+      "declaration": "Verify907.no_diverging_guarantee_literal"
+    }
+  ]
+}

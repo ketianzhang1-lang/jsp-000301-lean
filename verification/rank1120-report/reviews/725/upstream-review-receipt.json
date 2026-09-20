@@ -1,0 +1,56 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "8d2464aab9083fa60079cf6d346566a296660ddb14f9ed7dfe75d6acff78c2c5",
+  "original_bytes": 3062,
+  "data": [
+    {
+      "path": "ErdosProblems/Erdos874.lean",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos874.lean",
+      "sha256": "19826df408b708db0d1e5a0dd32018bfedb340a2c3c1c9c8614d9fb1a4a82ef8",
+      "git_blob_sha": "29c9b26ed487803964cf67ad883914941ccd7295",
+      "static_review_source": "original before recorded compatibility port"
+    },
+    {
+      "path": "ErdosProblems/Erdos874/Asymptotics.lean",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos874/Asymptotics.lean",
+      "sha256": "4dbda88e95304f35ec6df3055da302dc49a66637109b14ea6c9202da0546a38a",
+      "git_blob_sha": "14ab286876da0b6013df46832f25862e212c969b",
+      "static_review_source": "original before recorded compatibility port"
+    },
+    {
+      "path": "ErdosProblems/Erdos874/EndpointOrientation.lean",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos874/EndpointOrientation.lean",
+      "sha256": "d12db23622c3942391bf4227d98c101e097a7ffa944cbb5aea2aecbf98b573d5",
+      "git_blob_sha": "5dd08f5cdb4659e94109eb8e5da734bfd7d6d385",
+      "static_review_source": "original before recorded compatibility port"
+    },
+    {
+      "path": "ErdosProblems/Erdos874/ExactUpper.lean",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos874/ExactUpper.lean",
+      "sha256": "ddfd4698dff9ea04c93dba05c84e076a8c6d2293f188dc62201a4fa0edc88920",
+      "git_blob_sha": "53c4ac09fb2d3071501d3c91027dc55fef3a5db0",
+      "static_review_source": "original before recorded compatibility port"
+    },
+    {
+      "path": "ErdosProblems/Erdos874/Tail.lean",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos874/Tail.lean",
+      "sha256": "359f793d98bcb723451d6c72b5e3bda843b33d88456248418a4d7abf04f57f63",
+      "git_blob_sha": "e227cc1dc88db04bb75c9dbf97ac891652cac0fd",
+      "static_review_source": "original before recorded compatibility port"
+    },
+    {
+      "path": "ErdosProblems/Erdos874/Foundations.lean",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos874/Foundations.lean",
+      "sha256": "01f06ab553112b05a3a5905a28da86d21701b0eb737e6cfe2e77e855bd577972",
+      "git_blob_sha": "ede17f04439c7f4b7e529b23569cb9903c77801e",
+      "static_review_source": "original before recorded compatibility port"
+    },
+    {
+      "path": "ErdosProblems/Erdos874/Structure.lean",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos874/Structure.lean",
+      "sha256": "dd4f0edc0b6627e34b9761df14dbf7ee465e4f9eac490407fef4f9984197e9a9",
+      "git_blob_sha": "8cd09bff04e24203c9d0295b1fee9c1cbb561f21",
+      "static_review_source": "original before recorded compatibility port"
+    }
+  ]
+}

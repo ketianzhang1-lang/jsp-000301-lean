@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "git",
+    "restore",
+    "--",
+    "evidence/SOURCE_SHA256",
+    "evidence/cloud-artifact.json",
+    "evidence/cloud-workflow.log",
+    "evidence/local-axioms.log",
+    "evidence/repository-preflight.log"
+  ],
+  "cwd": "/work/projects/jsp-000140",
+  "exit_code": 0,
+  "seconds": 0.007570028305053711,
+  "log": "/out/restore-historical-evidence.log",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

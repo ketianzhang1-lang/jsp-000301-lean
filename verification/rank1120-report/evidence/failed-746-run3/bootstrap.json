@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "python3",
+    "scripts/bootstrap.py"
+  ],
+  "cwd": "/work/projects/jsp-000746-sharp",
+  "exit_code": 0,
+  "seconds": 0.9161241054534912,
+  "log": "/out/bootstrap.log",
+  "log_sha256": "3c5a50f73d04518abe2aab899ee14945182e0460e8d40fb46f7e2af57647d3b2"
+}

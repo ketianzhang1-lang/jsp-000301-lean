@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "cargo",
+    "build",
+    "--release",
+    "--locked"
+  ],
+  "cwd": "/out/tools/checker",
+  "exit_code": 0,
+  "seconds": 18.727778911590576,
+  "log": "/out/build-checker.log",
+  "log_sha256": "25d84c6573600d29781184e2f9a8b523db113d66a8e7e23da2ae04ce62044ca1"
+}

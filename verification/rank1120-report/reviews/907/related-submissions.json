@@ -1,0 +1,35 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "4174354d864011b4a30d0a673ad4ad387c72ec3fe93a8f22d2451e8dfd3584f9",
+  "original_bytes": 900,
+  "data": [
+    {
+      "number": 1399,
+      "title": "JSP-000907: record existing Lean formalization (plby/lean-proofs)",
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/1399",
+      "state": "open",
+      "user": "xinkuangsi-spec"
+    },
+    {
+      "number": 274,
+      "title": "JSP-000907: record the solver attribution and register an external Lean formalization source",
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/274",
+      "state": "open",
+      "user": "qkkqk1234"
+    },
+    {
+      "number": 1057,
+      "title": "docs: record Lean proof for JSP-000907",
+      "url": "https://github.com/TheJustinSunPrize/awards/pull/1057",
+      "state": "closed",
+      "user": "noahbenjamin1994"
+    },
+    {
+      "number": 1019,
+      "title": "[Award claim] JSP-000907 Lean formalization",
+      "url": "https://github.com/TheJustinSunPrize/awards/issues/1019",
+      "state": "closed",
+      "user": "noahbenjamin1994"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "e66a7db003f009cd94110ed737b15007f42068e484978451c9f34ff3de8aa785",
+  "original_bytes": 817,
+  "data": [
+    {
+      "path": "Util/Density.lean",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/Util/Density.lean",
+      "sha256": "42bab8e8913462b6c0ef71cb7d4694d64c7c74a5ec4365827610f55947c57b0a",
+      "git_blob_sha": "5f9d52018866d9957ea878eb6b60bb943215b1ec",
+      "static_review_source": "original before recorded compatibility port"
+    },
+    {
+      "path": "ErdosProblems/Erdos682.lean",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos682.lean",
+      "sha256": "c2ccb50878691f3df8e64174d0ecff384f22b6674b22a9392c1a7246ce470016",
+      "git_blob_sha": "76b5e5b0424c38dc145e687ae0ab38a5e5522663",
+      "static_review_source": "original before recorded compatibility port"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "set -e; lean --version; lake --version; rustc --version; cargo --version; id; uname -a"
+  ],
+  "cwd": "/work/projects/jsp-000140",
+  "exit_code": 0,
+  "seconds": 0.16418790817260742,
+  "log": "/out/versions.log",
+  "log_sha256": "88e168f92bc2de426097e998e59aebc5ab298c61a120cf8c4f13cde9bf1ff484"
+}

@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "python3",
+    "scripts/verify_complete.py"
+  ],
+  "cwd": "/work/projects/jsp-000388",
+  "exit_code": 0,
+  "seconds": 1754.7557446956635,
+  "log": "/out/original-clean-verifier.log",
+  "log_sha256": "399e9a6dffbd2b3afddad4e40ea4ba781949cdf226e10c4b80285e534f6ba9ee"
+}

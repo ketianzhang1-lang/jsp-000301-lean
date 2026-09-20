@@ -1,0 +1,170 @@
+{
+  "problem": "JSP-000554",
+  "proof_commit": "21fcf006fd68b0bead9f979b704c92032f05cba8",
+  "workflow_run": 35485853057,
+  "workflow_job": 106011976984,
+  "harness_commit": "31b2395743695fee2be30dae3ba006b4b240e5be",
+  "classification": "Four exact deprecated import headers, not declaration/tactic/proof errors; preserve every warning and its raw log. This does not assert zero warnings.",
+  "lean_version": "leanprover/lean4:v4.34.0",
+  "lean_commit": "293d5d0c0c3f3dded4688b3ccd6a33939ac5102b",
+  "mathlib_commit": "5ed2965256430c3649e86755f9576b54eca72435",
+  "compiler_implementation_evidence": {
+    "header_warning": "lean-import.lean lines 61–102: checkDeprecatedImports adds severity=.warning directly.",
+    "normal_warning_conversion": "lean-log.lean lines 110–113: logAt converts warnings to errors when warningAsError is true; header code bypasses logAt.",
+    "message_storage": "lean-message.lean lines 687–688 appends unchanged; lines 702–703 test only .error.",
+    "frontend": "lean-frontend.lean lines 338–341 and 378–379 use recorded message severities and explicit error-kind overrides; original command did not request a deprecatedModuleExt override.",
+    "final_error_count": "lean-language-basic.lean lines 414–440 reportMessages counts only severity=.error after explicit kind overrides; runAndReport lines 447–451 returns numErrors>0. It does not promote existing warnings using warningAsError."
+  },
+  "fixed_compiler_and_dependency_sources": [
+    {
+      "name": "lean-import.lean",
+      "url": "https://raw.githubusercontent.com/leanprover/lean4/293d5d0c0c3f3dded4688b3ccd6a33939ac5102b/src/Lean/Elab/Import.lean",
+      "sha256": "5d46fc36944ed3cbb9b862cb954fdd8ea2d2036f135e4b48adc368b69dc8b8fc",
+      "bytes": 8468
+    },
+    {
+      "name": "lean-log.lean",
+      "url": "https://raw.githubusercontent.com/leanprover/lean4/293d5d0c0c3f3dded4688b3ccd6a33939ac5102b/src/Lean/Log.lean",
+      "sha256": "02baad29b943ef9f7dbd26627b147c306505393a4578030c63d41d95816953ab",
+      "bytes": 7914
+    },
+    {
+      "name": "lean-message.lean",
+      "url": "https://raw.githubusercontent.com/leanprover/lean4/293d5d0c0c3f3dded4688b3ccd6a33939ac5102b/src/Lean/Message.lean",
+      "sha256": "09277320b843288e7a51b98c794e4440cfd0e3c71e18eb777105414751a1004f",
+      "bytes": 39073
+    },
+    {
+      "name": "lean-frontend.lean",
+      "url": "https://raw.githubusercontent.com/leanprover/lean4/293d5d0c0c3f3dded4688b3ccd6a33939ac5102b/src/Lean/Elab/Frontend.lean",
+      "sha256": "e3e9037222c00308edc4fed589da83a80620bf5b35108779564fc485d8c17774",
+      "bytes": 19531
+    },
+    {
+      "name": "mathlib-old-real-basic.lean",
+      "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/5ed2965256430c3649e86755f9576b54eca72435/Mathlib/Data/Real/Basic.lean",
+      "sha256": "a1d6fa90c0e6ddc98b82933e33801713f937030bc1d70052afb6794c3637a65d",
+      "bytes": 109
+    },
+    {
+      "name": "mathlib-new-real-basic.lean",
+      "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/5ed2965256430c3649e86755f9576b54eca72435/Mathlib/Basic/Real/Basic.lean",
+      "sha256": "b10f715c299e6c3f468e916cad97620e921dc432e31269217954d94191fc7829",
+      "bytes": 19177
+    },
+    {
+      "name": "lean-language-basic.lean",
+      "url": "https://raw.githubusercontent.com/leanprover/lean4/293d5d0c0c3f3dded4688b3ccd6a33939ac5102b/src/Lean/Language/Basic.lean",
+      "sha256": "a6aca4bca50ae1477eeab77696a199c029ae41a8d178fc86dc5d83767dea3236",
+      "bytes": 21537
+    },
+    {
+      "name": "lean-deprecated-module.lean",
+      "url": "https://raw.githubusercontent.com/leanprover/lean4/293d5d0c0c3f3dded4688b3ccd6a33939ac5102b/src/Lean/DeprecatedModule.lean",
+      "sha256": "3822ba4a387054cb915f36c1ad2f9d7450cb1d93a36f76f7b340bb83854534a6",
+      "bytes": 1494
+    }
+  ],
+  "reviewed_source_diagnostics": [
+    {
+      "source_path": "ErdosProblems/Erdos387/CoverBPZPrelude.lean",
+      "source_sha256": "b03e879dd42c060ee4b82a19b6d5346b1c010f6071ca5ac67995beb745a35337",
+      "source_line": 23,
+      "log_path": "fresh-project-evidence/build-ErdosProblems.Erdos387.CoverBPZPrelude.log",
+      "log_sha256": "f99868158bcded8f93d0a79004cb3c4581c25e08f9ea90f857d69ddebe06f5bd",
+      "exact_warning_text": "./ErdosProblems/Erdos387/CoverBPZPrelude.lean:23:0: warning: \n'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by\n\nimport Mathlib.Basic.Real.Basic\n",
+      "compiler_argv": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "-j1",
+        "-M8000",
+        "-o",
+        ".lake/build/lib/lean/ErdosProblems/Erdos387/CoverBPZPrelude.olean",
+        "./ErdosProblems/Erdos387/CoverBPZPrelude.lean"
+      ],
+      "kind": "deprecated_module_forwarding_import",
+      "classification": "reviewed_nonblocking_source_diagnostic"
+    },
+    {
+      "source_path": "ErdosProblems/Erdos387/LocalDensity.lean",
+      "source_sha256": "61eb8819164843bb2fd3f1f45c369208c44debb66ad3b6dea2dd3b3a8ddf5d1e",
+      "source_line": 6,
+      "log_path": "fresh-project-evidence/build-ErdosProblems.Erdos387.LocalDensity.log",
+      "log_sha256": "e051aeff911d9a1fa5ae797fb40161234cdc47b172f8db7b2ee4abad3005dc8e",
+      "exact_warning_text": "./ErdosProblems/Erdos387/LocalDensity.lean:6:0: warning: \n'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by\n\nimport Mathlib.Basic.Real.Basic\n",
+      "compiler_argv": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "-j1",
+        "-M8000",
+        "-o",
+        ".lake/build/lib/lean/ErdosProblems/Erdos387/LocalDensity.olean",
+        "./ErdosProblems/Erdos387/LocalDensity.lean"
+      ],
+      "kind": "deprecated_module_forwarding_import",
+      "classification": "reviewed_nonblocking_source_diagnostic"
+    },
+    {
+      "source_path": "ErdosProblems/Erdos851/FiniteCombinatorialSieve.lean",
+      "source_sha256": "f64652901e3456f7f323f44f9826b2c2e9cde61be1db48980825e6acab175837",
+      "source_line": 6,
+      "log_path": "fresh-project-evidence/build-ErdosProblems.Erdos851.FiniteCombinatorialSieve.log",
+      "log_sha256": "e1324d7d2d58128bcd66c67ef757ac22a74ced495043223327eebb8a89f1799c",
+      "exact_warning_text": "./ErdosProblems/Erdos851/FiniteCombinatorialSieve.lean:6:0: warning: \n'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by\n\nimport Mathlib.Basic.Real.Basic\n",
+      "compiler_argv": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "-j1",
+        "-M8000",
+        "-o",
+        ".lake/build/lib/lean/ErdosProblems/Erdos851/FiniteCombinatorialSieve.olean",
+        "./ErdosProblems/Erdos851/FiniteCombinatorialSieve.lean"
+      ],
+      "kind": "deprecated_module_forwarding_import",
+      "classification": "reviewed_nonblocking_source_diagnostic"
+    },
+    {
+      "source_path": "ErdosProblems/Erdos851/RosserCore.lean",
+      "source_sha256": "fd283fd6cf43716b33ee11baf9b5f59ad4e779dd9ba727eaa551a5ed62667518",
+      "source_line": 6,
+      "log_path": "fresh-project-evidence/build-ErdosProblems.Erdos851.RosserCore.log",
+      "log_sha256": "190036802c02aefacdaa2ded17e9a08c0bc2969ac903fd491f9f71bf215f5dad",
+      "exact_warning_text": "./ErdosProblems/Erdos851/RosserCore.lean:6:0: warning: \n'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by\n\nimport Mathlib.Basic.Real.Basic\n",
+      "compiler_argv": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "-j1",
+        "-M8000",
+        "-o",
+        ".lake/build/lib/lean/ErdosProblems/Erdos851/RosserCore.olean",
+        "./ErdosProblems/Erdos851/RosserCore.lean"
+      ],
+      "kind": "deprecated_module_forwarding_import",
+      "classification": "reviewed_nonblocking_source_diagnostic"
+    }
+  ],
+  "original_verifier": {
+    "source_path": "scripts/verify_complete.py",
+    "source_sha256": "261c4809b0fbb048652ca7473ed53fc3a526c71166f6e91fd2078eaa78803f78",
+    "per_module_flags": [
+      "-DwarningAsError=true",
+      "-j1",
+      "-M8000"
+    ],
+    "original_stage_exit_code": 0,
+    "original_verification_status": "passed"
+  },
+  "official_requirement": "Official skill revision 38e63c424c7196f8d4ceb664c5c25f0c0529d5e2 requires original clean build and successful exact target checks, no proof gaps, and faithful diagnostic disclosure. It has no zero-warning rule. references/report-template.md line 63 requires classifying warnings and tracing relevant ones.",
+  "review_status": "lead_confirmed_nonblocking_import_path_diagnostics",
+  "mathlib_forwarding_source": "module -- shake: keep-all\n\npublic import Mathlib.Basic.Real.Basic\n\ndeprecated_module (since := \"2026-08-27\")\n",
+  "official_rules_commit": "38e63c424c7196f8d4ceb664c5c25f0c0529d5e2",
+  "policy_scope": "Only JSP-000554 at this exact proof commit and these four complete unchanged log blocks; every other Lean source warning/error remains a diagnostic failure. This classification changes no proof source, dependency, toolchain, raw log, original exit code, official audit or independent checker."
+}

@@ -1,0 +1,26 @@
+{
+  "curation": "Public metadata only; original API bodies/source text retained privately",
+  "original_file_sha256": "f47dd162fc9a141337e052b8887bdc58fe90263aeb68064e73980be4da4b2ffe",
+  "original_bytes": 668,
+  "data": {
+    "checked_at_utc": "2026-09-20",
+    "records": [
+      {
+        "number": 678,
+        "title": "[Recipient] JSP-000725 — Lean formalization of an interval construction",
+        "url": "https://github.com/TheJustinSunPrize/awards/issues/678",
+        "state": "open",
+        "updated_at": "2026-09-17T13:30:46Z",
+        "merged": null
+      },
+      {
+        "number": 730,
+        "title": "JSP-000725: complete Lean proof (attributed verification)",
+        "url": "https://github.com/TheJustinSunPrize/awards/pull/730",
+        "state": "open",
+        "updated_at": "2026-09-17T14:54:22Z",
+        "merged": false
+      }
+    ]
+  }
+}

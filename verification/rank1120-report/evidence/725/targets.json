@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/work/projects/jsp-000725",
+    "repository": "https://github.com/ketianzhang1-lang/jsp-000301-lean",
+    "commit": "d0d37952bba030d7c8a68f000094e0d601d9fed7",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000725",
+      "source": "https://www.numdam.org/article/AST_1999__258__141_0.pdf#page=3",
+      "requirements": [
+        {
+          "id": "subset-sums",
+          "description": "All finite positive-integer sets; distinct summands are arbitrary finite subsets, equal sums force equal cardinalities including empty and overlapping subsets.",
+          "targets": [
+            "t010",
+            "t011",
+            "t012",
+            "t013",
+            "t014",
+            "t015",
+            "t016",
+            "t017",
+            "t018",
+            "t028",
+            "t030"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "lower-witness",
+          "description": "For every natural N, including zero, a terminal-interval witness has floor(sqrt(4N+1))-1 elements.",
+          "targets": [
+            "t000",
+            "t001",
+            "t002",
+            "t003",
+            "t004",
+            "t005",
+            "t006",
+            "t007",
+            "t008",
+            "t009",
+            "t019",
+            "t020",
+            "t029"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "full-extremum",
+          "description": "For all sufficiently large N, the maximum over every admissible subset of [1,N] is floor(sqrt(4N+1))-1 and is attained; no interval-only competitor restriction.",
+          "targets": [
+            "t021",
+            "t022",
+            "t023",
+            "t025",
+            "t026",
+            "t031",
+            "t032"
+          ],
+          "coverage": "pending"
+        },
+        {
+          "id": "asymptotic",
+          "description": "The actual extremal cardinality divided by real sqrt(N) tends to 2.",
+          "targets": [
+            "t024",
+            "t025",
+            "t027",
+            "t030",
+            "t033"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "t000",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725",
+      "source": "JSP000725.lean",
+      "declaration": "JSP000725.sum_lower"
+    },
+    {
+      "id": "t001",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725",
+      "source": "JSP000725.lean",
+      "declaration": "JSP000725.sum_upper"
+    },
+    {
+      "id": "t002",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725",
+      "source": "JSP000725.lean",
+      "declaration": "JSP000725.interval_ordered_sums"
+    },
+    {
+      "id": "t003",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725",
+      "source": "JSP000725.lean",
+      "declaration": "JSP000725.interval_admissible"
+    },
+    {
+      "id": "t004",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725",
+      "source": "JSP000725.lean",
+      "declaration": "JSP000725.interval_card"
+    },
+    {
+      "id": "t005",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725",
+      "source": "JSP000725.lean",
+      "declaration": "JSP000725.length_le_endpoint"
+    },
+    {
+      "id": "t006",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725",
+      "source": "JSP000725.lean",
+      "declaration": "JSP000725.construction_for_every_N"
+    },
+    {
+      "id": "t007",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725",
+      "source": "JSP000725.lean",
+      "declaration": "JSP000725.even_length_family"
+    },
+    {
+      "id": "t008",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725",
+      "source": "JSP000725.lean",
+      "declaration": "JSP000725.sum_block"
+    },
+    {
+      "id": "t009",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725",
+      "source": "JSP000725.lean",
+      "declaration": "JSP000725.boundary_obstruction"
+    },
+    {
+      "id": "t010",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000725.card_toInt",
+      "definition_source": "JSP000725Bridge.lean",
+      "definition_sha256": "b6544600d228333d3aae5e24127c8461f92757b77bd1e62a786a0a810199f2b9",
+      "verification_entry_note": "Tracked configured AuditComplete.lean exposes this exact declaration. The original clean verifier compiles and kernel-replays its actual definition module; immutable UPSTREAM.json hashes pin downloaded definitions. This entry routing does not assert the definition is in AuditComplete or modify original proof/Lake files."
+    },
+    {
+      "id": "t011",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000725.sum_toInt",
+      "definition_source": "JSP000725Bridge.lean",
+      "definition_sha256": "b6544600d228333d3aae5e24127c8461f92757b77bd1e62a786a0a810199f2b9",
+      "verification_entry_note": "Tracked configured AuditComplete.lean exposes this exact declaration. The original clean verifier compiles and kernel-replays its actual definition module; immutable UPSTREAM.json hashes pin downloaded definitions. This entry routing does not assert the definition is in AuditComplete or modify original proof/Lake files."
+    },
+    {
+      "id": "t012",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000725.admissible_iff_cardinality_determined",
+      "definition_source": "JSP000725Bridge.lean",
+      "definition_sha256": "b6544600d228333d3aae5e24127c8461f92757b77bd1e62a786a0a810199f2b9",
+      "verification_entry_note": "Tracked configured AuditComplete.lean exposes this exact declaration. The original clean verifier compiles and kernel-replays its actual definition module; immutable UPSTREAM.json hashes pin downloaded definitions. This entry routing does not assert the definition is in AuditComplete or modify original proof/Lake files."
+    },
+    {
+      "id": "t013",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000725.admissible_iff_upstream",
+      "definition_source": "JSP000725Bridge.lean",
+      "definition_sha256": "b6544600d228333d3aae5e24127c8461f92757b77bd1e62a786a0a810199f2b9",
+      "verification_entry_note": "Tracked configured AuditComplete.lean exposes this exact declaration. The original clean verifier compiles and kernel-replays its actual definition module; immutable UPSTREAM.json hashes pin downloaded definitions. This entry routing does not assert the definition is in AuditComplete or modify original proof/Lake files."
+    },
+    {
+      "id": "t014",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000725.bounded_iff",
+      "definition_source": "JSP000725Bridge.lean",
+      "definition_sha256": "b6544600d228333d3aae5e24127c8461f92757b77bd1e62a786a0a810199f2b9",
+      "verification_entry_note": "Tracked configured AuditComplete.lean exposes this exact declaration. The original clean verifier compiles and kernel-replays its actual definition module; immutable UPSTREAM.json hashes pin downloaded definitions. This entry routing does not assert the definition is in AuditComplete or modify original proof/Lake files."
+    },
+    {
+      "id": "t015",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000725.boundedAdmissible_iff",
+      "definition_source": "JSP000725Bridge.lean",
+      "definition_sha256": "b6544600d228333d3aae5e24127c8461f92757b77bd1e62a786a0a810199f2b9",
+      "verification_entry_note": "Tracked configured AuditComplete.lean exposes this exact declaration. The original clean verifier compiles and kernel-replays its actual definition module; immutable UPSTREAM.json hashes pin downloaded definitions. This entry routing does not assert the definition is in AuditComplete or modify original proof/Lake files."
+    },
+    {
+      "id": "t016",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000725.exists_nat_preimage",
+      "definition_source": "JSP000725Bridge.lean",
+      "definition_sha256": "b6544600d228333d3aae5e24127c8461f92757b77bd1e62a786a0a810199f2b9",
+      "verification_entry_note": "Tracked configured AuditComplete.lean exposes this exact declaration. The original clean verifier compiles and kernel-replays its actual definition module; immutable UPSTREAM.json hashes pin downloaded definitions. This entry routing does not assert the definition is in AuditComplete or modify original proof/Lake files."
+    },
+    {
+      "id": "t017",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000725.mem_admissibleFamily",
+      "definition_source": "JSP000725Bridge.lean",
+      "definition_sha256": "b6544600d228333d3aae5e24127c8461f92757b77bd1e62a786a0a810199f2b9",
+      "verification_entry_note": "Tracked configured AuditComplete.lean exposes this exact declaration. The original clean verifier compiles and kernel-replays its actual definition module; immutable UPSTREAM.json hashes pin downloaded definitions. This entry routing does not assert the definition is in AuditComplete or modify original proof/Lake files."
+    },
+    {
+      "id": "t018",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "JSP000725.maxCard_eq_upstream",
+      "definition_source": "JSP000725Bridge.lean",
+      "definition_sha256": "b6544600d228333d3aae5e24127c8461f92757b77bd1e62a786a0a810199f2b9",
+      "verification_entry_note": "Tracked configured AuditComplete.lean exposes this exact declaration. The original clean verifier compiles and kernel-replays its actual definition module; immutable UPSTREAM.json hashes pin downloaded definitions. This entry routing does not assert the definition is in AuditComplete or modify original proof/Lake files."
+    },
+    {
+      "id": "t019",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725Complete",
+      "source": "JSP000725Complete.lean",
+      "declaration": "JSP000725.strausLength_feasible"
+    },
+    {
+      "id": "t020",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725Complete",
+      "source": "JSP000725Complete.lean",
+      "declaration": "JSP000725.terminalInterval_spec"
+    },
+    {
+      "id": "t021",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725Complete",
+      "source": "JSP000725Complete.lean",
+      "declaration": "JSP000725.card_le_maxCard"
+    },
+    {
+      "id": "t022",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725Complete",
+      "source": "JSP000725Complete.lean",
+      "declaration": "JSP000725.eventual_maxCard_exact"
+    },
+    {
+      "id": "t023",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725Complete",
+      "source": "JSP000725Complete.lean",
+      "declaration": "JSP000725.eventual_terminalInterval_optimal"
+    },
+    {
+      "id": "t024",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725Complete",
+      "source": "JSP000725Complete.lean",
+      "declaration": "JSP000725.maxCard_asymptotic"
+    },
+    {
+      "id": "t025",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "JSP000725Complete",
+      "source": "JSP000725Complete.lean",
+      "declaration": "JSP000725.jsp_000725"
+    },
+    {
+      "id": "t026",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos874.erdos_874_eventual_exact",
+      "definition_source": "ErdosProblems/Erdos874.lean",
+      "definition_sha256": "19826df408b708db0d1e5a0dd32018bfedb340a2c3c1c9c8614d9fb1a4a82ef8",
+      "verification_entry_note": "Tracked configured AuditComplete.lean exposes this exact declaration. The original clean verifier compiles and kernel-replays its actual definition module; immutable UPSTREAM.json hashes pin downloaded definitions. This entry routing does not assert the definition is in AuditComplete or modify original proof/Lake files."
+    },
+    {
+      "id": "t027",
+      "problem": "JSP-000725",
+      "role": "theorem",
+      "module": "AuditComplete",
+      "source": "AuditComplete.lean",
+      "declaration": "Erdos874.erdos_874",
+      "definition_source": "ErdosProblems/Erdos874.lean",
+      "definition_sha256": "19826df408b708db0d1e5a0dd32018bfedb340a2c3c1c9c8614d9fb1a4a82ef8",
+      "verification_entry_note": "Tracked configured AuditComplete.lean exposes this exact declaration. The original clean verifier compiles and kernel-replays its actual definition module; immutable UPSTREAM.json hashes pin downloaded definitions. This entry routing does not assert the definition is in AuditComplete or modify original proof/Lake files."
+    },
+    {
+      "id": "t028",
+      "problem": "JSP-000725",
+      "role": "bridge",
+      "module": "JSP000725.VerificationBridge",
+      "source": "JSP000725/VerificationBridge.lean",
+      "declaration": "Verify725.admissible_iff"
+    },
+    {
+      "id": "t029",
+      "problem": "JSP-000725",
+      "role": "bridge",
+      "module": "JSP000725.VerificationBridge",
+      "source": "JSP000725/VerificationBridge.lean",
+      "declaration": "Verify725.all_N_witness"
+    },
+    {
+      "id": "t030",
+      "problem": "JSP-000725",
+      "role": "bridge",
+      "module": "JSP000725.VerificationBridge",
+      "source": "JSP000725/VerificationBridge.lean",
+      "declaration": "Verify725.maximum_eq"
+    },
+    {
+      "id": "t031",
+      "problem": "JSP-000725",
+      "role": "bridge",
+      "module": "JSP000725.VerificationBridge",
+      "source": "JSP000725/VerificationBridge.lean",
+      "declaration": "Verify725.eventual_arbitrary_set_bound"
+    },
+    {
+      "id": "t032",
+      "problem": "JSP-000725",
+      "role": "bridge",
+      "module": "JSP000725.VerificationBridge",
+      "source": "JSP000725/VerificationBridge.lean",
+      "declaration": "Verify725.eventual_attained_maximum"
+    },
+    {
+      "id": "t033",
+      "problem": "JSP-000725",
+      "role": "bridge",
+      "module": "JSP000725.VerificationBridge",
+      "source": "JSP000725/VerificationBridge.lean",
+      "declaration": "Verify725.sharp_asymptotic"
+    }
+  ]
+}

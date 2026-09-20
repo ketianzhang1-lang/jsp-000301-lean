@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "/out/tools/exporter/.lake/build/bin/lean4export",
+    "JSP000301.VerificationBridge",
+    "--",
+    "JSP000301.Powerful",
+    "JSP000301.PerfectSquare",
+    "JSP000301.powerful_12167",
+    "JSP000301.powerful_12168",
+    "JSP000301.not_square_12167",
+    "JSP000301.not_square_12168",
+    "JSP000301.jsp_000301_counterexample",
+    "JSP000301.jsp_000301_disproved",
+    "Verify301.witness_arithmetic",
+    "Verify301.positive_pair",
+    "Verify301.original_question_false"
+  ],
+  "cwd": "/work",
+  "exit_code": 0,
+  "seconds": 2.1924333572387695,
+  "log": "/out/export-stderr.log",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
